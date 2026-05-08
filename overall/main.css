@@ -1,0 +1,205 @@
+/* 主入口CSS文件 */
+
+/* 引入设计规范 */
+@import './design-tokens.css';
+
+/* 系统类组件 */
+@import '../../desktop/system/button.css';
+@import '../../desktop/system/image.css';
+@import '../../desktop/system/card.css';
+
+/* 导航类组件 */
+@import '../../desktop/navigation/title.css';
+@import '../../desktop/navigation/steps.css';
+@import '../../desktop/navigation/nav.css';
+@import '../../desktop/navigation/tabs.css';
+@import '../../desktop/navigation/tab-menu.css';
+@import '../../desktop/navigation/breadcrumb.css';
+@import '../../desktop/navigation/multi-tab.css';
+@import '../../desktop/navigation/pagination.css';
+
+/* 录入类组件 */
+@import '../../desktop/input/switch.css';
+@import '../../desktop/input/checkbox.css';
+@import '../../desktop/input/input.css';
+@import '../../desktop/input/select.css';
+@import '../../desktop/input/upload.css';
+@import '../../desktop/input/slider.css';
+@import '../../desktop/input/rating.css';
+@import '../../desktop/input/tree.css';
+
+/* 展示类组件 */
+@import '../../desktop/display/avatar.css';
+@import '../../desktop/display/badge.css';
+@import '../../desktop/display/calendar.css';
+@import '../../desktop/display/comment.css';
+@import '../../desktop/display/field.css';
+@import '../../desktop/display/list.css';
+@import '../../desktop/display/table.css';
+@import '../../desktop/display/timeline.css';
+
+/* 弹出层类组件 */
+@import '../../desktop/popup/combo.css';
+@import '../../desktop/popup/dialog.css';
+@import '../../desktop/popup/popover.css';
+@import '../../desktop/popup/tooltip.css';
+
+/* 引入通用样式 - 放在最后以覆盖默认样式 */
+@import './common.css';
+
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--grey-text-1);
+  background-color: var(--component-page-BG);
+}
+
+/* 通用容器 */
+.container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 通用标题 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--grey-text-1);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+}
+
+h5 {
+  font-size: var(--font-size-base);
+}
+
+h6 {
+  font-size: var(--font-size-sm);
+}
+
+/* 通用段落 */
+p {
+  margin-bottom: 16px;
+  color: var(--grey-text-3);
+}
+
+/* 通用链接 */
+a {
+  color: var(--primary-main-1);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-main-2);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--primary-main-3);
+}
+
+/* 通用列表 */
+ul, ol {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 8px;
+  color: var(--grey-text-3);
+}
+
+/* 通用分割线 */
+hr {
+  border: none;
+  border-top: 1px solid var(--grey-face-2);
+  margin: 24px 0;
+}
+
+/* 通用工具类 */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-1 {
+  margin-bottom: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.mb-3 {
+  margin-bottom: 24px;
+}
+
+.mb-4 {
+  margin-bottom: 32px;
+}
+
+.mt-1 {
+  margin-top: 8px;
+}
+
+.mt-2 {
+  margin-top: 16px;
+}
+
+.mt-3 {
+  margin-top: 24px;
+}
+
+.mt-4 {
+  margin-top: 32px;
+}
+
+.p-1 {
+  padding: 8px;
+}
+
+.p-2 {
+  padding: 16px;
+}
+
+.p-3 {
+  padding: 24px;
+}
+
+.p-4 {
+  padding: 32px;
+}
+
+

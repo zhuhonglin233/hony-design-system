@@ -1,0 +1,420 @@
+/* 遮罩层 */
+.hony-modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+.hony-modal-mask.hony-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 弹窗容器 */
+.hony-modal {
+  position: relative;
+  background: var(--grey-bg-0);
+  border-radius: 12px;
+  box-shadow: var(--shadow-grey-medium);
+  width: 480px;
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
+  max-height: calc(-120px + 100vh);
+  display: flex;
+  flex-direction: column;
+}
+
+.hony-modal-mask.hony-visible .hony-modal {
+  transform: scale(1);
+}
+
+/* 弹窗尺寸 */
+.hony-modal-sm {
+  width: 420px;
+}
+
+.hony-modal-md {
+  width: 520px;
+}
+
+.hony-modal-lg {
+  width: 840px;
+}
+
+.hony-modal-xl {
+  width: 960px;
+}
+
+/* 弹窗头部 */
+.hony-modal-header {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  gap: 8px;
+  position: relative;
+}
+
+.hony-modal-header.has-scroll::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--grey-border-1);
+}
+
+/* 图标容器 */
+.hony-modal-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  font-size: 24px;
+      line-height: 24px;
+}
+
+/* 图标颜色变体 */
+.hony-modal-icon-loading {
+  color: var(--primary-main-1);
+  animation: spin 1s linear infinite;
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hony-modal-icon-loading::before {
+  content: "\f080";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 24px;
+  font-size: 24px;
+}
+
+.hony-modal-icon-info {
+  color: var(--primary-main-1);
+}
+
+.hony-modal-icon-warning {
+  color: var(--warning-main-1);
+}
+
+.hony-modal-icon-error {
+  color: var(--danger-main-1);
+}
+
+.hony-modal-icon-success {
+  color: var(--success-main-1);
+}
+
+/* 旋转动画 */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* 弹窗标题 */
+.hony-modal-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-text-1);
+  line-height: 24px;
+  flex: 1;
+}
+
+/* 关闭按钮 */
+.hony-modal-close {
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--grey-text-2);
+  transition: color 0.2s ease;
+  padding: 0px;
+}
+
+.hony-modal-close:hover {
+  color: var(--grey-text-1);
+  background-color: var(--grey-face-2);
+  border-radius: 4px;
+}
+
+/* 弹窗内容 */
+.hony-modal-body {
+    padding: 0px 24px;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-border-1) #00000000;
+}
+
+.hony-modal-content {
+  font-size: 14px;
+  color: var(--grey-text-2);
+  line-height: 22px;
+}
+
+/* 弹窗底部 */
+.hony-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 24px 24px;
+  position: relative;
+}
+
+.hony-modal-footer.has-scroll::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--grey-border-1);
+}
+
+/* 气泡对话框 */
+.hony-modal-bubble {
+  width: 320px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(21, 24, 33, 0.12), 0px 4px 16px rgba(21, 24, 33, 0.08);
+}
+
+.hony-modal-bubble .hony-modal-header {
+  padding: 16px;
+}
+
+.hony-modal-bubble .hony-modal-body {
+  padding: 0 16px 16px;
+}
+
+.hony-modal-bubble .hony-modal-content {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--grey-text-4);
+}
+
+.hony-modal-bubble .hony-modal-footer {
+  padding: 0 16px 16px;
+  gap: 8px;
+}
+
+/* 气泡方向箭头 */
+.hony-modal-bubble::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 16px;
+  height: 16px;
+  background: var(--white);
+  border-top: 1px solid var(--grey-face-2);
+  border-left: 1px solid var(--grey-face-2);
+  box-shadow: -2px -2px 4px rgba(21, 24, 33, 0.05);
+}
+
+.hony-modal-bubble-top-left::before {
+  left: 24px;
+}
+
+.hony-modal-bubble-top-right::before {
+  left: auto;
+  right: 24px;
+}
+
+.hony-modal-bubble-bottom::before {
+  top: auto;
+  bottom: -8px;
+  transform: translateX(-50%) rotate(-135deg);
+  box-shadow: 2px 2px 4px rgba(21, 24, 33, 0.05);
+}
+
+.hony-modal-bubble-left::before {
+  top: 50%;
+  left: -8px;
+  transform: translateY(-50%) rotate(-45deg);
+  box-shadow: -2px 2px 4px rgba(21, 24, 33, 0.05);
+}
+
+.hony-modal-bubble-right::before {
+  top: 50%;
+  left: auto;
+  right: -8px;
+  transform: translateY(-50%) rotate(135deg);
+  box-shadow: 2px -2px 4px rgba(21, 24, 33, 0.05);
+}
+
+/* 抽屉 */
+.hony-drawer-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.hony-drawer-mask.hony-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 抽屉容器 */
+.hony-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: -4px 0 20px rgba(21, 24, 33, 0.12);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1001;
+  background: var(--grey-bg-0);
+}
+
+.hony-drawer-mask.hony-visible .hony-drawer {
+  transform: translateX(0);
+}
+
+/* 抽屉位置 */
+.hony-drawer-left {
+  left: 0;
+  right: auto;
+  transform: translateX(-100%);
+  box-shadow: 4px 0 20px rgba(21, 24, 33, 0.12);
+}
+
+.hony-drawer-mask.hony-visible .hony-drawer-left {
+  transform: translateX(0);
+}
+
+/* 抽屉尺寸 */
+.hony-drawer-sm {
+  width: 428px;
+}
+
+.hony-drawer-md {
+  width: 520px;
+}
+
+.hony-drawer-lg {
+  width: 840px;
+}
+
+/* 抽屉头部 */
+.hony-drawer-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 24px;
+  gap: 12px;
+  border-bottom: 1px solid var(--grey-border-1);
+}
+
+.hony-drawer-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-text-1);
+  line-height: 24px;
+  flex: 1;
+}
+
+.hony-drawer-close {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--grey-text-2);
+  transition: all 0.2s ease;
+}
+
+.hony-drawer-close:hover {
+  color: var(--grey-text-4);
+  background-color: var(--grey-face-1);
+}
+
+/* 抽屉内容区域 */
+.hony-drawer-body {
+  padding: 24px;
+  background: var(--grey-face-1);
+  overflow-y: auto;
+  height: calc(100% - 128px);
+  scrollbar-width: thin;
+  scrollbar-color: var(--grey-border-1) #00000000;
+}
+
+/* 抽屉底部 */
+.hony-drawer-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--white);
+  border-top: 1px solid var(--grey-border-1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hony-modal {
+    width: 90%;
+    max-width: 360px;
+  }
+  
+  .hony-modal-sm,
+  .hony-modal-md,
+  .hony-modal-lg,
+  .hony-modal-xl {
+    width: 90%;
+    max-width: 360px;
+  }
+  
+  .hony-modal-bubble {
+    width: 280px;
+  }
+  
+  .hony-drawer-sm,
+  .hony-drawer-md,
+  .hony-drawer-lg {
+    width: 100%;
+  }
+  
+  .hony-drawer {
+    right: 0;
+    left: auto;
+  }
+  
+  .hony-drawer-left {
+    left: 0;
+    right: auto;
+  }
+}

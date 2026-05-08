@@ -1,0 +1,201 @@
+/* 颜色页面特有样式 */
+
+/* 颜色卡片 */
+.color-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.color-card {
+    background: var(--grey-face-1);
+    border: 1px solid var(--grey-border-1);
+    border-radius: 12px;
+    padding: 40px;
+    width: 236px;
+}
+
+.color-section-title {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--grey-text-1);
+    margin-bottom: 24px;
+}
+
+.color-items {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.color-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 10px;
+    height: 60px;
+    border-radius: 4px;
+}
+
+.color-name {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--grey-text-1);
+    flex: 1;
+}
+
+.color-value {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--grey-text-1);
+    min-width: 60px;
+    text-align: right;
+}
+
+/* 深色背景的颜色项 */
+.color-item[style*="background: #165DFF"],
+.color-item[style*="background: #124ACC"],
+.color-item[style*="background: #0D3899"],
+.color-item[style*="background: #092566"],
+.color-item[style*="background: #041333"],
+.color-item[style*="background: #02091A"],
+.color-item[style*="background: #238C5C"],
+.color-item[style*="background: #1B6E45"],
+.color-item[style*="background: #124F30"],
+.color-item[style*="background: #0A2F1B"],
+.color-item[style*="background: #05170D"],
+.color-item[style*="background: #B82323"],
+.color-item[style*="background: #901D1D"],
+.color-item[style*="background: #681616"],
+.color-item[style*="background: #400F0F"],
+.color-item[style*="background: #200808"],
+.color-item[style*="background: #C4641A"],
+.color-item[style*="background: #934D15"],
+.color-item[style*="background: #623610"],
+.color-item[style*="background: #311E08"],
+.color-item[style*="background: #190F04"] {
+    color: #FFFFFF;
+}
+
+.color-item[style*="background: #165DFF"] .color-name,
+.color-item[style*="background: #124ACC"] .color-name,
+.color-item[style*="background: #0D3899"] .color-name,
+.color-item[style*="background: #092566"] .color-name,
+.color-item[style*="background: #041333"] .color-name,
+.color-item[style*="background: #02091A"] .color-name,
+.color-item[style*="background: #238C5C"] .color-name,
+.color-item[style*="background: #1B6E45"] .color-name,
+.color-item[style*="background: #124F30"] .color-name,
+.color-item[style*="background: #0A2F1B"] .color-name,
+.color-item[style*="background: #05170D"] .color-name,
+.color-item[style*="background: #B82323"] .color-name,
+.color-item[style*="background: #901D1D"] .color-name,
+.color-item[style*="background: #681616"] .color-name,
+.color-item[style*="background: #400F0F"] .color-name,
+.color-item[style*="background: #200808"] .color-name,
+.color-item[style*="background: #C4641A"] .color-name,
+.color-item[style*="background: #934D15"] .color-name,
+.color-item[style*="background: #623610"] .color-name,
+.color-item[style*="background: #311E08"] .color-name,
+.color-item[style*="background: #190F04"] .color-name,
+.color-item[style*="background: #165DFF"] .color-value,
+.color-item[style*="background: #124ACC"] .color-value,
+.color-item[style*="background: #0D3899"] .color-value,
+.color-item[style*="background: #092566"] .color-value,
+.color-item[style*="background: #041333"] .color-value,
+.color-item[style*="background: #02091A"] .color-value,
+.color-item[style*="background: #238C5C"] .color-value,
+.color-item[style*="background: #1B6E45"] .color-value,
+.color-item[style*="background: #124F30"] .color-value,
+.color-item[style*="background: #0A2F1B"] .color-value,
+.color-item[style*="background: #05170D"] .color-value,
+.color-item[style*="background: #B82323"] .color-value,
+.color-item[style*="background: #901D1D"] .color-value,
+.color-item[style*="background: #681616"] .color-value,
+.color-item[style*="background: #400F0F"] .color-value,
+.color-item[style*="background: #200808"] .color-value,
+.color-item[style*="background: #C4641A"] .color-value,
+.color-item[style*="background: #934D15"] .color-value,
+.color-item[style*="background: #623610"] .color-value,
+.color-item[style*="background: #311E08"] .color-value,
+.color-item[style*="background: #190F04"] .color-value {
+    color: #FFFFFF;
+}
+
+/* 颜色表格 */
+.color-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    background: var(--grey-face-1);
+    border: 1px solid var(--grey-border-1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.color-table th,
+.color-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey-border-1);
+    font-size: 14px;
+}
+
+.color-table th {
+    background: var(--grey-face-2);
+    font-weight: 600;
+    color: var(--grey-text-1);
+}
+
+.color-table tr:last-child td {
+    border-bottom: none;
+}
+
+.color-box {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+/* 色阶展示 - 已迁移到common.css，使用.component-container */
+
+.color-scale {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.color-scale-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    border-radius: 0px;
+    color: #FFFFFF;
+}
+
+.color-scale-value {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.color-scale-name {
+    font-size: 12px;
+    font-weight: 600;
+}

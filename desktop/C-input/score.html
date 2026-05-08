@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>评分 - 桌面端组件</title>
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+    <link rel="stylesheet" href="score.css">
+    <script src="../../overall/js/common.js"></script>
+    <script src="../../overall/js/rating.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                    <div class="content-main">
+                        <!-- 页面标题 -->
+                        <div class="-header">
+                            <div class="design-code">design code 桌面端组件</div>
+                            <div class="page-title">评分</div>
+                            <div class="page-description">评分组件用于收集用户对某项事物的评价，提供了星星评分、心形评分和表情满意度三种样式，满足不同场景的需求。</div>
+                        </div>
+
+                        <!-- 评分样式 Section -->
+                        <div class="section">
+                            <div class="section-title">星星<span style="color: var(--primary-main-1);">评分</span></div>
+                            
+                            <!-- 星星评分 -->
+                            <div class="subsection" id="rating-star">
+                                <div class="subsection-title">基础星星评分</div>
+                                <div class="subsection-description">基础星星评分：使用星星符号进行评分，支持半星评分，鼠标悬停预览评分效果，点击确认评分。</div>
+                                <div class="component-container">
+                                    <div class="hony-rating">
+                                        <div class="hony-rating-stars" id="rating-stars-demo" onmousemove="handleStarMouseMove(event, 'stars')" onmouseleave="resetStarHover('stars')" onclick="handleStarClick(event, 'stars')">
+                                            <span class="hony-star-item" data-value="1"></span>
+                                            <span class="hony-star-item" data-value="2"></span>
+                                            <span class="hony-star-item" data-value="3"></span>
+                                            <span class="hony-star-item" data-value="4"></span>
+                                            <span class="hony-star-item" data-value="5"></span>
+                                        </div>
+                                        <span class="hony-rating-value" id="stars-value">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 心形评分 Section -->
+                        <div class="section">
+                            <div class="section-title">心形<span style="color: var(--primary-main-1);">评分</span></div>
+                            
+                            <!-- 心形评分 -->
+                            <div class="subsection" id="rating-heart">
+                                <div class="subsection-title">基础心形评分</div>
+                                <div class="subsection-description">心形评分：使用心形符号进行评分，支持半心评分，显示具体评分值。</div>
+                                <div class="component-container">
+                                    <div class="hony-rating">
+                                        <div class="hony-rating-hearts" id="rating-hearts-demo" onmousemove="handleStarMouseMove(event, 'hearts')" onmouseleave="resetStarHover('hearts')" onclick="handleStarClick(event, 'hearts')">
+                                            <span class="hony-heart-item" data-value="1"></span>
+                                            <span class="hony-heart-item" data-value="2"></span>
+                                            <span class="hony-heart-item" data-value="3"></span>
+                                            <span class="hony-heart-item" data-value="4"></span>
+                                            <span class="hony-heart-item" data-value="5"></span>
+                                        </div>
+                                        <span class="hony-rating-value" id="hearts-value">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 满意度评分 Section -->
+                        <div class="section">
+                            <div class="section-title">表情<span style="color: var(--primary-main-1);">满意度</span></div>
+                            
+                            <!-- 满意度评分 -->
+                            <div class="subsection" id="rating-satisfaction">
+                                <div class="subsection-title">表情满意度评分</div>
+                                <div class="subsection-description">表情满意度评分：使用表情图片表示不同满意度级别，支持点击交互，更加直观友好。</div>
+                                <div class="component-container">
+                                    <div class="hony-rating-satisfaction">
+                                        <div class="hony-rating-emojis">
+                                            <span class="hony-rating-emoji hony-emoji-1" data-value="1" title="很不满意"></span>
+                                            <span class="hony-rating-emoji hony-emoji-2" data-value="2" title="不满意"></span>
+                                            <span class="hony-rating-emoji hony-emoji-3" data-value="3" title="一般"></span>
+                                            <span class="hony-rating-emoji hony-emoji-4" data-value="4" title="满意"></span>
+                                            <span class="hony-rating-emoji hony-emoji-5" data-value="5" title="非常满意"></span>
+                                        </div>
+                                        <span class="hony-rating-text">请选择</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+                <div class="right-nav">
+                    <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'rating-star');">基础星星评分</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'rating-heart');">基础心形评分</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'rating-satisfaction');">表情满意度评分</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'rating-disabled');">禁用状态</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

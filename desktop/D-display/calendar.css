@@ -1,0 +1,289 @@
+.component-container.calendar-con {
+    height: auto;
+    flex: 1;
+}
+.hony-calendar-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* 默认就是row，可省略 */
+}
+.hony-calendar-component {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;    
+}
+
+/* 日录左边标记 */
+.hony-calendar-left {
+    width: 80px;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--grey-text-4);
+    padding: 8px;
+    display: flex;
+    /* 垂直居中 */
+    align-items: center;
+    /* 水平右对齐 */
+    justify-content: flex-end;
+    border-bottom: 1px solid var(--grey-border-1);
+    border-left: 1px solid var(--grey-border-1);
+    border-right: 1px solid var(--grey-border-1);
+}
+.hony-calendar-left.hony-dates-left {
+    width: 80px;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--grey-text-4);
+    padding: 8px;
+    display: flex;
+    align-items: center;     /* 垂直居中 */
+    justify-content: flex-end; /* 水平右对齐 */
+}
+.hony-calendar-dates-item.hony-dates-item-left {
+    border-bottom: 1px solid var(--grey-border-1);
+    border-left: 1px solid var(--grey-border-1);
+    border-right: 1px solid var(--grey-border-1);
+}
+/* 表头 */
+.hony-calendar-header {
+    background: var(--grey-face-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--grey-border-1);
+     align-items: stretch;
+}
+.hony-calendar-header-actionrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.hony-calendar-header-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+    padding: 8px;
+    border-bottom: 1px solid var(--grey-border-1);
+    border-right: 1px solid var(--grey-border-1);
+    height: 100%;
+    min-height: 48px;
+    justify-content: center;
+}
+
+.hony-calendar-header-num {
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--grey-text-4);
+}
+.hony-calendar-header-name {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--grey-text-1);
+    font-weight: 500;
+}
+/* 日历内容 */
+.hony-calendar-dates {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.hony-calendar-dates::-webkit-scrollbar {
+    display: none;
+}
+.hony-calendar-dates-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
+.hony-calendar-dates-actionrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.hony-calendar-dates-item {
+    flex: 1;
+    min-width: 0; 
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+    height: 100%;
+    min-height: 48px;
+    border-bottom: 1px solid var(--grey-border-1);
+    border-right: 1px solid var(--grey-border-1);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.hony-calendar-dates-num {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--grey-text-1);
+}
+.hony-calendar-dates-card {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 4px 8px;
+    min-height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hony-calendar-dates-card-title {
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0);
+    white-space: nowrap;    /* 禁止换行 */
+    overflow: hidden;       /* 超出部分隐藏 */
+    text-overflow: ellipsis;/* 超出部分显示省略号... */
+    flex: 1;
+    min-width: 0; 
+}
+.hony-calendar-dates-card-time {
+    font-size: 12px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0);
+
+}
+.hony-calendar-dates-item:hover .hony-calendar-dates-card {
+    background: var(--primary-face-1);
+
+}
+.hony-calendar-dates-item:hover .hony-calendar-dates-card-title {
+    background: var(--primary-face-1);
+    color: var(--primary-main-1);
+}
+.hony-calendar-dates.hony-month-calendar {
+    height: 100%;
+}
+.hony-month-row {
+    flex: 1;
+}
+/* 日期选项 */
+.hony-date-component {
+    display: flex;
+    flex-direction: column;    
+    width: 220px;
+}
+.hony-date-weekday{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 4px;
+}
+.hony-date-weekday-item{
+    height: 28px;
+    width: 28px;
+      display: grid;
+  justify-items: center; /* 水平左右居中 */
+  align-items: center;   /* 垂直上下居中 */
+}
+.hony-date-weekday-num{
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--grey-text-4);
+}
+.hony-date-dates-row{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+.hony-date-dates-item{
+    height: 28px;
+    width: 28px;
+    border-radius: 4px;
+    display: grid;
+    justify-items: center; /* 水平左右居中 */
+     align-items: center;   /* 垂直上下居中 */
+}
+.hony-date-dates-item.hony-active{
+    background: var(--primary-main-1);
+    color: var(--primary-main-5);
+}
+.hony-date-dates-item.hony-active .hony-date-dates-num{
+    background: var(--primary-main-1);
+    color: var(--primary-main-5);
+}
+.hony-date-dates-num{
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--grey-text-1);
+}
+.hony-date-dates-item:hover .hony-date-dates-num{
+    background: var(--primary-face-1);
+    color: var(--primary-main-1);
+}
+.hony-date-dates-item:hover{
+    background: var(--primary-face-1);
+    color: var(--primary-main-1);
+}
+.component-container.date-con{
+    height: auto;
+}
+.hony-calendar-nav{
+    display: flex;
+    padding: 12px 0px;
+    align-items: stretch;
+}
+.hony-tab-nav-segment-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 改成左对齐 */
+    align-items: stretch;
+    gap: 12px;
+    padding: 6px 0px;
+    flex: 1;
+}
+.hony-tab-nav-segment-line{
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    height: 24px;
+    color:var(--grey-text-1);
+}
+.hony-tab-nav-segment-container.hony-tab-nav-date{
+    padding: 0px;
+}
+.hony-tab-nav-date{
+    padding: 0px !important;
+}
+/* 日历视图切换 */
+.hony-calendar-view {
+    display: none;
+}
+.hony-calendar-view.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+}
+.hony-calendar-view::-webkit-scrollbar {
+  display: none;
+}
+.calendar-con1{
+    height: 600px;
+}
+.hony-calendar-dates-container{
+        height: calc(100% - 66px);
+              /* 2. 垂直溢出滚动 */
+  overflow-y: auto;
+
+  /* 3. 隐藏滚动条 */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hony-date-dates-item .hony-date-disabled{
+    color: var(--grey-text-4);
+}

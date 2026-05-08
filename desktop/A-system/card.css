@@ -1,0 +1,569 @@
+/* 卡片基础样式 */
+.hony-card {
+  background-color: var(--grey-bg-0);
+  border: 1px solid var(--grey-border-1);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  font-family: var(--font-family);
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.hony-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--grey-border-2);
+}
+
+/* 卡片标题 */
+.hony-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--grey-text-1);
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+/* 卡片副标题 */
+.hony-card-subtitle {
+  font-size: 14px;
+  color: var(--grey-text-3);
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+/* 卡片内容 */
+.hony-card-content {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--grey-text-2);
+  margin: 0;
+}
+
+/* 卡片操作区 */
+.hony-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  justify-content: flex-end;
+}
+
+/* 卡片类型 - 带边框 */
+.hony-card-primary {
+  border-left: 4px solid var(--primary-main-1);
+}
+
+.hony-card-success {
+  border-left: 4px solid var(--success-main-1);
+}
+
+.hony-card-warning {
+  border-left: 4px solid var(--warning-main-1);
+}
+
+.hony-card-danger {
+  border-left: 4px solid var(--danger-main-1);
+}
+
+/* 卡片尺寸 */
+.hony-card-sm {
+  padding: 12px;
+}
+
+.hony-card-md {
+  padding: 16px;
+}
+
+.hony-card-lg {
+  padding: 24px;
+}
+
+/* ========== 分割线卡片 ========== */
+
+/* 分割线卡片基础 */
+.hony-card-divider {
+  padding: 0;
+  overflow: hidden;
+}
+
+.hony-card-divider .hony-card-title {
+  padding: 16px 20px 0 20px;
+}
+
+.hony-card-divider .hony-card-content {
+  padding: 0 20px;
+}
+
+/* 卡片头部 */
+.hony-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 20px;
+}
+
+.hony-card-header-content {
+  flex: 1;
+}
+
+.hony-card-header-content .hony-card-title {
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.hony-card-header-content .hony-card-subtitle {
+  margin: 0;
+}
+
+.hony-card-header-extra {
+  margin-left: 12px;
+}
+
+/* 卡片主体 */
+.hony-card-body {
+  padding: 0 20px 16px 20px;
+}
+
+.hony-card-body .hony-card-content {
+  padding: 0;
+}
+
+/* 卡片底部 */
+.hony-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px 16px 20px;
+}
+
+.hony-card-footer-text {
+  font-size: 12px;
+  color: var(--grey-text-4);
+}
+
+.hony-card-footer .hony-card-actions {
+  margin: 0;
+}
+
+/* 分割线 */
+.hony-card-divider-line {
+  height: 1px;
+  background-color: var(--grey-border-1);
+  margin: 0 20px;
+}
+
+.hony-card-divider-line.inset {
+  margin: 0 20px 0 56px;
+}
+
+.hony-card-divider-line.full {
+  margin: 0;
+}
+
+/* 通栏分割线卡片 */
+.hony-card-divider-full {
+  padding: 0;
+  max-width: 100%;
+}
+
+.hony-card-section {
+  padding: 20px;
+}
+
+.hony-card-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--grey-text-1);
+  margin: 0 0 8px 0;
+}
+
+.hony-card-section-content {
+  font-size: 14px;
+  color: var(--grey-text-2);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 列表内容 */
+.hony-card-list-content {
+  padding: 8px 0;
+}
+
+.hony-card-list-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 12px;
+}
+
+.hony-card-list-item i {
+  font-size: 20px;
+  color: var(--grey-text-3);
+  width: 24px;
+  text-align: center;
+}
+
+.hony-card-list-text {
+  flex: 1;
+  font-size: 14px;
+  color: var(--grey-text-1);
+}
+
+.hony-card-list-meta {
+  font-size: 12px;
+  color: var(--grey-text-4);
+}
+
+/* ========== 多媒体内容卡片 ========== */
+
+/* 图片卡片 */
+.hony-card-media {
+  padding: 0;
+  overflow: hidden;
+}
+
+.hony-card-media-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hony-card-media-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.hony-card-media-content {
+  padding: 16px 20px 20px 20px;
+}
+
+.hony-card-media-content .hony-card-title {
+  padding: 0;
+}
+
+.hony-card-media-content .hony-card-content {
+  padding: 0;
+}
+
+/* 底部图片卡片 */
+.hony-card-media-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.hony-card-media-bottom .hony-card-media-content {
+  order: 1;
+}
+
+.hony-card-media-bottom .hony-card-media-image {
+  order: 2;
+}
+
+/* 横向图片卡片 */
+.hony-card-media-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.hony-card-media-horizontal .hony-card-media-image {
+  width: 120px;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.hony-card-media-horizontal .hony-card-media-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hony-card-media-horizontal .hony-card-media-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 封面卡片 */
+.hony-card-cover {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+}
+
+.hony-card-cover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hony-card-cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hony-card-cover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);
+  z-index: 2;
+}
+
+.hony-card-cover-content {
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+  color: #fff;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.hony-card-cover-content .hony-card-title {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.hony-card-cover-content .hony-card-content {
+  color: rgba(255,255,255,0.85);
+}
+
+.hony-card-cover-content .hony-card-actions {
+  margin-top: 16px;
+}
+
+/* 头像卡片 */
+.hony-card-avatar {
+  padding: 20px;
+}
+
+.hony-card-avatar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.hony-card-avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hony-card-avatar-info {
+  flex: 1;
+}
+
+.hony-card-avatar-info .hony-card-title {
+  margin: 0 0 4px 0;
+}
+
+.hony-card-avatar-info .hony-card-subtitle {
+  margin: 0;
+}
+
+/* 横向头像卡片 */
+.hony-card-avatar-horizontal {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.hony-card-avatar-horizontal .hony-card-avatar-img {
+  width: 64px;
+  height: 64px;
+}
+
+.hony-card-avatar-horizontal .hony-card-avatar-info {
+  flex: 1;
+}
+
+.hony-card-avatar-horizontal .hony-card-content {
+  margin-top: 8px;
+}
+
+/* ========== 演示布局 ========== */
+
+/* 卡片演示行 */
+.hony-card-demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.hony-card-demo-row .hony-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: calc(50% - 10px);
+}
+
+/* 标签样式 */
+.hony-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+.hony-tag-primary {
+  background-color: var(--primary-light-2);
+  color: var(--primary-main-1);
+}
+
+/* 按钮基础样式 */
+.hony-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  line-height: 1.5;
+}
+
+.hony-btn-sm {
+  padding: 4px 12px;
+  font-size: 13px;
+}
+
+.hony-btn-primary {
+  background-color: var(--primary-main-1);
+  color: #fff;
+  border-color: var(--primary-main-1);
+}
+
+.hony-btn-primary:hover {
+  background-color: var(--primary-dark-1);
+  border-color: var(--primary-dark-1);
+}
+
+.hony-btn-outline-secondary {
+  background-color: transparent;
+  color: var(--grey-text-2);
+  border-color: var(--grey-border-2);
+}
+
+.hony-btn-outline-secondary:hover {
+  border-color: var(--primary-main-1);
+  color: var(--primary-main-1);
+}
+
+.hony-btn-link {
+  background-color: transparent;
+  color: var(--primary-main-1);
+  border-color: transparent;
+  padding: 4px 8px;
+}
+
+.hony-btn-link:hover {
+  background-color: var(--primary-light-2);
+}
+
+/* 卡片悬停效果 */
+.hony-card-hover {
+  cursor: pointer;
+}
+
+.hony-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 卡片阴影 */
+.hony-card-shadow {
+  box-shadow: var(--shadow-md);
+}
+
+.hony-card-shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+/* 卡片无边框 */
+.hony-card-borderless {
+  border: none;
+  box-shadow: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hony-card {
+    padding: 16px;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .hony-card-sm {
+    padding: 10px;
+  }
+  
+  .hony-card-md {
+    padding: 14px;
+  }
+  
+  .hony-card-lg {
+    padding: 20px;
+  }
+  
+  .hony-card-demo-row .hony-card {
+    max-width: 100%;
+  }
+  
+  .hony-card-media-horizontal {
+    flex-direction: column;
+  }
+  
+  .hony-card-media-horizontal .hony-card-media-image {
+    width: 100%;
+    height: 150px;
+  }
+  
+  .hony-card-avatar-horizontal {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hony-card-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .hony-card-header-extra {
+    margin-left: 0;
+  }
+  
+  .hony-card-footer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .hony-card-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

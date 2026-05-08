@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开关 - 桌面端组件</title>
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+    <link rel="stylesheet" href="swich.css">
+    <script src="../../overall/js/common.js"></script>
+    <script src="swich.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                <div class="content-main">
+                    <!-- 页面标题 -->
+                    <div class="page-header">
+                        <div class="design-code">design code 桌面端组件</div>
+                        <div class="page-title">开关</div>
+                        <div class="page-description">用于两个互斥选项，用来打开或关闭选项的选择控件。</div>
+                    </div>
+
+                    <!-- 开关样式 Section -->
+                    <div class="section">
+                        <div class="section-title">基础<span style="color: var(--primary-main-1);">样式</span></div>
+                        
+                        <!-- 基础开关 -->
+                        <div class="subsection" id="switch-styles">
+                            <div class="subsection-title">基础开关</div>
+                            <div class="subsection-description">常规开关：标准的开关控件，支持小、中、大三种尺寸，点击切换开启/关闭状态。</div>
+                            <div class="component-container">
+                                <!-- 常规尺寸正常状态开关 -->
+                                <div class="hony-switch-section">
+                                    <div class="hony-switch hony-switch-md hony-switch-off">
+                                        <div class="hony-switch-handle">
+                                            <span class="hony-switch-iconloading"></span>
+                                        </div>
+                                        <span class="hony-switch-text">&nbsp;</span>
+                                    </div>
+                                    <div class="hony-switch hony-switch-md hony-switch-on">
+                                        <div class="hony-switch-handle"></div>
+                                        <span class="hony-switch-text">&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 带文字开关 -->
+                        <div class="subsection" id="switch-styles">
+                            <div class="subsection-title">带文字开关</div>
+                            <div class="subsection-description">带文字开关：开关旁边带有文字标签，显示当前状态（开启/关闭），提供更明确的状态提示。</div>
+                            <div class="component-container">
+                                <!-- 常规尺寸正常状态开关 -->
+                                <div class="hony-switch-section">
+                                    <div class="hony-switch hony-switch-md hony-switch-off">
+                                        <div class="hony-switch-handle">
+                                            <span class="hony-switch-iconloading"></span>
+                                        </div>
+                                        <span class="hony-switch-text">关闭&nbsp;</span>
+                                    </div>
+                                    <div class="hony-switch hony-switch-md hony-switch-on">
+                                        <div class="hony-switch-handle"></div>
+                                        <span class="hony-switch-text">&nbsp;开启</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 开关状态 -->
+                        <div class="subsection" id="switch-styles">
+                            <div class="subsection-title">开关状态</div>
+                            <div class="subsection-description">开关状态展示：包含开启、关闭、加载中、禁用等多种状态，可直观看到各状态下的视觉效果。</div>
+                            <div class="component-container">
+                                <!-- 常规尺寸正常状态开关 -->
+                                <div class="hony-switch-section">
+                                    <div class="hony-switch hony-switch-md hony-switch-off">
+                                        <div class="hony-switch-handle">
+                                            <span class="hony-switch-iconloading"></span>
+                                        </div>
+                                        <span class="hony-switch-text">关闭&nbsp;</span>
+                                    </div>
+                                    <div class="hony-switch hony-switch-md hony-switch-on">
+                                        <div class="hony-switch-handle"></div>
+                                        <span class="hony-switch-text">&nbsp;开启</span>
+                                    </div>
+                                </div>
+                                 <!-- 常规尺寸加载状态开关 -->
+                                <div class="hony-switch-section">
+                                    <div class="hony-switch hony-switch-md hony-switch-off hony-switch-loading">
+                                        <div class="hony-switch-handle">
+                                            <div class="hony-switch-loading-spinner"></div>
+                                        </div>
+                                        <span class="hony-switch-text">加载&nbsp;</span>
+                                    </div>
+                                    <div class="hony-switch hony-switch-md hony-switch-on hony-switch-loading">
+                                        <div class="hony-switch-handle">
+                                            <div class="hony-switch-loading-spinner"></div>
+                                        </div>
+                                        <span class="hony-switch-text">&nbsp;加载</span>
+                                    </div>
+                                </div>
+                                 <!-- 常规尺寸禁用状态开关 -->
+                                <div class="hony-switch-section">
+                                    <div class="hony-switch hony-switch-md hony-switch-off hony-switch-disabled">
+                                        <div class="hony-switch-handle"></div>
+                                        <span class="hony-switch-text">禁用&nbsp;</span>
+                                    </div>
+                                    <div class="hony-switch hony-switch-md hony-switch-on hony-switch-disabled">
+                                        <div class="hony-switch-handle"></div>
+                                        <span class="hony-switch-text">&nbsp;禁用</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 开关尺寸 -->
+                        <div class="subsection" id="switch-styles">
+                            <div class="subsection-title">开关尺寸</div>
+                            <div class="subsection-description">基础开关：用于切换开启/关闭状态的控件，支持多种尺寸和状态，适用于设置类场景。</div>
+                            <div class="component-container">
+                                <!-- 常规尺寸正常状态开关 -->
+                                <div class="hony-switch-section">
+                                    <div class="hony-switch hony-switch-md hony-switch-off">
+                                        <div class="hony-switch-handle">
+                                            <span class="hony-switch-iconloading"></span>
+                                        </div>
+                                        <span class="hony-switch-text">关闭&nbsp;</span>
+                                    </div>
+                                    <div class="hony-switch hony-switch-md hony-switch-on">
+                                        <div class="hony-switch-handle"></div>
+                                        <span class="hony-switch-text">&nbsp;开启</span>
+                                    </div>
+                                </div>
+                                 <!-- 小尺寸正常状态开关 -->
+                                <div class="hony-switch-section">
+                                    <div class="hony-switch hony-switch-sm hony-switch-off">
+                                        <div class="hony-switch-handle"></div>
+                                        <span class="hony-switch-text">关闭&nbsp;</span>
+                                    </div>
+                                    <div class="hony-switch hony-switch-sm hony-switch-on">
+                                        <div class="hony-switch-handle"></div>
+                                        <span class="hony-switch-text">&nbsp;开启</span>
+                                    </div>
+                                </div>
+                                 <!-- 大尺寸正常状态开关 -->
+                                <div class="hony-switch-section">
+                                    <div class="hony-switch hony-switch-lg hony-switch-off">
+                                        <div class="hony-switch-handle"></div>
+                                        <span class="hony-switch-text">关闭&nbsp;</span>
+                                    </div>
+                                    <div class="hony-switch hony-switch-lg hony-switch-on">
+                                        <div class="hony-switch-handle"></div>
+                                        <span class="hony-switch-text">&nbsp;开启</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+                <div class="right-nav">
+                    <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'switch-styles');">基础开关</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'switch-styles');">带文字开关</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'switch-styles');">开关状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'switch-styles');">开关尺寸</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

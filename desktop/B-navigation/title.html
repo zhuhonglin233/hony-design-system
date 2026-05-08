@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标题 - Design System</title>
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+    <link rel="stylesheet" href="title.css">
+    <link rel="stylesheet" href="breadcrumb.css">
+    <link rel="stylesheet" href="../A-system/button.css">
+    <script src="../../overall/js/common.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                    <div class="content-main">
+                        <!-- 页面标题 -->
+                        <div class="page-header">
+                            <div class="design-code">design code 桌面端组件</div>
+                            <div class="page-title">标题</div>
+                            <div class="page-description">显示主体内容的显示区域,包括页面标题和具体的页面内容,其内容可根据终端窗口进行自适应来适配更多屏幕尺寸,以提高页面空间的使用率。</div>
+                        </div>
+                        
+                        <!-- 标题类型 Section -->
+                        <div class="section">
+                            <div class="section-title">标题<span style="color: var(--primary-main-1);">类型</span></div>
+                            <!-- 特殊标题 Section -->
+                            <div class="subsection" id="hony-title-types">
+                                <div class="subsection-title">特殊标题</div>
+                                <div class="subsection-description">特殊标题：用于页面头部或重要场景，包含一级到四级标题，字号从32px到16px递减。</div>
+                                <div class="component-container">
+                                    <div class="hony-title-section" style="display: flex; flex-direction: column; gap: 48px;">
+                                        <div class="hony-title-level" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px;">一级</div>
+                                        <div class="hony-title-content">
+                                            <div style="font-size: 32px; font-weight: 700; color: var(--grey-text-1); line-height: 40px;">页面标题32px</div>
+                                        </div>
+                                    </div>
+                                    <div class="hony-title-section" style="display: flex; flex-direction: column; gap: 48px;">
+                                        <div class="hony-title-level" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px;">二级</div>
+                                        <div class="hony-title-content">
+                                            <div style="font-size: 24px; font-weight: 700; color: var(--grey-text-1); line-height: 32px;">页面标题24px</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 常规标题 Section -->
+                            <div class="subsection" id="hony-title-types">
+                                <div class="subsection-title">常规标题</div>
+                                <div class="subsection-description">表现组件层级关系。</div>
+                                <div class="component-container">
+                                    <div class="hony-title-section" style="display: flex; flex-direction: column; gap: 12px;">
+                                        <div class="hony-title-level" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px;">一级</div>
+                                        <div class="hony-title-content">
+                                            <div class="hony-title hony-title-normal-1">一级标题20px</div>
+                                        </div>
+                                    </div>
+                                    <div class="hony-title-section" style="display: flex; flex-direction: column; gap: 12px;">
+                                        <div class="hony-title-level" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px;">二级</div>
+                                        <div class="hony-title-content">
+                                            <div class="hony-title hony-title-normal-2">二级标题18px</div>
+                                        </div>
+                                    </div>
+                                    <div class="hony-title-section" style="display: flex; flex-direction: column; gap: 12px;">
+                                        <div class="hony-title-level" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px;">三级</div>
+                                        <div class="hony-title-content">
+                                            <div class="hony-title hony-title-normal-3">三级标题16px</div>
+                                        </div>
+                                    </div>
+                                    <div class="hony-title-section" style="display: flex; flex-direction: column; gap: 12px;">
+                                        <div class="hony-title-level" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px;">四级</div>
+                                        <div class="hony-title-content">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <div style="width: 16px; height: 1px; background: var(--grey-border-1);"></div>
+                                                <div class="hony-title hony-title-normal-4">四级标题14px</div>
+                                                <div style="flex: 1; height: 1px; background: var(--grey-border-1);"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hony-title-section" style="display: flex; flex-direction: column; gap: 12px;">
+                                        <div class="hony-title-level" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px;">五级</div>
+                                        <div class="hony-title-content">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <div style="width: 16px; height: 1px; background: var(--grey-border-1);"></div>
+                                                <div class="hony-title hony-title-normal-5">五级标题12px</div>
+                                                <div style="flex: 1; height: 1px; background: var(--grey-border-1);"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 标题拓展 Section -->
+                        <div class="section">
+                            <div class="section-title">标题<span style="color: var(--primary-main-1);">拓展</span></div>
+
+
+
+                            <!-- 拓展标题 Section -->
+                            <div class="subsection" id="hony-title-types">
+                                <div class="subsection-title">标题拓展</div>
+                                <div class="subsection-description">标题的常用拓展用法，包含图标和操作按钮。</div>
+                                <div class="component-container">
+                                    <!-- 一级标题 -->
+                                    <div class="hony-title-section hony-title-section-level-1" style="display: flex; flex-direction: column; gap: 12px;">
+                                        <div class="hony-title-level" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px;">一级</div>
+                                        <div class="hony-title-content hony-title-content-level-1" style="display: flex; flex-direction: column; gap: 8px; margin-top: 8px; margin-bottom: 24px;">
+                                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                                <div style="display: flex; align-items: center; gap: 8px;">
+                                                    <div style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">
+                                                    <i class="iconfont icon-wendang-1" style="font-size: 20px; color: var(--grey-text-1);"></i>
+                                                </div>
+                                                    <div class="hony-title hony-title-normal-1">一级标题20px</div>
+                                                </div>
+                                                <div style="display: flex; align-items: center; gap: 8px;">
+                                                    <button class="hony-btn hony-btn-primary">按钮</button>
+                                                    <button class="hony-btn hony-btn-outline-primary">按钮</button>
+                                                    <button class="hony-btn hony-btn-outline-primary">按钮</button>
+                                                    <button class="hony-btn hony-btn-link hony-btn-icon-only">
+                                                        <i class="iconfont icon-gengduoshenglve-filled"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="hony-title-description">
+                                                如果您在填写表格时遇到任何问题或有疑问，请参阅帮助部分或联系我们的支持团队。
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+
+                                    
+                                    <!-- 三级标题 -->
+                                    <div class="hony-title-section hony-title-section-level-3" style="display: flex; flex-direction: column; gap: 12px;">
+                                        <div class="hony-title-level" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px;">三级</div>
+                                        <div class="hony-title-content hony-title-content-level-3" style="display: flex; flex-direction: column; gap: 8px; margin-top: 8px; margin-bottom: 24px;">
+                                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                                <div style="display: flex; align-items: center; gap: 8px;">
+                                                    <div style="width: 4px; height: 16px; background: var(--primary-main-1); border-radius: 4px;"></div>
+                                                    <div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;">
+                                                        <i class="iconfont icon-wendang-1" style="font-size: 16px; color: var(--grey-text-1);"></i>
+                                                    </div>
+                                                    <div class="hony-title hony-title-normal-3">三级标题16px</div>
+                                                </div>
+                                                <div style="display: flex; align-items: center; gap: 8px;">
+                                                    <button class="hony-btn hony-btn-primary">按钮</button>
+                                                    <button class="hony-btn hony-btn-outline-primary">按钮</button>
+                                                    <button class="hony-btn hony-btn-outline-primary">按钮</button>
+                                                    <button class="hony-btn hony-btn-link hony-btn-icon-only">
+                                                        <i class="iconfont icon-gengduoshenglve-filled"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="hony-title-description">
+                                                如果您在填写表格时遇到任何问题或有疑问，请参阅帮助部分或联系我们的支持团队。
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- 四级标题 -->
+                                    <div class="hony-title-section hony-title-section-level-4" style="display: flex; flex-direction: column; gap: 12px;">
+                                        <div class="hony-title-level" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px;">四级</div>
+                                        <div class="hony-title-content hony-title-content-level-4" style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px; margin-bottom: 16px;">
+                                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                                <div style="display: flex; align-items: center; gap: 8px; flex: 1;">
+                                                    <div style="width: 16px; height: 1px; background: var(--grey-border-1);"></div>
+                                                    <div style="width: 16px; height: 16px; display: flex; align-items: center; justify-content: center;">
+                                                        <i class="iconfont icon-wendang-1" style="font-size: 12px; color: var(--grey-text-1);"></i>
+                                                    </div>
+                                                    <div class="hony-title hony-title-normal-4">四级标题14px</div>
+                                                    <div style="flex: 1; height: 1px; background: var(--grey-border-1);"></div>
+                                                </div>
+                                                <div style="display: flex; align-items: center; gap: 8px;">
+                                                    <button class="hony-btn hony-btn-link">按钮</button>
+                                                    <button class="hony-btn hony-btn-link hony-btn-icon-only">
+                                                        <i class="iconfont icon-gengduoshenglve-filled"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="hony-title-description">
+                                                如果您在填写表格时遇到任何问题或有疑问，请参阅帮助部分或联系我们的支持团队。
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- 五级标题 -->
+                                    <div class="hony-title-section hony-title-section-level-5" style="display: flex; flex-direction: column; gap: 12px;">
+                                        <div class="hony-title-level" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px;">五级</div>
+                                        <div class="hony-title-content hony-title-content-level-5" style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px; margin-bottom: 16px;">
+                                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                                <div style="display: flex; align-items: center; gap: 8px; flex: 1;">
+                                                    <div style="width: 16px; height: 1px; background: var(--grey-border-1);"></div>
+                                                    <div style="width: 16px; height: 16px; display: flex; align-items: center; justify-content: center;">
+                                                        <i class="iconfont icon-wendang-1" style="font-size: 12px; color: var(--grey-text-1);"></i>
+                                                    </div>
+                                                    <div class="hony-title hony-title-normal-5">五级标题12px</div>
+                                                    <div style="flex: 1; height: 1px; background: var(--grey-border-1);"></div>
+                                                </div>
+                                                <div style="display: flex; align-items: center; gap: 8px;">
+                                                    <button class="hony-btn hony-btn-link">按钮</button>
+                                                    <button class="hony-btn hony-btn-link hony-btn-icon-only">
+                                                        <i class="iconfont icon-gengduoshenglve-filled"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="hony-title-description">
+                                                如果您在填写表格时遇到任何问题或有疑问，请参阅帮助部分或联系我们的支持团队。
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        
+                        <!-- 完整页面标题组件 Section -->
+                        <div class="section">
+                            <div class="section-title">标题<span style="color: var(--primary-main-1);">页面</span></div>
+                            <!-- 标题页面 Section -->
+                            <div class="subsection" id="hony-title-complete">
+                                <div class="subsection-title">标题页面</div>
+                                <div class="subsection-description">包含面包屑导航、页面标题、操作按钮、描述文字、信息行和标签页的完整页面标题组件。</div>
+                                <div class="component-container">
+                                    <!-- 面包屑导航 -->
+                                    <div class="hony-breadcrumb hony-breadcrumb-default">
+                                            <div class="hony-breadcrumb-item">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                            
+                                                    <span class="hony-breadcrumb-text">目录标题</span>
+                                                </a>
+                                            </div>
+                                            <div class="hony-breadcrumb-separator iconfont"></div>
+                                            <div class="hony-breadcrumb-item">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                
+                                                    <span class="hony-breadcrumb-text">目录标题</span>
+                                                </a>
+                                            </div>
+                                            <div class="hony-breadcrumb-separator iconfont"></div>
+                                            <div class="hony-breadcrumb-item">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                            
+                                                    <span class="hony-breadcrumb-text">目录标题</span>
+                                                </a>
+                                            </div>
+                                            <div class="hony-breadcrumb-separator iconfont"></div>
+                                            <div class="hony-breadcrumb-item">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                        
+                                                    <span class="hony-breadcrumb-text">目录标题</span>
+                                                </a>
+                                            </div>
+                                    
+                                            <div class="hony-breadcrumb-item active">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                    
+                                                    <span class="hony-breadcrumb-text active">目录标题</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                    <!-- 页面标题和操作按钮 -->
+                                    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 12px;">
+                                        <div class="hony-title hony-title-normal-1" style="font-size: 32px; font-weight: 700; line-height: 40px;">页面标题</div>
+                                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
+                                            <button class="hony-btn hony-btn-primary">标题昵称</button>
+                                            <button class="hony-btn hony-btn-outline-primary">标题昵称</button>
+                                            <button class="hony-btn hony-btn-outline-primary">标题昵称</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- 描述文字 -->
+                                    <div class="hony-title-description" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px; margin-bottom: 20px;">
+                                        如果您在填写表格时遇到任何问题或有疑问，请参阅帮助部分或联系我们的支持团队。
+                                    </div>
+                                    
+                                    <!-- 信息行 -->
+                                    <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+                                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px;">
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <span style="font-size: 14px; color: var(--grey-text-3); line-height: 24px; width: 110px;">创建人</span>
+                                                <span style="font-size: 14px; color: var(--grey-text-1); line-height: 24px; font-weight: 500;">副标题昵称</span>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <span style="font-size: 14px; color: var(--grey-text-3); line-height: 24px; width: 110px;">标题标题标题标</span>
+                                                <span style="font-size: 14px; color: var(--grey-text-1); line-height: 24px; font-weight: 500;">副标题昵称</span>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px;">
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <span style="font-size: 14px; color: var(--grey-text-3); line-height: 24px; width: 110px;">创建人</span>
+                                                <span style="font-size: 14px; color: var(--grey-text-1); line-height: 24px; font-weight: 500;">副标题昵称</span>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <span style="font-size: 14px; color: var(--grey-text-3); line-height: 24px; width: 110px;">标题标题标题标</span>
+                                                <span style="font-size: 14px; color: var(--grey-text-1); line-height: 24px; font-weight: 500;">副标题昵称</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- 标签页 -->
+                                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; border-bottom: 1px solid var(--grey-border-1); padding-bottom: 14px;">
+                                        <div style="padding-top: 16px; padding-bottom: 14px; border-bottom: 2px solid var(--primary-main-1);">
+                                            <span style="font-size: 16px; color: var(--primary-main-1); line-height: 24px; font-weight: 500;">标题昵称</span>
+                                        </div>
+                                        <div style="padding-top: 16px; padding-bottom: 14px;">
+                                            <span style="font-size: 16px; color: var(--grey-text-1); line-height: 24px;">标题昵称</span>
+                                        </div>
+                                        <div style="padding-top: 16px; padding-bottom: 14px;">
+                                            <span style="font-size: 16px; color: var(--grey-text-1); line-height: 24px;">标题昵称</span>
+                                        </div>
+                                        <div style="padding-top: 16px; padding-bottom: 14px;">
+                                            <span style="font-size: 16px; color: var(--grey-text-1); line-height: 24px;">标题昵称</span>
+                                        </div>
+                                        <div style="padding-top: 16px; padding-bottom: 14px;">
+                                            <span style="font-size: 16px; color: var(--grey-text-1); line-height: 24px;">标题昵称</span>
+                                        </div>
+                                        <div style="padding-top: 16px; padding-bottom: 14px;">
+                                            <span style="font-size: 16px; color: var(--grey-text-1); line-height: 24px;">标题昵称</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+                <div class="right-nav">
+                    <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'title-types');">特殊标题</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'title-types');">常规标题</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'title-types');">标题拓展</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'title-complete');">标题页面</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

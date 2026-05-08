@@ -1,0 +1,3059 @@
+.hony-collapse-menu .hony-nav-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+/* 收起菜单基础样式 */
+.hony-sidebar-nav .hony-collapse-menu {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: stretch;
+  gap: 4px;
+  padding: 8px 8px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: auto;
+  border-radius: 4px;
+}
+
+/* 侧边栏导航基础样式 */
+.hony-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-start;
+  align-self: stretch;
+  background: var(--grey-bg-0);
+  width: 180px;
+}
+
+/* 菜单项基础样式 */
+.hony-sidebar-nav .hony-nav-menu-item {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-start;
+  align-self: stretch;
+  width: 100%;
+  gap: 4px;
+}
+
+/* 菜单项头部基础样式 */
+.hony-sidebar-nav .hony-nav-menu-item-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: stretch;
+  gap: 8px;
+  padding: 8px;
+  min-height: 40px;
+  max-height: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hony-sidebar-nav .hony-nav-menu-item-header:hover {
+  background-color: var(--grey-face-2);
+}
+
+.hony-sidebar-nav .hony-nav-menu-item-header i,
+.hony-sidebar-nav .hony-nav-menu-item-header .hony-nav-icon {
+  font-size: 16px;
+  color: var(--grey-text-3);
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hony-sidebar-nav .hony-nav-menu-item-header span {
+  line-height: 24px;
+  color: var(--grey-text-3);;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.hony-sidebar-nav .hony-nav-menu-item-header .icon-jiantou-shang,
+.hony-sidebar-nav .hony-nav-menu-item-header .icon-jiantou-xia,
+.hony-sidebar-nav .hony-nav-menu-item-header .hony-nav-icon {
+  font-size: 16px;
+  color: var(--grey-text-3);
+}
+
+/* 菜单项内容基础样式 */
+.hony-sidebar-nav .hony-nav-menu-item-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  align-self: stretch;
+  overflow: hidden;
+  gap: 4px;
+  animation: slideDown 0.3s ease;
+}
+
+/* 子菜单项基础样式 */
+.hony-sidebar-nav .hony-nav-menu-subitem {
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 4px;
+  padding: 8px 8px 8px 36px;
+  min-height: 32px;
+  max-height: 56px;
+  line-height: 24px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hony-sidebar-nav .hony-nav-menu-subitem:hover {
+  background-color: var(--grey-face-2);
+
+}
+
+.hony-sidebar-nav .hony-nav-menu-subitem.active {
+  background-color: var(--primary-face-1);
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+
+
+.hony-sidebar-nav .hony-collapse-menu:hover {
+  background-color: var(--grey-face-2);
+}
+
+.hony-sidebar-nav .hony-collapse-menu i,
+.hony-sidebar-nav .hony-collapse-menu .hony-nav-icon {
+  font-size: 16px;
+  color: var(--grey-text-3);
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.hony-sidebar-nav .hony-collapse-menu span {
+  line-height: 20px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+/* 箭头图标旋转 - 展开/收起状态（适用于所有导航样式） */
+.hony-sidebar-nav .hony-nav-icon.arrow {
+  transition: transform 0.3s ease;
+  color: var(--grey-text-3);
+}
+
+/* 激活状态下的箭头颜色 */
+.hony-sidebar-nav .hony-nav-menu-item.active .hony-nav-icon.arrow {
+  color: var(--primary-main-1);
+}
+
+/* 展开状态下的箭头旋转 */
+.hony-sidebar-nav .hony-nav-menu-item-header.expanded .hony-nav-icon.arrow {
+  transform: rotate(180deg);
+}
+
+
+/* 菜单项内容 - 默认隐藏（适用于所有导航样式） */
+.hony-sidebar-nav .hony-nav-menu-item-content {
+  display: none;
+}
+
+/* 菜单项展开时显示内容（适用于所有导航样式） */
+.hony-sidebar-nav .hony-nav-menu-item.active .hony-nav-menu-item-content {
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 0.3s ease;
+}
+
+/* 动画效果 */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+/* 展开状态下的菜单标题 */
+.hony-nav-menu-item-content .hony-nav-menu-title {
+  display: none;
+}
+/* 导航容器样式 */
+.hony-nav-container {
+  height: 400px;
+  display: flex;
+  align-items: flex-start;
+  background: var(--grey-face-2);
+  border-radius: 8px;
+  border: 1px solid var(--grey-border-2);
+  overflow: visible; /* 允许右侧抽屉超出容器 */
+  position: relative; /* 确保右侧抽屉的定位正确 */
+  gap: 120px;
+}
+
+
+
+
+
+/* 样式1 - 默认样式 */
+#hony-sidebar-nav-1 {
+  background: var(--grey-bg-0);
+  border-radius: 8px;
+  padding: 8px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+#hony-sidebar-nav-1 .hony-nav-menu-list {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  /* 隐藏滚动条 */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+#hony-sidebar-nav-1 .hony-nav-menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+#hony-sidebar-nav-1 .hony-nav-menu-item {
+  margin-bottom: 4px;
+}
+
+#hony-sidebar-nav-1 .hony-nav-menu-item:last-child {
+  margin-bottom: 0;
+}
+
+#hony-sidebar-nav-1 .hony-collapse-menu {
+  margin-top: 8px;
+  padding: 8px;
+  align-self: flex-start;
+}
+#hony-sidebar-nav-1 .hony-nav-menu-item-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  padding: 8px 8px;
+  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--grey-text-3);
+  font-size: 14px;
+  font-weight: 400;
+}
+#hony-sidebar-nav-1 .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  flex-grow: 1;
+  line-height: 24px;
+  letter-spacing: 0;
+  min-width: 0;
+}
+#hony-sidebar-nav-4 .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  flex-grow: 1;
+  line-height: 24px;
+  letter-spacing: 0;
+  min-width: 0;
+  
+}
+#hony-sidebar-nav-1 .hony-nav-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--grey-text-3);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+#hony-sidebar-nav-1 .hony-nav-icon.arrow {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  font-size: 12px;
+}
+#hony-sidebar-nav-4 .hony-nav-icon.arrow {
+  width: 12px  !important;
+  height: 24px  !important;
+  flex-shrink: 0;
+  font-size: 12px  !important;
+}
+#hony-sidebar-nav-3 .hony-nav-icon.arrow {
+  width: 12px  !important;
+  height: 24px  !important;
+  flex-shrink: 0;
+  font-size: 12px  !important;
+}
+#hony-sidebar-nav-5 .hony-nav-icon.arrow {
+  width: 12px  !important;
+  height: 24px  !important;
+  flex-shrink: 0;
+  font-size: 12px  !important;;
+}
+
+#hony-sidebar-nav-1 .hony-nav-icon.icon-nav {
+  /* 导航图标样式，用户可以根据需要替换 */
+  width: 16px;
+  height: 16px;
+}
+
+#hony-sidebar-nav-1 .hony-nav-menu-item-header:hover {
+  background-color: var(--grey-face-2);
+}
+
+/* 激活状态样式 - 只有当二级导航有选中项时才显示 */
+#hony-sidebar-nav-1 .hony-nav-menu-item.active .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+#hony-sidebar-nav-4 .hony-nav-menu-item.active .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+#hony-sidebar-nav-5.hony-nav-menu-item.active .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+#hony-sidebar-nav-3 .hony-nav-menu-item.active .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+#hony-sidebar-nav-1 .hony-nav-menu-item.active .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+#hony-sidebar-nav-4 .hony-nav-menu-item.active .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+#hony-sidebar-nav-3 .hony-nav-menu-item.active .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+#hony-sidebar-nav-5 .hony-nav-menu-item.active .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+/* 没有二级导航的菜单项激活状态 */
+#hony-sidebar-nav-1 .hony-nav-menu-item.no-submenu {
+  cursor: pointer;
+}
+
+#hony-sidebar-nav-1 .hony-nav-menu-item.no-submenu .hony-nav-menu-item-header {
+  border-radius: 4px;
+}
+
+#hony-sidebar-nav-1 .hony-nav-menu-item.no-submenu:hover .hony-nav-menu-item-header {
+  background-color: var(--grey-face-2);
+}
+
+#hony-sidebar-nav-1 .hony-nav-menu-item.no-submenu.active .hony-nav-menu-item-header {
+  background: var(--primary-face-1);
+  padding: 8px 8px;
+}
+#hony-sidebar-nav-3 .hony-nav-menu-item.no-submenu.active .hony-nav-menu-item-header {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 8px;
+}
+#hony-sidebar-nav-4 .hony-nav-menu-item.no-submenu.active .hony-nav-menu-item-header {
+  background: var(--primary-face-1);
+  padding: 8px 8px;
+}  
+
+#hony-sidebar-nav-1 .hony-nav-menu-item.no-submenu.active .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+#hony-sidebar-nav-4 .hony-nav-menu-item.no-submenu.active .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+#hony-sidebar-nav-5 .hony-nav-menu-item.no-submenu.active .hony-nav-menu-item-header {
+  background: var(--primary-face-1);
+}
+
+
+#hony-sidebar-nav-1 .hony-nav-menu-item.no-submenu.active .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+#hony-sidebar-nav-4 .hony-nav-menu-item.no-submenu.active .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+#hony-sidebar-nav-1 .hony-nav-menu-subitem {
+  padding: 8px 16px 8px 40px;
+}
+#hony-sidebar-nav-1 .hony-collapse-menu {
+  width: 100%;
+}
+/* 展开状态下的收起按钮图标 */
+#hony-sidebar-nav-1 .hony-collapse-menu .hony-nav-icon {
+  transition: transform 0.3s ease;
+}
+/* 收起状态下没有二级导航的菜单项激活状态 */
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item.no-submenu.active .hony-nav-menu-item-header {
+  background: var(--primary-face-1);
+  padding: 8px 4px;
+  border-radius: 4px;
+}
+
+/* 收起状态下激活菜单项的悬停效果 */
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-content {
+  display: flex !important;
+  animation: slideIn 0.3s ease;
+}
+
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-header {
+  background-color: var(--primary-face-1);;
+  border-radius: 4px;
+}
+/* 导航收起状态样式 */
+#hony-sidebar-nav-1.collapsed {
+  width: 56px;
+  padding: 8px 8px;
+}
+
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  display: none;
+}
+
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item {
+  width: 56px;
+  margin: 0 auto 8px;
+}
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item-header {
+  justify-content: center;
+  padding: 8px 4px;
+  width: 100%;
+  cursor: pointer;
+}
+#hony-sidebar-nav-1.collapsed .hony-nav-icon.arrow {
+  display: none;
+}
+#hony-sidebar-nav-1.collapsed .hony-collapse-menu {
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 4px;
+}
+#hony-sidebar-nav-1.collapsed .hony-collapse-menu span:not(.hony-nav-icon) {
+  display: none;
+}
+
+
+
+
+
+/* 收起状态下的悬浮二级导航样式 */
+#hony-sidebar-nav-1.collapsed {
+  position: relative;
+  z-index: 10;
+  overflow: visible;
+}
+
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-list {
+  overflow: visible;
+}
+
+/* 收起状态下的收起按钮图标旋转 */
+#hony-sidebar-nav-1.collapsed .hony-collapse-menu .hony-nav-icon {
+  transform: scaleX(-1);
+  transition: transform 0.3s ease;
+}
+
+
+
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item {
+  position: relative;
+  width: 40px;
+  margin: 0 auto 4px;
+}
+
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item-header {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item:hover {
+
+}
+
+/* 悬浮菜单 */
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item-content {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 48px;
+  margin-left: 0;
+  background: var(--grey-bg-0);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 var(--Color-Grey-Black-Black---1, rgba(21, 24, 33, 0.05)), 0 0 12px 0 var(--Color-Grey-Black-Black---1, rgba(21, 24, 33, 0.05));
+  width: 200px;
+  padding: 8px;
+  z-index: 1000;
+  flex-direction: column;
+  overflow: visible;
+}
+
+/* 悬停时显示悬浮菜单 */
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item:hover .hony-nav-menu-item-content {
+  display: flex !important;
+  animation: slideIn 0.3s ease;
+}
+
+/* 悬浮菜单与触发元素的连接区域 */
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 16px;
+  height: 40px;
+  margin-left: -8px;
+}
+
+/* 悬浮菜单箭头 */
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item-content::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  background: var(--grey-bg-0);
+  border-right: none;
+  border-bottom: none;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+/* 收起状态下的菜单标题 */
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item-content .hony-nav-menu-title {
+  display: block;
+  padding: 6px 16px;
+  color: var(--grey-text-4);;
+  font-size: 12px;
+  font-weight: 500;
+  margin: -1px;
+  white-space: nowrap;
+}
+
+/* 悬浮菜单项 */
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item-content .hony-nav-menu-subitem {
+  display: block;
+  padding: 8px 16px;
+  min-height: 32px;
+  line-height: 24px;
+  color: var(--grey-text-3);;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item-content .hony-nav-menu-subitem:hover {
+  background-color: var(--grey-face-2);
+  border-radius: 4px;
+
+}
+#hony-sidebar-nav-1.collapsed .hony-nav-menu-item-content .hony-nav-menu-subitem.active {
+  background-color: var(--primary-face-1);
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 悬浮菜单动画 */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+/* 侧边栏导航-卡片基础样式 */
+.hony-sidebar-nav-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--grey-bg-0);
+  border: 1px solid var(--grey-border-2);
+  border-radius: 8px;
+  width: 220px;
+  height: 500px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 菜单项 */
+.hony-sidebar-nav-card .hony-nav-menu-item {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-start;
+  align-self: stretch;
+  margin: 0 8px;
+  gap: 4px;
+}
+
+/* 菜单项头部 */
+.hony-sidebar-nav-card .hony-nav-menu-item-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: stretch;
+  gap: 4px;
+  border-radius: 4px;
+  padding: 8px;
+  height: 40px;
+  min-height: 32px;
+  max-height: 56px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hony-sidebar-nav-card .hony-nav-menu-item-header:hover {
+  background-color: var(--grey-face-2);
+}
+
+/* 激活状态的菜单项头部 */
+.hony-sidebar-nav-card .hony-nav-menu-item.active .hony-nav-menu-item-header {
+  background-color: var(--primary-face-1);
+}
+
+.hony-sidebar-nav-card .hony-nav-menu-item.active .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+.hony-sidebar-nav-card .hony-nav-menu-item.active .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+
+/* 图标样式 */
+.hony-sidebar-nav-card .hony-nav-icon {
+  flex-shrink: 0;
+  font-size: 16px;
+  color: var(--grey-text-3);
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 箭头图标 */
+.hony-sidebar-nav-card .hony-nav-icon.arrow {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  color: var(--grey-text-3);
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: transform 0.3s ease;
+}
+
+/* 展开时箭头旋转 */
+.hony-sidebar-nav-card .hony-nav-menu-item.active .hony-nav-icon.arrow {
+  color: var(--primary-main-1);
+  transform: rotate(180deg);
+}
+
+/* 激活状态的菜单项头部图标 */
+.hony-sidebar-nav-card .hony-nav-menu-item.active .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+
+/* 菜单项标题 */
+.hony-sidebar-nav-card .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  flex-grow: 1;
+  padding: 1px 0;
+  line-height: 22px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/* 菜单项内容 - 默认隐藏 */
+.hony-sidebar-nav-card .hony-nav-menu-item-content {
+  display: none;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 4px;
+  padding: 8px 0;
+}
+
+/* 菜单项展开时显示内容 */
+.hony-sidebar-nav-card .hony-nav-menu-item.active .hony-nav-menu-item-content {
+  display: flex;
+  animation: slideDown 0.3s ease;
+}
+
+/* 子菜单项 */
+.hony-sidebar-nav-card .hony-nav-menu-subitem {
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 4px;
+  padding: 8px 12px 8px 40px;
+  min-height: 32px;
+  line-height: 16px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hony-sidebar-nav-card .hony-nav-menu-subitem:hover {
+
+  color: var(--primary-main-1);
+}
+
+/* 激活状态的子菜单项 */
+.hony-sidebar-nav-card .hony-nav-menu-subitem.active {
+  background: var(--primary-face-1);
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+/* 收起菜单 */
+.hony-sidebar-nav-card .hony-collapse-menu {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: stretch;
+  gap: 4px;
+  padding: 14px 16px;
+  height: 56px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: auto;
+  border-top: 1px solid var(--grey-border-2);
+  width: 100%;
+}
+
+.hony-sidebar-nav-card .hony-collapse-menu:hover {
+  background-color: var(--grey-face-2);
+}
+
+.hony-sidebar-nav-card .hony-collapse-menu .hony-nav-icon {
+  font-size: 16px;
+}
+
+.hony-sidebar-nav-card .hony-collapse-menu span:not(.hony-nav-icon) {
+  flex-grow: 1;
+  min-height: 20px;
+  max-height: 20px;
+  line-height: 20px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hony-sidebar-nav {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .hony-sidebar-nav-card {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  
+  
+  
+}
+
+/* 主题色导航样式 */
+#hony-sidebar-nav-2 {
+  background: var(--primary-main-1);
+  border-radius: 8px;
+  padding: 8px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  align-self: stretch;
+  padding: 0px 0px 0px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  row-gap: 4px;
+  margin-bottom: 4px;
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-item-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: stretch;
+  column-gap: 8px;
+  border-radius: 4px;
+  padding: 0px 8px;
+  min-height: 32px;
+  max-height: 56px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-item-header:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-item.active .hony-nav-menu-item-header {
+
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-item-header .hony-nav-icon {
+  flex-shrink: 0;
+  align-self: stretch;
+  width: 24px;
+  height: 40px;
+  color: var(--primary-main-5);
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  flex-grow: 1;
+  padding: 1px 0;
+  line-height: 40px;
+  color: var(--primary-main-5);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-item-content {
+  display: none;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 4px;
+  padding: 0px;
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-item.active .hony-nav-menu-item-content {
+  display: flex;
+  animation: slideDown 0.3s ease;
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-subitem {
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 4px;
+  padding: 8px 12px 8px 40px;
+  min-height: 40px;
+  line-height: 24px;
+  color: var(--primary-main-5);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-subitem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-subitem.active {
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--primary-main-1);;
+  font-weight: 500;
+  height: 40px;
+}
+
+#hony-sidebar-nav-2 .hony-collapse-menu {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    align-self: stretch;
+    gap: 4px;
+    padding: 8px 8px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: auto;
+    border-radius: 4px;
+    margin-top: 8px !important;
+}
+
+#hony-sidebar-nav-2 .hony-collapse-menu:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#hony-sidebar-nav-2 .hony-collapse-menu .hony-nav-icon {
+  font-size: 16px;
+  color: var(--primary-main-5);
+}
+
+#hony-sidebar-nav-2 .hony-collapse-menu span:not(.hony-nav-icon) {
+  flex-grow: 1;
+  min-height: 20px;
+  max-height: 20px;
+  line-height: 20px;
+  color: var(--primary-main-5);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+/* 主题色导航收起状态 */
+#hony-sidebar-nav-2.collapsed {
+  width: 56px;
+  padding: 8px;
+  position: relative;
+  z-index: 90;
+  overflow: visible;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-list {
+  overflow: visible;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-collapse-menu .hony-nav-icon {
+  transform: scaleX(-1);
+  transition: transform 0.3s ease;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  display: none;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-item-header .hony-nav-icon.arrow {
+  display: none !important;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-item {
+  position: relative;
+  width: 40px;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-item-content {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 48px;
+  background: var(--grey-bg-0);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 var(--Color-Grey-Black-Black---1, rgba(21, 24, 33, 0.05)), 0 0 12px 0 var(--Color-Grey-Black-Black---1, rgba(21, 24, 33, 0.05));
+  width: 200px;
+  padding: 8px;
+  z-index: 90;
+  animation: slideIn 0.3s ease;
+  gap: 4px;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-item.active .hony-nav-menu-item-content {
+  display: none !important;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-item-content::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid white;
+  z-index: 101;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-item:hover .hony-nav-menu-item-content {
+  display: flex !important;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-item:hover .hony-nav-menu-item-header {
+  position: relative;
+  z-index: 102;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-item:hover .hony-nav-menu-item-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 16px;
+  height: 100%;
+  z-index: 101;
+}
+
+/* 收起状态下激活菜单项的悬停效果 */
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-content {
+  display: flex !important;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-header {
+  position: relative;
+  z-index: 102;
+  border-radius: 4px;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 16px;
+  height: 100%;
+  z-index: 101;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-title {
+    display: block;
+    padding: 6px 16px;
+    color: var(--grey-text-4);
+    font-size: 12px;
+    font-weight: 500;
+    margin: -1px;
+    white-space: nowrap;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-subitem {
+  color: var(--grey-text-3);
+  padding: 8px 12px;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-subitem:hover {
+  background-color: var(--grey-face-2);
+  border-radius: 4px;
+
+}
+
+#hony-sidebar-nav-2.collapsed .hony-nav-menu-subitem.active {
+  background: var(--primary-face-1);
+  color: var(--primary-main-1);
+}
+
+#hony-sidebar-nav-2.collapsed .hony-collapse-menu span:not(.hony-nav-icon) {
+  display: none;
+}
+
+#hony-sidebar-nav-2.collapsed .hony-collapse-menu {
+  justify-content: center;
+  padding: 14px 0;
+}
+#hony-sidebar-nav-2 .hony-nav-icon.arrow {
+    width: 12px;
+    height: 40px;
+    flex-shrink: 0;
+    font-size: 12px;
+}
+/* 无二级导航的选中状态 */
+#hony-sidebar-nav-2 .hony-nav-menu-item.no-submenu.active .hony-nav-menu-item-header {
+  background: rgba(255, 255, 255, 1);
+  height: 40px;
+}
+#hony-sidebar-nav-2 .hony-nav-menu-item.no-submenu.active .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+#hony-sidebar-nav-2 .hony-nav-menu-item.no-submenu.active .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+
+/* 浅色主题色导航样式 */
+#hony-sidebar-nav-3 {
+  background: var(--primary-face-1);
+  border-radius: 8px;
+  padding: 8px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#hony-sidebar-nav-3 .hony-nav-menu-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  align-self: stretch;
+  padding: 0px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#hony-sidebar-nav-3 .hony-nav-menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+#hony-sidebar-nav-3 .hony-nav-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  row-gap: 4px;
+  margin-bottom: 4px;
+}
+
+#hony-sidebar-nav-3 .hony-nav-menu-item-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: stretch;
+  column-gap: 8px;
+  border-radius: 4px;
+  padding: 8px;
+  min-height: 40px;
+  max-height: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: visible;
+}
+
+#hony-sidebar-nav-3 .hony-nav-menu-item-header:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#hony-sidebar-nav-3 .hony-nav-menu-item.active .hony-nav-menu-item-header {
+    color: var(--primary-main-3);
+}
+
+#hony-sidebar-nav-3 .hony-nav-menu-item-header .hony-nav-icon {
+  flex-shrink: 0;
+  align-self: stretch;
+  width: 24px;
+  height: 24px;
+  color: var(--grey-text-3);
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#hony-sidebar-nav-3 .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  flex-grow: 1;
+  line-height: 24px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+#hony-sidebar-nav-3 .hony-nav-menu-item-content {
+  display: none;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 4px;
+
+}
+
+#hony-sidebar-nav-3 .hony-nav-menu-item.active .hony-nav-menu-item-content {
+  display: flex;
+  animation: slideDown 0.3s ease;
+}
+
+#hony-sidebar-nav-3 .hony-nav-menu-subitem {
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 4px;
+  padding: 0px 12px 0px 40px;
+  min-height: 40px;
+  line-height: 40px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#hony-sidebar-nav-3 .hony-nav-menu-subitem:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#hony-sidebar-nav-3 .hony-nav-menu-subitem.active {
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--primary-main-1);
+  font-weight: 500;
+  border: 1px solid rgb(255, 255, 255);
+  height: 40px;
+}
+
+#hony-sidebar-nav-3 .hony-collapse-menu {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: stretch;
+  gap: 4px;
+  padding: 8px 8px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: auto;
+  border-radius: 4px;
+  margin-top: 8px !important;
+}
+
+#hony-sidebar-nav-3 .hony-collapse-menu:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#hony-sidebar-nav-3 .hony-collapse-menu .hony-nav-icon {
+  font-size: 16px;
+  color: var(--grey-text-3);
+}
+
+#hony-sidebar-nav-3 .hony-collapse-menu span:not(.hony-nav-icon) {
+  flex-grow: 1;
+  min-height: 20px;
+  max-height: 20px;
+  line-height: 20px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+/* 浅色主题色导航收起状态 */
+#hony-sidebar-nav-3.collapsed {
+  width: 56px;
+  position: relative;
+  z-index: 80;
+  overflow: visible;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-list {
+  overflow: visible;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-collapse-menu .hony-nav-icon {
+  transform: scaleX(-1);
+  transition: transform 0.3s ease;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  display: none;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-item-header .hony-nav-icon.arrow {
+  display: none !important;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-item {
+  position: relative;
+  width: 40px;
+  margin: 0 auto 4px;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-item-content {
+  display: none;
+  position: absolute;
+  left: 48px;
+  background: var(--grey-bg-0);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 var(--Color-Grey-Black-Black---1, rgba(21, 24, 33, 0.05)), 0 0 12px 0 var(--Color-Grey-Black-Black---1, rgba(21, 24, 33, 0.05));
+  width: 200px;
+  padding: 8px;
+  z-index: 80;
+  animation: slideIn 0.3s ease;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-item.active .hony-nav-menu-item-content {
+  display: none !important;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-item-content::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid white;
+  z-index: 101;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-item:hover .hony-nav-menu-item-content {
+  display: flex !important;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-item:hover .hony-nav-menu-item-header {
+  position: relative;
+  z-index: 102;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-item:hover .hony-nav-menu-item-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 16px;
+  height: 100%;
+  z-index: 101;
+}
+
+/* 收起状态下激活菜单项的悬停效果 */
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-content {
+  display: flex !important;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-header {
+  position: relative;
+  z-index: 102;
+
+  border-radius: 4px;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 16px;
+  height: 100%;
+  z-index: 101;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-title {
+    display: block;
+    padding: 6px 16px;
+    color: var(--grey-text-4);
+    font-size: 12px;
+    font-weight: 500;
+    margin: -1px;
+    white-space: nowrap;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-subitem {
+  color: var(--grey-text-3);
+  padding: 0px 12px;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-subitem:hover {
+  background-color: var(--grey-face-2);
+}
+
+#hony-sidebar-nav-3.collapsed .hony-nav-menu-subitem.active {
+  background-color: var(--primary-face-1);
+  border-radius: 4px;
+  color: var(--primary-main-1);
+}
+
+#hony-sidebar-nav-3.collapsed .hony-collapse-menu span:not(.hony-nav-icon) {
+  display: none;
+}
+
+#hony-sidebar-nav-3.collapsed .hony-collapse-menu {
+  justify-content: center;
+  padding: 14px 0;
+}
+
+/* 线条导航样式 */
+#hony-sidebar-nav-4 {
+  background: var(--grey-bg-0);
+  border-radius: 8px;
+  padding: 8px;
+  width: 180px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  align-self: stretch;
+  overflow-y: auto;
+  row-gap: 0px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  row-gap: 0px;
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-item-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: stretch;
+  column-gap: 8px;
+  border-radius: 4px;
+  padding: 8px;
+  min-height: 48px;
+  max-height: 48px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: visible;
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-item-header:hover {
+  background-color: var(--grey-face-2);
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-item.active .hony-nav-menu-item-header {
+  color: var(--primary-main-1);
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-item-header .hony-nav-icon {
+  flex-shrink: 0;
+  align-self: stretch;
+  width: 24px;
+  height: 32px;
+  color: var(--grey-text-3);
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  flex-grow: 1;
+  line-height: 24px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-item-content {
+  display: none;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 0px;
+  padding: 0px 0;
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-item.active .hony-nav-menu-item-content {
+  display: flex;
+  animation: slideDown 0.3s ease;
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-subitem {
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 4px;
+  padding: 8px 12px;
+  height: 48px;
+  line-height: 16px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#hony-sidebar-nav-4 .hony-nav-subitem-line {
+  width: 1px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid var(--grey-border-1);
+  border-radius: 1px;
+  margin-right: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-subitem.active .hony-nav-subitem-line::after {
+  content: '';
+  width: 2px;
+  height: 16px;
+
+  border: 2px solid var(--primary-main-1);
+  border-radius: 1px;
+}
+
+
+
+#hony-sidebar-nav-4 .hony-nav-menu-subitem:hover {
+  background-color: var(--grey-face-2);
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-subitem.active {
+  background: rgba(255, 255, 255, 0);
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+#hony-sidebar-nav-4 .hony-nav-menu-subitem.active .hony-nav-subitem-line {
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid var(--grey-border-1);
+}
+
+#hony-sidebar-nav-4 .hony-collapse-menu {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: stretch;
+  gap: 4px;
+  padding: 8px 8px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: auto;
+  border-radius: 4px;
+  margin-top: 8px !important;
+}
+
+#hony-sidebar-nav-4 .hony-collapse-menu:hover {
+  background-color: var(--grey-face-2);
+}
+
+#hony-sidebar-nav-4 .hony-collapse-menu .hony-nav-icon {
+  font-size: 16px;
+  color: var(--grey-text-3);
+}
+
+#hony-sidebar-nav-4 .hony-collapse-menu span:not(.hony-nav-icon) {
+  flex-grow: 1;
+  min-height: 20px;
+  max-height: 20px;
+  line-height: 20px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+/* 线条导航收起状态 */
+#hony-sidebar-nav-4.collapsed {
+  width: 56px;
+  padding: 8px;
+  position: relative;
+  z-index: 70;
+  overflow: visible;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-list {
+  overflow: visible;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-collapse-menu .hony-nav-icon {
+  transform: scaleX(-1);
+  transition: transform 0.3s ease;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  display: none;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-item-header .hony-nav-icon.arrow {
+  display: none !important;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-item {
+  position: relative;
+  width: 40px;
+  height:  48px;
+  margin: 0 auto 4px;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-item-content {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 48px;
+  background: var(--grey-bg-0);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 var(--Color-Grey-Black-Black---1, rgba(21, 24, 33, 0.05)), 0 0 12px 0 var(--Color-Grey-Black-Black---1, rgba(21, 24, 33, 0.05));
+  width: 200px;
+  padding: 8px;
+  z-index: 70;
+  animation: slideIn 0.3s ease;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-item.active .hony-nav-menu-item-content {
+  display: none !important;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-item-content::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid white;
+  z-index: 101;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-item:hover .hony-nav-menu-item-content {
+  display: flex !important;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-item:hover .hony-nav-menu-item-header {
+  position: relative;
+  z-index: 102;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-item:hover .hony-nav-menu-item-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 16px;
+  height: 100%;
+  z-index: 101;
+}
+
+/* 收起状态下激活菜单项的悬停效果 */
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-content {
+  display: flex !important;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-header {
+  position: relative;
+  z-index: 102;
+  border-radius: 4px;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 16px;
+  height: 100%;
+  z-index: 101;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-title {
+    display: block;
+    padding: 6px 16px;
+    color: var(--grey-text-4);
+    font-size: 12px;
+    font-weight: 500;
+    margin: -1px;
+    white-space: nowrap;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-subitem {
+  color: var(--grey-text-3);
+  padding: 8px 12px;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-subitem:hover {
+  background-color: var(--grey-face-2);
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-subitem.active {
+  background: var(--primary-face-1);
+  color: var(--primary-main-1);
+  padding-left: 12px;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-nav-menu-subitem.active::before {
+  display: none;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-collapse-menu span:not(.hony-nav-icon) {
+  display: none;
+}
+
+#hony-sidebar-nav-4.collapsed .hony-collapse-menu {
+  justify-content: center;
+  padding: 14px 0;
+}
+
+/* 通栏导航样式 */
+#hony-sidebar-nav-5 {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-start;
+  align-self: stretch;
+  background: var(--grey-bg-0);
+  width: 180px;
+
+  border-radius: 8px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  align-self: stretch;
+  padding: 0;
+  overflow-y: auto;
+  row-gap: 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  row-gap: 4px;
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-item-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: stretch;
+  gap: 8px;
+  padding: 8px;
+  min-height: 40px;
+  max-height: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: visible;
+  border-radius: 4px;
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-item-header:hover {
+  background-color: var(--grey-face-2);
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-item.active .hony-nav-menu-item-header {
+  color: var(--primary-main-1);
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-item-header .hony-nav-icon {
+  flex-shrink: 0;
+  align-self: stretch;
+  width: 24px;
+  height: 24px;
+  color: var(--grey-text-3);
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-item.active .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  flex-grow: 1;
+  padding: 1px 0;
+  line-height: 22px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-item.active .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-item-content {
+  display: none;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  align-self: stretch;
+  overflow: hidden;
+  gap: 4px;
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-item.active .hony-nav-menu-item-content {
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 0.3s ease;
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-subitem {
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 0px;
+  padding: 8px 8px 8px 36px;
+  min-height: 32px;
+  max-height: 56px;
+  line-height: 24px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-subitem:hover {
+  background-color: var(--grey-face-2);
+
+}
+
+#hony-sidebar-nav-5 .hony-nav-menu-subitem.active {
+  background-color: var(--primary-face-1);
+  color: var(--primary-main-1);
+  font-weight: 500;
+  border-left: 3px solid var(--primary-main-1);
+  padding-left: 33px;
+}
+
+#hony-sidebar-nav-5 .hony-collapse-menu {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: stretch;
+  gap: 4px;
+  padding: 8px 8px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: auto;
+  border-radius: 4px;
+}
+
+#hony-sidebar-nav-5 .hony-collapse-menu:hover {
+  background-color: var(--grey-face-2);
+}
+
+#hony-sidebar-nav-5 .hony-collapse-menu .hony-nav-icon {
+  font-size: 16px;
+  color: var(--grey-text-3);
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#hony-sidebar-nav-5 .hony-collapse-menu span:not(.hony-nav-icon) {
+  flex-grow: 1;
+  line-height: 20px;
+  color: var(--grey-text-3);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+/* 通栏导航收起状态 */
+#hony-sidebar-nav-5.collapsed {
+  width: 56px;
+  adding: 8px;
+  position: relative;
+  z-index: 60;
+  overflow: visible;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-list {
+  overflow: visible;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-collapse-menu .hony-nav-icon {
+  transform: scaleX(-1);
+  transition: transform 0.3s ease;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-item-header span:not(.hony-nav-icon) {
+  display: none;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-item-header .hony-nav-icon.arrow {
+  display: none !important;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-item-header {
+  justify-content: center;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-item {
+  position: relative;
+  width: 40px;
+  margin: 0 auto 4px;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-item-content {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 48px;
+    margin-left: 0;
+    background: var(--grey-bg-0);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 var(--Color-Grey-Black-Black---1, rgba(21, 24, 33, 0.05)), 0 0 12px 0 var(--Color-Grey-Black-Black---1, rgba(21, 24, 33, 0.05));
+    width: 200px;
+    padding: 8px;
+    z-index: 1000;
+    flex-direction: column;
+    overflow: visible;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-item.active .hony-nav-menu-item-content {
+  display: none !important;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-item-content::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 16px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 8px solid white;
+  border-bottom: 8px solid transparent;
+  z-index: 101;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-item:hover .hony-nav-menu-item-content {
+  display: flex !important;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-item:hover .hony-nav-menu-item-header {
+  position: relative;
+  z-index: 102;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-item:hover .hony-nav-menu-item-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 16px;
+  height: 100%;
+  z-index: 101;
+}
+
+/* 收起状态下激活菜单项的悬停效果 */
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-content {
+  display: flex !important;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-header {
+  position: relative;
+  z-index: 102;
+
+  border-radius: 4px;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-item.active:hover .hony-nav-menu-item-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 16px;
+  height: 100%;
+  z-index: 101;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-title {
+    display: block;
+    padding: 6px 16px;
+    color: var(--grey-text-4);
+    font-size: 12px;
+    font-weight: 500;
+    margin: -1px;
+    white-space: nowrap;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-subitem {
+  color: var(--grey-text-3);
+  padding: 12px 16px;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 4px;
+  height: 40px;
+  line-height: 16px;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-subitem:hover {
+  background-color: var(--grey-face-2);
+
+}
+
+#hony-sidebar-nav-5.collapsed .hony-nav-menu-subitem.active {
+  background: var(--primary-face-1);
+  color: var(--primary-main-1);
+  padding-left: 16px;
+  border-left: 3px solid var(--primary-main-1);
+}
+
+#hony-sidebar-nav-5.collapsed .hony-collapse-menu span:not(.hony-nav-icon) {
+  display: none;
+}
+
+#hony-sidebar-nav-5.collapsed .hony-collapse-menu {
+  justify-content: center;
+  padding: 14px 0;
+}
+
+/* 样式6 - 抽屉导航 */
+#hony-sidebar-nav-6.hony-drawer-nav {
+  width: 180px;
+  border-radius: 8px;
+  overflow: visible; /* 允许右侧抽屉超出导航容器 */
+  background-color: var(--grey-bg-0);
+  position: relative; /* 确保右侧抽屉的定位正确 */
+}
+
+.hony-drawer-nav-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* 左侧导航 */
+.hony-drawer-nav-left {
+  width: 180px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hony-drawer-nav-menu {
+  flex: 1;
+  padding: 0px 0;
+  overflow-y: auto;
+}
+
+.hony-drawer-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-left: 4px solid transparent;
+}
+
+.hony-drawer-nav-item .hony-drawer-nav-item-text {
+  color: var(--grey-text-3);
+  font-weight: 400;
+}
+
+.hony-drawer-nav-item .hony-drawer-nav-item-icon .hony-nav-icon {
+  color: var(--grey-text-3);
+}
+
+/* 常规悬停状态 */
+.hony-drawer-nav-item:hover {
+  background-color: var(--grey-face-2);
+}
+
+.hony-drawer-nav-item:hover .hony-drawer-nav-item-text {
+  color: var(--grey-text-3);
+}
+
+.hony-drawer-nav-item:hover .hony-drawer-nav-item-icon .hony-nav-icon {
+  color: var(--grey-text-3);
+}
+
+.hony-drawer-nav-item:hover .hony-drawer-nav-item-arrow .hony-nav-icon {
+  color: var(--grey-text-3);
+}
+
+/* 激活状态 */
+.hony-drawer-nav-item.active {
+  border-left-color: var(--primary-main-1);
+  background-color: var(--grey-bg-0);
+}
+
+.hony-drawer-nav-item.active .hony-drawer-nav-item-text {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+.hony-drawer-nav-item.active .hony-drawer-nav-item-icon .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+
+.hony-drawer-nav-item.active .hony-drawer-nav-item-arrow .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+
+/* 激活悬停状态 */
+.hony-drawer-nav-item.active:hover {
+  background-color: var(--grey-bg-0);
+}
+
+.hony-drawer-nav-item.active:hover .hony-drawer-nav-item-text {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+.hony-drawer-nav-item.active:hover .hony-drawer-nav-item-icon .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+
+/* 当二级导航项被选中时，对应的一级导航项保持激活状态 */
+.hony-drawer-nav-item:has(+ .hony-drawer-nav-right .hony-drawer-nav-right-item.active) {
+  border-left-color: var(--primary-main-1);
+  background-color: var(--grey-bg-0);
+}
+
+.hony-drawer-nav-item:has(+ .hony-drawer-nav-right .hony-drawer-nav-right-item.active) .hony-drawer-nav-item-text {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+.hony-drawer-nav-item:has(+ .hony-drawer-nav-right .hony-drawer-nav-right-item.active) .hony-drawer-nav-item-icon .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+
+/* 选中状态（与激活状态相同） */
+.hony-drawer-nav-item.hony-selected {
+  border-left-color: var(--primary-main-1);
+  background-color: var(--primary-face-1);
+}
+
+.hony-drawer-nav-item.hony-selected .hony-drawer-nav-item-text {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+.hony-drawer-nav-item.hony-selected .hony-drawer-nav-item-icon .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+
+.hony-drawer-nav-item-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.hony-drawer-nav-item-text {
+  flex: 1;
+  font-size: 14px;
+  color: var(--grey-text-3);
+  line-height: 22px;
+}
+
+.hony-drawer-nav-item-arrow {
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey-text-4);
+}
+
+/* 收起菜单 */
+.hony-drawer-nav-collapse {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px 0px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hony-drawer-nav-collapse:hover {
+  background-color: var(--grey-face-2);
+}
+
+.hony-drawer-nav-collapse:hover .hony-drawer-nav-collapse-text {
+  color: var(--primary-main-1);
+}
+
+.hony-drawer-nav-collapse-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  color: var(--grey-text-3);
+}
+
+.hony-drawer-nav-collapse-text {
+  flex: 1;
+  font-size: 12px;
+  color: var(--grey-text-3);
+  line-height: 20px;
+  transition: all 0.2s ease;
+}
+
+/* 样式6收起状态 */
+#hony-sidebar-nav-6.collapsed {
+  width: 56px;
+  position: relative;
+  z-index: 10;
+  overflow: visible;
+}
+
+#hony-sidebar-nav-6.collapsed .hony-drawer-nav-item-text,
+#hony-sidebar-nav-6.collapsed .hony-drawer-nav-item-arrow {
+  display: none;
+}
+
+#hony-sidebar-nav-6.collapsed .hony-drawer-nav-item {
+  justify-content: center;
+  width: 56px;
+  margin: 0px;
+}
+
+#hony-sidebar-nav-6.collapsed .hony-drawer-nav-collapse {
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 4px;
+}
+
+#hony-sidebar-nav-6.collapsed .hony-drawer-nav-collapse-text {
+  display: none;
+}
+
+#hony-sidebar-nav-6.collapsed .hony-drawer-nav-collapse-icon {
+  margin-right: 0;
+}
+
+/* 收起状态下收起按钮图标旋转 */
+#hony-sidebar-nav-6.collapsed .hony-drawer-nav-collapse .hony-nav-icon {
+  transform: scaleX(-1);
+  transition: transform 0.3s ease;
+}
+
+/* 展开状态下的收起按钮图标 */
+#hony-sidebar-nav-6 .hony-drawer-nav-collapse .hony-nav-icon {
+  transition: transform 0.3s ease;
+}
+
+.hony-drawer-nav-item.no-submenu .hony-drawer-nav-item-arrow {
+  display: none;
+}
+
+/* 右侧抽屉 */
+.hony-drawer-nav-right {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  width: 200px;
+  height: 100%;
+  background-color: var(--grey-bg-0);
+  box-shadow: 0 2px 4px 0 var(--Color-Grey-Black-Black---1, rgba(21, 24, 33, 0.05)), 0 0 12px 0 var(--Color-Grey-Black-Black---1, rgba(21, 24, 33, 0.05));
+  z-index:0;
+  display: none;
+}
+
+.hony-drawer-nav-right-content {
+  padding: 8px 16px 0;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  /* 隐藏滚动条 */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hony-drawer-nav-right-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* 一级导航选中时显示右侧抽屉 */
+.hony-drawer-nav-item.active + .hony-drawer-nav-right {
+  display: block;
+}
+
+/* 确保右侧抽屉在默认情况下是隐藏的 */
+.hony-drawer-nav-right {
+  display: none;
+}
+
+/* 一级导航选中时显示右侧抽屉 */
+.hony-drawer-nav-item.active + .hony-drawer-nav-right {
+  display: block;
+}
+
+/* 确保抽屉导航容器有相对定位，使右侧抽屉的绝对定位生效 */
+.hony-drawer-nav-content {
+  position: relative;
+}
+
+/* 收起状态下隐藏右侧抽屉 */
+.hony-drawer-nav.collapsed .hony-drawer-nav-right {
+  display: none;
+}
+
+/* 抽屉标题 */
+.hony-drawer-nav-right-title {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.hony-drawer-nav-right-title-text {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--grey-text-3);
+  line-height: 22px;
+  margin-left: 2px;
+}
+
+.hony-drawer-nav-right-title-line {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 2px;
+  height: 16px;
+  background-color: var(--primary-main-1);
+  border-radius: 2px;
+}
+
+/* 抽屉菜单项 */
+.hony-drawer-nav-right-item {
+  padding: 8px;
+  font-size: 14px;
+  color: var(--grey-text-3);
+  line-height: 22px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  background-color: var(--grey-bg-0);
+  font-weight: 400;
+}
+
+/* 常规悬停状态 */
+.hony-drawer-nav-right-item:hover {
+  background-color: var(--grey-face-2);
+  color: var(--primary-main-1);
+  font-weight: 400;
+}
+
+/* 激活状态 */
+.hony-drawer-nav-right-item.active {
+  background-color: var(--primary-face-1);
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+/* 激活悬停状态 */
+.hony-drawer-nav-right-item.active:hover {
+  background-color: var(--primary-face-1);
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+/* 选中状态（与激活状态相同） */
+.hony-drawer-nav-right-item.hony-selected {
+  background-color: var(--primary-face-1);
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+.hony-drawer-nav-right-item.hony-selected:hover {
+  background-color: var(--primary-face-1);
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+/* 顶部导航容器 */
+.hony-top-nav-container {
+  width: 100%;
+  padding: 20px;
+  background: var(--grey-bg-2);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* 顶部导航基础样式 */
+.hony-top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  background: var(--grey-bg-0);
+  box-shadow: var(--shadow-grey-mini);
+  padding: 0 16px;
+  border-radius: 0px;
+}
+
+/* 顶部导航Logo样式 */
+.hony-top-nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0px;
+  width: 200px;
+}
+
+.hony-top-nav-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--primary-face-1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.hony-top-nav-logo-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--grey-text-1);
+  font-family: 'PangMenZhengDao', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimHei, Arial, Helvetica, sans-serif;
+}
+
+/* 顶部导航菜单项样式 */
+.hony-top-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  width: 100%;
+  flex: 1;
+}
+
+.hony-top-nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+
+.hony-top-nav-item-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.hony-top-nav-item-text {
+  font-size: 14px;
+  color: var(--grey-text-1);
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.hony-top-nav-item-arrow {
+  font-size: 12px;
+  color: var(--grey-text-4);
+  transition: all 0.2s ease;
+}
+
+.hony-top-nav-item-arrow .hony-nav-icon {
+  transition: transform 0.3s ease, color 0.2s ease;
+  display: inline-block; /* 确保图标是块级元素，能够应用旋转效果 */
+}
+
+/* 顶部导航箭头旋转效果 */
+.hony-top-nav-item:hover .hony-top-nav-item-arrow .hony-nav-icon {
+  transform: rotate(180deg);
+  color: var(--primary-main-1);
+}
+
+/* 顶部导航常规状态 */
+.hony-top-nav-item .hony-top-nav-item-content {
+  background: transparent;
+}
+
+.hony-top-nav-item .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--grey-text-1);
+}
+
+/* 顶部导航悬停状态 */
+.hony-top-nav-item:hover .hony-top-nav-item-content {
+  background: var(--grey-face-2);
+}
+
+.hony-top-nav-item:hover .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-1);
+}
+
+/* 移除对箭头图标的颜色影响，让旋转效果的选择器控制颜色 */
+.hony-top-nav-item:hover .hony-top-nav-item-content .hony-nav-icon:not(.hony-top-nav-item-arrow .hony-nav-icon) {
+  color: var(--primary-main-1);
+}
+
+/* 顶部导航激活状态（二级导航有选中时） */
+.hony-top-nav-item.active .hony-top-nav-item-content {
+  background: var(--primary-face-1);
+}
+
+.hony-top-nav-item.active .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+.hony-top-nav-item.active .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+
+/* 顶部导航激活悬停状态（二级导航有选中） */
+.hony-top-nav-item.active:hover .hony-top-nav-item-content {
+  background: var(--primary-face-1);
+}
+
+.hony-top-nav-item.active:hover .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+.hony-top-nav-item.active:hover .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--primary-main-1);
+}
+
+/* 顶部导航选中状态（没有二级导航时点击一级导航就直接选中一级导航） */
+.hony-top-nav-item.hony-selected .hony-top-nav-item-content {
+  background: var(--primary-face-1);
+}
+
+.hony-top-nav-item.hony-selected .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+.hony-top-nav-item.hony-selected .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--primary-main-1);
+  font-size: 16px;
+}
+
+/* 顶部导航二级导航样式 */
+.hony-top-nav-submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--grey-bg-0);
+  box-shadow: var(--shadow-grey-small);
+  border-radius: 8px;
+  width: 180px;
+  z-index: 1000;
+  display: none;
+}
+
+.hony-top-nav-item:hover .hony-top-nav-submenu {
+  display: block;
+}
+
+.hony-top-nav-submenu-content {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hony-top-nav-submenu-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  color: var(--grey-text-3);
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* 二级导航常规状态 */
+.hony-top-nav-submenu-item {
+  background: transparent;
+}
+
+/* 二级导航悬停状态 */
+.hony-top-nav-submenu-item:hover {
+  background: var(--grey-face-2);
+  color: var(--grey-text-3);
+}
+
+/* 二级导航选中状态 */
+.hony-top-nav-submenu-item.active {
+  background: var(--primary-face-1);
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+/* 顶部导航右侧功能区样式 */
+.hony-top-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0px;
+}
+
+.hony-top-nav-action-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.hony-top-nav-action-item:hover {
+  background: var(--grey-face-2);
+}
+.hony-top-nav-action-item:hover #hony-top-nav-2 .iconfont{
+  background: var(--primary-main-1);
+}
+.hony-top-nav-2 .hony-top-nav-action-item:hover{
+  background: rgba(255, 255, 255, 0.2)  !important;
+}
+.hony-top-nav-action-item .hony-nav-icon {
+  color: var(--grey-text-1);
+}
+.hony-top-nav-action-item:hover .hony-nav-icon {
+  color: var(--primary-main-1) !important; /* hover 时的主色 */
+}
+
+
+/* 用户头像样式 */
+.hony-top-nav-action-item.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  padding: 0px 0px;
+  margin-left: 8px;
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--grey-face-1);
+  overflow: hidden;
+  
+}
+
+/* 顶部导航卡片样式 */
+.hony-top-nav-card {
+  background: var(--grey-bg-0);
+  box-shadow: var(--shadow-grey-mini);
+}
+
+/* 样式1 - 常规卡片 */
+#hony-top-nav-1 {
+  background-color: var(--grey-bg-0);
+}
+#hony-top-nav-2 .iconfont {
+  color: var(--primary-main-5);
+}
+/* 样式2 - 主题卡片 */
+#hony-top-nav-2 {
+  background-color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-logo-text {
+  color: var(--primary-main-5) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-item-text {
+  color: var(--primary-main-5) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-item .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--primary-main-5) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-item-arrow {
+  color: var(--primary-main-5) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-item:hover .hony-top-nav-item-content {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-item:hover .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-5) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-item:hover .hony-top-nav-item-content .hony-nav-icon:not(.hony-top-nav-item-arrow .hony-nav-icon) {
+  color: var(--primary-main-5) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-item:hover .hony-top-nav-item-arrow .hony-nav-icon {
+  color: var(--primary-main-5) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-item.active .hony-top-nav-item-content {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-item.active .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-5) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-item.active .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--primary-main-5) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-item.hony-selected .hony-top-nav-item-content {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-item.hony-selected .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--grey-bg-0) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-item.hony-selected .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--grey-bg-0) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-submenu {
+  background: var(--grey-bg-0) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-submenu-item {
+  color: var(--grey-text-3) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-submenu-item:hover {
+  background: var(--primary-face-1) !important;
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-2 .hony-top-nav-submenu-item.active {
+  background: var(--primary-face-1) !important;
+  color: var(--primary-main-1) !important;
+}
+
+/* 样式3 - 浅主图卡片 */
+#hony-top-nav-3 {
+  background-color: var(--primary-face-2) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-logo-text {
+  color: var(--grey-text-1) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-item-text {
+  color: var(--grey-text-1) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-item .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--grey-text-1) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-item-arrow {
+  color: var(--grey-text-4) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-item:hover .hony-top-nav-item-content {
+  background: rgba(255, 255, 255, 0.4) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-item:hover .hony-top-nav-item-content .hony-top-nav-item-text {
+
+}
+
+#hony-top-nav-3 .hony-top-nav-item:hover .hony-top-nav-item-content .hony-nav-icon:not(.hony-top-nav-item-arrow .hony-nav-icon) {
+
+}
+
+#hony-top-nav-3 .hony-top-nav-item:hover .hony-top-nav-item-arrow .hony-nav-icon {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-item.active .hony-top-nav-item-content {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid white;
+}
+
+#hony-top-nav-3 .hony-top-nav-item.active .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-item.active .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-item.hony-selected .hony-top-nav-item-content {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid white;
+}
+
+#hony-top-nav-3 .hony-top-nav-item.hony-selected .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-item.hony-selected .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-submenu {
+  background: var(--grey-bg-0) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-submenu-item {
+  color: var(--grey-text-3) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-submenu-item:hover {
+  background: var(--primary-face-1) !important;
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-3 .hony-top-nav-submenu-item.active {
+  background: var(--primary-face-1) !important;
+  color: var(--primary-main-1) !important;
+}
+
+/* 样式4 - 线条 */
+#hony-top-nav-4 {
+  background-color: var(--grey-bg-0) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-logo-text {
+  color: var(--grey-text-1) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-item-text {
+  color: var(--grey-text-1) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-item .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--grey-text-1) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-item-arrow {
+  color: var(--grey-text-4) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-item:hover .hony-top-nav-item-content {
+  background: transparent !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-item:hover .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-item:hover .hony-top-nav-item-content .hony-nav-icon:not(.hony-top-nav-item-arrow .hony-nav-icon) {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-item:hover .hony-top-nav-item-arrow .hony-nav-icon {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-item.active .hony-top-nav-item-content {
+  background: transparent !important;
+  border-bottom: 2px solid var(--primary-main-1) !important;
+  border-radius: 0px;
+  padding: 16px 12px;
+}
+
+#hony-top-nav-4 .hony-top-nav-item.active .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-item.active .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--primary-main-1) !important;
+}
+#hony-top-nav-4.hony-top-nav-item{
+  background-color: var(--primary-main-1) !important;
+}
+#hony-top-nav-4 .hony-top-nav-item.hony-selected .hony-top-nav-item-content {
+  background: transparent !important;
+  border-bottom: 2px solid var(--primary-main-1) !important;
+  border-radius: 0px;
+  padding: 16px 12px;
+}
+
+#hony-top-nav-4 .hony-top-nav-item.hony-selected .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-item.hony-selected .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-submenu {
+  background: var(--grey-bg-0) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-submenu-item {
+  color: var(--grey-text-3) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-submenu-item:hover {
+  background: var(--primary-face-1) !important;
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-4 .hony-top-nav-submenu-item.active {
+  background: var(--primary-face-1) !important;
+  color: var(--primary-main-1) !important;
+}
+
+/* 样式5 - 底色 */
+#hony-top-nav-5 {
+  background-color: var(--grey-bg-0) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-logo-text {
+  color: var(--grey-text-1) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-item-text {
+  color: var(--grey-text-1) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-item .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--grey-text-1) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-item-arrow {
+  color: var(--grey-text-4) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-item:hover .hony-top-nav-item-content {
+  background: var(--grey-face-2) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-item:hover .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-item:hover .hony-top-nav-item-content .hony-nav-icon:not(.hony-top-nav-item-arrow .hony-nav-icon) {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-item:hover .hony-top-nav-item-arrow .hony-nav-icon {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-item.active .hony-top-nav-item-content {
+  background: var(--primary-face-1) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-item.active .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-item.active .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-item.hony-selected .hony-top-nav-item-content {
+  background: var(--primary-face-1) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-item.hony-selected .hony-top-nav-item-content .hony-top-nav-item-text {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-item.hony-selected .hony-top-nav-item-content .hony-nav-icon {
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-submenu {
+  background: var(--grey-bg-0) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-submenu-item {
+  color: var(--grey-text-3) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-submenu-item:hover {
+  background: var(--primary-face-1) !important;
+  color: var(--primary-main-1) !important;
+}
+
+#hony-top-nav-5 .hony-top-nav-submenu-item.active {
+  background: var(--primary-face-1) !important;
+  color: var(--primary-main-1) !important;
+}

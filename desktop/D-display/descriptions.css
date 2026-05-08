@@ -1,0 +1,407 @@
+/* ============================================================
+   详情字段组件 Descriptions Component
+   ============================================================ */
+
+/* 详情容器 */
+.hony-descriptions {
+  width: 100%;
+  background: var(--grey-bg-0);
+  border-radius: var(--radius-md);
+}
+
+/* ============================================================
+   样式1：左右结构 (Horizontal Layout)
+   ============================================================ */
+
+/* 左右结构容器 */
+.hony-descriptions-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px 24px;
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* 左右结构字段项 */
+.hony-descriptions-horizontal-item {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+}
+
+/* 字段标签 */
+.hony-descriptions-horizontal-item-label {
+  flex-shrink: 0;
+  width: 110px;
+  padding: 4px 12px 4px 0;
+  font-size: var(--font-size-sm);
+  color: var(--grey-text-3);
+  line-height: 24px;
+  font-size: 14px;
+}
+
+/* 字段内容 */
+.hony-descriptions-horizontal-item-content {
+  flex: 1;
+  padding: 4px 0px;
+  font-size: var(--font-size-sm);
+  color: var(--grey-text-1);
+  font-weight: var(--font-weight-medium);
+  line-height: 24px;
+  font-size: 14px;
+}
+
+/* 左右结构图片容器 */
+.hony-descriptions-horizontal-item-images {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 左右结构图片 */
+.hony-descriptions-horizontal-item-image {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px dashed var(--grey-border-1);
+}
+.hony-image-type-content.hony-descriptions-image{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.hony-descriptions-horizontal-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   样式2：上下结构 (Vertical Layout)
+   ============================================================ */
+
+/* 上下结构容器 */
+.hony-descriptions-vertical {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* 上下结构字段项 */
+.hony-descriptions-vertical-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 24px;
+  flex: 1;
+}
+
+/* 字段标签 */
+.hony-descriptions-vertical-item-label {
+  padding: 0 0 4px;
+  font-size: var(--font-size-sm);
+  color: var(--grey-text-3);
+  line-height: 22px;
+}
+
+/* 字段内容 */
+.hony-descriptions-vertical-item-content {
+  padding: 4px 0px;
+  font-size: var(--font-size-sm);
+  color: var(--grey-text-1);
+  font-weight: var(--font-weight-medium);
+  line-height: 24px;
+}
+
+/* 上下结构图片容器 */
+.hony-descriptions-vertical-item-images {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+/* 上下结构图片 */
+.hony-descriptions-vertical-item-image {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px dashed var(--grey-border-1);
+}
+
+.hony-descriptions-vertical-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   样式3：边框结构 (Bordered Layout)
+   ============================================================ */
+
+/* 边框结构容器 */
+.hony-descriptions-bordered {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--grey-border-1);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* 边框结构行 */
+.hony-descriptions-bordered-row {
+  display: flex;
+  border-bottom: 1px solid var(--grey-border-1);
+}
+
+.hony-descriptions-bordered-row:last-child {
+  border-bottom: none;
+}
+
+/* 边框结构字段项 */
+.hony-descriptions-bordered-item {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  min-height: 48px;
+}
+
+/* 字段标签 */
+.hony-descriptions-bordered-item-label {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 12px;
+  min-width: 136px;
+  background: var(--grey-face-1);
+  font-size: var(--font-size-sm);
+  color: var(--grey-text-3);
+  line-height: 24px;
+}
+
+/* 字段内容 */
+.hony-descriptions-bordered-item-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 12px 8px;
+  font-size: var(--font-size-sm);
+  color: var(--grey-text-1);
+  font-weight: var(--font-weight-medium);
+  line-height: 24px;
+}
+
+/* 边框结构图片容器 */
+.hony-descriptions-bordered-item-images {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+}
+
+/* 边框结构图片 */
+.hony-descriptions-bordered-item-image {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px dashed var(--grey-border-1);
+}
+
+.hony-descriptions-bordered-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   字段内容类型
+   ============================================================ */
+
+/* 标签内容 */
+.hony-descriptions-content-tag {
+  display: inline-flex;
+  gap: 8px;
+}
+
+/* 链接内容 */
+.hony-descriptions-content-link {
+  color: var(--primary-main-1);
+  text-decoration: none;
+}
+
+.hony-descriptions-content-link:hover {
+  text-decoration: underline;
+}
+
+/* 数字内容 */
+.hony-descriptions-content-number {
+  color: var(--danger-main-1);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* 时间内容 */
+.hony-descriptions-content-time {
+  color: var(--grey-text-1);
+}
+
+/* ============================================================
+   尺寸变体
+   ============================================================ */
+
+/* 紧凑尺寸 */
+.hony-descriptions-compact .hony-descriptions-horizontal-item,
+.hony-descriptions-compact .hony-descriptions-vertical-item {
+  padding-bottom: 4px;
+}
+
+.hony-descriptions-compact .hony-descriptions-horizontal-item-label,
+.hony-descriptions-compact .hony-descriptions-horizontal-item-content {
+  padding: 2px 8px;
+  line-height: 20px;
+}
+
+.hony-descriptions-compact .hony-descriptions-vertical-item-label {
+  padding: 0 0 2px;
+  line-height: 18px;
+}
+
+.hony-descriptions-compact .hony-descriptions-vertical-item-content {
+  padding: 2px 8px;
+  line-height: 20px;
+}
+
+.hony-descriptions-compact .hony-descriptions-bordered-item-label,
+.hony-descriptions-compact .hony-descriptions-bordered-item-content {
+  padding: 8px;
+  line-height: 20px;
+}
+
+/* 大尺寸 */
+.hony-descriptions-large .hony-descriptions-horizontal-item-label,
+.hony-descriptions-large .hony-descriptions-horizontal-item-content {
+  padding: 8px 16px;
+  font-size: var(--font-size-base);
+  line-height: 28px;
+}
+
+.hony-descriptions-large .hony-descriptions-vertical-item-label {
+  padding: 0 0 8px;
+  font-size: var(--font-size-base);
+  line-height: 26px;
+}
+
+.hony-descriptions-large .hony-descriptions-vertical-item-content {
+  padding: 8px 20px;
+  font-size: var(--font-size-base);
+  line-height: 28px;
+}
+
+.hony-descriptions-large .hony-descriptions-bordered-item-label,
+.hony-descriptions-large .hony-descriptions-bordered-item-content {
+  padding: 16px;
+  font-size: var(--font-size-base);
+  line-height: 28px;
+}
+
+/* ============================================================
+   响应式设计
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .hony-descriptions {
+    padding: 20px;
+  }
+  
+  /* 左右结构变为上下结构 */
+  .hony-descriptions-horizontal {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .hony-descriptions-horizontal-item {
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--grey-face-2);
+  }
+  
+  .hony-descriptions-horizontal-item:last-child {
+    border-bottom: none;
+  }
+  
+  .hony-descriptions-horizontal-item-label {
+    width: 100%;
+    padding: 0 0 4px;
+  }
+  
+  .hony-descriptions-horizontal-item-content {
+    padding: 0;
+  }
+  
+  /* 上下结构保持不变 */
+  .hony-descriptions-vertical {
+    gap: 12px;
+  }
+  
+  /* 边框结构 */
+  .hony-descriptions-bordered-row {
+    flex-direction: column;
+  }
+  
+  .hony-descriptions-bordered-item-label {
+    min-width: 100%;
+    border-bottom: 1px solid var(--grey-border-1);
+  }
+  
+  /* 图片响应式 */
+  .hony-descriptions-horizontal-item-image,
+  .hony-descriptions-vertical-item-image,
+  .hony-descriptions-bordered-item-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* ============================================================
+   深色模式支持（可选）
+   ============================================================ */
+
+[data-theme="dark"] .hony-descriptions {
+  background: var(--grey-text-1);
+}
+
+[data-theme="dark"] .hony-descriptions-bordered {
+  border-color: var(--grey-text-3);
+}
+
+[data-theme="dark"] .hony-descriptions-bordered-row {
+  border-bottom-color: var(--grey-text-3);
+}
+
+[data-theme="dark"] .hony-descriptions-bordered-item-label {
+  background: var(--grey-text-2);
+}
+
+[data-theme="dark"] .hony-descriptions-horizontal-item-label,
+[data-theme="dark"] .hony-descriptions-vertical-item-label,
+[data-theme="dark"] .hony-descriptions-bordered-item-label {
+  color: var(--grey-border-2);
+}
+
+[data-theme="dark"] .hony-descriptions-horizontal-item-content,
+[data-theme="dark"] .hony-descriptions-vertical-item-content,
+[data-theme="dark"] .hony-descriptions-bordered-item-content {
+  color: var(--grey-face-1);
+}
+.hony-btn hony-btn-link .descriptions-link{
+  font-weight: var(--font-weight-semibold);
+}

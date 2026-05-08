@@ -1,0 +1,433 @@
+/* 标签组件样式 */
+
+/* 基础标签样式 */
+.hony-tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    min-width: 24px;
+    min-height: 24px;
+    max-height: 24px;
+}
+
+.hony-tab .hony-tab-icon {
+    width: 14px;
+    height: 16px;
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+.hony-tab .hony-tab-close {
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+
+
+/* 标签图标样式 */
+.hony-tab-icon {
+    margin-right: 4px;
+    font-size: 12px;
+}
+
+/* 标签关闭按钮 */
+.hony-tab-close {
+    margin-left: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 12px;
+}
+
+/* 填充标签 */
+.hony-tab-primary {
+    background-color: var(--primary-main-1);
+    color: var(--primary-main-5);
+    border: none;
+}
+
+.hony-tab-primary .hony-tab-icon {
+    color: var(--primary-main-5);
+}
+
+.hony-tab-primary .hony-tab-close {
+    color: var(--primary-main-5);
+}
+
+.hony-tab-danger {
+    background-color: var(--danger-main-1);
+    color: var(--primary-main-5);
+    border: none;
+}
+
+.hony-tab-danger .hony-tab-icon {
+    color: var(--primary-main-5);
+}
+
+.hony-tab-danger .hony-tab-close {
+    color: var(--primary-main-5);
+}
+
+.hony-tab-success {
+    background-color: var(--success-main-1);
+    color: var(--primary-main-5);
+    border: none;
+}
+
+.hony-tab-success .hony-tab-icon {
+    color: var(--primary-main-5);
+}
+
+.hony-tab-success .hony-tab-close {
+    color: var(--primary-main-5);
+}
+
+.hony-tab-warning {
+    background-color: var(--warning-main-1);
+    color: var(--primary-main-5);
+    border: none;
+}
+
+.hony-tab-warning .hony-tab-icon {
+    color: var(--primary-main-5);
+}
+
+.hony-tab-warning .hony-tab-close {
+    color: var(--primary-main-5);
+}
+
+.hony-tab-secondary {
+    background-color: var(--grey-text-1);
+    color: var(--primary-main-5);
+    border: none;
+}
+
+.hony-tab-secondary .hony-tab-icon {
+    color: var(--primary-main-5);
+}
+
+.hony-tab-secondary .hony-tab-close {
+    color: var(--primary-main-5);
+}
+
+/* 描边标签 */
+.hony-tab-primary-outline {
+    background-color: var(--grey-bg-0);
+    color: var(--primary-main-1);
+    border: 1px solid var(--primary-main-1);
+}
+
+.hony-tab-primary-outline .hony-tab-icon {
+    color: var(--primary-main-1);
+}
+
+.hony-tab-primary-outline .hony-tab-close {
+    color: var(--primary-main-1);
+}
+
+.hony-tab-danger-outline {
+    background-color: var(--grey-bg-0);
+    color: var(--danger-main-1);
+    border: 1px solid var(--danger-main-1);
+}
+
+.hony-tab-danger-outline .hony-tab-icon {
+    color: var(--danger-main-1);
+}
+
+.hony-tab-danger-outline .hony-tab-close {
+    color: var(--danger-main-1);
+}
+
+.hony-tab-success-outline {
+    background-color: var(--grey-bg-0);
+    color: var(--success-main-1);
+    border: 1px solid var(--success-main-1);
+}
+
+.hony-tab-success-outline .hony-tab-icon {
+    color: var(--success-main-1);
+}
+
+.hony-tab-success-outline .hony-tab-close {
+    color: var(--success-main-1);
+}
+
+.hony-tab-warning-outline {
+    background-color: var(--grey-bg-0);
+    color: var(--warning-main-1);
+    border: 1px solid var(--warning-main-1);
+}
+
+.hony-tab-warning-outline .hony-tab-icon {
+    color: var(--warning-main-1);
+}
+
+.hony-tab-warning-outline .hony-tab-close {
+    color: var(--warning-main-1);
+}
+
+.hony-tab-secondary-outline {
+    background-color: var(--grey-bg-0);
+    color: var(--grey-text-1);
+    border: 1px solid var(--grey-text-4);
+}
+
+.hony-tab-secondary-outline .hony-tab-icon {
+    color: var(--grey-text-1);
+}
+
+.hony-tab-secondary-outline .hony-tab-close {
+    color: var(--grey-text-1);
+}
+
+/* 底色标签 */
+.hony-tab-primary-light {
+    background-color: var(--primary-face-1);
+    color: var(--primary-main-1);
+    border: none;
+}
+
+.hony-tab-primary-light .hony-tab-icon {
+    color: var(--primary-main-1);
+    height: 16px;
+    line-height: 16px;
+}
+
+.hony-tab-primary-light .hony-tab-close {
+    color: var(--primary-main-1);
+}
+
+.hony-tab-danger-light {
+    background-color: var(--danger-face-1);
+    color: var(--danger-main-1);
+    border: none;
+}
+
+.hony-tab-danger-light .hony-tab-icon {
+    color: var(--danger-main-1);
+}
+
+.hony-tab-danger-light .hony-tab-close {
+    color: var(--danger-main-1);
+}
+
+.hony-tab-success-light {
+    background-color: var(--success-face-1);
+    color: var(--success-main-1);
+    border: none;
+}
+
+.hony-tab-success-light .hony-tab-icon {
+    color: var(--success-main-1);
+}
+
+.hony-tab-success-light .hony-tab-close {
+    color: var(--success-main-1);
+}
+
+.hony-tab-warning-light {
+    background-color: var(--warning-face-1);
+    color: var(--warning-main-1);
+    border: none;
+}
+
+.hony-tab-warning-light .hony-tab-icon {
+    color: var(--warning-main-1);
+}
+
+.hony-tab-warning-light .hony-tab-close {
+    color: var(--warning-main-1);
+}
+
+.hony-tab-secondary-light {
+    background-color: var(--grey-face-1);
+    color: var(--grey-text-1);
+    border: none;
+}
+
+.hony-tab-secondary-light .hony-tab-icon {
+    color: var(--grey-text-1);
+}
+
+.hony-tab-secondary-light .hony-tab-close {
+    color: var(--grey-text-1);
+}
+
+/* 文字标签 */
+.hony-tab-primary-text {
+    background-color: transparent;
+    color: var(--primary-main-1);
+    border: none;
+    padding: 6px 8px;
+}
+
+.hony-tab-primary-text .hony-tab-icon {
+    color: var(--primary-main-1);
+}
+
+.hony-tab-primary-text .hony-tab-close {
+    color: var(--primary-main-1);
+}
+
+.hony-tab-danger-text {
+    background-color: transparent;
+    color: var(--danger-main-1);
+    border: none;
+    padding: 6px 8px;
+}
+
+.hony-tab-danger-text .hony-tab-icon {
+    color: var(--danger-main-1);
+}
+
+.hony-tab-danger-text .hony-tab-close {
+    color: var(--danger-main-1);
+}
+
+.hony-tab-success-text {
+    background-color: transparent;
+    color: var(--success-main-1);
+    border: none;
+    padding: 6px 8px;
+}
+
+.hony-tab-success-text .hony-tab-icon {
+    color: var(--success-main-1);
+}
+
+.hony-tab-success-text .hony-tab-close {
+    color: var(--success-main-1);
+}
+
+.hony-tab-warning-text {
+    background-color: transparent;
+    color: var(--warning-main-1);
+    border: none;
+    padding: 6px 8px;
+}
+
+.hony-tab-warning-text .hony-tab-icon {
+    color: var(--warning-main-1);
+}
+
+.hony-tab-warning-text .hony-tab-close {
+    color: var(--warning-main-1);
+}
+
+.hony-tab-secondary-text {
+    background-color: transparent;
+    color: var(--grey-text-1);
+    border: none;
+    padding: 6px 8px;
+}
+
+.hony-tab-secondary-text .hony-tab-icon {
+    color: var(--grey-text-1);
+}
+
+.hony-tab-secondary-text .hony-tab-close {
+    color: var(--grey-text-1);
+}
+
+/* 标签尺寸 */
+.hony-tab-sm {
+    padding: 2px 4px !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    min-height: 20px !important;
+    max-height: 20px !important;
+    border-radius: 4px !important;
+}
+
+.hony-tab-sm .hony-tab-icon {
+    width: 12px !important;
+    font-size: 12px !important;
+    margin-right: 4px !important;
+    line-height: 16px !important;
+}
+
+.hony-tab-sm .hony-tab-close {
+    font-size: 12px !important;
+    margin-left: 4px !important;
+    line-height: 16px !important;
+}
+
+.hony-tab-lg {
+    padding: 6px 8px !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+    min-height: 28px !important;
+    max-height: 28px !important;
+    border-radius: 4px !important;
+}
+
+.hony-tab-lg .hony-tab-icon {
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 16px !important;
+    margin-right: 4px !important;
+}
+
+.hony-tab-lg .hony-tab-close {
+    font-size: 14px !important;
+    margin-left: 4px !important;
+}
+
+/* 标签形状 */
+.hony-tab-round {
+    border-radius: 50%;
+    padding: 6px 10px;
+}
+
+.hony-tab-square {
+    border-radius: 0;
+}
+
+.hony-tab-round-lg {
+    border-radius: 24px;
+}
+
+/* 标签容器样式 */
+.hony-tab-container {
+    margin: 24px 0;
+    padding: 48px;
+    background-color: var(--grey-bg-0);
+    border-radius: 8px;
+}
+
+.hony-tab-row {
+    margin-bottom: 24px;
+}
+
+.hony-tab-row:last-child {
+    margin-bottom: 0;
+}
+
+.hony-tab-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.hony-tab-group:last-child {
+    margin-bottom: 0;
+}
+
+.hony-tab-group .hony-tab {
+    margin-right: 48px;
+}
+
+.hony-tab-group .hony-tab:last-child {
+    margin-right: 0;
+}

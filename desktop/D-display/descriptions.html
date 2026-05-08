@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情字段 - 桌面端组件</title>
+  <link rel="stylesheet" href="../../overall/main.css">
+  <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+  <link rel="stylesheet" href="./descriptions.css">
+  <link rel="stylesheet" href="../A-system/image.css">
+  <link rel="stylesheet" href="../A-system/button.css">
+  <script src="../../overall/js/common.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                  <div class="content-main">
+                      <!-- 页面标题 -->
+                      <div class="page-header">
+                          <div class="design-code">design code 桌面端组件</div>
+                          <div class="page-title">详情字段</div>
+                          <div class="page-description">详情字段组件用于展示对象的多个属性字段，支持多种布局方式。</div>
+                      </div>
+
+                      <!-- 左右结构 -->
+                      <div class="section" id="article-comment">
+                          <div class="section-title">左右<span style="color: var(--primary-main-1);">结构</span></div>
+                          <!-- 文本 -->
+                          <div class="subsection">                           
+                              <div class="subsection-title">文字展示</div>
+                              <div class="subsection-description">文字展示：左右结构的详情字段，标签在左、内容在右，适用于展示对象的多个属性信息。</div>
+                              <div class="component-container">
+                                <!-- 行 -->
+                                <div class="hony-descriptions hony-descriptions-horizontal">
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">商品名称</span>
+                                    <span class="hony-descriptions-horizontal-item-content">智能手表 Pro Max 系列</span>
+                                  </div>
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">品牌</span>
+                                    <span class="hony-descriptions-horizontal-item-content">TechVision</span>
+                                  </div>
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">价格</span>
+                                    <span class="hony-descriptions-horizontal-item-content hony-descriptions-content-number">¥2,999</span>
+                                  </div>
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">库存</span>
+                                    <span class="hony-descriptions-horizontal-item-content">1,234 件</span>
+                                  </div>
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">上架时间</span>
+                                    <span class="hony-descriptions-horizontal-item-content hony-descriptions-content-time">2024-01-15</span>
+                                  </div>
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">分类</span>
+                                    <span class="hony-descriptions-horizontal-item-content">
+                                      <span class="hony-tag hony-tag-default">智能穿戴</span>
+                                      <span class="hony-tag hony-tag-primary">新品</span>
+                                    </span>
+                                  </div>
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">状态</span>
+                                    <span class="hony-descriptions-horizontal-item-content">
+                                      <span class="hony-tag hony-tag-success">在售</span>
+                                    </span>
+                                  </div>
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">详情页</span>
+                                    <span class="hony-descriptions-horizontal-item-content">
+                                      <button class="hony-btn hony-btn-link descriptions-link">查看详情</button>
+                                    </span>
+                                  </div>
+                                </div>    
+                                                          
+                              </div>
+                          </div>
+                            <!-- 图片 -->
+                          <div class="subsection">                           
+                              <div class="subsection-title">图片展示</div>
+                              <div class="subsection-description">用于展示商品图片。</div>
+                              <div class="component-container">
+                                <div class="hony-descriptions hony-descriptions-horizontal">
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">产品图片</span>
+                                    <div class="hony-descriptions-horizontal-item-images">
+                                      <!-- 图片 -->
+                                      <div class="hony-image-type-content hony-image-type-multiple">
+                                                          <img src="../../overall/images/展示图.png" alt="多图">
+                                                          <div class="hony-multiple-overlay">
+                                                              <div class="hony-multiple-icon iconfont"></div>
+                                                              <div class="hony-multiple-count">5</div>
+                                                          </div>
+                                                          <div class="hony-hover-overlay">
+                                                              <div class="hony-overlay-icon iconfont hony-icon-yincangxianshi" onclick="openImagePopup(['../../overall/images/展示图.png', '../../overall/images/展示图2.png', '../../overall/images/展示图3.png', '../../overall/images/展示图4.png', '../../overall/images/展示图5.png'], '多图')"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-zhongqifang"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-lajitong"></div>
+                                                          </div>
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">品牌 Logo</span>
+                                    <div class="hony-descriptions-horizontal-item-images">
+                                      <!-- 图片 -->
+                                      <div class="hony-image-type-content hony-image-type-multiple">
+                                                          <img src="../../overall/images/展示图.png" alt="多图">
+                                                          <div class="hony-multiple-overlay">
+                                                              <div class="hony-multiple-icon iconfont"></div>
+                                                              <div class="hony-multiple-count">5</div>
+                                                          </div>
+                                                          <div class="hony-hover-overlay">
+                                                              <div class="hony-overlay-icon iconfont hony-icon-yincangxianshi" onclick="openImagePopup(['../../overall/images/展示图.png', '../../overall/images/展示图2.png', '../../overall/images/展示图3.png', '../../overall/images/展示图4.png', '../../overall/images/展示图5.png'], '多图')"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-zhongqifang"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-lajitong"></div>
+                                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">证书图片</span>
+                                    <div class="hony-descriptions-horizontal-item-images">
+                                      <!-- 图片 -->
+                                      <div class="hony-image-type-content hony-image-type-multiple">
+                                                          <img src="../../overall/images/展示图.png" alt="多图">
+                                                          <div class="hony-multiple-overlay">
+                                                              <div class="hony-multiple-icon iconfont"></div>
+                                                              <div class="hony-multiple-count">5</div>
+                                                          </div>
+                                                          <div class="hony-hover-overlay">
+                                                              <div class="hony-overlay-icon iconfont hony-icon-yincangxianshi" onclick="openImagePopup(['../../overall/images/展示图.png', '../../overall/images/展示图2.png', '../../overall/images/展示图3.png', '../../overall/images/展示图4.png', '../../overall/images/展示图5.png'], '多图')"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-zhongqifang"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-lajitong"></div>
+                                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">产品名称</span>
+                                    <div class="hony-descriptions-horizontal-item-images">
+                                      <!-- 图片 -->
+                                      <div class="hony-image-type-content hony-image-type-multiple">
+                                                          <img src="../../overall/images/展示图.png" alt="多图">
+                                                          <div class="hony-multiple-overlay">
+                                                              <div class="hony-multiple-icon iconfont"></div>
+                                                              <div class="hony-multiple-count">5</div>
+                                                          </div>
+                                                          <div class="hony-hover-overlay">
+                                                              <div class="hony-overlay-icon iconfont hony-icon-yincangxianshi" onclick="openImagePopup(['../../overall/images/展示图.png', '../../overall/images/展示图2.png', '../../overall/images/展示图3.png', '../../overall/images/展示图4.png', '../../overall/images/展示图5.png'], '多图')"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-zhongqifang"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-lajitong"></div>
+                                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">价格</span>
+                                    <div class="hony-descriptions-horizontal-item-images">
+                                      <!-- 图片 -->
+                                      <div class="hony-image-type-content hony-image-type-multiple">
+                                                          <img src="../../overall/images/展示图.png" alt="多图">
+                                                          <div class="hony-multiple-overlay">
+                                                              <div class="hony-multiple-icon iconfont"></div>
+                                                              <div class="hony-multiple-count">5</div>
+                                                          </div>
+                                                          <div class="hony-hover-overlay">
+                                                              <div class="hony-overlay-icon iconfont hony-icon-yincangxianshi" onclick="openImagePopup(['../../overall/images/展示图.png', '../../overall/images/展示图2.png', '../../overall/images/展示图3.png', '../../overall/images/展示图4.png', '../../overall/images/展示图5.png'], '多图')"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-zhongqifang"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-lajitong"></div>
+                                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="hony-descriptions-horizontal-item">
+                                    <span class="hony-descriptions-horizontal-item-label">状态</span>
+                                    <div class="hony-descriptions-horizontal-item-images">
+                                      <!-- 图片 -->
+                                      <div class="hony-image-type-content hony-image-type-multiple">
+                                                          <img src="../../overall/images/展示图.png" alt="多图">
+                                                          <div class="hony-multiple-overlay">
+                                                              <div class="hony-multiple-icon iconfont"></div>
+                                                              <div class="hony-multiple-count">5</div>
+                                                          </div>
+                                                          <div class="hony-hover-overlay">
+                                                              <div class="hony-overlay-icon iconfont hony-icon-yincangxianshi" onclick="openImagePopup(['../../overall/images/展示图.png', '../../overall/images/展示图2.png', '../../overall/images/展示图3.png', '../../overall/images/展示图4.png', '../../overall/images/展示图5.png'], '多图')"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-zhongqifang"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-lajitong"></div>
+                                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- 上下结构 -->
+                      <div class="section" id="article-comment">
+                          <div class="section-title">左右<span style="color: var(--primary-main-1);">结构</span></div>
+                          <!-- 文本 -->
+                          <div class="subsection">                           
+                              <div class="subsection-title">文字展示</div>
+                              <div class="subsection-description">文字展示：左右结构的详情字段，标签在左、内容在右，适用于展示对象的多个属性信息。</div>
+                              <div class="component-container">
+                                <!-- 行 -->
+                                <div class="hony-descriptions hony-descriptions-vertical">
+                                  <div class="hony-descriptions-vertical-item">
+                                    <span class="hony-descriptions-vertical-item-label">商品名称</span>
+                                    <span class="hony-descriptions-vertical-item-content">智能手表 Pro Max 系列</span>
+                                  </div>
+                                  <div class="hony-descriptions-vertical-item">
+                                    <span class="hony-descriptions-vertical-item-label">库存</span>
+                                    <span class="hony-descriptions-vertical-item-content">1,234 件</span>
+                                  </div>
+                                  <div class="hony-descriptions-vertical-item">
+                                    <span class="hony-descriptions-vertical-item-label">分类标签</span>
+                                    <span class="hony-descriptions-vertical-item-content">
+                                      <span class="hony-tag hony-tag-default">智能穿戴</span>
+                                      <span class="hony-tag hony-tag-primary">新品</span>
+                                      <span class="hony-tag hony-tag-warning">热销</span>
+                                    </span>
+                                  </div>
+                                </div>
+                                <!-- 行 -->
+                                <div class="hony-descriptions hony-descriptions-vertical">
+                                  <div class="hony-descriptions-vertical-item">
+                                    <span class="hony-descriptions-vertical-item-label">商品名称</span>
+                                    <span class="hony-descriptions-vertical-item-content">智能手表 Pro Max 系列</span>
+                                  </div>
+                                  <div class="hony-descriptions-vertical-item">
+                                    <span class="hony-descriptions-vertical-item-label">库存</span>
+                                    <span class="hony-descriptions-vertical-item-content">1,234 件</span>
+                                  </div>
+                                  <div class="hony-descriptions-vertical-item">
+                                    <span class="hony-descriptions-vertical-item-label">分类标签</span>
+                                    <span class="hony-descriptions-vertical-item-content">
+                                      <span class="hony-tag hony-tag-default">智能穿戴</span>
+                                      <span class="hony-tag hony-tag-primary">新品</span>
+                                      <span class="hony-tag hony-tag-warning">热销</span>
+                                    </span>
+                                  </div>
+                                </div>                            
+                              </div>
+                          </div>
+                            <!-- 图片 -->
+                          <div class="subsection">                           
+                              <div class="subsection-title">图片展示</div>
+                              <div class="subsection-description">用于展示商品图片。</div>
+                              <div class="component-container">
+                                <div class="hony-descriptions hony-descriptions-vertical">
+                                  <div class="hony-descriptions-vertical-item">
+                                    <span class="hony-descriptions-vertical-item-label">产品图片</span>
+                                    <div class="hony-descriptions-vertical-item-images">
+                                      <!-- 图片 -->
+                                      <div class="hony-image-type-content hony-image-type-multiple">
+                                                          <img src="../../overall/images/展示图.png" alt="多图">
+                                                          <div class="hony-multiple-overlay">
+                                                              <div class="hony-multiple-icon iconfont"></div>
+                                                              <div class="hony-multiple-count">5</div>
+                                                          </div>
+                                                          <div class="hony-hover-overlay">
+                                                              <div class="hony-overlay-icon iconfont hony-icon-yincangxianshi" onclick="openImagePopup(['../../overall/images/展示图.png', '../../overall/images/展示图2.png', '../../overall/images/展示图3.png', '../../overall/images/展示图4.png', '../../overall/images/展示图5.png'], '多图')"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-zhongqifang"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-lajitong"></div>
+                                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="hony-descriptions-vertical-item">
+                                    <span class="hony-descriptions-vertical-item-label">产品名称</span>
+                                    <div class="hony-descriptions-vertical-item-images">
+                                      <!-- 图片 -->
+                                      <div class="hony-image-type-content hony-image-type-multiple">
+                                                          <img src="../../overall/images/展示图.png" alt="多图">
+                                                          <div class="hony-multiple-overlay">
+                                                              <div class="hony-multiple-icon iconfont"></div>
+                                                              <div class="hony-multiple-count">5</div>
+                                                          </div>
+                                                          <div class="hony-hover-overlay">
+                                                              <div class="hony-overlay-icon iconfont hony-icon-yincangxianshi" onclick="openImagePopup(['../../overall/images/展示图.png', '../../overall/images/展示图2.png', '../../overall/images/展示图3.png', '../../overall/images/展示图4.png', '../../overall/images/展示图5.png'], '多图')"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-zhongqifang"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-lajitong"></div>
+                                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="hony-descriptions-vertical-item">
+                                    <span class="hony-descriptions-vertical-item-label">价格</span>
+                                    <div class="hony-descriptions-vertical-item-images">
+                                      <!-- 图片 -->
+                                      <div class="hony-image-type-content hony-image-type-multiple">
+                                                          <img src="../../overall/images/展示图.png" alt="多图">
+                                                          <div class="hony-multiple-overlay">
+                                                              <div class="hony-multiple-icon iconfont"></div>
+                                                              <div class="hony-multiple-count">5</div>
+                                                          </div>
+                                                          <div class="hony-hover-overlay">
+                                                              <div class="hony-overlay-icon iconfont hony-icon-yincangxianshi" onclick="openImagePopup(['../../overall/images/展示图.png', '../../overall/images/展示图2.png', '../../overall/images/展示图3.png', '../../overall/images/展示图4.png', '../../overall/images/展示图5.png'], '多图')"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-zhongqifang"></div>
+                                                              <div class="hony-overlay-icon iconfont hony-icon-lajitong"></div>
+                                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+              <div class="right-nav">
+                  <div class="right-nav-items">
+                      <div class="right-nav-item" onclick="document.getElementById('button-styles').scrollIntoView({behavior: 'smooth'});">按钮样式</div>
+                      <div class="right-nav-item" onclick="document.getElementById('button-icon').scrollIntoView({behavior: 'smooth'});">图标+按钮</div>
+                      <div class="right-nav-item" onclick="document.getElementById('button-icon-only').scrollIntoView({behavior: 'smooth'});">纯图标按钮</div>
+                      <div class="right-nav-item" onclick="document.getElementById('button-levels').scrollIntoView({behavior: 'smooth'});">按钮等级</div>
+                      <div class="right-nav-item active" onclick="document.getElementById('button-states').scrollIntoView({behavior: 'smooth'});">主要按钮状态</div>
+                      <div class="right-nav-item" onclick="document.getElementById('button-states-secondary').scrollIntoView({behavior: 'smooth'});">次要按钮状态</div>
+                      <div class="right-nav-item" onclick="document.getElementById('button-states-danger').scrollIntoView({behavior: 'smooth'});">危险按钮状态</div>
+                      <div class="right-nav-item" onclick="document.getElementById('button-states-success').scrollIntoView({behavior: 'smooth'});">安全按钮状态</div>
+                      <div class="right-nav-item" onclick="document.getElementById('button-states-warning').scrollIntoView({behavior: 'smooth'});">警告按钮状态</div>
+                      <div class="right-nav-item" onclick="document.getElementById('button-sizes').scrollIntoView({behavior: 'smooth'});">按钮尺寸</div>
+                      <div class="right-nav-item" onclick="document.getElementById('button-shapes').scrollIntoView({behavior: 'smooth'});">按钮形状</div>
+                  </div>
+              </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

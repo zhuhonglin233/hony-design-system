@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间轴 - 桌面端组件</title>
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+    <link rel="stylesheet" href="../A-system/button.css">
+    <link rel="stylesheet" href="timeline.css">
+    <script src="../../overall/js/common.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                    <div class="content-main">
+                        <!-- 页面标题 -->
+                        <div class="page-header">
+                            <div class="design-code">design code 桌面端组件</div>
+                            <div class="page-title">时间轴</div>
+                            <div class="page-description">时间轴组件用于展示一系列按时间顺序排列的事件或状态。</div>
+                        </div>
+                        <!-- 时间轴样式 Section -->
+                        <div class="section">
+                            <div class="section-title">时间轴<span style="color: var(--primary-main-1);">竖向</span></div>
+
+                            <!-- 常规竖向时间轴 -->
+                            <div class="subsection" id="hony-timeline-vertical">
+                                <div class="subsection-title">常规竖向时间轴</div>
+                                <div class="subsection-description">常规竖向时间轴：垂直排列的时间轴，展示事件的时间顺序和状态，支持成功、失败、进行中等状态标识。</div>
+                                <div class="component-container">
+                                    <div class="hony-timeline hony-timeline-vertical">
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-time">2022-02-01 12:00</div>
+                                            <div class="hony-timeline-node hony-timeline-node-success">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                                <div class="hony-timeline-line"></div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div>
+                                                    <div class="hony-timeline-title">节点名称</div>
+                                                    <span class="hony-timeline-status hony-timeline-status-success">通过</span>
+                                                </div>
+                                                <div class="hony-timeline-desc">操作人：XXXXXX</div>
+                                                <div class="hony-timeline-desc">备注：正文内容</div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-time">2022-02-01 12:00</div>
+                                            <div class="hony-timeline-node hony-timeline-node-warning">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                                <div class="hony-timeline-line"></div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div>
+                                                    <div class="hony-timeline-title">节点名称</div>
+                                                    <span class="hony-timeline-status hony-timeline-status-warning">异常</span>
+                                                </div>
+                                                <div class="hony-timeline-desc">操作人：XXXXXX</div>
+                                                <div class="hony-timeline-desc">备注：正文内容</div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-time">2022-02-01 12:00</div>
+                                            <div class="hony-timeline-node hony-timeline-node-danger">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                                <div class="hony-timeline-line"></div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div>
+                                                    <div class="hony-timeline-title">节点名称</div>
+                                                    <span class="hony-timeline-status hony-timeline-status-danger">不通过</span>
+                                                </div>
+                                                <div class="hony-timeline-desc">操作人：XXXXXX</div>
+                                                <div class="hony-timeline-desc">备注：正文内容</div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-time">2022-02-01 12:00</div>
+                                            <div class="hony-timeline-node hony-timeline-node-primary">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div>
+                                                    <div class="hony-timeline-title">节点名称</div>
+                                                    <span class="hony-timeline-status hony-timeline-status-primary">提交</span>
+                                                </div>
+                                                <div class="hony-timeline-desc">操作人：XXXXXX</div>
+                                                <div class="hony-timeline-desc">备注：正文内容</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 常规横向时间轴 -->
+                            <div class="subsection" id="hony-timeline-horizontal">
+                                <div class="subsection-title">常规横向时间轴</div>
+                                <div class="subsection-description">常规横向时间轴：水平排列的时间轴，适用于空间有限的场景。</div>
+                                <div class="component-container">
+                                    <div class="hony-timeline hony-timeline-horizontal">
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-node hony-timeline-node-disabled">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                                <div class="hony-timeline-line"></div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div>
+                                                    <div class="hony-timeline-title">节点名称</div>
+                                                    <span class="hony-timeline-status hony-timeline-status-disabled">失效</span>
+                                                </div>
+                                                <div class="hony-timeline-desc">操作人：XXXXXX</div>
+                                                <div class="hony-timeline-desc">备注：正文内容</div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-node hony-timeline-node-success">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                                <div class="hony-timeline-line"></div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div>
+                                                    <div class="hony-timeline-title">节点名称</div>
+                                                    <span class="hony-timeline-status hony-timeline-status-success">通过</span>
+                                                </div>
+                                                <div class="hony-timeline-desc">操作人：XXXXXX</div>
+                                                <div class="hony-timeline-desc">备注：正文内容</div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-node hony-timeline-node-warning">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                                <div class="hony-timeline-line"></div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div>
+                                                    <div class="hony-timeline-title">节点名称</div>
+                                                    <span class="hony-timeline-status hony-timeline-status-warning">异常</span>
+                                                </div>
+                                                <div class="hony-timeline-desc">操作人：XXXXXX</div>
+                                                <div class="hony-timeline-desc">备注：正文内容</div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-node hony-timeline-node-danger">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                                <div class="hony-timeline-line"></div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div>
+                                                    <div class="hony-timeline-title">节点名称</div>
+                                                    <span class="hony-timeline-status hony-timeline-status-danger">不通过</span>
+                                                </div>
+                                                <div class="hony-timeline-desc">操作人：XXXXXX</div>
+                                                <div class="hony-timeline-desc">备注：正文内容</div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-node hony-timeline-node-primary">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div>
+                                                    <div class="hony-timeline-title">节点名称</div>
+                                                    <span class="hony-timeline-status hony-timeline-status-primary">提交</span>
+                                                </div>
+                                                <div class="hony-timeline-desc">操作人：XXXXXX</div>
+                                                <div class="hony-timeline-desc">备注：正文内容</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3. 自定义时间轴 -->
+                            <div class="subsection" id="hony-timeline-custom">
+                                <div class="subsection-title">自定义时间轴</div>
+                                <div class="subsection-description">自定义时间轴：包含操作卡片和按钮的时间轴，支持更丰富的交互。</div>
+                                <div class="component-container">
+                                    <div class="hony-timeline hony-timeline-custom">
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-time">2022-02-01 12:00</div>
+                                            <div class="hony-timeline-node hony-timeline-node-primary">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                                <div class="hony-timeline-line"></div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div class="hony-timeline-title">节点名称</div>
+                                                <span class="hony-timeline-status hony-timeline-status-primary">提交</span>
+                                                <div class="hony-timeline-desc">操作人：XXXX</div>
+                                                <div class="hony-timeline-card hony-timeline-card-primary">
+                                                    <div class="hony-timeline-action-text">操作文案</div>
+                                                    <div class="hony-timeline-action-desc">操作人：XXXX</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-time">2022-02-01 12:00</div>
+                                            <div class="hony-timeline-node hony-timeline-node-success">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                                <div class="hony-timeline-line"></div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div class="hony-timeline-title">节点名称</div>
+                                                <span class="hony-timeline-status hony-timeline-status-success">通过</span>
+                                                <div class="hony-timeline-desc">操作人：XXXX</div>
+                                                <div class="hony-timeline-card hony-timeline-card-success">
+                                                    <div class="hony-timeline-action-text">操作文案</div>
+                                                    <div class="hony-timeline-action-desc">操作人：XXXX</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-time">2022-02-01 12:00</div>
+                                            <div class="hony-timeline-node hony-timeline-node-warning">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                                <div class="hony-timeline-line"></div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div class="hony-timeline-title">节点名称</div>
+                                                <span class="hony-timeline-status hony-timeline-status-warning">异常</span>
+                                                <div class="hony-timeline-desc">操作人：XXXX</div>
+                                                <div class="hony-timeline-card hony-timeline-card-warning">
+                                                    <div class="hony-timeline-action-text">操作文案</div>
+                                                    <div class="hony-timeline-action-desc">操作人：XXXX</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-time">2022-02-01 12:00</div>
+                                            <div class="hony-timeline-node hony-timeline-node-danger">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                                <div class="hony-timeline-line"></div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div class="hony-timeline-title">节点名称</div>
+                                                <span class="hony-timeline-status hony-timeline-status-danger">不通过</span>
+                                                <div class="hony-timeline-desc">操作人：XXXX</div>
+                                                <div class="hony-timeline-card hony-timeline-card-danger">
+                                                    <div class="hony-timeline-action-text">操作文案</div>
+                                                    <div class="hony-timeline-action-desc">操作人：XXXX</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-time">2022-02-01 12:00</div>
+                                            <div class="hony-timeline-node hony-timeline-node-disabled">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                                <div class="hony-timeline-line"></div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div class="hony-timeline-title">节点名称</div>
+                                                <span class="hony-timeline-status hony-timeline-status-disabled">失效</span>
+                                                <div class="hony-timeline-desc">操作人：XXXX</div>
+                                                <div class="hony-timeline-card hony-timeline-card-disabled">
+                                                    <div class="hony-timeline-action-text">操作文案</div>
+                                                    <div class="hony-timeline-action-desc">操作人：XXXX</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-timeline-container">
+                                            <div class="hony-timeline-time">2022-02-01 12:00</div>
+                                            <div class="hony-timeline-node hony-timeline-node-success">
+                                                <div class="hony-timeline-dot">
+                                                    <div class="hony-timeline-dot-ring"></div>
+                                                    <div class="hony-timeline-dot-inner"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hony-timeline-content">
+                                                <div class="hony-timeline-title">节点名称</div>
+                                                <span class="hony-timeline-status hony-timeline-status-success">通过</span>
+                                                <div class="hony-timeline-desc">操作人：XXXX</div>
+                                                <div class="hony-timeline-card hony-timeline-card-success">
+                                                    <div class="hony-timeline-action-text">操作文案</div>
+                                                    <div class="hony-timeline-action-desc">操作人：XXXX</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+                <div class="right-nav">
+                    <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'timeline-vertical');">常规竖向时间轴</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'timeline-horizontal');">常规横向时间轴</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'timeline-custom');">自定义时间轴</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

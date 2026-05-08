@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体 - 设计规范</title>
+    <link rel="stylesheet" href="../overall/main.css">
+    <link rel="stylesheet" href="font.css">
+    <script src="../overall/js/common.js"></script>
+</head>
+<body>
+    <div class="background-decoration"></div>
+    <div class="page-container">
+        <!-- 顶部导航栏 -->
+        <div id="navbar-container"></div>
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 左侧导航 -->
+            <div id="sidebar-container"></div>
+
+
+
+            <!-- 右侧内容 -->
+            <div class="content-area">            
+                <div class="content-main">
+                    <div class="page-header">
+                        <div class="design-code">design code 设计规范</div>
+                        <div class="page-title">字体</div>
+                        <div class="page-description">字体是设计系统中重要的组成部分，它不仅传达信息内容，还能通过字重、字号和行高等因素影响视觉层次和用户体验。在设计中，选择合适的字体和排版方式可以提升页面的可读性和美观度，增强品牌识别度。</div>
+                    </div>
+
+                    <!-- 字体规范 -->
+                    <div class="section">
+                        <div class="section-title">字体<span style="color: var(--primary-main-1);">规范</span></div>
+                        
+                        <!-- 字体层级 -->
+                        <div class="subsection" id="font-scale">
+                            <div class="subsection-title">字体字阶</div>
+                            <div class="subsection-description">字体场景的运用</div>
+                            <div class="component-container">
+                                <table class="font-table">
+                                    <thead>
+                                        <tr>
+                                            <th>名称</th>
+                                            <th>字号</th>
+                                            <th>行高</th>
+                                            <th>字重</th>
+                                            <th>场景</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>FontSize 10</td>
+                                            <td>10px</td>
+                                            <td>16px</td>
+                                            <td>400</td>
+                                            <td>辅助用户界面小字体，或状态信息</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FontSize 12</td>
+                                            <td>12px</td>
+                                            <td>20px</td>
+                                            <td>400</td>
+                                            <td>辅助信息/小号字体，用于标签、说明、注释</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FontSize 14</td>
+                                            <td>14px</td>
+                                            <td>20px</td>
+                                            <td>400</td>
+                                            <td>正文文本/强调信息</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FontSize 16</td>
+                                            <td>16px</td>
+                                            <td>24px</td>
+                                            <td>400</td>
+                                            <td>三级标题，用于重要信息的标题或作为大段标题</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FontSize 18</td>
+                                            <td>18px</td>
+                                            <td>28px</td>
+                                            <td>400</td>
+                                            <td>二级标题，页面模块的标题</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FontSize 20</td>
+                                            <td>20px</td>
+                                            <td>28px</td>
+                                            <td>400</td>
+                                            <td>一级标题，页面级别的标题</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FontSize 24</td>
+                                            <td>24px</td>
+                                            <td>32px</td>
+                                            <td>400</td>
+                                            <td>主要标题，用于首页或重要模块的大标题</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FontSize 32</td>
+                                            <td>32px</td>
+                                            <td>44px</td>
+                                            <td>400</td>
+                                            <td>用于特殊标题</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- 字体等级 -->
+                        <div class="subsection" id="font-weight">
+                            <div class="subsection-title">字体等级</div>
+                            <div class="subsection-description">字重是重要排版的变量，可以增强层次结构和重要内容区分。
+面对复杂的中后台场景，在 Windows 系统下 font-weight 如果使用小于 600 默认显示为常规体，而在macOS 系统中可以使用400、500、600区分，综合考虑复杂场景显示效果，两种字重配置效果。
+font-weight: 400 和 font-weight: 600。字重 400 等于 Windows 和 macOS 系统下的 Regular 显示效果，字重 600 等于 Windows 系统下的 Bold 显示效果和 macOS 系统下的 Semibold 显示效果。
+用PingFang SC和Alibaba PuHuiTi来观察。</div>
+                            <div class="font-weight-container">
+                                <div class="font-weight-item">
+                                    <div class="font-weight-label">细</div>
+                                    <div class="font-weight-value">font-weight: 300</div>
+                                    <div class="font-weight-sample" style="font-weight: 300;">示例文字 Sample Text</div>
+                                </div>
+                                <div class="font-weight-item">
+                                    <div class="font-weight-label">常规</div>
+                                    <div class="font-weight-value">font-weight: 400</div>
+                                    <div class="font-weight-sample" style="font-weight: 400;">示例文字 Sample Text</div>
+                                </div>
+                                <div class="font-weight-item">
+                                    <div class="font-weight-label">中</div>
+                                    <div class="font-weight-value">font-weight: 500</div>
+                                    <div class="font-weight-sample" style="font-weight: 500;">示例文字 Sample Text</div>
+                                </div>
+                                <div class="font-weight-item">
+                                    <div class="font-weight-label">半粗</div>
+                                    <div class="font-weight-value">font-weight: 600</div>
+                                    <div class="font-weight-sample" style="font-weight: 600;">示例文字 Sample Text</div>
+                                </div>
+                                <div class="font-weight-item">
+                                    <div class="font-weight-label">粗</div>
+                                    <div class="font-weight-value">font-weight: 700</div>
+                                    <div class="font-weight-sample" style="font-weight: 700;">示例文字 Sample Text</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">字体<span style="color: var(--primary-main-1);">颜色</span></div>   
+                        <!-- 字体颜色 -->
+                        <div class="subsection" id="color-scale">
+                            <div class="subsection-title">颜色等级</div>
+                            <div class="subsection-description">文字和图标色彩系统采用透明度方向，期望更好的适配亮暗模式。让整个文字和图标色彩都更加具备包容性。制定了简易好记的透明度数值区间并且将该字色与界面系统的色彩系统结合，文字显示色彩对比鲜明。共分为亮暗两种模式，4 个色阶。</div>
+                            <div class="font-weight-container">
+                                <div class="font-weight-item">
+                                    <div class="font-weight-label">Grey/Text and Shape-1</div>
+                                    <div class="font-weight-value">适用于标题</div>
+                                    <div class="font-weight-sample" style="color: var(--grey-main-3);">一级文字</div>
+                                </div>
+                                <div class="font-weight-item">
+                                    <div class="font-weight-label">Grey/Text and Shape-2</div>
+                                    <div class="font-weight-value">适用于正文</div>
+                                    <div class="font-weight-sample" style="color: var(--grey-text-2);">二级文字</div>
+                                </div>
+                                <div class="font-weight-item">
+                                    <div class="font-weight-label">Grey/Text and Shape-3</div>
+                                    <div class="font-weight-value">适用于注释文案</div>
+                                    <div class="font-weight-sample" style="color: var(--grey-text-4);">三级文字</div>
+                                </div>
+                                <div class="font-weight-item">
+                                    <div class="font-weight-label">Grey/Text and Shape-4</div>
+                                    <div class="font-weight-value">适用于禁用的文字</div>
+                                    <div class="font-weight-sample" style="color: var(--grey-border-2);">四级文字</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                        <!-- 右侧锚点导航 -->
+            <div class="right-nav">
+                <div class="right-nav-items">
+                        <div class="right-nav-item active" onclick="handleRightNavClick(this, 'font-scale');">字体字阶</div>
+                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'font-weight');">字体等级</div>
+                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-scale');">颜色等级</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

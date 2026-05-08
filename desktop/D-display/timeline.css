@@ -1,0 +1,370 @@
+.hony-timeline {
+    display: flex;
+    position: relative;
+}
+
+/* 竖向时间轴 */
+.hony-timeline-vertical {
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+}
+
+/* 横向时间轴 */
+.hony-timeline-horizontal {
+    flex-direction: row;
+    width: 100%;
+    min-height: 128px;
+}
+
+/* 时间轴容器 */
+.hony-timeline-container {
+    display: flex;
+    position: relative;
+}
+
+/* 竖向时间轴容器 */
+.hony-timeline-vertical .hony-timeline-container {
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 16px;
+    padding-bottom: 24px;
+}
+
+/* 横向时间轴容器 */
+.hony-timeline-horizontal .hony-timeline-container {
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    row-gap: 16px;
+    padding-right: 32px;
+    padding-bottom: 24px;
+}
+
+/* 时间标签 */
+.hony-timeline-time {
+    flex-shrink: 0;
+    width: 120px;
+    text-align: right;
+    font-size: 12px;
+    line-height: 24px;
+    color: var(--grey-text-4);
+}
+
+.hony-timeline-horizontal .hony-timeline-time {
+    display: none;
+}
+
+/* 时间轴节点 */
+.hony-timeline-node {
+    position: relative;
+    flex-shrink: 0;
+    width: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 竖向时间轴节点 */
+.hony-timeline-vertical .hony-timeline-node {
+    align-items: flex-start;
+}
+
+/* 横向时间轴节点 */
+.hony-timeline-horizontal .hony-timeline-node {
+    height: 12px;
+    align-items: center;
+}
+
+/* 节点指示器 */
+.hony-timeline-dot {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* 节点圆点 */
+.hony-timeline-dot-inner {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+
+/* 节点圆环 */
+.hony-timeline-dot-ring {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid;
+}
+
+/* 连接线 */
+.hony-timeline-line {
+    position: absolute;
+    background: var(--grey-border-1);
+}
+
+/* 竖向时间轴连接线 */
+.hony-timeline-vertical .hony-timeline-line {
+    left: 50%;
+    top: 24px;
+    width: 1px;
+    height: calc(100% - 24px);
+    transform: translateX(-50%);
+}
+
+/* 横向时间轴连接线 */
+.hony-timeline-horizontal .hony-timeline-line {
+    top: 50%;
+    left: 24px;
+    width: calc(100% - 24px);
+    height: 1px;
+    transform: translateY(-50%);
+}
+
+/* 时间轴内容 */
+.hony-timeline-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+.hony-timeline-horizontal .hony-timeline-content {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.hony-timeline-horizontal .hony-timeline-content > div:first-child {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+/* 节点标题 */
+.hony-timeline-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--grey-text-1);
+}
+
+/* 状态标签 */
+.hony-timeline-status {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+/* 状态颜色 */
+.hony-timeline-status-success {
+    color: var(--success-main-1);
+}
+
+.hony-timeline-status-warning {
+    color: var(--warning-main-1);
+}
+
+.hony-timeline-status-danger {
+    color: var(--danger-main-1);
+}
+
+.hony-timeline-status-primary {
+    color: var(--primary-main-1);
+}
+
+.hony-timeline-status-disabled {
+    color: var(--grey-text-3);
+}
+
+/* 描述信息 */
+.hony-timeline-desc {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--grey-text-3);
+}
+
+/* 自定义时间轴样式 */
+.hony-timeline-custom {
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+}
+
+.hony-timeline-custom .hony-timeline-container {
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 16px;
+    padding-bottom: 24px;
+}
+
+/* 自定义时间轴操作卡片 */
+.hony-timeline-card {
+    position: relative;
+    background: var(--grey-face-1);
+    border-radius: 8px;
+    padding: 8px 12px;
+    min-height: 40px;
+    overflow: hidden
+}
+
+.hony-timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 4px;
+    height: calc(100% - 2px);
+    border-radius: 0 4px 4px 0;
+}
+
+/* 卡片状态颜色 */
+.hony-timeline-card-success {
+    background: var(--success-face-1);
+}
+
+.hony-timeline-card-success::before {
+    background: var(--success-main-1);
+}
+
+.hony-timeline-card-warning {
+    background: var(--warning-face-1);
+}
+
+.hony-timeline-card-warning::before {
+    background: var(--warning-main-1);
+}
+
+.hony-timeline-card-danger {
+    background: var(--danger-face-1);
+}
+
+.hony-timeline-card-danger::before {
+    background: var(--danger-main-1);
+}
+
+.hony-timeline-card-primary {
+    background: var(--primary-face-1);
+}
+
+.hony-timeline-card-primary::before {
+    background: var(--primary-main-1);
+}
+
+.hony-timeline-card-disabled {
+    background: var(--grey-face-1);
+}
+
+.hony-timeline-card-disabled::before {
+    background: var(--grey-text-1);
+}
+
+/* 操作文案 */
+.hony-timeline-action-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--grey-text-1);
+}
+
+/* 操作人信息 */
+.hony-timeline-action-desc {
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--grey-text-4);
+}
+
+/* 操作按钮 */
+.hony-timeline-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px;
+    min-height: 20px;
+    max-height: 20px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--primary-main-1);
+    background: var(--grey-bg-0);
+    border: 1px solid var(--primary-face-2);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.hony-timeline-action-btn:hover {
+    background: var(--primary-face-1);
+}
+
+/* 节点颜色 */
+.hony-timeline-node-success .hony-timeline-dot-ring {
+    border-color: var(--success-main-1);
+}
+
+.hony-timeline-node-success .hony-timeline-dot-inner {
+    background: var(--success-main-1);
+}
+
+.hony-timeline-node-warning .hony-timeline-dot-ring {
+    border-color: var(--warning-main-1);
+}
+
+.hony-timeline-node-warning .hony-timeline-dot-inner {
+    background: var(--warning-main-1);
+}
+
+.hony-timeline-node-danger .hony-timeline-dot-ring {
+    border-color: var(--danger-main-1);
+}
+
+.hony-timeline-node-danger .hony-timeline-dot-inner {
+    background: var(--danger-main-1);
+}
+
+.hony-timeline-node-primary .hony-timeline-dot-ring {
+    border-color: var(--primary-main-1);
+}
+
+.hony-timeline-node-primary .hony-timeline-dot-inner {
+    background: var(--primary-main-1);
+}
+
+.hony-timeline-node-disabled .hony-timeline-dot-ring {
+    border-color: var(--grey-text-4);
+}
+
+.hony-timeline-node-disabled .hony-timeline-dot-inner {
+    background: var(--grey-text-4);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hony-timeline-horizontal {
+        flex-direction: column;
+    }
+    
+    .hony-timeline-horizontal .hony-timeline-container {
+        flex-direction: row;
+        padding-right: 0;
+    }
+    
+    .hony-timeline-horizontal .hony-timeline-line {
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+    
+    .hony-timeline-horizontal .hony-timeline-content {
+        align-items: flex-start;
+        text-align: left;
+    }
+}

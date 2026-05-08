@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输入框 - 桌面端组件</title>
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+    <link rel="stylesheet" href="input.css">
+    <script src="../../overall/js/common.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                    <div class="content-main">
+                        <!-- 页面标题 -->
+                        <div class="page-header">
+                            <div class="design-code">design code 桌面端组件</div>
+                            <div class="page-title">输入框</div>
+                            <div class="page-description">用于用户输入文本信息的组件，支持多种样式和状态。</div>
+                        </div>
+                        <!-- 输入框样式 Section -->
+                        <div class="section">
+                            <div class="section-title">基础<span style="color: var(--primary-main-1);">样式</span></div>
+                            
+                            <!-- 基础输入框 -->
+                            <div class="subsection" id="hony-input-basic">
+                                <div class="subsection-title">基础输入框</div>
+                                <div class="subsection-description">基础输入框：最基本的文本输入组件，支持常规、选中、禁用、默认值等多种状态，适用于表单数据录入。</div>
+                                <div class="component-container">
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input" placeholder="请输入">
+                                        </div>
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input hony-selected" placeholder="请输入">
+                                        </div>
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input" placeholder="请输入" disabled>
+                                        </div>
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input" value="默认的文字" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 可激活输入框 -->
+                            <div class="subsection" id="hony-input-active">
+                                <div class="subsection-title">可激活输入框</div>
+                                <div class="subsection-description">基础输入框：最基本的文本输入组件，支持常规、选中、禁用、默认值等多种状态，适用于表单数据录入。</div>
+                                <div class="component-container">
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input-active" placeholder="请输入" value="我是默认文字"> 
+                                        </div>
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input-active hony-selected" placeholder="请输入">
+                                        </div>
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input-active" placeholder="请输入" disabled>
+                                        </div>
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input-active" value="默认不可更改" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 密码输入框 -->
+                            <div class="subsection" id="hony-input-basic">
+                                <div class="subsection-title">密码输入框</div>
+                                <div class="subsection-description">基础输入框：最基本的文本输入组件，支持常规、选中、禁用、默认值等多种状态，适用于表单数据录入。</div>
+                                <div class="component-container">
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-wrapper hony-input-expand">
+                                            <span class="hony-input-prefix iconfont">&#xefbf;</span>
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="password" class="hony-input-inner" placeholder="请输入">
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand hony-selected">
+                                            <span class="hony-input-prefix iconfont">&#xefbf;</span>
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="password" class="hony-input-inner" placeholder="请输入">
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand">
+                                            <span class="hony-input-prefix iconfont">&#xefbf;</span>
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="password" class="hony-input-inner" placeholder="请输入" disabled>
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand">
+                                            <span class="hony-input-prefix iconfont">&#xefbf;</span>
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="password" class="hony-input-inner" value="123456" readonly>
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 前置图标输入框 -->
+                            <div class="subsection" id="hony-input-basic">
+                                <div class="subsection-title">前置图标输入框</div>
+                                <div class="subsection-description">基础输入框：最基本的文本输入组件，支持常规、选中、禁用、默认值等多种状态，适用于表单数据录入。</div>
+                                <div class="component-container">
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-wrapper hony-input-expand">
+                                            <span class="hony-input-prefix iconfont">&#xea59;</span>
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="text" class="hony-input-inner" placeholder="请输入">
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand hony-selected">
+                                            <span class="hony-input-prefix iconfont">&#xea59;</span>
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="text" class="hony-input-inner" placeholder="请输入">
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand">
+                                            <span class="hony-input-prefix iconfont">&#xea59;</span>
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="text" class="hony-input-inner" placeholder="请输入" disabled>
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand">
+                                            <span class="hony-input-prefix iconfont">&#xea59;</span>
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="text" class="hony-input-inner" value="默认不可更改" readonly>
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 带标题的输入框 -->
+                            <div class="subsection" id="hony-input-basic">
+                                <div class="subsection-title">带标题的输入框</div>
+                                <div class="subsection-description">带标题输入框：输入框左侧带有标签标题，用于说明输入内容的含义，帮助用户理解需要输入什么信息。</div>
+                                <div class="component-container">
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-wrapper hony-input-expand">
+                                            <!--<span class="hony-input-prefix iconfont">&#xea59;</span>-->
+                                            <span class="hony-input-prefix">标题</span>
+                                            <input type="text" class="hony-input-inner" placeholder="请输入">
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand hony-selected">
+                                            <!--<span class="hony-input-prefix iconfont">&#xea59;</span>-->
+                                            <span class="hony-input-prefix">标题</span>
+                                            <input type="text" class="hony-input-inner" placeholder="请输入">
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand">
+                                            <!--<span class="hony-input-prefix iconfont">&#xea59;</span>-->
+                                            <span class="hony-input-prefix">标题</span>
+                                            <input type="text" class="hony-input-inner" placeholder="请输入" disabled>
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand">
+                                            <!--<span class="hony-input-prefix iconfont">&#xea59;</span>-->
+                                            <span class="hony-input-prefix">标题</span>
+                                            <input type="text" class="hony-input-inner" value="默认不可更改" readonly>
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 输入框尺寸 -->
+                            <div class="subsection" id="hony-input-expand">
+                                <div class="subsection-title">输入框尺寸</div>
+                                <div class="subsection-description">输入框尺寸示例：展示大（40px高）、常规（32px高）、小（24px高）三种尺寸，可根据页面布局选择合适大小。</div>
+                                <div class="component-container">
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-wrapper hony-input-expand hony-input-sm">
+                                            <!--<span class="hony-input-prefix iconfont hony-input-sm">&#xea59;</span>-->
+                                            <!--<span class="hony-input-prefix hony-input-sm">标题</span>-->
+                                            <input type="text" class="hony-input-inner hony-input-sm" placeholder="请输入">
+                                            <!--<span class="hony-input-suffix hony-input-sm">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-input-sm hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand">
+                                            <!--<span class="hony-input-prefix iconfont">&#xf023;</span>-->
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="text" class="hony-input-inner" placeholder="请输入">
+                                            <!--span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand hony-input-lg">
+                                            <!--<span class="hony-input-prefix iconfont">&#xea59;</span>-->
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="text" class="hony-input-inner hony-input-lg" placeholder="请输入">
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-input-lg hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+                                    </div>
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-wrapper hony-input-expand hony-input-sm">
+                                            <span class="hony-input-prefix iconfont hony-input-sm">&#xea59;</span>
+                                            <span class="hony-input-prefix hony-input-sm">标题</span>
+                                            <input type="text" class="hony-input-inner hony-input-sm" placeholder="请输入">
+                                            <span class="hony-input-suffix hony-input-sm">单位</span>
+                                            <span class="hony-input-suffix iconfont hony-input-sm hony-password-toggle">&#xf082;</span>
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand">
+                                            <span class="hony-input-prefix iconfont">&#xf023;</span>
+                                            <span class="hony-input-prefix">标题</span>
+                                            <input type="text" class="hony-input-inner" placeholder="请输入">
+                                            <span class="hony-input-suffix">单位</span>
+                                            <span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand hony-input-lg">
+                                            <span class="hony-input-prefix iconfont">&#xea59;</span>
+                                            <span class="hony-input-prefix">标题</span>
+                                            <input type="text" class="hony-input-inner hony-input-lg" placeholder="请输入">
+                                            <span class="hony-input-suffix">单位</span>
+                                            <span class="hony-input-suffix iconfont hony-input-lg hony-password-toggle">&#xf082;</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <!-- 输入框拓展 Section -->
+                        <div class="section">
+                            <div class="section-title">拓展<span style="color: var(--primary-main-1);">样式</span></div>
+                            
+
+
+
+            
+
+                            <!-- 登录页输入框 -->
+                            <div class="subsection" id="hony-input-login">
+                                <div class="subsection-title">登录页输入框</div>
+                                <div class="subsection-description">登录页面专用的输入框样式。</div>
+                                <div class="component-container">
+                                    <div class="hony-input-group1">
+                                        <div class="hony-input-wrapper hony-input-expand hony-input-login">
+                                            <span class="hony-input-prefix iconfont">&#xef7f;</span>
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="text" class="hony-input-inner hony-input-login" placeholder="请输入">
+                                            <!--span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand hony-input-login">
+                                            <span class="hony-input-prefix iconfont">&#xefbf;</span>
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="text" class="hony-input-inner hony-input-login" placeholder="请输入">
+                                            <!--span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+                                        <div class="hony-input-wrapper hony-input-expand hony-input-login">
+                                            <span class="hony-input-prefix iconfont">&#xefbc;</span>
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="text" class="hony-input-inner hony-input-login" placeholder="请输入">
+                                            <!--span class="hony-input-suffix">单位</span>-->
+                                            <span class="hony-input-suffix img"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 标签输入框 -->
+                            <div class="subsection" id="hony-input-tag">
+                                <div class="subsection-title">标签输入框</div>
+                                <div class="subsection-description">支持输入标签的输入框。</div>
+                                <div class="component-container">
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-wrapper hony-input-tag">
+                                            <div class="hony-input-tags">
+                                                <span class="hony-input-tag-item">标签1<span class="hony-tab-close" onclick="removeTag(this)">×</span></span>
+                                                <span class="hony-input-tag-item">标签2<span class="hony-tab-close" onclick="removeTag(this)">×</span></span>
+                                                <input type="text" class="hony-input" placeholder="添加标签">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- 长文本输入框 -->
+                            <div class="subsection" id="hony-input-textarea">
+                                <div class="subsection-title">长文本输入框</div>
+                                <div class="subsection-description">文本域组件：用于输入多行文本内容，可调节行数，适合较长的文字描述或留言反馈场景。</div>
+                                <div class="component-container">
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-wrapper">
+                                            <textarea class="hony-input hony-input-textarea" placeholder="请输入" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 搜索输入框 -->
+                            <div class="subsection" id="hony-input-search">
+                                <div class="subsection-title">搜索输入框</div>
+                                <div class="subsection-description">搜索输入框：带有搜索图标的输入框，用于搜索功能，图标提示用户这是搜索入口。</div>
+                                <div class="component-container">
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-wrapper hony-input-expand hony-input-Search">
+                                            <span class="hony-input-prefix iconfont">&#xe963;</span>
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="text" class="hony-input-inner" placeholder="请输入">
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 验证码输入框 -->
+                            <div class="subsection" id="hony-input-verification">
+                                <div class="subsection-title">验证码输入框</div>
+                                <div class="subsection-description">验证码输入框：用于输入短信或图形验证码，采用分割式方格设计，带有刷新按钮和倒计时显示。</div>
+                                <div class="component-container">
+
+                                    <!-- 分割式验证码输入框 -->
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-verification-split">
+                                            <div class="hony-verification-box">
+                                                <input type="text" class="hony-verification-input" maxlength="1" placeholder="1">
+                                            </div>
+                                            <div class="hony-verification-box">
+                                                <input type="text" class="hony-verification-input" maxlength="1" placeholder="2">
+                                            </div>
+                                            <div class="hony-verification-box">
+                                                <input type="text" class="hony-verification-input" maxlength="1" placeholder="3">
+                                            </div>
+                                            <div class="hony-verification-box">
+                                                <input type="text" class="hony-verification-input" maxlength="1" placeholder="4">
+                                            </div>
+                                            <div class="hony-verification-box">
+                                                <input type="text" class="hony-verification-input" maxlength="1" placeholder="5">
+                                            </div>
+                                            <div class="hony-verification-box">
+                                                <input type="text" class="hony-verification-input" maxlength="1" placeholder="6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 输入框标记样式 -->
+                            <div class="subsection" id="hony-input-labeled">
+                                <div class="subsection-title">输入框标记样式</div>
+                                <div class="subsection-description">输入框标记样式：输入框左右两侧可添加标签标记，说明输入值的单位或类型，如"价格 元"或"时间 小时"。</div>
+                                <div class="component-container">
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-wrapper hony-input-labeled">
+                                            <div class="hony-input-label hony-input-label-left">标签</div>
+                                            <input type="text" class="hony-input" placeholder="请输入">
+                                        </div>
+                                    </div>
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-wrapper hony-input-labeled">
+                                            <input type="text" class="hony-input" placeholder="请输入">
+                                            <div class="hony-input-label hony-input-label-right">标签</div>
+                                        </div>
+                                    </div>
+                                    <div class="hony-input-group">
+                                        <div class="hony-input-wrapper hony-input-labeled">
+                                            <div class="hony-input-label hony-input-label-left">标签</div>
+                                            <input type="text" class="hony-input" placeholder="请输入">
+                                            <div class="hony-input-label hony-input-label-right">标签</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 自定义输入框 -->
+                            <div class="subsection" id="hony-input-custom">
+                                <div class="subsection-title">自定义输入框</div>
+                                <div class="subsection-description">自定义输入框：卡片式设计的输入框，包含标题区和输入区，支持常规样式和浮动标签样式，适用于特殊表单场景。</div>
+                                <div class="component-container">
+                                    <!-- 自定义输入框1：常规样式 -->
+                                    <div class="hony-input-group2">
+                                        <div class="hony-input-wrapper hony-input-custom hony-input-custom-regular">
+                                            <div class="hony-input-custom-header">
+                                                <span class="hony-input-custom-title">标题</span>
+
+                                            </div>
+                                            <div class="hony-input-custom-body">
+                                                <input type="text" class="hony-input-custom-input" placeholder="请输入">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 自定义输入框2：浮动样式 -->
+                                    <div class="hony-input-group2">
+                                        <div class="hony-input-wrapper hony-input-custom hony-input-custom-floating">
+                                            <label class="hony-input-floating-label">标题</label>
+                                            <div class="hony-input-floating-body">
+                                                <input type="text" class="hony-input-custom-input" placeholder="请输入">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+                <div class="right-nav">
+                    <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'input-basic');">基础输入框</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'input-active');">可激活输入框</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'input-basic');">密码输入框</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'input-basic');">前置图标输入框</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'input-basic');">带标题的输入框</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'input-expand');">输入框尺寸</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'input-login');">登录页输入框</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'input-tag');">标签输入框</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'input-textarea');">长文本输入框</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'input-search');">搜索输入框</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'input-verification');">验证码输入框</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'input-labeled');">输入框标记样式</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'input-custom');">自定义输入框</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

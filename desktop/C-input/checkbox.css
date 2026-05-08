@@ -1,0 +1,445 @@
+/* 选框基础样式 */
+.hony-checkbox-section {
+  margin-bottom: 24px;
+}
+.hony-checkbox-tag{
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 60px solid var(--primary-main-1); /* 控制三角高度 */
+      border-left: 60px solid transparent; /* 控制三角宽度 */
+  }
+.hony-checkbox-item-bordered.checked{
+  border: 1px solid var(--primary-main-1);;
+    }  
+.hony-checkbox-tag::after {
+    top: -45px;
+    right: 8px;
+    color: #c60000;
+    font-size: 24px;
+    font-weight: bold;
+    }  
+.hony-checkbox-group {
+  display: flex;
+  flex-wrap: wrap; /* 屏幕不够自动换行，不挤在一起 */
+  width: 100%;
+  gap: 24px;
+}
+
+.hony-checkbox-item {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 8px;
+  border-radius: 4px;
+  padding: 2px 0;
+  height: 24px;
+  min-height: 24px;
+  max-height: 32px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hony-checkbox-item.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.hony-checkbox-text {
+  flex-shrink: 0;
+  min-height: 20px;
+  max-height: 20px;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: var(--grey-text-1);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.hony-checkbox-item.disabled .hony-checkbox-text {
+  color: var(--grey-text-4);
+}
+
+/* 1. 单选框样式 */
+.hony-radio-box {
+  flex-shrink: 0;
+  border: 1px solid var(--grey-border-2);
+  border-radius: 50%;
+  background: var(--grey-bg-0);
+  width: 16px;
+  height: 16px;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(1px);
+}
+
+.hony-radio-box.checked {
+  border-color: var(--primary-main-1);
+  background: var(--primary-main-1);
+}
+
+.hony-radio-box.checked::after {
+  content: '';
+  border-radius: 50%;
+  background: var(--grey-bg-0);
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hony-radio-box.disabled {
+  border-color: var(--grey-border-2);
+  background: var(--grey-face-2);
+}
+
+.hony-radio-box.checked.disabled {
+  border-color: var(--primary-main-4);
+  background: var(--primary-main-4);
+}
+
+/* 2. 复选框样式 */
+.hony-checkbox-box {
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: var(--grey-bg-0);
+  width: 16px;
+  height: 16px;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--grey-border-2);
+  transform: translateY(1px);
+}
+
+.hony-checkbox-box.checked {
+  background: var(--primary-main-1);
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.hony-checkbox-box.checked::after {
+  content: '\f081';
+  font-family: 'iconfont';
+  color: var(--primary-main-5);
+  font-size: 8px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.hony-checkbox-box.indeterminate {
+  border-color: var(--primary-main-1);
+  background: var(--grey-bg-0);
+}
+
+.hony-checkbox-box.indeterminate::after {
+  content: '';
+  width: 8px;
+  height: 2px;
+  background: var(--primary-main-1);
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  left: 3px;
+  transform: none;
+}
+
+.hony-checkbox-box.disabled {
+  border-color: var(--grey-border-2);
+  background: var(--grey-face-2);
+}
+
+.hony-checkbox-box.checked.disabled {
+  border-color: var(--primary-main-4);
+  background: var(--primary-main-4);
+}
+
+/* 3. 勾选样式（单选框的另一种样式） */
+.hony-checkmark-box {
+  flex-shrink: 0;
+  border: 1px solid var(--grey-border-1);
+  border-radius: 50%;
+  background: var(--white);
+  width: 16px;
+  height: 16px;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hony-checkmark-box.checked {
+  border-color: var(--primary-main-1);
+  background: var(--primary-main-1);
+}
+
+.hony-checkmark-box.checked::after {
+  content: '\f081';
+  font-family: 'iconfont';
+  color: var(--primary-main-5);
+  font-size: 8px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.hony-checkmark-box.disabled {
+  border-color: var(--grey-border-1);
+  background: var(--grey-face-1);
+}
+
+.hony-checkmark-box.checked.disabled {
+  border-color: var(--primary-main-4);
+  background: var(--primary-main-4);
+}
+
+.hony-checkmark-box.checked.disabled::after {
+  color: var(--primary-main-5);
+}
+
+/* 拓展样式：带边框的选框组 */
+.hony-checkbox-group-bordered {
+  display: flex;
+  align-items: flex-start; /* 顶部对齐 */
+  flex-wrap: wrap; /* 屏幕不够自动换行，不挤在一起 */
+  gap: 24px;
+  margin-bottom: 32px;
+  
+}
+
+.hony-checkbox-item-bordered {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  padding: 8px 12px;
+  height: 32px;
+  min-height: 24px;
+  max-height: 48px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--grey-border-1);
+  border-radius: 4px;
+}
+
+.hony-checkbox-item-bordered:last-child {
+  border-bottom: 1px solid var(--grey-border-1);
+}
+
+.hony-checkbox-item-bordered:hover {
+  background: var(--grey-face-1);
+}
+
+.hony-checkbox-item-bordered.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background: var(--grey-face-1);
+  border-color: var(--primary-face-3);
+}
+
+.hony-checkbox-item-bordered.hony-checkboxed {
+  background: var(--primary-face-1);
+  border-color: var(--primary-main-1);
+}
+
+.hony-checkbox-item-bordered .hony-checkbox-text {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  color: var(--grey-text-1);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.hony-checkbox-item-bordered.disabled .hony-checkbox-text {
+  color: var(--grey-text-4);
+}
+
+/* 单选框边框样式 */
+.hony-checkbox-item-bordered .hony-radio-box {
+  flex-shrink: 0;
+  border: 1px solid var(--grey-border-2);
+  border-radius: 50%;
+  background: var(--grey-bg-0);
+  width: 16px;
+  height: 16px;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hony-checkbox-item-bordered .hony-radio-box.checked {
+  border-color: var(--primary-main-1);
+  background: var(--primary-main-1);
+}
+
+.hony-checkbox-item-bordered .hony-radio-box.checked::after {
+  content: '';
+  border-radius: 50%;
+  background: var(--grey-bg-0);
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hony-checkbox-item-bordered .hony-radio-box.disabled {
+  border-color: var(--grey-border-2);
+  background: var(--grey-face-1);
+}
+
+.hony-checkbox-item-bordered .hony-radio-box.checked.disabled {
+  border-color: var(--primary-face-3);
+  background: var(--primary-face-3);
+}
+
+/* 复选框边框样式 */
+.hony-checkbox-item-bordered .hony-checkbox-box {
+  flex-shrink: 0;
+  border: 1px solid var(--grey-border-1);
+  border-radius: 4px;
+  background: var(--white);
+  width: 16px;
+  height: 16px;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hony-checkbox-item-bordered .hony-checkbox-box.checked {
+  border-color: var(--primary-main-1);
+  background: var(--primary-main-1);
+}
+
+.hony-checkbox-item-bordered .hony-checkbox-box.checked::after {
+    content: '\f081';
+    font-family: 'iconfont';
+    color: var(--primary-main-5);
+    font-size: 8px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.hony-checkbox-item-bordered .hony-checkbox-box.checked::before {
+
+  width: 8px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 7px;
+  left: 4px;
+}
+
+.hony-checkbox-item-bordered .hony-checkbox-box.indeterminate {
+  border-color: var(--primary-main-1);
+  background: var(--primary-main-1);
+}
+
+.hony-checkbox-item-bordered .hony-checkbox-box.indeterminate::after {
+  content: '';
+  width: 8px;
+  height: 2px;
+  background: var(--grey-bg-0);
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  left: 3px;
+  transform: none;
+}
+
+.hony-checkbox-item-bordered .hony-checkbox-box.disabled {
+  border-color: var(--grey-border-1);
+  background: var(--grey-face-1);
+}
+
+.hony-checkbox-item-bordered .hony-checkbox-box.checked.disabled {
+  border-color: var(--primary-main-4);
+  background: var(--primary-main-4);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hony-checkbox-item {
+    padding: 4px 0;
+  }
+  
+  .hony-checkbox-item-bordered {
+    padding: 6px 10px;
+  }
+  
+  .hony-checkbox-text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  .hony-radio-box,
+  .hony-checkbox-box,
+  .hony-checkmark-box {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .hony-radio-box.checked::after {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .hony-checkbox-box.checked::after,
+  .hony-checkbox-box.checked::before,
+  .hony-checkbox-box.indeterminate::after {
+    width: 6px;
+  }
+  
+  .hony-checkmark-box.checked::after {
+    font-size: 10px;
+  }
+}
+
+/* 带边框拓展选框组的角标样式 */
+.hony-checkbox-item-badge {
+  position: relative;
+  justify-content: center;
+  padding: 3px 16px;
+  overflow: hidden; 
+}
+
+.hony-checkbox-item-badge .hony-checkbox-badge {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 16px;
+  height: 16px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-main-1);
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+  font-family: iconfont;
+  font-size: 6px;
+  color: var(--primary-main-5);
+  padding: 0px 0px 6px 6px;
+}
+
+.hony-checkbox-item-badge.hony-checkboxed .hony-checkbox-badge {
+  display: flex;
+}
+
+.hony-checkbox-item-badge .hony-checkbox-text {
+  font-weight: 400;
+  color: var(--grey-text-1);
+}
+
+.hony-checkbox-item-badge.hony-checkboxed .hony-checkbox-text {
+  color: var(--primary-main-1);
+    font-weight: 500;
+}

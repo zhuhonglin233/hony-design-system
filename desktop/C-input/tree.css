@@ -1,0 +1,679 @@
+/* 树状表基础样式 */
+.hony-tree {
+  font-family: var(--font-family);
+  border-radius: 4px;
+  width: 240px;
+
+  overflow-y: auto;
+}
+
+/* 树节点 */
+.hony-tree-node {
+  display: flex;
+  align-items: center;
+  padding: 9px 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  margin-bottom: 4px;
+  gap: 8px;
+}
+
+.hony-tree-node:hover {
+  background-color: var(--grey-face-2);
+}
+
+.hony-tree-node.active {
+  background-color: var(--primary-face-1);
+}
+
+.hony-tree-node.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* 树节点内容 */
+.hony-tree-node-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+/* 展开/折叠图标 */
+.hony-tree-expand-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.hony-tree-expand-icon img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+.hony-tree-expand-icon.expanded img {
+
+}
+
+.hony-tree-expand-icon.empty {
+  visibility: hidden;
+}
+
+/* 树节点图标 */
+.hony-tree-node-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'iconfont';
+  font-size: 14px;
+  color: var(--grey-text-4);
+  transition: color 0.2s ease;
+}
+
+.hony-tree-node.hony-selected .hony-tree-node-icon,
+.hony-tree-node.active .hony-tree-node-icon {
+  color: var(--primary-main-1);
+}
+
+/* 树标签 */
+.hony-tree-label {
+  flex-grow: 1;
+  font-size: 14px;
+  color: var(--grey-text-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 树操作图标 */
+.hony-tree-node-action {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  font-family: 'iconfont';
+  font-size: 14px;
+  color: var(--grey-text-2);
+}
+
+.hony-tree-node:hover .hony-tree-node-action {
+  opacity: 1;
+}
+
+.hony-tree-node-action img {
+  width: 14px;
+  height: 14px;
+  color: var(--grey-text-2);
+}
+
+/* 缩进层级 */
+.hony-tree-level-1 {
+  padding-left: 32px;
+}
+
+.hony-tree-level-2 {
+  padding-left: 52px;
+}
+
+.hony-tree-level-3 {
+  padding-left: 72px;
+}
+
+.hony-tree-level-4 {
+  padding-left: 92px;
+}
+
+.hony-tree-level-5 {
+  padding-left: 112px;
+}
+
+/* 单位树样式 */
+.hony-tree-unit {
+  row-gap: 4px;
+  height: 100%;
+  max-width: 320px;
+  mim-width: 120px;
+  background: var(--grey-bg-0);
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-border-1) #00000000;
+}
+
+.hony-tree-unit .hony-tree-node {
+  display: flex;
+  align-items: center;
+  padding: 8px 8px 8px 8px;
+  min-height: 40px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+}
+.hony-tree-section {
+  height: 450px;
+}
+.hony-tree-unit .hony-tree-node:hover {
+  background-color: var(--grey-face-1);
+}
+
+.hony-tree-unit .hony-tree-node.hony-selected {
+  background: var(--primary-face-1);
+}
+
+.hony-tree-unit .hony-tree-node.hony-selected .hony-tree-label {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+.hony-tree-unit .hony-tree-expand-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey-text-4);
+  font-size: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.hony-tree-unit .hony-tree-expand-icon.expanded {
+  transform: rotate(90deg);
+}
+
+.hony-tree-unit .hony-tree-expand-icon.empty {
+  visibility: hidden;
+}
+
+.hony-tree-unit .hony-tree-label {
+  flex-grow: 1;
+  font-size: 14px;
+  color: var(--grey-text-2);
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 单位树层级缩进 */
+.hony-tree-unit .hony-tree-level-1 {
+  padding-left: 24px;
+}
+
+.hony-tree-unit .hony-tree-level-2 {
+  padding-left: 24px;
+}
+.hony-tree-unit .hony-tree-level-3 {
+  padding-left: 48px;
+}
+/* 线条树状表 */
+.hony-tree-line {
+background: var(--grey-bg-0);
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-border-1) #00000000;
+
+  height: 100%;
+}
+
+.hony-tree-line .hony-tree-node {
+  position: relative;
+margin-bottom: 0px;
+height: 36px;
+}
+
+/* 一级节点：没有连接线 */
+.hony-tree-line .hony-tree-node:not(.hony-tree-level-1):not(.hony-tree-level-2):not(.hony-tree-level-3)::before,
+.hony-tree-line .hony-tree-node:not(.hony-tree-level-1):not(.hony-tree-level-2):not(.hony-tree-level-3)::after {
+  display: none;
+}
+
+/* 二级节点：没有竖线 */
+.hony-tree-line .hony-tree-level-1 {
+  padding-left: 48px;
+}
+
+.hony-tree-line .hony-tree-level-1::before,
+.hony-tree-line .hony-tree-level-1::after {
+  display: none;
+}
+
+/* 三级节点：3个竖线 + 横向线条 */
+.hony-tree-line .hony-tree-level-3 {
+  padding: 12px 12px 12px 20px;
+  margin-bottom: 0px;
+}
+
+.hony-tree-line .hony-tree-level-3::before {
+  content: '';
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 1px;
+  background: var(--grey-border-1);
+}
+
+.hony-tree-line .hony-tree-level-3::after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--grey-border-1);
+}
+
+.hony-tree-line .hony-tree-level-3:last-child::after {
+  height: 50%;
+}
+
+/* 三级节点的第二条竖线 */
+.hony-tree-line .hony-tree-level-3 .hony-tree-expand-icon {
+  position: relative;
+}
+
+
+/* 三级节点的第三条竖线 */
+.hony-tree-line .hony-tree-level-3 .hony-tree-expand-icon::after {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: -8px;
+  bottom: -8px;
+  width: 1px;
+  background: var(--grey-border-1);
+}
+/* 线条树状表 - 小尺寸 */
+.hony-tree-line-small {
+background: var(--grey-bg-0);
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-border-1) #00000000;
+  height: 100%;
+}
+
+.hony-tree-line-small .hony-tree-node {
+  position: relative;
+  padding: 4px 8px;
+  min-height: 28px;
+  margin-bottom: 0px;
+}
+
+.hony-tree-line-small .hony-tree-node::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 1px;
+  background: var(--grey-border-1);
+}
+
+/* 小尺寸线条树 - 默认没有连接线 */
+.hony-tree-line-small .hony-tree-node::before,
+.hony-tree-line-small .hony-tree-node::after {
+  display: none !important;
+}
+
+.hony-tree-line-small .hony-tree-label {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.hony-tree-line-small .hony-tree-expand-icon {
+  font-size: 12px;
+  width: 12px;
+  height: 12px;
+}
+
+.hony-tree-line-small .hony-tree-expand-icon img {
+  width: 12px;
+  height: 12px;
+}
+
+/* 线条树和小尺寸线条树的展开/收起图标 */
+.hony-tree-line .hony-tree-expand-icon img.expand-icon,
+.hony-tree-line-small .hony-tree-expand-icon img.expand-icon {
+  display: none;
+}
+
+.hony-tree-line .hony-tree-expand-icon img.collapse-icon,
+.hony-tree-line-small .hony-tree-expand-icon img.collapse-icon {
+  display: none;
+}
+
+/* 展开状态：显示收起图标，隐藏展开图标 */
+.hony-tree-line .hony-tree-expand-icon.expanded img.expand-icon,
+.hony-tree-line-small .hony-tree-expand-icon.expanded img.expand-icon {
+  display: none;
+}
+
+.hony-tree-line .hony-tree-expand-icon.expanded img.collapse-icon,
+.hony-tree-line-small .hony-tree-expand-icon.expanded img.collapse-icon {
+  display: block;
+}
+
+/* 折叠状态：显示展开图标，隐藏收起图标 */
+.hony-tree-line .hony-tree-expand-icon:not(.expanded):not(.empty) img.expand-icon,
+.hony-tree-line-small .hony-tree-expand-icon:not(.expanded):not(.empty) img.expand-icon {
+  display: block;
+}
+
+.hony-tree-line .hony-tree-expand-icon:not(.expanded):not(.empty) img.collapse-icon,
+.hony-tree-line-small .hony-tree-expand-icon:not(.expanded):not(.empty) img.collapse-icon {
+  display: none;
+}
+
+.hony-tree-line-small .hony-tree-node-icon {
+  font-size: 12px;
+}
+
+.hony-tree-line-small .hony-tree-node-action {
+  font-size: 12px;
+}
+
+/* 二级节点：没有线条 */
+.hony-tree-line-small .hony-tree-level-1,
+.hony-tree-line-small .hony-tree-level-2 {
+
+}
+
+.hony-tree-line-small .hony-tree-level-1::before,
+.hony-tree-line-small .hony-tree-level-1::after,
+.hony-tree-line-small .hony-tree-level-2::before,
+.hony-tree-line-small .hony-tree-level-2::after {
+  display: none !important;
+}
+
+/* 三级节点：有连接线 */
+.hony-tree-line-small .hony-tree-level-3 {
+
+  position: relative;
+}
+
+.hony-tree-line-small .hony-tree-level-3::before {
+  display: block !important;
+  content: '' !important;
+  position: absolute !important;
+  left: 12px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 12px !important;
+  height: 1px !important;
+  background: var(--grey-border-1) !important;
+}
+
+.hony-tree-line-small .hony-tree-level-3::after {
+  display: block !important;
+  content: '' !important;
+  position: absolute !important;
+  left: 12px !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 1px !important;
+  background: var(--grey-border-1) !important;
+}
+
+.hony-tree-line-small .hony-tree-level-3:last-child::after {
+  height: 50% !important;
+}
+
+/* 三级节点的第二条竖线 */
+.hony-tree-line-small .hony-tree-level-3 .hony-tree-expand-icon {
+  position: relative;
+}
+
+.hony-tree-line-small .hony-tree-level-3 .hony-tree-expand-icon::before {
+  content: '' !important;
+  position: absolute !important;
+  left: -28px !important;
+  top: -8px !important;
+  bottom: -8px !important;
+  width: 1px !important;
+  background: var(--grey-border-1) !important;
+}
+
+/* 三级节点的第三条竖线 */
+.hony-tree-line-small .hony-tree-level-3 .hony-tree-expand-icon::after {
+  content: '' !important;
+  position: absolute !important;
+  left: -14px !important;
+  top: -8px !important;
+  bottom: -8px !important;
+  width: 1px !important;
+  background: var(--grey-border-1) !important;
+}
+/* 线条树选中状态 */
+.hony-tree-line .hony-tree-node:hover {
+  background-color: var(--grey-bg-0);
+  color: var(--primary-main-1);
+}
+
+.hony-tree-line .hony-tree-node.hony-selected {
+}
+
+.hony-tree-line .hony-tree-node.hony-selected .hony-tree-label {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+.hony-tree-line-small .hony-tree-node:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.hony-tree-line-small .hony-tree-node.hony-selected {
+
+}
+
+.hony-tree-line-small .hony-tree-node.hony-selected .hony-tree-label {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+/* 卡片树状表 */
+.hony-tree-card {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--grey-bg-0);
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-border-1) #00000000;
+
+
+
+  height: 100%;
+  overflow-y: auto;
+}
+
+.hony-tree-card .hony-tree-node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hony-tree-card .hony-tree-node:hover {
+  background-color: var(--grey-face-1);
+}
+
+.hony-tree-card .hony-tree-node.hony-selected {
+  background-color: var(--primary-face-1);
+  border-left: 2px solid var(--primary-main-1);
+  border-radius: 0px;
+}
+
+.hony-tree-card .hony-tree-node.hony-selected .hony-tree-label {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+.hony-tree-card .hony-tree-expand-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: var(--grey-border-2);
+}
+
+.hony-tree-card .hony-tree-expand-icon.empty {
+  opacity: 0;
+}
+
+.hony-tree-card .hony-tree-expand-icon.expanded {
+  color: var(--grey-text-4);
+}
+
+.hony-tree-card .hony-checkbox-box,
+.hony-tree-card .hony-radio-box {
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.hony-tree-card .hony-tree-label {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  color: var(--grey-text-2);
+  line-height: 24px;
+}
+
+/* 连接线样式 */
+.hony-tree-card .hony-tree-children {
+  position: relative;
+  margin-left: 16px;
+  border-left: 1px solid var(--grey-border-1);
+}
+
+.hony-tree-card .hony-tree-children::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0);
+}
+
+.hony-tree-card .hony-tree-level-1 > .hony-tree-children::before {
+  left: 40px;
+}
+
+.hony-tree-card .hony-tree-level-1 > .hony-tree-children > .hony-tree-node > .hony-tree-children::before {
+  left: 60px;
+}
+
+/* 小尺寸 */
+.hony-tree-small .hony-tree-node {
+  padding: 5px 8px;
+  min-height: 32px;
+}
+
+.hony-tree-small .hony-tree-label {
+  font-size: 12px;
+}
+
+.hony-tree-small .hony-tree-expand-icon {
+  font-size: 10px;
+}
+
+.hony-tree-small .hony-tree-checkbox,
+.hony-tree-small .hony-tree-radio {
+  width: 14px;
+  height: 14px;
+}
+
+/* 展开区域 */
+.hony-tree-children {
+  overflow: hidden;
+  padding: 0 0 0 0px;
+  transition: max-height 0.2s ease;
+}
+.hony-tree-children.line-small {
+  margin-left: 12px;
+  border-left: 1px solid var(--grey-border-1);
+}
+.hony-tree-children.collapsed {
+  max-height: 0;
+}
+
+.hony-tree-children.line {
+ margin-left: 16px;
+ border-left: 1px solid var(--grey-border-1);
+}
+
+/* 无连接线样式 */
+.hony-tree-no-line .hony-tree-node::before,
+.hony-tree-no-line .hony-tree-node::after {
+  display: none;
+}
+
+/* 图标样式 */
+.hony-tree-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4px;
+}
+
+.hony-tree-icon .iconfont {
+  font-size: 14px;
+  color: var(--grey-text-4);
+}
+.hony-tree-line .hony-tree-level-2{
+    padding-left: 8px;
+    margin-bottom: 0px;
+}
+.tree-section {
+  height: 400px;
+
+}
+.tree-unit{
+  height: 600px;
+  overflow-y: auto;
+}
+
+/* 半选状态样式 - 与checkbox保持一致 */
+.hony-tree-node .hony-checkbox-box.indeterminate {
+  border-color: var(--primary-main-1);
+  background: var(--grey-bg-0);
+}
+
+.hony-tree-node .hony-checkbox-box.indeterminate::after {
+  content: '';
+  width: 8px;
+  height: 2px;
+  background: var(--primary-main-1);
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  left: 3px;
+  transform: none;
+}

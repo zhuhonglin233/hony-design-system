@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>导航 - 导航</title>
+  <link rel="stylesheet" href="../../overall/main.css">
+  <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+  <link rel="stylesheet" href="navigation.css">
+  <script src="../../overall/js/common.js"></script>
+  <script src="navigation.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                  <div class="content-main">
+                    <!-- 页面标题 -->
+                    <div class="page-header">
+                      <div class="design-code">design code 桌面端组件</div>
+                      <div class="page-title">导航系统</div>
+                      <div class="page-description">导航系统提供多种不同的样式，每种样式都有独立的CSS ID，确保修改时不会相互影响。</div>
+                    </div>
+
+                    <!-- 顶部导航样式 Section -->
+                    <div class="section">
+                      <div class="section-title">导航<span style="color: var(--primary-main-1);">顶部</span></div>
+                      
+                      <!-- 顶部常规卡片 -->
+                      <div class="subsection" id="nav-top-card">
+                        <div class="subsection-title">顶部常规卡片</div>
+                        <div class="subsection-description">顶部常规卡片导航：采用卡片式设计，包含Logo、导航菜单和右侧操作区域，适用于管理后台系统。</div>
+                        <div class="component-container">
+                          <div class="hony-top-nav-container">
+                            <!-- 顶部导航 -->
+                            <div id="hony-top-nav-1" class="hony-top-nav hony-top-nav-card">
+                              <!-- 左侧Logo -->
+                            <div class="hony-top-nav-logo">
+                              <div class="hony-top-nav-logo-icon">
+                                <!-- LOGO图片 -->
+                                <img src="../../overall/images/LOGO.png" alt="智付校园" width="36" height="36">
+                              </div>
+                              <div class="hony-top-nav-logo-text">智付校园</div>
+                            </div>
+                            
+                            <!-- 中间菜单项 -->
+                            <div class="hony-top-nav-menu">
+                              <!-- 菜单项 1 - 无二级导航 -->
+                              <div class="hony-top-nav-item no-submenu">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xeb1a;</span>
+                                  <span class="hony-top-nav-item-text">首页</span>
+                                </div>
+                              </div>
+                              
+                              <!-- 菜单项 2 - 有二级导航 -->
+                              <div class="hony-top-nav-item">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xf040;</span>
+                                  <span class="hony-top-nav-item-text">标题昵称</span>
+                                  <span class="hony-top-nav-item-arrow">
+                                    <span class="hony-nav-icon iconfont">&#xf061;</span>
+                                  </span>
+                                </div>
+                                
+                                <!-- 二级导航 -->
+                                <div class="hony-top-nav-submenu">
+                                  <div class="hony-top-nav-submenu-content">
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!-- 菜单项 3 - 有二级导航 -->
+                              <div class="hony-top-nav-item">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xef28;</span>
+                                  <span class="hony-top-nav-item-text">标题昵称</span>
+                                  <span class="hony-top-nav-item-arrow">
+                                    <span class="hony-nav-icon iconfont">&#xf061;</span>
+                                  </span>
+                                </div>
+                                
+                                <!-- 二级导航 -->
+                                <div class="hony-top-nav-submenu">
+                                  <div class="hony-top-nav-submenu-content">
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <!-- 右侧功能区 -->
+                            <div class="hony-top-nav-actions">
+                              <div class="hony-top-nav-action-item">
+                                <span class="hony-nav-icon iconfont">&#xe963;</span>
+                              </div>
+                              <div class="hony-top-nav-action-item">
+                                <span class="hony-nav-icon iconfont">&#xeaf6;</span>
+                              </div>
+                              <div class="hony-top-nav-action-item user">
+                                <div class="user-avatar">
+                                  <!-- 用户头像 -->
+                                  <img src="../../overall/images/默认头像.png" alt="用户头像" width="36" height="36">
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 顶部主题卡片 -->
+                      <div class="subsection" id="nav-top-theme">
+                        <div class="subsection-title">顶部主题卡片</div>
+                        <div class="subsection-description">按照设计文件实现的主题卡片样式顶部导航。</div>
+                        <div class="component-container">
+                          <div class="hony-top-nav-container">
+                            <!-- 顶部导航 -->
+                            <div id="hony-top-nav-2" class="hony-top-nav hony-top-nav-card">
+                              <!-- 左侧Logo -->
+                            <div class="hony-top-nav-logo">
+                              <div class="hony-top-nav-logo-icon">
+                                <!-- LOGO图片 -->
+                                <img src="../../overall/images/LOGO.png" alt="智付校园" width="36" height="36">
+                              </div>
+                              <div class="hony-top-nav-logo-text">智付校园</div>
+                            </div>
+                            
+                            <!-- 中间菜单项 -->
+                            <div class="hony-top-nav-menu">
+                              <!-- 菜单项 1 - 无二级导航 -->
+                              <div class="hony-top-nav-item no-submenu">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xeb1a;</span>
+                                  <span class="hony-top-nav-item-text">首页</span>
+                                </div>
+                              </div>
+                              
+                              <!-- 菜单项 2 - 有二级导航 -->
+                              <div class="hony-top-nav-item">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xf040;</span>
+                                  <span class="hony-top-nav-item-text">标题昵称</span>
+                                  <span class="hony-top-nav-item-arrow">
+                                    <span class="hony-nav-icon iconfont">&#xf061;</span>
+                                  </span>
+                                </div>
+                                
+                                <!-- 二级导航 -->
+                                <div class="hony-top-nav-submenu">
+                                  <div class="hony-top-nav-submenu-content">
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!-- 菜单项 3 - 有二级导航 -->
+                              <div class="hony-top-nav-item">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xef28;</span>
+                                  <span class="hony-top-nav-item-text">标题昵称</span>
+                                  <span class="hony-top-nav-item-arrow">
+                                    <span class="hony-nav-icon iconfont">&#xf061;</span>
+                                  </span>
+                                </div>
+                                
+                                <!-- 二级导航 -->
+                                <div class="hony-top-nav-submenu">
+                                  <div class="hony-top-nav-submenu-content">
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <!-- 右侧功能区 -->
+                            <div class="hony-top-nav-actions">
+                              <div class="hony-top-nav-action-item">
+                                <span class="hony-nav-icon iconfont">&#xe963;</span>
+                              </div>
+                              <div class="hony-top-nav-action-item">
+                                <span class="hony-nav-icon iconfont">&#xeaf6;</span>
+                              </div>
+                              <div class="hony-top-nav-action-item user">
+                                <div class="user-avatar">
+                                  <!-- 用户头像 -->
+                                  <img src="../../overall/images/默认头像.png" alt="用户头像" width="36" height="36">
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 顶部浅主题卡片 -->
+                      <div class="subsection" id="nav-top-light">
+                        <div class="subsection-title">顶部浅主题卡片</div>
+                        <div class="subsection-description">按照设计文件实现的浅主图卡片样式顶部导航。</div>
+                        <div class="component-container">
+                          <div class="hony-top-nav-container">
+                            <!-- 顶部导航 -->
+                            <div id="hony-top-nav-3" class="hony-top-nav hony-top-nav-card">
+                              <!-- 左侧Logo -->
+                            <div class="hony-top-nav-logo">
+                              <div class="hony-top-nav-logo-icon">
+                                <!-- LOGO图片 -->
+                                <img src="../../overall/images/LOGO.png" alt="智付校园" width="36" height="36">
+                              </div>
+                              <div class="hony-top-nav-logo-text">智付校园</div>
+                            </div>
+                            
+                            <!-- 中间菜单项 -->
+                            <div class="hony-top-nav-menu">
+                              <!-- 菜单项 1 - 无二级导航 -->
+                              <div class="hony-top-nav-item no-submenu">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xeb1a;</span>
+                                  <span class="hony-top-nav-item-text">首页</span>
+                                </div>
+                              </div>
+                              
+                              <!-- 菜单项 2 - 有二级导航 -->
+                              <div class="hony-top-nav-item">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xf040;</span>
+                                  <span class="hony-top-nav-item-text">标题昵称</span>
+                                  <span class="hony-top-nav-item-arrow">
+                                    <span class="hony-nav-icon iconfont">&#xf061;</span>
+                                  </span>
+                                </div>
+                                
+                                <!-- 二级导航 -->
+                                <div class="hony-top-nav-submenu">
+                                  <div class="hony-top-nav-submenu-content">
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!-- 菜单项 3 - 有二级导航 -->
+                              <div class="hony-top-nav-item">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xef28;</span>
+                                  <span class="hony-top-nav-item-text">标题昵称</span>
+                                  <span class="hony-top-nav-item-arrow">
+                                    <span class="hony-nav-icon iconfont">&#xf061;</span>
+                                  </span>
+                                </div>
+                                
+                                <!-- 二级导航 -->
+                                <div class="hony-top-nav-submenu">
+                                  <div class="hony-top-nav-submenu-content">
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <!-- 右侧功能区 -->
+                            <div class="hony-top-nav-actions">
+                              <div class="hony-top-nav-action-item">
+                                <span class="hony-nav-icon iconfont">&#xe963;</span>
+                              </div>
+                              <div class="hony-top-nav-action-item">
+                                <span class="hony-nav-icon iconfont">&#xeaf6;</span>
+                              </div>
+                              <div class="hony-top-nav-action-item user">
+                                <div class="user-avatar">
+                                  <!-- 用户头像 -->
+                                  <img src="../../overall/images/默认头像.png" alt="用户头像" width="36" height="36">
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 顶部常规线条 -->
+                      <div class="subsection" id="nav-top-line">
+                        <div class="subsection-title">顶部常规线条</div>
+                        <div class="subsection-description">按照设计文件实现的线条样式顶部导航。</div>
+                        <div class="component-container">
+                          <div class="hony-top-nav-container">
+                            <!-- 顶部导航 -->
+                            <div id="hony-top-nav-4" class="hony-top-nav hony-top-nav-card">
+                              <!-- 左侧Logo -->
+                            <div class="hony-top-nav-logo">
+                              <div class="hony-top-nav-logo-icon">
+                                <!-- LOGO图片 -->
+                                <img src="../../overall/images/LOGO.png" alt="智付校园" width="36" height="36">
+                              </div>
+                              <div class="hony-top-nav-logo-text">智付校园</div>
+                            </div>
+                            
+                            <!-- 中间菜单项 -->
+                            <div class="hony-top-nav-menu">
+                              <!-- 菜单项 1 - 无二级导航 -->
+                              <div class="hony-top-nav-item no-submenu">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xeb1a;</span>
+                                  <span class="hony-top-nav-item-text">首页</span>
+                                </div>
+                              </div>
+                              
+                              <!-- 菜单项 2 - 有二级导航 -->
+                              <div class="hony-top-nav-item">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xf040;</span>
+                                  <span class="hony-top-nav-item-text">标题昵称</span>
+                                  <span class="hony-top-nav-item-arrow">
+                                    <span class="hony-nav-icon iconfont">&#xf061;</span>
+                                  </span>
+                                </div>
+                                
+                                <!-- 二级导航 -->
+                                <div class="hony-top-nav-submenu">
+                                  <div class="hony-top-nav-submenu-content">
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!-- 菜单项 3 - 有二级导航 -->
+                              <div class="hony-top-nav-item">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xef28;</span>
+                                  <span class="hony-top-nav-item-text">标题昵称</span>
+                                  <span class="hony-top-nav-item-arrow">
+                                    <span class="hony-nav-icon iconfont">&#xf061;</span>
+                                  </span>
+                                </div>
+                                
+                                <!-- 二级导航 -->
+                                <div class="hony-top-nav-submenu">
+                                  <div class="hony-top-nav-submenu-content">
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <!-- 右侧功能区 -->
+                            <div class="hony-top-nav-actions">
+                              <div class="hony-top-nav-action-item">
+                                <span class="hony-nav-icon iconfont">&#xe963;</span>
+                              </div>
+                              <div class="hony-top-nav-action-item">
+                                <span class="hony-nav-icon iconfont">&#xeaf6;</span>
+                              </div>
+                              <div class="hony-top-nav-action-item user">
+                                <div class="user-avatar">
+                                  <!-- 用户头像 -->
+                                  <img src="../../overall/images/默认头像.png" alt="用户头像" width="36" height="36">
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 顶部常规底色 -->
+                      <div class="subsection" id="nav-top-bg">
+                        <div class="subsection-title">顶部常规底色</div>
+                        <div class="subsection-description">按照设计文件实现的底色样式顶部导航。</div>
+                        <div class="component-container">
+                          <div class="hony-top-nav-container">
+                            <!-- 顶部导航 -->
+                            <div id="hony-top-nav-5" class="hony-top-nav hony-top-nav-card">
+                              <!-- 左侧Logo -->
+                            <div class="hony-top-nav-logo">
+                              <div class="hony-top-nav-logo-icon">
+                                <!-- LOGO图片 -->
+                                <img src="../../overall/images/LOGO.png" alt="智付校园" width="36" height="36">
+                              </div>
+                              <div class="hony-top-nav-logo-text">智付校园</div>
+                            </div>
+                            
+                            <!-- 中间菜单项 -->
+                            <div class="hony-top-nav-menu">
+                              <!-- 菜单项 1 - 无二级导航 -->
+                              <div class="hony-top-nav-item no-submenu">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xeb1a;</span>
+                                  <span class="hony-top-nav-item-text">首页</span>
+                                </div>
+                              </div>
+                              
+                              <!-- 菜单项 2 - 有二级导航 -->
+                              <div class="hony-top-nav-item">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xf040;</span>
+                                  <span class="hony-top-nav-item-text">标题昵称</span>
+                                  <span class="hony-top-nav-item-arrow">
+                                    <span class="hony-nav-icon iconfont">&#xf061;</span>
+                                  </span>
+                                </div>
+                                
+                                <!-- 二级导航 -->
+                                <div class="hony-top-nav-submenu">
+                                  <div class="hony-top-nav-submenu-content">
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!-- 菜单项 3 - 有二级导航 -->
+                              <div class="hony-top-nav-item">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont">&#xef28;</span>
+                                  <span class="hony-top-nav-item-text">标题昵称</span>
+                                  <span class="hony-top-nav-item-arrow">
+                                    <span class="hony-nav-icon iconfont">&#xf061;</span>
+                                  </span>
+                                </div>
+                                
+                                <!-- 二级导航 -->
+                                <div class="hony-top-nav-submenu">
+                                  <div class="hony-top-nav-submenu-content">
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <!-- 右侧功能区 -->
+                            <div class="hony-top-nav-actions">
+                              <div class="hony-top-nav-action-item">
+                                <span class="hony-nav-icon iconfont">&#xe963;</span>
+                              </div>
+                              <div class="hony-top-nav-action-item">
+                                <span class="hony-nav-icon iconfont">&#xeaf6;</span>
+                              </div>
+                              <div class="hony-top-nav-action-item user">
+                                <div class="user-avatar">
+                                  <!-- 用户头像 -->
+                                  <img src="../../overall/images/默认头像.png" alt="用户头像" width="36" height="36">
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    
+                    <!-- 侧边栏导航样式 Section -->
+                    <div class="section">
+                      <div class="section-title">导航<span style="color: var(--primary-main-1);">侧边栏</span></div>
+                      
+                      <!-- 侧边常规卡片 -->
+                      <div class="subsection" id="nav-sidebar-card">
+                        <div class="subsection-title">侧边常规卡片</div>
+                        <div class="subsection-description">---</div>
+                        <div class="component-container">
+                          <div class="hony-nav-container">
+                            <div id="hony-sidebar-nav-1" class="hony-sidebar-nav">
+                              <div class="hony-nav-menu-list">
+                                <!-- 菜单项 1 -->
+                                <div class="hony-nav-menu-item active no-submenu">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xeb1a;</span>
+                                    <span class="hony-menu-title">首页</span>
+                                  </div>
+                                </div>
+                                
+                                <!-- 菜单项 2 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xef67;</span>
+                                    <span class="hony-menu-title">资源列表</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">资源列表</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                                
+                                <!-- 菜单项 3 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xf040;</span>
+                                    <span class="hony-menu-title">收益情况</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">收益情况</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+
+                                <!-- 菜单项 4 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xeb0a;</span>
+                                    <span class="hony-menu-title">单位管理</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">单位管理</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                                <!-- 菜单项 5 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xef28;</span>
+                                    <span class="hony-menu-title">统计报表</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">统计报表</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!-- 收起菜单 -->
+                              <div class="hony-collapse-menu">
+                                <span class="hony-nav-icon">&#xea14;</span>
+                                <span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 侧边主题卡片 -->
+                      <div class="subsection" id="nav-sidebar-theme">
+                        <div class="subsection-title">侧边主题卡片</div>
+                        <div class="subsection-description">---</div>
+                        <div class="component-container">
+                          <div class="hony-nav-container">
+                            <div id="hony-sidebar-nav-2" class="hony-sidebar-nav">
+                              <div class="hony-nav-menu-list">
+                                <!-- 菜单项 2 -->
+                                <div class="hony-nav-menu-item active no-submenu">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xeb1a;</span>
+                                    <span class="hony-menu-title">首页</span>
+                                  </div>
+                                </div>
+                                
+                                <!-- 菜单项 2 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xef67;</span>
+                                    <span class="hony-menu-title">资源列表</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">资源列表</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                                
+                                <!-- 菜单项 3 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xf040;</span>
+                                    <span class="hony-menu-title">收益情况</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">收益情况</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+
+                                <!-- 菜单项 4 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xeb0a;</span>
+                                    <span class="hony-menu-title">单位管理</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">单位管理</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                                <!-- 菜单项 5 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xef28;</span>
+                                    <span class="hony-menu-title">统计报表</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">统计报表</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!-- 收起菜单 -->
+                              <div class="hony-collapse-menu">
+                                <span class="hony-nav-icon">&#xea14;</span>
+                                <span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 侧边浅主题卡片 -->
+                      <div class="subsection" id="nav-sidebar-light">
+                        <div class="subsection-title">侧边浅主题卡片</div>
+                        <div class="subsection-description">---</div>
+                        <div class="component-container">
+                          <div class="hony-nav-container">
+                            <div id="hony-sidebar-nav-3" class="hony-sidebar-nav">
+                              <div class="hony-nav-menu-list">
+                                <!-- 菜单项 1 -->
+                                <div class="hony-nav-menu-item active no-submenu">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xeb1a;</span>
+                                    <span class="hony-menu-title">首页</span>
+                                  </div>
+                                </div>
+                                
+                                <!-- 菜单项 2 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xef67;</span>
+                                    <span class="hony-menu-title">资源列表</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">资源列表</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                                
+                                <!-- 菜单项 3 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xf040;</span>
+                                    <span class="hony-menu-title">收益情况</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">收益情况</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+
+                                <!-- 菜单项 4 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xeb0a;</span>
+                                    <span class="hony-menu-title">单位管理</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">单位管理</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                                <!-- 菜单项 5 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xef28;</span>
+                                    <span class="hony-menu-title">统计报表</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">统计报表</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!-- 收起菜单 -->
+                              <div class="hony-collapse-menu">
+                                <span class="hony-nav-icon">&#xea14;</span>
+                                <span></span>
+                              </div>
+                            </div>    
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 侧边常规线条 -->
+                      <div class="subsection" id="nav-sidebar-line">
+                        <div class="subsection-title">侧边常规线条</div>
+                        <div class="subsection-description">---</div>
+                        <div class="component-container">
+                          <div class="hony-nav-container">
+                            <div id="hony-sidebar-nav-4" class="hony-sidebar-nav">
+                              <div class="hony-nav-menu-list">
+                                <!-- 菜单项 1 -->
+                                <div class="hony-nav-menu-item active no-submenu">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xeb1a;</span>
+                                    <span class="hony-menu-title">首页</span>
+                                  </div>
+                                </div>
+                                
+                                <!-- 菜单项 2 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xef67;</span>
+                                    <span class="hony-menu-title">资源列表</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">资源列表</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                                
+                                <!-- 菜单项 3 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xf040;</span>
+                                    <span class="hony-menu-title">收益情况</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">收益情况</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+
+                                <!-- 菜单项 4 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xeb0a;</span>
+                                    <span class="hony-menu-title">单位管理</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">单位管理</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                                <!-- 菜单项 5 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xef28;</span>
+                                    <span class="hony-menu-title">统计报表</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">统计报表</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!-- 收起菜单 -->
+                              <div class="hony-collapse-menu">
+                                <span class="hony-nav-icon">&#xea14;</span>
+                                <span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 侧边常规通栏 -->
+                      <div class="subsection" id="nav-sidebar-full">
+                        <div class="subsection-title">侧边常规通栏</div>
+                        <div class="subsection-description">---</div>
+                        <div class="component-container">
+                          <div class="hony-nav-container">
+                            <div id="hony-sidebar-nav-5" class="hony-sidebar-nav">
+                              <div class="hony-nav-menu-list">
+                                <!-- 菜单项 1 -->
+                                <div class="hony-nav-menu-item active no-submenu">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xeb1a;</span>
+                                    <span class="hony-menu-title">首页</span>
+                                  </div>
+                                </div>
+                                
+                                <!-- 菜单项 2 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xef67;</span>
+                                    <span class="hony-menu-title">资源列表</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">资源列表</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                                
+                                <!-- 菜单项 3 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xf040;</span>
+                                    <span class="hony-menu-title">收益情况</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">收益情况</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+
+                                <!-- 菜单项 4 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xeb0a;</span>
+                                    <span class="hony-menu-title">单位管理</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">单位管理</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                                <!-- 菜单项 5 -->
+                                <div class="hony-nav-menu-item">
+                                  <div class="hony-nav-menu-item-header">
+                                    <span class="hony-nav-icon iconfont">&#xef28;</span>
+                                    <span class="hony-menu-title">统计报表</span>
+                                    <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                                  </div>
+                                  <div class="hony-nav-menu-item-content">
+                                    <div class="hony-nav-menu-title">统计报表</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                    <div class="hony-nav-menu-subitem">二级菜单</div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!-- 收起菜单 -->
+                              <div class="hony-collapse-menu">
+                                <span class="hony-nav-icon">&#xea14;</span>
+                                <span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 侧边常规抽屉 -->
+                      <div class="subsection" id="nav-sidebar-drawer">
+                        <div class="subsection-title">侧边常规抽屉</div>
+                        <div class="subsection-description">按照设计文件实现的抽屉样式侧边栏导航。</div>
+                        <div class="component-container">
+                          <div class="hony-nav-container">
+                            <div id="hony-sidebar-nav-6" class="hony-sidebar-nav hony-drawer-nav">
+                              <div class="hony-drawer-nav-content">
+                                <!-- 左侧导航 -->
+                                <div class="hony-drawer-nav-left">
+                                  <div class="hony-drawer-nav-menu">
+                                    <!-- 菜单项 1 -->
+                                    <div class="hony-drawer-nav-item no-submenu">
+                                      <div class="hony-drawer-nav-item-icon">
+                                        <span class="hony-nav-icon iconfont">&#xeb1a;</span>
+                                      </div>
+                                      <div class="hony-drawer-nav-item-text">首页</div>
+                                      <div class="hony-drawer-nav-item-arrow">
+                                        <span class="hony-nav-icon iconfont">&#xf064;</span>
+                                      </div>
+                                    </div>
+                                    
+                                    <!-- 菜单项 2 -->
+                                    <div class="hony-drawer-nav-item">
+                                      <div class="hony-drawer-nav-item-icon">
+                                        <span class="hony-nav-icon iconfont">&#xef67;</span>
+                                      </div>
+                                      <div class="hony-drawer-nav-item-text">资源列表</div>
+                                      <div class="hony-drawer-nav-item-arrow">
+                                        <span class="hony-nav-icon iconfont">&#xf064;</span>
+                                      </div>
+                                    </div>
+                                    
+                                    <!-- 右侧抽屉 - 资源列表 -->
+                                    <div class="hony-drawer-nav-right">
+                                      <div class="hony-drawer-nav-right-content">
+                                        <!-- 抽屉标题 -->
+                                        <div class="hony-drawer-nav-right-title">
+                                          <div class="hony-drawer-nav-right-title-text">资源列表</div>
+                                          <div class="hony-drawer-nav-right-title-line"></div>
+                                        </div>
+                                        
+                                        <!-- 抽屉菜单项 -->
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                      </div>
+                                    </div>
+                                    
+                                    <!-- 菜单项 3 -->
+                                    <div class="hony-drawer-nav-item">
+                                      <div class="hony-drawer-nav-item-icon">
+                                        <span class="hony-nav-icon iconfont">&#xf040;</span>
+                                      </div>
+                                      <div class="hony-drawer-nav-item-text">收益情况</div>
+                                      <div class="hony-drawer-nav-item-arrow">
+                                        <span class="hony-nav-icon iconfont">&#xf064;</span>
+                                      </div>
+                                    </div>
+                                    
+                                    <!-- 右侧抽屉 - 收益情况 -->
+                                    <div class="hony-drawer-nav-right">
+                                      <div class="hony-drawer-nav-right-content">
+                                        <!-- 抽屉标题 -->
+                                        <div class="hony-drawer-nav-right-title">
+                                          <div class="hony-drawer-nav-right-title-text">收益情况</div>
+                                          <div class="hony-drawer-nav-right-title-line"></div>
+                                        </div>
+                                        
+                                        <!-- 抽屉菜单项 -->
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                      </div>
+                                    </div>
+                                    
+                                    <!-- 菜单项 4 -->
+                                    <div class="hony-drawer-nav-item">
+                                      <div class="hony-drawer-nav-item-icon">
+                                        <span class="hony-nav-icon iconfont">&#xeb0a;</span>
+                                      </div>
+                                      <div class="hony-drawer-nav-item-text">单位管理</div>
+                                      <div class="hony-drawer-nav-item-arrow">
+                                        <span class="hony-nav-icon iconfont">&#xf064;</span>
+                                      </div>
+                                    </div>
+                                    
+                                    <!-- 右侧抽屉 - 单位管理 -->
+                                    <div class="hony-drawer-nav-right">
+                                      <div class="hony-drawer-nav-right-content">
+                                        <!-- 抽屉标题 -->
+                                        <div class="hony-drawer-nav-right-title">
+                                          <div class="hony-drawer-nav-right-title-text">单位管理</div>
+                                          <div class="hony-drawer-nav-right-title-line"></div>
+                                        </div>
+                                        
+                                        <!-- 抽屉菜单项 -->
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                      </div>
+                                    </div>
+                                    
+                                    <!-- 菜单项 5 -->
+                                    <div class="hony-drawer-nav-item">
+                                      <div class="hony-drawer-nav-item-icon">
+                                        <span class="hony-nav-icon iconfont">&#xea59;</span>
+                                      </div>
+                                      <div class="hony-drawer-nav-item-text">系统设置</div>
+                                      <div class="hony-drawer-nav-item-arrow">
+                                        <span class="hony-nav-icon iconfont">&#xf064;</span>
+                                      </div>
+                                    </div>
+                                    
+                                    <!-- 右侧抽屉 - 系统设置 -->
+                                    <div class="hony-drawer-nav-right">
+                                      <div class="hony-drawer-nav-right-content">
+                                        <!-- 抽屉标题 -->
+                                        <div class="hony-drawer-nav-right-title">
+                                          <div class="hony-drawer-nav-right-title-text">系统设置</div>
+                                          <div class="hony-drawer-nav-right-title-line"></div>
+                                        </div>
+                                        
+                                        <!-- 抽屉菜单项 -->
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                        <div class="hony-drawer-nav-right-item">二级菜单</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                  <!-- 收起菜单 -->
+                                  <div class="hony-drawer-nav-collapse">
+                                    <div class="hony-drawer-nav-collapse-icon">
+                                      <span class="hony-nav-icon iconfont">&#xea14;</span>
+                                    </div>
+                                    <div class="hony-drawer-nav-collapse-text"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>                  
+                          </div>
+
+                        </div>
+                      </div>          
+                    </div>
+                  </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+              <div class="right-nav">
+                  <div class="right-nav-items">
+                      <div class="right-nav-item" onclick="document.getElementById('nav-top-card').scrollIntoView({behavior: 'smooth'});">顶部常规卡片</div>
+                      <div class="right-nav-item" onclick="document.getElementById('nav-top-theme').scrollIntoView({behavior: 'smooth'});">顶部主题卡片</div>
+                      <div class="right-nav-item" onclick="document.getElementById('nav-top-light').scrollIntoView({behavior: 'smooth'});">顶部浅主题卡片</div>
+                      <div class="right-nav-item" onclick="document.getElementById('nav-top-line').scrollIntoView({behavior: 'smooth'});">顶部常规线条</div>
+                      <div class="right-nav-item" onclick="document.getElementById('nav-top-bg').scrollIntoView({behavior: 'smooth'});">顶部常规底色</div>
+                      <div class="right-nav-item" onclick="document.getElementById('nav-sidebar-card').scrollIntoView({behavior: 'smooth'});">侧边常规卡片</div>
+                      <div class="right-nav-item" onclick="document.getElementById('nav-sidebar-theme').scrollIntoView({behavior: 'smooth'});">侧边主题卡片</div>
+                      <div class="right-nav-item" onclick="document.getElementById('nav-sidebar-light').scrollIntoView({behavior: 'smooth'});">侧边浅主题卡片</div>
+                      <div class="right-nav-item" onclick="document.getElementById('nav-sidebar-line').scrollIntoView({behavior: 'smooth'});">侧边常规线条</div>
+                      <div class="right-nav-item" onclick="document.getElementById('nav-sidebar-full').scrollIntoView({behavior: 'smooth'});">侧边常规通栏</div>
+                      <div class="right-nav-item" onclick="document.getElementById('nav-sidebar-drawer').scrollIntoView({behavior: 'smooth'});">侧边常规抽屉</div>
+                  </div>
+              </div>     
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>穿梭框 - 桌面端组件</title>
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+    <link rel="stylesheet" href="checkbox.css">
+    <link rel="stylesheet" href="tree.css">
+    <link rel="stylesheet" href="transfer.css">
+    <link rel="stylesheet" href="input.css">
+    <script src="../../overall/js/common.js"></script>
+    <script src="tree.js"></script>
+    <script src="transfer.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                    <div class="content-main">
+                        <!-- 页面标题 -->
+                        <div class="page-header">
+                            <div class="design-code">design code 桌面端组件</div>
+                            <div class="page-title">穿梭框</div>
+                            <div class="page-description">用于在两个列表之间进行数据项的转移，支持列表模式和树状模式。</div>
+                        </div>
+
+                        <!-- 列表样式穿梭框 -->
+                        <div class="section">
+                            <div class="section-title">列表样式<span style="color: var(--primary-main-1);">穿梭框</span></div>
+                            <!-- 列表穿梭框 -->
+                            <div class="subsection" id="transfer-list">
+                                <div class="subsection-title">列表穿梭框</div>
+                                <div class="subsection-description">列表穿梭框：在左右两个列表之间转移数据项，支持全选、搜索筛选和单个删除操作，右侧列表支持删除。</div>
+                                <div class="component-container transfer-container">
+                                    <div class="hony-transfer transfer-list-style">
+                                        <!-- 左侧面板 -->
+                                        <div class="hony-transfer-panel hony-left-panel">
+                                            <!-- 搜索框 -->
+                                            <div class="hony-input-wrapper hony-input-expand">
+                                                <span class="hony-input-prefix iconfont">&#xe963;</span>
+                                                <!--<span class="hony-input-prefix">标题</span>-->
+                                                <input type="text" class="hony-input-inner" placeholder="请输入">
+                                                <!--<span class="hony-input-suffix">单位</span>-->
+                                                <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                            </div>
+                                            <!-- 操作栏 -->
+                                            <div class="hony-transfer-header">
+                                                <label class="hony-transfer-select-all">
+                                                    <div class="hony-checkbox-box checked" onclick="toggleAllCheckbox(this, 'left')"></div>
+                                                    <span>全选</span>
+                                                </label>
+                                                <span class="hony-transfer-count">已选：<span id="hony-list-left-count">3</span></span>
+                                            </div>
+                                            <!-- 列表内容 -->
+                                            <div class="hony-transfer-list">
+                                                <div class="hony-transfer-item hony-selected" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box checked"></div>
+                                                    <img src="../../overall/images/默认头像02.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">林思远</div>
+                                                    </div></div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">苏雨萱</div>
+
+                                                    </div></div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像02.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">陈思琪</div>
+                                                    </div></div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">王浩然</div>
+                                                    </div></div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像03.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">刘雨桐</div>
+                                                    </div></div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">张诗涵</div>
+                                                    </div></div>
+                                                <div class="hony-transfer-item hony-selected" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box checked"></div>
+                                                    <img src="../../overall/images/默认头像01.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">李子墨</div>
+                                                    </div></div>
+                                                <div class="hony-transfer-item hony-selected" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box checked"></div>
+                                                    <img src="../../overall/images/默认头像02.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">周欣怡</div>
+
+                                                    </div></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 操作按钮 -->
+                                        <div class="hony-transfer-actions">
+                                            <button class="hony-transfer-btn" onclick="transferLeft(this)">
+                                                <span class="iconfont">&#xf06b;</span>
+                                            </button>
+                                            <button class="hony-transfer-btn" onclick="transferRight(this)">
+                                                <span class="iconfont">&#xf064;</span>
+                                            </button>
+                                        </div>
+
+                                        <!-- 右侧面板 -->
+                                        <div class="hony-transfer-panel hony-right-panel">
+                                            <!-- 搜索框 -->
+                                            <div class="hony-input-wrapper hony-input-expand">
+                                                <span class="hony-input-prefix iconfont">&#xe963;</span>
+                                                <!--<span class="hony-input-prefix">标题</span>-->
+                                                <input type="text" class="hony-input-inner" placeholder="请输入">
+                                                <!--<span class="hony-input-suffix">单位</span>-->
+                                                <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                            </div>
+                                            <!-- 操作栏 -->
+                                            <div class="hony-transfer-header">
+                                                <label class="hony-transfer-select-all">
+                                                    <div class="hony-checkbox-box checked" onclick="toggleAllCheckbox(this, 'right')"></div>
+                                                    <span>全选</span>
+                                                </label>
+                                                <span class="hony-transfer-count">已选：<span id="hony-list-right-count">3</span></span>
+                                            </div>
+                                            <!-- 列表内容 -->
+                                            <div class="hony-transfer-list">
+                                                <div class="hony-transfer-item hony-selected" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box checked"></div>
+                                                    <img src="../../overall/images/默认头像02.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">吴俊豪</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">郑博文</div>
+
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像02.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">黄宇轩</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">赵一诺</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像03.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">孙芷萱</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">马奕辰</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item hony-selected" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box checked"></div>
+                                                    <img src="../../overall/images/默认头像01.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">朱雅琪</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item hony-selected" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box checked"></div>
+                                                    <img src="../../overall/images/默认头像02.png" class="hony-transfer-avatar hony-avatar28">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">胡天佑</div>
+
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 复杂穿梭框 -->
+                            <div class="subsection" id="transfer-list">
+                                <div class="subsection-title">复杂穿梭框</div>
+                                <div class="subsection-description">复杂穿梭框：在列表穿梭框基础上增加了搜索功能，支持关键词筛选，可快速找到需要转移的数据项。</div>
+                                <div class="component-container transfer-container">
+                                    <div class="hony-transfer transfer-list-style">
+                                        <!-- 左侧面板 -->
+                                        <div class="hony-transfer-panel hony-left-panel">
+                                            <!-- 搜索框 -->
+                                            <div class="hony-input-wrapper hony-input-expand">
+                                                <span class="hony-input-prefix iconfont">&#xe963;</span>
+                                                <!--<span class="hony-input-prefix">标题</span>-->
+                                                <input type="text" class="hony-input-inner" placeholder="请输入">
+                                                <!--<span class="hony-input-suffix">单位</span>-->
+                                                <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                            </div>
+                                            <!-- 操作栏 -->
+                                            <div class="hony-transfer-header">
+                                                <label class="hony-transfer-select-all">
+                                                    <div class="hony-checkbox-box checked" onclick="toggleAllCheckbox(this, 'left')"></div>
+                                                    <span>全选</span>
+                                                </label>
+                                                <span class="hony-transfer-count">已选：<span id="hony-list-left-count">3</span></span>
+                                            </div>
+                                            <!-- 列表内容 -->
+                                            <div class="hony-transfer-list">
+                                                <div class="hony-transfer-item hony-selected" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box checked"></div>
+                                                    <img src="../../overall/images/默认头像02.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">林涛宇</div>
+                                                        <div class="hony-transfer-desc">NO.1789566679</div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">何佳怡</div>
+                                                        <div class="hony-transfer-desc">NO.8767920420</div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像02.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">罗静怡</div>
+                                                        <div class="hony-transfer-desc">NO.2467934625</div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">郭欣妍</div>
+                                                        <div class="hony-transfer-desc">NO.7456039581</div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像03.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">林思远</div>
+                                                        <div class="hony-transfer-desc">NO.7001616180</div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">苏雨萱</div>
+                                                        <div class="hony-transfer-desc">NO.8786208020</div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="hony-transfer-item hony-selected" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box checked"></div>
+                                                    <img src="../../overall/images/默认头像01.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">陈思琪</div>
+                                                        <div class="hony-transfer-desc">NO.7537328823</div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="hony-transfer-item hony-selected" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box checked"></div>
+                                                    <img src="../../overall/images/默认头像02.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">王浩然</div>
+                                                        <div class="hony-transfer-desc">NO.4693221944</div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 操作按钮 -->
+                                        <div class="hony-transfer-actions">
+                                            <button class="hony-transfer-btn" onclick="transferLeft(this)">
+                                                <span class="iconfont">&#xf06b;</span>
+                                            </button>
+                                            <button class="hony-transfer-btn" onclick="transferRight(this)">
+                                                <span class="iconfont">&#xf064;</span>
+                                            </button>
+                                        </div>
+
+                                        <!-- 右侧面板 -->
+                                        <div class="hony-transfer-panel hony-right-panel">
+                                            <!-- 搜索框 -->
+                                            <div class="hony-input-wrapper hony-input-expand">
+                                                <span class="hony-input-prefix iconfont">&#xe963;</span>
+                                                <!--<span class="hony-input-prefix">标题</span>-->
+                                                <input type="text" class="hony-input-inner" placeholder="请输入">
+                                                <!--<span class="hony-input-suffix">单位</span>-->
+                                                <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                            </div>
+                                            <!-- 操作栏 -->
+                                            <div class="hony-transfer-header">
+                                                <label class="hony-transfer-select-all">
+                                                    <div class="hony-checkbox-box checked" onclick="toggleAllCheckbox(this, 'right')"></div>
+                                                    <span>全选</span>
+                                                </label>
+                                                <span class="hony-transfer-count">已选：<span id="hony-list-right-count">3</span></span>
+                                            </div>
+                                            <!-- 列表内容 -->
+                                            <div class="hony-transfer-list">
+                                                <div class="hony-transfer-item hony-selected" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box checked"></div>
+                                                    <img src="../../overall/images/默认头像02.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">刘雨桐</div>
+                                                        <div class="hony-transfer-desc">NO.7670777878</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像04.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">张诗涵</div>
+                                                        <div class="hony-transfer-desc">NO.0554806310</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像01.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">李子墨</div>
+                                                        <div class="hony-transfer-desc">NO.3039012838</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像02.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">周欣怡</div>
+                                                        <div class="hony-transfer-desc">NO.8804067996</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像02.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">吴俊豪</div>
+                                                        <div class="hony-transfer-desc">NO.5868577559</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box"></div>
+                                                    <img src="../../overall/images/默认头像04.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">郑博文</div>
+                                                        <div class="hony-transfer-desc">NO.1367309208</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item hony-selected" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box checked"></div>
+                                                    <img src="../../overall/images/默认头像02.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">黄宇轩</div>
+                                                        <div class="hony-transfer-desc">NO.3085970117</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                                <div class="hony-transfer-item hony-selected" onclick="toggleItemByCard(this)">
+                                                    <div class="hony-checkbox-box checked"></div>
+                                                    <img src="../../overall/images/默认头像03.png" class="hony-transfer-avatar">
+                                                    <div class="hony-transfer-content">
+                                                        <div class="hony-transfer-title">赵一诺</div>
+                                                        <div class="hony-transfer-desc">NO.2076101890</div>
+                                                    </div>
+                                                    <span class="transfer-delete iconfont" onclick="event.stopPropagation(); deleteItem(this)">&#xef0c;</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 树状样式穿梭框 -->
+                            <div class="subsection" id="transfer-tree">
+                                <div class="subsection-title">树状穿梭框</div>
+                                <div class="subsection-description">使用树状表组件实现的穿梭框，支持树形结构的数据转移。</div>
+                                <div class="component-container transfer-container">
+                                    <div class="hony-transfer">
+                                        <!-- 左侧面板 -->
+                                        <div class="hony-transfer-panel hony-tree-panel">
+                                            <!-- 搜索框 -->
+                                            <div class="hony-input-wrapper hony-input-expand">
+                                                <span class="hony-input-prefix iconfont">&#xe963;</span>
+                                                <!--<span class="hony-input-prefix">标题</span>-->
+                                                <input type="text" class="hony-input-inner" placeholder="请输入">
+                                                <!--<span class="hony-input-suffix">单位</span>-->
+                                                <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                            </div>
+                                            <!-- 树状内容 -->
+                                            <!-- 卡片树 -->
+                                            <div class="hony-tree hony-tree-line hony-tree-checkbox" id="line-tree-checkbox">
+                                                <div class="hony-tree-node" onclick="toggleCheckbox(event)">
+                                                    <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                        <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                    </span><span class="hony-checkbox-box"></span>
+                                                    <span class="hony-tree-label">一年级</span>
+                                                </div>
+                                                <div class="hony-tree-children expanded line">
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">一班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">沐晨</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">雨桐</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">星宇</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">二班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">诗涵</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">芷萱</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">奕辰</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">三班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">雨桐</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">星宇</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">诗涵</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-tree-node" onclick="toggleCheckbox(event)">
+                                                    <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                        <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                    </span><span class="hony-checkbox-box"></span>
+                                                    <span class="hony-tree-label">一年级</span>
+                                                </div>
+                                                <div class="hony-tree-children expanded line">
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">一班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">一诺</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">梓涵</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">宇轩</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">二班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">欣怡</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">浩然</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">雨萱</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">三班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">雨桐</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">星宇</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">诗涵</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-tree-node" onclick="toggleCheckbox(event)">
+                                                    <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                        <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                    </span><span class="hony-checkbox-box"></span>
+                                                    <span class="hony-tree-label">一年级</span>
+                                                </div>
+                                                <div class="hony-tree-children expanded line">
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">一班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">俊豪</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">欣妍</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">天佑</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">二班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">思琪</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">子墨</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">雅琪</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">三班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">雨桐</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">星宇</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">诗涵</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <!-- 操作按钮 -->
+                                        <div class="hony-transfer-actions">
+                                            <button class="hony-transfer-btn" onclick="transferTreeLeft(this)">
+                                                <span class="iconfont">&#xf06b;</span>
+                                            </button>
+                                            <button class="hony-transfer-btn" onclick="transferTreeRight(this)">
+                                                <span class="iconfont">&#xf064;</span>
+                                            </button>
+                                        </div>
+
+                                        <!-- 右侧面板 -->
+                                        <div class="hony-transfer-panel hony-tree-panel">
+                                            <!-- 搜索框 -->
+                                            <div class="hony-input-wrapper hony-input-expand">
+                                                <span class="hony-input-prefix iconfont">&#xe963;</span>
+                                                <!--<span class="hony-input-prefix">标题</span>-->
+                                                <input type="text" class="hony-input-inner" placeholder="请输入">
+                                                <!--<span class="hony-input-suffix">单位</span>-->
+                                                <!--<span class="hony-input-suffix iconfont hony-password-toggle">&#xf082;</span>-->
+                                            </div>
+                                            <!-- 树状内容 -->
+                                            <!-- 卡片树 -->
+                                            <div class="hony-tree hony-tree-line hony-tree-checkbox" id="line-tree-checkbox">
+                                                <div class="hony-tree-node" onclick="toggleCheckbox(event)">
+                                                    <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                        <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                    </span><span class="hony-checkbox-box"></span>
+                                                    <span class="hony-tree-label">一年级</span>
+                                                </div>
+                                                <div class="hony-tree-children expanded line">
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">一班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">博文</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">静怡</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">子轩</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">二班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">佳怡</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">浩然</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">语桐</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">三班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">雨桐</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">星宇</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">诗涵</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-tree-node" onclick="toggleCheckbox(event)">
+                                                    <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                        <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                    </span><span class="hony-checkbox-box"></span>
+                                                    <span class="hony-tree-label">一年级</span>
+                                                </div>
+                                                <div class="hony-tree-children expanded line">
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">一班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">沐晨</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">雨桐</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">星宇</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">二班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">诗涵</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">芷萱</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">奕辰</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">三班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">雨桐</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">星宇</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">诗涵</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-tree-node" onclick="toggleCheckbox(event)">
+                                                    <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                        <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                    </span><span class="hony-checkbox-box"></span>
+                                                    <span class="hony-tree-label">一年级</span>
+                                                </div>
+                                                <div class="hony-tree-children expanded line">
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">一班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">一诺</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">梓涵</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">宇轩</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">二班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">欣怡</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">浩然</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span><span class="hony-checkbox-box"></span>
+                                                            <span class="hony-tree-label">雨萱</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-tree-node hony-tree-level-2" onclick="toggleCheckbox(event)">
+                                                        <span class="hony-tree-expand-icon expanded" onclick="toggleExpand(event)">
+                                                            <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                        </span><span class="hony-checkbox-box"></span>
+                                                        <span class="hony-tree-label">三班</span>
+                                                    </div>
+                                                    <div class="hony-tree-children expanded line">
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">雨桐</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">星宇</span>
+                                                        </div>
+                                                        <div class="hony-tree-node hony-tree-level-3" onclick="toggleCheckbox(event)">
+                                                            <span class="hony-tree-expand-icon empty">
+                                                                <img class="expand-icon" src="../../overall/icons/展开.svg" alt="展开"><img class="collapse-icon" src="../../overall/icons/收起.svg" alt="收起">
+                                                            </span>
+                                                            <span class="hony-checkbox-box"></span><span class="hony-tree-label">诗涵</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+                <div class="right-nav">
+                    <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'transfer-list');">列表穿梭框</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'transfer-list');">复杂穿梭框</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'transfer-tree');">树状穿梭框</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

@@ -1,0 +1,316 @@
+/* 表单基础样式 */
+.hony-form {
+  width: 100%;
+  font-family: var(--font-family);
+}
+
+/* 表单分组 */
+.hony-form-group {
+  margin-bottom: 24px;
+}
+
+.hony-form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* 表单标签 */
+.hony-form-label {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--grey-text-1);
+  font-weight: 400;
+  display: block;
+}
+
+/* 必填标识 */
+.hony-form-label-required {
+  color: var(--danger-main-1);
+  margin-right: 4px;
+}
+
+/* 表单标签说明 */
+.hony-form-label-tip {
+  font-size: 12px;
+  color: var(--grey-text-4);
+  margin-left: 8px;
+}
+
+/* 表单控件包裹 */
+.hony-form-control-wrap {
+  margin-top: 8px;
+}
+
+/* 表单项说明 */
+.hony-form-item-tip {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--grey-text-4);
+  margin-top: 8px;
+}
+
+/* 表单错误信息 */
+.hony-form-item-error {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--danger-main-1);
+  margin-top: 8px;
+}
+
+/* 表单成功信息 */
+.hony-form-item-success {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--success-main-1);
+  margin-top: 8px;
+}
+
+/* 左右结构表单 */
+.hony-form-horizontal {
+  display: block;
+}
+
+.hony-form-horizontal .hony-form-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.hony-form-horizontal .hony-form-label {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  min-width: 100px;
+  padding-top: 5px;
+  padding-right: 16px;
+  text-align: right;
+}
+
+.hony-form-horizontal .hony-form-control-wrap {
+  margin-top: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+/* 垂直结构表单 */
+.hony-form-vertical {
+  display: block;
+}
+
+.hony-form-vertical .hony-form-label {
+  margin-bottom: 8px;
+}
+
+.hony-form-vertical .hony-form-control-wrap {
+  margin-top: 0;
+}
+
+/* 边框表单 */
+.hony-form-bordered {
+  border: 1px solid var(--grey-border-1);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.hony-form-bordered .hony-form-group {
+  margin-bottom: 0;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--grey-face-2);
+}
+
+.hony-form-bordered .hony-form-group:last-child {
+  border-bottom: none;
+}
+
+/* 边框表单的水平布局 */
+.hony-form-bordered.hony-form-horizontal .hony-form-group {
+  display: flex;
+  align-items: flex-start;
+}
+
+.hony-form-bordered.hony-form-horizontal .hony-form-label {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  min-width: 100px;
+  padding-top: 5px;
+  padding-right: 16px;
+  text-align: right;
+}
+
+.hony-form-bordered.hony-form-horizontal .hony-form-control-wrap {
+  margin-top: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+/* 表单标题栏 */
+.hony-form-section-title {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-text-1);
+  font-weight: 500;
+  padding: 16px 24px;
+  background: var(--grey-face-1);
+  border-bottom: 1px solid var(--grey-border-1);
+  border-radius: 8px 8px 0 0;
+}
+
+/* 表单行 */
+.hony-form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.hony-form-row .hony-form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* 表单操作栏 */
+.hony-form-actions {
+  display: flex;
+  gap: 12px;
+  padding: 24px 0 0;
+  margin-top: 24px;
+  border-top: 1px solid var(--grey-face-2);
+}
+
+.hony-form-bordered .hony-form-actions {
+  padding: 16px 24px;
+  margin-top: 0;
+  border-top: 1px solid var(--grey-border-1);
+}
+
+/* 表单尺寸 */
+.hony-form-sm .hony-form-label {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.hony-form-sm .hony-form-group {
+  margin-bottom: 16px;
+}
+
+.hony-form-lg .hony-form-label {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.hony-form-lg .hony-form-group {
+  margin-bottom: 32px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hony-form-horizontal .hony-form-group {
+    flex-direction: column;
+  }
+  
+  .hony-form-horizontal .hony-form-label {
+    width: 100%;
+    text-align: left;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 8px;
+  }
+  
+  .hony-form-bordered.hony-form-horizontal .hony-form-label {
+    width: 100%;
+    text-align: left;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 8px;
+  }
+  
+  .hony-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .hony-form-row .hony-form-group {
+    margin-bottom: 24px;
+  }
+}
+.LR-Form {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+.LR-Form-label {
+  font-size: 14px;
+  line-height: 32px;
+  color: var(--grey-text-1);
+  display: flex;
+  align-items: center;
+  width: 110px;
+  min-width: 110px;
+  padding-right: 12px;
+  text-align: right !important; /* 文字右对齐 */
+  justify-content: flex-end !important; /* flex 布局内容右对齐 */
+}
+.Form-label-required {
+  color: var(--danger-main-1);
+    margin-right: 4px;
+}
+.Form-wrap {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* 👈 关键：上下顺序 */
+  gap: 0px; /* 标签和输入框之间的间距 */
+}
+.Form-Tip {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--danger-main-1);
+  padding-bottom: 4px;
+  height: 24px;
+}
+.Form-Remark {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--grey-text-4);
+  padding-bottom: 4px;
+}
+.LR-Form-group{
+  display: flex;
+  align-items: center;
+  width:100%;
+  gap: 24px;
+}
+.LR-Form-actions{
+  display: flex;
+  gap: 12px;
+  padding: 16px 110px;
+  margin-top: 0px 24px;
+  border-top: 1px solid var(--grey-border-1);
+}
+.TB-Form-group{
+  display: flex;
+  align-items: center;
+  width:100%;
+  gap: 24px;
+}
+.TB-Form-actions{
+  display: flex;
+  gap: 12px;
+  padding: 16px 0px;
+  margin-top: 0px 24px;
+}
+.TB-Form {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  flex-direction: column;
+  gap: 0px;
+}
+.TB-Form-label {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--grey-text-1);
+  display: flex;
+  align-items: center;
+  padding-right: 12px;
+  margin-bottom: 8px;
+}

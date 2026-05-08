@@ -1,0 +1,130 @@
+/* 面包屑基础样式 */
+.hony-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-family);
+  height: 24px;
+}
+.hony-breadcrumb-icon.iconfont.active {
+  color: var(--grey-text-1);
+}
+.hony-breadcrumb-text.active {
+  color: var(--grey-text-1);
+}
+.hony-breadcrumb-item.active {
+  color: var(--grey-text-1);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+/* 面包屑项 */
+.hony-breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 4px;
+  border-radius: 4px;
+  height: 24px;
+  transition: all 0.2s ease;
+}
+
+.hony-breadcrumb-item:hover {
+  background: var(--grey-face-2);
+  color: var(--grey-text-1);
+}
+
+/* 面包屑链接 */
+.hony-breadcrumb-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--grey-border-1);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  height: 16px;
+}
+
+.hony-breadcrumb-link:hover {
+  color: var(--grey-text-1);
+  text-decoration: none;
+}
+
+/* 面包屑图标 */
+.hony-breadcrumb-icon {
+  font-size: 12px;
+  line-height: 1;
+  color: var(--grey-text-3);
+}
+
+/* 面包屑文字 */
+.hony-breadcrumb-text {
+  line-height: 20px;
+  letter-spacing: 0;
+  font-size: 12px;
+  white-space: nowrap;   /* 禁止换行 */
+  overflow: hidden;      /* 超出隐藏 */
+  text-overflow: ellipsis;
+  color: var(--grey-text-3);
+}
+
+/* 面包屑分隔符 */
+.hony-breadcrumb-separator {
+  font-size: 12px;
+  color: var(--grey-text-4);
+  margin: 0px;
+  line-height: 1;
+}
+
+/* 面包屑当前项 */
+.hony-breadcrumb-item.active .hony-breadcrumb-link {
+  color: var(--grey-text-1) !important;
+  font-weight: 500;
+  cursor: default;
+}
+
+.hony-breadcrumb-item.active .hony-breadcrumb-link:hover {
+  color: var(--grey-face-1);
+}
+
+/* 面包屑第二项 */
+.hony-breadcrumb-item:nth-child(5) .hony-breadcrumb-link {
+
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* 面包屑中间项 */
+.hony-breadcrumb-item:nth-child(9) .hony-breadcrumb-link,
+.hony-breadcrumb-item:nth-child(13) .hony-breadcrumb-link {
+  color: var(--grey-face-2);
+}
+
+/* 面包屑容器 */
+.hony-breadcrumb-section {
+  padding: 20px;
+  background: var(--white);
+  border-radius: 8px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hony-breadcrumb {
+    flex-wrap: wrap;
+    gap: 4px;
+    height: auto;
+  }
+  
+  .hony-breadcrumb-item {
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+  
+  .hony-breadcrumb-link {
+    font-size: 12px;
+  }
+  
+  .hony-breadcrumb-separator {
+    font-size: 10px;
+  }
+}

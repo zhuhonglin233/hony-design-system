@@ -1,0 +1,309 @@
+/* 穿梭框容器 */
+.hony-transfer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: var(--white);
+
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+/* 穿梭框面板 */
+.hony-transfer-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--grey-border-1);
+  border-radius: 6px;
+  overflow: hidden;
+  height: 100%;
+  gap: 12px;
+  padding: 12px;
+}
+.component-container.transfer-container {
+  height: 500px;
+}
+/* 树状面板 */
+.hony-transfer-panel.hony-tree-panel {
+  height: 100%;
+  min-height: 300px;
+  padding: 12px;
+}
+
+/* 搜索框 */
+.hony-transfer-search {
+  position: relative;
+}
+
+.hony-transfer-input {
+  width: 100%;
+  height: 32px;
+  padding: 0 32px 0 12px;
+  border: 1px solid var(--grey-border-1);
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--grey-text-1);
+  background: var(--white);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.hony-transfer-input:focus {
+  outline: none;
+  border-color: var(--primary-main-2);
+}
+
+.hony-transfer-input::placeholder {
+  color: var(--grey-border-2);
+}
+
+.hony-transfer-search-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--grey-border-2);
+}
+
+/* 操作栏 */
+.hony-transfer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hony-transfer-select-all {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--grey-text-3);
+}
+
+.hony-transfer-select-all:hover {
+  color: var(--grey-text-1);
+}
+
+.hony-transfer-count {
+  font-size: 12px;
+  color: var(--grey-text-4);
+}
+
+/* 列表内容 */
+.hony-transfer-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+      background: var(--grey-bg-0);
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-border-1) #00000000;
+}
+
+/* 列表项 */
+.hony-transfer-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.hony-transfer-item:hover {
+  background-color: var(--grey-face-1);
+}
+
+.hony-transfer-item.hony-selected {
+  background-color: var(--primary-face-1);
+}
+
+.hony-transfer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.hony-transfer-avatar.hony-avatar28 {
+  width: 28px;
+  height: 28px;
+}
+.hony-transfer-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hony-transfer-title {
+  font-size: 14px;
+  color: var(--grey-text-1);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    display: flex;
+  align-items: center; /* 上下居中 */
+  justify-content: flex-start; /* 居左 */
+
+}
+
+.hony-transfer-desc {
+  font-size: 12px;
+  color: var(--grey-text-4);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hony-transfer-delete {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--grey-text-1);
+  cursor: pointer;
+  border-radius: 4px;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+
+.hony-transfer-delete:hover {
+  background-color: var(--error-1);
+  color: var(--error-6);
+}
+
+/* 左侧穿梭框隐藏删除按钮 */
+.hony-left-panel .hony-transfer-delete {
+  display: none;
+}
+
+/* 操作按钮区域 */
+.hony-transfer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hony-transfer-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border: 1px solid var(--grey-border-1);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--grey-text-1);
+  transition: all 0.2s ease;
+}
+
+.hony-transfer-btn:hover {
+  background: var(--primary-face-1);
+  border-color: var(--primary-main-2);
+  color: var(--primary-main-1);
+}
+
+.hony-transfer-btn:active {
+  transform: scale(0.95);
+}
+
+/* 树状穿梭框特殊样式 */
+.hony-transfer-panel.hony-tree-panel .hony-transfer-list {
+  padding: 0;
+}
+
+.hony-transfer-panel.hony-tree-panel .hony-tree {
+  width: 100%;
+  border-radius: 0;
+  border: none;
+}
+
+.hony-transfer-panel.hony-tree-panel .hony-tree-line-small {
+  border: none;
+  background: transparent;
+}
+
+.hony-transfer-panel.hony-tree-panel .hony-tree-line-small .hony-tree-node {
+  padding: 5px 12px;
+  min-height: 32px;
+}
+
+.hony-transfer-panel.hony-tree-panel .hony-tree-line-small .hony-tree-node:hover {
+  background-color: var(--grey-face-1);
+}
+
+.hony-transfer-panel.hony-tree-panel .hony-tree-line-small .hony-tree-node.hony-selected {
+  background-color: var(--primary-face-1);
+}
+
+.hony-transfer-panel.hony-tree-panel .hony-tree-line-small .hony-tree-node.hony-selected .hony-tree-label {
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+
+/* 半选状态 - 与checkbox保持一致 */
+.hony-tree-node .hony-checkbox-box.indeterminate {
+  border-color: var(--primary-main-1);
+  background: var(--grey-bg-0);
+}
+
+.hony-tree-node .hony-checkbox-box.indeterminate::after {
+  content: '';
+  width: 8px;
+  height: 2px;
+  background: var(--primary-main-1);
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  left: 3px;
+  transform: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hony-transfer {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .hony-transfer-panel {
+    width: 100%;
+    min-height: 250px;
+  }
+  
+  .hony-transfer-actions {
+    flex-direction: row;
+  }
+  
+  .hony-transfer-item {
+    padding: 6px 8px;
+  }
+  
+  .hony-transfer-title {
+    font-size: 12px;
+  }
+  
+  .hony-transfer-desc {
+    font-size: 11px;
+  }
+  
+  .hony-transfer-avatar {
+    width: 24px;
+    height: 24px;
+  }
+}
+.hony-transfer .transfer-list-style{
+    width: 500px;
+}

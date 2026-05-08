@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>徽标 - 桌面端组件</title>
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+    <link rel="stylesheet" href="avatar.css">
+    <link rel="stylesheet" href="badge.css">
+    <script src="../../overall/js/common.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                    <div class="content-main">
+                        <!-- 页面标题 -->
+                        <div class="page-header">
+                            <div class="design-code">design code 桌面端组件</div>
+                            <div class="page-title">徽标</div>
+                            <div class="page-description">徽标组件用于展示标记、数量提示或状态信息，包括徽标点、徽标数量、徽标文字和状态徽标等类型。</div>
+                        </div>
+
+                        <!-- 徽标点 Section -->
+                        <div class="section">
+                            <div class="section-title">徽标<span style="color: var(--primary-main-1);">点</span></div>
+                            
+                            <div class="subsection" id="hony-badge-dot">
+                                <div class="subsection-title">徽标点</div>
+                                <div class="subsection-description">徽标点：用于简单的标记提示，显示为小圆点，支持多种颜色主题（主色、成功、警告、灰色）。</div>
+                                <div class="component-container">
+                                    <span class="hony-badge hony-badge-dot"></span>
+                                    <span class="hony-badge hony-badge-dot hony-badge-primary"></span>
+                                    <span class="hony-badge hony-badge-dot hony-badge-success"></span>
+                                    <span class="hony-badge hony-badge-dot hony-badge-warning"></span>
+                                    <span class="hony-badge hony-badge-dot hony-badge-grey"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 徽标数量 Section -->
+                        <div class="section">
+                            <div class="section-title">徽标<span style="color: var(--primary-main-1);">数量</span></div>
+                            
+                            <div class="subsection" id="hony-badge-number">
+                                <div class="subsection-title">徽标数量</div>
+                                <div class="subsection-description">徽标数量：用于显示数字提示，如未读消息数量。</div>
+                                <div class="component-container">
+                                    <span class="hony-badge hony-badge-number">0</span>
+                                    <span class="hony-badge hony-badge-number">9</span>
+                                    <span class="hony-badge hony-badge-number">99</span>
+                                    <span class="hony-badge hony-badge-number hony-badge-primary">12</span>
+                                    <span class="hony-badge hony-badge-number hony-badge-success">24</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 徽标文字 Section -->
+                        <div class="section">
+                            <div class="section-title">徽标<span style="color: var(--primary-main-1);">文字</span></div>
+                            
+                            <div class="subsection" id="hony-badge-text">
+                                <div class="subsection-title">徽标文字</div>
+                                <div class="subsection-description">徽标文字：用于显示简短的文字提示，如"new"、"hot"等标签。</div>
+                                <div class="component-container">
+                                    <span class="hony-badge hony-badge-text">new</span>
+                                    <span class="hony-badge hony-badge-text">hot</span>
+                                    <span class="hony-badge hony-badge-text hony-badge-primary">tip</span>
+                                    <span class="hony-badge hony-badge-text hony-badge-success">done</span>
+                                    <span class="hony-badge hony-badge-text hony-badge-warning">warn</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 徽标状态 Section -->
+                        <div class="section">
+                            <div class="section-title">徽标<span style="color: var(--primary-main-1);">状态</span></div>
+                            
+                            <div class="subsection" id="hony-badge-status">
+                                <div class="subsection-title">状态徽标</div>
+                                <div class="subsection-description">状态徽标：用于显示对象的状态信息，包含状态指示器和文字描述。</div>
+                                <div class="component-container">
+                                    <span class="hony-badge-status hony-badge-status-normal">
+                                        <span class="hony-badge-status-dot"></span>
+                                        <span>正常</span>
+                                    </span>
+                                    <span class="hony-badge-status hony-badge-status-danger">
+                                        <span class="hony-badge-status-dot"></span>
+                                        <span>危险</span>
+                                    </span>
+                                    <span class="hony-badge-status hony-badge-status-success">
+                                        <span class="hony-badge-status-dot"></span>
+                                        <span>安全</span>
+                                    </span>
+                                    <span class="hony-badge-status hony-badge-status-warning">
+                                        <span class="hony-badge-status-dot"></span>
+                                        <span>警告</span>
+                                    </span>
+                                    <span class="hony-badge-status hony-badge-status-disabled">
+                                        <span class="hony-badge-status-dot"></span>
+                                        <span>失效</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 徽标与头像组合 Section -->
+                        <div class="section">
+                            <div class="section-title">徽标<span style="color: var(--primary-main-1);">组合</span></div>
+                            
+                            <div class="subsection" id="hony-badge-avatar">
+                                <div class="subsection-title">头像徽标</div>
+                                <div class="subsection-description">头像徽标：徽标显示在头像右上角，常用于通知数量或状态提示。</div>
+                                <div class="component-container">
+                                    <div class="hony-badge-avatar-wrapper">
+                                        <div class="hony-avatar hony-avatar-xl">
+                                            <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                        </div>
+                                        <span class="hony-badge hony-badge-number hony-badge-avatar-badge">99+</span>
+                                    </div>
+                                    <div class="hony-badge-avatar-wrapper">
+                                        <div class="hony-avatar hony-avatar-xl">
+                                            <img src="../../overall/images/默认头像01.png" class="hony-avatar-img" alt="头像">
+                                        </div>
+                                        <span class="hony-badge hony-badge-dot hony-badge-avatar-badge"></span>
+                                    </div>
+                                    <div class="hony-badge-avatar-wrapper">
+                                        <div class="hony-avatar hony-avatar-xl">
+                                            <img src="../../overall/images/默认头像02.png" class="hony-avatar-img" alt="头像">
+                                        </div>
+                                        <span class="hony-badge hony-badge-number hony-badge-primary hony-badge-avatar-badge">3</span>
+                                    </div>
+                                    <div class="hony-badge-avatar-wrapper">
+                                        <div class="hony-avatar hony-avatar-xl">
+                                            <img src="../../overall/images/默认头像03.png" class="hony-avatar-img" alt="头像">
+                                        </div>
+                                        <span class="hony-badge hony-badge-number hony-badge-success hony-badge-avatar-badge">12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+                <div class="right-nav">
+                    <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'badge-dot');">徽标点</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'badge-number');">徽标数量</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'badge-text');">徽标文字</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'badge-status');">状态徽标</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'badge-avatar');">头像徽标</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

@@ -1,0 +1,431 @@
+/* 全局提示 - Toast */
+.hony-toast {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 4px;
+  padding: 12px 20px;
+  min-width: 156px;
+  height: 48px;
+  background: var(--white);
+  box-shadow: var(--shadow-grey-small);
+  font-family: var(--font-family);
+}
+
+.hony-toast-text {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--grey-text-1);
+}
+
+.hony-toast-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.hony-toast-icon {
+  width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.hony-toast-close {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  color: var(--grey-text-3);
+}
+
+.hony-toast-close:hover {
+  opacity: 1;
+}
+
+/* 加载中提示 */
+.hony-toast-loading {
+
+}
+.hony-toast-loading .hony-toast-icon {
+  color: var(--primary-main-1);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* 正常提示 */
+.hony-toast-info .hony-toast-icon-wrap {
+  background: var(--primary-face-1);
+}
+.hony-toast-info .hony-toast-icon {
+  color: var(--primary-main-1);
+}
+
+/* 警告提示 */
+.hony-toast-warning .hony-toast-icon-wrap {
+  background: var(--warning-face-1);
+}
+.hony-toast-warning .hony-toast-icon {
+  color: var(--warning-main-1);
+}
+
+/* 成功提示 */
+.hony-toast-success .hony-toast-icon-wrap {
+  background: var(--success-face-1);
+}
+.hony-toast-success .hony-toast-icon {
+  color: var(--success-main-1);
+}
+
+/* 失败提示 */
+.hony-toast-error .hony-toast-icon-wrap {
+  background: var(--danger-face-1);
+}
+.hony-toast-error .hony-toast-icon {
+  color: var(--danger-main-1);
+}
+
+/* 基础提示 - Alert */
+.hony-alert {
+  display: flex;
+  align-items: center;
+  padding: 7px 11px;
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--grey-text-1);
+}
+
+/* 品牌色提示 */
+.hony-alert-primary {
+  border: 1px solid var(--primary-main-1);
+  background: var(--primary-face-1);
+}
+
+/* 成功提示 */
+.hony-alert-success {
+  border: 1px solid var(--success-main-1);
+  background: var(--success-face-1);
+}
+
+/* 警告提示 */
+.hony-alert-warning {
+  border: 1px solid var(--warning-main-1);
+  background: var(--warning-face-1);
+}
+
+/* 危险提示 */
+.hony-alert-danger {
+  border: 1px solid var(--danger-main-1);
+  background: var(--danger-face-1);
+}
+
+/* 灰色提示 */
+.hony-alert-default {
+  border: 1px solid var(--grey-border-1);
+  background: var(--grey-face-1);
+}
+
+/* 外框提示 */
+.hony-alert-outline {
+  border: 1px solid var(--primary-main-1);
+  background: var(--white);
+}
+
+/* 拓展提示 - 带图标和按钮 */
+.hony-alert-expand {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 7px 11px;
+  border-radius: 4px;
+  min-height: 32px;
+  font-family: var(--font-family);
+}
+
+.hony-alert-expand-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  line-height: 25px;
+  font-size: 20px;
+}
+
+.hony-alert-expand-content {
+  flex: 1;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--grey-text-1);
+}
+
+.hony-alert-expand-action {
+  display: flex;
+  gap: 8px;
+}
+
+.hony-alert-expand-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 1px 4px;
+  min-height: 24px;
+  max-height: 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--primary-main-1);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+.hony-alert-expand-btn:hover {
+  background: var(--primary-face-1);
+}
+
+.hony-alert-expand-close {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.hony-alert-expand-close:hover {
+  opacity: 1;
+}
+
+/* 拓展提示颜色变体 */
+.hony-alert-expand-primary {
+  border: 1px solid var(--primary-main-1);
+  background: var(--primary-face-1);
+}
+
+.hony-alert-expand-primary .hony-alert-expand-icon,
+.hony-alert-expand-primary .hony-alert-expand-btn {
+  color: var(--primary-main-1);
+}
+
+.hony-alert-expand-success {
+  border: 1px solid var(--success-main-1);
+  background: var(--success-face-1);
+}
+
+.hony-alert-expand-success .hony-alert-expand-icon,
+.hony-alert-expand-success .hony-alert-expand-btn {
+  color: var(--success-main-1);
+}
+
+.hony-alert-expand-warning {
+  border: 1px solid var(--warning-main-1);
+  background: var(--warning-face-1);
+}
+
+.hony-alert-expand-warning .hony-alert-expand-icon,
+.hony-alert-expand-warning .hony-alert-expand-btn {
+  color: var(--warning-main-1);
+}
+
+.hony-alert-expand-danger {
+  border: 1px solid var(--danger-main-1);
+  background: var(--danger-face-1);
+}
+
+.hony-alert-expand-danger .hony-alert-expand-icon,
+.hony-alert-expand-danger .hony-alert-expand-btn {
+  color: var(--danger-main-1);
+}
+
+.hony-alert-expand-default {
+  border: 1px solid var(--grey-border-1);
+  background: var(--grey-face-1);
+}
+
+.hony-alert-expand-default .hony-alert-expand-icon,
+.hony-alert-expand-default .hony-alert-expand-btn {
+  color: var(--grey-text-4);
+}
+
+.hony-alert-expand-outline {
+  border: 1px solid var(--primary-main-1);
+  background: var(--white);
+}
+
+.hony-alert-expand-outline .hony-alert-expand-icon,
+.hony-alert-expand-outline .hony-alert-expand-btn {
+  color: var(--primary-main-1);
+}
+
+/* 复杂提示 - 带辅助说明文本 */
+.hony-alert-complex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 11px;
+  border-radius: 4px;
+  font-family: var(--font-family);
+}
+
+.hony-alert-complex-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+.hony-alert-complex-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+      line-height: 25px;
+}
+
+.hony-alert-complex-content {
+  flex: 1;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--grey-text-1);
+  font-weight: 500;
+}
+
+.hony-alert-complex-action {
+  display: flex;
+  gap: 8px;
+}
+
+.hony-alert-complex-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 1px 4px;
+  min-height: 24px;
+  max-height: 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+.hony-alert-complex-btn:hover {
+  background: var(--grey-face-1);
+}
+
+.hony-alert-complex-close {
+  flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.hony-alert-complex-close:hover {
+  opacity: 1;
+}
+
+.hony-alert-complex-desc {
+  padding-left: 28px;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--grey-text-4);
+  margin-bottom: 0px;
+}
+
+/* 复杂提示颜色变体 */
+.hony-alert-complex-primary {
+  border: 1px solid var(--primary-main-1);
+  background: var(--white);
+}
+
+.hony-alert-complex-primary .hony-alert-complex-icon,
+.hony-alert-complex-primary .hony-alert-complex-btn {
+  color: var(--primary-main-1);
+}
+
+.hony-alert-complex-success {
+  border: 1px solid var(--success-main-1);
+  background: var(--success-face-1);
+}
+
+.hony-alert-complex-success .hony-alert-complex-icon,
+.hony-alert-complex-success .hony-alert-complex-btn {
+  color: var(--success-main-1);
+}
+
+.hony-alert-complex-warning {
+  border: 1px solid var(--warning-main-1);
+  background: var(--warning-face-1);
+}
+
+.hony-alert-complex-warning .hony-alert-complex-icon,
+.hony-alert-complex-warning .hony-alert-complex-btn {
+  color: var(--warning-main-1);
+}
+
+.hony-alert-complex-danger {
+  border: 1px solid var(--danger-main-1);
+  background: var(--danger-face-1);
+}
+
+.hony-alert-complex-danger .hony-alert-complex-icon,
+.hony-alert-complex-danger .hony-alert-complex-btn {
+  color: var(--danger-main-1);
+}
+
+.hony-alert-complex-default {
+  border: 1px solid var(--grey-border-1);
+  background: var(--grey-face-1);
+}
+
+.hony-alert-complex-default .hony-alert-complex-icon,
+.hony-alert-complex-default .hony-alert-complex-btn {
+  color: var(--grey-text-4);
+}
+
+.hony-alert-complex-outline {
+  border: 1px solid var(--primary-main-1);
+  background: var(--primary-face-1);
+}
+
+.hony-alert-complex-outline .hony-alert-complex-icon,
+.hony-alert-complex-outline .hony-alert-complex-btn {
+  color: var(--primary-main-1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hony-toast {
+    min-width: auto;
+    padding: 10px 16px;
+  }
+  
+  .hony-alert-expand {
+    flex-wrap: wrap;
+  }
+  
+  .hony-alert-expand-action {
+    width: 100%;
+    margin-top: 8px;
+    justify-content: flex-end;
+  }

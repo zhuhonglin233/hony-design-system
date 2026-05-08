@@ -1,0 +1,540 @@
+:root {
+    /* 组件页面背景 */
+  --component-page-BG: #c5c5d4;
+  /* 主题色 */
+  --primary-1: #E8EFFF;
+  --primary-2: #D0DFFF;
+  --primary-3: #A2BEFF;
+  --primary-4: #739EFF;
+  --primary-5: #457DFF;
+  --primary-6: #165DFF;
+  --primary-7: #124ACC;
+  --primary-8: #0D3899;
+  --primary-9: #092566;
+  --primary-10: #041333;
+  --primary-11: #02091A;
+
+  
+    /* 主题色透明度 */
+  --primary-1-TPY: rgba(22, 93, 255, 0.1);
+  --primary-2-TPY: rgba(22, 93, 255, 0.2);
+  --primary-3-TPY: rgba(22, 93, 255, 0.4);
+  --primary-4-TPY: rgba(22, 93, 255, 0.6);
+  --primary-5-TPY: rgba(22, 93, 255, 0.8);
+  --primary-6-TPY: rgba(22, 93, 255, 1);
+
+
+  /* 功能色 */
+  /* 安全色 */
+  --success-1: #EAF6F1;
+  --success-2: #D5EDE3;
+  --success-3: #AADBC6;
+  --success-4: #80C8AA;
+  --success-5: #55B68D;
+  --success-6: #2BA471;
+  --success-7: #22835A;
+  --success-8: #1A6244;
+  --success-9: #11422D;
+  --success-10: #092117;
+  --success-11: #04150A;
+  --success-1-TPY: rgba(43, 164, 113, 0.1);
+  --success-2-TPY: rgba(43, 164, 164, 0.2);
+  --success-3-TPY: rgba(43, 164, 113, 0.4);
+  --success-4-TPY: rgba(43, 164, 113, 0.6);
+  --success-5-TPY: rgba(43, 164, 113, 0.8);
+  --success-6-TPY: rgba(43, 164, 113, 1);
+
+    /* 警告色 */
+  --warning-1: #FFF2E5;
+  --warning-2: #FFE5CC;
+  --warning-3: #FFCB99;
+  --warning-4: #FFB166;
+  --warning-5: #FF9733;
+  --warning-6: #E37318;
+  --warning-7: #CC6400;
+  --warning-8: #994B00;
+  --warning-9: #663200;
+  --warning-10: #331900;
+  --warning-11: #1A0D00;
+  --warning-1-TPY: rgba(255, 242, 229, 0.1);
+  --warning-2-TPY: rgba(255, 242, 229, 0.2);
+  --warning-3-TPY: rgba(255, 242, 229, 0.4);
+  --warning-4-TPY: rgba(255, 242, 229, 0.6);
+  --warning-5-TPY: rgba(255, 242, 229, 0.8);
+  --warning-6-TPY: rgba(255, 242, 229, 1);
+    /* 危险色 */
+  --danger-1: #FCEAEA;
+  --danger-2: #F9D5D5;
+  --danger-3: #F3ABAB;
+  --danger-4: #EC8080;
+  --danger-5: #E65656;
+  --danger-6: #E02C2C;
+  --danger-7: #B32323;
+  --danger-8: #861A1A;
+  --danger-9: #5A1212;
+  --danger-10: #2D0909;
+  --danger-11: #160404;
+  --warning-1-TPY: rgba(224, 44, 44, 0.1);
+  --warning-2-TPY: rgba(224, 44, 44, 0.2);
+  --warning-3-TPY: rgba(224, 44, 44, 0.4);
+  --warning-4-TPY: rgba(224, 44, 44, 0.6);
+  --warning-5-TPY: rgba(224, 44, 44, 0.8);
+  --warning-6-TPY: rgba(224, 44, 44, 1);
+
+
+  /* 中性色 */
+  --grey-1: #F9FAFB;
+  --grey-2: #F5F6F9;
+  --grey-3: #E7EAF0;
+  --grey-4: #DADEE8;
+  --grey-5: #B5BED1;
+  --grey-6: #9CA7C1;
+  --grey-7: #6C7DA3;
+  --grey-8: #495673;
+  --grey-9: #384259;
+  --grey-10: #212633;
+  --grey-11: #151821;
+  --grey-12: #101319;
+  --grey-1-TPY: rgba(21, 24, 33, 0);
+  --grey-2-TPY: rgba(21, 24, 33, 0.05);
+  --grey-3-TPY: rgba(21, 24, 33, 0.1);
+  --grey-4-TPY: rgba(21, 24, 33, 0.15);
+  --grey-5-TPY: rgba(21, 24, 33, 0.2);
+  --grey-6-TPY: rgba(21, 24, 33, 0.4);
+  --grey-7-TPY: rgba(21, 24, 33, 0.5);
+  --grey-8-TPY: rgba(21, 24, 33, 0.6);
+  --grey-9-TPY: rgba(21, 24, 33, 0.8);
+  --grey-10-TPY: rgba(21, 24, 33, 0.85);
+  --grey-11-TPY: rgba(21, 24, 33, 0.9);
+  --grey-12-TPY: rgba(21, 24, 33, 1);
+
+  /* 颜色变量 */
+
+  /* 主题色 */
+
+  /* 主题色-主体 */
+  --primary-main-1: var(--primary-6);
+  --primary-main-2: var(--primary-5);
+  --primary-main-3: var(--primary-7);
+  --primary-main-4: var(--primary-3);
+  --primary-main-5: white;
+
+  /* 主题色-面 */
+  --primary-face-1: var(--primary-1);
+  --primary-face-2: var(--primary-2);
+  --primary-face-3: var(--primary-3);
+
+  /* 安全色 */
+
+  /* 安全色-主体 */
+  --success-main-1: var(--success-6);
+  --success-main-2: var(--success-5);
+  --success-main-3: var(--success-7);
+  --success-main-4: var(--success-3);
+
+  /* 安全色-面 */
+  --success-face-1: var(--success-1);
+  --success-face-2: var(--success-2);
+  --success-face-3: var(--success-3);
+
+
+  /* 警告色 */
+
+  /* 警告色-主体 */
+  --warning-main-1: var(--warning-6);
+  --warning-main-2: var(--warning-5);
+  --warning-main-3: var(--warning-7);
+  --warning-main-4: var(--warning-3);
+
+  /* 警告色-面 */
+  --warning-face-1: var(--warning-1);
+  --warning-face-2: var(--warning-2);
+  --warning-face-3: var(--warning-3);
+
+
+  /* 危险色 */
+
+  /* 危险色-主体 */
+  --danger-main-1: var(--danger-6);
+  --danger-main-2: var(--danger-5);
+  --danger-main-3: var(--danger-7);
+  --danger-main-4: var(--danger-3);
+
+  /* 危险色-面 */
+  --danger-face-1: var(--danger-1);
+  --danger-face-2: var(--danger-2);
+  --danger-face-3: var(--danger-3);
+
+
+  /* 中性色 */
+
+  /* 中性色-主体 */
+  --grey-main-1: var(--grey-9);
+  --grey-main-2: var(--grey-7);
+  --grey-main-3: var(--grey-11);
+  --grey-main-4: var(--grey-5);
+
+  /* 中性色-面 */
+  --grey-face-1: var(--grey-2);
+  --grey-face-2: var(--grey-3);
+  --grey-face-3: var(--grey-4);
+
+  /* 中性色-文本 */
+  --grey-text-1: var(--grey-12);
+  --grey-text-2: var(--grey-9);
+  --grey-text-3: var(--grey-7);
+  --grey-text-4: var(--grey-5);
+
+  /* 中性色-边框 */
+  --grey-border-1: var(--grey-3);
+  --grey-border-2: var(--grey-4);
+  --grey-border-3: var(--grey-5);
+  --grey-border-4: var(--grey-6);
+
+  /* 中性色-背景 */
+  --grey-bg-0: white;
+  --grey-bg-1: var(--grey-1);
+  --grey-bg-2: var(--grey-2);
+  --grey-bg-3: var(--grey-3);
+  --grey-bg-4: var(--grey-4);
+
+  /* 字体 */
+  --font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+
+  /* 字体粗细 */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* 行高 */
+  --line-height-xs: 1.33;
+  --line-height-sm: 1.43;
+  --line-height-base: 1.5;
+  --line-height-lg: 1.6;
+  --line-height-xl: 1.7;
+
+  /* 间距 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  --spacing-4xl: 40px;
+  --spacing-5xl: 48px;
+
+  /* 圆角 */
+  --radius-sm: 0px;
+  --radius-base: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* 阴影 */
+  --shadow-grey-mini: 0 2px 4px 0 rgba(21, 24, 33, 0.05), 0 0 12px 0 rgba(21, 24, 33, 0.05);
+  --shadow-grey-small: 0 2px 4px 0 rgba(21, 24, 33, 0.05), 0 4px 8px 0 rgba(21, 24, 33, 0.05), 0 0 16px 0 rgba(21, 24, 33, 0.05);
+  --shadow-grey-medium: 0 4px 8px 0 rgba(21, 24, 33, 0.05), 0 8px 12px 0 rgba(21, 24, 33, 0.05), 0 0 24px 0 rgba(21, 24, 33, 0.05);
+  --shadow-grey-large: 0 4px 8px 0 rgba(21, 24, 33, 0.05), 0 8px 12px 0 rgba(21, 24, 33, 0.05), 0 0 24px 0 rgba(21, 24, 33, 0.05);
+  --shadow-grey-special: 0 0 24px 0 rgba(21, 24, 33, 0.05), 0 0 32px 0 rgba(21, 24, 33, 0.05), 0 0 48px 0 rgba(21, 24, 33, 0.05);
+
+  --shadow-primary-mini: 0 0 12px 0 rgba(22, 93, 255, 0.10);
+  --shadow-primary-small: 0 2px 4px 0 rgba(22, 93, 255, 0.20), 0 4px 8px 0 rgba(22, 93, 255, 0.10), 0 0 16px 0 rgba(22, 93, 255, 0.10);
+  --shadow-primary-medium: 0 4px 8px 0 rgba(22, 93, 255, 0.20), 0 8px 12px 0 rgba(22, 93, 255, 0.10), 0 0 20px 0 rgba(22, 93, 255, 0.10);
+  --shadow-primary-large: 0 8px 12px 0 rgba(22, 93, 255, 0.20), 0 12px 16px 0 rgba(22, 93, 255, 0.10), 0 0 24px 0 rgba(22, 93, 255, 0.10);
+
+  --shadow-inner-mini: 0 1px 2px 0 rgba(21, 24, 33, 0.05) inset, 0 2px 4px 0 rgba(21, 24, 33, 0.05) inset, 0 0 12px 0 rgba(21, 24, 33, 0.05) inset;
+  --shadow-inner-small: 0 2px 4px 0 rgba(21, 24, 33, 0.05) inset, 0 4px 8px 0 rgba(21, 24, 33, 0.05) inset, 0 0 16px 0 rgba(21, 24, 33, 0.05) inset;
+  --shadow-inner-medium: 0 4px 8px 0 rgba(21, 24, 33, 0.05) inset, 0 8px 12px 0 rgba(21, 24, 33, 0.05) inset, 0 0 20px 0 rgba(21, 24, 33, 0.05) inset;
+  --shadow-inner-large: 0 8px 12px 0 rgba(21, 24, 33, 0.05) inset, 0 12px 16px 0 rgba(21, 24, 33, 0.05) inset, 0 0 24px 0 rgba(21, 24, 33, 0.05) inset;
+
+  /* 过渡 */
+  --transition-fast: 0.1s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  /* 布局 */
+  --header-height: 60px;
+  --side-nav-width: 200px;
+  --content-max-width: 1200px;
+}
+:root.Dark{
+      /* 组件页面背景 */
+  --component-page-BG: ##c5c5d4;
+  /* 主题色 */
+  --primary-1: #E8EFFF;
+  --primary-2: #D0DFFF;
+  --primary-3: #A2BEFF;
+  --primary-4: #739EFF;
+  --primary-5: #457DFF;
+  --primary-6: #165DFF;
+  --primary-7: #124ACC;
+  --primary-8: #0D3899;
+  --primary-9: #092566;
+  --primary-10: #041333;
+  --primary-11: #02091A;
+
+  
+    /* 主题色透明度 */
+  --primary-1-TPY: rgba(22, 93, 255, 0.1);
+  --primary-2-TPY: rgba(22, 93, 255, 0.2);
+  --primary-3-TPY: rgba(22, 93, 255, 0.4);
+  --primary-4-TPY: rgba(22, 93, 255, 0.6);
+  --primary-5-TPY: rgba(22, 93, 255, 0.8);
+  --primary-6-TPY: rgba(22, 93, 255, 1);
+
+
+  /* 功能色 */
+  /* 安全色 */
+  --success-1: #EAF6F1;
+  --success-2: #D5EDE3;
+  --success-3: #AADBC6;
+  --success-4: #80C8AA;
+  --success-5: #55B68D;
+  --success-6: #2BA471;
+  --success-7: #22835A;
+  --success-8: #1A6244;
+  --success-9: #11422D;
+  --success-10: #092117;
+  --success-11: #04150A;
+  --success-1-TPY: rgba(43, 164, 113, 0.1);
+  --success-2-TPY: rgba(43, 164, 164, 0.2);
+  --success-3-TPY: rgba(43, 164, 113, 0.4);
+  --success-4-TPY: rgba(43, 164, 113, 0.6);
+  --success-5-TPY: rgba(43, 164, 113, 0.8);
+  --success-6-TPY: rgba(43, 164, 113, 1);
+
+    /* 警告色 */
+  --warning-1: #FFF2E5;
+  --warning-2: #FFE5CC;
+  --warning-3: #FFCB99;
+  --warning-4: #FFB166;
+  --warning-5: #FF9733;
+  --warning-6: #E37318;
+  --warning-7: #CC6400;
+  --warning-8: #994B00;
+  --warning-9: #663200;
+  --warning-10: #331900;
+  --warning-11: #1A0D00;
+  --warning-1-TPY: rgba(255, 242, 229, 0.1);
+  --warning-2-TPY: rgba(255, 242, 229, 0.2);
+  --warning-3-TPY: rgba(255, 242, 229, 0.4);
+  --warning-4-TPY: rgba(255, 242, 229, 0.6);
+  --warning-5-TPY: rgba(255, 242, 229, 0.8);
+  --warning-6-TPY: rgba(255, 242, 229, 1);
+    /* 危险色 */
+  --danger-1: #FCEAEA;
+  --danger-2: #F9D5D5;
+  --danger-3: #F3ABAB;
+  --danger-4: #EC8080;
+  --danger-5: #E65656;
+  --danger-6: #E02C2C;
+  --danger-7: #B32323;
+  --danger-8: #861A1A;
+  --danger-9: #5A1212;
+  --danger-10: #2D0909;
+  --danger-11: #160404;
+  --warning-1-TPY: rgba(224, 44, 44, 0.1);
+  --warning-2-TPY: rgba(224, 44, 44, 0.2);
+  --warning-3-TPY: rgba(224, 44, 44, 0.4);
+  --warning-4-TPY: rgba(224, 44, 44, 0.6);
+  --warning-5-TPY: rgba(224, 44, 44, 0.8);
+  --warning-6-TPY: rgba(224, 44, 44, 1);
+
+
+  /* 中性色 */
+  --grey-1: #F9FAFB;
+  --grey-2: #F5F6F9;
+  --grey-3: #E7EAF0;
+  --grey-4: #DADEE8;
+  --grey-5: #B5BED1;
+  --grey-6: #9CA7C1;
+  --grey-7: #6C7DA3;
+  --grey-8: #495673;
+  --grey-9: #384259;
+  --grey-10: #212633;
+  --grey-11: #151821;
+  --grey-12: #101319;
+  --grey-1-TPY: rgba(21, 24, 33, 0);
+  --grey-2-TPY: rgba(21, 24, 33, 0.05);
+  --grey-3-TPY: rgba(21, 24, 33, 0.1);
+  --grey-4-TPY: rgba(21, 24, 33, 0.15);
+  --grey-5-TPY: rgba(21, 24, 33, 0.2);
+  --grey-6-TPY: rgba(21, 24, 33, 0.4);
+  --grey-7-TPY: rgba(21, 24, 33, 0.5);
+  --grey-8-TPY: rgba(21, 24, 33, 0.6);
+  --grey-9-TPY: rgba(21, 24, 33, 0.8);
+  --grey-10-TPY: rgba(21, 24, 33, 0.85);
+  --grey-11-TPY: rgba(21, 24, 33, 0.9);
+  --grey-12-TPY: rgba(21, 24, 33, 1);
+
+  /* 颜色变量 */
+
+  /* 主题色 */
+
+  /* 主题色-主体 */
+  --primary-main-1: var(--primary-6);
+  --primary-main-2: var(--primary-7);
+  --primary-main-3: var(--primary-5);
+  --primary-main-4: var(--primary-9);
+  --primary-main-5: white;
+
+  /* 主题色-面 */
+  --primary-face-1: var(--primary-11);
+  --primary-face-2: var(--primary-10);
+  --primary-face-3: var(--primary-9);
+
+  /* 安全色 */
+
+  /* 安全色-主体 */
+  --success-main-1: var(--success-6);
+  --success-main-2: var(--success-7);
+  --success-main-3: var(--success-5);
+  --success-main-4: var(--success-9);
+
+  /* 安全色-面 */
+  --success-face-1: var(--success-11);
+  --success-face-2: var(--success-10);
+  --success-face-3: var(--success-9);
+
+
+  /* 警告色 */
+
+  /* 警告色-主体 */
+  --warning-main-1: var(--warning-6);
+  --warning-main-2: var(--warning-7);
+  --warning-main-3: var(--warning-5);
+  --warning-main-4: var(--warning-9);
+
+  /* 警告色-面 */
+  --warning-face-1: var(--warning-11);
+  --warning-face-2: var(--warning-10);
+  --warning-face-3: var(--warning-9);
+
+
+  /* 危险色 */
+
+  /* 危险色-主体 */
+  --danger-main-1: var(--danger-6);
+  --danger-main-2: var(--danger-7);
+  --danger-main-3: var(--danger-5);
+  --danger-main-4: var(--danger-9);
+
+  /* 危险色-面 */
+  --danger-face-1: var(--danger-11);
+  --danger-face-2: var(--danger-10);
+  --danger-face-3: var(--danger-9);
+
+
+  /* 中性色 */
+
+  /* 中性色-主体 */
+  --grey-main-1: var(--grey-5);
+  --grey-main-2: var(--grey-7);
+  --grey-main-3: var(--grey-3);
+  --grey-main-4: var(--grey-9);
+
+  /* 中性色-面 */
+  --grey-face-1: var(--grey-11);
+  --grey-face-2: var(--grey-10);
+  --grey-face-3: var(--grey-9);
+
+  /* 中性色-文本 */
+  --grey-text-1: white;
+  --grey-text-2: var(--grey-5);
+  --grey-text-3: var(--grey-7);
+  --grey-text-4: var(--grey-9);
+
+  /* 中性色-边框 */
+  --grey-border-1: var(--grey-10);
+  --grey-border-2: var(--grey-9);
+  --grey-border-3: var(--grey-8);
+  --grey-border-4: var(--grey-7);
+
+  /* 中性色-背景 */
+  --grey-bg-0: var(--grey-12);
+  --grey-bg-1: var(--grey-11);
+  --grey-bg-2: var(--grey-10);
+  --grey-bg-3: var(--grey-9);
+  --grey-bg-4: var(--grey-8);
+
+  /* 字体 */
+  --font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+
+  /* 字体粗细 */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* 行高 */
+  --line-height-xs: 1.33;
+  --line-height-sm: 1.43;
+  --line-height-base: 1.5;
+  --line-height-lg: 1.6;
+  --line-height-xl: 1.7;
+
+  /* 间距 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  --spacing-4xl: 40px;
+  --spacing-5xl: 48px;
+
+  /* 圆角 */
+  --radius-sm: 0px;
+  --radius-base: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* 阴影 */
+  --shadow-grey-mini: 0 2px 4px 0 rgba(21, 24, 33, 0.05), 0 0 12px 0 rgba(21, 24, 33, 0.05);
+  --shadow-grey-small: 0 2px 4px 0 rgba(21, 24, 33, 0.05), 0 4px 8px 0 rgba(21, 24, 33, 0.05), 0 0 16px 0 rgba(21, 24, 33, 0.05);
+  --shadow-grey-medium: 0 4px 8px 0 rgba(21, 24, 33, 0.05), 0 8px 12px 0 rgba(21, 24, 33, 0.05), 0 0 24px 0 rgba(21, 24, 33, 0.05);
+  --shadow-grey-large: 0 4px 8px 0 rgba(21, 24, 33, 0.05), 0 8px 12px 0 rgba(21, 24, 33, 0.05), 0 0 24px 0 rgba(21, 24, 33, 0.05);
+  --shadow-grey-special: 0 0 24px 0 rgba(21, 24, 33, 0.05), 0 0 32px 0 rgba(21, 24, 33, 0.05), 0 0 48px 0 rgba(21, 24, 33, 0.05);
+
+  --shadow-primary-mini: 0 0 12px 0 rgba(22, 93, 255, 0.10);
+  --shadow-primary-small: 0 2px 4px 0 rgba(22, 93, 255, 0.20), 0 4px 8px 0 rgba(22, 93, 255, 0.10), 0 0 16px 0 rgba(22, 93, 255, 0.10);
+  --shadow-primary-medium: 0 4px 8px 0 rgba(22, 93, 255, 0.20), 0 8px 12px 0 rgba(22, 93, 255, 0.10), 0 0 20px 0 rgba(22, 93, 255, 0.10);
+  --shadow-primary-large: 0 8px 12px 0 rgba(22, 93, 255, 0.20), 0 12px 16px 0 rgba(22, 93, 255, 0.10), 0 0 24px 0 rgba(22, 93, 255, 0.10);
+
+  --shadow-inner-mini: 0 1px 2px 0 rgba(21, 24, 33, 0.05) inset, 0 2px 4px 0 rgba(21, 24, 33, 0.05) inset, 0 0 12px 0 rgba(21, 24, 33, 0.05) inset;
+  --shadow-inner-small: 0 2px 4px 0 rgba(21, 24, 33, 0.05) inset, 0 4px 8px 0 rgba(21, 24, 33, 0.05) inset, 0 0 16px 0 rgba(21, 24, 33, 0.05) inset;
+  --shadow-inner-medium: 0 4px 8px 0 rgba(21, 24, 33, 0.05) inset, 0 8px 12px 0 rgba(21, 24, 33, 0.05) inset, 0 0 20px 0 rgba(21, 24, 33, 0.05) inset;
+  --shadow-inner-large: 0 8px 12px 0 rgba(21, 24, 33, 0.05) inset, 0 12px 16px 0 rgba(21, 24, 33, 0.05) inset, 0 0 24px 0 rgba(21, 24, 33, 0.05) inset;
+
+  /* 过渡 */
+  --transition-fast: 0.1s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  /* 布局 */
+  --header-height: 60px;
+  --side-nav-width: 200px;
+  --content-max-width: 1200px;
+}

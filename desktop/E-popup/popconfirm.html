@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>气泡 - 桌面端组件</title>
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+      <link rel="stylesheet" href="./alert.css">
+    <link rel="stylesheet" href="./button.css">
+    <link rel="stylesheet" href="./popconfirm.css">
+    <script src="../../overall/js/common.js"></script>
+</head>
+<body>
+    <div class="background-decoration"></div>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                    <div class="content-main">
+                        <!-- 页面标题 -->
+                        <div class="page-header">
+                            <div class="design-code">design code 桌面端组件</div>
+                            <div class="page-title">气泡</div>
+                            <div class="page-description">气泡确认框用于对操作进行二次确认，支持多种图标和自定义按钮。</div>
+                        </div>
+
+                        <!-- 气泡对框 -->
+                        <div class="section">
+                            <div class="section-title">气泡<span style="color: var(--primary-main-1);">对话框</span></div>
+
+                        </div>
+                    </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+                <div class="right-nav">
+                    <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'button-styles');">主要按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-icon');">图标+按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-icon-only');">纯图标按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-levels');">按钮等级</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states');">主要按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states-secondary');">次要按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states-danger');">危险按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states-success');">安全按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states-warning');">警告按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-sizes');">小尺寸按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-sizes');">大尺寸按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-sizes');">常规尺寸按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-shapes');">按钮形状</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

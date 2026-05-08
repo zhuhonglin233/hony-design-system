@@ -1,0 +1,233 @@
+/* 列表基础样式 */
+.hony-list {
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  font-family: var(--font-family);
+}
+
+/* 列表头部 */
+.hony-list-header {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--grey-face-1);
+  border-bottom: 1px solid var(--grey-face-2);
+  font-weight: 500;
+  color: var(--grey-text-1);
+}
+
+/* 列表主体 */
+.hony-list-body {
+  width: 100%;
+}
+
+/* 列表尾部 */
+.hony-list-footer {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--grey-face-1);
+  border-top: 1px solid var(--grey-face-2);
+  text-align: center;
+  color: var(--grey-text-4);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.hony-list-footer:hover {
+  background: var(--grey-face-2);
+}
+
+/* 列表项 */
+.hony-list-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-lg) var(--spacing-lg);
+  border-bottom: 1px solid var(--grey-face-2);
+  transition: background 0.2s ease;
+  background: var(--grey-bg-0);
+}
+
+.hony-list-item:last-child {
+  border-bottom: none;
+}
+
+.hony-list-item:hover {
+  background: var(--primary-face-1);
+}
+
+/* 列表项前缀 */
+.hony-list-item-prefix {
+  flex-shrink: 0;
+  margin-right: var(--spacing-md);
+}
+
+/* 列表项前缀图片 */
+.hony-list-item-prefix img {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+/* 列表项内容 */
+.hony-list-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 列表项标题 */
+.hony-list-item-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--grey-text-1);
+  margin-bottom: 4px;
+}
+
+/* 列表项描述 */
+.hony-list-item-desc {
+  font-size: 12px;
+  color: var(--grey-text-4);
+  line-height: 1.5;
+}
+
+/* 列表项元信息 */
+.hony-list-item-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+  font-size: 12px;
+  color: var(--grey-text-4);
+}
+
+/* 列表项操作 */
+.hony-list-item-action {
+  flex-shrink: 0;
+  margin-left: var(--spacing-md);
+}
+
+/* 列表项操作按钮 */
+.hony-list-item-action button {
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: 12px;
+  border: 1px solid var(--primary-main-1);
+  background: transparent;
+  color: var(--primary-main-1);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hony-list-item-action button:hover {
+  background: var(--primary-main-1);
+  color: var(--white);
+}
+
+/* 尺寸变体 - 小尺寸 */
+.hony-list-sm .hony-list-item {
+  padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+.hony-list-sm .hony-list-item-title {
+  font-size: 12px;
+}
+
+.hony-list-sm .hony-list-item-desc {
+  font-size: 11px;
+}
+
+.hony-list-sm .hony-list-item-prefix img {
+  width: 32px;
+  height: 32px;
+}
+
+/* 尺寸变体 - 大尺寸 */
+.hony-list-lg .hony-list-item {
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.hony-list-lg .hony-list-item-title {
+  font-size: 16px;
+}
+
+.hony-list-lg .hony-list-item-desc {
+  font-size: 14px;
+}
+
+.hony-list-lg .hony-list-item-prefix img {
+  width: 64px;
+  height: 64px;
+}
+
+/* 斑马纹列表 */
+.hony-list-striped .hony-list-item:nth-child(even) {
+  background: var(--grey-face-1);
+}
+
+.hony-list-striped .hony-list-item:nth-child(even):hover {
+  background: var(--primary-face-1);
+}
+
+/* 带分割线列表 */
+.hony-list-divided .hony-list-item {
+  border-bottom: 1px solid var(--grey-border-1);
+}
+
+/* 横向列表 */
+.hony-list-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.hony-list-horizontal .hony-list-item {
+  width: auto;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--grey-border-1);
+  border-radius: var(--radius-sm);
+  border-bottom: 1px solid var(--grey-border-1);
+}
+
+.hony-list-horizontal .hony-list-item:hover {
+  border-color: var(--primary-main-1);
+  background: var(--primary-face-1);
+}
+
+/* 空状态 */
+.hony-list-empty {
+  padding: var(--spacing-xxl) var(--spacing-lg);
+  text-align: center;
+  color: var(--grey-text-4);
+}
+
+.hony-list-empty-icon {
+  font-size: 48px;
+  margin-bottom: var(--spacing-md);
+  color: var(--grey-border-2);
+}
+
+.hony-list-empty-text {
+  font-size: 14px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hony-list-item {
+    padding: var(--spacing-md);
+    flex-wrap: wrap;
+  }
+
+  .hony-list-item-action {
+    width: 100%;
+    margin-left: 0;
+    margin-top: var(--spacing-sm);
+  }
+
+  .hony-list-item-action button {
+    width: 100%;
+  }
+
+  .hony-list-horizontal {
+    gap: var(--spacing-sm);
+  }
+}

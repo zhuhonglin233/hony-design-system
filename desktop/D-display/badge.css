@@ -1,0 +1,218 @@
+/* 徽标基础样式 */
+.hony-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+/* 徽标点 */
+.hony-badge-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  background: var(--danger-main-1);
+  box-shadow: 0 0 0 2px white;
+}
+
+/* 徽标数量 */
+.hony-badge-number {
+  min-width: 20px;
+  height: 20px;
+  padding: 4px;
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--primary-main-5);
+  background: var(--danger-main-1);
+  box-shadow: 0 0 0 2px white;
+}
+
+/* 徽标文字 */
+.hony-badge-text {
+  min-width: 20px;
+  height: 20px;
+  padding: 4px;
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--white, #ffffff);
+  background: var(--danger-6, #f53f3f);
+  box-shadow: 0 0 0 2px white;
+}
+
+/* 徽标状态 */
+.hony-badge-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+  border-radius: 24px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--grey-9, #101319);
+}
+
+/* 头像徽标组合 */
+.hony-badge-avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.hony-badge-avatar-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+
+}
+
+/* 状态指示器 */
+.hony-badge-status-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: var(--white, #ffffff);
+}
+
+.hony-badge-status-dot::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.hony-badge-status-dot::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+/* 正常状态 */
+.hony-badge-status-normal {
+
+}
+
+.hony-badge-status-normal .hony-badge-status-dot {
+  background: var(--primary-6, #165dff);
+}
+
+.hony-badge-status-normal .hony-badge-status-dot::before,
+.hony-badge-status-normal .hony-badge-status-dot::after {
+  background: var(--primary-6, #165dff);
+}
+
+/* 危险状态 */
+.hony-badge-status-danger {
+
+}
+
+.hony-badge-status-danger .hony-badge-status-dot {
+  background: var(--danger-6, #e02c2c);
+}
+
+.hony-badge-status-danger .hony-badge-status-dot::before,
+.hony-badge-status-danger .hony-badge-status-dot::after {
+  background: var(--danger-6, #e02c2c);
+}
+
+/* 安全状态 */
+.hony-badge-status-success {
+
+}
+
+.hony-badge-status-success .hony-badge-status-dot {
+  background: var(--success-main-1);
+}
+
+.hony-badge-status-success .hony-badge-status-dot::before,
+.hony-badge-status-success .hony-badge-status-dot::after {
+  background: var(--success-main-1);
+}
+
+/* 警告状态 */
+.hony-badge-status-warning {
+
+}
+
+.hony-badge-status-warning .hony-badge-status-dot {
+  background: var(--warning-main-1);
+}
+
+.hony-badge-status-warning .hony-badge-status-dot::before,
+.hony-badge-status-warning .hony-badge-status-dot::after {
+  background: var(--warning-main-1);
+}
+
+/* 失效状态 */
+.hony-badge-status-disabled {
+
+}
+
+.hony-badge-status-disabled .hony-badge-status-dot {
+  background: var(--grey-border-2);
+}
+
+.hony-badge-status-disabled .hony-badge-status-dot::before,
+.hony-badge-status-disabled .hony-badge-status-dot::after {
+  background: var(--grey-border-2);
+}
+
+/* 徽标颜色变体 */
+.hony-badge-primary {
+  background: var(--primary-main-1);
+}
+
+.hony-badge-success {
+  background: var(--success-main-1);
+}
+
+.hony-badge-warning {
+  background: var(--warning-main-1);
+}
+
+.hony-badge-danger {
+  background: var(--danger-main-1);
+}
+
+.hony-badge-grey {
+  background: var(--grey-border-2);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hony-badge-status {
+    font-size: 12px;
+    height: 20px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  
+  .hony-badge-status-dot {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .hony-badge-number,
+  .hony-badge-text {
+    font-size: 10px;
+    min-width: 16px;
+    height: 16px;
+    padding: 2px;
+  }
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提示 - 桌面端组件</title>
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+      <link rel="stylesheet" href="./alert.css">
+    <link rel="stylesheet" href="./button.css">
+    <script src="../../overall/js/common.js"></script>
+</head>
+<body>
+    <div class="background-decoration"></div>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                    <div class="content-main">
+                        <!-- 页面标题 -->
+                        <div class="page-header">
+                            <div class="design-code">design code 桌面端组件</div>
+                            <div class="page-title">提示</div>
+                            <div class="page-description">提示组件用于向用户展示重要的操作信息，支持多种类型和样式。</div>
+                        </div>
+
+
+                        <!-- 全局提示 -->
+                        <div class="section">
+                            <div class="section-title">全局<span style="color: var(--primary-main-1);">提示</span></div>
+                            <div class="subsection" id="hony-button-states">
+                                <div class="subsection-title">Toast 提示</div>
+                                <div class="subsection-description">固定在页面顶部或底部的轻量级提示，用于临时展示操作结果或状态信息。</div>
+                                <div class="component-container" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                                    <!-- 加载中 -->
+                                    <div class="hony-toast">
+                                        <div class="hony-toast-icon-wrap hony-toast-loading">
+                                        <svg class="hony-toast-icon" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="47 16"></circle>
+                                        </svg>
+                                        </div>
+                                        <span class="hony-toast-text">加载中</span>
+                                        <svg class="hony-toast-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                    </div>
+                                    
+                                    <!-- 正常提示 -->
+                                    <div class="hony-toast hony-toast-info">
+                                        <div class="hony-toast-icon-wrap">
+                                        <i class="iconfont hony-toast-icon">&#xf07d;</i>
+                                        </div>
+                                        <span class="hony-toast-text">正常提示</span>
+                                        <svg class="hony-toast-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                    </div>
+                                    
+                                    <!-- 警告提示 -->
+                                    <div class="hony-toast hony-toast-warning">
+                                        <div class="hony-toast-icon-wrap">
+                                        <i class="iconfont hony-toast-icon">&#xf07d;</i>
+                                        </div>
+                                        <span class="hony-toast-text">警告提示</span>
+                                        <svg class="hony-toast-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                    </div>
+                                    
+                                    <!-- 操作成功 -->
+                                    <div class="hony-toast hony-toast-success">
+                                        <div class="hony-toast-icon-wrap">
+                                        <i class="iconfont hony-toast-icon">&#xf07e;</i>
+                                        </div>
+                                        <span class="hony-toast-text">操作成功</span>
+                                        <svg class="hony-toast-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                    </div>
+                                    
+                                    <!-- 操作失败 -->
+                                    <div class="hony-toast hony-toast-error">
+                                        <div class="hony-toast-icon-wrap">
+                                        <i class="iconfont hony-toast-icon">&#xf07b;</i>
+                                        </div>
+                                        <span class="hony-toast-text">操作失败</span>
+                                        <svg class="hony-toast-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Alert提示 -->
+                        <div class="section">
+                            <div class="section-title">Alert<span style="color: var(--primary-main-1);">提示</span></div>
+                            <!-- 常规提示 Section -->
+                            <div class="subsection" id="hony-button-sizes">
+                                <div class="subsection-title">基础样式</div>
+                                <div class="subsection-description">固定在页面顶部或底部的轻量级提示，用于临时展示操作结果或状态信息。</div>
+                                <div class="component-container" style="display: flex; flex-direction: column; gap: 12px;">
+                                <!-- 品牌色提示 -->
+                                <div class="hony-alert hony-alert-primary">
+                                    <span>字段内容</span>
+                                </div>
+                                
+                                <!-- 成功提示 -->
+                                <div class="hony-alert hony-alert-success">
+                                    <span>字段内容</span>
+                                </div>
+                                
+                                <!-- 警告提示 -->
+                                <div class="hony-alert hony-alert-warning">
+                                    <span>字段内容</span>
+                                </div>
+                                
+                                <!-- 危险提示 -->
+                                <div class="hony-alert hony-alert-danger">
+                                    <span>字段内容</span>
+                                </div>
+                                
+                                <!-- 灰色提示 -->
+                                <div class="hony-alert hony-alert-default">
+                                    <span>字段内容</span>
+                                </div>
+                                
+                                <!-- 外框提示 -->
+                                <div class="hony-alert hony-alert-outline">
+                                    <span>字段内容</span>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- 拓展提示 Section -->
+                            <div class="subsection" id="hony-button-sizes">
+                                <div class="subsection-title">拓展样式</div>
+                                <div class="subsection-description">固定在页面顶部或底部的轻量级提示，用于临时展示操作结果或状态信息。</div>
+                                <div class="component-container" style="display: flex; flex-direction: column; gap: 12px;">
+                                <!-- 品牌色提示 -->
+                                <div class="hony-alert-expand hony-alert-expand-primary">
+                                    <i class="iconfont hony-icon-jinggao-filled hony-alert-expand-icon">&#xf07d;</i>
+                                    <span class="hony-alert-expand-content">字段内容</span>
+                                    <div class="hony-alert-expand-action">
+                                    <button class="hony-alert-expand-btn">按钮</button>
+                                    <i class="iconfont hony-icon-guanbi hony-alert-expand-close">&#xf062;</i>
+                                    </div>
+                                </div>
+                                
+                                <!-- 成功提示 -->
+                                <div class="hony-alert-expand hony-alert-expand-success">
+                                    <i class="iconfont hony-icon-zhengque-filled hony-alert-expand-icon">&#xf07d;</i>
+                                    <span class="hony-alert-expand-content">字段内容</span>
+                                    <div class="hony-alert-expand-action">
+                                    <button class="hony-alert-expand-btn">按钮</button>
+                                    <i class="iconfont hony-icon-guanbi hony-alert-expand-close">&#xf062;</i>
+                                    </div>
+                                </div>
+                                
+                                <!-- 警告提示 -->
+                                <div class="hony-alert-expand hony-alert-expand-warning">
+                                    <i class="iconfont hony-icon-jinggao-filled hony-alert-expand-icon">&#xf07d;</i>
+                                    <span class="hony-alert-expand-content">字段内容</span>
+                                    <div class="hony-alert-expand-action">
+                                    <button class="hony-alert-expand-btn">按钮</button>
+                                    <i class="iconfont hony-icon-guanbi hony-alert-expand-close">&#xf062;</i>
+                                    </div>
+                                </div>
+                                
+                                <!-- 危险提示 -->
+                                <div class="hony-alert-expand hony-alert-expand-danger">
+                                    <i class="iconfont hony-icon-cuowu-filled hony-alert-expand-icon">&#xf07d;</i>
+                                    <span class="hony-alert-expand-content">字段内容</span>
+                                    <div class="hony-alert-expand-action">
+                                    <button class="hony-alert-expand-btn">按钮</button>
+                                    <i class="iconfont hony-icon-guanbi hony-alert-expand-close">&#xf062;</i>
+                                    </div>
+                                </div>
+                                
+                                <!-- 灰色提示 -->
+                                <div class="hony-alert-expand hony-alert-expand-default">
+                                    <i class="iconfont hony-icon-jinggao-filled hony-alert-expand-icon">&#xf07d;</i>
+                                    <span class="hony-alert-expand-content">字段内容</span>
+                                    <div class="hony-alert-expand-action">
+                                    <button class="hony-alert-expand-btn">按钮</button>
+                                    <i class="iconfont hony-icon-guanbi hony-alert-expand-close">&#xf062;</i>
+                                    </div>
+                                </div>
+                                
+                                <!-- 外框提示 -->
+                                <div class="hony-alert-expand hony-alert-expand-outline">
+                                    <i class="iconfont hony-icon-jinggao-filled hony-alert-expand-icon">&#xf07d;</i>
+                                    <span class="hony-alert-expand-content">字段内容</span>
+                                    <div class="hony-alert-expand-action">
+                                    <button class="hony-alert-expand-btn">按钮</button>
+                                    <i class="iconfont hony-icon-guanbi hony-alert-expand-close">&#xf062;</i>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- 复杂提示 Section -->
+                            <div class="subsection" id="hony-button-sizes">
+                                <div class="subsection-title">基础样式</div>
+                                <div class="subsection-description">固定在页面顶部或底部的轻量级提示，用于临时展示操作结果或状态信息。</div>
+                                <div class="component-container" style="display: flex; flex-direction: column; gap: 12px;">
+                                <!-- 强调提示 -->
+                                <div class="hony-alert-complex hony-alert-complex-outline">
+                                    <div class="hony-alert-complex-header">
+                                    <i class="iconfont hony-icon-jinggao-filled hony-alert-complex-icon">&#xf07e;</i>
+                                    <span class="hony-alert-complex-content">字段内容</span>
+                                    <div class="hony-alert-complex-action">
+                                        <button class="hony-alert-complex-btn">按钮</button>
+                                        <i class="iconfont hony-icon-guanbi hony-alert-complex-close">&#xf062;</i>
+                                    </div>
+                                    </div>
+                                    <p class="hony-alert-complex-desc">字段内容</p>
+                                </div>
+                                
+                                <!-- 弱提示 -->
+                                <div class="hony-alert-complex hony-alert-complex-default">
+                                    <div class="hony-alert-complex-header">
+                                    <i class="iconfont hony-icon-jinggao-filled hony-alert-complex-icon">&#xf07e;</i>
+                                    <span class="hony-alert-complex-content">字段内容</span>
+                                    <div class="hony-alert-complex-action">
+                                        <button class="hony-alert-complex-btn">按钮</button>
+                                        <i class="iconfont hony-icon-guanbi hony-alert-complex-close">&#xf062;</i>
+                                    </div>
+                                    </div>
+                                    <p class="hony-alert-complex-desc">字段内容</p>
+                                </div>
+                                
+                                <!-- 安全提示 -->
+                                <div class="hony-alert-complex hony-alert-complex-success">
+                                    <div class="hony-alert-complex-header">
+                                    <i class="iconfont hony-icon-zhengque-filled hony-alert-complex-icon">&#xf07e;</i>
+                                    <span class="hony-alert-complex-content">字段内容</span>
+                                    <div class="hony-alert-complex-action">
+                                        <button class="hony-alert-complex-btn">按钮</button>
+                                        <i class="iconfont hony-icon-guanbi hony-alert-complex-close">&#xf062;</i>
+                                    </div>
+                                    </div>
+                                    <p class="hony-alert-complex-desc">字段内容</p>
+                                </div>
+                                
+                                <!-- 警告提示 -->
+                                <div class="hony-alert-complex hony-alert-complex-warning">
+                                    <div class="hony-alert-complex-header">
+                                    <i class="iconfont hony-icon-jinggao-filled hony-alert-complex-icon">&#xf07e;</i>
+                                    <span class="hony-alert-complex-content">字段内容</span>
+                                    <div class="hony-alert-complex-action">
+                                        <button class="hony-alert-complex-btn">按钮</button>
+                                        <i class="iconfont hony-icon-guanbi hony-alert-complex-close">&#xf062;</i>
+                                    </div>
+                                    </div>
+                                    <p class="hony-alert-complex-desc">字段内容</p>
+                                </div>
+                                
+                                <!-- 危险提示 -->
+                                <div class="hony-alert-complex hony-alert-complex-danger">
+                                    <div class="hony-alert-complex-header">
+                                    <i class="iconfont hony-icon-cuowu-filled hony-alert-complex-icon">&#xf07e;</i>
+                                    <span class="hony-alert-complex-content">字段内容</span>
+                                    <div class="hony-alert-complex-action">
+                                        <button class="hony-alert-complex-btn">按钮</button>
+                                        <i class="iconfont hony-icon-guanbi hony-alert-complex-close">&#xf062;</i>
+                                    </div>
+                                    </div>
+                                    <p class="hony-alert-complex-desc">字段内容</p>
+                                </div>
+                                
+                                <!-- 普通提示 -->
+                                <div class="hony-alert-complex hony-alert-complex-primary">
+                                    <div class="hony-alert-complex-header">
+                                    <i class="iconfont hony-icon-jinggao-filled hony-alert-complex-icon">&#xf07e;</i>
+                                    <span class="hony-alert-complex-content">字段内容</span>
+                                    <div class="hony-alert-complex-action">
+                                        <button class="hony-alert-complex-btn">按钮</button>
+                                        <i class="iconfont hony-icon-guanbi hony-alert-complex-close">&#xf062;</i>
+                                    </div>
+                                    </div>
+                                    <p class="hony-alert-complex-desc">字段内容</p>
+                                </div>
+                                </div>
+                            </div>
+  
+                        </div>
+                    </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+                <div class="right-nav">
+                    <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'button-styles');">主要按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-icon');">图标+按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-icon-only');">纯图标按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-levels');">按钮等级</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states');">主要按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states-secondary');">次要按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states-danger');">危险按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states-success');">安全按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states-warning');">警告按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-sizes');">小尺寸按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-sizes');">大尺寸按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-sizes');">常规尺寸按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-shapes');">按钮形状</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

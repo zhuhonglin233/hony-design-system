@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面包屑导航 - 桌面端组件</title>
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+    <link rel="stylesheet" href="breadcrumb.css">
+    <script src="../../overall/js/common.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                    <div class="content-main">
+                        <!-- 页面标题 -->
+                        <div class="page-header">
+                            <div class="design-code">design code 桌面端组件</div>
+                            <div class="page-title">面包屑导航</div>
+                            <div class="page-description">显示当前页面在系统层级结构的位置，并能返回之前任意层级的页面。</div>
+                        </div>
+
+                        <!-- 按钮样式 Section -->
+                        <div class="section">
+                            <div class="section-title">基础<span style="color: var(--primary-main-1);">样式</span></div>
+                            
+                            <!-- 基础面包屑导航 -->
+                            <div class="subsection" id="hony-breadcrumb-basic">
+                                <div class="subsection-title">基础面包屑导航</div>
+                                <div class="subsection-description">基础面包屑导航：显示当前页面在系统层级结构中的位置，支持返回任意上级页面，帮助用户了解所在位置。</div>
+                                <div class="component-container">
+                                    <div class="hony-breadcrumb-section">
+                                        <div class="hony-breadcrumb hony-breadcrumb-default">
+                                            <div class="hony-breadcrumb-item">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                            
+                                                    <span class="hony-breadcrumb-text">目录标题</span>
+                                                </a>
+                                            </div>
+                                            <div class="hony-breadcrumb-separator iconfont">&#xf064;</div>
+                                            <div class="hony-breadcrumb-item">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                
+                                                    <span class="hony-breadcrumb-text">目录标题</span>
+                                                </a>
+                                            </div>
+                                            <div class="hony-breadcrumb-separator iconfont">&#xf064;</div>
+                                            <div class="hony-breadcrumb-item">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                            
+                                                    <span class="hony-breadcrumb-text">目录标题</span>
+                                                </a>
+                                            </div>
+                                            <div class="hony-breadcrumb-separator iconfont">&#xf064;</div>
+                                            <div class="hony-breadcrumb-item">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                        
+                                                    <span class="hony-breadcrumb-text">目录标题</span>
+                                                </a>
+                                            </div>
+                                    
+                                            <div class="hony-breadcrumb-item active">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                                    <div class="hony-breadcrumb-separator iconfont">&#xf064;</div>
+                                    
+                                                    <span class="hony-breadcrumb-text active">目录标题</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 带图标面包屑导航 -->
+                            <div class="subsection" id="hony-breadcrumb-icon">
+                                <div class="subsection-title">带图标面包屑导航</div>
+                                <div class="subsection-description">基础面包屑导航：显示当前页面在系统层级结构中的位置，支持返回任意上级页面，帮助用户了解所在位置。</div>
+                                <div class="component-container">
+                                    <div class="hony-breadcrumb-section">
+                                        <div class="hony-breadcrumb hony-breadcrumb-default">
+                                            <div class="hony-breadcrumb-item">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                                    <span class="hony-breadcrumb-icon iconfont">&#xeb1a;</span>
+                                                    <span class="hony-breadcrumb-text">目录标题</span>
+                                                </a>
+                                            </div>
+                                            <div class="hony-breadcrumb-separator iconfont">&#xf064;</div>
+                                            <div class="hony-breadcrumb-item">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                                    <span class="hony-breadcrumb-icon iconfont">&#xea59;</span>
+                                                    <span class="hony-breadcrumb-text">目录标题</span>
+                                                </a>
+                                            </div>
+                                            <div class="hony-breadcrumb-separator iconfont">&#xf064;</div>
+                                            <div class="hony-breadcrumb-item">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                                    <span class="hony-breadcrumb-icon iconfont">&#xea59;</span>
+                                                    <span class="hony-breadcrumb-text">目录标题</span>
+                                                </a>
+                                            </div>
+                                            <div class="hony-breadcrumb-separator iconfont">&#xf064;</div>
+                                            <div class="hony-breadcrumb-item">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                                    <span class="hony-breadcrumb-icon iconfont">&#xea59;</span>
+                                                    <span class="hony-breadcrumb-text">目录标题</span>
+                                                </a>
+                                            </div>
+                                            <div class="hony-breadcrumb-separator iconfont">&#xf064;</div>
+                                            <div class="hony-breadcrumb-item active">
+                                                <a href="#" class="hony-breadcrumb-link">
+                                                    <span class="hony-breadcrumb-icon iconfont active">&#xea59;</span>
+                                                    <span class="hony-breadcrumb-text active">目录标题</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+                <div class="right-nav">
+                    <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'breadcrumb-basic');">基础面包屑导航</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'breadcrumb-icon');">带图标面包屑导航</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

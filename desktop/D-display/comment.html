@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>评论 Comment - 桌面端组件</title>
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+    <link rel="stylesheet" href="../A-system/button.css">
+    <link rel="stylesheet" href="../A-system/tab.css">
+    <link rel="stylesheet" href="avatar.css">
+    <link rel="stylesheet" href="badge.css">
+    <link rel="stylesheet" href="comment.css">
+    <script src="../../overall/js/common.js"></script>
+    <script src="comment.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                    <div class="content-main">
+                        <!-- 页面标题 -->
+                        <div class="page-header">
+                            <div class="design-code">design code 桌面端组件</div>
+                            <div class="page-title">评论</div>
+                            <div class="page-description">评论组件用于展示用户评论、文章帖子和回复内容，支持嵌套回复、点赞、分享等交互功能。</div>
+                        </div>
+
+                        <!-- 文章帖子类 -->
+                        <div class="section" id="article-comment">
+                            <div class="section-title">文章帖子类<span style="color: var(--primary-main-1);">样式</span></div>
+                            <!-- 评论 -->
+                            <div class="subsection">                           
+                                <div class="subsection-title">文章卡片</div>
+                                <div class="subsection-description">文章卡片：展示用户发布的文章或帖子内容，包含头像、昵称、标签、正文和点赞评论等操作按钮。</div>
+                                <div class="component-container">
+                                    <div class="hony-article-card">
+                                        <!-- 头像区域 -->
+                                        <div class="hony-article-avatar-wrapper">
+                                            <div class="hony-avatar hony-article-avatar">                         
+                                                <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                                </div>
+                                            </div>
+                                            <div class="hony-avatar-badge"></div>
+                                        </div>
+                                        <!-- 内容区域 -->
+                                        <div class="hony-article-content">
+                                            <!-- 头部 -->
+                                            <div class="hony-article-header">
+                                                <span class="hony-article-nickname">昵称</span>
+                                                <div class="hony-tab hony-tab-primary-light hony-tab-sm">
+                                                
+                                                <div>VIP</div>
+                                                
+                                            </div>
+                                        
+                                            </div>
+                                            <span class="hony-article-title">昵称</span>
+                                            <!-- 正文区域 -->
+                                            <div class="hony-article-body">
+                                                员工从600人发展到逾5000人，其中70%以上为研发技术人员，成为拥有38家子公司的市值超百亿集团公司，在全国所有省级行政区（除港澳台外）均设有分支机构，聚焦政府智慧财政财务、数字采购、智慧城市+数字乡村三大核心业务板块，深入研究大数据、云计算、区块链、人工智能等前沿科技，助力政府创新城市治理新模式，助推产业数字化升级，成为全国数字经济产业的领先企业。
+                                            </div>
+                                            <!-- 底部操作 -->
+                                            <div class="hony-article-footer">
+                                                <div class="hony-article-meta">
+                                                    <span class="hony-article-time">20小时前</span>
+                                                    <span class="hony-article-status">发布</span>
+                                                </div>
+                                                <div class="hony-article-actions">
+                                                    <span class="hony-article-action">
+                                                        <span class="hony-article-action-icon">👍</span>
+                                                        <span class="hony-article-action-text">1000</span>
+                                                    </span>
+                                                    <span class="hony-article-action">
+                                                        <span class="hony-article-action-icon">💬</span>
+                                                        <span class="hony-article-action-text">1000</span>
+                                                    </span>
+                                                    <span class="hony-article-action">
+                                                        <span class="hony-article-action-icon">🔗</span>
+                                                        <span class="hony-article-action-text">1000</span>
+                                                    </span>
+                                                </div>
+                                            </div>         
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- 评论回复 -->
+                            <div class="subsection">
+                                <div class="subsection-title">文章卡片</div>
+                                <div class="subsection-description">文章卡片：展示用户发布的文章或帖子内容，包含头像、昵称、标签、正文和点赞评论等操作按钮。</div>
+                                <div class="component-container">
+                                    <div class="hony-article-card">
+                                        <!-- 头像区域 -->
+                                        <div class="hony-article-avatar-wrapper">
+                                            <div class="hony-avatar hony-article-avatar">                         
+                                                <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                                </div>
+                                            </div>
+                                            <div class="hony-avatar-badge"></div>
+                                        </div>
+                                        <!-- 内容区域 -->
+                                        <div class="hony-article-content">
+                                            <!-- 头部 -->
+                                            <div class="hony-article-header">
+                                                <span class="hony-article-nickname">昵称</span>
+                                                <div class="hony-tab hony-tab-primary-light hony-tab-sm">
+                                                
+                                                <div>VIP</div>
+                                                
+                                                </div>
+                                        
+                                            </div>
+                                            <span class="hony-article-title">昵称</span>
+                                            <!-- 正文区域 -->
+                                            <div class="hony-article-body">
+                                                员工从600人发展到逾5000人，其中70%以上为研发技术人员，成为拥有38家子公司的市值超百亿集团公司，在全国所有省级行政区（除港澳台外）均设有分支机构，聚焦政府智慧财政财务、数字采购、智慧城市+数字乡村三大核心业务板块，深入研究大数据、云计算、区块链、人工智能等前沿科技，助力政府创新城市治理新模式，助推产业数字化升级，成为全国数字经济产业的领先企业。
+                                            </div>
+                                            <!-- 底部操作 -->
+                                            <div class="hony-article-footer">
+                                                <div class="hony-article-meta">
+                                                    <span class="hony-article-time">20小时前</span>
+                                                    <span class="hony-article-status">发布</span>
+                                                </div>
+                                                <div class="hony-article-actions">
+                                                    <span class="hony-article-action">
+                                                        <span class="hony-article-action-icon">👍</span>
+                                                        <span class="hony-article-action-text">1000</span>
+                                                    </span>
+                                                    <span class="hony-article-action">
+                                                        <span class="hony-article-action-icon">💬</span>
+                                                        <span class="hony-article-action-text">1000</span>
+                                                    </span>
+                                                    <span class="hony-article-action">
+                                                        <span class="hony-article-action-icon">🔗</span>
+                                                        <span class="hony-article-action-text">1000</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- 回复卡片 -->
+                                            <div class="hony-reply-card hony-back">
+                                                            <!-- 头像 -->
+                                                            <div class="hony-reply-avatar-wrapper">
+                                                                <div class="hony-avatar">
+                                                                <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                                                </div>
+                                                            </div>
+                                                            <!-- 内容 -->
+                                                            <div class="hony-reply-content">
+                                                                <div class="hony-reply-header">
+                                                                    <span class="hony-reply-nickname">昵称</span>
+                                                                    <div class="hony-tab hony-tab-primary-light hony-tab-sm">
+                                                
+                                                                        <div>VIP</div>
+                                                
+                                                                    </div>
+                                                                </div>
+                                                                <div class="hony-reply-body">
+                                                                    就很棒～！
+                                                                </div>
+                                                                <div class="hony-reply-footer">
+                                                                    <div class="hony-reply-meta">
+                                                                        <span class="hony-reply-time">20小时前</span>
+                                                                        <span class="hony-reply-publish">发布</span>
+                                                                    </div>
+                                                                    <div class="hony-reply-actions">
+                                                                        <span class="hony-reply-action">
+                                                                            <span>👍</span>
+                                                                            <span>1000</span>
+                                                                        </span>
+                                                                        <span class="hony-reply-action">
+                                                                            <span>💬</span>
+                                                                            <span>1000</span>
+                                                                        </span>
+                                                                        <span class="hony-reply-action">
+                                                                            <span>🔗</span>
+                                                                            <span>1000</span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                            </div>            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 评论回复 -->
+                            <div class="subsection">
+                                <div class="subsection-title">文章卡片</div>
+                                <div class="subsection-description">文章卡片：展示用户发布的文章或帖子内容，包含头像、昵称、标签、正文和点赞评论等操作按钮。</div>
+                                <div class="component-container">
+                                    <div class="hony-article-card">
+                                        <!-- 头像区域 -->
+                                        <div class="hony-article-avatar-wrapper">
+                                            <div class="hony-avatar hony-article-avatar">                         
+                                                <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                                </div>
+                                            </div>
+                                            <div class="hony-avatar-badge"></div>
+                                        </div>
+                                        <!-- 内容区域 -->
+                                        <div class="hony-article-content">
+                                            <!-- 头部 -->
+                                            <div class="hony-article-header">
+                                                <span class="hony-article-nickname">昵称</span>
+                                                <div class="hony-tab hony-tab-primary-light hony-tab-sm">
+                                                
+                                                <div>VIP</div>
+                                                
+                                                </div>
+                                        
+                                            </div>
+                                            <span class="hony-article-title">昵称</span>
+                                            <!-- 正文区域 -->
+                                            <div class="hony-article-body">
+                                                员工从600人发展到逾5000人，其中70%以上为研发技术人员，成为拥有38家子公司的市值超百亿集团公司，在全国所有省级行政区（除港澳台外）均设有分支机构，聚焦政府智慧财政财务、数字采购、智慧城市+数字乡村三大核心业务板块，深入研究大数据、云计算、区块链、人工智能等前沿科技，助力政府创新城市治理新模式，助推产业数字化升级，成为全国数字经济产业的领先企业。
+                                            </div>
+                                            <!-- 底部操作 -->
+                                            <div class="hony-article-footer">
+                                                <div class="hony-article-meta">
+                                                    <span class="hony-article-time">20小时前</span>
+                                                    <span class="hony-article-status">发布</span>
+                                                </div>
+                                                <div class="hony-article-actions">
+                                                    <span class="hony-article-action">
+                                                        <span class="hony-article-action-icon">👍</span>
+                                                        <span class="hony-article-action-text">1000</span>
+                                                    </span>
+                                                    <span class="hony-article-action">
+                                                        <span class="hony-article-action-icon">💬</span>
+                                                        <span class="hony-article-action-text">1000</span>
+                                                    </span>
+                                                    <span class="hony-article-action">
+                                                        <span class="hony-article-action-icon">🔗</span>
+                                                        <span class="hony-article-action-text">1000</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="hony-comment-replies hony-back">
+                                                <!-- 回复输入框 -->
+                                                <div class="hony-comment-input-wrapper">
+                                                    <!-- 头像 -->
+                                                    <div class="hony-reply-avatar-wrapper">
+                                                                            <div class="hony-avatar">
+                                                                            <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                                                            </div>
+                                                    </div>
+                                                    <!-- 输入区域 -->
+                                                    <div class="hony-comment-input-area">
+                                                        <textarea 
+                                                            class="hony-comment-textarea" 
+                                                            placeholder="请输入"
+                                                            maxlength="200"
+                                                            id="hony-comment-input"
+                                                        ></textarea>
+                                                        <div class="hony-comment-input-footer">
+                                                            <span class="hony-comment-word-count" id="word-count">0/200</span>
+                                                            <div class="hony-comment-input-actions">
+                                                                <button class="hony-btn hony-btn-primary hony-btn-sm">发布</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>        
+                                                <!-- 回复卡片 -->
+                                                <div class="hony-reply-card">
+                                                                <!-- 头像 -->
+                                                                <div class="hony-reply-avatar-wrapper">
+                                                                    <div class="hony-avatar">
+                                                                    <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                                                    </div>
+                                                                </div>
+                                                                <!-- 内容 -->
+                                                                <div class="hony-reply-content">
+                                                                    <div class="hony-reply-header">
+                                                                        <span class="hony-reply-nickname">昵称</span>
+                                                                        <div class="hony-tab hony-tab-primary-light hony-tab-sm">
+                                                    
+                                                                            <div>VIP</div>
+                                                    
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hony-reply-body">
+                                                                        就很棒～！
+                                                                    </div>
+                                                                    <div class="hony-reply-footer">
+                                                                        <div class="hony-reply-meta">
+                                                                            <span class="hony-reply-time">20小时前</span>
+                                                                            <span class="hony-reply-publish">发布</span>
+                                                                        </div>
+                                                                        <div class="hony-reply-actions">
+                                                                            <span class="hony-reply-action">
+                                                                                <span>👍</span>
+                                                                                <span>1000</span>
+                                                                            </span>
+                                                                            <span class="hony-reply-action">
+                                                                                <span>💬</span>
+                                                                                <span>1000</span>
+                                                                            </span>
+                                                                            <span class="hony-reply-action">
+                                                                                <span>🔗</span>
+                                                                                <span>1000</span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                </div>  
+                                            </div>  
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+                <div class="right-nav">
+                    <div class="right-nav-items">
+                        <div class="right-nav-item" onclick="document.getElementById('button-styles').scrollIntoView({behavior: 'smooth'});">按钮样式</div>
+                        <div class="right-nav-item" onclick="document.getElementById('button-icon').scrollIntoView({behavior: 'smooth'});">图标+按钮</div>
+                        <div class="right-nav-item" onclick="document.getElementById('button-icon-only').scrollIntoView({behavior: 'smooth'});">纯图标按钮</div>
+                        <div class="right-nav-item" onclick="document.getElementById('button-levels').scrollIntoView({behavior: 'smooth'});">按钮等级</div>
+                        <div class="right-nav-item active" onclick="document.getElementById('button-states').scrollIntoView({behavior: 'smooth'});">主要按钮状态</div>
+                        <div class="right-nav-item" onclick="document.getElementById('button-states-secondary').scrollIntoView({behavior: 'smooth'});">次要按钮状态</div>
+                        <div class="right-nav-item" onclick="document.getElementById('button-states-danger').scrollIntoView({behavior: 'smooth'});">危险按钮状态</div>
+                        <div class="right-nav-item" onclick="document.getElementById('button-states-success').scrollIntoView({behavior: 'smooth'});">安全按钮状态</div>
+                        <div class="right-nav-item" onclick="document.getElementById('button-states-warning').scrollIntoView({behavior: 'smooth'});">警告按钮状态</div>
+                        <div class="right-nav-item" onclick="document.getElementById('button-sizes').scrollIntoView({behavior: 'smooth'});">按钮尺寸</div>
+                        <div class="right-nav-item" onclick="document.getElementById('button-shapes').scrollIntoView({behavior: 'smooth'});">按钮形状</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

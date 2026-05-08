@@ -1,0 +1,383 @@
+/* ========================================
+   SLIDER 滑块组件样式
+   使用 sl- 前缀避免样式冲突
+   ======================================== */
+
+/* 滑块容器 - 横向 */
+.hony-slider {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    min-width: 200px;
+    width: 100%;
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+}
+
+.hony-slider.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.hony-slider.disabled .hony-slider-track {
+    background: var(--grey-border-1);
+}
+
+.hony-slider.disabled .hony-slider-fill {
+    background: var(--grey-text-4);
+}
+
+.hony-slider.disabled .hony-slider-thumb {
+    border-color: var(--grey-text-4);
+    cursor: not-allowed;
+}
+
+.hony-slider.disabled .hony-input {
+    background: var(--grey-face-2);
+    color: var(--grey-text-4);
+    cursor: not-allowed;
+}
+
+/* 竖向滑块容器 */
+.hony-slider-vertical {
+    flex-direction: column;
+    min-width: auto;
+    max-width: none;
+    gap: var(--spacing-md);
+    width: 180px;
+    height: 240px;
+}
+
+.hony-vertical-container {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-4xl);
+    height: 320px;
+}
+
+/* 滑块轨道 */
+.hony-slider-track {
+    position: relative;
+    flex: 1;
+    height: 6px;
+    background: var(--grey-border-1);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+}
+
+.hony-slider-vertical .hony-slider-track {
+    width: 6px;
+    height: 100%;
+    min-height: 120px;
+}
+
+/* 滑块填充 */
+.hony-slider-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--primary-main-1);
+    border-radius: var(--radius-full);
+    transition: width 0.15s ease, height 0.15s ease;
+}
+
+.hony-slider-vertical .hony-slider-fill {
+    width: 100% !important;
+    bottom: 0;
+    top: auto;
+}
+
+/* 范围滑块填充 */
+.hony-slider-range .hony-slider-fill {
+    background: var(--primary-main-1);
+}
+
+/* 滑块滑块/拇指 */
+.hony-slider-thumb {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--primary-main-1);
+    border-radius: 50%;
+    background: #fff;
+    cursor: grab;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    z-index: 1;
+}
+
+.hony-slider-thumb:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+    box-shadow: 0 0 0 4px var(--primary-face-1);
+}
+
+.hony-slider-thumb:active {
+    cursor: grabbing;
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 0 6px var(--primary-face-2);
+}
+
+.hony-slider-vertical .hony-slider-thumb {
+    left: 50%;
+    transform: translate(-50%, 50%);
+    top: auto;
+    bottom: 0;
+}
+
+.hony-slider-vertical .hony-slider-thumb:hover {
+    transform: translate(-50%, 50%) scale(1.15);
+}
+
+/* 范围滑块的两个滑块 */
+.hony-slider-thumb-start {
+    z-index: 2;
+}
+
+.hony-slider-thumb-end {
+    z-index: 3;
+}
+
+/* 滑块输入框 */
+.hony-slider-input {
+    display: flex;
+    align-items: center;
+}
+
+.hony-slider-inputs {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.hony-input {
+    width: 48px;
+    height: 32px;
+    padding: 0 var(--spacing-sm);
+    border: 1px solid var(--grey-border-2);
+    border-radius: var(--radius-base);
+    font-size: var(--font-size-sm);
+    color: var(--grey-text-1);
+    text-align: center;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.hony-input:focus {
+    outline: none;
+    border-color: var(--primary-main-1);
+    box-shadow: 0 0 0 2px var(--primary-2-TPY);
+}
+
+.hony-input:hover:not(:disabled) {
+    border-color: var(--primary-main-1);
+}
+
+.hony-range-separator {
+    color: var(--grey-text-4);
+    font-size: var(--font-size-sm);
+}
+
+/* 隐藏number输入框的箭头 */
+.hony-input::-webkit-outer-spin-button,
+.hony-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.hony-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* 刻度容器 */
+.hony-slider-marks {
+    padding-bottom: 24px;
+}
+
+.hony-slider-marks-container {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    right: 0;
+    height: 16px;
+    font-size: var(--font-size-xs);
+    color: var(--grey-text-4);
+}
+
+.hony-slider-marks-container .hony-mark-item {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.hony-slider-marks-container .hony-mark-item::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 4px;
+    background: var(--grey-border-2);
+    margin-bottom: 4px;
+}
+
+.hony-slider-marks-container .hony-mark-item.active::before {
+    background: var(--primary-main-1);
+}
+
+.hony-vertical-marks {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 12px;
+    width: auto;
+    height: 100%;
+}
+
+.hony-vertical-marks .hony-mark-item {
+    position: absolute;
+    transform: none;
+}
+
+.hony-vertical-marks .hony-mark-item::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 2px;
+    background: var(--grey-border-2);
+    margin-right: 8px;
+}
+
+.hony-vertical-marks .hony-mark-item.active::before {
+    background: var(--primary-main-1);
+}
+
+/* 步长刻度 */
+.hony-slider-step-marks {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6px;
+}
+
+.hony-step-mark {
+    width: 2px;
+    height: 4px;
+    background: var(--grey-border-2);
+    border-radius: 1px;
+}
+
+/* 气泡弹窗 */
+.hony-slider-popup {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+    padding: 4px 8px;
+    background: var(--grey-text-1);
+    color: #fff;
+    font-size: var(--font-size-xs);
+    border-radius: var(--radius-base);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-fast), visibility var(--transition-fast);
+    pointer-events: none;
+}
+
+.hony-slider-popup::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid transparent;
+    border-top-color: var(--grey-text-1);
+}
+
+.hony-slider-thumb:hover .hony-slider-popup,
+.hony-slider-thumb.active .hony-slider-popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 竖向滑块气泡定位 */
+.hony-slider-vertical .hony-slider-popup {
+    bottom: auto;
+    left: auto;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-bottom: 0;
+    margin-right: 8px;
+}
+
+.hony-slider-vertical .hony-slider-popup::after {
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    border: 4px solid transparent;
+    border-left-color: var(--grey-text-1);
+}
+
+/* 滑块拖动中的样式 */
+.hony-slider.hony-dragging .hony-slider-thumb {
+    cursor: grabbing;
+}
+
+.hony-slider.hony-dragging .hony-slider-thumb::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(22, 93, 255, 0.1);
+}
+
+/* 滑块不同状态 */
+.hony-slider:not(.disabled):not(.hony-slider-vertical) .hony-slider-track:hover .hony-slider-fill {
+    background: var(--primary-main-2);
+}
+
+.hony-slider:not(.disabled):not(.hony-slider-vertical) .hony-slider-track:hover .hony-slider-thumb {
+    border-color: var(--primary-main-2);
+}
+
+/* 数字输入框滑块样式调整 */
+.hony-slider-with-input {
+    gap: var(--spacing-xl);
+}
+
+.hony-slider-with-input .hony-slider-track {
+    min-width: 160px;
+}
+
+/* 自定义渐变滑块 */
+.hony-slider-custom-gradient .hony-slider-fill {
+    background: linear-gradient(90deg, var(--primary-main-1), var(--success-main-1)) !important;
+}
+
+/* 滑块焦点状态 */
+.hony-slider:focus-within .hony-slider-thumb {
+    box-shadow: 0 0 0 2px var(--primary-face-1);
+}
+
+/* 滑块刻度激活状态 */
+.hony-slider-marks .hony-slider-track {
+    margin-bottom: 8px;
+}

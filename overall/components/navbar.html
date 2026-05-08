@@ -1,0 +1,49 @@
+<!-- 顶部导航栏组件 -->
+<nav class="navbar">
+    <div class="navbar-content">
+        <!-- Logo -->
+        <div class="logo" onclick="navigateTo('index.html')">
+            <img class="logo-icon" src="overall/images/LOGO.png" alt="Hony Design Logo">
+            <div class="logo-text">Hony Design</div>
+        </div>
+
+        <!-- 导航菜单 -->
+        <div class="nav-menu">
+        <!-- 搜索框 -->
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="搜索组件...">
+            <span class="search-icon iconfont">&#xe963;</span>
+            <span class="search-clear iconfont" style="display: none;" onclick="clearSearch(this)">&#xf062;</span>
+            <div class="search-dropdown" style="display: none;">
+                <div class="search-dropdown-header">搜索结果</div>
+                <div class="search-dropdown-list" id="search-results"></div>
+            </div>
+        </div>
+            <div class="nav-item" onclick="navigateTo('Specification/color.html')">
+                <div class="nav-item-inner">
+                    <div class="nav-text">设计规范</div>
+                </div>
+            </div>
+            <div class="nav-item" onclick="navigateTo('desktop/A-system/button.html')">
+                <div class="nav-item-inner">
+                    <div class="nav-text">桌面端组件</div>
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="nav-item-inner">
+                    <div class="nav-text">移动端组件</div>
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="nav-item-inner">
+                    <div class="nav-text">资源</div>
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="nav-item-inner">
+                    <div class="nav-text">关于</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

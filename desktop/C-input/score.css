@@ -1,0 +1,235 @@
+/* 评分组件基础样式 */
+.hony-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 240px;
+  height: 32px;
+  min-height: 24px;
+  max-height: 40px;
+  font-family: var(--font-family);
+}
+
+/* 星星评分容器 */
+.hony-rating-stars {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  align-self: stretch;
+  gap: 12px;
+}
+
+/* 星星项目 */
+.hony-star-item {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  color: var(--grey-border-2);
+  cursor: pointer;
+  line-height: 24px;
+  text-align: center;
+  font-family: 'iconfont';
+}
+
+.hony-star-item::before {
+  content: '\f08c';
+}
+
+.hony-star-item.hony-full::before {
+  color: var(--warning-main-1);
+}
+
+.hony-star-item.hony-half::before {
+  content: '\f08c';
+  background: linear-gradient(90deg, var(--warning-main-1) 50%, var(--grey-border-2) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 心形评分容器 */
+.hony-rating-hearts {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  align-self: stretch;
+  gap: 12px;
+}
+
+/* 心形项目 */
+.hony-heart-item {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  color: var(--grey-border-2);
+  cursor: pointer;
+  line-height: 24px;
+  text-align: center;
+  font-family: 'iconfont';
+}
+
+.hony-heart-item::before {
+  content: '\f08f';
+}
+
+.hony-heart-item.hony-full::before {
+  color: var(--danger-main-1);
+}
+
+.hony-heart-item.hony-half::before {
+  content: '\f08f';
+  background: linear-gradient(90deg, var(--danger-main-1) 50%, var(--grey-border-2) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 评分数值 */
+.hony-rating-value {
+  flex-shrink: 0;
+  width: 24px;
+  text-align: right;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: var(--grey-text-3);
+  font-size: 14px;
+}
+
+/* 满意度评分 */
+.hony-rating-satisfaction {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 280px;
+  height: 40px;
+  min-height: 32px;
+  max-height: 48px;
+  font-family: var(--font-family);
+}
+
+/* 满意度表情容器 */
+.hony-rating-emojis {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 满意度表情 */
+.hony-rating-emoji {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 很不满意 */
+.hony-rating-emoji.hony-emoji-1 {
+  background-image: url('../../overall/icons/很不满意-未选中.png');
+}
+
+.hony-rating-emoji.hony-emoji-1.hony-active {
+  background-image: url('../../overall/icons/很不满意-选中.png');
+}
+
+/* 不满意 */
+.hony-rating-emoji.hony-emoji-2 {
+  background-image: url('../../overall/icons/不满意-未选中.png');
+}
+
+.hony-rating-emoji.hony-emoji-2.hony-active {
+  background-image: url('../../overall/icons/不满意-选中.png');
+}
+
+/* 一般 */
+.hony-rating-emoji.hony-emoji-3 {
+  background-image: url('../../overall/icons/一般-未选中.png');
+}
+
+.hony-rating-emoji.hony-emoji-3.hony-active {
+  background-image: url('../../overall/icons/一般-选中.png');
+}
+
+/* 满意 */
+.hony-rating-emoji.hony-emoji-4 {
+  background-image: url('../../overall/icons/满意-未选中.png');
+}
+
+.hony-rating-emoji.hony-emoji-4.hony-active {
+  background-image: url('../../overall/icons/满意-选中.png');
+}
+
+/* 非常满意 */
+.hony-rating-emoji.hony-emoji-5 {
+  background-image: url('../../overall/icons/非常满意-未选中.png');
+}
+
+.hony-rating-emoji.hony-emoji-5.hony-active {
+  background-image: url('../../overall/icons/非常满意-选中.png');
+}
+
+.hony-rating-emoji:hover {
+  transform: scale(1.1);
+}
+
+.hony-rating-emoji.hony-active {
+  transform: scale(1.1);
+}
+
+/* 满意度文字 */
+.hony-rating-text {
+  flex-shrink: 0;
+  width: 60px;
+  text-align: right;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: var(--grey-text-3);
+  font-size: 14px;
+}
+
+/* 禁用状态 */
+.hony-rating.hony-disabled .hony-star-item,
+.hony-rating.hony-disabled .hony-heart-item,
+.hony-rating-satisfaction.hony-disabled .hony-rating-emoji {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hony-rating,
+  .hony-rating-satisfaction {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .hony-rating-stars,
+  .hony-rating-emojis,
+  .hony-rating-hearts {
+    gap: 12px;
+  }
+
+  .hony-star-item,
+  .hony-rating-emoji,
+  .hony-heart-item {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+  }
+
+  .hony-rating-value,
+  .hony-rating-text {
+    font-size: 12px;
+  }
+}

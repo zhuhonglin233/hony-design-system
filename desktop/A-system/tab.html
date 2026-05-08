@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签 - 桌面端组件</title>
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+    <link rel="stylesheet" href="tab.css">
+    <script src="../../overall/js/common.js"></script>
+</head>
+<body>
+    <div class="background-decoration"></div>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                    <div class="content-main">
+                        <!-- 页面标题 -->
+                        <div class="page-header">
+                            <div class="design-code">design code 桌面端组件</div>
+                            <div class="page-title">标签</div>
+                            <div class="page-description">标签是对事物进行分类的标记，用于标记已完成的操作或标记需要处理的内容。</div>
+                        </div>
+                        <!-- 标签样式 -->
+                        <div class="hony-tab-content">
+                            <div class="section">
+                                <div class="section-title">标签<span style="color: var(--primary-main-1);">样式</span></div>
+                                <!-- 基础样式 -->
+                                <div class="subsection" id="tab-basic">
+                                    <div class="subsection-title">基础样式</div>
+                                    <div class="subsection-description">基础标签提供五种颜色主题（主色、危险、成功、警告、次要），每种主题包含填充、浅色背景、描边和纯文字四种样式，满足不同场景的视觉需求。</div>
+                                    <div class="component-container">
+                                        <div class="hony-tab-row">
+                                            <div class="hony-tab-group">
+                                                <div class="hony-tab hony-tab-primary">标签</div>
+                                                <div class="hony-tab hony-tab-danger">标签</div>
+                                                <div class="hony-tab hony-tab-success">标签</div>
+                                                <div class="hony-tab hony-tab-warning">标签</div>
+                                                <div class="hony-tab hony-tab-secondary">标签</div>
+                                            </div>
+                                            <div class="hony-tab-group">
+                                                <div class="hony-tab hony-tab-primary-light">标签</div>
+                                                <div class="hony-tab hony-tab-danger-light">标签</div>
+                                                <div class="hony-tab hony-tab-success-light">标签</div>
+                                                <div class="hony-tab hony-tab-warning-light">标签</div>
+                                                <div class="hony-tab hony-tab-secondary-light">标签</div>
+                                            </div>
+                                            <div class="hony-tab-group">
+                                                <div class="hony-tab hony-tab-primary-outline">标签</div>
+                                                <div class="hony-tab hony-tab-danger-outline">标签</div>
+                                                <div class="hony-tab hony-tab-success-outline">标签</div>
+                                                <div class="hony-tab hony-tab-warning-outline">标签</div>
+                                                <div class="hony-tab hony-tab-secondary-outline">标签</div>
+                                            </div>
+                                            <div class="hony-tab-group">
+                                                <div class="hony-tab hony-tab-primary-text">标签</div>
+                                                <div class="hony-tab hony-tab-danger-text">标签</div>
+                                                <div class="hony-tab hony-tab-success-text">标签</div>
+                                                <div class="hony-tab hony-tab-warning-text">标签</div>
+                                                <div class="hony-tab hony-tab-secondary-text">标签</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 标签+图标+可删除 -->
+                                <div class="subsection" id="hony-tab-icon-closable">
+                                    <div class="subsection-title">标签+图标+可删除</div>
+                                    <div class="subsection-description">标签可组合图标和删除按钮使用，图标增强视觉识别，删除按钮允许用户移除标签，适用于标签管理等交互场景。</div>
+                                    <div class="component-container">
+                                        <div class="hony-tab-row">
+                                            <div class="hony-tab-group">
+                                                <div class="hony-tab hony-tab-primary">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-danger">
+                                                    <div class="hony-tab-icon iconfont icon-lajitong"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-success">
+                                                    <div class="hony-tab-icon iconfont icon-erweima"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-warning">
+                                                    <div class="hony-tab-icon iconfont icon-anquan1"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-secondary">
+                                                    <div class="hony-tab-icon iconfont icon-xiugai"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hony-tab-group">
+                                                <div class="hony-tab hony-tab-primary-light">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-danger-light">
+                                                    <div class="hony-tab-icon iconfont icon-lajitong"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-success-light">
+                                                    <div class="hony-tab-icon iconfont icon-erweima"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-warning-light">
+                                                    <div class="hony-tab-icon iconfont icon-anquan1"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-secondary-light">
+                                                    <div class="hony-tab-icon iconfont icon-xiugai"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hony-tab-group">
+                                                <div class="hony-tab hony-tab-primary-outline">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签1</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-danger-outline">
+                                                    <div class="hony-tab-icon iconfont icon-lajitong"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-success-outline">
+                                                    <div class="hony-tab-icon iconfont icon-erweima"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-warning-outline">
+                                                    <div class="hony-tab-icon iconfont icon-anquan1"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-secondary-outline">
+                                                    <div class="hony-tab-icon iconfont icon-xiugai"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hony-tab-group">
+                                                <div class="hony-tab hony-tab-primary-text">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-danger-text">
+                                                    <div class="hony-tab-icon iconfont icon-lajitong"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-success-text">
+                                                    <div class="hony-tab-icon iconfont icon-erweima"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-warning-text">
+                                                    <div class="hony-tab-icon iconfont icon-anquan1"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <div class="hony-tab hony-tab-secondary-text">
+                                                    <div class="hony-tab-icon iconfont icon-xiugai"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 标签尺寸 -->
+                            <div class="section">
+                                <div class="section-title">标签<span style="color: var(--primary-main-1);">尺寸</span></div>
+                                <!-- 小标签 Section -->
+                                <div class="subsection" id="hony-tab-size-small">
+                                    <div class="subsection-title">小标签</div>
+                                    <div class="subsection-description">小标签：图标12px，文字12px，高度20px，适合在紧凑空间或列表中使用。</div>
+                                    <!-- 小标签 Section -->
+                                    <div class="component-container">
+                                        <div class="hony-tab-row">
+                                            <!-- 填充小标签 Section -->
+                                            <div class="hony-tab-group">
+                                                <!-- 主题小标签 Section -->
+                                                <div class="hony-tab hony-tab-primary hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 次要小标签 Section -->
+                                                <div class="hony-tab hony-tab-secondary hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 危险小标签 Section -->
+                                                <div class="hony-tab hony-tab-danger hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 成功小标签 Section -->
+                                                <div class="hony-tab hony-tab-success hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 警告底色小标签 Section -->
+                                                <div class="hony-tab hony-tab-warning hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+                                            <!-- 底色标签 Section -->
+                                            <div class="hony-tab-group">
+                                                <!-- 主题小标签 Section -->
+                                                <div class="hony-tab hony-tab-primary-light hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 次要小标签 Section -->
+                                                <div class="hony-tab hony-tab-secondary-light hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 危险小标签 Section -->
+                                                <div class="hony-tab hony-tab-danger-light hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 成功小标签 Section -->
+                                                <div class="hony-tab hony-tab-success-light hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 警告小标签 Section -->
+                                                <div class="hony-tab hony-tab-warning-light hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+                                            <!-- 描边标签 Section -->
+                                            <div class="hony-tab-group">
+                                                <!-- 主题小标签 Section -->
+                                                <div class="hony-tab hony-tab-primary-outline hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 次要小标签 Section -->
+                                                <div class="hony-tab hony-tab-secondary-outline hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 危险小标签 Section -->
+                                                <div class="hony-tab hony-tab-danger-outline hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 成功小标签 Section -->
+                                                <div class="hony-tab hony-tab-success-outline hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 警告小标签 Section -->
+                                                <div class="hony-tab hony-tab-warning-outline hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+                                            <!-- 文字标签 Section -->
+                                            <div class="hony-tab-group">
+                                                <!-- 主题小标签 Section -->
+                                                <div class="hony-tab hony-tab-primary-text hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 次要小标签 Section -->
+                                                <div class="hony-tab hony-tab-secondary-text hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 危险小标签 Section -->
+                                                <div class="hony-tab hony-tab-danger-text hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 成功小标签 Section -->
+                                                <div class="hony-tab hony-tab-success-text hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 警告小标签 Section -->
+                                                <div class="hony-tab hony-tab-warning-text hony-tab-sm">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 常规标签 Section -->
+                                <div class="subsection" id="hony-tab-size-small">
+                                    <div class="subsection-title">常规标签</div>
+                                    <div class="subsection-description">常规标签：图标14px，文字14px，高度24px，是最常用的标签尺寸，适用于大多数场景。</div>
+                                    <!-- 常规标签 Section -->
+                                    <div class="component-container">
+                                        <div class="hony-tab-row">
+                                            <!-- 填充小标签 Section -->
+                                            <div class="hony-tab-group">
+                                                <!-- 主题标签 Section -->
+                                                <div class="hony-tab hony-tab-primary">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 次要标签 Section -->
+                                                <div class="hony-tab hony-tab-secondary">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 危险标签 Section -->
+                                                <div class="hony-tab hony-tab-danger">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 成功标签 Section -->
+                                                <div class="hony-tab hony-tab-success">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 警告标签 Section -->
+                                                <div class="hony-tab hony-tab-warning">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+                                            <!-- 底色小标签 Section -->
+                                            <div class="hony-tab-group">
+                                                <!-- 主题标签 Section -->
+                                                <div class="hony-tab hony-tab-primary-light">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 次要标签 Section -->
+                                                <div class="hony-tab hony-tab-secondary-light">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 危险标签 Section -->
+                                                <div class="hony-tab hony-tab-danger-light">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 成功标签 Section -->
+                                                <div class="hony-tab hony-tab-success-light">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 警告标签 Section -->
+                                                <div class="hony-tab hony-tab-warning-light">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+                                            <!-- 描边小标签 Section -->
+                                            <div class="hony-tab-group">
+                                                <!-- 主题标签 Section -->
+                                                <div class="hony-tab hony-tab-primary-outline">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 次要标签 Section -->
+                                                <div class="hony-tab hony-tab-secondary-outline">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 危险小标签 Section -->
+                                                <div class="hony-tab hony-tab-danger-outline">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 成功标签 Section -->
+                                                <div class="hony-tab hony-tab-success-outline">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 警告标签 Section -->
+                                                <div class="hony-tab hony-tab-warning-outline">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+                                            <!-- 文字小标签 Section -->
+                                            <div class="hony-tab-group">
+                                                <!-- 主题标签 Section -->
+                                                <div class="hony-tab hony-tab-primary-text">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 次要标签 Section -->
+                                                <div class="hony-tab hony-tab-secondary-text">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 危险标签 Section -->
+                                                <div class="hony-tab hony-tab-danger-text">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 成功标签 Section -->
+                                                <div class="hony-tab hony-tab-success-text">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 警告标签 Section -->
+                                                <div class="hony-tab hony-tab-warning-text">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 大标签 Section -->
+                                <div class="subsection" id="hony-tab-size-small">
+                                    <div class="subsection-title">大标签</div>
+                                    <div class="subsection-description">大标签：图标16px，文字16px，高度32px，适合需要突出显示或包含较长文本的场景。</div>
+                                    <!-- 大标签 Section -->
+                                    <div class="component-container">
+                                        <div class="hony-tab-row">
+                                            <!-- 填充大标签 Section -->
+                                            <div class="hony-tab-group">
+                                                <!-- 主题标签 Section -->
+                                                <div class="hony-tab hony-tab-primary hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 次要标签 Section -->
+                                                <div class="hony-tab hony-tab-secondary hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 危险标签 Section -->
+                                                <div class="hony-tab hony-tab-danger hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 成功标签 Section -->
+                                                <div class="hony-tab hony-tab-success hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 警告标签 Section -->
+                                                <div class="hony-tab hony-tab-warning hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+                                            <!-- 底色大标签 Section -->
+                                            <div class="hony-tab-group">
+                                                <!-- 主题标签 Section -->
+                                                <div class="hony-tab hony-tab-primary-light hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 次要标签 Section -->
+                                                <div class="hony-tab hony-tab-secondary-light hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 危险标签 Section -->
+                                                <div class="hony-tab hony-tab-danger-light hony-tab-lg">   
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 成功标签 Section -->
+                                                <div class="hony-tab hony-tab-success-light hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 警告标签 Section -->
+                                                <div class="hony-tab hony-tab-warning-light hony-tab-lg">  
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+                                            <!-- 描边大标签 Section -->
+                                            <div class="hony-tab-group">
+                                                <!-- 主题标签 Section -->
+                                                <div class="hony-tab hony-tab-primary-outline hony-tab-lg">    
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 次要标签 Section -->
+                                                <div class="hony-tab hony-tab-secondary-outline hony-tab-lg">  
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 危险标签 Section -->
+                                                <div class="hony-tab hony-tab-danger-outline hony-tab-lg">   
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 成功标签 Section -->
+                                                <div class="hony-tab hony-tab-success-outline hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 警告标签 Section -->
+                                                <div class="hony-tab hony-tab-warning-outline hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+                                            <!-- 文字大标签 Section -->
+                                            <div class="hony-tab-group">
+                                                <!-- 主题标签 Section -->
+                                                <div class="hony-tab hony-tab-primary-text hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 次要标签 Section -->
+                                                <div class="hony-tab hony-tab-secondary-text hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 危险标签 Section -->
+                                                <div class="hony-tab hony-tab-danger-text hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 成功标签 Section -->
+                                                <div class="hony-tab hony-tab-success-text hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                                <!-- 警告标签 Section -->
+                                                <div class="hony-tab hony-tab-warning-text hony-tab-lg">
+                                                    <div class="hony-tab-icon iconfont icon-wendang"></div>
+                                                    <div>标签</div>
+                                                    <div class="hony-tab-close iconfont icon-guanbi1"></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 标签形状 -->
+                            <div class="section">
+                                <div class="section-title">标签<span style="color: var(--primary-main-1);">形状</span></div>
+                                <!-- 标签形状 -->
+                                <div class="subsection" id="hony-tab-shapes">
+                                    <div class="subsection-title">标签形状</div>
+                                    <div class="subsection-description">标签支持三种形状样式：圆角（默认）、直角和大圆角，可根据设计风格和场景需求选择合适的形状。</div>
+                                    <div class="component-container">
+                                        <div class="hony-tab-row">
+                                            <div class="hony-tab-group">
+                                                <div class="hony-tab hony-tab-primary">标签</div>
+                                                <div class="hony-tab hony-tab-secondary">标签</div>
+                                                <div class="hony-tab hony-tab-danger">标签</div>
+                                                <div class="hony-tab hony-tab-success">标签</div>
+                                                <div class="hony-tab hony-tab-warning">标签</div>
+                                                <div class="hony-tab hony-tab-secondary-text">标签</div>
+                                            </div>
+                                            <div class="hony-tab-group">
+                                                <div class="hony-tab hony-tab-primary hony-tab-square">标签</div>
+                                                <div class="hony-tab hony-tab-secondary hony-tab-square">标签</div>
+                                                <div class="hony-tab hony-tab-danger hony-tab-square">标签</div>
+                                                <div class="hony-tab hony-tab-success hony-tab-square">标签</div>
+                                                <div class="hony-tab hony-tab-warning hony-tab-square">标签</div>
+                                                <div class="hony-tab hony-tab-secondary-text hony-tab-square">标签</div>
+                                            </div>
+                                            <div class="hony-tab-group">
+                                                <div class="hony-tab hony-tab-primary hony-tab-round-lg">标签</div>
+                                                <div class="hony-tab hony-tab-secondary hony-tab-round-lg">标签</div>
+                                                <div class="hony-tab hony-tab-danger hony-tab-round-lg">标签</div>
+                                                <div class="hony-tab hony-tab-success hony-tab-round-lg">标签</div>
+                                                <div class="hony-tab hony-tab-warning hony-tab-round-lg">标签</div>
+                                                <div class="hony-tab hony-tab-secondary-text hony-tab-round-lg">标签</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+                <div class="right-nav">
+                    <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'tab-basic');">基础样式</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'tab-icon-closable');">标签+图标+可删除</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'tab-size-small');">小标签</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'tab-size-small');">常规标签</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'tab-size-small');">大标签</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'tab-shapes');">标签形状</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

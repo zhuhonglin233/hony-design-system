@@ -1,0 +1,169 @@
+/* 布局页面样式 */
+
+/* 布局预览样式 */
+.layout-preview {
+    width: 100%;
+    border: 1px solid var(--grey-border-1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--grey-face-1);
+}
+
+.layout-header {
+    height: 64px;
+    background: var(--primary-main-1);
+    color: var(--primary-main-5);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    font-weight: 500;
+}
+
+.layout-body {
+    display: flex;
+    min-height: 300px;
+}
+
+.layout-sidebar {
+    width: 240px;
+    background: var(--grey-face-2);
+    padding: 24px;
+    border-right: 1px solid var(--grey-border-1);
+}
+
+.layout-content {
+    flex: 1;
+    padding: 24px;
+    background: var(--grey-bg-0);
+}
+
+/* 栅格表格样式 */
+.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.grid-table th,
+.grid-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey-border-1);
+}
+
+.grid-table th {
+    background: var(--grey-face-1);
+    font-weight: 500;
+    color: var(--grey-text-1);
+}
+
+.grid-table tr:hover {
+    background: var(--grey-face-1);
+}
+
+/* 间距表格样式 */
+.spacing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.spacing-table th,
+.spacing-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey-border-1);
+}
+
+.spacing-table th {
+    background: var(--grey-face-1);
+    font-weight: 500;
+    color: var(--grey-text-1);
+}
+
+.spacing-table tr:hover {
+    background: var(--grey-face-1);
+}
+
+/* 间距示例样式 */
+.spacing-example {
+    display: inline-block;
+    background: var(--primary-main-4);
+    border-radius: 4px;
+}
+
+.spacing-example.xs {
+    width: 4px;
+    height: 4px;
+}
+
+.spacing-example.s {
+    width: 8px;
+    height: 8px;
+}
+
+.spacing-example.m {
+    width: 16px;
+    height: 16px;
+}
+
+.spacing-example.l {
+    width: 24px;
+    height: 24px;
+}
+
+.spacing-example.xl {
+    width: 32px;
+    height: 32px;
+}
+
+.spacing-example.xxl {
+    width: 48px;
+    height: 48px;
+}
+
+/* 容器示例样式 */
+.container-example {
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.container-box {
+    width: 300px;
+    height: 200px;
+    background: var(--grey-face-1);
+    border: 1px solid var(--grey-border-1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: var(--grey-text-1);
+}
+
+.container-box.fluid {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container-example {
+        flex-direction: column;
+    }
+    
+    .container-box {
+        width: 100%;
+    }
+    
+    .layout-body {
+        flex-direction: column;
+    }
+    
+    .layout-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--grey-border-1);
+    }
+}

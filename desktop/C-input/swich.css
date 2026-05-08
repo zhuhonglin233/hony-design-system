@@ -1,0 +1,138 @@
+/* 开关基础样式 */
+.hony-switch-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.hony-switch {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 4px;
+  border-radius: 9999px;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.hony-switch-handle {
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background: var(--white);
+  transition: all 0.2s ease;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hony-switch-text {
+  flex-shrink: 0;
+  line-height: 12px;
+  letter-spacing: 0;
+  color: var(--white);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+/* 开关状态 */
+.hony-switch-off {
+  background: var(--grey-border-2);
+  flex-direction: row;
+}
+
+.hony-switch-on {
+  background: var(--primary-main-1);
+  flex-direction: row-reverse;
+}
+
+.hony-switch-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.hony-switch-handle {
+  background: var(--grey-bg-0);
+}
+/* 加载状态 */
+.hony-switch-loading .hony-switch-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hony-switch-loading-spinner {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--primary-main-1);
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 尺寸 */
+/* 小尺寸 */
+.hony-switch-sm {
+    height: 20px;
+    width: auto;
+    min-width: 36px;
+}
+
+.hony-switch-sm .hony-switch-handle {
+  width: 12px;
+  height: 12px;
+}
+
+.hony-switch-sm .hony-switch-text {
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--primary-main-5);
+}
+
+/* 中尺寸（常规） */
+.hony-switch-md {
+  height: 24px;
+  width: auto;
+  min-width: 40px;
+}
+
+.hony-switch-md .hony-switch-handle {
+  width: 16px;
+  height: 16px;
+  background: var(--grey-bg-0);
+}
+
+.hony-switch-md .hony-switch-text {
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--primary-main-5);
+}
+
+/* 大尺寸 */
+.hony-switch-lg {
+  height: 28px;
+  width: auto;
+  min-width: 48px;
+}
+
+.hony-switch-lg .hony-switch-handle {
+  width: 20px;
+  height: 20px;
+}
+
+.hony-switch-lg .hony-switch-text {
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--primary-main-5);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hony-switch-section {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

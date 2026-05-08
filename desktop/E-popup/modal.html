@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹窗 - 桌面端组件</title>
+    <link rel="stylesheet" href="../../overall/design-tokens.css">
+    <link rel="stylesheet" href="../../overall/common.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+    <link rel="stylesheet" href="../A-system/button.css">
+    <link rel="stylesheet" href="./modal.css">
+    <script src="../../overall/js/common.js"></script>
+    <script src="./modal.js"></script>
+</head>
+<body>
+    <div class="background-decoration"></div>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                    <div class="content-main">
+                        <!-- 页面标题 -->
+                        <div class="page-header">
+                            <div class="design-code">design code 桌面端组件</div>
+                            <div class="page-title">弹窗</div>
+                            <div class="page-description">弹窗组件用于在当前页面之上弹出一个模态框，包含基础对话框、气泡对话框、抽屉等多种形式。</div>
+                        </div>
+
+                        <!-- 对话框 Section -->
+                        <div class="section">
+                            <div class="section-title">提示<span style="color: var(--primary-main-1);">对话</span></div>
+                            <div class="subsection" id="hony-button-states">
+                                <div class="subsection-title">提示弹窗</div>
+                                <div class="subsection-description">常规竖向时间轴：垂直排列的时间轴，展示事件的时间顺序和状态，支持成功、失败、进行中等状态标识。</div>
+                                <div class="component-container" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                                <button class="hony-btn hony-btn-outline-secondary" onclick="openModal('modal1')">加载中</button>
+                                <button class="hony-btn hony-btn-outline-secondary" onclick="openModal('modal2')">信息提示</button>
+                                <button class="hony-btn hony-btn-outline-secondary" onclick="openModal('modal3')">警告提示</button>
+                                <button class="hony-btn hony-btn-outline-secondary" onclick="openModal('modal4')">删除操作</button>
+                                <button class="hony-btn hony-btn-outline-secondary" onclick="openModal('modal5')">成功提示</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 弹窗 Section -->
+                        <div class="section">
+                            <div class="section-title">弹窗<span style="color: var(--primary-main-1);">样式</span></div>
+                            <!-- 气泡弹窗 Section -->
+                            <div class="subsection" id="hony-button-sizes">
+                                <div class="subsection-title">气泡弹窗</div>
+                                <div class="subsection-description">常规竖向时间轴：垂直排列的时间轴，展示事件的时间顺序和状态，支持成功、失败、进行中等状态标识。</div>
+                                <div class="component-container" style="display: flex; justify-content: space-around; padding: 40px;">
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="openModal('bubble1')">上方气泡</button>
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="openModal('bubble2')">下方气泡</button>
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="openModal('bubble3')">左侧气泡</button>
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="openModal('bubble4')">右侧气泡</button>
+                                </div>
+                            </div>
+                            <!-- 基础弹窗 Section -->
+                            <div class="subsection" id="hony-button-sizes">
+                                <div class="subsection-title">基础弹窗</div>
+                                <div class="subsection-description">常规竖向时间轴：垂直排列的时间轴，展示事件的时间顺序和状态，支持成功、失败、进行中等状态标识。</div>
+                                <div class="component-container" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="openModal('modal-sm')">小尺寸 (420px)</button>
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="openModal('modal-md')">中尺寸 (520px)</button>
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="openModal('modal-lg')">大尺寸 (840px)</button>
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="openModal('modal-xl')">特大尺寸 (960px)</button>
+                                </div>
+                            </div>
+                            <!-- 抽屉弹窗 Section -->
+                            <div class="subsection" id="hony-button-sizes">
+                                <div class="subsection-title">抽屉弹窗</div>
+                                <div class="subsection-description">常规竖向时间轴：垂直排列的时间轴，展示事件的时间顺序和状态，支持成功、失败、进行中等状态标识。</div>
+                                <div class="component-container" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="openDrawer('drawer-sm')">小抽屉 (428px)</button>
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="openDrawer('drawer-md')">中抽屉 (520px)</button>
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="openDrawer('drawer-lg')">大抽屉 (840px)</button>
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="openDrawer('drawer-left')">左侧抽屉</button>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+                <div class="right-nav">
+                    <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'button-styles');">主要按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-icon');">图标+按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-icon-only');">纯图标按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-levels');">按钮等级</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states');">主要按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states-secondary');">次要按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states-danger');">危险按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states-success');">安全按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-states-warning');">警告按钮状态</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-sizes');">小尺寸按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-sizes');">大尺寸按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-sizes');">常规尺寸按钮</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'button-shapes');">按钮形状</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="hony-modal-mask-container">
+                            <!-- 基础弹窗 - 加载中 -->
+                              <div class="hony-modal-mask" id="hony-modal1">
+                                <div class="hony-modal">
+                                  <div class="hony-modal-header">
+                                    <i class="hony-btn-loading-icon hony-modal-icon hony-modal-icon-loading"></i>
+                                    <span class="hony-modal-title">提示</span>
+                                    <svg class="hony-modal-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeModal('modal1')">
+                                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                  </div>
+                                  <div class="hony-modal-body">
+                                    <p class="hony-modal-content">如果您在填写表格时遇到任何问题或有疑问，请参阅帮助部分或联系我们的支持团队。</p>
+                                  </div>
+                                  <div class="hony-modal-footer">
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="closeModal('modal1')">取消</button>
+                                    <button class="hony-btn hony-btn-primary" onclick="closeModal('modal1')">确定</button>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- 基础对话框 - 信息 -->
+                              <div class="hony-modal-mask" id="hony-modal2">
+                                <div class="hony-modal">
+                                  <div class="hony-modal-header">
+                                    <i class="iconfont hony-icon-jinggao-filled hony-modal-icon hony-modal-icon-info">&#xf07d;</i>
+                                    <span class="hony-modal-title">提示</span>
+                                    <svg class="hony-modal-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeModal('modal2')">
+                                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                  </div>
+                                  <div class="hony-modal-body">
+                                    <p class="hony-modal-content">如果您在填写表格时遇到任何问题或有疑问，请参阅帮助部分或联系我们的支持团队。</p>
+                                  </div>
+                                  <div class="hony-modal-footer">
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="closeModal('modal2')">取消</button>
+                                    <button class="hony-btn hony-btn-primary" onclick="closeModal('modal2')">确定</button>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- 基础对话框 - 警告 -->
+                              <div class="hony-modal-mask" id="hony-modal3">
+                                <div class="hony-modal">
+                                  <div class="hony-modal-header">
+                                    <i class="iconfont hony-icon-jinggao-filled hony-modal-icon hony-modal-icon-warning">&#xf07d;</i>
+                                    <span class="hony-modal-title">提示</span>
+                                    <svg class="hony-modal-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeModal('modal3')">
+                                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                  </div>
+                                  <div class="hony-modal-body">
+                                    <p class="hony-modal-content">如果您在填写表格时遇到任何问题或有疑问，请参阅帮助部分或联系我们的支持团队。</p>
+                                  </div>
+                                  <div class="hony-modal-footer">
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="closeModal('modal3')">取消</button>
+                                    <button class="hony-btn hony-btn-primary" onclick="closeModal('modal3')">确定</button>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- 基础对话框 - 错误/删除 -->
+                              <div class="hony-modal-mask" id="hony-modal4">
+                                <div class="hony-modal">
+                                  <div class="hony-modal-header">
+                                    <i class="iconfont hony-icon-cuowu-filled hony-modal-icon hony-modal-icon-error">&#xf07d;</i>
+                                    <span class="hony-modal-title">提示</span>
+                                    <svg class="hony-modal-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeModal('modal4')">
+                                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                  </div>
+                                  <div class="hony-modal-body">
+                                    <p class="hony-modal-content">如果您在填写表格时遇到任何问题或有疑问，请参阅帮助部分或联系我们的支持团队。</p>
+                                  </div>
+                                  <div class="hony-modal-footer">
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="closeModal('modal4')">取消</button>
+                                    <button class="hony-btn hony-btn-danger" onclick="closeModal('modal4')">删除</button>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- 基础对话框 - 成功 -->
+                              <div class="hony-modal-mask" id="hony-modal5">
+                                <div class="hony-modal">
+                                  <div class="hony-modal-header">
+                                    <i class="iconfont hony-icon-zhengque-filled hony-modal-icon hony-modal-icon-success">&#xf07d;</i>
+                                    <span class="hony-modal-title">提示</span>
+                                    <svg class="hony-modal-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeModal('modal5')">
+                                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                  </div>
+                                  <div class="hony-modal-body">
+                                    <p class="hony-modal-content">操作已成功完成。您可以继续进行下一步操作。</p>
+                                  </div>
+                                  <div class="hony-modal-footer">
+                                    <button class="hony-btn hony-btn-outline-secondary" onclick="closeModal('modal5')">取消</button>
+                                    <button class="hony-btn hony-btn-primary" onclick="closeModal('modal5')">确定</button>
+                                  </div>
+                                </div>
+                              </div>
+                <!-- 气泡对话框 - 上方 -->
+                <div class="hony-modal-mask" id="bubble1">
+                  <div class="hony-modal hony-modal-bubble">
+                    <div class="hony-modal-header">
+                      <i class="iconfont hony-icon-jinggao-filled hony-modal-icon hony-modal-icon-info">&#xf07d;</i>
+                      <span class="hony-modal-title">提示</span>
+                      <svg class="hony-modal-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeModal('bubble1')">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="hony-modal-body">
+                      <p class="hony-modal-content">这里是注释信息</p>
+                    </div>
+                    <div class="hony-modal-footer">
+                      <button class="hony-btn hony-btn-outline-secondary hony-btn-sm" onclick="closeModal('bubble1')">取消</button>
+                      <button class="hony-btn hony-btn-primary hony-btn-sm" onclick="closeModal('bubble1')">确定</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 气泡对话框 - 下方 -->
+                <div class="hony-modal-mask" id="bubble2">
+                  <div class="hony-modal hony-modal-bubble hony-modal-bubble-bottom">
+                    <div class="hony-modal-header">
+                      <i class="iconfont hony-icon-jinggao-filled hony-modal-icon hony-modal-icon-info">&#xf07d;</i>
+                      <span class="hony-modal-title">提示</span>
+                      <svg class="hony-modal-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeModal('bubble2')">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="hony-modal-body">
+                      <p class="hony-modal-content">这里是注释信息</p>
+                    </div>
+                    <div class="hony-modal-footer">
+                      <button class="hony-btn hony-btn-outline-secondary hony-btn-sm" onclick="closeModal('bubble2')">取消</button>
+                      <button class="hony-btn hony-btn-primary hony-btn-sm" onclick="closeModal('bubble2')">确定</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 气泡对话框 - 左侧 -->
+                <div class="hony-modal-mask" id="bubble3">
+                  <div class="hony-modal hony-modal-bubble hony-modal-bubble-left">
+                    <div class="hony-modal-header">
+                      <i class="iconfont hony-icon-jinggao-filled hony-modal-icon hony-modal-icon-info">&#xf07d;</i>
+                      <span class="hony-modal-title">提示</span>
+                      <svg class="hony-modal-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeModal('bubble3')">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="hony-modal-body">
+                      <p class="hony-modal-content">这里是注释信息</p>
+                    </div>
+                    <div class="hony-modal-footer">
+                      <button class="hony-btn hony-btn-outline-secondary hony-btn-sm" onclick="closeModal('bubble3')">取消</button>
+                      <button class="hony-btn hony-btn-primary hony-btn-sm" onclick="closeModal('bubble3')">确定</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 气泡对话框 - 右侧 -->
+                <div class="hony-modal-mask" id="bubble4">
+                  <div class="hony-modal hony-modal-bubble hony-modal-bubble-right">
+                    <div class="hony-modal-header">
+                      <i class="iconfont hony-icon-jinggao-filled hony-modal-icon hony-modal-icon-info">&#xf07d;</i>
+                      <span class="hony-modal-title">提示</span>
+                      <svg class="hony-modal-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeModal('bubble4')">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="hony-modal-body">
+                      <p class="hony-modal-content">这里是注释信息</p>
+                    </div>
+                    <div class="hony-modal-footer">
+                      <button class="hony-btn hony-btn-outline-secondary hony-btn-sm" onclick="closeModal('bubble4')">取消</button>
+                      <button class="hony-btn hony-btn-primary hony-btn-sm" onclick="closeModal('bubble4')">确定</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 弹窗尺寸 - 小 -->
+                <div class="hony-modal-mask" id="hony-modal-sm">
+                  <div class="hony-modal hony-modal-sm">
+                    <div class="hony-modal-header">
+                      <span class="hony-modal-title">标题昵称</span>
+                      <svg class="hony-modal-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeModal('modal-sm')">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="hony-modal-body">
+                      <p class="hony-modal-content">这是小尺寸弹窗内容区域，宽度为 420px。适合展示简单的确认信息或表单。</p>
+                      <p class="hony-modal-content">我们总在追逐远方的光芒，总以为只有轰轰烈烈的人生才值得被铭记，总在羡慕别人的璀璨与耀眼，却忘了低头看看自己脚下的土地，忘了感受身边那些平凡日子里，藏着的无尽温柔与力量。生活从来都不是一场盛大的狂欢，而是由无数个细碎的瞬间拼凑而成，那些看似平淡无奇的日常，那些不被我们重视的琐碎，恰恰是生命中最珍贵的馈赠，是支撑我们走过漫长岁月的底气。
+            清晨的第一缕阳光，总是带着温柔的暖意，悄悄爬上窗台，驱散了深夜的寒凉。不必闹钟催促，在晨光的轻抚中缓缓醒来，揉一揉惺忪的睡眼，听一听窗外清脆的鸟鸣，感受着空气里淡淡的清新，那一刻，所有的疲惫都被温柔化解。起身煮一杯温热的水，看着水汽袅袅升起，氤氲了眼前的光景，也温暖了整个清晨。或许没有精致的早餐，只是一碗简单的粥、一个温热的馒头，却足以慰藉沉睡了一夜的味蕾，给新的一天注入满满的能量。
+            我们总在抱怨生活的琐碎与枯燥，抱怨日复一日的重复，却忘了，正是这些重复的日常，构成了我们最真实的生活。每天按时上班、下班，穿梭在拥挤的人群中，迎着朝阳出发，踏着暮色归来，看似平淡的行程里，藏着不为人知的坚持与努力。或许工作中有委屈、有疲惫，有解不开的难题，有扛不住的压力，但每当我们咬咬牙坚持下来，就会发现，自己远比想象中更强大。
+            午后的时光，总是格外惬意。阳光透过树叶的缝隙，洒下斑驳的光影，落在书桌前、沙发上，温柔而静谧。泡一杯喜欢的茶，捧一本搁置了许久的书，在文字的世界里肆意徜徉，暂时忘却生活的喧嚣与烦恼。偶尔抬头，看看窗外的风景，微风拂过，树叶轻轻摇曳，带来一阵淡淡的花香，那一刻，时光仿佛慢了下来，所有的浮躁都被抚平，只剩下内心的平静与安宁。
+            生活中，总有一些不期而遇的温暖，悄悄治愈着我们。或许是陌生人一个善意的微笑，一句贴心的问候；或许是朋友在你失意时的陪伴与鼓励，在你迷茫时的指引与开导；或许是家人默默的付出与守护，无论你走多远，都能给你一个温暖的港湾。这些细碎的温暖，就像一束束微光，看似微弱，却足以照亮我们前行的路，让我们在寒冷的岁月里，感受到人间的温情。
+            我们常常会陷入焦虑与迷茫，会因为一时的挫折而一蹶不振，会因为别人的优秀而自我否定，会在追逐梦想的路上，因为前路未知而徘徊不前。但请记得，人生从来都没有一帆风顺的坦途，每一条路都有坎坷与荆棘，每一次成长都伴随着阵痛与磨砺。那些你熬过的夜、吃过的苦、付出的努力，终会在未来的某一天，以另一种方式回馈给你。
+            就像墙角的小草，无论风吹雨打，无论环境多么恶劣，总能顽强地生长，绽放出属于自己的绿意；就像山间的野花，不与百花争艳，不追求世人的追捧，默默生长，悄然绽放，用自己的方式装点着世界。我们每个人，都是平凡世界里的普通人，没有与生俱来的天赋，没有一帆风顺的人生，但我们都有追求美好、向往温暖的权利，都有坚持不懈、永不言弃的力量。
+            傍晚时分，夕阳西下，晚霞染红了半边天空，绚烂而温柔。结束了一天的忙碌，卸下一身的疲惫，漫步在街边，看着来来往往的人群，看着万家灯火次第亮起，心中涌起一股莫名的温暖。或许此刻，家人正在家里等你回家，准备好热气腾腾的饭菜；或许此刻，朋友正在给你发消息，关心你的日常；或许此刻，你只是一个人，享受着这份独处的宁静，与自己温柔相伴。
+            夜晚的时光，是属于自己的时光。卸下白天的伪装，放下所有的压力，做自己喜欢的事情。可以听一首舒缓的音乐，让旋律抚平内心的烦躁；可以写一段心情日记，记录下一天的喜怒哀乐；可以和家人聊聊天，分享彼此的日常；也可以什么都不做，静静坐在窗前，看着窗外的星空，感受着夜晚的静谧与美好。
+            我们总在追求完美，总希望自己能够做到最好，总在害怕犯错、害怕失败，却忘了，不完美才是生活的常态，失败也是成长的一部分。不必因为一时的不完美而苛责自己，不必因为一次失败而放弃前行，学会接纳自己的不完美，学会与自己和解，才能在生活中找到属于自己的节奏，才能活得更加从容、更加自在。
+            生活就像一杯白开水，看似平淡无味，却能滋养我们的生命；生活就像一首平淡的歌，没有华丽的辞藻，没有激昂的旋律，却能触动我们内心最柔软的地方。那些平凡的日子，那些细碎的温暖，那些默默的坚持，就像一颗颗珍珠，串联起我们的人生，让我们的生命变得更加璀璨、更加有意义。
+            在这个快节奏的时代，我们总是行色匆匆，总是急于求成，总是在追逐着名利与财富，却忘了生活的本质是什么。其实，生活的本质，就是好好活着，好好爱自己，好好感受身边的美好，珍惜每一个当下。不必追求轰轰烈烈，不必羡慕别人的生活，每个人都有自己的人生轨迹，每个人都有自己的精彩，平凡的生活，也能活出不一样的光芒。
+            记得小时候，我们总是渴望长大，渴望摆脱父母的束缚，渴望拥有属于自己的生活。可当我们真正长大以后，才发现，小时候的时光，是最无忧无虑、最幸福的时光。那时候，没有压力，没有烦恼，没有复杂的人际关系，只有纯粹的快乐和简单的幸福。我们可以在阳光下奔跑，在草地上嬉戏，在父母的呵护下，肆意生长。
+            长大后，我们学会了伪装，学会了坚强，学会了独自承担所有的压力与委屈。我们开始在意别人的眼光，开始追求别人的认可，开始强迫自己活成别人喜欢的模样，却渐渐忘了，自己真正想要的是什么。其实，人生最难得的，就是不忘初心，坚守本心，不随波逐流，不盲目跟风，按照自己的节奏，过自己喜欢的生活。
+            生活中，总有一些人，默默付出，不求回报；总有一些事，看似微不足道，却温暖人心。就像环卫工人，无论寒冬酷暑，无论刮风下雨，都坚守在自己的岗位上，用自己的双手，守护着城市的整洁与美丽；就像医护人员，在疫情面前，义无反顾地冲锋在前，用自己的生命，守护着人们的健康与安全；就像老师，默默耕耘在三尺讲台，用自己的知识，浇灌着祖国的花朵，培育着未来的希望。
+            这些平凡的人，做着平凡的事，却用自己的方式，诠释着温柔与力量，传递着人间的温情。他们就像一束束光，照亮了别人，也温暖了自己。他们让我们明白，平凡并不可耻，平凡也可以很伟大，只要我们心怀善意，坚守初心，努力付出，就一定能在平凡的岗位上，绽放出属于自己的光芒。
+            我们每个人，都在平凡的生活中，努力地活着，努力地成长，努力地追求自己的梦想。或许我们的梦想很渺小，或许我们的努力没有被别人看到，或许我们的人生没有那么璀璨，但请相信，每一份努力都不会白费，每一次坚持都有意义，每一个平凡的我们，都有属于自己的价值。
+            生活中，难免会有风雨，难免会有挫折，难免会有迷茫，但请不要放弃，不要退缩。请记得，你不是一个人在战斗，身边总有温暖相伴，总有力量支撑。那些你经历过的苦难，那些你熬过的夜，那些你付出的努力，终会化作你前行的力量，让你变得更加坚强、更加勇敢。
+            愿我们都能在平凡的生活中，保持一颗温柔的心，感受身边的美好，珍惜每一个当下；愿我们都能在迷茫与挫折中，坚守初心，勇往直前，不慌不忙，从容自在；愿我们都能在自己的人生轨迹上，默默努力，悄悄成长，绽放出属于自己的光芒；愿我们都能被世界温柔以待，也能温柔地对待这个世界。
+            其实，平凡从来都不是平庸，平凡也自有光芒。那些细碎的温暖，那些默默的坚持，那些不期而遇的美好，都是生活给我们最好的礼物。愿我们都能褪去浮躁，守住本心，在平凡的日子里，慢慢生活，慢慢热爱，慢慢成长，不负时光，不负自己，不负这人间烟火。
+            生活就像一场漫长的旅行，我们不必急于奔赴终点，不必追求速度与激情，只需放慢脚步，感受沿途的风景，珍惜身边的人，享受每一个当下。或许我们会遇到风雨，会遇到坎坷，但只要我们心怀希望，心怀温柔，就一定能穿越风雨，抵达属于自己的诗和远方。
+            愿我们都能在平凡的生活中，找到属于自己的温柔与力量，活成自己喜欢的模样，不卑不亢，不慌不忙，自在安然。愿每一个平凡的日子，都能充满阳光与温暖；愿每一个努力的我们，都能收获属于自己的幸福与美好。
+            人间烟火气，最抚凡人心。平凡的生活里，藏着最真实的幸福，藏着最温暖的力量。愿我们都能珍惜这份平凡，守护这份温柔，在平凡的日子里，绽放出不平凡的光芒，不负时光，不负韶华，不负这世间所有的美好与温柔。
+            往后余生，愿我们都能以温柔待世界，以热爱赴生活，在平凡的日子里，慢慢沉淀，慢慢成长，让每一个瞬间都充满意义，让每一段时光都值得珍藏。愿我们都能在平凡中坚守，在温柔中坚强，活成自己的光，照亮自己，也温暖别人。</p>
+                    </div>
+                    <div class="hony-modal-footer">
+                      <button class="hony-btn hony-btn-outline-secondary" onclick="closeModal('modal-sm')">取消</button>
+                      <button class="hony-btn hony-btn-primary" onclick="closeModal('modal-sm')">确定</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 弹窗尺寸 - 中 -->
+                <div class="hony-modal-mask" id="hony-modal-md">
+                  <div class="hony-modal hony-modal-md">
+                    <div class="hony-modal-header">
+                      <span class="hony-modal-title">标题昵称</span>
+                      <svg class="hony-modal-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeModal('modal-md')">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="hony-modal-body">
+                      <p class="hony-modal-content">这是中尺寸弹窗内容区域，宽度为 520px。适合展示中等复杂度的表单或详细信息。</p>
+                    </div>
+                    <div class="hony-modal-footer">
+                      <button class="hony-btn hony-btn-outline-secondary" onclick="closeModal('modal-md')">取消</button>
+                      <button class="hony-btn hony-btn-primary" onclick="closeModal('modal-md')">确定</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 弹窗尺寸 - 大 -->
+                <div class="hony-modal-mask" id="hony-modal-lg">
+                  <div class="hony-modal hony-modal-lg">
+                    <div class="hony-modal-header">
+                      <span class="hony-modal-title">标题昵称</span>
+                      <svg class="hony-modal-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeModal('modal-lg')">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="hony-modal-body">
+                      <p class="hony-modal-content">这是大尺寸弹窗内容区域，宽度为 840px。适合展示复杂表单、列表或详细数据展示。</p>
+                    </div>
+                    <div class="hony-modal-footer">
+                      <button class="hony-btn hony-btn-outline-secondary" onclick="closeModal('modal-lg')">取消</button>
+                      <button class="hony-btn hony-btn-primary" onclick="closeModal('modal-lg')">确定</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 弹窗尺寸 - 特大 -->
+                <div class="hony-modal-mask" id="hony-modal-xl">
+                  <div class="hony-modal hony-modal-xl">
+                    <div class="hony-modal-header">
+                      <span class="hony-modal-title">标题昵称</span>
+                      <svg class="hony-modal-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeModal('modal-xl')">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="hony-modal-body">
+                      <p class="hony-modal-content">这是特大尺寸弹窗内容区域，宽度为 960px。适合展示大型表单、表格或需要全屏级展示的内容。</p>
+                    </div>
+                    <div class="hony-modal-footer">
+                      <button class="hony-btn hony-btn-outline-secondary" onclick="closeModal('modal-xl')">取消</button>
+                      <button class="hony-btn hony-btn-primary" onclick="closeModal('modal-xl')">确定</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 抽屉 - 小 -->
+                <div class="hony-drawer-mask" id="drawer-sm">
+                  <div class="hony-drawer hony-drawer-sm">
+                    <div class="hony-drawer-header">
+                      <span class="hony-drawer-title">标题昵称</span>
+                      <svg class="hony-drawer-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeDrawer('drawer-sm')">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="hony-drawer-body">
+                      <p style="color: var(--grey-text-4); font-size: 14px; line-height: 22px;">这是小抽屉内容区域，宽度为 428px。适合展示简单表单或选项列表。</p>
+                    </div>
+                    <div class="hony-drawer-footer">
+                      <button class="hony-btn hony-btn-outline-secondary" onclick="closeDrawer('drawer-sm')">取消</button>
+                      <button class="hony-btn hony-btn-primary" onclick="closeDrawer('drawer-sm')">确定</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 抽屉 - 中 -->
+                <div class="hony-drawer-mask" id="drawer-md">
+                  <div class="hony-drawer hony-drawer-md">
+                    <div class="hony-drawer-header">
+                      <span class="hony-drawer-title">标题昵称</span>
+                      <svg class="hony-drawer-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeDrawer('drawer-md')">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="hony-drawer-body">
+                      <p style="color: var(--grey-text-4); font-size: 14px; line-height: 22px;">这是中抽屉内容区域，宽度为 520px。适合展示中等复杂度的表单或详情信息。</p>
+                    </div>
+                    <div class="hony-drawer-footer">
+                      <button class="hony-btn hony-btn-outline-secondary" onclick="closeDrawer('drawer-md')">取消</button>
+                      <button class="hony-btn hony-btn-primary" onclick="closeDrawer('drawer-md')">确定</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 抽屉 - 大 -->
+                <div class="hony-drawer-mask" id="drawer-lg">
+                  <div class="hony-drawer hony-drawer-lg">
+                    <div class="hony-drawer-header">
+                      <span class="hony-drawer-title">标题昵称</span>
+                      <svg class="hony-drawer-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeDrawer('drawer-lg')">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="hony-drawer-body">
+                      <p style="color: var(--grey-text-4); font-size: 14px; line-height: 22px;">这是大抽屉内容区域，宽度为 840px。适合展示复杂表单、表格或详细数据展示。</p>
+                    </div>
+                    <div class="hony-drawer-footer">
+                      <button class="hony-btn hony-btn-outline-secondary" onclick="closeDrawer('drawer-lg')">取消</button>
+                      <button class="hony-btn hony-btn-primary" onclick="closeDrawer('drawer-lg')">确定</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 抽屉 - 左侧 -->
+                <div class="hony-drawer-mask" id="drawer-left">
+                  <div class="hony-drawer hony-drawer-md hony-drawer-left">
+                    <div class="hony-drawer-header">
+                      <span class="hony-drawer-title">标题昵称</span>
+                      <svg class="hony-drawer-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="closeDrawer('drawer-left')">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="hony-drawer-body">
+                      <p style="color: var(--grey-text-4); font-size: 14px; line-height: 22px;">这是左侧抽屉示例，从左侧滑出，宽度为 520px。</p>
+                    </div>
+                    <div class="hony-drawer-footer">
+                      <button class="hony-btn hony-btn-outline-secondary" onclick="closeDrawer('drawer-left')">取消</button>
+                      <button class="hony-btn hony-btn-primary" onclick="closeDrawer('drawer-left')">确定</button>
+                    </div>
+                  </div>
+                </div>                              
+    </div>                          
+</body>
+</html>

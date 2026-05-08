@@ -1,0 +1,606 @@
+/* ============================================================
+   评论组件 Comment Component
+   ============================================================ */
+
+/* 评论容器 */
+.hony-comment {
+  width: 100%;
+}
+
+/* ============================================================
+   文章帖子类
+   ============================================================ */
+
+/* 文章卡片 */
+.hony-article-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+
+/* 文章头像区域 */
+.hony-article-avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hony-article-avatar {
+  width: 48px;
+  height: 48px;
+}
+
+/* 文章内容区域 */
+.hony-article-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 文章头部信息 */
+.hony-article-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hony-article-nickname {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--grey-text-1);
+  line-height: 20px;
+}
+
+.hony-article-tag {
+  font-size: var(--font-size-xs);
+  padding: 2px 8px;
+}
+
+.hony-article-title {
+  font-size: var(--font-size-sm);
+  color: var(--grey-text-4);
+  font-size: 12px;
+}
+
+/* 文章正文 */
+.hony-article-body {
+  font-size: var(--font-size-sm);
+  color: var(--grey-text-2);
+  line-height: var(--line-height-base);
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+/* 文章底部信息 */
+.hony-article-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hony-article-time {
+  font-size: var(--font-size-xs);
+  color: var(--grey-text-4);
+}
+
+.hony-article-status {
+  font-size: var(--font-size-xs);
+  color: var(--grey-text-4);
+  margin-left: 8px;
+}
+
+/* 文章操作按钮 */
+.hony-article-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hony-article-action {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+  color: var(--grey-text-4);
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+
+.hony-article-action:hover {
+  color: var(--primary-main-1);
+}
+
+.hony-article-action-icon {
+  font-size: 14px;
+}
+
+.hony-article-action-text {
+  font-size: var(--font-size-xs);
+}
+
+/* ============================================================
+   评论类
+   ============================================================ */
+
+/* 评论卡片 */
+.hony-comment-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: var(--grey-bg-0);
+  border-radius: var(--radius-md);
+}
+
+/* 评论头像 */
+.hony-comment-avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hony-comment-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+/* 评论内容 */
+.hony-comment-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 评论头部 */
+.hony-comment-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.hony-comment-nickname {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--grey-text-1);
+}
+
+.hony-comment-tag {
+  font-size: var(--font-size-xs);
+  padding: 2px 6px;
+}
+
+.hony-comment-title {
+  font-size: var(--font-size-xs);
+  color: var(--grey-text-3);
+}
+
+.hony-comment-divider {
+  font-size: var(--font-size-xs);
+  color: var(--grey-border-2);
+  margin: 0 4px;
+}
+
+/* 评论正文 */
+.hony-comment-body {
+  font-size: var(--font-size-sm);
+  color: var(--grey-text-1);
+  line-height: var(--line-height-base);
+  margin-bottom: 12px;
+  word-break: break-word;
+}
+
+/* 评论底部 */
+.hony-comment-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hony-comment-time {
+  font-size: var(--font-size-xs);
+  color: var(--grey-text-4);
+}
+
+.hony-comment-publish {
+  font-size: var(--font-size-xs);
+  color: var(--grey-text-4);
+  margin-left: 8px;
+}
+
+/* 评论操作 */
+.hony-comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hony-comment-action {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+  color: var(--grey-text-4);
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+
+.hony-comment-action:hover {
+  color: var(--primary-main-1);
+}
+
+/* ============================================================
+   回复类
+   ============================================================ */
+
+/* 回复卡片 */
+.hony-reply-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: 12px;
+}
+.hony-reply-card.hony-back {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 8px;
+  background: var(--grey-face-1);
+  border-radius: var(--radius-md);
+  margin-top: 8px;
+}
+/* 回复头像 */
+.hony-reply-avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.hony-reply-avatar {
+  width: 32px;
+  height: 32px;
+}
+
+/* 回复内容 */
+.hony-reply-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 回复头部 */
+.hony-reply-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.hony-reply-nickname {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--primary-main-1);
+  line-height: 24px;
+}
+
+.hony-reply-title {
+  font-size: var(--font-size-xs);
+  color: var(--grey-text-3);
+  line-height: 24px;
+}
+
+/* 回复正文 */
+.hony-reply-body {
+  font-size: var(--font-size-xs);
+  color: var(--grey-text-1);
+  line-height: var(--line-height-base);
+  margin-bottom: 8px;
+  word-break: break-word;
+  font-size: 14px;
+}
+
+/* 回复底部 */
+.hony-reply-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hony-reply-time {
+  font-size: var(--font-size-xs);
+  color: var(--grey-text-4);
+}
+
+.hony-reply-publish {
+  font-size: var(--font-size-xs);
+  color: var(--grey-text-4);
+  margin-left: 8px;
+}
+
+/* 回复操作 */
+.hony-reply-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hony-reply-action {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+  color: var(--grey-text-4);
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+
+.hony-reply-action:hover {
+  color: var(--primary-main-1);
+}
+
+/* ============================================================
+   评论输入框
+   ============================================================ */
+
+/* 评论输入容器 */
+.hony-comment-input-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+.hony-comment-input-wrapper.hony-back {
+    padding: 8px;
+    background: var(--grey-face-1);
+    border-radius: var(--radius-md);
+}
+.hony-comment-replies.hony-back {
+  margin-top: 8px;
+  padding: 12px;
+  background: var(--grey-face-1);
+  border-radius: var(--radius-md);
+}
+/* 输入框头像 */
+.hony-comment-input-avatar-wrapper {
+  flex-shrink: 0;
+}
+
+.hony-comment-input-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+/* 输入框区域 */
+.hony-comment-input-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 文本域 */
+.hony-comment-textarea {
+  flex: 1;
+  width: 100%;
+  min-height: 80px;
+  padding: 8px;
+  font-size: var(--font-size-sm);
+  color: var(--grey-text-1);
+  background: transparent;
+  border: 1px solid var(--grey-border-2);
+  outline: none;
+  resize: none;
+  font-family: inherit;
+  border-radius: var(--radius-md);
+}
+.hony-comment-textarea:focus{
+  background: var(--grey-bg-0);
+  border-color: var(--primary-main-1);
+  box-shadow: 0 0 0 2px var(--primary-2-TPY);
+}
+.hony-comment-textarea::placeholder {
+  color: var(--grey-text-4);
+}
+
+/* 输入框底部 */
+.hony-comment-input-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+  border-top: 1px solid var(--grey-face-2);
+}
+
+/* 字数统计 */
+.hony-comment-word-count {
+  font-size: var(--font-size-xs);
+  color: var(--grey-text-4);
+}
+
+/* 输入框操作 */
+.hony-comment-input-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ============================================================
+   头像状态指示器
+   ============================================================ */
+
+/* 在线状态 */
+.hony-avatar-status-online {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--success-main-1);
+  border: 2px solid #FFFFFF;
+}
+
+/* 离线状态 */
+.hony-avatar-status-offline {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--grey-border-2);
+  border: 2px solid #FFFFFF;
+}
+
+/* 忙碌状态 */
+.hony-avatar-status-busy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--danger-main-1);
+  border: 2px solid #FFFFFF;
+}
+
+/* 头像顶部状态（如红点通知） */
+.hony-avatar-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--danger-main-1);
+  border: 1px solid #FFFFFF;
+}
+
+/* ============================================================
+   嵌套评论
+   ============================================================ */
+
+/* 嵌套评论列表 */
+.hony-comment-nested {
+  margin-left: 52px;
+  margin-top: 12px;
+  border-left: 1px solid var(--grey-border-1);
+  padding-left: 16px;
+}
+
+/* 嵌套评论项 */
+.hony-comment-nested-item {
+  margin-bottom: 12px;
+}
+
+.hony-comment-nested-item:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================================
+   评论列表
+   ============================================================ */
+
+/* 评论列表容器 */
+.hony-comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ============================================================
+   响应式设计
+   ============================================================ */
+
+@media (max-width: 768px) {
+  /* 文章卡片 */
+  .hony-article-card {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .hony-article-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .hony-article-header {
+    flex-wrap: wrap;
+  }
+  
+  .hony-article-title {
+    margin-left: 0;
+    margin-top: 4px;
+    width: 100%;
+  }
+  
+  /* 评论卡片 */
+  .hony-comment-card {
+    padding: 12px;
+    gap: 10px;
+  }
+  
+  .hony-comment-avatar {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .hony-comment-header {
+    flex-wrap: wrap;
+  }
+  
+  /* 回复卡片 */
+  .hony-reply-card {
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .hony-reply-avatar {
+    width: 28px;
+    height: 28px;
+  }
+  
+  /* 嵌套评论 */
+  .hony-comment-nested {
+    margin-left: 42px;
+    padding-left: 12px;
+  }
+  
+  /* 操作栏 */
+  .hony-article-actions,
+  .hony-comment-actions,
+  .hony-reply-actions {
+    gap: 8px;
+  }
+}
+
+/* ============================================================
+   深色模式支持（可选）
+   ============================================================ */
+
+[data-theme="dark"] .hony-article-card,
+[data-theme="dark"] .hony-comment-card {
+  background: var(--grey-text-1);
+}
+
+[data-theme="dark"] .hony-reply-card {
+  background: var(--grey-text-2);
+}
+
+[data-theme="dark"] .hony-comment-input-wrapper {
+  background: var(--grey-text-1);
+  border-color: var(--grey-text-3);
+}
+
+[data-theme="dark"] .hony-article-nickname,
+[data-theme="dark"] .hony-comment-nickname,
+[data-theme="dark"] .hony-article-body,
+[data-theme="dark"] .hony-comment-body,
+[data-theme="dark"] .hony-reply-body {
+  color: var(--grey-face-1);
+}
+
+[data-theme="dark"] .hony-article-title,
+[data-theme="dark"] .hony-comment-title,
+[data-theme="dark"] .hony-reply-title {
+  color: var(--grey-border-2);
+}

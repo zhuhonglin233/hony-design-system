@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>列表 - 桌面端组件</title>
+  <link rel="stylesheet" href="../../overall/main.css">
+  <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+  <link rel="stylesheet" href="./list.css">
+  <script src="../../overall/js/common.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>
+    
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="main-content-area">
+                <!-- 内容 -->
+                <div class="content-area">
+                  <div class="content-main">
+                      <!-- 页面标题 -->
+                      <div class="page-header">
+                          <div class="design-code">design code 桌面端组件</div>
+                          <div class="page-title">列表</div>
+                          <div class="page-description">列表组件用于展示多个项目或信息，支持文字、图片、链接等多种展示形式。</div>
+                      </div>
+
+                      <!-- 基础列表 Section -->
+                      <div class="section">
+                          <div class="section-title">基础<span style="color: var(--primary-main-1);">列表</span></div>
+                          
+                          <!-- 单行文字 -->
+                          <div class="subsection" id="hony-avatar-image">
+                              <div class="subsection-title">单行文字</div>
+                              <div class="subsection-description">单行文字列表：最简单的列表形式，仅包含文字标题，适用于简单的选项展示。</div>
+                              <div class="component-container">
+                                <div class="hony-list">
+                                  <div class="hony-list-body">
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">列表项 1</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">列表项 2</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">列表项 3</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">列表项 4</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          
+                          <!-- 多行文字 -->
+                          <div class="subsection" id="hony-avatar-text">
+                              <div class="subsection-title">多行文字</div>
+                              <div class="subsection-description">文字头像：使用文字展示，常用于没有头像图片的场景。</div>
+                              <div class="component-container">
+                                <div class="hony-list">
+                                  <div class="hony-list-body">
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">通知标题一</div>
+                                        <div class="hony-list-item-desc">这是一条通知内容的描述，用于说明通知的详细信息。</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">通知标题二</div>
+                                        <div class="hony-list-item-desc">这是另一条通知内容的描述，用于说明通知的详细信息。</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">通知标题三</div>
+                                        <div class="hony-list-item-desc">这是第三条通知内容的描述，用于说明通知的详细信息。</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- 图文列表 Section -->
+                      <div class="section">
+                          <div class="section-title">图文<span style="color: var(--primary-main-1);">列表</span></div>
+                          
+                          <!-- 左图右文 -->
+                          <div class="subsection" id="hony-avatar-status">
+                              <div class="subsection-title">带状态指示器</div>
+                              <div class="subsection-description">带状态指示器的头像：显示用户的在线状态，包括在线、忙碌、离线等。</div>
+                              <div class="component-container">
+                                <div class="hony-list">
+                                  <div class="hony-list-body">
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-prefix">
+                                        <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=smart%20watch%20product%20photo%20white%20background&image_size=square" alt="商品图片">
+                                      </div>
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">智能手表 Pro</div>
+                                        <div class="hony-list-item-desc">全新升级，搭载最新芯片，支持健康监测和运动追踪</div>
+                                        <div class="hony-list-item-meta">
+                                          <span>¥2,999</span>
+                                          <span>2024-01-15</span>
+                                        </div>
+                                      </div>
+                                      <div class="hony-list-item-action">
+                                        <button>查看</button>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-prefix">
+                                        <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=wireless%20headphones%20product%20photo%20white%20background&image_size=square" alt="商品图片">
+                                      </div>
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">无线蓝牙耳机</div>
+                                        <div class="hony-list-item-desc">主动降噪，续航可达30小时，支持快充</div>
+                                        <div class="hony-list-item-meta">
+                                          <span>¥599</span>
+                                          <span>2024-01-12</span>
+                                        </div>
+                                      </div>
+                                      <div class="hony-list-item-action">
+                                        <button>查看</button>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-prefix">
+                                        <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=smart%20phone%20product%20photo%20white%20background&image_size=square" alt="商品图片">
+                                      </div>
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">智能手机 Max</div>
+                                        <div class="hony-list-item-desc">6.8英寸屏幕，256GB存储，支持5G网络</div>
+                                        <div class="hony-list-item-meta">
+                                          <span>¥5,999</span>
+                                          <span>2024-01-10</span>
+                                        </div>
+                                      </div>
+                                      <div class="hony-list-item-action">
+                                        <button>查看</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          
+                      </div>
+
+                      <!-- 尺寸变体 Section -->
+                      <div class="section">
+                          <div class="section-title">列表<span style="color: var(--primary-main-1);">尺寸</span></div>
+                          
+                          <!-- 小尺寸 -->
+                          <div class="subsection" id="hony-avatar-group-sm">
+                              <div class="subsection-title">小尺寸</div>
+                              <div class="subsection-description">小尺寸头像组：适用于空间有限的场景，头像尺寸为16px。</div>
+                              <div class="component-container">
+                                <div class="hony-list hony-list-sm">
+                                  <div class="hony-list-body">
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">紧凑列表项 1</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">紧凑列表项 2</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">紧凑列表项 3</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          
+                          <!-- 默认尺寸 -->
+                          <div class="subsection" id="hony-avatar-group-md">
+                              <div class="subsection-title">默认尺寸</div>
+                              <div class="subsection-description">默认尺寸头像组：适用于一般场景，头像尺寸为24px。</div>
+                              <div class="component-container">
+                                <div class="hony-list">
+                                  <div class="hony-list-body">
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">默认列表项 1</div>
+                                        <div class="hony-list-item-desc">这是列表项的描述</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">默认列表项 2</div>
+                                        <div class="hony-list-item-desc">这是列表项的描述</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">默认列表项 3</div>
+                                        <div class="hony-list-item-desc">这是列表项的描述</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          
+                          <!-- 大尺寸 -->
+                          <div class="subsection" id="hony-avatar-group-lg">
+                              <div class="subsection-title">大尺寸</div>
+                              <div class="subsection-description">大尺寸</div>
+                              <div class="component-container">
+                                <div class="hony-list hony-list-lg">
+                                  <div class="hony-list-body">
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-prefix">
+                                        <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=smart%20watch%20product%20photo%20white%20background&image_size=square" alt="商品图片">
+                                      </div>
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">大尺寸列表项 1</div>
+                                        <div class="hony-list-item-desc">这是大尺寸列表项的描述，内容更加清晰易读</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-prefix">
+                                        <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=wireless%20headphones%20product%20photo%20white%20background&image_size=square" alt="商品图片">
+                                      </div>
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">大尺寸列表项 2</div>
+                                        <div class="hony-list-item-desc">这是大尺寸列表项的描述，内容更加清晰易读</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- 其他变体 Section -->
+                      <div class="section">
+                          <div class="section-title">其他<span style="color: var(--primary-main-1);">列表</span></div>
+                          
+                          <!-- 小尺寸 -->
+                          <div class="subsection" id="hony-avatar-group-sm">
+                              <div class="subsection-title">完整列表</div>
+                              <div class="subsection-description">完整列表：适用于空间有限的场景。</div>
+                              <div class="component-container">
+                                <div class="hony-list">
+                                  <div class="hony-list-header">商品列表</div>
+                                  <div class="hony-list-body">
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">智能手表 Pro</div>
+                                        <div class="hony-list-item-desc">¥2,999</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">无线蓝牙耳机</div>
+                                        <div class="hony-list-item-desc">¥599</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">智能手机 Max</div>
+                                        <div class="hony-list-item-desc">¥5,999</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="hony-list-footer">加载更多</div>
+                                </div>
+                              </div>
+                          </div>
+                          
+                          <!-- 斑马纹列表 -->
+                          <div class="subsection" id="hony-avatar-group-md">
+                              <div class="subsection-title">斑马纹列表</div>
+                              <div class="subsection-description">斑马纹列表：适用于一般场景。</div>
+                              <div class="component-container">
+                                <div class="hony-list">
+                                  <div class="hony-list-header">商品列表</div>
+                                  <div class="hony-list-body">
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">智能手表 Pro</div>
+                                        <div class="hony-list-item-desc">¥2,999</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">无线蓝牙耳机</div>
+                                        <div class="hony-list-item-desc">¥599</div>
+                                      </div>
+                                    </div>
+                                    <div class="hony-list-item">
+                                      <div class="hony-list-item-content">
+                                        <div class="hony-list-item-title">智能手机 Max</div>
+                                        <div class="hony-list-item-desc">¥5,999</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="hony-list-footer">加载更多</div>
+                                </div>
+                              </div>
+                          </div>
+                          
+                      </div>
+                  </div>
+                </div>                
+                <!-- 右侧锚点导航 -->
+              <div class="right-nav">
+                  <div class="right-nav-items">
+                          <div class="right-nav-item active" onclick="handleRightNavClick(this, 'avatar-image');">图片头像</div>
+                          <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-text');">文字头像</div>
+                          <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-status');">带状态指示器</div>
+                          <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-group-sm');">小尺寸头像组</div>
+                          <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-group-md');">中尺寸头像组</div>
+                          <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-group-lg');">大尺寸头像组</div>
+                  </div>
+              </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

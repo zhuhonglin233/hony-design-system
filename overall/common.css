@@ -1,0 +1,766 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 引入图标库 */
+@import url('../icons/iconfont.css');
+
+/* 背景装饰图片 */
+.background-decoration {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 600px;
+    background-image: url('images/背景装饰.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+/* 确保其他元素在背景之上 */
+.page-container {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}
+
+/* 首页保持原有背景 */
+.home-page {
+    position: relative;
+    z-index: 1;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--grey-text-1);
+  background-color: var(--component-page-BG);
+}
+/* 页面容器 */
+.page-container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+/* 导航栏 */
+.navbar {
+    width: 100%;
+    height: 64px;
+    left: 0;
+    top: 0;
+    background: transparent;
+    z-index: 100;
+    transition: all 0.3s ease;
+    position: sticky;
+    top: 0px;
+    border-bottom: 0px solid var(--grey-border-1);
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(24px);
+    box-shadow: 0 4px 16px rgba(21, 24, 33, 0.08);
+    border-bottom: 1px solid var(--grey-border-1);
+}
+
+
+
+.navbar-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    gap: 10px;
+    height: 64px;
+    margin: 0 auto;
+}
+
+/* 搜索框 */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 36px;
+    margin-right: 24px;
+}
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    padding: 0 12px 0 40px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--grey-text-1);
+    background: var(--grey-face-1);
+    transition: all 0.2s ease;
+}
+
+.search-input:focus,.search-input:hover {
+    outline: none;
+    border-color: var(--primary-main-1);
+    background: #fff;
+    box-shadow: 0 0 0 4px var(--primary-2-TPY);
+}
+
+.search-input::placeholder {
+    color: var(--grey-text-4);
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    font-size: 16px;
+    color: var(--grey-text-3);
+    pointer-events: none;
+}
+
+.search-clear {
+    position: absolute;
+    right: 12px;
+    font-size: 14px;
+    color: var(--grey-text-3);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.search-clear:hover {
+    color: var(--grey-text-1);
+}
+
+/* 搜索下拉框 */
+.search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 8px;
+    background: #fff;
+    border: 1px solid var(--grey-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(21, 24, 33, 0.12);
+    z-index: 1000;
+    max-height: 400px;
+    width: 240px;
+    overflow-y: auto;
+}
+
+.search-dropdown-header {
+    padding: 8px 12px;
+    font-size: 12px;
+    color: var(--grey-text-3);
+    border-bottom: 1px solid var(--grey-border);
+}
+
+.search-dropdown-list {
+    padding: 8px;
+}
+
+.search-dropdown-item {
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-dropdown-item:hover {
+    background: var(--grey-face-1);
+}
+
+.search-dropdown-item .category {
+    font-size: 12px;
+    color: var(--grey-text-3);
+}
+
+.search-dropdown-item .component-name {
+    font-size: 14px;
+    color: var(--grey-text-1);
+}
+
+.search-no-results {
+    padding: 20px 12px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--grey-text-3);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    height: 64px;
+    cursor: pointer;
+    position: sticky;
+    padding: 0px 0px 0px 12px;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.logo-text {
+    font-family: 'YouSheBiaoTiHei', 'PingFang SC', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: var(--grey-text-1);
+}
+
+/* 导航菜单 */
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 12px 8px;
+    height: 64px;
+    min-height: 64px;
+    max-height: 64px;
+    cursor: pointer;
+}
+
+.nav-item-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 9px 8px;
+    gap: 4px;
+    border-radius: 4px;
+}
+
+.nav-item:hover .nav-item-inner {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.nav-item:hover .nav-text {
+    color: var(--grey-text-1);
+}
+
+.nav-item.active .nav-item-inner {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.nav-item.active .nav-text {
+    color: var(--primary-main-1);
+}
+
+.nav-text {
+    font-family: 'PingFang SC', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--grey-text-2);
+}
+
+/* 主内容区域 */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+/* 主内容区域 */
+.main-content-area {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* 侧边导航 */
+.side-nav {
+    width: 240px;
+    min-width: 200px;
+    max-width: 320px;
+    min-height: 100vh;
+    position: sticky;
+    height: calc(100vh);
+    top: 0px;
+    background: rgba(255, 255, 255, 0.4);
+    border-right: 1px solid var(--grey-border-1);
+}
+
+/* 隐藏WebKit浏览器的滚动条 */
+.side-nav::-webkit-scrollbar {
+    display: none;
+}
+.nav-menu-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 12px 0px 12px;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 100px;
+}
+.nav-section {
+    padding: 0;
+}
+
+.nav-section-title {
+    padding: 16px 12px 8px;
+    font-family: 'PingFang SC', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--grey-text-3);
+    margin-bottom: 4px;
+}
+
+.side-nav .nav-item {
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    padding: 4px 0px;
+    margin: 4px 0;
+}
+
+.side-nav .nav-item-inner {
+    width: 100%;
+}
+
+.side-nav .nav-item:hover .nav-text {
+    color: var(--primary-main-1);
+}
+
+.side-nav .nav-item.active .nav-item-inner {
+    background: rgba(255, 255, 255, 0.5);
+    width: 100%;
+}
+
+.side-nav .nav-item.active .nav-text {
+    color: var(--primary-main-1);
+}
+
+/* 内容区域 */
+.content-area {
+    flex: 1;
+    padding: 48px;
+    min-height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    border-radius: 12px;
+    min-width: 0;
+}
+
+/* 右侧锚点导航 */
+.right-nav {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    border-radius: 8px;
+    padding: 24px;
+    position: sticky;
+    top: 72px;
+    height: fit-content;
+}
+
+.right-nav-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--grey-text-3);
+    margin-bottom: 16px;
+}
+
+/* 主内容区域 */
+.content-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* 页面头部 */
+.page-header {
+    margin-bottom: 48px;
+}
+
+.design-code {
+    font-family: 'PangMenZhengDao';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--grey-text-1);
+    margin-bottom: 32px;
+}
+
+.page-title {
+    font-family: 'Alibaba PuHuiTi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+    color: var(--grey-text-1);
+    margin-bottom: 32px;
+}
+
+.page-description {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--grey-text-3);
+}
+
+/* 所有td元素的字体大小 */
+td {
+    font-size: 14px;
+}
+
+/* 章节样式 */
+.section {
+    margin-bottom: 48px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--grey-main-3);
+    margin-bottom: 24px;
+}
+
+.subsection {
+    margin-bottom: 32px;
+    padding: 24px 24px 24px 24px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    border: 1px solid #fff;
+    backdrop-filter: blur(20px) !important;
+    width: 100%;
+    box-shadow: -2px -2px 4px 0 #ffffff40, -4px -4px 8px 0 #ffffff40, -8px -8px 16px 0 #ffffff40, 2px 2px 4px 0 rgba(108, 125, 163, 0.2), 4px 4px 8px 0 rgba(108, 125, 163, 0.2), 8px 8px 16px 0 rgba(108, 125, 163, 0.20);
+}
+.subsection-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--grey-main-3);
+    margin-bottom: 16px;
+}
+
+.subsection-description {
+    font-size: 14px;
+    color: var(--grey-text-3);
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+/* 按钮等级标题样式 */
+.level-title-container {
+    display: flex;
+    align-items: center;
+    margin: 4px 0 0px 0;
+    min-height: 24px;
+    width: 100%;
+}
+
+.level-title-line {
+    flex-shrink: 0;
+    height: 1px;
+    background-color: var(--grey-border-1);
+}
+
+.level-title-container .level-title-line:first-child {
+    width: 16px;
+    margin-right: 8px;
+}
+
+.level-title-container .level-title-line:last-child {
+    flex-grow: 1;
+    min-width: 16px;
+    margin-left: 8px;
+}
+
+.level-title {
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: var(--grey-text-1);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+}
+
+.level-title-spacer {
+    flex-grow: 1;
+    height: 24px;
+}
+
+.level-description {
+    margin: 4px 0 16px 0;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--grey-text-4);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+}
+
+/* 表格样式 */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--grey-bg-0);
+
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table th,
+.table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey-border-2);
+}
+
+.table th {
+    background: var(--grey-bg-2);
+    font-weight: 600;
+    color: var(--grey-text-1);
+    font-size: 14px;
+}
+
+.table td {
+    font-size: 14px;
+    color: var(--grey-text-2);
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+/* 颜色框 */
+.color-box {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    margin-right: 8px;
+    vertical-align: middle;
+    border: 1px solid var(--grey-border-2);
+}
+
+/* 组件容器 */
+.component-container {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    padding: 48px;
+    background: var(--grey-bg-0);
+    border-radius: 12px;
+}
+.component-container1 {
+    gap: 24px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    padding: 48px;
+    background: var(--grey-bg-0);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.component-container.table-height {
+    height: 600px;
+}
+/* 按钮容器 */
+.button-container {
+    margin-top: 24px;
+    padding: 48px;
+    background: var(--grey-bg-0);
+    border-radius: 8px;
+}
+
+.button-container .button-group {
+    margin-bottom: 48px;
+}
+
+.button-container .button-group:last-child {
+    margin-bottom: 0;
+}
+
+/* 圆角预览 */
+.radius-preview {
+    width: 60px;
+    height: 40px;
+    border: 1px solid #165DFF;
+    background: transparent;
+}
+
+/* 阴影表格 */
+.shadow-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.shadow-table th,
+.shadow-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey-border-1);
+}
+
+.shadow-table th {
+    font-weight: 500;
+    color: var(--grey-text-2);
+    background-color: var(--grey-face-1);
+    font-size: 14px;
+}
+
+.shadow-table td {
+    font-size: 14px;
+    color: var(--grey-text-3);
+}
+
+/* 阴影预览 */
+.shadow-preview {
+    width: 60px;
+    height: 60px;
+    background: var(--grey-bg-0);
+    border-radius: 4px;
+}
+
+
+/* hony-right-nav 类定义 */
+.right-nav {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    border-radius: 8px;
+    padding: 24px;
+    position: sticky;
+    top: 72px;
+    height: fit-content;
+    height: calc(100vh - 72px);
+    display: flex;
+    flex-direction: column-reverse;
+        overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.right-nav-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--grey-text-3);
+    margin-bottom: 16px;
+}
+
+.right-nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-left: 1px solid var(--grey-border-1);
+}
+
+.right-nav-item {
+    padding: 6px 12px;
+    border-radius: 0px;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--grey-text-2);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.right-nav-item:hover {
+    background: var(--grey-face-1);
+    color: var(--grey-text-1);
+}
+
+.right-nav-item.active {
+    color: var(--primary-main-1);
+    border-left: 2px solid var(--primary-main-1);
+}
+
+/* 响应式设计 - 小于1200px时隐藏右侧锚点导航 */
+@media (max-width: 1200px) {
+    .right-nav {
+        display: none;
+    }
+}
+.hony-background-texture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(circle, var(--primary-1-TPY) 1.5px, #e8efff00 1.5px);
+    background-size: 16px 16px;
+    background-position: 12px 12px;
+    z-index: 0;
+}
+
+.background-bgVideo {
+    position: fixed;
+    width: 100%;
+    height: 400px;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+    background: transparent !important;
+    border: none;
+    outline: none;
+      justify-content: flex-end; /* 子元素整体靠右边 */
+  /* 如果想同时垂直居中，可以加上： */
+  align-items: center;
+}
+.background-bgVideo video, .background-bgVideo-video{
+    position: absolute;
+    width: 800px;
+    height: 400px;
+    right: 0;
+    top: 0;
+    object-fit: contain;
+}
+#navbar-container {
+    width: 100%;
+    height: 64px;
+    left: 0;
+    top: 0;
+    background: transparent;
+    z-index: 100;
+    transition: all 0.3s ease;
+    position: sticky;
+    top: 0px;
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阴影 - 设计规范</title>
+    <link rel="stylesheet" href="../overall/main.css">
+    <script src="../overall/js/common.js"></script>
+</head>
+<body>
+    <div class="background-decoration"></div>
+    <div class="page-container">
+        <!-- 顶部导航栏 -->
+        <div id="navbar-container"></div>
+        
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <!-- 侧边导航 -->
+            <div id="sidebar-container"></div>
+
+            <!-- 右侧内容 -->
+            <div class="content-area">
+                <div class="content-main">
+                    <!-- 页面标题 -->
+                    <div class="page-header">
+                        <div class="design-code">design code 设计规范</div>
+                        <div class="page-title">阴影</div>
+                        <div class="page-description">阴影是设计系统中重要的视觉元素，用于创建层次感和深度，增强用户界面的立体感。合理的阴影使用可以提升界面的视觉效果，使元素之间的关系更加清晰。</div>
+                    </div>
+
+                    <!-- 阴影设计 Section -->
+                    <div class="section">
+                        <div class="section-title">阴影<span style="color: var(--primary-main-1);">设计</span></div>
+                        
+                        <!-- 分层 Subsection -->
+                        <div class="subsection" id="shadow-layers">
+                            <div class="subsection-title">分层</div>
+                            <div class="subsection-description">通过阴影的不同层级，创建界面元素的视觉层次感，使界面更加立体和有深度。</div>
+                            <div class="component-container">
+                                <table class="shadow-table">
+                                    <thead>
+                                        <tr>
+                                            <th>层级</th>
+                                            <th>名称</th>
+                                            <th>场景</th>
+                                            <th>CSS</th>
+                                            <th>预览</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Level 0</td>
+                                            <td>无阴影</td>
+                                            <td>默认状态、扁平化设计</td>
+                                            <td>box-shadow: none;</td>
+                                            <td><div class="shadow-preview level-0"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Level 1</td>
+                                            <td>轻微阴影</td>
+                                            <td>卡片、基础组件</td>
+                                            <td>box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);</td>
+                                            <td><div class="shadow-preview level-1"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Level 2</td>
+                                            <td>中等阴影</td>
+                                            <td>弹窗、下拉菜单</td>
+                                            <td>box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);</td>
+                                            <td><div class="shadow-preview level-2"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Level 3</td>
+                                            <td>强烈阴影</td>
+                                            <td>模态框、对话框</td>
+                                            <td>box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);</td>
+                                            <td><div class="shadow-preview level-3"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Level 4</td>
+                                            <td>深度阴影</td>
+                                            <td>悬浮元素、特殊组件</td>
+                                            <td>box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);</td>
+                                            <td><div class="shadow-preview level-4"></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 内阴影 Section -->
+                    <div class="section">
+                        <div class="section-title">内<span style="color: var(--primary-main-1);">阴影</span></div>
+                        
+                        <!-- 内阴影 Subsection -->
+                        <div class="subsection" id="inner-shadow">
+                            <div class="subsection-title">内阴影</div>
+                            <div class="subsection-description">为了保持视觉的一致性，我们将阴影按照层级深度进行分类，常见的阴影分级如下：</div>
+                            <div class="component-container">
+                                <table class="shadow-table">
+                                    <thead>
+                                        <tr>
+                                            <th>命名</th>
+                                            <th>场景</th>
+                                            <th>值</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Mini</td>
+                                            <td>-</td>
+                                            <td>box-shadow:<br>0 1px 2px 0 var(--grey-main-3), rgba(21, 24, 33, 0.05) inset,<br>0 2px 4px 0 var(--grey-main-3), rgba(21, 24, 33, 0.05) inset,<br>0 0 12px 0 var(--grey-main-3), rgba(21, 24, 33, 0.05) inset;<br>backdrop-filter: blur(6px);</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Small</td>
+                                            <td>-</td>
+                                            <td>box-shadow:<br>0 2px 4px 0 var(--grey-main-3), rgba(21, 24, 33, 0.05) inset,<br>0 4px 8px 0 var(--grey-main-3), rgba(21, 24, 33, 0.05) inset,<br>0 0 16px 0 var(--grey-main-3), rgba(21, 24, 33, 0.05) inset;<br>backdrop-filter: blur(6px);</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Medium</td>
+                                            <td>-</td>
+                                            <td>box-shadow:<br>0 4px 8px 0 var(--grey-main-3), rgba(21, 24, 33, 0.05) inset,<br>0 8px 12px 0 var(--grey-main-3), rgba(21, 24, 33, 0.05) inset,<br>0 0 20px 0 var(--grey-main-3), rgba(21, 24, 33, 0.05) inset;<br>backdrop-filter: blur(6px);</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Large</td>
+                                            <td>-</td>
+                                            <td>box-shadow:<br>0 8px 12px 0 var(--grey-main-3), rgba(21, 24, 33, 0.05) inset,<br>0 12px 16px 0 var(--grey-main-3), rgba(21, 24, 33, 0.05) inset,<br>0 0 24px 0 var(--grey-main-3), rgba(21, 24, 33, 0.05) inset;<br>backdrop-filter: blur(6px);</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 立体阴影 Section -->
+                    <div class="section">
+                        <div class="section-title">立体<span style="color: var(--primary-main-1);">阴影</span></div>
+                        
+                        <!-- 立体阴影 Subsection -->
+                        <div class="subsection" id="3d-shadow">
+                            <div class="subsection-title">立体阴影</div>
+                            <div class="subsection-description">根据不同的组件类型和标准，统一设定圆角值，以保证设计的一致性。</div>
+                            <div class="component-container">
+                                <table class="shadow-table">
+                                    <thead>
+                                        <tr>
+                                            <th>命名</th>
+                                            <th>场景</th>
+                                            <th>值</th>
+                                            <th>预览</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Mini</td>
+                                            <td>-</td>
+                                            <td>box-shadow:<br>-1px -1px 2px 0 #FFF,<br>-2px -2px 4px 0 #FFF,<br>-6px -6px 12px 0 #FFF,<br>1px 1px 2px 0 var(--grey-border-1), rgba(21, 24, 33, 0.15),<br>2px 2px 4px 0 var(--grey-face-1), rgba(21, 24, 33, 0.05),<br>6px 6px 12px 0 var(--grey-face-2), rgba(21, 24, 33, 0.10);<br>backdrop-filter: blur(6px);</td>
+                                            <td><div class="shadow-preview shadow-3d-mini"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Small</td>
+                                            <td>-</td>
+                                            <td>box-shadow:<br>-2px -2px 4px 0 #FFF,<br>-4px -4px 8px 0 #FFF,<br>-8px -8px 16px 0 #FFF,<br>2px 2px 4px 0 var(--grey-border-1), rgba(21, 24, 33, 0.15),<br>4px 4px 8px 0 var(--grey-face-1), rgba(21, 24, 33, 0.05),<br>8px 8px 16px 0 var(--grey-face-2), rgba(21, 24, 33, 0.10);<br>backdrop-filter: blur(6px);</td>
+                                            <td><div class="shadow-preview shadow-3d-small"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Medium</td>
+                                            <td>-</td>
+                                            <td>box-shadow:<br>-4px -4px 8px 0 #FFF,<br>-6px -6px 12px 0 #FFF,<br>-10px -10px 20px 0 #FFF,<br>4px 4px 8px 0 var(--grey-border-1), rgba(21, 24, 33, 0.15),<br>6px 6px 12px 0 var(--grey-face-1), rgba(21, 24, 33, 0.05),<br>10px 10px 20px 0 var(--grey-face-2), rgba(21, 24, 33, 0.10);<br>backdrop-filter: blur(6px);</td>
+                                            <td><div class="shadow-preview shadow-3d-medium"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Large</td>
+                                            <td>-</td>
+                                            <td>box-shadow:<br>-6px -6px 12px 0 #FFF,<br>-8px -8px 16px 0 #FFF,<br>-12px -12px 24px 0 #FFF,<br>6px 6px 12px 0 var(--grey-border-1), rgba(21, 24, 33, 0.15),<br>8px 8px 16px 0 var(--grey-face-1), rgba(21, 24, 33, 0.05),<br>12px 12px 24px 0 var(--grey-face-2), rgba(21, 24, 33, 0.10);<br>backdrop-filter: blur(6px);</td>
+                                            <td><div class="shadow-preview shadow-3d-large"></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 外阴影 Section -->
+                    <div class="section">
+                        <div class="section-title">外<span style="color: var(--primary-main-1);">阴影</span></div>
+                        
+                        <!-- 外阴影 Subsection -->
+                        <div class="subsection" id="outer-shadow">
+                            <div class="subsection-title">外阴影</div>
+                            <div class="subsection-description">为了保持视觉的一致性，我们将阴影按照层级深度进行分类，常见的阴影分级如下：</div>
+                            <div class="component-container">
+                                <table class="shadow-table">
+                                    <thead>
+                                        <tr>
+                                            <th>命名</th>
+                                            <th>场景</th>
+                                            <th>值</th>
+                                            <th>预览</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Mini</td>
+                                            <td>较小的组件交互效果例如按钮、标签、表格的悬停</td>
+                                            <td>box-shadow:<br>0 0 8px 0 var(--grey-main-3),<br>rgba(21, 24, 33, 0.05);<br>backdrop-filter: blur(6px);</td>
+                                            <td><div class="shadow-preview outer-mini"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Small</td>
+                                            <td>用于下拉弹窗或者气泡弹出层等</td>
+                                            <td>box-shadow:<br>0 2px 4px 0 var(--grey-main-3),<br>rgba(21, 24, 33, 0.05),<br>0 0 12px 0 var(--grey-main-3),<br>rgba(21, 24, 33, 0.05);<br>backdrop-filter: blur(6px);</td>
+                                            <td><div class="shadow-preview outer-small"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Medium</td>
+                                            <td>用于弹窗或者警告弹窗类</td>
+                                            <td>box-shadow:<br>0 2px 4px 0 var(--grey-main-3),<br>rgba(21, 24, 33, 0.05),<br>0 4px 8px 0 var(--grey-main-3),<br>rgba(21, 24, 33, 0.05),<br>0 0 16px 0 var(--grey-main-3),<br>rgba(21, 24, 33, 0.05);<br>backdrop-filter: blur(6px);</td>
+                                            <td><div class="shadow-preview outer-medium"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Large</td>
+                                            <td>用于特殊场景</td>
+                                            <td>box-shadow:<br>0 4px 8px 0 var(--grey-main-3),<br>rgba(21, 24, 33, 0.05),<br>0 8px 12px 0 var(--grey-main-3),<br>rgba(21, 24, 33, 0.05),<br>0 0 24px 0 var(--grey-main-3),<br>rgba(21, 24, 33, 0.05);<br>backdrop-filter: blur(6px);</td>
+                                            <td><div class="shadow-preview outer-large"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Special</td>
+                                            <td>用于特殊场景</td>
+                                            <td>box-shadow:<br>0 0 24px 0 var(--grey-main-3),<br>rgba(21, 24, 33, 0.05),<br>0 0 32px 0 var(--grey-main-3),<br>rgba(21, 24, 33, 0.05),<br>0 0 48px 0 var(--grey-main-3),<br>rgba(21, 24, 33, 0.05);<br>backdrop-filter: blur(6px);</td>
+                                            <td><div class="shadow-preview outer-special"></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                        <!-- 右侧锚点导航 -->
+            <div class="right-nav">
+                <div class="right-nav-items">
+                        <div class="right-nav-item active" onclick="handleRightNavClick(this, 'shadow-layers');">分层</div>
+                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'inner-shadow');">内阴影</div>
+                        <div class="right-nav-item" onclick="handleRightNavClick(this, '3d-shadow');">立体阴影</div>
+                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'outer-shadow');">外阴影</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
