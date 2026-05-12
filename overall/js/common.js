@@ -109,7 +109,8 @@ function initSideNav() {
                 const pageFile = this.getAttribute('data-page');
                 console.log('data-page属性值:', pageFile);
                 
-                if (pageFile) {                    console.log('调用 navigateToPage:', pageFile);
+                if (pageFile) {
+                    console.log('调用 navigateToPage:', pageFile);
                     navigateToPage(pageFile);
                 } else {
                     console.log('data-page 属性为空');
@@ -210,20 +211,10 @@ document.addEventListener('click', function(event) {
 // ============================================================
 
 /**
- * 获取项目根路径（处理不同部署环境）
+ * 获取项目根路径（处理 GitHub Pages 子目录部署）
  */
 function getRootPath() {
-    const pathname = window.location.pathname;
-    console.log('getRootPath - 当前路径:', pathname);
-    
-    // 检查是否在子目录部署
-    if (pathname.includes('/hony-design-system/')) {
-        console.log('getRootPath - 检测到 GitHub Pages 子目录部署');
-        return '/hony-design-system/';
-    }
-    
-    // 其他情况返回根目录
-    console.log('getRootPath - 使用根目录部署');
+    // 始终返回根路径（支持 GitHub Pages、Netlify 等各种托管平台）
     return '/';
 }
 
@@ -294,11 +285,35 @@ function openWindow(targetPath, target = '_blank') {
 // ============================================================
 
 /**
- * 获取组件路径（使用根路径而不是相对路径）
+ * 获取组件路径（相对于当前页面）
+ * 根据当前页面位置调整路径到 overall/components/
  */
 function getComponentPath(componentFile) {
-    const rootPath = getRootPath();
-    return rootPath + 'overall/components/' + componentFile;
+    const currentPath = window.location.pathname;
+    
+    // 计算需要往回走几级
+    let backPath = '';
+    
+    if (currentPath.includes('/Specification/')) {
+        // Specification 目录下：../
+        backPath = '../';
+    } else if (currentPath.includes('/desktop/')) {
+        if (currentPath.includes('/desktop/A-system/') || 
+            currentPath.includes('/desktop/B-navigation/') ||
+            currentPath.includes('/desktop/C-input/') ||
+            currentPath.includes('/desktop/D-display/') ||
+            currentPath.includes('/desktop/E-popup/')) {
+            // desktop 子目录下：../../
+            backPath = '../../';
+        } else {
+            // desktop 根目录下：../
+            backPath = '../';
+        }
+    } else {
+        backPath = '../';
+    }
+    
+    return backPath + 'overall/components/' + componentFile;
 }
 
 /**
@@ -306,26 +321,38 @@ function getComponentPath(componentFile) {
  * @param {HTMLElement} container - 组件容器
  */
 function adjustComponentPaths(container) {
-    const rootPath = getRootPath();
-    console.log('=== adjustComponentPaths ===');
-    console.log('rootPath:', rootPath);
+    const currentPath = window.location.pathname;
+    
+    // 计算需要往回走几级
+    let backPath = '';
+    
+    if (currentPath.includes('/Specification/')) {
+        // Specification 目录下：../
+        backPath = '../';
+    } else if (currentPath.includes('/desktop/')) {
+        if (currentPath.includes('/desktop/A-system/') || 
+            currentPath.includes('/desktop/B-navigation/') ||
+            currentPath.includes('/desktop/C-input/') ||
+            currentPath.includes('/desktop/D-display/') ||
+            currentPath.includes('/desktop/E-popup/')) {
+            // desktop 子目录下：../../
+            backPath = '../../';
+        } else {
+            // desktop 根目录下：../
+            backPath = '../';
+        }
+    } else {
+        backPath = '../';
+    }
     
     // 调整所有 img 标签的 src
     const imgs = container.querySelectorAll('img');
-    console.log('找到 img 数量:', imgs.length);
-    
     imgs.forEach(img => {
         let src = img.getAttribute('src');
-        console.log('处理 img - 原 src:', src);
-        
         if (src && !src.startsWith('http') && !src.startsWith('data:')) {
-            // 如果路径已经是绝对路径或以 rootPath 开头，不再处理
-            if (!src.startsWith('/') && !src.startsWith(rootPath)) {
-                const newSrc = rootPath + src;
-                console.log('调整 img - 新 src:', newSrc);
-                img.setAttribute('src', newSrc);
-            } else {
-                console.log('跳过 img - 不需要调整');
+            // 如果路径已经以 backPath 开头，就不再处理
+            if (!src.startsWith(backPath) && !src.startsWith('../')) {
+                img.setAttribute('src', backPath + src);
             }
         }
     });
@@ -335,9 +362,9 @@ function adjustComponentPaths(container) {
     links.forEach(link => {
         let href = link.getAttribute('href');
         if (href && !href.startsWith('http') && !href.startsWith('javascript:')) {
-            // 如果路径已经是绝对路径或以 rootPath 开头，不再处理
-            if (!href.startsWith('/') && !href.startsWith(rootPath)) {
-                link.setAttribute('href', rootPath + href);
+            // 如果路径已经以 backPath 开头，就不再处理
+            if (!href.startsWith(backPath) && !href.startsWith('../')) {
+                link.setAttribute('href', backPath + href);
             }
         }
     });
@@ -347,8 +374,8 @@ function adjustComponentPaths(container) {
     stylesheets.forEach(link => {
         let href = link.getAttribute('href');
         if (href && !href.startsWith('http')) {
-            if (!href.startsWith('/') && !href.startsWith(rootPath)) {
-                link.setAttribute('href', rootPath + href);
+            if (!href.startsWith(backPath) && !href.startsWith('../')) {
+                link.setAttribute('href', backPath + href);
             }
         }
     });
@@ -358,8 +385,8 @@ function adjustComponentPaths(container) {
     scripts.forEach(script => {
         let src = script.getAttribute('src');
         if (src && !src.startsWith('http')) {
-            if (!src.startsWith('/') && !src.startsWith(rootPath)) {
-                script.setAttribute('src', rootPath + src);
+            if (!src.startsWith(backPath) && !src.startsWith('../')) {
+                script.setAttribute('src', backPath + src);
             }
         }
     });
@@ -395,7 +422,6 @@ async function loadComponent(containerId, componentFile) {
         xhr.onload = function() {
             if (xhr.status >= 200 && xhr.status < 300) {
                 console.log('Component loaded successfully');
-                console.log('Component content length:', xhr.responseText.length);
                 container.innerHTML = xhr.responseText;
                 
                 // 动态调整组件中的图片路径
@@ -411,11 +437,8 @@ async function loadComponent(containerId, componentFile) {
                 
                 // 根据当前页面设置 active 状态
                 setActiveNavItem();
-                
-                console.log('Component initialization completed');
             } else {
                 console.error('Failed to load component, status:', xhr.status);
-                console.error('Response:', xhr.responseText);
             }
         };
         
@@ -755,37 +778,12 @@ document.addEventListener('DOMContentLoaded', function() {
         initTypingEffect();
     }
     
-    // 调整页面中所有资源路径（包括首页LOGO等）
-    const rootPath = getRootPath();
-    console.log('=== 全局路径调整 ===');
-    console.log('rootPath:', rootPath);
-    
-    // 调整页面中所有 img 标签的 src（除了已加载的组件）
-    const allImgs = document.querySelectorAll('img:not([data-path-adjusted])');
-    console.log('找到全局 img 数量:', allImgs.length);
-    
-    allImgs.forEach(img => {
-        let src = img.getAttribute('src');
-        console.log('处理全局 img - 原 src:', src);
-        
-        if (src && !src.startsWith('http') && !src.startsWith('data:')) {
-            if (!src.startsWith('/') && !src.startsWith(rootPath)) {
-                const newSrc = rootPath + src;
-                console.log('调整全局 img - 新 src:', newSrc);
-                img.setAttribute('src', newSrc);
-            }
-        }
-        // 标记已处理
-        img.setAttribute('data-path-adjusted', 'true');
-    });
-    
     // 检查容器是否存在
     const hasNavbarContainer = document.getElementById('navbar-container');
     const hasSidebarContainer = document.getElementById('sidebar-container');
     console.log('Has Navbar Container:', hasNavbarContainer);
     console.log('Has Sidebar Container:', hasSidebarContainer);
     
-    // 初始化基础功能
     initNavbarScroll();
     initSideNav();
     initTopNav();
@@ -794,24 +792,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 检查页面是否需要加载组件
     if (hasNavbarContainer || hasSidebarContainer) {
-        const currentPath = window.location.pathname.toLowerCase();
-        console.log('检测到当前页面路径:', currentPath);
-        
+        const currentPath = window.location.pathname;
         if (currentPath.includes('/desktop/')) {
-            console.log('=== Loading Desktop Components ===');
+            console.log('Loading Desktop Components...');
             loadDesktopComponents();
             // 初始化单个图片上传组件
             initSingleImageUpload();
-        } else if (currentPath.includes('/specification/')) {
-            console.log('=== Loading Specification Components ===');
+        } else if (currentPath.includes('/Specification/')) {
+            console.log('Loading Specification Components...');
             loadSpecificationComponents();
         } else if (hasNavbarContainer) {
             // 首页也加载导航栏
             console.log('Loading Navbar for Home Page...');
             loadComponent('navbar-container', 'navbar.html');
         }
-    } else {
-        console.log('No component containers found, skipping component loading');
     }
 });
 
@@ -1080,7 +1074,8 @@ function initSingleImageUpload() {
                 statusIcon.style.display = 'flex';
                 statusIcon.classList.remove('hony-upload-status-loading', 'hony-upload-status-success', 'hony-upload-status-error');
                 
-                if (iconElement) {                    if (status === 'loading') {
+                if (iconElement) {
+                    if (status === 'loading') {
                         // 加载图标
                         iconElement.innerHTML = '&#xe63d;';
                         statusIcon.classList.add('hony-upload-status-loading');
