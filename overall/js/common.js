@@ -307,15 +307,25 @@ function getComponentPath(componentFile) {
  */
 function adjustComponentPaths(container) {
     const rootPath = getRootPath();
+    console.log('=== adjustComponentPaths ===');
+    console.log('rootPath:', rootPath);
     
     // 调整所有 img 标签的 src
     const imgs = container.querySelectorAll('img');
+    console.log('找到 img 数量:', imgs.length);
+    
     imgs.forEach(img => {
         let src = img.getAttribute('src');
+        console.log('处理 img - 原 src:', src);
+        
         if (src && !src.startsWith('http') && !src.startsWith('data:')) {
             // 如果路径已经是绝对路径或以 rootPath 开头，不再处理
             if (!src.startsWith('/') && !src.startsWith(rootPath)) {
-                img.setAttribute('src', rootPath + src);
+                const newSrc = rootPath + src;
+                console.log('调整 img - 新 src:', newSrc);
+                img.setAttribute('src', newSrc);
+            } else {
+                console.log('跳过 img - 不需要调整');
             }
         }
     });
@@ -744,6 +754,30 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typingLine) {
         initTypingEffect();
     }
+    
+    // 调整页面中所有资源路径（包括首页LOGO等）
+    const rootPath = getRootPath();
+    console.log('=== 全局路径调整 ===');
+    console.log('rootPath:', rootPath);
+    
+    // 调整页面中所有 img 标签的 src（除了已加载的组件）
+    const allImgs = document.querySelectorAll('img:not([data-path-adjusted])');
+    console.log('找到全局 img 数量:', allImgs.length);
+    
+    allImgs.forEach(img => {
+        let src = img.getAttribute('src');
+        console.log('处理全局 img - 原 src:', src);
+        
+        if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+            if (!src.startsWith('/') && !src.startsWith(rootPath)) {
+                const newSrc = rootPath + src;
+                console.log('调整全局 img - 新 src:', newSrc);
+                img.setAttribute('src', newSrc);
+            }
+        }
+        // 标记已处理
+        img.setAttribute('data-path-adjusted', 'true');
+    });
     
     // 检查容器是否存在
     const hasNavbarContainer = document.getElementById('navbar-container');
