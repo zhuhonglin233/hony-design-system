@@ -214,13 +214,7 @@ document.addEventListener('click', function(event) {
  * 获取项目根路径（处理 GitHub Pages 子目录部署）
  */
 function getRootPath() {
-    // 从当前URL中提取项目根路径
-    const pathname = window.location.pathname;
-    // 如果是GitHub Pages子目录部署，找到项目根目录
-    if (pathname.includes('/hony-design-system/')) {
-        return '/hony-design-system/';
-    }
-    // 本地开发或根目录部署
+    // 始终返回根路径（支持 GitHub Pages、Netlify 等各种托管平台）
     return '/';
 }
 
