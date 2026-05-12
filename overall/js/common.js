@@ -211,12 +211,31 @@ document.addEventListener('click', function(event) {
 // ============================================================
 
 /**
+ * 获取项目根路径（处理 GitHub Pages 子目录部署）
+ */
+function getRootPath() {
+    // 从当前URL中提取项目根路径
+    const pathname = window.location.pathname;
+    // 如果是GitHub Pages子目录部署，找到项目根目录
+    if (pathname.includes('/hony-design-system/')) {
+        return '/hony-design-system/';
+    }
+    // 本地开发或根目录部署
+    return '/';
+}
+
+/**
  * 导航到指定页面
  * @param {string} targetPath - 目标路径（相对于网站根目录，如 'Specification/color.html'）
  */
 function navigateTo(targetPath) {
-    // 使用相对路径，确保在 GitHub Pages 子目录下正常工作
-    window.location.href = targetPath;
+    const rootPath = getRootPath();
+    // 如果路径已经以 / 开头，直接使用
+    if (targetPath.startsWith('/')) {
+        window.location.href = rootPath + targetPath.substring(1);
+    } else {
+        window.location.href = rootPath + targetPath;
+    }
 }
 
 /**
@@ -224,14 +243,14 @@ function navigateTo(targetPath) {
  * @param {string} targetPath - 目标路径（如 'A-system/button.html'）
  */
 function navigateToDesktop(targetPath) {
-    // 如果路径已经包含 desktop/，直接使用相对路径
+    const rootPath = getRootPath();
+    // 如果路径已经包含 desktop/，直接使用
     if (targetPath.startsWith('desktop/')) {
-        window.location.href = targetPath;
+        window.location.href = rootPath + targetPath;
         return;
     }
     
-    // 使用相对路径
-    window.location.href = 'desktop/' + targetPath;
+    window.location.href = rootPath + 'desktop/' + targetPath;
 }
 
 /**
@@ -239,12 +258,32 @@ function navigateToDesktop(targetPath) {
  * @param {string} targetPath - 目标路径（如 'color.html'）
  */
 function navigateToSpecification(targetPath) {
-    // 使用相对路径确保在 GitHub Pages 子目录下正常工作
+    const rootPath = getRootPath();
+    // 如果路径已经包含 Specification/，直接使用
     if (targetPath.startsWith('Specification/')) {
-        window.location.href = targetPath;
+        window.location.href = rootPath + targetPath;
     } else {
-        window.location.href = 'Specification/' + targetPath;
+        window.location.href = rootPath + 'Specification/' + targetPath;
     }
+}
+
+/**
+ * 带根路径的 window.open
+ * @param {string} targetPath - 目标路径
+ * @param {string} target - 打开方式（如 '_blank'）
+ */
+function openWindow(targetPath, target = '_blank') {
+    const rootPath = getRootPath();
+    let url = targetPath;
+    // 如果是相对路径（不以 http:// 或 https:// 开头），添加根路径
+    if (!targetPath.startsWith('http://') && !targetPath.startsWith('https://')) {
+        if (targetPath.startsWith('/')) {
+            url = rootPath + targetPath.substring(1);
+        } else {
+            url = rootPath + targetPath;
+        }
+    }
+    window.open(url, target);
 }
 
 // ============================================================
