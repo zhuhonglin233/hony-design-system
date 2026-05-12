@@ -215,8 +215,8 @@ document.addEventListener('click', function(event) {
  * @param {string} targetPath - 目标路径（相对于网站根目录，如 'Specification/color.html'）
  */
 function navigateTo(targetPath) {
-    // 统一使用绝对路径，避免相对路径计算错误
-    window.location.href = '/' + targetPath;
+    // 使用相对路径，确保在 GitHub Pages 子目录下正常工作
+    window.location.href = targetPath;
 }
 
 /**
@@ -224,14 +224,14 @@ function navigateTo(targetPath) {
  * @param {string} targetPath - 目标路径（如 'A-system/button.html'）
  */
 function navigateToDesktop(targetPath) {
-    // 如果路径已经包含 desktop/，直接使用绝对路径
+    // 如果路径已经包含 desktop/，直接使用相对路径
     if (targetPath.startsWith('desktop/')) {
-        window.location.href = '/' + targetPath;
+        window.location.href = targetPath;
         return;
     }
     
-    // 所有情况都使用绝对路径
-    window.location.href = '/desktop/' + targetPath;
+    // 使用相对路径
+    window.location.href = 'desktop/' + targetPath;
 }
 
 /**
@@ -239,7 +239,12 @@ function navigateToDesktop(targetPath) {
  * @param {string} targetPath - 目标路径（如 'color.html'）
  */
 function navigateToSpecification(targetPath) {
-    window.location.href = targetPath;  // 直接跳转，已经在 Specification 目录
+    // 使用相对路径确保在 GitHub Pages 子目录下正常工作
+    if (targetPath.startsWith('Specification/')) {
+        window.location.href = targetPath;
+    } else {
+        window.location.href = 'Specification/' + targetPath;
+    }
 }
 
 // ============================================================
