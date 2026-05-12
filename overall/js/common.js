@@ -760,7 +760,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 检查页面是否需要加载组件
     if (hasNavbarContainer || hasSidebarContainer) {
-        const currentPath = window.location.pathname;
+        const currentPath = window.location.pathname.toLowerCase();
         console.log('检测到当前页面路径:', currentPath);
         
         if (currentPath.includes('/desktop/')) {
@@ -768,7 +768,7 @@ document.addEventListener('DOMContentLoaded', function() {
             loadDesktopComponents();
             // 初始化单个图片上传组件
             initSingleImageUpload();
-        } else if (currentPath.includes('/Specification/')) {
+        } else if (currentPath.includes('/specification/')) {
             console.log('=== Loading Specification Components ===');
             loadSpecificationComponents();
         } else if (hasNavbarContainer) {
