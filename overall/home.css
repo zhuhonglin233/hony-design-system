@@ -1,3 +1,12 @@
+/* 引入特殊字体 */
+@font-face {
+    font-family: 'YouSheBiaoTiHei';
+    src: url('YouSheBiaoTiHei-2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* 基础样式重置 */
 * {
     margin: 0;
@@ -285,20 +294,8 @@ html, body {
 }
 
 .hero-title {
-    width: 427px;
-    height: 64px;
-    font-family: 'YouSheBiaoTiHei', 'PingFang SC', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 100%;
-    color: var(--primary-main-1);
-    margin: 0;
-}
-
-.hero-subtitle {
-    width: 258px;
-    height: 32px;
+    min-width: 200px;
+    min-height: 64px;
     font-family: 'YouSheBiaoTiHei', 'PingFang SC', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -306,6 +303,32 @@ html, body {
     line-height: 100%;
     color: var(--grey-text-1);
     margin: 0;
+}
+
+.hero-subtitle {
+    min-width: 200px;
+    min-height: 56px;
+    font-family: 'YouSheBiaoTiHei', 'PingFang SC', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 100%;
+    color: var(--primary-main-1);
+    margin: 0;
+}
+
+/* 打字效果样式 */
+.typing-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary-main-1);
+    animation: blink-cursor 0.8s infinite;
+}
+
+@keyframes blink-cursor {
+    0%, 100% { border-color: var(--primary-main-1); }
+    50% { border-color: transparent; }
 }
 
 /* 按钮组 */
@@ -377,7 +400,7 @@ html, body {
     align-items: flex-start;
     gap: 24px;
     width: 100%;
-    margin-top: 64px;
+    margin-top: 84px;
 }
 
 .feature-card {
@@ -601,12 +624,12 @@ html, body {
 @media (max-width: 768px) {
     .hero-title {
         font-size: 48px;
-        width: 100%;
+        min-width: 100%;
     }
     
     .hero-subtitle {
         font-size: 24px;
-        width: 100%;
+        min-width: 100%;
     }
     
     .feature-card {

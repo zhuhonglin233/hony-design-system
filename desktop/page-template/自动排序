@@ -1,0 +1,134 @@
+<style>
+  .flex-box { /* 父容器 */
+    display: flex; /* 开启弹性布局 */
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  .flex-item { /* 子元素（弹性项目） */
+    width: 80px;
+    height: 80px;
+    background: #4285f4;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+  }
+</style>
+
+<div class="flex-box">
+  <div class="flex-item">1</div>
+  <div class="flex-item">2</div>
+  <div class="flex-item">3</div>
+</div>
+
+1. 正常左右排列（左→右，默认）
+
+.flex-box {
+  display: flex;
+  /* flex-direction: row;  默认值，可省略不写 */
+}
+
+
+2. 反向左右排列（右→左）
+设置 flex-direction: row-reverse;，子元素从右到左倒序排列。
+
+.flex-box {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+3. 左右排列 + 自动换行
+.flex-box {
+  display: flex;
+  flex-direction: row; /* 可省略，默认就是row */
+  flex-wrap: wrap; /* 超出宽度自动换行 */
+}
+
+4. 反向左右 + 自动换行
+.flex-box {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+1. 正常上下排列（上→下）
+.flex-box {
+  display: flex;
+  flex-direction: column;
+  height: 300px; /* 建议设置高度，避免子元素拉伸过远 */
+}
+2. 反向上下排列（下→上）
+.flex-box {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 300px;
+}
+3. 上下排列 + 自动换列（重点）
+.flex-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; /* 超出高度自动换列 */
+  height: 250px; /* 必须设置高度，否则不生效 */
+  width: 300px; /* 可设置宽度，控制每列宽度 */
+}
+4. 反向上下 + 自动换列
+.flex-box {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  height: 250px;
+  width: 300px;
+}
+
+/* 1. 左右排列 + 自动换行（最常用） */
+flex-flow: row wrap;
+
+/* 2. 左右反向 + 自动换行 */
+flex-flow: row-reverse wrap;
+
+/* 3. 上下排列 + 自动换列 */
+flex-flow: column wrap;
+
+/* 4. 上下反向 + 自动换列 */
+flex-flow: column-reverse wrap;
+
+/* 5. 左右排列 + 不换行（默认，可简写） */
+flex-flow: row nowrap;
+
+/* 6. 上下排列 + 不换列（默认，可简写） */
+flex-flow: column nowrap;
+
+1. 左右排列（主轴：水平方向）
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* 水平对齐（主轴）：居中 */
+  align-items: center;    /* 垂直对齐（交叉轴）：居中 */
+  gap: 10px; /* 子元素之间的间距（常用，避免用margin） */
+}
+补充 justify-content 可选值（水平对齐）：
+- flex-start：默认，左对齐
+- flex-end：右对齐
+- center：水平居中
+- space-between：两端对齐，子元素间距均分
+- space-around：子元素两侧间距相等，整体间距均分
+补充 align-items 可选值（垂直对齐）：
+- flex-start：默认，顶部对齐
+- flex-end：底部对齐
+- center：垂直居中
+- stretch：默认（子元素无固定高度时），拉伸至父容器高度
+
+2. 上下排列（主轴：垂直方向）
+.flex-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 垂直对齐（主轴）：居中 */
+  align-items: center;    /* 水平对齐（交叉轴）：居中 */
+  gap: 10px;
+}
+
+height: auto：默认，高度随内容自然撑开（常用）。
+height: min-content：强制缩到最小可能高度。
+height: max-content：高度为内容不换行时的完整高度。

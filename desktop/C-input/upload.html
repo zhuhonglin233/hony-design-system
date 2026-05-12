@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>上传 - 桌面端组件</title>
+    <link rel="icon" href="../../overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../../overall/main.css">
     <link rel="stylesheet" href="../../overall/icons/iconfont.css">
     <link rel="stylesheet" href="upload.css">
@@ -12,243 +13,292 @@
     <script src="../../overall/js/common.js"></script>
     <script src="../A-system/image.js"></script>
     <script src="upload.js"></script>
+<link rel="stylesheet" href="../B-navigation/tabs.css">
 </head>
 <body>
     <div class="page-container">
         <!-- 左侧导航 -->
-        <div id="sidebar-container"></div>
-    
-        
+        <div id="sidebar-container"></div>      
         <!-- 主内容区域 -->
         <div class="main-content">
             <!-- 顶部导航栏 -->
             <div id="navbar-container"></div>
             <!-- 主内容区域 -->
-            <div class="main-content-area">
-                <!-- 内容 -->
-                <div class="content-area">
-                    <div class="content-main">
-                        <!-- 页面标题 -->
-                        <div class="page-header">
-                            <div class="design-code">design code 桌面端组件</div>
-                            <div class="page-title">上传</div>
-                            <div class="page-description">上传组件是用于文件上传的交互组件，提供了多种上传方式和样式，包括点击上传、拖拽上传、图片上传等，满足不同场景的需求。</div>
-                        </div>
-
-                        <!-- 文件上传 Section -->
-                        <div class="section">
-                            <div class="section-title">文件<span style="color: var(--primary-main-1);">上传</span></div>
-                            
-                            <!-- 基础上传 -->
-                            <div class="subsection" id="hony-upload-basic">
-                                <div class="subsection-title">基础上传</div>
-                                <div class="subsection-description">基础上传：简单的点击上传按钮，支持单个或多个文件上传，上传后显示文件列表和进度。</div>
-                                <div class="component-container">
-                                    <div class="hony-upload" id="hony-upload-basic-container">
-                                        <input type="file" class="hony-upload-input" id="hony-upload-basic-input" multiple>
-                                        <button class="hony-btn hony-btn-outline-secondary" id="hony-upload-basic-btn">
-                                            <span class="hony-btn-icon iconfont icon-shangchuan"></span>
-                                            <span>上传文件</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 上传状态展示 Section -->
-                        <div class="section">
-                            <div class="section-title">上传<span style="color: var(--primary-main-1);">状态</span></div>
-                            
-                            <!-- 上传中状态 -->
-                            <div class="subsection" id="hony-upload-loading">
-                                <div class="subsection-title">上传中</div>
-                                <div class="subsection-description">文件上传过程中显示加载动画。</div>
-                                <div class="component-container">
-                                    <div class="hony-upload-item">
-                                        <div class="hony-upload-item-icon">
-                                            <img src="../../overall/icons/文件IMG.svg" alt="文件图标" class="file-icon">
-                                        </div>
-                                        <div class="hony-upload-item-file">
-                                            <span class="hony-upload-item-name">XXXXX.png</span>
-                                        </div>
-                                        <div class="hony-upload-item-loading">
-                                            <span class="iconfont icon-jiazai"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 上传成功状态 -->
-                            <div class="subsection" id="hony-upload-success">
-                                <div class="subsection-title">上传成功</div>
-                                <div class="subsection-description">文件上传成功后显示成功图标和删除按钮。</div>
-                                <div class="component-container">
-                                    <div class="hony-upload-item">
-                                        <div class="hony-upload-item-icon">
-                                            <img src="../../overall/icons/文件IMG.svg" alt="文件图标" class="file-icon">
-                                        </div>
-                                        <div class="hony-upload-item-file">
-                                            <span class="hony-upload-item-name">XXXXX.png</span>
-                                        </div>
-                                        <div class="hony-upload-item-success">
-                                            <span class="iconfont icon-zhengque"></span>
-                                        </div>
-                                        <div class="hony-upload-item-delete" onclick="deleteUploadItem(this)">
-                                            <span class="iconfont icon-lajitong"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 上传失败状态 -->
-                            <div class="subsection" id="hony-upload-error">
-                                <div class="subsection-title">上传失败</div>
-                                <div class="subsection-description">文件上传失败后显示错误图标和删除按钮。</div>
-                                <div class="component-container">
-                                    <div class="hony-upload-item">
-                                        <div class="hony-upload-item-icon">
-                                            <img src="../../overall/icons/文件IMG.svg" alt="文件图标" class="file-icon">
-                                        </div>
-                                        <div class="hony-upload-item-file">
-                                            <span class="hony-upload-item-name error">XXXXX.png</span>
-                                        </div>
-                                        <div class="hony-upload-item-error">
-                                            <span class="iconfont icon-cuowu"></span>
-                                        </div>
-                                        <div class="hony-upload-item-delete" onclick="deleteUploadItem(this)">
-                                            <span class="iconfont icon-lajitong"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 批量上传 Section -->
-                        <div class="section">
-                            <div class="section-title">批量<span style="color: var(--primary-main-1);">上传</span></div>
-                            
-                            <!-- 批量上传 -->
-                            <div class="subsection" id="hony-upload-batch">
-                                <div class="subsection-title">批量上传</div>
-                                <div class="subsection-description">批量上传：支持选择文件上传，显示上传进度和状态，最多上传5个文件。</div>
-                                <div class="component-container">
-                                    <div class="hony-upload-batch-container" id="hony-upload-batch-container">
-                                        <!-- 头部 -->
-                                        <div class="hony-upload-batch-header">
-                                            <input type="file" class="hony-upload-input" id="hony-upload-batch-input" multiple>
-                                            <button class="hony-btn hony-btn-outline-secondary" id="hony-upload-batch-btn">
+            <div class="hony-content-area">
+                <!-- 页面标题 -->
+                <div class="page-header">
+                    <div class="design-code">design code 桌面端组件</div>
+                    <div class="page-title">上传</div>
+                    <div class="page-description">上传组件是用于文件上传的交互组件，提供了多种上传方式和样式，包括点击上传、拖拽上传、图片上传等，满足不同场景的需求。</div>
+                </div>              
+                <div class="main-content-area">
+                    <!-- 内容 -->
+                    <div class="content-area">
+                        <div class="content-main">
+                            <!-- 文件上传 Section -->
+                            <div class="section">
+                                <div class="section-title">文件<span style="color: var(--primary-main-1);">上传</span></div>
+                                
+                                <!-- 基础上传 -->
+                                <div class="subsection" id="hony-upload-basic">
+                                    <div class="subsection-title">基础上传</div>
+                                    <div class="subsection-description">基础上传：简单的点击上传按钮，支持单个或多个文件上传，上传后显示文件列表和进度。</div>
+                                    <div class="component-container">
+                                        <div class="hony-upload" id="hony-upload-basic-container">
+                                            <input type="file" class="hony-upload-input" id="hony-upload-basic-input" multiple>
+                                            <button class="hony-btn hony-btn-outline-secondary" id="hony-upload-basic-btn">
                                                 <span class="hony-btn-icon iconfont icon-shangchuan"></span>
                                                 <span>上传文件</span>
                                             </button>
-                                            <span class="hony-upload-batch-hint">支持批量上传文件，文件格式不限，最多只能上传5份文件</span>
                                         </div>
-                                        
-                                        <!-- 表格 -->
-                                        <div class="hony-upload-batch-table">
-                                            <div class="hony-upload-batch-table-header">
-                                                <div class="hony-upload-batch-col hony-upload-batch-col-name">文件名称</div>
-                                                <div class="hony-upload-batch-col hony-upload-batch-col-size">大小</div>
-                                                <div class="hony-upload-batch-col hony-upload-batch-col-status">状态</div>
-                                                <div class="hony-upload-batch-col hony-upload-batch-col-action">操作</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 上传状态展示 Section -->
+                            <div class="section">
+                                <div class="section-title">上传<span style="color: var(--primary-main-1);">状态</span></div>
+                                
+                                <!-- 上传中状态 -->
+                                <div class="subsection" id="hony-upload-loading">
+                                    <div class="subsection-title">上传中</div>
+                                    <div class="subsection-description">文件上传过程中显示加载动画。</div>
+                                    <div class="component-container">
+                                        <div class="hony-upload-item">
+                                            <div class="hony-upload-item-icon">
+                                                <img src="../../overall/icons/文件IMG.svg" alt="文件图标" class="file-icon">
                                             </div>
-                                            <div class="hony-upload-batch-table-body" id="hony-upload-batch-body">
-                                                <span class="hony-upload-batch-empty" id="hony-upload-batch-empty">上传文件</span>
+                                            <div class="hony-upload-item-file">
+                                                <span class="hony-upload-item-name">XXXXX.png</span>
+                                            </div>
+                                            <div class="hony-upload-item-loading">
+                                                <span class="iconfont icon-jiazai"></span>
                                             </div>
                                         </div>
-                                        
-                                        <!-- 底部按钮 -->
-                                        <div class="hony-upload-batch-footer">
-                                            <button class="hony-btn hony-btn-outline-secondary" id="hony-upload-batch-cancel">取消上传</button>
-                                            <button class="hony-btn hony-btn-primary" id="hony-upload-batch-confirm">确定上传</button>
+                                    </div>
+                                </div>
+
+                                <!-- 上传成功状态 -->
+                                <div class="subsection" id="hony-upload-success">
+                                    <div class="subsection-title">上传成功</div>
+                                    <div class="subsection-description">文件上传成功后显示成功图标和删除按钮。</div>
+                                    <div class="component-container">
+                                        <div class="hony-upload-item">
+                                            <div class="hony-upload-item-icon">
+                                                <img src="../../overall/icons/文件IMG.svg" alt="文件图标" class="file-icon">
+                                            </div>
+                                            <div class="hony-upload-item-file">
+                                                <span class="hony-upload-item-name">XXXXX.png</span>
+                                            </div>
+                                            <div class="hony-upload-item-success">
+                                                <span class="iconfont icon-zhengque"></span>
+                                            </div>
+                                            <div class="hony-upload-item-delete" onclick="deleteUploadItem(this)">
+                                                <span class="iconfont icon-lajitong"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 上传失败状态 -->
+                                <div class="subsection" id="hony-upload-error">
+                                    <div class="subsection-title">上传失败</div>
+                                    <div class="subsection-description">文件上传失败后显示错误图标和删除按钮。</div>
+                                    <div class="component-container">
+                                        <div class="hony-upload-item">
+                                            <div class="hony-upload-item-icon">
+                                                <img src="../../overall/icons/文件IMG.svg" alt="文件图标" class="file-icon">
+                                            </div>
+                                            <div class="hony-upload-item-file">
+                                                <span class="hony-upload-item-name error">XXXXX.png</span>
+                                            </div>
+                                            <div class="hony-upload-item-error">
+                                                <span class="iconfont icon-cuowu"></span>
+                                            </div>
+                                            <div class="hony-upload-item-delete" onclick="deleteUploadItem(this)">
+                                                <span class="iconfont icon-lajitong"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 批量上传 Section -->
+                            <div class="section">
+                                <div class="section-title">批量<span style="color: var(--primary-main-1);">上传</span></div>
+                                
+                                <!-- 批量上传 -->
+                                <div class="subsection" id="hony-upload-batch">
+                                    <div class="subsection-title">批量上传</div>
+                                    <div class="subsection-description">批量上传：支持选择文件上传，显示上传进度和状态，最多上传5个文件。</div>
+                                    <div class="component-container">
+                                        <div class="hony-upload-batch-container" id="hony-upload-batch-container">
+                                            <!-- 头部 -->
+                                            <div class="hony-upload-batch-header">
+                                                <input type="file" class="hony-upload-input" id="hony-upload-batch-input" multiple>
+                                                <button class="hony-btn hony-btn-outline-secondary" id="hony-upload-batch-btn">
+                                                    <span class="hony-btn-icon iconfont icon-shangchuan"></span>
+                                                    <span>上传文件</span>
+                                                </button>
+                                                <span class="hony-upload-batch-hint">支持批量上传文件，文件格式不限，最多只能上传5份文件</span>
+                                            </div>
+                                            
+                                            <!-- 表格 -->
+                                            <div class="hony-upload-batch-table">
+                                                <div class="hony-upload-batch-table-header">
+                                                    <div class="hony-upload-batch-col hony-upload-batch-col-name">文件名称</div>
+                                                    <div class="hony-upload-batch-col hony-upload-batch-col-size">大小</div>
+                                                    <div class="hony-upload-batch-col hony-upload-batch-col-status">状态</div>
+                                                    <div class="hony-upload-batch-col hony-upload-batch-col-action">操作</div>
+                                                </div>
+                                                <div class="hony-upload-batch-table-body" id="hony-upload-batch-body">
+                                                    <span class="hony-upload-batch-empty" id="hony-upload-batch-empty">上传文件</span>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 底部按钮 -->
+                                            <div class="hony-upload-batch-footer">
+                                                <button class="hony-btn hony-btn-outline-secondary" id="hony-upload-batch-cancel">取消上传</button>
+                                                <button class="hony-btn hony-btn-primary" id="hony-upload-batch-confirm">确定上传</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 拖拽上传 Section -->
+                            <div class="section">
+                                <div class="section-title">拖拽<span style="color: var(--primary-main-1);">上传</span></div>
+                                
+                                <!-- 拖拽上传 -->
+                                <div class="subsection" id="hony-upload-drag">
+                                    <div class="subsection-title">拖拽上传</div>
+                                    <div class="subsection-description">拖拽上传：支持将文件拖拽到上传区域进行上传，提供更友好的交互体验。</div>
+                                    <div class="component-container">
+                                        <div class="hony-upload-dragger" id="hony-upload-dragger">
+                                            <input type="file" class="hony-upload-input" id="hony-upload-drag-input" multiple>
+                                            
+                                            <div class="hony-upload-dragger-img">
+                                                <img class="hony-upload-dragger-img1" src="../../overall/images/顶层.png">
+                                                <img class="hony-upload-dragger-img2" src="../../overall/images/中间动态.png">
+                                                <img class="hony-upload-dragger-img3" src="../../overall/images/底层.png">
+
+                                            </div>
+                                            <span class="hony-upload-dragger-text">点击或拖拽文件至此区域上传</span>
+                                            <span class="hony-upload-dragger-hint">支持jpg、png、gif、pdf等格式</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 图片上传 Section -->
+                            <div class="section">
+                                <div class="section-title">图片<span style="color: var(--primary-main-1);">上传</span></div>
+                                
+                                <!-- 图片上传 -->
+                                <div class="subsection" id="hony-upload-image">
+                                    <div class="subsection-title">图片上传</div>
+                                    <div class="subsection-description">图片上传：专门用于图片上传的组件，支持预览和操作。</div>
+                                    <div class="component-container">
+                                        <div class="hony-upload-image" id="hony-upload-image-container">
+                                            <input type="file" class="hony-upload-input" id="hony-upload-image-input" multiple accept="image/*">
+                                            <div class="hony-upload-image-item" id="hony-upload-image-item">
+                                                <span class="iconfont icon-jia"></span>
+                                            </div>
+                                            <div class="hony-upload-image-preview">
+                                                <img src="../../overall/images/展示图.png" alt="preview">
+                                                <div class="hony-upload-image-preview-overlay">
+                                                    <span class="iconfont hony-upload-image-preview-action">&#xf083;</span>
+                                                    <span class="iconfont icon-lajitong hony-upload-image-preview-action"></span>
+                                                </div>
+                                            </div>
+                                            <div class="hony-upload-image-preview">
+                                                <img src="../../overall/images/展示图2.png" alt="preview">
+                                                <div class="hony-upload-image-preview-overlay">
+                                                    <span class="iconfont hony-upload-image-preview-action">&#xf083;</span>
+                                                    <span class="iconfont icon-lajitong hony-upload-image-preview-action"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 单个图片上传 -->
+                                <div class="subsection" id="hony-upload-single-image">
+                                    <div class="subsection-title">单个图片上传</div>
+                                    <div class="subsection-description">单个图片上传：上传后隐藏上传按钮，不能继续上传。</div>
+                                    <div class="component-container">
+                                        <div class="hony-upload-single-image-container">
+                                            <!-- 上传器 -->
+                                            <div class="hony-upload-single-image" id="hony-upload-single-image-container">
+                                                <input type="file" class="hony-upload-input" id="hony-upload-single-image-input" accept="image/*">
+                                                <div class="hony-upload-single-image-item" id="hony-upload-single-image-item">
+                                                    <span class="iconfont icon-jia"></span>
+                                                </div>
+                                                <div class="hony-upload-single-image-preview" id="hony-upload-single-image-preview" style="display: none;">
+                                                    <img src="" alt="preview">
+                                                    <div class="hony-upload-single-image-preview-overlay">
+                                                        <span class="iconfont hony-upload-single-image-preview-action">&#xf083;</span>
+                                                        <span class="iconfont icon-lajitong hony-upload-single-image-preview-action"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hony-upload-single-image-right">
+                                                <div class="hony-upload-single-image-tile">
+                                                    <span class="hony-upload-single-image-status">
+                                                        <span class="hony-upload-single-image-filename">上传图片</span>
+                                                        <span class="hony-upload-status-icon" style="display: none;">
+                                                            <span class="iconfont">&#xe63d;</span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class="hony-upload-single-image-annotation">
+                                                    注释的文案
+                                                </div>
+                                                <div class="hony-upload-single-image-operation">
+                                                    <button class="hony-btn hony-btn-link">点击上传</button>
+                                                    <!--<button class="hony-btn hony-btn-link hony-btn-danger">危险</button>-->
+                                                </div>
+
+
+                                            </div>
+
+
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- 拖拽上传 Section -->
-                        <div class="section">
-                            <div class="section-title">拖拽<span style="color: var(--primary-main-1);">上传</span></div>
-                            
-                            <!-- 拖拽上传 -->
-                            <div class="subsection" id="hony-upload-drag">
-                                <div class="subsection-title">拖拽上传</div>
-                                <div class="subsection-description">拖拽上传：支持将文件拖拽到上传区域进行上传，提供更友好的交互体验。</div>
-                                <div class="component-container">
-                                    <div class="hony-upload-dragger" id="hony-upload-dragger">
-                                        <input type="file" class="hony-upload-input" id="hony-upload-drag-input" multiple>
-                                        
-                                        <div class="hony-upload-dragger-img">
-                                            <img class="hony-upload-dragger-img1" src="../../overall/images/顶层.png">
-                                            <img class="hony-upload-dragger-img2" src="../../overall/images/中间动态.png">
-                                            <img class="hony-upload-dragger-img3" src="../../overall/images/底层.png">
-
-                                        </div>
-                                        <span class="hony-upload-dragger-text">点击或拖拽文件至此区域上传</span>
-                                        <span class="hony-upload-dragger-hint">支持jpg、png、gif、pdf等格式</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <!-- 图片上传 Section -->
-                        <div class="section">
-                            <div class="section-title">图片<span style="color: var(--primary-main-1);">上传</span></div>
-                            
-                            <!-- 图片上传 -->
-                            <div class="subsection" id="hony-upload-image">
-                                <div class="subsection-title">图片上传</div>
-                                <div class="subsection-description">图片上传：专门用于图片上传的组件，支持预览和操作。</div>
-                                <div class="component-container">
-                                    <div class="hony-upload-image" id="hony-upload-image-container">
-                                        <input type="file" class="hony-upload-input" id="hony-upload-image-input" multiple accept="image/*">
-                                        <div class="hony-upload-image-item" id="hony-upload-image-item">
-                                            <span class="iconfont icon-jia"></span>
-                                        </div>
-                                        <div class="hony-upload-image-preview">
-                                            <img src="../../overall/images/展示图.png" alt="preview">
-                                            <div class="hony-upload-image-preview-overlay">
-                                                <span class="iconfont hony-upload-image-preview-action">&#xf083;</span>
-                                                <span class="iconfont icon-lajitong hony-upload-image-preview-action"></span>
-                                            </div>
-                                        </div>
-                                        <div class="hony-upload-image-preview">
-                                            <img src="../../overall/images/展示图2.png" alt="preview">
-                                            <div class="hony-upload-image-preview-overlay">
-                                                <span class="iconfont hony-upload-image-preview-action">&#xf083;</span>
-                                                <span class="iconfont icon-lajitong hony-upload-image-preview-action"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>                
+                    <!-- 右侧锚点导航 -->
+                    <div class="right-nav">
+                        <div class="right-nav-items">
+                                <div class="right-nav-item active" onclick="handleRightNavClick(this, 'upload-basic');">基础上传</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'upload-loading');">上传中</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'upload-success');">上传成功</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'upload-error');">上传失败</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'upload-batch');">批量上传</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'upload-drag');">拖拽上传</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'upload-image');">图片上传</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'upload-single-image');">单个图片上传</div>
                         </div>
                     </div>
                 </div>                
-                <!-- 右侧锚点导航 -->
-                <div class="right-nav">
-                    <div class="right-nav-items">
-                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'upload-basic');">基础上传</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'upload-loading');">上传中</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'upload-success');">上传成功</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'upload-error');">上传失败</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'upload-batch');">批量上传</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'upload-drag');">拖拽上传</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'upload-image');">图片上传</div>
-                    </div>
-                </div>
             </div>
+
         </div>
     </div>
     <!-- 背景纹理 -->
     <div class="hony-background-texture"></div>
     <!-- 背景banner -->
     <div class="background-bgVideo">
-        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+        <!-- 浅色模式视频 -->
+        <video class="background-bgVideo-video background-bgVideo-light" autoplay muted loop playsinline>
             <source src="../../overall/images/背景banne.mp4" type="video/mp4">
         </video>
+        <!-- 深色模式图片 -->
+        <img class="background-bgVideo-image background-bgVideo-dark" src="../../overall/images/bg-dark-mode.png" alt="深色背景">
     </div>
+<script src="../B-navigation/tabs.js"></script>
 </body>
 </html>

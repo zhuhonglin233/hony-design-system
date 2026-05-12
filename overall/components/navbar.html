@@ -1,11 +1,6 @@
 <!-- 顶部导航栏组件 -->
 <nav class="navbar">
     <div class="navbar-content">
-        <!-- Logo -->
-        <div class="logo" onclick="navigateTo('index.html')">
-            <img class="logo-icon" src="overall/images/LOGO.png" alt="Hony Design Logo">
-            <div class="logo-text">Hony Design</div>
-        </div>
 
         <!-- 导航菜单 -->
         <div class="nav-menu">
@@ -29,19 +24,23 @@
                     <div class="nav-text">桌面端组件</div>
                 </div>
             </div>
-            <div class="nav-item">
+            <div class="nav-item" onclick="window.open('../../desktop/page-template/system-login.html', '_blank')">
                 <div class="nav-item-inner">
-                    <div class="nav-text">移动端组件</div>
+                    <div class="nav-text">页面模版</div>
                 </div>
             </div>
-            <div class="nav-item">
+            <div class="nav-item" onclick="window.open('https://www.figma.com/proto/NGoV0wp2ulYjFmzTPVsRzR/Untitled?node-id=9-6&viewport=77%2C-239%2C0.18&t=IJpHPYV8X3xdXgwE-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=9%3A6&page-id=0%3A1', '_blank')">
                 <div class="nav-item-inner">
-                    <div class="nav-text">资源</div>
+                    <div class="nav-text">关于我</div>
                 </div>
             </div>
-            <div class="nav-item">
-                <div class="nav-item-inner">
-                    <div class="nav-text">关于</div>
+            <!-- 右侧功能区 -->
+            <div class="hony-tab-nav-segment hony-tab-nav-segment-icons">
+                <div class="hony-tab-item active" data-tab="tab-segment-1" onclick="switchTheme('light')">
+                    <span class="hony-tab-icon iconfont"></span>
+                </div>
+                <div class="hony-tab-item" data-tab="tab-segment-2" onclick="switchTheme('dark')">
+                    <span class="hony-tab-icon iconfont"></span>
                 </div>
             </div>
         </div>

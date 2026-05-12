@@ -122,12 +122,15 @@
 }
 
 .hony-checkbox-box.checked::after {
-  content: '\f081';
-  font-family: 'iconfont';
-  color: var(--primary-main-5);
-  font-size: 8px;
-  font-weight: bold;
-  line-height: 1;
+  content: '';
+    width: 3px;
+    height: 6px;
+    border: solid var(--primary-main-5);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 4px;
 }
 
 .hony-checkbox-box.indeterminate {

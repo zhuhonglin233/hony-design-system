@@ -58,7 +58,21 @@
   color: var(--primary-main-1);
   animation: spin 1s linear infinite;
 }
-
+.hony-alert-primary-light{
+  background: var(--primary-face-1);
+}
+.hony-alert-success-light{
+  background: var(--success-face-1);
+}
+.hony-alert-warning-light{
+  background: var(--warning-face-1);
+}
+.hony-alert-danger-light{
+  background: var(--primary-danger-1);
+}
+.hony-alert-default-light{
+  background: var(--grey-face-1);
+}
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -200,10 +214,13 @@
 .hony-alert-expand-close {
   flex-shrink: 0;
   width: 20px;
-  height: 20px;
+  height: 24px;
   cursor: pointer;
   opacity: 0.6;
   transition: opacity 0.2s ease;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .hony-alert-expand-close:hover {
@@ -333,11 +350,14 @@
 
 .hony-alert-complex-close {
   flex-shrink: 0;
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 24px;
   cursor: pointer;
   opacity: 0.6;
   transition: opacity 0.2s ease;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .hony-alert-complex-close:hover {
@@ -348,7 +368,7 @@
   padding-left: 28px;
   font-size: 12px;
   line-height: 20px;
-  color: var(--grey-text-4);
+  color: var(--grey-text-2);
   margin-bottom: 0px;
 }
 
@@ -429,3 +449,4 @@
     margin-top: 8px;
     justify-content: flex-end;
   }
+}

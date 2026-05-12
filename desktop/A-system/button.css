@@ -1,10 +1,10 @@
 /* 按钮样式 */
 .hony-button-group {
     display: flex;
-    gap: 24px;
+    gap: 48px;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 24px;
+    width: 100%;
 }
 
 .hony-button-group:last-child {
@@ -184,7 +184,7 @@
 
 /* 描边按钮 */
 .hony-btn-outline-primary {
-    background-color: var(--primary-main-5);
+    background-color: var(--grey-bg-0);
     color: var(--primary-main-1);
     border-color: var(--primary-main-1);
 }
@@ -201,13 +201,13 @@
 }
 
 .hony-btn-outline-primary:disabled {
-    background-color: var(--primary-main-5);
+    background-color: var(--grey-bg-0);
     color: var(--primary-main-4);
     border-color: var(--primary-main-4);
 }
 
 .hony-btn-outline-secondary {
-    background-color: var(--primary-main-5);
+    background-color: var(--grey-bg-0);
     color: var(--grey-main-1);
     border-color: var(--grey-border-2);
 }
@@ -226,13 +226,13 @@
 }
 
 .hony-btn-outline-secondary:disabled {
-    background-color: var(--primary-main-5);
+    background-color: var(--grey-bg-0);
     color: var(--grey-main-4);
     border-color: var(--grey-border-2);
 }
 
 .hony-btn-outline-danger {
-    background-color: var(--primary-main-5);
+    background-color: var(--grey-bg-0);
     color: var(--danger-main-1);
     border-color: var(--danger-main-1);
 }
@@ -249,13 +249,13 @@
 }
 
 .hony-btn-outline-danger:disabled {
-    background-color: var(--primary-main-5);
+    background-color: var(--grey-bg-0);
     color: var(--danger-main-4);
     border-color: var(--danger-main-4);
 }
 
 .hony-btn-outline-success {
-    background-color: var(--primary-main-5);
+    background-color: var(--grey-bg-0);
     color: var(--success-main-1);
     border-color: var(--success-main-1);
 }
@@ -272,13 +272,13 @@
 }
 
 .hony-btn-outline-success:disabled {
-    background-color: var(--primary-main-5);
+    background-color: var(--grey-bg-0);
     color: var(--success-main-4);
     border-color: var(--success-main-4);
 }
 
 .hony-btn-outline-warning {
-    background-color: var(--primary-main-5);
+    background-color: var(--grey-bg-0);
     color: var(--warning-main-1);
     border-color: var(--warning-main-1);
 }
@@ -295,7 +295,7 @@
 }
 
 .hony-btn-outline-warning:disabled {
-    background-color: var(--primary-main-5);
+    background-color: var(--grey-bg-0);
     color: var(--warning-main-4);
     border-color: var(--warning-main-4);
 }
@@ -509,7 +509,7 @@
 
 /* 按钮尺寸 */
 .hony-btn-lg {
-    height: 44px;
+    height: 40px;
     padding: 0 20px;
     font-size: 16px;
     min-width: 88px; /* 大按钮最小宽度 */
@@ -527,7 +527,7 @@
 }
 
 .hony-btn-round.hony-btn-lg {
-    width: 44px;
+    width: 40px;
 }
 
 .hony-btn-square {

@@ -4,689 +4,699 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>颜色 - 设计规范</title>
+    <link rel="icon" href="../overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../overall/main.css">
     <link rel="stylesheet" href="color.css">
     <script src="../overall/js/common.js"></script>
+<link rel="stylesheet" href="desktop/B-navigation/tabs.css">
 </head>
 <body>
-    <div class="background-decoration"></div>
     <div class="page-container">
-        <!-- 顶部导航栏 -->
-        <div id="navbar-container"></div>
-
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>      
         <!-- 主内容区域 -->
         <div class="main-content">
-            <!-- 侧边导航 -->
-            <div id="sidebar-container"></div>
-
-            <!-- 右侧内容 -->
-            <div class="content-area">
-                <div class="content-main">
-                    <!-- 大标题 -->
-                    <div class="page-header">
-                        <div class="design-code">design code 设计规范</div>
-                        <div class="page-title">颜色</div>
-                        <div class="page-description">色彩是设计系统中最直观的视觉元素，用于传达品牌个性、引导用户注意力和表示不同状态。我们的色彩系统包括主题色、功能色和中性色，每种颜色都有11级色阶，以满足不同场景的设计需求。</div>
-                    </div>
-
-                <!-- 主题和功能色 -->
-                <div class="section">
-                    <div class="section-title">颜色<span style="color: var(--primary-main-1);">全局</span></div>
-                    <div class="subsection" id="color-global">
-                        <div class="subsection-title">主题色和功能色</div>
-                        <div class="subsection-description">在色彩系统中，功能色共分为四种类型：主题色、危险色、警告色和成功色。每个功能色扩展11级色阶，足够覆盖界面设计中各需求场景。
-用户可在 Color Styles 中更改对应色阶的色值，让用户更便捷和更直观的配置不同业务场景的色彩系统。</div>
-                        <div class="component-container">
-                            <div class="color-scale">
-                                <div class="color-scale-item" style="background: #E8EFFF;">
-                                    <div class="color-scale-value">E8EFFF</div>
-                                    <div class="color-scale-name">Primary - 1</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #D0DFFF;">
-                                    <div class="color-scale-value">D0DFFF</div>
-                                    <div class="color-scale-name">Primary - 2</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #A2BEFF;">
-                                    <div class="color-scale-value">A2BEFF</div>
-                                    <div class="color-scale-name">Primary - 3</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #739EFF;">
-                                    <div class="color-scale-value">739EFF</div>
-                                    <div class="color-scale-name">Primary - 4</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #457DFF;">
-                                    <div class="color-scale-value">457DFF</div>
-                                    <div class="color-scale-name">Primary - 5</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #165DFF;">
-                                    <div class="color-scale-value">165DFF</div>
-                                    <div class="color-scale-name">Primary - 6</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #124ACC;">
-                                    <div class="color-scale-value">124ACC</div>
-                                    <div class="color-scale-name">Primary - 7</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #0D3899;">
-                                    <div class="color-scale-value">0D3899</div>
-                                    <div class="color-scale-name">Primary - 8</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #092566;">
-                                    <div class="color-scale-value">092566</div>
-                                    <div class="color-scale-name">Primary - 9</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #041333;">
-                                    <div class="color-scale-value">041333</div>
-                                    <div class="color-scale-name">Primary - 10</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #02091A;">
-                                    <div class="color-scale-value">02091A</div>
-                                    <div class="color-scale-name">Primary - 11</div>
-                                </div>
-                            </div>
-                            <div class="color-scale">
-                                <div class="color-scale-item" style="background: #EAF6F1;">
-                                    <div class="color-scale-value">EAF6F1</div>
-                                    <div class="color-scale-name">Success - 1</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #D5EDE3;">
-                                    <div class="color-scale-value">D5EDE3</div>
-                                    <div class="color-scale-name">Success - 2</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #AADBC6;">
-                                    <div class="color-scale-value">AADBC6</div>
-                                    <div class="color-scale-name">Success - 3</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #80C8AA;">
-                                    <div class="color-scale-value">80C8AA</div>
-                                    <div class="color-scale-name">Success - 4</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #55B68D;">
-                                    <div class="color-scale-value">55B68D</div>
-                                    <div class="color-scale-name">Success - 5</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #2BAA71;">
-                                    <div class="color-scale-value">2BAA71</div>
-                                    <div class="color-scale-name">Success - 6</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #238C5C;">
-                                    <div class="color-scale-value">238C5C</div>
-                                    <div class="color-scale-name">Success - 7</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #1B6E45;">
-                                    <div class="color-scale-value">1B6E45</div>
-                                    <div class="color-scale-name">Success - 8</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #124F30;">
-                                    <div class="color-scale-value">124F30</div>
-                                    <div class="color-scale-name">Success - 9</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #0A2F1B;">
-                                    <div class="color-scale-value">0A2F1B</div>
-                                    <div class="color-scale-name">Success - 10</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #05170D;">
-                                    <div class="color-scale-value">05170D</div>
-                                    <div class="color-scale-name">Success - 11</div>
-                                </div>
-                            </div>
-                            <div class="color-scale">
-                                <div class="color-scale-item" style="background: #FDECE8;">
-                                    <div class="color-scale-value">FDECE8</div>
-                                    <div class="color-scale-name">Danger - 1</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #FAD6CD;">
-                                    <div class="color-scale-value">FAD6CD</div>
-                                    <div class="color-scale-name">Danger - 2</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #F5B2A4;">
-                                    <div class="color-scale-value">F5B2A4</div>
-                                    <div class="color-scale-name">Danger - 3</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #F08E7A;">
-                                    <div class="color-scale-value">F08E7A</div>
-                                    <div class="color-scale-name">Danger - 4</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #EB6B56;">
-                                    <div class="color-scale-value">EB6B56</div>
-                                    <div class="color-scale-name">Danger - 5</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #E02C2C;">
-                                    <div class="color-scale-value">E02C2C</div>
-                                    <div class="color-scale-name">Danger - 6</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #B82323;">
-                                    <div class="color-scale-value">B82323</div>
-                                    <div class="color-scale-name">Danger - 7</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #901D1D;">
-                                    <div class="color-scale-value">901D1D</div>
-                                    <div class="color-scale-name">Danger - 8</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #681616;">
-                                    <div class="color-scale-value">681616</div>
-                                    <div class="color-scale-name">Danger - 9</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #400F0F;">
-                                    <div class="color-scale-value">400F0F</div>
-                                    <div class="color-scale-name">Danger - 10</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #200808;">
-                                    <div class="color-scale-value">200808</div>
-                                    <div class="color-scale-name">Danger - 11</div>
-                                </div>
-                            </div>
-                            <div class="color-scale">
-                                <div class="color-scale-item" style="background: #FEF5E8;">
-                                    <div class="color-scale-value">FEF5E8</div>
-                                    <div class="color-scale-name">Warning - 1</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #FCE5C9;">
-                                    <div class="color-scale-value">FCE5C9</div>
-                                    <div class="color-scale-name">Warning - 2</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #F9D09F;">
-                                    <div class="color-scale-value">F9D09F</div>
-                                    <div class="color-scale-name">Warning - 3</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #F6B770;">
-                                    <div class="color-scale-value">F6B770</div>
-                                    <div class="color-scale-name">Warning - 4</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #F39D41;">
-                                    <div class="color-scale-value">F39D41</div>
-                                    <div class="color-scale-name">Warning - 5</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #F57D1F;">
-                                    <div class="color-scale-value">F57D1F</div>
-                                    <div class="color-scale-name">Warning - 6</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #C4641A;">
-                                    <div class="color-scale-value">C4641A</div>
-                                    <div class="color-scale-name">Warning - 7</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #934D15;">
-                                    <div class="color-scale-value">934D15</div>
-                                    <div class="color-scale-name">Warning - 8</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #623610;">
-                                    <div class="color-scale-value">623610</div>
-                                    <div class="color-scale-name">Warning - 9</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #311E08;">
-                                    <div class="color-scale-value">311E08</div>
-                                    <div class="color-scale-name">Warning - 10</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #190F04;">
-                                    <div class="color-scale-value">190F04</div>
-                                    <div class="color-scale-name">Warning - 11</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 中性色 -->
-                    <div class="subsection" id="color-neutral">
-                        <div class="subsection-title">中性色</div>
-                        <div class="subsection-description">中性色指的是不带有明显色彩倾向的颜色，它们通常位于色轮的中心，包含灰色、白色、黑色以及一些较为柔和的棕色和米色。中性色在设计中常被用作背景色、辅助色或配合主色调使用，以增强设计的层次感和平衡感。
-中性色是一种强大的设计工具，它们不仅提供视觉上的平衡，还能让主色调和元素更为突出。在设计规范中，合理运用中性色，能够让界面更加协调、简洁，并提高用户体验。</div>
-                        <div class="component-container">
-                            <div class="color-scale">
-                                <div class="color-scale-item" style="background: #F9FAFB;">
-                                    <div class="color-scale-value">F9FAFB</div>
-                                    <div class="color-scale-name">Grey - 1</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #F5F6F9;">
-                                    <div class="color-scale-value">F5F6F9</div>
-                                    <div class="color-scale-name">Grey - 2</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #E7EAF0;">
-                                    <div class="color-scale-value">E7EAF0</div>
-                                    <div class="color-scale-name">Grey - 3</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #DADEE8;">
-                                    <div class="color-scale-value">DADEE8</div>
-                                    <div class="color-scale-name">Grey - 4</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #B5BED1;">
-                                    <div class="color-scale-value">B5BED1</div>
-                                    <div class="color-scale-name">Grey - 5</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #9CA7C1;">
-                                    <div class="color-scale-value">9CA7C1</div>
-                                    <div class="color-scale-name">Grey - 6</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #6C7DA3;">
-                                    <div class="color-scale-value">6C7DA3</div>
-                                    <div class="color-scale-name">Grey - 7</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #495673;">
-                                    <div class="color-scale-value">495673</div>
-                                    <div class="color-scale-name">Grey - 8</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #384259;">
-                                    <div class="color-scale-value">384259</div>
-                                    <div class="color-scale-name">Grey - 9</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #212833;">
-                                    <div class="color-scale-value">212833</div>
-                                    <div class="color-scale-name">Grey - 10</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #151821;">
-                                    <div class="color-scale-value">151821</div>
-                                    <div class="color-scale-name">Grey - 11</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #101319;">
-                                    <div class="color-scale-value">101319</div>
-                                    <div class="color-scale-name">Grey - 12</div>
-                                </div>
-                                <div class="color-scale-item" style="background: var(--grey-bg-0);">
-                                    <div class="color-scale-value">FFFFFF</div>
-                                    <div class="color-scale-name">Grey - white</div>
-                                </div>
-                                <div class="color-scale-item" style="background: #000000;">
-                                    <div class="color-scale-value">000000</div>
-                                    <div class="color-scale-name">Grey - black</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="hony-content-area">
+                <!-- 页面标题 -->
+                <div class="page-header">
+                    <div class="design-code">design code 设计规范</div>
+                    <div class="page-title">颜色</div>
+                    <div class="page-description">色彩是设计系统中最直观的视觉元素，用于传达品牌个性、引导用户注意力和表示不同状态。我们的色彩系统包括主题色、功能色和中性色，每种颜色都有11级色阶，以满足不同场景的设计需求。</div>
                 </div>
+                <div class="main-content-area">
+                    <!-- 内容 -->
+                    <div class="content-area">
+                        <div class="content-main">
+                            <!-- 主题和功能色 -->
+                            <div class="section">
+                                <div class="section-title">颜色<span style="color: var(--primary-main-1);">全局</span></div>
+                                <div class="subsection" id="color-global">
+                                    <div class="subsection-title">主题色和功能色</div>
+                                    <div class="subsection-description">在色彩系统中，功能色共分为四种类型：主题色、危险色、警告色和成功色。每个功能色扩展11级色阶，足够覆盖界面设计中各需求场景。
+            用户可在 Color Styles 中更改对应色阶的色值，让用户更便捷和更直观的配置不同业务场景的色彩系统。</div>
+                                    <div class="component-container">
+                                        <div class="color-scale">
+                                            <div class="color-scale-item" style="background: #E8EFFF;">
+                                                <div class="color-scale-value">E8EFFF</div>
+                                                <div class="color-scale-name">Primary - 1</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #D0DFFF;">
+                                                <div class="color-scale-value">D0DFFF</div>
+                                                <div class="color-scale-name">Primary - 2</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #A2BEFF;">
+                                                <div class="color-scale-value">A2BEFF</div>
+                                                <div class="color-scale-name">Primary - 3</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #739EFF;">
+                                                <div class="color-scale-value">739EFF</div>
+                                                <div class="color-scale-name">Primary - 4</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #457DFF;">
+                                                <div class="color-scale-value">457DFF</div>
+                                                <div class="color-scale-name">Primary - 5</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #165DFF;">
+                                                <div class="color-scale-value">165DFF</div>
+                                                <div class="color-scale-name">Primary - 6</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #124ACC;">
+                                                <div class="color-scale-value">124ACC</div>
+                                                <div class="color-scale-name">Primary - 7</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #0D3899;">
+                                                <div class="color-scale-value">0D3899</div>
+                                                <div class="color-scale-name">Primary - 8</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #092566;">
+                                                <div class="color-scale-value">092566</div>
+                                                <div class="color-scale-name">Primary - 9</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #041333;">
+                                                <div class="color-scale-value">041333</div>
+                                                <div class="color-scale-name">Primary - 10</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #02091A;">
+                                                <div class="color-scale-value">02091A</div>
+                                                <div class="color-scale-name">Primary - 11</div>
+                                            </div>
+                                        </div>
+                                        <div class="color-scale">
+                                            <div class="color-scale-item" style="background: #EAF6F1;">
+                                                <div class="color-scale-value">EAF6F1</div>
+                                                <div class="color-scale-name">Success - 1</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #D5EDE3;">
+                                                <div class="color-scale-value">D5EDE3</div>
+                                                <div class="color-scale-name">Success - 2</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #AADBC6;">
+                                                <div class="color-scale-value">AADBC6</div>
+                                                <div class="color-scale-name">Success - 3</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #80C8AA;">
+                                                <div class="color-scale-value">80C8AA</div>
+                                                <div class="color-scale-name">Success - 4</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #55B68D;">
+                                                <div class="color-scale-value">55B68D</div>
+                                                <div class="color-scale-name">Success - 5</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #2BAA71;">
+                                                <div class="color-scale-value">2BAA71</div>
+                                                <div class="color-scale-name">Success - 6</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #238C5C;">
+                                                <div class="color-scale-value">238C5C</div>
+                                                <div class="color-scale-name">Success - 7</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #1B6E45;">
+                                                <div class="color-scale-value">1B6E45</div>
+                                                <div class="color-scale-name">Success - 8</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #124F30;">
+                                                <div class="color-scale-value">124F30</div>
+                                                <div class="color-scale-name">Success - 9</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #0A2F1B;">
+                                                <div class="color-scale-value">0A2F1B</div>
+                                                <div class="color-scale-name">Success - 10</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #05170D;">
+                                                <div class="color-scale-value">05170D</div>
+                                                <div class="color-scale-name">Success - 11</div>
+                                            </div>
+                                        </div>
+                                        <div class="color-scale">
+                                            <div class="color-scale-item" style="background: #FDECE8;">
+                                                <div class="color-scale-value">FDECE8</div>
+                                                <div class="color-scale-name">Danger - 1</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #FAD6CD;">
+                                                <div class="color-scale-value">FAD6CD</div>
+                                                <div class="color-scale-name">Danger - 2</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #F5B2A4;">
+                                                <div class="color-scale-value">F5B2A4</div>
+                                                <div class="color-scale-name">Danger - 3</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #F08E7A;">
+                                                <div class="color-scale-value">F08E7A</div>
+                                                <div class="color-scale-name">Danger - 4</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #EB6B56;">
+                                                <div class="color-scale-value">EB6B56</div>
+                                                <div class="color-scale-name">Danger - 5</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #E02C2C;">
+                                                <div class="color-scale-value">E02C2C</div>
+                                                <div class="color-scale-name">Danger - 6</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #B82323;">
+                                                <div class="color-scale-value">B82323</div>
+                                                <div class="color-scale-name">Danger - 7</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #901D1D;">
+                                                <div class="color-scale-value">901D1D</div>
+                                                <div class="color-scale-name">Danger - 8</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #681616;">
+                                                <div class="color-scale-value">681616</div>
+                                                <div class="color-scale-name">Danger - 9</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #400F0F;">
+                                                <div class="color-scale-value">400F0F</div>
+                                                <div class="color-scale-name">Danger - 10</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #200808;">
+                                                <div class="color-scale-value">200808</div>
+                                                <div class="color-scale-name">Danger - 11</div>
+                                            </div>
+                                        </div>
+                                        <div class="color-scale">
+                                            <div class="color-scale-item" style="background: #FEF5E8;">
+                                                <div class="color-scale-value">FEF5E8</div>
+                                                <div class="color-scale-name">Warning - 1</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #FCE5C9;">
+                                                <div class="color-scale-value">FCE5C9</div>
+                                                <div class="color-scale-name">Warning - 2</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #F9D09F;">
+                                                <div class="color-scale-value">F9D09F</div>
+                                                <div class="color-scale-name">Warning - 3</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #F6B770;">
+                                                <div class="color-scale-value">F6B770</div>
+                                                <div class="color-scale-name">Warning - 4</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #F39D41;">
+                                                <div class="color-scale-value">F39D41</div>
+                                                <div class="color-scale-name">Warning - 5</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #F57D1F;">
+                                                <div class="color-scale-value">F57D1F</div>
+                                                <div class="color-scale-name">Warning - 6</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #C4641A;">
+                                                <div class="color-scale-value">C4641A</div>
+                                                <div class="color-scale-name">Warning - 7</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #934D15;">
+                                                <div class="color-scale-value">934D15</div>
+                                                <div class="color-scale-name">Warning - 8</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #623610;">
+                                                <div class="color-scale-value">623610</div>
+                                                <div class="color-scale-name">Warning - 9</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #311E08;">
+                                                <div class="color-scale-value">311E08</div>
+                                                <div class="color-scale-name">Warning - 10</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #190F04;">
+                                                <div class="color-scale-value">190F04</div>
+                                                <div class="color-scale-name">Warning - 11</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- 颜色变量 -->
-                <div class="section">
-                    <div class="section-title">颜色<span style="color: var(--primary-main-1);">变量</span></div>
-                    
-                    <!-- 主题色配置 -->
-                    <div class="subsection" id="color-variables">
-                        <div class="subsection-title">主题色配置</div>
-                        <div class="component-container">
-                            <table class="color-table">
-                                <thead>
-                                    <tr>
-                                        <th>命名</th>
-                                        <th>描述</th>
-                                        <th>Light</th>
-                                        <th>Dark</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Brand/main-1</td>
-                                        <td>主题场景</td>
-                                        <td><span class="color-box" style="background: #165DFF;"></span> Primary - 6</td>
-                                        <td><span class="color-box" style="background: #165DFF;"></span> Primary - 6</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Brand/main-2</td>
-                                        <td>主题场景-悬停</td>
-                                        <td><span class="color-box" style="background: #457DFF;"></span> Primary - 5</td>
-                                        <td><span class="color-box" style="background: #124ACC;"></span> Primary - 7</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Brand/main-3</td>
-                                        <td>主题场景-选中</td>
-                                        <td><span class="color-box" style="background: #124ACC;"></span> Primary - 7</td>
-                                        <td><span class="color-box" style="background: #457DFF;"></span> Primary - 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Brand/main-4</td>
-                                        <td>主题场景-禁用</td>
-                                        <td><span class="color-box" style="background: #A2BEFF;"></span> Primary - 3</td>
-                                        <td><span class="color-box" style="background: #092566;"></span> Primary - 9</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Brand/face-1</td>
-                                        <td>主题场景的面或白底悬停(禁用)</td>
-                                        <td><span class="color-box" style="background: #E8EFFF;"></span> Primary - 1</td>
-                                        <td><span class="color-box" style="background: #02091A;"></span> Primary - 11</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Brand/face-2</td>
-                                        <td>主题场景的面-选中</td>
-                                        <td><span class="color-box" style="background: #D0DFFF;"></span> Primary - 2</td>
-                                        <td><span class="color-box" style="background: #041333;"></span> Primary - 10</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Brand/face-3</td>
-                                        <td>主题场景的面-特殊</td>
-                                        <td><span class="color-box" style="background: #A2BEFF;"></span> Primary - 3</td>
-                                        <td><span class="color-box" style="background: #092566;"></span> Primary - 9</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                <!-- 中性色 -->
+                                <div class="subsection" id="color-neutral">
+                                    <div class="subsection-title">中性色</div>
+                                    <div class="subsection-description">中性色指的是不带有明显色彩倾向的颜色，它们通常位于色轮的中心，包含灰色、白色、黑色以及一些较为柔和的棕色和米色。中性色在设计中常被用作背景色、辅助色或配合主色调使用，以增强设计的层次感和平衡感。
+            中性色是一种强大的设计工具，它们不仅提供视觉上的平衡，还能让主色调和元素更为突出。在设计规范中，合理运用中性色，能够让界面更加协调、简洁，并提高用户体验。</div>
+                                    <div class="component-container">
+                                        <div class="color-scale">
+                                            <div class="color-scale-item" style="background: #F9FAFB;">
+                                                <div class="color-scale-value">F9FAFB</div>
+                                                <div class="color-scale-name">Grey - 1</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #F5F6F9;">
+                                                <div class="color-scale-value">F5F6F9</div>
+                                                <div class="color-scale-name">Grey - 2</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #E7EAF0;">
+                                                <div class="color-scale-value">E7EAF0</div>
+                                                <div class="color-scale-name">Grey - 3</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #DADEE8;">
+                                                <div class="color-scale-value">DADEE8</div>
+                                                <div class="color-scale-name">Grey - 4</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #B5BED1;">
+                                                <div class="color-scale-value">B5BED1</div>
+                                                <div class="color-scale-name">Grey - 5</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #9CA7C1;">
+                                                <div class="color-scale-value">9CA7C1</div>
+                                                <div class="color-scale-name">Grey - 6</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #6C7DA3;">
+                                                <div class="color-scale-value">6C7DA3</div>
+                                                <div class="color-scale-name">Grey - 7</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #495673;">
+                                                <div class="color-scale-value">495673</div>
+                                                <div class="color-scale-name">Grey - 8</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #384259;">
+                                                <div class="color-scale-value">384259</div>
+                                                <div class="color-scale-name">Grey - 9</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #212833;">
+                                                <div class="color-scale-value">212833</div>
+                                                <div class="color-scale-name">Grey - 10</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #151821;">
+                                                <div class="color-scale-value">151821</div>
+                                                <div class="color-scale-name">Grey - 11</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #101319;">
+                                                <div class="color-scale-value">101319</div>
+                                                <div class="color-scale-name">Grey - 12</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: var(--grey-bg-0);">
+                                                <div class="color-scale-value">FFFFFF</div>
+                                                <div class="color-scale-name">Grey - white</div>
+                                            </div>
+                                            <div class="color-scale-item" style="background: #000000;">
+                                                <div class="color-scale-value">000000</div>
+                                                <div class="color-scale-name">Grey - black</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 颜色变量 -->
+                            <div class="section">
+                                <div class="section-title">颜色<span style="color: var(--primary-main-1);">变量</span></div>
+                                
+                                <!-- 主题色配置 -->
+                                <div class="subsection" id="color-variables">
+                                    <div class="subsection-title">主题色配置</div>
+                                    <div class="component-container">
+                                        <table class="color-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>命名</th>
+                                                    <th>描述</th>
+                                                    <th>Light</th>
+                                                    <th>Dark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Brand/main-1</td>
+                                                    <td>主题场景</td>
+                                                    <td><span class="color-box" style="background: #165DFF;"></span> Primary - 6</td>
+                                                    <td><span class="color-box" style="background: #165DFF;"></span> Primary - 6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brand/main-2</td>
+                                                    <td>主题场景-悬停</td>
+                                                    <td><span class="color-box" style="background: #457DFF;"></span> Primary - 5</td>
+                                                    <td><span class="color-box" style="background: #124ACC;"></span> Primary - 7</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brand/main-3</td>
+                                                    <td>主题场景-选中</td>
+                                                    <td><span class="color-box" style="background: #124ACC;"></span> Primary - 7</td>
+                                                    <td><span class="color-box" style="background: #457DFF;"></span> Primary - 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brand/main-4</td>
+                                                    <td>主题场景-禁用</td>
+                                                    <td><span class="color-box" style="background: #A2BEFF;"></span> Primary - 3</td>
+                                                    <td><span class="color-box" style="background: #092566;"></span> Primary - 9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brand/face-1</td>
+                                                    <td>主题场景的面或白底悬停(禁用)</td>
+                                                    <td><span class="color-box" style="background: #E8EFFF;"></span> Primary - 1</td>
+                                                    <td><span class="color-box" style="background: #02091A;"></span> Primary - 11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brand/face-2</td>
+                                                    <td>主题场景的面-选中</td>
+                                                    <td><span class="color-box" style="background: #D0DFFF;"></span> Primary - 2</td>
+                                                    <td><span class="color-box" style="background: #041333;"></span> Primary - 10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brand/face-3</td>
+                                                    <td>主题场景的面-特殊</td>
+                                                    <td><span class="color-box" style="background: #A2BEFF;"></span> Primary - 3</td>
+                                                    <td><span class="color-box" style="background: #092566;"></span> Primary - 9</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- 安全色配置 -->
+                                <div class="subsection" id="color-success">
+                                    <div class="subsection-title">安全色配置</div>
+                                    <div class="component-container">
+                                        <table class="color-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>命名</th>
+                                                    <th>描述</th>
+                                                    <th>Light</th>
+                                                    <th>Dark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Success/main-1</td>
+                                                    <td>安全场景</td>
+                                                    <td><span class="color-box" style="background: #2BAA71;"></span> Success - 6</td>
+                                                    <td><span class="color-box" style="background: #2BAA71;"></span> Success - 6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Success/main-2</td>
+                                                    <td>安全场景-悬停</td>
+                                                    <td><span class="color-box" style="background: #55B68D;"></span> Success - 5</td>
+                                                    <td><span class="color-box" style="background: #238C5C;"></span> Success - 7</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Success/main-3</td>
+                                                    <td>安全场景-选中</td>
+                                                    <td><span class="color-box" style="background: #238C5C;"></span> Success - 7</td>
+                                                    <td><span class="color-box" style="background: #55B68D;"></span> Success - 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Success/main-4</td>
+                                                    <td>安全场景-禁用</td>
+                                                    <td><span class="color-box" style="background: #AADBC6;"></span> Success - 3</td>
+                                                    <td><span class="color-box" style="background: #124F30;"></span> Success - 9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Success/face-1</td>
+                                                    <td>安全场景的面或白底悬停(禁用)</td>
+                                                    <td><span class="color-box" style="background: #EAF6F1;"></span> Success - 1</td>
+                                                    <td><span class="color-box" style="background: #05170D;"></span> Success - 11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Success/face-2</td>
+                                                    <td>安全场景的面-选中</td>
+                                                    <td><span class="color-box" style="background: #D5EDE3;"></span> Success - 2</td>
+                                                    <td><span class="color-box" style="background: #0A2F1B;"></span> Success - 10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Success/face-3</td>
+                                                    <td>安全场景的面-特殊</td>
+                                                    <td><span class="color-box" style="background: #AADBC6;"></span> Success - 3</td>
+                                                    <td><span class="color-box" style="background: #124F30;"></span> Success - 9</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- 危险色配置 -->
+                                <div class="subsection" id="color-danger">
+                                    <div class="subsection-title">危险色配置</div>
+                                    <div class="component-container">
+                                        <table class="color-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>命名</th>
+                                                    <th>描述</th>
+                                                    <th>Light</th>
+                                                    <th>Dark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Danger/main-1</td>
+                                                    <td>危险场景</td>
+                                                    <td><span class="color-box" style="background: #E02C2C;"></span> Danger - 6</td>
+                                                    <td><span class="color-box" style="background: #E02C2C;"></span> Danger - 6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Danger/main-2</td>
+                                                    <td>危险场景-悬停</td>
+                                                    <td><span class="color-box" style="background: #EB6B56;"></span> Danger - 5</td>
+                                                    <td><span class="color-box" style="background: #B82323;"></span> Danger - 7</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Danger/main-3</td>
+                                                    <td>危险场景-选中</td>
+                                                    <td><span class="color-box" style="background: #B82323;"></span> Danger - 7</td>
+                                                    <td><span class="color-box" style="background: #EB6B56;"></span> Danger - 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Danger/main-4</td>
+                                                    <td>危险场景-禁用</td>
+                                                    <td><span class="color-box" style="background: #F5B2A4;"></span> Danger - 3</td>
+                                                    <td><span class="color-box" style="background: #681616;"></span> Danger - 9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Danger/face-1</td>
+                                                    <td>危险场景的面或白底悬停(禁用)</td>
+                                                    <td><span class="color-box" style="background: #FDECE8;"></span> Danger - 1</td>
+                                                    <td><span class="color-box" style="background: #200808;"></span> Danger - 11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Danger/face-2</td>
+                                                    <td>危险场景的面-选中</td>
+                                                    <td><span class="color-box" style="background: #FAD6CD;"></span> Danger - 2</td>
+                                                    <td><span class="color-box" style="background: #400F0F;"></span> Danger - 10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Danger/face-3</td>
+                                                    <td>危险场景的面-特殊</td>
+                                                    <td><span class="color-box" style="background: #F5B2A4;"></span> Danger - 3</td>
+                                                    <td><span class="color-box" style="background: #681616;"></span> Danger - 9</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- 警告色配置 -->
+                                <div class="subsection" id="color-warning">
+                                    <div class="subsection-title">警告色配置</div>
+                                    <div class="component-container">
+                                        <table class="color-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>命名</th>
+                                                    <th>描述</th>
+                                                    <th>Light</th>
+                                                    <th>Dark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Danger/main-1</td>
+                                                    <td>警告场景</td>
+                                                    <td><span class="color-box" style="background: #E37318;"></span> Danger - 6</td>
+                                                    <td><span class="color-box" style="background: #E37318;"></span> Danger - 6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Danger/main-2</td>
+                                                    <td>警告场景-悬停</td>
+                                                    <td><span class="color-box" style="background: #FF9733;"></span> Danger - 5</td>
+                                                    <td><span class="color-box" style="background: #CC6400;"></span> Danger - 7</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Danger/main-3</td>
+                                                    <td>警告场景-选中</td>
+                                                    <td><span class="color-box" style="background: #CC6400;"></span> Danger - 7</td>
+                                                    <td><span class="color-box" style="background: #FF9733;"></span> Danger - 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Danger/main-4</td>
+                                                    <td>警告场景-禁用</td>
+                                                    <td><span class="color-box" style="background: #FFCB99;"></span> Danger - 3</td>
+                                                    <td><span class="color-box" style="background: #663200;"></span> Danger - 9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Danger/face-1</td>
+                                                    <td>警告场景的面或白底悬停(禁用)</td>
+                                                    <td><span class="color-box" style="background: #FFF2E5;"></span> Danger - 1</td>
+                                                    <td><span class="color-box" style="background: #1A0D00;"></span> Danger - 11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Danger/face-2</td>
+                                                    <td>警告场景的面-选中</td>
+                                                    <td><span class="color-box" style="background: #FFE5CC;"></span> Danger - 2</td>
+                                                    <td><span class="color-box" style="background: #331900;"></span> Danger - 10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Danger/face-3</td>
+                                                    <td>警告场景的面-特殊</td>
+                                                    <td><span class="color-box" style="background: #FFCB99;"></span> Danger - 3</td>
+                                                    <td><span class="color-box" style="background: #663200;"></span> Danger - 9</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- 中性色配置 -->
+                                <div class="subsection" id="color-grey">
+                                    <div class="subsection-title">中性色配置</div>
+                                    <div class="component-container">
+                                        <table class="color-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>命名</th>
+                                                    <th>描述</th>
+                                                    <th>Light</th>
+                                                    <th>Dark</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Grey/main-1</td>
+                                                    <td>次要场景</td>
+                                                    <td><span class="color-box" style="background: #384259;"></span> Grey - 9</td>
+                                                    <td><span class="color-box" style="background: #D0D7E3;"></span> Grey - 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Grey/main-2</td>
+                                                    <td>次要场景-悬停</td>
+                                                    <td><span class="color-box" style="background: #6C7DA3;"></span> Grey - 7</td>
+                                                    <td><span class="color-box" style="background: #B0B8C1;"></span> Grey - 7</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Grey/main-3</td>
+                                                    <td>次要场景-选中</td>
+                                                    <td><span class="color-box" style="background: #1F2937;"></span> Grey - 11</td>
+                                                    <td><span class="color-box" style="background: #E5E9F2;"></span> Grey - 3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Grey/main-4</td>
+                                                    <td>次要场景-禁用</td>
+                                                    <td><span class="color-box" style="background: #D0D7E3;"></span> Grey - 5</td>
+                                                    <td><span class="color-box" style="background: #384259;"></span> Grey - 9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Grey/face-1</td>
+                                                    <td>次要场景的面或白底悬停(禁用)</td>
+                                                    <td><span class="color-box" style="background: #F5F7FA;"></span> Grey - 1</td>
+                                                    <td><span class="color-box" style="background: #000000;"></span> Grey - 11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Grey/face-2</td>
+                                                    <td>次要场景的面-悬停</td>
+                                                    <td><span class="color-box" style="background: #F5F7FA;"></span> Grey - 2</td>
+                                                    <td><span class="color-box" style="background: #101319;"></span> Grey - 10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Grey/face-3</td>
+                                                    <td>次要场景的面-选中</td>
+                                                    <td><span class="color-box" style="background: #E5E9F2;"></span> Grey - 3</td>
+                                                    <td><span class="color-box" style="background: #1F2937;"></span> Grey - 9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Grey/face-4</td>
+                                                    <td>次要场景的面-禁用</td>
+                                                    <td><span class="color-box" style="background: #F5F7FA;"></span> Grey - 1</td>
+                                                    <td><span class="color-box" style="background: #000000;"></span> Grey - 11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Grey/Text and Shape-1</td>
+                                                    <td>一级文字标题</td>
+                                                    <td><span class="color-box" style="background: #000000;"></span> Grey - 11</td>
+                                                    <td><span class="color-box" style="background: var(--grey-bg-0);"></span>White - 11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Grey/Text and Shape-2</td>
+                                                    <td>二级文字正文</td>
+                                                    <td><span class="color-box" style="background: #384259;"></span> Grey - 8</td>
+                                                    <td><span class="color-box" style="background: #D0D7E3;"></span> Grey - 4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Grey/Text and Shape-3</td>
+                                                    <td>三级文字提示</td>
+                                                    <td><span class="color-box" style="background: #8A949E;"></span> Grey - 6</td>
+                                                    <td><span class="color-box" style="background: #8A949E;"></span> Grey - 6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Grey/Text and Shape-4</td>
+                                                    <td>四级文字禁用</td>
+                                                    <td><span class="color-box" style="background: #D0D7E3;"></span> Grey - 4</td>
+                                                    <td><span class="color-box" style="background: #384259;"></span> Grey - 8</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BG-Container</td>
+                                                    <td>纯色背景</td>
+                                                    <td><span class="color-box" style="background: var(--grey-bg-0);"></span> White - 11</td>
+                                                    <td><span class="color-box" style="background: #000000;"></span> Black - 11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BG-1</td>
+                                                    <td>一级背景</td>
+                                                    <td><span class="color-box" style="background: #F5F7FA;"></span> Grey - 1</td>
+                                                    <td><span class="color-box" style="background: #000000;"></span> Grey - 11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BG-2</td>
+                                                    <td>二级背景</td>
+                                                    <td><span class="color-box" style="background: #F5F7FA;"></span> Grey - 2</td>
+                                                    <td><span class="color-box" style="background: #101319;"></span> Grey - 10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BG-3</td>
+                                                    <td>三级背景</td>
+                                                    <td><span class="color-box" style="background: #E5E9F2;"></span> Grey - 3</td>
+                                                    <td><span class="color-box" style="background: #1F2937;"></span> Grey - 9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BG-4</td>
+                                                    <td>四级背景</td>
+                                                    <td><span class="color-box" style="background: #D0D7E3;"></span> Grey - 4</td>
+                                                    <td><span class="color-box" style="background: #384259;"></span> Grey - 8</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BG-5</td>
+                                                    <td>五级背景</td>
+                                                    <td><span class="color-box" style="background: #B0B8C1;"></span> Grey - 5</td>
+                                                    <td><span class="color-box" style="background: #6C7DA3;"></span> Grey - 7</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                    <!-- 右侧锚点导航 -->
+                    <div class="right-nav">
+                        <div class="right-nav-items">
+                                <div class="right-nav-item active" onclick="handleRightNavClick(this, 'color-global');">主题色和功能色</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-neutral');">中性色</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-variables');">主题色配置</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-success');">安全色配置</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-danger');">危险色配置</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-warning');">警告色配置</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-grey');">中性色配置</div>
                         </div>
                     </div>
-
-                    <!-- 安全色配置 -->
-                    <div class="subsection" id="color-success">
-                        <div class="subsection-title">安全色配置</div>
-                        <div class="component-container">
-                            <table class="color-table">
-                                <thead>
-                                    <tr>
-                                        <th>命名</th>
-                                        <th>描述</th>
-                                        <th>Light</th>
-                                        <th>Dark</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Success/main-1</td>
-                                        <td>安全场景</td>
-                                        <td><span class="color-box" style="background: #2BAA71;"></span> Success - 6</td>
-                                        <td><span class="color-box" style="background: #2BAA71;"></span> Success - 6</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Success/main-2</td>
-                                        <td>安全场景-悬停</td>
-                                        <td><span class="color-box" style="background: #55B68D;"></span> Success - 5</td>
-                                        <td><span class="color-box" style="background: #238C5C;"></span> Success - 7</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Success/main-3</td>
-                                        <td>安全场景-选中</td>
-                                        <td><span class="color-box" style="background: #238C5C;"></span> Success - 7</td>
-                                        <td><span class="color-box" style="background: #55B68D;"></span> Success - 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Success/main-4</td>
-                                        <td>安全场景-禁用</td>
-                                        <td><span class="color-box" style="background: #AADBC6;"></span> Success - 3</td>
-                                        <td><span class="color-box" style="background: #124F30;"></span> Success - 9</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Success/face-1</td>
-                                        <td>安全场景的面或白底悬停(禁用)</td>
-                                        <td><span class="color-box" style="background: #EAF6F1;"></span> Success - 1</td>
-                                        <td><span class="color-box" style="background: #05170D;"></span> Success - 11</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Success/face-2</td>
-                                        <td>安全场景的面-选中</td>
-                                        <td><span class="color-box" style="background: #D5EDE3;"></span> Success - 2</td>
-                                        <td><span class="color-box" style="background: #0A2F1B;"></span> Success - 10</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Success/face-3</td>
-                                        <td>安全场景的面-特殊</td>
-                                        <td><span class="color-box" style="background: #AADBC6;"></span> Success - 3</td>
-                                        <td><span class="color-box" style="background: #124F30;"></span> Success - 9</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- 危险色配置 -->
-                    <div class="subsection" id="color-danger">
-                        <div class="subsection-title">危险色配置</div>
-                        <div class="component-container">
-                            <table class="color-table">
-                                <thead>
-                                    <tr>
-                                        <th>命名</th>
-                                        <th>描述</th>
-                                        <th>Light</th>
-                                        <th>Dark</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Danger/main-1</td>
-                                        <td>危险场景</td>
-                                        <td><span class="color-box" style="background: #E02C2C;"></span> Danger - 6</td>
-                                        <td><span class="color-box" style="background: #E02C2C;"></span> Danger - 6</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Danger/main-2</td>
-                                        <td>危险场景-悬停</td>
-                                        <td><span class="color-box" style="background: #EB6B56;"></span> Danger - 5</td>
-                                        <td><span class="color-box" style="background: #B82323;"></span> Danger - 7</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Danger/main-3</td>
-                                        <td>危险场景-选中</td>
-                                        <td><span class="color-box" style="background: #B82323;"></span> Danger - 7</td>
-                                        <td><span class="color-box" style="background: #EB6B56;"></span> Danger - 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Danger/main-4</td>
-                                        <td>危险场景-禁用</td>
-                                        <td><span class="color-box" style="background: #F5B2A4;"></span> Danger - 3</td>
-                                        <td><span class="color-box" style="background: #681616;"></span> Danger - 9</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Danger/face-1</td>
-                                        <td>危险场景的面或白底悬停(禁用)</td>
-                                        <td><span class="color-box" style="background: #FDECE8;"></span> Danger - 1</td>
-                                        <td><span class="color-box" style="background: #200808;"></span> Danger - 11</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Danger/face-2</td>
-                                        <td>危险场景的面-选中</td>
-                                        <td><span class="color-box" style="background: #FAD6CD;"></span> Danger - 2</td>
-                                        <td><span class="color-box" style="background: #400F0F;"></span> Danger - 10</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Danger/face-3</td>
-                                        <td>危险场景的面-特殊</td>
-                                        <td><span class="color-box" style="background: #F5B2A4;"></span> Danger - 3</td>
-                                        <td><span class="color-box" style="background: #681616;"></span> Danger - 9</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- 警告色配置 -->
-                    <div class="subsection" id="color-warning">
-                        <div class="subsection-title">警告色配置</div>
-                        <div class="component-container">
-                            <table class="color-table">
-                                <thead>
-                                    <tr>
-                                        <th>命名</th>
-                                        <th>描述</th>
-                                        <th>Light</th>
-                                        <th>Dark</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Danger/main-1</td>
-                                        <td>警告场景</td>
-                                        <td><span class="color-box" style="background: #E37318;"></span> Danger - 6</td>
-                                        <td><span class="color-box" style="background: #E37318;"></span> Danger - 6</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Danger/main-2</td>
-                                        <td>警告场景-悬停</td>
-                                        <td><span class="color-box" style="background: #FF9733;"></span> Danger - 5</td>
-                                        <td><span class="color-box" style="background: #CC6400;"></span> Danger - 7</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Danger/main-3</td>
-                                        <td>警告场景-选中</td>
-                                        <td><span class="color-box" style="background: #CC6400;"></span> Danger - 7</td>
-                                        <td><span class="color-box" style="background: #FF9733;"></span> Danger - 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Danger/main-4</td>
-                                        <td>警告场景-禁用</td>
-                                        <td><span class="color-box" style="background: #FFCB99;"></span> Danger - 3</td>
-                                        <td><span class="color-box" style="background: #663200;"></span> Danger - 9</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Danger/face-1</td>
-                                        <td>警告场景的面或白底悬停(禁用)</td>
-                                        <td><span class="color-box" style="background: #FFF2E5;"></span> Danger - 1</td>
-                                        <td><span class="color-box" style="background: #1A0D00;"></span> Danger - 11</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Danger/face-2</td>
-                                        <td>警告场景的面-选中</td>
-                                        <td><span class="color-box" style="background: #FFE5CC;"></span> Danger - 2</td>
-                                        <td><span class="color-box" style="background: #331900;"></span> Danger - 10</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Danger/face-3</td>
-                                        <td>警告场景的面-特殊</td>
-                                        <td><span class="color-box" style="background: #FFCB99;"></span> Danger - 3</td>
-                                        <td><span class="color-box" style="background: #663200;"></span> Danger - 9</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- 中性色配置 -->
-                    <div class="subsection" id="color-grey">
-                        <div class="subsection-title">中性色配置</div>
-                        <div class="component-container">
-                            <table class="color-table">
-                                <thead>
-                                    <tr>
-                                        <th>命名</th>
-                                        <th>描述</th>
-                                        <th>Light</th>
-                                        <th>Dark</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Grey/main-1</td>
-                                        <td>次要场景</td>
-                                        <td><span class="color-box" style="background: #384259;"></span> Grey - 9</td>
-                                        <td><span class="color-box" style="background: #D0D7E3;"></span> Grey - 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grey/main-2</td>
-                                        <td>次要场景-悬停</td>
-                                        <td><span class="color-box" style="background: #6C7DA3;"></span> Grey - 7</td>
-                                        <td><span class="color-box" style="background: #B0B8C1;"></span> Grey - 7</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grey/main-3</td>
-                                        <td>次要场景-选中</td>
-                                        <td><span class="color-box" style="background: #1F2937;"></span> Grey - 11</td>
-                                        <td><span class="color-box" style="background: #E5E9F2;"></span> Grey - 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grey/main-4</td>
-                                        <td>次要场景-禁用</td>
-                                        <td><span class="color-box" style="background: #D0D7E3;"></span> Grey - 5</td>
-                                        <td><span class="color-box" style="background: #384259;"></span> Grey - 9</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grey/face-1</td>
-                                        <td>次要场景的面或白底悬停(禁用)</td>
-                                        <td><span class="color-box" style="background: #F5F7FA;"></span> Grey - 1</td>
-                                        <td><span class="color-box" style="background: #000000;"></span> Grey - 11</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grey/face-2</td>
-                                        <td>次要场景的面-悬停</td>
-                                        <td><span class="color-box" style="background: #F5F7FA;"></span> Grey - 2</td>
-                                        <td><span class="color-box" style="background: #101319;"></span> Grey - 10</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grey/face-3</td>
-                                        <td>次要场景的面-选中</td>
-                                        <td><span class="color-box" style="background: #E5E9F2;"></span> Grey - 3</td>
-                                        <td><span class="color-box" style="background: #1F2937;"></span> Grey - 9</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grey/face-4</td>
-                                        <td>次要场景的面-禁用</td>
-                                        <td><span class="color-box" style="background: #F5F7FA;"></span> Grey - 1</td>
-                                        <td><span class="color-box" style="background: #000000;"></span> Grey - 11</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grey/Text and Shape-1</td>
-                                        <td>一级文字标题</td>
-                                        <td><span class="color-box" style="background: #000000;"></span> Grey - 11</td>
-                                        <td><span class="color-box" style="background: var(--grey-bg-0);"></span>White - 11</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grey/Text and Shape-2</td>
-                                        <td>二级文字正文</td>
-                                        <td><span class="color-box" style="background: #384259;"></span> Grey - 8</td>
-                                        <td><span class="color-box" style="background: #D0D7E3;"></span> Grey - 4</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grey/Text and Shape-3</td>
-                                        <td>三级文字提示</td>
-                                        <td><span class="color-box" style="background: #8A949E;"></span> Grey - 6</td>
-                                        <td><span class="color-box" style="background: #8A949E;"></span> Grey - 6</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grey/Text and Shape-4</td>
-                                        <td>四级文字禁用</td>
-                                        <td><span class="color-box" style="background: #D0D7E3;"></span> Grey - 4</td>
-                                        <td><span class="color-box" style="background: #384259;"></span> Grey - 8</td>
-                                    </tr>
-                                    <tr>
-                                        <td>BG-Container</td>
-                                        <td>纯色背景</td>
-                                        <td><span class="color-box" style="background: var(--grey-bg-0);"></span> White - 11</td>
-                                        <td><span class="color-box" style="background: #000000;"></span> Black - 11</td>
-                                    </tr>
-                                    <tr>
-                                        <td>BG-1</td>
-                                        <td>一级背景</td>
-                                        <td><span class="color-box" style="background: #F5F7FA;"></span> Grey - 1</td>
-                                        <td><span class="color-box" style="background: #000000;"></span> Grey - 11</td>
-                                    </tr>
-                                    <tr>
-                                        <td>BG-2</td>
-                                        <td>二级背景</td>
-                                        <td><span class="color-box" style="background: #F5F7FA;"></span> Grey - 2</td>
-                                        <td><span class="color-box" style="background: #101319;"></span> Grey - 10</td>
-                                    </tr>
-                                    <tr>
-                                        <td>BG-3</td>
-                                        <td>三级背景</td>
-                                        <td><span class="color-box" style="background: #E5E9F2;"></span> Grey - 3</td>
-                                        <td><span class="color-box" style="background: #1F2937;"></span> Grey - 9</td>
-                                    </tr>
-                                    <tr>
-                                        <td>BG-4</td>
-                                        <td>四级背景</td>
-                                        <td><span class="color-box" style="background: #D0D7E3;"></span> Grey - 4</td>
-                                        <td><span class="color-box" style="background: #384259;"></span> Grey - 8</td>
-                                    </tr>
-                                    <tr>
-                                        <td>BG-5</td>
-                                        <td>五级背景</td>
-                                        <td><span class="color-box" style="background: #B0B8C1;"></span> Grey - 5</td>
-                                        <td><span class="color-box" style="background: #6C7DA3;"></span> Grey - 7</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                </div>                
             </div>
-            </div>
-                        <!-- 右侧锚点导航 -->
-            <div class="right-nav">
-                <div class="right-nav-items">
-                        <div class="right-nav-item active" onclick="handleRightNavClick(this, 'color-global');">主题色和功能色</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-neutral');">中性色</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-variables');">主题色配置</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-success');">安全色配置</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-danger');">危险色配置</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-warning');">警告色配置</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-grey');">中性色配置</div>
-                </div>
-            </div>
+        </div>
     </div>
-</div>
-
-<script>
-        // 导航栏背景动态变化
-
-    </script>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <!-- 浅色模式视频 -->
+        <video class="background-bgVideo-video background-bgVideo-light" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+        <!-- 深色模式图片 -->
+        <img class="background-bgVideo-image background-bgVideo-dark" src="../../overall/images/bg-dark-mode.png" alt="深色背景">
+    </div>
+<script src="desktop/B-navigation/tabs.js"></script>
 </body>
 </html>

@@ -1,74 +1,75 @@
 /* 标签页组件样式 */
 
 /* 标签组容器 */
-.hony-tab-group {
-    height: 100%;
-}
 
 /* 标签页板块 */
-.hony-tab-section{
-    background-color:var(--grey-bg-2); 
+.tab-section, .hony-tab-section {
+    background-color:var(--grey-face-1); 
     padding:24px;
     display: flex;
     flex-direction: column;
     gap: 24px;
     width: 100%;
+    border-radius: 12px;
 }
-.hony-tab-content2{
+.tab-content2, .hony-tab-content2 {
     background-color:var(--grey-bg-0); 
     padding:24px;
 }
-.hony-tab-content3{
+.tab-content3, .hony-tab-content3 {
     background-color:var(--grey-bg-0); 
     padding:24px;
     margin-top: 16px;
 }
-.hony-tab-group2{
-    background-color:var(--grey-face-1); 
-}
-.hony-tab-group3{
-    background-color:var(--grey-face-1); 
+.tab-group2, .hony-tab-group2 {
+    background-color:var(--grey-1); 
     
 }
-.hony-tab-card4{
+.tab-group3, .hony-tab-group3 {
+    background-color:var(--grey-1); 
+    
+}
+.tab-card4, .hony-tab-card4 {
     padding: 0px 24px 16px 24px;
     display: flex;
     flex-direction: column; 
     gap: 16px;
 }
-.hony-tab-card2{
+.tab-card2, .hony-tab-card2 {
     background-color:var(--grey-face-1); 
     padding: 0px 0px 16px 0px;
 }
-.hony-tab-card{
+.tab-card, .hony-tab-card {
     background-color:var(--grey-bg-0); 
     padding: 0px 24px;
+    border-radius: 12px;
 }
-.hony-tab-card3{
+.tab-card3, .hony-tab-card3 {
     background-color:var(--grey-bg-0); 
     padding: 16px 24px 16px 24px;
     overflow: hidden;
 }
-.hony-tab-card4{
+.tab-card4, .hony-tab-card4 {
     padding: 16px 0px 16px 0px;
 }
-.hony-tab-block{
+.tab-block, .hony-tab-block {
     padding:24px 0px ;
     height: 100px;
 }
-.hony-tab-group:last-child {
+.tab-group:last-child, .hony-tab-group:last-child {
     margin-bottom: 0;
 }
 
 /* 尺寸标题 */
-.hony-tab-size-title {
+.tab-size-title, .hony-tab-size-title {
     font-size: 12px;
     font-weight: 400;
-    color: var(--grey-text-3);
+    color: var(--grey-7);
     margin-bottom: 16px;
 }
 
 /* 标签页容器通用样式 */
+.tab-nav, .tab-nav-underline, .tab-nav-tab, .tab-nav-card, .tab-nav-bubble, .tab-nav-segment,
 .hony-tab-nav, .hony-tab-nav-underline, .hony-tab-nav-tab, .hony-tab-nav-card, .hony-tab-nav-bubble, .hony-tab-nav-segment {
     display: flex;
     align-items: center;
@@ -76,7 +77,7 @@
 }
 
 /* 标签项通用样式 */
-.hony-tab-item {
+.tab-item, .hony-tab-item {
     cursor: pointer;
     transition: all 0.2s ease;
     display: flex;
@@ -85,41 +86,42 @@
     position: relative;
     font-size: 14px;
     font-weight: 400;
-    color: var(--grey-text-1);
+    color: var(--grey-mian-1);
     height: 32px;
 }
 
-.hony-tab-item:hover {
+.tab-item:hover, .hony-tab-item:hover {
+    background: var(--primary-face-1);
     color: var(--primary-main-1);
 }
 
-.hony-tab-item.active {
+.tab-item.active, .hony-tab-item.active {
     color: var(--primary-main-1);
     font-weight: 500;
-    background: var(--grey-bg-0);
+    background-color: var(--grey-bg-0);
 }
 
 /* 标签内容 */
-.hony-tab-content {
+.tab-content, .hony-tab-content {
     background: var(--grey-bg-0);
     padding:24px 0px ;
     height: 100px;
 }
 
-.hony-tab-content-item {
+.tab-content-item, .hony-tab-content-item {
     display: none;
 }
 
-.hony-tab-content-item.active {
+.tab-content-item.active, .hony-tab-content-item.active {
     display: block;
 }
 
 /* 1. 基础标签页 */
-.hony-tab-nav {
+.tab-nav, .hony-tab-nav {
     border-bottom: 1px solid var(--grey-border-1);
 }
 
-.hony-tab-nav .hony-tab-item {
+.tab-nav .tab-item, .hony-tab-nav .hony-tab-item {
     height: 48px;
     line-height: 48px;
     margin-right: 32px;
@@ -127,7 +129,7 @@
 }
 
 /* 基础标签页滑动线条 */
-.hony-tab-nav::after {
+.tab-nav::after, .hony-tab-nav::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -140,14 +142,14 @@
 }
 
 /* 基础标签页尺寸 */
-.hony-tab-nav-small .hony-tab-item {
+.tab-nav-small .tab-item, .hony-tab-nav-small .hony-tab-item {
   height: 40px;
   line-height: 40px;
   margin-right: 24px;
   font-size: 12px;
 }
 
-.hony-tab-nav-large .hony-tab-item {
+.tab-nav-large .tab-item, .hony-tab-nav-large .hony-tab-item {
     height: 56px;
     line-height: 56px;
     font-size: 16px;
@@ -155,7 +157,7 @@
 }
 
 /* 2. 基础上划线标签页 */
-.hony-tab-nav-underline .hony-tab-item {
+.tab-nav-underline .tab-item, .hony-tab-nav-underline .hony-tab-item {
   height: 48px;
   line-height: 48px;
   position: relative;
@@ -163,7 +165,7 @@
   padding: 0 24px;
 }
 
-.hony-tab-nav-underline .hony-tab-item::before {
+.tab-nav-underline .tab-item::before, .hony-tab-nav-underline .hony-tab-item::before {
     content: '';
     position: absolute;
     top: 0;
@@ -175,12 +177,12 @@
     transition: transform 0.2s ease;
 }
 
-.hony-tab-nav-underline .hony-tab-item.active::before {
+.tab-nav-underline .tab-item.active::before, .hony-tab-nav-underline .hony-tab-item.active::before {
     transform: scaleX(1);
 }
 
 /* 基础上划线标签页尺寸 */
-.hony-tab-nav-underline-small .hony-tab-item {
+.tab-nav-underline-small .tab-item, .hony-tab-nav-underline-small .hony-tab-item {
     height: 40px;
     line-height: 40px;
     position: relative;
@@ -188,7 +190,7 @@
     padding: 0 16px;
 }
 
-.hony-tab-nav-underline-large .hony-tab-item {
+.tab-nav-underline-large .tab-item, .hony-tab-nav-underline-large .hony-tab-item {
     height: 56px;
     line-height: 40px;
     font-size: 16px;
@@ -196,7 +198,7 @@
 }
 
 /* 3. 选项卡 */
-.hony-tab-nav-tab {
+.tab-nav-tab, .hony-tab-nav-tab {
     display: flex;
     align-items: center;
     column-gap: 8px;
@@ -207,7 +209,7 @@
     max-height: 64px;
 }
 
-.hony-tab-nav-tab .hony-tab-item {
+.tab-nav-tab .tab-item, .hony-tab-nav-tab .hony-tab-item {
     display: inline-flex;
     flex-shrink: 0;
     align-items: center;
@@ -221,12 +223,12 @@
     margin-right: 0;
     font-size: 14px;
     line-height: 20px;
-    color: var(--grey-text-1);
+    color: var(--grey-main-1);
     font-weight: 400;
-    top:0px;
+    top:1px;
 }
 
-.hony-tab-nav-tab .hony-tab-item.active {
+.tab-nav-tab .tab-item.active, .hony-tab-nav-tab .hony-tab-item.active {
     border-bottom: 0;
     background: var(--grey-bg-0);
     color: var(--primary-main-1);
@@ -234,12 +236,12 @@
 }
 
 /* 选项卡尺寸 */
-.hony-tab-nav-tab-small {
+.tab-nav-tab-small, .hony-tab-nav-tab-small {
     height: 32px;
     min-height: 32px;
 }
 
-.hony-tab-nav-tab-small .hony-tab-item {
+.tab-nav-tab-small .tab-item, .hony-tab-nav-tab-small .hony-tab-item {
     height: 32px;
     min-height: 32px;
     max-height: 32px;
@@ -248,12 +250,12 @@
     line-height: 20px;
 }
 
-.hony-tab-nav-tab-large {
+.tab-nav-tab-large, .hony-tab-nav-tab-large {
     height: 48px;
     min-height: 48px;
 }
 
-.hony-tab-nav-tab-large .hony-tab-item {
+.tab-nav-tab-large .tab-item, .hony-tab-nav-tab-large .hony-tab-item {
     height: 48px;
     min-height: 48px;
     max-height: 48px;
@@ -264,16 +266,16 @@
 }
 
 /* 4. 卡片选项卡 */
-.hony-tab-nav-card {
+.tab-nav-card, .hony-tab-nav-card {
     display: inline-flex;
     gap: 4px;
     border-radius: 4px;
-    background: var(--grey-bg-0);
+    background: var(--grey-face-1);
     width: auto;
     padding: 4px;
 }
 
-.hony-tab-nav-card .hony-tab-item {
+.tab-nav-card .tab-item, .hony-tab-nav-card .hony-tab-item {
     height: 32px;
     line-height: 32px;
     padding: 0 16px;
@@ -282,13 +284,13 @@
     font-size: 14px;
 }
 
-.hony-tab-nav-card .hony-tab-item.active {
+.tab-nav-card .tab-item.active, .hony-tab-nav-card .hony-tab-item.active {
     background: var(--primary-main-1);
-    color: var(--primary-main-5);
+    color: var(--grey-bg-0);
 }
 
 /* 卡片选项卡尺寸 */
-.hony-tab-nav-card-small .hony-tab-item {
+.tab-nav-card-small .tab-item, .hony-tab-nav-card-small .hony-tab-item {
     height: 28px;
     line-height: 28px;
     font-size: 12px;
@@ -296,7 +298,7 @@
     border-radius: 4px;
 }
 
-.hony-tab-nav-card-large .hony-tab-item {
+.tab-nav-card-large .tab-item, .hony-tab-nav-card-large .hony-tab-item {
     height: 40px;
     line-height: 40px;
     font-size: 16px;
@@ -305,32 +307,32 @@
 }
 
 /* 5. 气泡选项 */
-.hony-tab-nav-bubble {
+.tab-nav-bubble, .hony-tab-nav-bubble {
     gap: 8px;
 }
 
-.hony-tab-nav-bubble .hony-tab-item {
+.tab-nav-bubble .tab-item, .hony-tab-nav-bubble .hony-tab-item {
     height: 32px;
     line-height: 32px;
     padding: 0 16px;
-    background: var(--grey-bg-0);
-    border-radius: var(--radius-full);
+    background:var(--grey-face-1);
+    border-radius: 4px;
 }
 
-.hony-tab-nav-bubble .hony-tab-item.active {
+.tab-nav-bubble .tab-item.active, .hony-tab-nav-bubble .hony-tab-item.active {
     background: var(--primary-face-1);
     color: var(--primary-main-1);
 }
 
 /* 气泡选项尺寸 */
-.hony-tab-nav-bubble-small .hony-tab-item {
+.tab-nav-bubble-small .tab-item, .hony-tab-nav-bubble-small .hony-tab-item {
     height: 28px;
     line-height: 28px;
     font-size: 12px;
     padding: 0 12px;
 }
 
-.hony-tab-nav-small .hony-tab-item {
+.tab-nav-small .tab-item, .hony-tab-nav-small .hony-tab-item {
     height: 40px;
     line-height: 40px;
     font-size: 12px;
@@ -338,40 +340,40 @@
 }
 
 /* 带图标的标签页 */
-.hony-tab-nav-with-icons .hony-tab-item {
+.tab-nav-with-icons .tab-item, .hony-tab-nav-with-icons .hony-tab-item {
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 0px;
 }
 
-.hony-tab-nav-with-icons .hony-tab-icon {
+.tab-nav-with-icons .tab-icon, .hony-tab-nav-with-icons .hony-tab-icon {
     font-size: 14px;
 }
 
-.hony-tab-nav-with-icons .hony-tab-text {
+.tab-nav-with-icons .tab-text, .hony-tab-nav-with-icons .hony-tab-text {
     flex: 1;
 }
 
-.hony-tab-nav-with-icons .hony-tab-close {
+.tab-nav-with-icons .tab-close, .hony-tab-nav-with-icons .hony-tab-close {
     font-size: 16px;
     cursor: pointer;
     transition: opacity 0.2s ease;
 }
 
-.hony-tab-nav-with-icons .hony-tab-close:hover {
+.tab-nav-with-icons .tab-close:hover, .hony-tab-nav-with-icons .hony-tab-close:hover {
     opacity: 1;
     color: var(--primary-main-1);
 }
 
 /* 添加标签按钮 */
-.add-tab-btn {
+.add-tab-btn, .hony-add-tab-btn {
     height: 32px;
     width: 68px;
-    border: 1px solid var(--grey-border-2);
+    border: 1px solid var(--grey-border-1);
     border-radius: 4px;
     background: var(--grey-bg-0);
-    color: var(--grey-text-1);
+    color: var(--text-2);
     font-size: 14px;
     font-weight: 400;
     cursor: pointer;
@@ -382,55 +384,55 @@
     margin: auto 0px;
 }
 
-.add-tab-btn:hover {
-    background: var(--grey-face-2);
-    border-color: var(--grey-text-4);
+.add-tab-btn:hover, .hony-add-tab-btn:hover {
+    background: var(--grey-fcae-2);
+    border-color: var(--grey-border-2);
     color: var(--grey-text-1);
 }
 
 /* 带图标的基础上划线标签页 */
-.hony-tab-nav-underline-with-icons .hony-tab-item {
+.tab-nav-underline-with-icons .tab-item, .hony-tab-nav-underline-with-icons .hony-tab-item {
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 0 16px;
 }
 
-.hony-tab-nav-underline-with-icons .hony-tab-icon {
+.tab-nav-underline-with-icons .tab-icon, .hony-tab-nav-underline-with-icons .hony-tab-icon {
     font-size: 14px;
 }
 
-.hony-tab-nav-underline-with-icons .hony-tab-text {
+.tab-nav-underline-with-icons .tab-text, .hony-tab-nav-underline-with-icons .hony-tab-text {
     flex: 1;
 }
 
-.hony-tab-nav-underline-with-icons .hony-tab-close {
+.tab-nav-underline-with-icons .tab-close, .hony-tab-nav-underline-with-icons .hony-tab-close {
     font-size: 16px;
     cursor: pointer;
     transition: opacity 0.2s ease;
 }
 
-.hony-tab-nav-underline-with-icons .hony-tab-close:hover {
+.tab-nav-underline-with-icons .tab-close:hover, .hony-tab-nav-underline-with-icons .hony-tab-close:hover {
     opacity: 1;
     color: var(--primary-main-1);
 }
 
 /* 只有图标的添加标签按钮 */
-.hony-tab-nav-underline-with-icons .add-tab-icon {
+.tab-nav-underline-with-icons .add-tab-icon, .hony-tab-nav-underline-with-icons .hony-add-tab-icon {
     width: 48px;
     justify-content: center;
     cursor: pointer;
     transition: all 0.2s ease;
-    background: var(--grey-bg-1);
+    background: var(--grey-face-1);
 }
 
-.hony-tab-nav-underline-with-icons .add-tab-icon:hover {
+.tab-nav-underline-with-icons .add-tab-icon:hover, .hony-tab-nav-underline-with-icons .hony-add-tab-icon:hover {
     color: var(--primary-main-1);
     background: var(--grey-bg-0);
 }
 
 /* 带图标的卡片选项卡 */
-.hony-tab-nav-card-with-icons .hony-tab-item {
+.tab-nav-card-with-icons .tab-item, .hony-tab-nav-card-with-icons .hony-tab-item {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -438,27 +440,27 @@
     white-space: nowrap;
 }
 
-.hony-tab-nav-card-with-icons .hony-tab-icon {
+.tab-nav-card-with-icons .tab-icon, .hony-tab-nav-card-with-icons .hony-tab-icon {
     font-size: 14px;
 }
 
-.hony-tab-nav-card-with-icons .hony-tab-text {
+.tab-nav-card-with-icons .tab-text, .hony-tab-nav-card-with-icons .hony-tab-text {
     flex: 1;
 }
 
-.hony-tab-nav-card-with-icons .hony-tab-close {
+.tab-nav-card-with-icons .tab-close, .hony-tab-nav-card-with-icons .hony-tab-close {
     font-size: 16px;
     cursor: pointer;
     transition: opacity 0.2s ease;
 }
 
-.hony-tab-nav-card-with-icons .hony-tab-close:hover {
+.tab-nav-card-with-icons .tab-close:hover, .hony-tab-nav-card-with-icons .hony-tab-close:hover {
     opacity: 1;
     color: var(--primary-main-1);
 }
 
 /* 只有图标的添加标签按钮 */
-.hony-tab-nav-card-with-icons .add-tab-icon {
+.tab-nav-card-with-icons .add-tab-icon, .hony-tab-nav-card-with-icons .hony-add-tab-icon {
     width: 32px;
     justify-content: center;
     cursor: pointer;
@@ -466,14 +468,14 @@
     border-radius: 4px;
 }
 
-.hony-tab-nav-card-with-icons .add-tab-icon:hover {
+.tab-nav-card-with-icons .add-tab-icon:hover, .hony-tab-nav-card-with-icons .hony-add-tab-icon:hover {
     color: var(--primary-main-1);
     background: var(--primary-face-1);
     border-color: var(--primary-main-1);
 }
 
 /* 带图标的选项卡 */
-.hony-tab-nav-tab-with-icons .hony-tab-item {
+.tab-nav-tab-with-icons .tab-item, .hony-tab-nav-tab-with-icons .hony-tab-item {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -481,42 +483,42 @@
     white-space: nowrap;
 }
 
-.hony-tab-nav-tab-with-icons .hony-tab-icon {
+.tab-nav-tab-with-icons .tab-icon, .hony-tab-nav-tab-with-icons .hony-tab-icon {
     font-size: 14px !important;
 }
 
-.hony-tab-nav-tab-with-icons .hony-tab-text {
+.tab-nav-tab-with-icons .tab-text, .hony-tab-nav-tab-with-icons .hony-tab-text {
     flex: 1;
 }
 
-.hony-tab-nav-tab-with-icons .hony-tab-close {
+.tab-nav-tab-with-icons .tab-close, .hony-tab-nav-tab-with-icons .hony-tab-close {
     cursor: pointer;
     transition: opacity 0.2s ease;
 }
 
-.hony-tab-nav-tab-with-icons .hony-tab-close:hover {
+.tab-nav-tab-with-icons .tab-close:hover, .hony-tab-nav-tab-with-icons .hony-tab-close:hover {
     opacity: 1;
     color: var(--primary-main-1);
 }
 
 /* 只有图标的添加标签按钮 */
-.hony-tab-nav-tab-with-icons .add-tab-icon {
+.tab-nav-tab-with-icons .add-tab-icon, .hony-tab-nav-tab-with-icons .hony-add-tab-icon {
     width: 32px;
     justify-content: center;
     cursor: pointer;
     transition: all 0.2s ease;
     border: 1px solid var(--grey-border-1);
-    background: var(--grey-face-1);
+    background: var(--grey-bg-1);
 }
 
-.hony-tab-nav-tab-with-icons .add-tab-icon:hover {
+.tab-nav-tab-with-icons .add-tab-icon:hover, .hony-tab-nav-tab-with-icons .hony-add-tab-icon:hover {
     color: var(--primary-main-1);
     background: var(--grey-bg-0);
     border-color: var(--primary-main-1);
 }
 
 /* 带图标的气泡选项 */
-.hony-tab-nav-bubble-with-icons .hony-tab-item {
+.tab-nav-bubble-with-icons .tab-item, .hony-tab-nav-bubble-with-icons .hony-tab-item {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -524,16 +526,16 @@
     white-space: nowrap;
 }
 
-.hony-tab-nav-bubble-with-icons .hony-tab-icon {
+.tab-nav-bubble-with-icons .tab-icon, .hony-tab-nav-bubble-with-icons .hony-tab-icon {
     font-size: 14px;
 }
 
-.hony-tab-nav-bubble-with-icons .hony-tab-text {
+.tab-nav-bubble-with-icons .tab-text, .hony-tab-nav-bubble-with-icons .hony-tab-text {
     flex: 1;
 }
 
 /* 纯图标的分段标签页 */
-.hony-tab-nav-segment-icons .hony-tab-item {
+.tab-nav-segment-icons .tab-item, .hony-tab-nav-segment-icons .hony-tab-item {
     width: 48px;
     height: 48px;
     display: flex;
@@ -542,12 +544,12 @@
     padding: 0;
 }
 
-.hony-tab-nav-segment-icons .hony-tab-icon {
+.tab-nav-segment-icons .tab-icon, .hony-tab-nav-segment-icons .hony-tab-icon {
     font-size: 16px;
 }
 
 /* 6. 分段标签页 */
-.hony-tab-nav-segment {
+.tab-nav-segment, .hony-tab-nav-segment {
     display: inline-flex;
     background: var(--grey-face-1);
     border-radius: 4px;
@@ -556,7 +558,7 @@
     width: auto;
 }
 
-.hony-tab-nav-segment .hony-tab-item {
+.tab-nav-segment .tab-item, .hony-tab-nav-segment .hony-tab-item {
     height: 28px;
     line-height: 28px;
     padding: 0 12px;
@@ -565,31 +567,31 @@
     white-space: nowrap;
 }
 
-.hony-tab-nav-segment .hony-tab-item.active {
+.tab-nav-segment .tab-item.active, .hony-tab-nav-segment .hony-tab-item.active {
     background: var(--grey-bg-0);
     color: var(--primary-main-1);
     box-shadow: var(--shadow-grey-mini);
 }
 
 /* 分段标签页尺寸 */
-.hony-tab-nav-segment-small {
+.tab-nav-segment-small, .hony-tab-nav-segment-small {
     padding: 3px;
     gap: 3px;
 }
 
-.hony-tab-nav-segment-small .hony-tab-item {
+.tab-nav-segment-small .tab-item, .hony-tab-nav-segment-small .hony-tab-item {
     height: 24px;
     line-height: 28px;
     font-size: 12px;
     padding: 0 12px;
 }
 
-.hony-tab-nav-segment-large {
+.tab-nav-segment-large, .hony-tab-nav-segment-large {
     padding: 4px;
     gap: 4px;
 }
 
-.hony-tab-nav-segment-large .hony-tab-item {
+.tab-nav-segment-large .tab-item, .hony-tab-nav-segment-large .hony-tab-item {
     height: 32px;
     line-height: 32px;
     font-size: 16px;
@@ -598,30 +600,30 @@
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    .hony-tab-item {
+    .tab-item, .hony-tab-item {
         padding: 0 16px;
         margin-right: 16px;
     }
     
-    .hony-tab-nav-large .hony-tab-item {
+    .tab-nav-large .tab-item, .hony-tab-nav-large .hony-tab-item {
         padding: 0 24px;
         margin-right: 24px;
     }
     
-    .hony-tab-nav-small .hony-tab-item {
+    .tab-nav-small .tab-item, .hony-tab-nav-small .hony-tab-item {
         padding: 0 12px;
         margin-right: 12px;
     }
 }
-.hony-tab-close.iconfont {
+.tab-close.iconfont, .hony-tab-close.iconfont {
     font-size: 12px;
 }
 /* 侧边标签页样式 */
 
 
 /* 侧边标签页容器 */
-.hony-tab-nav-side {
-    background: var(--white);
+.tab-nav-side, .hony-tab-nav-side {
+    background: var(--grey-bg-0);
     border-right: 1px solid var(--grey-border-1);
     display: flex;
     flex-direction: column;
@@ -630,7 +632,7 @@
 }
 
 /* 侧边标签项 */
-.hony-tab-nav-side .hony-tab-item {
+.tab-nav-side .tab-item, .hony-tab-nav-side .hony-tab-item {
     height: 40px;
     padding: 8px 12px;
     border-radius: 8px;
@@ -642,82 +644,82 @@
     align-items: center;
     justify-content: flex-start;
     background: transparent;
-    color: var(--grey-text-1);
+    color: var(--grey-mian-1);
 }
 
-.hony-tab-nav-side .hony-tab-item:hover {
-    background: var(--grey-face-2);
+.tab-nav-side .tab-item:hover, .hony-tab-nav-side .hony-tab-item:hover {
+    background: var(--grey-face-1);
 }
 
-.hony-tab-nav-side .hony-tab-item.active {
+.tab-nav-side .tab-item.active, .hony-tab-nav-side .hony-tab-item.active {
     background: var(--primary-face-1);
     color: var(--primary-main-1);
     font-weight: 500;
 }
 
 /* 侧边标签卡片样式 */
-.hony-tab-nav-side-card {
+.tab-nav-side-card, .hony-tab-nav-side-card {
     background: var(--white);
     padding: 0px 0;
-    border-right: 1px solid var(--grey-border-1);
+    border-right: 1px solid var(--grey-face-2);
 }
 
-.hony-tab-nav-side-card .hony-tab-item {
+.tab-nav-side-card .tab-item, .hony-tab-nav-side-card .hony-tab-item {
     margin: 0 12px;
 }
 
 /* 侧边标签通栏样式 */
-.hony-tab-nav-side-full {
+.tab-nav-side-full, .hony-tab-nav-side-full {
     padding: 0;
 }
 
-.hony-tab-nav-side-full .hony-tab-item {
+.tab-nav-side-full .tab-item, .hony-tab-nav-side-full .hony-tab-item {
     margin: 0;
     border-radius: 0;
 }
 
-.hony-tab-nav-side-full .hony-tab-item.active {
+.tab-nav-side-full .tab-item.active, .hony-tab-nav-side-full .hony-tab-item.active {
     background: var(--primary-face-1);
     color: var(--primary-main-1);
     border-left: 2px solid var(--primary-main-1);
 }
 
 /* 侧边标签选项样式 */
-.hony-tab-nav-side-option {
+.tab-nav-side-option, .hony-tab-nav-side-option {
     background: var(--white);
     padding: 16px 0;
-    border-right: 1px solid var(--grey-border-1);
+    border-right: 1px solid var(--grey-face-2);
 }
 
-.hony-tab-nav-side-option .hony-tab-item {
+.tab-nav-side-option .tab-item, .hony-tab-nav-side-option .hony-tab-item {
     margin: 0px;
     border: 1px solid var(--grey-border-1);
     background: var(--grey-face-1);
-    color: var(--grey-text-1);
+    color: var(--grey-main-1);
     border-radius: 0px;
     padding: 12px 12px;
-        height: 48px;
+    height: 48px;
 }
 
-.hony-tab-nav-side-option .hony-tab-item:hover {
-    border-color: var(--primary-face-3);
+.tab-nav-side-option .tab-item:hover, .hony-tab-nav-side-option .hony-tab-item:hover {
+    border-color: var(--primary-main-1);
 }
 
-.hony-tab-nav-side-option .hony-tab-item.active {
+.tab-nav-side-option .tab-item.active, .hony-tab-nav-side-option .hony-tab-item.active {
     border-color: var(--primary-main-1);
     background: var(--primary-face-1);
     color: var(--primary-main-1);
 }
 
 /* 侧边标签图标样式 */
-.hony-tab-nav-side-icon {
-    background: var(--grey-face-2);
+.tab-nav-side-icon, .hony-tab-nav-side-icon {
+    background: var(--grey-bg-2);
     padding: 16px 0;
-    border-right: 1px solid var(--grey-border-1);
+    border-right: 1px solid var(--grey-face-2);
     width: 48px;
 }
 
-.hony-tab-nav-side-icon .hony-tab-item {
+.tab-nav-side-icon .tab-item, .hony-tab-nav-side-icon .hony-tab-item {
     margin: 0px;
     display: flex;
     align-items: center;
@@ -728,13 +730,12 @@
     border-radius: 0px;
 }
 
-.hony-tab-nav-side-icon .hony-tab-icon {
+.tab-nav-side-icon .tab-icon, .hony-tab-nav-side-icon .hony-tab-icon {
     font-size: 16px;
 }
 
 /* 侧边标签拓展样式 */
-.hony-tab-nav-side-extended {
-    background: var(--white);
+.tab-nav-side-extended, .hony-tab-nav-side-extended {
     border-right: 1px solid var(--grey-border-1);
     display: flex;
     flex-direction: column;
@@ -742,14 +743,14 @@
     width: 100%;
 }
 
-.hony-tab-side-header {
-    padding: 16px 24px 16px 0px;
+.tab-side-header, .hony-tab-side-header {
+    padding: 24px 24px 0px 24px;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.hony-tab-side-title {
+.tab-side-title, .hony-tab-side-title {
     font-size: 16px;
     font-weight: 700;
     color: var(--text-1);
@@ -757,30 +758,14 @@
     line-height: 24px;
 }
 
-.hony-tab-side-search {
+.tab-side-search, .hony-tab-side-search {
     margin-bottom: 16px;
 }
-
-.search-input {
-    width: 100%;
-    padding: 4px 12px;
-    border: 1px solid var(--grey-border-1);
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 24px;
-    background: var(--white);
-}
-
-.search-input::placeholder {
-    color: var(--text-4);
-}
-
-.add-button {
+.add-button, .hony-add-button {
     width: 100%;
     padding: 8px 16px;
     border: 1px solid var(--primary-main-1);
     border-radius: 4px;
-    background: var(--white);
     color: var(--primary-main-1);
     font-size: 14px;
     line-height: 16px;
@@ -788,13 +773,13 @@
     transition: all 0.2s ease;
 }
 
-.add-button:hover {
-    background: var(--primary-face-1);
+.add-button:hover, .hony-add-button:hover {
+    background: var(--primary-1);
 }
 
-.hony-tab-side-items {
+.tab-side-items, .hony-tab-side-items {
     flex: 1;
-    padding: 0px 24px 0px 0px;
+    padding: 16px 24px 0px 24px;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -803,32 +788,32 @@
     scrollbar-width: thin;
     scrollbar-color: var(--grey-border-1) #00000000;
 }
-.hony-tab-side-items1 {
+.tab-side-items1, .hony-tab-side-items1 {
     flex: 1;
-    padding: 0px 24px 0px 0px;
+    padding: 16px 24px 0px 24px;
     display: flex;
     flex-direction: column;
     gap: 0px;
     overflow-y: auto;
-        background: var(--grey-bg-0);
+    background: var(--grey-bg-0);
     scrollbar-width: thin;
     scrollbar-color: var(--grey-border-1) #00000000;
 }
-.hony-tab-side-items .hony-tab-item {
+.tab-side-items .tab-item, .hony-tab-side-items .hony-tab-item {
     margin: 0px;
 }
 
 /* 侧边标签页浮动折叠按钮 */
-.side-tabs {
+.side-tabs, .hony-side-tabs {
     position: relative;
     display: flex;
     height: 100%;
     max-width: 320px;
-    mim-width: 160px;
-    width: 240px
+    min-width: 160px;
+    width: 240px;
 }
 
-.hony-tab-collapse-btn {
+.tab-collapse-btn, .hony-tab-collapse-btn {
     position: absolute;
     top: 50%;
     right: -19px;
@@ -845,34 +830,34 @@
     border-radius: 0 4px 4px 0;
     cursor: pointer;
     transition: all 0.2s ease;
-    color: var(--grey-text-4);
+    color: var(--grey-6);
     font-size: 12px;
 }
 
-.hony-tab-collapse-btn:hover {
-    background: var(--grey-face-1);
+.tab-collapse-btn:hover, .hony-tab-collapse-btn:hover {
+    background: var(--grey-bg-1);
     color: var(--primary-main-1);
 }
 
-.hony-tab-collapse-btn.collapsed {
+.tab-collapse-btn.collapsed, .hony-tab-collapse-btn.collapsed {
     right: auto;
     left: -10px;
     border-radius: 4px 0 0 4px;
-    border-left: 1px solid var(--grey-border-1);
+    border-left: 1px solid var(--grey-face-2);
     border-right: none;
 }
 
-.hony-tab-collapse-btn.collapsed svg,
-.hony-tab-collapse-btn.collapsed .iconfont {
+.tab-collapse-btn.collapsed svg, .hony-tab-collapse-btn.collapsed svg,
+.tab-collapse-btn.collapsed .iconfont, .hony-tab-collapse-btn.collapsed .iconfont {
     transform: rotate(180deg);
 }
 
 /* 折叠状态 */
-.side-tabs.collapsed {
+.side-tabs.collapsed, .hony-side-tabs.collapsed {
     width: 20px;
 }
 
-.side-tabs.collapsed .hony-tab-nav-side {
+.side-tabs.collapsed .hony-tab-nav-side, .hony-side-tabs.collapsed .hony-tab-nav-side {
     width: 0;
     overflow: hidden;
     opacity: 0;
@@ -880,21 +865,21 @@
     margin: 0;
 }
 
-.side-tabs.collapsed .hony-tab-collapse-btn {
+.side-tabs.collapsed .hony-tab-collapse-btn, .hony-side-tabs.collapsed .hony-tab-collapse-btn {
     right: 0;
-    border-left: 1px solid var(--grey-border-1);
+    border-left: 1px solid var(--grey-face-2);
 }
 
-.side-tabs.collapsed .hony-tab-collapse-btn .iconfont {
+.side-tabs.collapsed .hony-tab-collapse-btn .iconfont, .hony-side-tabs.collapsed .hony-tab-collapse-btn .iconfont {
     transform: rotate(180deg);
 }
 
-.side-tabs.collapsed .hony-tab-resize-handle {
+.side-tabs.collapsed .hony-tab-resize-handle, .hony-side-tabs.collapsed .hony-tab-resize-handle {
     display: none;
 }
 
 /* 拖动调整宽度的手柄 */
-.hony-tab-resize-handle {
+.tab-resize-handle, .hony-tab-resize-handle {
     position: absolute;
     top: 0;
     right: 0;
@@ -906,41 +891,40 @@
     transition: background 0.2s ease;
 }
 
-.hony-tab-resize-handle:hover {
-    background: var(--grey-border-2);
+.tab-resize-handle:hover, .hony-tab-resize-handle:hover {
+    background: var(--grey-border-1);
 }
 
-.hony-tab-resize-handle.active {
+.tab-resize-handle.active, .hony-tab-resize-handle.active {
     background: var(--primary-main-1);
 }
 
 /* 侧边标签内容区域 */
-.hony-tab-content-side {
+.tab-content-side, .hony-tab-content-side {
     flex: 1;
     padding: 24px;
-    background: var(--white);
     min-height: 600px;
 }
 
-.hony-tab-content-side .hony-tab-content-item {
+.tab-content-side .tab-content-item, .hony-tab-content-side .hony-tab-content-item {
     display: none;
 }
 
-.hony-tab-content-side .hony-tab-content-item.active {
+.tab-content-side .tab-content-item.active, .hony-tab-content-side .hony-tab-content-item.active {
     display: block;
 }
 
 /* 侧边标签页面容器 */
-.hony-tab-card5 {
+.tab-card5, .hony-tab-card5 {
     padding: 0px 24px 0px 24px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    background: var(--grey-bg-0);
+    background:var(--grey-bg-0);
     height: 400px;
 }
 
-.hony-tab-nav-side-icon .hony-tab-item.active {
+.tab-nav-side-icon .tab-item.active, .hony-tab-nav-side-icon .hony-tab-item.active {
     border-left: 2px solid var(--primary-main-1);
     background: var(--grey-bg-0);
     color: var(--primary-main-1);

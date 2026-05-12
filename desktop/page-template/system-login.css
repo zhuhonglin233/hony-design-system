@@ -1,0 +1,236 @@
+/* 登录页面样式 */
+.login-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: var(--grey-bg-0);
+    min-height: 100vh; 
+}
+
+/* 左侧背景区域 */
+.login-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+}
+
+.login-bg-video {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+    object-position: right;
+}
+
+/* 右侧登录区域 */
+.login-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.login-form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+/* Logo 和标题 */
+.login-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.login-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+}
+
+.login-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--grey-text-1);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+/* 输入框组 */
+.login-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 登录选项 */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.login-forget {
+    font-size: 14px;
+    color: var(--primary-main-1);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.login-forget:hover {
+    color: var(--primary-main-1);
+}
+
+/* 登录按钮 */
+.login-btn {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 16px;
+}
+
+/* 其他登录方式 */
+.login-other {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.login-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.login-divider-line {
+    flex: 1;
+    height: 1px;
+    background: #e7eaf0;
+}
+
+.login-divider-text {
+    font-size: 12px;
+    color: #6c7da3;
+}
+
+/* 社交登录按钮 */
+.login-social {
+    display: flex;
+    gap: 24px;
+}
+
+.login-social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--grey-face-1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+    border: 1px solid var(--grey-border-1);
+}
+
+.login-social-btn:hover {
+    background: var(--primary-face-1);
+}
+
+.login-social-btn img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* 响应式适配 */
+@media (max-width: 1440px) {
+    .login-container {
+        width: 100%;
+        min-height: 100vh;
+    }
+    
+    .login-right {
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .login-left {
+        display: none;
+    }
+    
+    .login-right {
+        width: 100%;
+        padding: 0 40px;
+    }
+}
+
+body{
+        margin: 0px;
+}
+.login-input-group1{
+    width: 100%;
+    margin-bottom: 48px;
+    margin-top: 48px;
+}
+.login-input-group2{
+    width: 100%;
+    margin-bottom: 16px;
+}
+.hony-checkbox-text-login{
+    flex-shrink: 0;
+    line-height: 24px;
+    color: var(--grey-text-3);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.login-text-btn{
+    color: var(--grey-text-3) !important;
+}
+
+/* 二维码登录样式 */
+.login-qrcode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
+
+.qrcode-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.qrcode-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--grey-text-1);
+    margin-bottom: 8px;
+}
+
+.qrcode-hint {
+    font-size: 12px;
+    color: var(--grey-text-4);
+    margin-bottom: 0px;
+}
+.hony-login-content {
+    width: 100%;
+}
+.hony-input-Captcha{
+    position: absolute;
+    top: 12px;
+    left: 76%;
+    height: 24px;
+    width: 84px;
+}

@@ -83,6 +83,55 @@ function initSidebarNav(navId) {
                         content.style.display = '';
                         header.classList.remove('expanded');
                     }
+                    
+                    // 检查是否有 data-page 属性，如果有则跳转到对应页面
+                    const pageFile = subItem.getAttribute('data-page');
+                    if (pageFile) {
+                        console.log('导航到页面:', pageFile);
+                        
+                        // 直接实现导航逻辑
+                        const container = document.getElementById('system-page-main');
+                        if (!container) {
+                            console.error('主内容容器 #system-page-main 未找到');
+                            return;
+                        }
+                        
+                        // 显示加载状态
+                        container.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100%; color: #999;">加载中...</div>';
+                        
+                        // 使用 XMLHttpRequest 加载页面内容
+                        const xhr = new XMLHttpRequest();
+                        xhr.open('GET', pageFile, true);
+                        xhr.onload = function() {
+                            if (xhr.status >= 200 && xhr.status < 300) {
+                                // 创建临时容器解析HTML
+                                const tempDiv = document.createElement('div');
+                                tempDiv.innerHTML = xhr.responseText;
+                                
+                                // 查找 main 元素或 system-page-main 元素
+                                let mainContent = tempDiv.querySelector('.system-page-main');
+                                if (mainContent) {
+                                    container.innerHTML = mainContent.innerHTML;
+                                } else {
+                                    // 如果没有找到，尝试获取 body 的内容
+                                    const bodyContent = tempDiv.querySelector('body');
+                                    if (bodyContent) {
+                                        container.innerHTML = bodyContent.innerHTML;
+                                    } else {
+                                        container.innerHTML = '<div style="padding: 20px; color: #f56c6c;">加载失败，未找到主内容</div>';
+                                    }
+                                }
+                                // 更新浏览器URL
+                                window.history.pushState({}, '', pageFile);
+                            } else {
+                                container.innerHTML = '<div style="padding: 20px; color: #f56c6c;">加载失败，状态码: ' + xhr.status + '</div>';
+                            }
+                        };
+                        xhr.onerror = function() {
+                            container.innerHTML = '<div style="padding: 20px; color: #f56c6c;">网络错误，无法加载页面</div>';
+                        };
+                        xhr.send();
+                    }
                 });
             });
         } else if (header) {
@@ -241,6 +290,11 @@ function initCollapseMenu() {
                 
                 sidebarNav.classList.toggle('collapsed');
                 
+                const mainContent = document.querySelector('.system-page-main');
+                if (mainContent) {
+                    mainContent.classList.toggle('collapsed');
+                }
+                
                 const drawerNavRights = document.querySelectorAll('#' + navId + ' .hony-drawer-nav-right');
                 drawerNavRights.forEach(right => {
                     right.style.display = 'none';
@@ -288,30 +342,35 @@ function initCollapseMenu() {
         syncMenuTitles();
         
         collapseMenu.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const navMenuContents = document.querySelectorAll('#' + navId + ' .hony-nav-menu-item-content');
-            navMenuContents.forEach(content => {
-                content.style.display = 'none';
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const navMenuContents = document.querySelectorAll('#' + navId + ' .hony-nav-menu-item-content');
+                navMenuContents.forEach(content => {
+                    content.style.display = 'none';
+                });
+                
+                const navMenuHeaders = document.querySelectorAll('#' + navId + ' .hony-nav-menu-item-header');
+                navMenuHeaders.forEach(header => {
+                    header.classList.remove('expanded');
+                });
+                
+                sidebarNav.classList.toggle('collapsed');
+                
+                const mainContent = document.querySelector('.system-page-main');
+                if (mainContent) {
+                    mainContent.classList.toggle('collapsed');
+                }
+                
+                const icon = collapseMenu.querySelector('.hony-nav-icon');
+                const text = collapseMenu.querySelector('span:not(.hony-nav-icon)');
+                
+                if (sidebarNav.classList.contains('collapsed')) {
+                    text.textContent = ' ';
+                } else {
+                    text.textContent = ' ';
+                }
             });
-            
-            const navMenuHeaders = document.querySelectorAll('#' + navId + ' .hony-nav-menu-item-header');
-            navMenuHeaders.forEach(header => {
-                header.classList.remove('expanded');
-            });
-            
-            sidebarNav.classList.toggle('collapsed');
-            
-            const icon = collapseMenu.querySelector('.hony-nav-icon');
-            const text = collapseMenu.querySelector('span:not(.hony-nav-icon)');
-            
-            if (sidebarNav.classList.contains('collapsed')) {
-                text.textContent = ' ';
-            } else {
-                text.textContent = ' ';
-            }
-        });
         
         const observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {

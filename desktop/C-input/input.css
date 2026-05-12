@@ -47,7 +47,7 @@
   line-height: 22px;
   color: var(--grey-text-1);
   background: var(--grey-bg-0);
-  border: 1px solid white;
+  border: 1px solid var(--grey-bg-0);
   border-radius: 4px;
   padding: 4px 0px;
   width: 100%;
@@ -683,6 +683,7 @@ white-space: nowrap;
   font-size: 14px;
   line-height: 24px;
   background: transparent;
+  color: var(--grey-text-1);
 }
 
 .hony-input-custom-input:focus {
@@ -730,6 +731,7 @@ white-space: nowrap;
   font-size: 14px;
   line-height: 24px;
   background: transparent;
+  color: var(--grey-text-1);
 }
 
 .hony-input-floating-body .hony-input-custom-input:focus {
@@ -783,4 +785,109 @@ white-space: nowrap;
 .hony-input-custom:focus-within .hony-input-floating-label {
   color: var(--primary-main-1); /* 主题色，和你边框高亮色一致 */
   /* 如果需要同时上浮，也可以在这里加 transform */
+}
+.hony-input-custom-translate{
+    padding: 8px 12px;
+    height: 48px;
+    display: flex;
+}
+.hony-input-translate-label{
+    padding: 8px 12px;
+    height: 48px;
+    display: flex;
+}
+.hony-input-group2{
+  width: 240px;
+  margin-bottom: 24px;
+}
+/* 自定义输入框 */
+/* From Uiverse.io by Satwinder04 */ 
+.hony-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.hony-input-container input[type="text"] {
+  font-size: 14px;
+  line-height: 24px;
+  width: 100%;
+  border: none;
+  border: 1px solid var(--grey-border-2);
+  padding: 12px;
+  background-color: transparent;
+  outline: none;
+  border-radius: 8px;
+  color: var(--grey-text-1);
+}
+
+.hony-input-container input[type="password"] {
+  font-size: 14px;
+  line-height: 24px;
+  width: 100%;
+  border: none;
+  border: 1px solid var(--grey-border-2);
+  padding: 12px;
+  background-color: transparent;
+  outline: none;
+  border-radius: 8px;
+  color: var(--grey-text-1);
+}
+.hony-input-container .hony-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--grey-text-4);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.hony-label-icon{
+  font-size: 14px;
+  line-height: 14px;
+  height: 24px;
+  padding-right: 8px;
+  color: inherit;
+}
+.hony-input-container input[type="text"]:focus ~ .hony-label,
+.hony-input-container input[type="text"]:valid ~ .hony-label {
+  top: -28px;
+  left: 0px;
+  font-size: 14px;
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+.hony-input-container input[type="password"]:focus ~ .hony-label,
+.hony-input-container input[type="password"]:valid ~ .hony-label {
+  top: -28px;
+  left: 0px;
+  font-size: 14px;
+  color: var(--primary-main-1);
+  font-weight: 500;
+}
+.hony-input-container .hony-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.hony-input-container .hony-input-action-btn {
+  position: absolute;
+  top: 12px;
+  left: 88%;
+  height: 24px;
+  width: 24px;
+  transition: all 0.3s ease;
+    display: flex;
+  align-items: center;  /* 垂直居中 */
+  justify-content: center; /* 水平居中（可选） */
+}
+.hony-input-container input[type="text"]:focus ~ .underline,
+.hony-input-container input[type="text"]:valid ~ .underline {
+  transform: scaleX(1);
 }

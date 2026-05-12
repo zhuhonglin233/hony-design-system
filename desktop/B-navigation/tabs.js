@@ -34,6 +34,16 @@ function switchTab(tabItem) {
     const targetContent = contentContainer.querySelector(`#hony-${targetTab}`);
     if (targetContent) {
         targetContent.classList.add('active');
+        
+        // 触发图表resize，确保隐藏的图表在显示后能正确获取容器宽度
+        setTimeout(function() {
+            targetContent.querySelectorAll('.main-chart').forEach(chartContainer => {
+                const chartInstance = window.echarts?.getInstanceByDom(chartContainer);
+                if (chartInstance) {
+                    chartInstance.resize();
+                }
+            });
+        }, 50);
     }
 }
 
@@ -302,12 +312,22 @@ function switchSideTab(tab) {
 
 // 侧边标签页折叠/展开函数
 function toggleSideTab(btn) {
-    // 获取侧边标签页容器
+    // 获取当前点击的侧边标签页容器
     const sideTabs = btn.closest('.side-tabs');
-
-    // 切换折叠状态
-    sideTabs.classList.toggle('collapsed');
-    btn.classList.toggle('collapsed');
+    
+    // 判断当前状态
+    const isCurrentlyCollapsed = sideTabs.classList.contains('collapsed');
+    
+    // 如果当前是展开状态，只收起当前点击的侧边标签页
+    if (!isCurrentlyCollapsed) {
+        // 收起当前侧边标签页
+        sideTabs.classList.add('collapsed');
+        btn.classList.add('collapsed');
+    } else {
+        // 如果当前是收起状态，只展开当前点击的侧边标签页
+        sideTabs.classList.remove('collapsed');
+        btn.classList.remove('collapsed');
+    }
 }
 
 // 侧边标签页拖动调整宽度

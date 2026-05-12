@@ -4,463 +4,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>滑块 - 桌面端组件</title>
+    <link rel="icon" href="../../overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../../overall/main.css">
     <link rel="stylesheet" href="../../overall/icons/iconfont.css">
     <link rel="stylesheet" href="slider.css">
     <script src="../../overall/js/common.js"></script>
     <script src="slider.js"></script>
+<link rel="stylesheet" href="../B-navigation/tabs.css">
 </head>
 <body>
     <div class="page-container">
         <!-- 左侧导航 -->
-        <div id="sidebar-container"></div>
-    
-        
+        <div id="sidebar-container"></div>      
         <!-- 主内容区域 -->
         <div class="main-content">
             <!-- 顶部导航栏 -->
             <div id="navbar-container"></div>
             <!-- 主内容区域 -->
-            <div class="main-content-area">
-                <!-- 内容 -->
-                <div class="content-area">
-                    <div class="content-main">
-                        <div class="page-header">
-                            <div class="design-code">design code 桌面端组件</div>
-                            <div class="page-title">滑块</div>
-                            <div class="page-description">滑块组件是在一定范围内通过拖动滑块来选择数值的交互控件，常用于数值区间调节、比例设置等场景。</div>
-                        </div>
-                        <!-- 横向滑块 -->
-                        <div class="section">
-                            <div class="section-title">横向<span style="color: var(--primary-main-1);">滑块</span></div>
-                            
-                            <div class="subsection" id="slider-basic">
-                                <div class="subsection-title">横向滑块</div>
-                                <div class="subsection-description">横向滑块：通过拖动滑块选择数值，悬停时显示当前数值气泡，支持自定义范围和步长。</div>
-                                <div class="component-container">
-                                    <!-- 横向滑块 -->
-                                    <div class="hony-slider" id="hony-slider-basic-1">
-                                        <div class="hony-slider-track">
-                                            <div class="hony-slider-fill"></div>
-                                            <div class="hony-slider-thumb">
-                                                <div class="hony-slider-popup">30</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 横向输入框滑块 -->
-                            <div class="subsection" id="slider-input">
-                                <div class="subsection-title">横向输入框滑块</div>
-                                <div class="subsection-description">滑块与数字输入框配合使用，可通过拖动或直接输入来调整数值。</div>
-                                <div class="component-container">
-                                    <!-- 横向输入框滑块 -->
-                                    <div class="hony-slider sl-slider-with-input" id="hony-slider-input-2">
-                                        <div class="hony-slider-track">
-                                            <div class="hony-slider-fill"></div>
-                                            <div class="hony-slider-thumb">
-                                                <div class="hony-slider-popup">30</div>
-                                            </div>
-                                        </div>
-                                        <div class="hony-slider-input">
-                                            <input type="number" class="hony-input" value="30" min="0" max="100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 横向刻度滑块 -->
-                            <div class="subsection" id="slider-marks">
-                                <div class="subsection-title">横向刻度滑块</div>
-                                <div class="subsection-description">滑块带有刻度标记，可更清晰展示数值范围和关键节点。</div>
-                                <div class="component-container">
-                                    <!-- 横向刻度滑块 -->
-                                    <div class="hony-slider sl-slider-marks" id="hony-slider-marks-1" data-marks='{"0":"0°C","20":"20°C","40":"40°C","60":"60°C","80":"80°C","100":"100°C"}'>
-                                        <div class="hony-slider-track">
-                                            <div class="hony-slider-fill"></div>
-                                            <div class="hony-slider-thumb">
-                                                <div class="hony-slider-popup">40</div>
-                                            </div>
-                                            <div class="hony-slider-marks-container"></div>
-                                        </div>
-                                        <div class="hony-slider-input">
-                                            <input type="number" class="hony-input" value="40" min="0" max="100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 横向步长滑块 -->
-                            <div class="subsection" id="slider-step">
-                                <div class="subsection-title">横向步长滑块</div>
-                                <div class="subsection-description">通过设置 step 属性，可以控制滑块值的跳跃间隔。</div>
-                                <div class="component-container">
-                                    <div class="hony-slider" id="hony-slider-step-1" data-step="10">
-                                        <div class="hony-slider-track">
-                                            <div class="hony-slider-fill"></div>
-                                            <div class="hony-slider-thumb">
-                                                <div class="hony-slider-popup">30</div>
-                                            </div>
-                                        </div>
-                                        <div class="hony-slider-step-marks"></div>
-                                        <div class="hony-slider-input">
-                                            <input type="number" class="hony-input" value="30" min="0" max="100" step="10">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 横向双滑块 -->
-                            <div class="subsection" id="slider-range">
-                                <div class="subsection-title">横向双滑块</div>
-                                <div class="subsection-description">横向双滑块用于选择数值范围，可同时调整最小值和最大值。</div>
-                                <div class="component-container">
-                                    <div class="hony-slider sl-slider-range" id="hony-slider-range-1">
-                                        <div class="hony-slider-track">
-                                            <div class="hony-slider-fill"></div>
-                                            <div class="hony-slider-thumb sl-slider-thumb-start">
-                                                <div class="hony-slider-popup">20</div>
-                                            </div>
-                                            <div class="hony-slider-thumb sl-slider-thumb-end">
-                                                <div class="hony-slider-popup">80</div>
-                                            </div>
-                                        </div>
-                                        <div class="hony-slider-inputs">
-                                            <input type="number" class="hony-input" value="20" min="0" max="100">
-                                            <span class="hony-range-separator">-</span>
-                                            <input type="number" class="hony-input" value="80" min="0" max="100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 横向禁用状态滑块 -->
-                            <div class="subsection" id="slider-disabled">
-                                <div class="subsection-title">横向禁用状态</div>
-                                <div class="subsection-description">禁用状态的滑块不可交互，显示为灰色。</div>
-                                <div class="component-container">
-                                    <div class="hony-slider disabled" id="hony-slider-disabled-1">
-                                        <div class="hony-slider-track">
-                                            <div class="hony-slider-fill" style="width: 50%;"></div>
-                                            <div class="hony-slider-thumb" style="left: 50%;"></div>
-                                        </div>
-                                        <div class="hony-slider-input">
-                                            <input type="number" class="hony-input" value="50" min="0" max="100" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="hony-slider sl-slider-range disabled" style="margin-left: 40px;" id="hony-slider-range-disabled">
-                                        <div class="hony-slider-track">
-                                            <div class="hony-slider-fill" style="left: 20%; width: 30%;"></div>
-                                            <div class="hony-slider-thumb sl-slider-thumb-start" style="left: 20%;"></div>
-                                            <div class="hony-slider-thumb sl-slider-thumb-end" style="left: 50%;"></div>
-                                        </div>
-                                        <div class="hony-slider-inputs">
-                                            <input type="number" class="hony-input" value="20" min="0" max="100" disabled>
-                                            <span class="hony-range-separator">-</span>
-                                            <input type="number" class="hony-input" value="50" min="0" max="100" disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- 竖向滑块 -->
-                        <div class="section">
-                            <div class="section-title"><span style="color: var(--primary-main-1);">竖向</span>滑块</div>
-
-                            <div class="subsection" id="slider-vertical">
-                                <div class="subsection-title">竖向滑块</div>
-                                <div class="subsection-description">竖直方向的滑块，包括单个滑块、带刻度滑块和双滑块，适用于垂直布局或特殊场景。</div>
-                                <div class="component-container sl-vertical-container">
-                                    <div class="hony-slider sl-slider-vertical" id="hony-slider-vertical-1">
-                                        <div class="hony-slider-track">
-                                            <div class="hony-slider-fill"></div>
-                                            <div class="hony-slider-thumb">
-                                                <div class="hony-slider-popup">30</div>
-                                            </div>
-                                        </div>
-                                        <div class="hony-slider-input">
-                                            <input type="number" class="hony-input" value="30" min="0" max="100">
-                                        </div>
-                                    </div>
-                                    <!-- 竖向刻度滑块
-                                    <div class="hony-slider sl-slider-vertical sl-slider-marks" id="hony-slider-vertical-marks" data-marks='{"0":"0°C","50":"50°C","100":"100°C"}'>
-                                        <div class="hony-slider-track">
-                                            <div class="hony-slider-fill"></div>
-                                            <div class="hony-slider-thumb">
-                                                <div class="hony-slider-popup">50</div>
-                                            </div>
-                                            <div class="hony-slider-marks-container sl-vertical-marks"></div>
-                                        </div>
-                                        <div class="hony-slider-input">
-                                            <input type="number" class="hony-input" value="50" min="0" max="100">
-                                        </div>
-                                    </div> -->
-                                    <div class="hony-slider sl-slider-vertical sl-slider-range" id="hony-slider-vertical-range">
-                                        <div class="hony-slider-track">
-                                            <div class="hony-slider-fill" style="bottom: 30%; height: 40%;"></div>
-                                            <div class="hony-slider-thumb sl-slider-thumb-start" style="bottom: 30%;">
-                                                <div class="hony-slider-popup">30</div>
-                                            </div>
-                                            <div class="hony-slider-thumb sl-slider-thumb-end" style="bottom: 70%;">
-                                                <div class="hony-slider-popup">70</div>
-                                            </div>
-                                        </div>
-                                        <div class="hony-slider-inputs">
-                                            <input type="number" class="hony-input" value="30" min="0" max="100">
-                                            <span class="hony-range-separator">-</span>
-                                            <input type="number" class="hony-input" value="70" min="0" max="100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                    </div>
+            <div class="hony-content-area">
+                <!-- 页面标题 -->
+                <div class="page-header">
+                    <div class="design-code">design code 桌面端组件</div>
+                    <div class="page-title">滑块</div>
+                    <div class="page-description">滑块组件是在一定范围内通过拖动滑块来选择数值的交互控件，常用于数值区间调节、比例设置等场景。</div>
                 </div>                
-                <!-- 右侧锚点导航 -->
-                <div class="right-nav">
-                    <div class="right-nav-items">
-                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'slider-basic');">横向滑块</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-input');">横向输入框滑块</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-marks');">横向刻度滑块</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-step');">横向步长滑块</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-range');">横向双滑块</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-disabled');">横向禁用状态</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-vertical');">竖向滑块</div>
-                    </div>
-                </div>
+                <div class="main-content-area">
+                    <!-- 内容 -->
+                    <div class="content-area">
+                        <div class="content-main">
+                            <!-- 横向滑块 -->
+                            <div class="section">
+                                <div class="section-title">横向<span style="color: var(--primary-main-1);">滑块</span></div>
+                                
+                                <div class="subsection" id="slider-basic">
+                                    <div class="subsection-title">横向滑块</div>
+                                    <div class="subsection-description">横向滑块：通过拖动滑块选择数值，悬停时显示当前数值气泡，支持自定义范围和步长。</div>
+                                    <div class="component-container">
+                                        <!-- 横向滑块 -->
+                                        <div class="hony-slider" id="hony-slider-basic-1">
+                                            <div class="hony-slider-track">
+                                                <div class="hony-slider-fill"></div>
+                                                <div class="hony-slider-thumb">
+                                                    <div class="hony-slider-popup">30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 横向输入框滑块 -->
+                                <div class="subsection" id="slider-input">
+                                    <div class="subsection-title">横向输入框滑块</div>
+                                    <div class="subsection-description">滑块与数字输入框配合使用，可通过拖动或直接输入来调整数值。</div>
+                                    <div class="component-container">
+                                        <!-- 横向输入框滑块 -->
+                                        <div class="hony-slider sl-slider-with-input" id="hony-slider-input-2">
+                                            <div class="hony-slider-track">
+                                                <div class="hony-slider-fill"></div>
+                                                <div class="hony-slider-thumb">
+                                                    <div class="hony-slider-popup">30</div>
+                                                </div>
+                                            </div>
+                                            <div class="hony-slider-input">
+                                                <input type="number" class="hony-sliders-input" value="30" min="0" max="100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 横向刻度滑块 -->
+                                <div class="subsection" id="slider-marks">
+                                    <div class="subsection-title">横向刻度滑块</div>
+                                    <div class="subsection-description">滑块带有刻度标记，可更清晰展示数值范围和关键节点。</div>
+                                    <div class="component-container">
+                                        <!-- 横向刻度滑块 -->
+                                        <div class="hony-slider sl-slider-marks" id="hony-slider-marks-1" data-marks='{"0":"0°C","20":"20°C","40":"40°C","60":"60°C","80":"80°C","100":"100°C"}'>
+                                            <div class="hony-slider-track">
+                                                <div class="hony-slider-fill"></div>
+                                                <div class="hony-slider-thumb">
+                                                    <div class="hony-slider-popup">40</div>
+                                                </div>
+                                                <div class="hony-slider-marks-container"></div>
+                                            </div>
+                                            <div class="hony-slider-input">
+                                                <input type="number" class="hony-sliders-input" value="40" min="0" max="100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 横向步长滑块 -->
+                                <div class="subsection" id="slider-step">
+                                    <div class="subsection-title">横向步长滑块</div>
+                                    <div class="subsection-description">通过设置 step 属性，可以控制滑块值的跳跃间隔。</div>
+                                    <div class="component-container">
+                                        <div class="hony-slider" id="hony-slider-step-1" data-step="10">
+                                            <div class="hony-slider-track">
+                                                <div class="hony-slider-fill"></div>
+                                                <div class="hony-slider-thumb">
+                                                    <div class="hony-slider-popup">30</div>
+                                                </div>
+                                            </div>
+                                            <div class="hony-slider-step-marks"></div>
+                                            <div class="hony-slider-input">
+                                                <input type="number" class="hony-sliders-input" value="30" min="0" max="100" step="10">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 横向双滑块 -->
+                                <div class="subsection" id="slider-range">
+                                    <div class="subsection-title">横向双滑块</div>
+                                    <div class="subsection-description">横向双滑块用于选择数值范围，可同时调整最小值和最大值。</div>
+                                    <div class="component-container">
+                                        <div class="hony-slider sl-slider-range" id="hony-slider-range-1">
+                                            <div class="hony-slider-track">
+                                                <div class="hony-slider-fill"></div>
+                                                <div class="hony-slider-thumb sl-slider-thumb-start">
+                                                    <div class="hony-slider-popup">20</div>
+                                                </div>
+                                                <div class="hony-slider-thumb sl-slider-thumb-end">
+                                                    <div class="hony-slider-popup">80</div>
+                                                </div>
+                                            </div>
+                                            <div class="hony-slider-inputs">
+                                                <input type="number" class="hony-sliders-input" value="20" min="0" max="100">
+                                                <span class="hony-range-separator">-</span>
+                                                <input type="number" class="hony-sliders-input" value="80" min="0" max="100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 横向禁用状态滑块 -->
+                                <div class="subsection" id="slider-disabled">
+                                    <div class="subsection-title">横向禁用状态</div>
+                                    <div class="subsection-description">禁用状态的滑块不可交互，显示为灰色。</div>
+                                    <div class="component-container">
+                                        <div class="hony-slider disabled" id="hony-slider-disabled-1">
+                                            <div class="hony-slider-track">
+                                                <div class="hony-slider-fill" style="width: 50%;"></div>
+                                                <div class="hony-slider-thumb" style="left: 50%;"></div>
+                                            </div>
+                                            <div class="hony-slider-input">
+                                                <input type="number" class="hony-sliders-input" value="50" min="0" max="100" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="hony-slider sl-slider-range disabled" style="margin-left: 40px;" id="hony-slider-range-disabled">
+                                            <div class="hony-slider-track">
+                                                <div class="hony-slider-fill" style="left: 20%; width: 30%;"></div>
+                                                <div class="hony-slider-thumb sl-slider-thumb-start" style="left: 20%;"></div>
+                                                <div class="hony-slider-thumb sl-slider-thumb-end" style="left: 50%;"></div>
+                                            </div>
+                                            <div class="hony-slider-inputs">
+                                                <input type="number" class="hony-sliders-input" value="20" min="0" max="100" disabled>
+                                                <span class="hony-range-separator">-</span>
+                                                <input type="number" class="hony-sliders-input" value="50" min="0" max="100" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- 竖向滑块 -->
+                            <div class="section">
+                                <div class="section-title"><span style="color: var(--primary-main-1);">竖向</span>滑块</div>
+
+                                <div class="subsection" id="slider-vertical">
+                                    <div class="subsection-title">竖向滑块</div>
+                                    <div class="subsection-description">竖直方向的滑块，包括单个滑块、带刻度滑块和双滑块，适用于垂直布局或特殊场景。</div>
+                                    <div class="component-container sl-vertical-container">
+                                        <div class="hony-slider sl-slider-vertical" id="hony-slider-vertical-1">
+                                            <div class="hony-slider-track">
+                                                <div class="hony-slider-fill"></div>
+                                                <div class="hony-slider-thumb">
+                                                    <div class="hony-slider-popup">30</div>
+                                                </div>
+                                            </div>
+                                            <div class="hony-slider-input">
+                                                <input type="number" class="hony-sliders-input" value="30" min="0" max="100">
+                                            </div>
+                                        </div>
+                                        <!-- 竖向刻度滑块
+                                        <div class="hony-slider sl-slider-vertical sl-slider-marks" id="hony-slider-vertical-marks" data-marks='{"0":"0°C","50":"50°C","100":"100°C"}'>
+                                            <div class="hony-slider-track">
+                                                <div class="hony-slider-fill"></div>
+                                                <div class="hony-slider-thumb">
+                                                    <div class="hony-slider-popup">50</div>
+                                                </div>
+                                                <div class="hony-slider-marks-container sl-vertical-marks"></div>
+                                            </div>
+                                            <div class="hony-slider-input">
+                                                <input type="number" class="hony-sliders-input" value="50" min="0" max="100">
+                                            </div>
+                                        </div> -->
+                                        <div class="hony-slider sl-slider-vertical sl-slider-range" id="hony-slider-vertical-range">
+                                            <div class="hony-slider-track">
+                                                <div class="hony-slider-fill" style="bottom: 30%; height: 40%;"></div>
+                                                <div class="hony-slider-thumb sl-slider-thumb-start" style="bottom: 30%;">
+                                                    <div class="hony-slider-popup">30</div>
+                                                </div>
+                                                <div class="hony-slider-thumb sl-slider-thumb-end" style="bottom: 70%;">
+                                                    <div class="hony-slider-popup">70</div>
+                                                </div>
+                                            </div>
+                                            <div class="hony-slider-inputs">
+                                                <input type="number" class="hony-sliders-input" value="30" min="0" max="100">
+                                                <span class="hony-range-separator">-</span>
+                                                <input type="number" class="hony-sliders-input" value="70" min="0" max="100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                    <!-- 右侧锚点导航 -->
+                    <div class="right-nav">
+                        <div class="right-nav-items">
+                                <div class="right-nav-item active" onclick="handleRightNavClick(this, 'slider-basic');">横向滑块</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-input');">横向输入框滑块</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-marks');">横向刻度滑块</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-step');">横向步长滑块</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-range');">横向双滑块</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-disabled');">横向禁用状态</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-vertical');">竖向滑块</div>
+                        </div>
+                    </div>       
+                </div>                
             </div>
+
         </div>
     </div>
     <!-- 背景纹理 -->
     <div class="hony-background-texture"></div>
     <!-- 背景banner -->
     <div class="background-bgVideo">
-        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+        <!-- 浅色模式视频 -->
+        <video class="background-bgVideo-video background-bgVideo-light" autoplay muted loop playsinline>
             <source src="../../overall/images/背景banne.mp4" type="video/mp4">
         </video>
+        <!-- 深色模式图片 -->
+        <img class="background-bgVideo-image background-bgVideo-dark" src="../../overall/images/bg-dark-mode.png" alt="深色背景">
     </div>
-
-
-    删除·············
-
-
-    <div class="background-decoration"></div>
-    <div class="page-container">
-        <!-- 顶部导航栏 -->
-        <div id="navbar-container"></div>
-        <!-- 主内容区域 -->
-        <div class="main-content">
-            <!-- 左侧导航 -->
-            <div id="sidebar-container"></div>
-            <!-- 右侧内容 -->
-            <div class="content-area">
-                <div class="content-main">
-                    <div class="page-header">
-                        <div class="design-code">design code 桌面端组件</div>
-                        <div class="page-title">滑块</div>
-                        <div class="page-description">滑块组件是在一定范围内通过拖动滑块来选择数值的交互控件，常用于数值区间调节、比例设置等场景。</div>
-                    </div>
-                    <!-- 横向滑块 -->
-                    <div class="section">
-                        <div class="section-title">横向<span style="color: var(--primary-main-1);">滑块</span></div>
-                        
-                        <div class="subsection" id="slider-basic">
-                            <div class="subsection-title">横向滑块</div>
-                            <div class="subsection-description">横向滑块：通过拖动滑块选择数值，悬停时显示当前数值气泡，支持自定义范围和步长。</div>
-                            <div class="component-container">
-                                <!-- 横向滑块 -->
-                                <div class="hony-slider" id="hony-slider-basic-1">
-                                    <div class="hony-slider-track">
-                                        <div class="hony-slider-fill"></div>
-                                        <div class="hony-slider-thumb">
-                                            <div class="hony-slider-popup">30</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 横向输入框滑块 -->
-                        <div class="subsection" id="slider-input">
-                            <div class="subsection-title">横向输入框滑块</div>
-                            <div class="subsection-description">滑块与数字输入框配合使用，可通过拖动或直接输入来调整数值。</div>
-                            <div class="component-container">
-                                <!-- 横向输入框滑块 -->
-                                <div class="hony-slider sl-slider-with-input" id="hony-slider-input-2">
-                                    <div class="hony-slider-track">
-                                        <div class="hony-slider-fill"></div>
-                                        <div class="hony-slider-thumb">
-                                            <div class="hony-slider-popup">30</div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-slider-input">
-                                        <input type="number" class="hony-input" value="30" min="0" max="100">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 横向刻度滑块 -->
-                        <div class="subsection" id="slider-marks">
-                            <div class="subsection-title">横向刻度滑块</div>
-                            <div class="subsection-description">滑块带有刻度标记，可更清晰展示数值范围和关键节点。</div>
-                            <div class="component-container">
-                                <!-- 横向刻度滑块 -->
-                                <div class="hony-slider sl-slider-marks" id="hony-slider-marks-1" data-marks='{"0":"0°C","20":"20°C","40":"40°C","60":"60°C","80":"80°C","100":"100°C"}'>
-                                    <div class="hony-slider-track">
-                                        <div class="hony-slider-fill"></div>
-                                        <div class="hony-slider-thumb">
-                                            <div class="hony-slider-popup">40</div>
-                                        </div>
-                                        <div class="hony-slider-marks-container"></div>
-                                    </div>
-                                    <div class="hony-slider-input">
-                                        <input type="number" class="hony-input" value="40" min="0" max="100">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 横向步长滑块 -->
-                        <div class="subsection" id="slider-step">
-                            <div class="subsection-title">横向步长滑块</div>
-                            <div class="subsection-description">通过设置 step 属性，可以控制滑块值的跳跃间隔。</div>
-                            <div class="component-container">
-                                <div class="hony-slider" id="hony-slider-step-1" data-step="10">
-                                    <div class="hony-slider-track">
-                                        <div class="hony-slider-fill"></div>
-                                        <div class="hony-slider-thumb">
-                                            <div class="hony-slider-popup">30</div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-slider-step-marks"></div>
-                                    <div class="hony-slider-input">
-                                        <input type="number" class="hony-input" value="30" min="0" max="100" step="10">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 横向双滑块 -->
-                        <div class="subsection" id="slider-range">
-                            <div class="subsection-title">横向双滑块</div>
-                            <div class="subsection-description">横向双滑块用于选择数值范围，可同时调整最小值和最大值。</div>
-                            <div class="component-container">
-                                <div class="hony-slider sl-slider-range" id="hony-slider-range-1">
-                                    <div class="hony-slider-track">
-                                        <div class="hony-slider-fill"></div>
-                                        <div class="hony-slider-thumb sl-slider-thumb-start">
-                                            <div class="hony-slider-popup">20</div>
-                                        </div>
-                                        <div class="hony-slider-thumb sl-slider-thumb-end">
-                                            <div class="hony-slider-popup">80</div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-slider-inputs">
-                                        <input type="number" class="hony-input" value="20" min="0" max="100">
-                                        <span class="hony-range-separator">-</span>
-                                        <input type="number" class="hony-input" value="80" min="0" max="100">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 横向禁用状态滑块 -->
-                        <div class="subsection" id="slider-disabled">
-                            <div class="subsection-title">横向禁用状态</div>
-                            <div class="subsection-description">禁用状态的滑块不可交互，显示为灰色。</div>
-                            <div class="component-container">
-                                <div class="hony-slider disabled" id="hony-slider-disabled-1">
-                                    <div class="hony-slider-track">
-                                        <div class="hony-slider-fill" style="width: 50%;"></div>
-                                        <div class="hony-slider-thumb" style="left: 50%;"></div>
-                                    </div>
-                                    <div class="hony-slider-input">
-                                        <input type="number" class="hony-input" value="50" min="0" max="100" disabled>
-                                    </div>
-                                </div>
-                                <div class="hony-slider sl-slider-range disabled" style="margin-left: 40px;" id="hony-slider-range-disabled">
-                                    <div class="hony-slider-track">
-                                        <div class="hony-slider-fill" style="left: 20%; width: 30%;"></div>
-                                        <div class="hony-slider-thumb sl-slider-thumb-start" style="left: 20%;"></div>
-                                        <div class="hony-slider-thumb sl-slider-thumb-end" style="left: 50%;"></div>
-                                    </div>
-                                    <div class="hony-slider-inputs">
-                                        <input type="number" class="hony-input" value="20" min="0" max="100" disabled>
-                                        <span class="hony-range-separator">-</span>
-                                        <input type="number" class="hony-input" value="50" min="0" max="100" disabled>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- 竖向滑块 -->
-                    <div class="section">
-                        <div class="section-title"><span style="color: var(--primary-main-1);">竖向</span>滑块</div>
-
-                        <div class="subsection" id="slider-vertical">
-                            <div class="subsection-title">竖向滑块</div>
-                            <div class="subsection-description">竖直方向的滑块，包括单个滑块、带刻度滑块和双滑块，适用于垂直布局或特殊场景。</div>
-                            <div class="component-container sl-vertical-container">
-                                <div class="hony-slider sl-slider-vertical" id="hony-slider-vertical-1">
-                                    <div class="hony-slider-track">
-                                        <div class="hony-slider-fill"></div>
-                                        <div class="hony-slider-thumb">
-                                            <div class="hony-slider-popup">30</div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-slider-input">
-                                        <input type="number" class="hony-input" value="30" min="0" max="100">
-                                    </div>
-                                </div>
-                                <!-- 竖向刻度滑块
-                                <div class="hony-slider sl-slider-vertical sl-slider-marks" id="hony-slider-vertical-marks" data-marks='{"0":"0°C","50":"50°C","100":"100°C"}'>
-                                    <div class="hony-slider-track">
-                                        <div class="hony-slider-fill"></div>
-                                        <div class="hony-slider-thumb">
-                                            <div class="hony-slider-popup">50</div>
-                                        </div>
-                                        <div class="hony-slider-marks-container sl-vertical-marks"></div>
-                                    </div>
-                                    <div class="hony-slider-input">
-                                        <input type="number" class="hony-input" value="50" min="0" max="100">
-                                    </div>
-                                </div> -->
-                                <div class="hony-slider sl-slider-vertical sl-slider-range" id="hony-slider-vertical-range">
-                                    <div class="hony-slider-track">
-                                        <div class="hony-slider-fill" style="bottom: 30%; height: 40%;"></div>
-                                        <div class="hony-slider-thumb sl-slider-thumb-start" style="bottom: 30%;">
-                                            <div class="hony-slider-popup">30</div>
-                                        </div>
-                                        <div class="hony-slider-thumb sl-slider-thumb-end" style="bottom: 70%;">
-                                            <div class="hony-slider-popup">70</div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-slider-inputs">
-                                        <input type="number" class="hony-input" value="30" min="0" max="100">
-                                        <span class="hony-range-separator">-</span>
-                                        <input type="number" class="hony-input" value="70" min="0" max="100">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                </div>
-            </div>
-                        <!-- 右侧锚点导航 -->
-            <div class="right-nav">
-                <div class="right-nav-items">
-                        <div class="right-nav-item active" onclick="handleRightNavClick(this, 'slider-basic');">横向滑块</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-input');">横向输入框滑块</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-marks');">横向刻度滑块</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-step');">横向步长滑块</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-range');">横向双滑块</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-disabled');">横向禁用状态</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'slider-vertical');">竖向滑块</div>
-                </div>
-            </div>
-        </div>
-    </div>
+<script src="../B-navigation/tabs.js"></script>
 </body>
 </html>

@@ -1,0 +1,408 @@
+
+
+/* 抽屉内部隐藏分页组件 */
+.hony-drawer .hony-pagination-section,
+.hony-drawer .hony-pagination,
+.hony-drawer .hony-selector {
+    display: none !important;
+}
+.system-sidebar-navigation{
+    padding: 72px 0 0px 0;
+    height: calc(100vh - 72px);
+    width: 180px;
+    z-index: 90;
+    position: fixed;
+    gap: 16px;
+}
+.hony-sidebar-nav.system-sidebar-navigation{
+    background: #ffffff00 !important;
+}
+.system-main-content-head-plate{
+    background: var(--grey-bg-0);
+    border-radius: 8px;
+    padding:8px 24px ;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.system-main-content-plate{
+    background: var(--grey-bg-0);
+    border-radius: 8px;
+    padding: 0px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.hony-filter-header.system-filter-header{
+    padding: 16px 0px;
+    border-bottom:1px solid var(--grey-border-1) ;
+}
+.system-table-component-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+}
+.system-table-component{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.system-main-content-plate-horizontal{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 0px 24px 0px 24px;
+    background: var(--grey-bg-0);
+    border-radius: 8px;
+    flex: 1;
+    height: 100%;
+    min-height: 200px;
+}
+.system-main-content-plate-horizontal1{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 0px 24px 0px 0px;
+    background: var(--grey-bg-0);
+    border-radius: 8px;
+    flex: 1;
+    height: 100%;
+}
+.side-tabs.system-main-tabs{
+    position: relative;
+    display: flex;
+    height: 100%;
+    max-width: 320px;
+    min-width: 48px;
+    width: 48px;
+}
+.system-tab-nav{
+    padding-bottom: 16px;
+}
+.hony-date-container.table-component-tree-date{
+    height: 100%;
+    padding-top: 12px;
+    padding-bottom: 24px;
+    width: 244px;
+    padding-left: 24px;
+}
+.hony-card-content{
+    width: 100%;
+    font-size: 12px;
+    color: var(--grey-text-3);
+}
+.hony-card-dates{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--grey-border-1);
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+.hony-card-title{
+    font-size: 14px;
+    color: var(--grey-text-1);
+}
+.table-line{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+    padding-bottom: 12px;
+}
+.table-line.line{
+    border-bottom: 1px solid var(--grey-border-1);
+}
+.system-main-content-tile{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+    flex: 1;
+    color: var(--grey-text-1);
+}
+.system-main-content-nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 36px;
+    color: var(--grey-text-3);
+    gap: 12px;
+}
+.hony-modal-download-Upload{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+.hony-modal-download{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    padding: 16px;
+    background: var(--grey-face-1);
+    border-radius: 8px;
+}
+.hony-modal-Upload{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    padding: 16px;
+    background: var(--grey-face-1);
+    border-radius: 8px;
+}
+.system-main-content-head-plate-top{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.hony-filter-header-form.filter-header-detach{
+    padding: 0px 24px 8px 0px;
+}
+.system-table-component.system-table-component-data{
+    padding-bottom: 16px;
+}
+.system-table-component-action{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 16px 0px;
+}
+.ystem-table-search-line{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex: 1;
+}
+.system-search-input{
+    width: 200px;
+    flex: none;
+}
+.system-search-input2{
+    width: 160px;
+    flex: none;
+}
+.system-search-input3{
+    width: 240px;
+    flex: none;
+}
+.system-table-com{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-border-1) #00000000;
+    height: 100%;
+    overflow-y: auto;
+      /* Firefox */
+  scrollbar-width: none;
+  /* IE / Edge */
+  -ms-overflow-style: none;
+}
+.system-tlist-card-row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+.system-tlist-com{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-border-1) #00000000;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.system-tlist-component{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 0px;
+}
+.system-tlist-card{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px solid var(--grey-border-1);
+    border-radius: 8px;
+      width: 100%;
+  min-width: 0;
+}
+.system-tlist-card-ava{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.system-tlist-card-title{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.system-tlist-card-title1{
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    color: var(--grey-text-1);
+    line-height: 24px;
+    font-weight: 600;
+      white-space: nowrap;    /* 禁止文字换行 */
+  overflow: hidden;      /* 超出部分隐藏 */
+  text-overflow: ellipsis; /* 超出部分显示 ... */
+}
+.system-tlist-card-title2{
+    font-size: 12px;
+    color: var(--grey-text-3);
+    line-height: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+.system-tlist-card-text{
+    font-size: 14px;
+    color: var(--grey-text-2);
+    line-height: 24px;
+      display: -webkit-box;
+    -webkit-line-clamp: 2; /* 控制显示 2 行 */
+     -webkit-box-orient: vertical;
+    overflow: hidden;
+     text-overflow: ellipsis;
+}
+.system-tlist-card-tab{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.system-tlist-card-text3{
+    font-size: 12px;
+    color: var(--grey-text-4);
+    line-height: 20px;
+    flex: 1;
+    text-align: right;
+    text-overflow: ellipsis;
+}
+.system-tlist-imgs{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    border: 1px solid var(--grey-border-1);
+    border-radius: 8px;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+.system-tlist-img1{
+    height: 120px;
+    background: #000;
+}
+.system-tlist-img4{
+    height: 24px;
+}
+.system-tlist-imgs-gou{
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    min-width: 0;
+}
+.system-tlist-img2{
+    font-size: 14px;
+    color: var(--grey-text-1);
+    line-height: 24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.system-tlist-img3{
+        display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
+.system-tlist-img-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    height: 20px;
+}
+.system-form-group{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+}
+.system-main-content1{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 0px;
+    background: var(--grey-bg-2);
+    border-radius: 8px;
+    flex: 1;
+    height: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+.syetem--content-head-plate-steps{
+    padding: 12px;
+    border-radius: 8px;
+}
+.system-main-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding:16px 24px;
+    background: var(--grey-bg-0);
+    border-top: 1px solid var(--grey-border-1);
+    justify-content: flex-end;
+}
+.system-main-tabs{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    min-height: 56px;
+
+}
+.system-main-content-hor{
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    padding: 0px;
+    border-radius: 8px;
+    flex: 1;
+    height: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+.system-main-personal1{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 0px 24px 0px 24px;
+    background: var(--grey-bg-0);
+    border-radius: 8px;
+    flex: 1;
+    height: 100%;
+    min-height: 200px;
+}
+.system-main-personal2{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 0px 24px 0px 24px;
+    background: var(--grey-bg-0);
+    border-radius: 8px;
+    flex: 1;
+    height: 100%;
+    min-height: 200px;
+}

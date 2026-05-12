@@ -20,7 +20,7 @@
   align-items: flex-start;
   gap: 12px 24px;
   display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* 左右结构字段项 */

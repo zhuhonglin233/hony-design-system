@@ -119,7 +119,7 @@
 
 .hony-list-item-action button:hover {
   background: var(--primary-main-1);
-  color: var(--white);
+  color: var(--primary-main-5);
 }
 
 /* 尺寸变体 - 小尺寸 */

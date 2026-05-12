@@ -32,7 +32,7 @@
     cursor: not-allowed;
 }
 
-.hony-slider.disabled .hony-input {
+.hony-slider.disabled .hony-sliders-input {
     background: var(--grey-face-2);
     color: var(--grey-text-4);
     cursor: not-allowed;
@@ -151,7 +151,7 @@
     gap: var(--spacing-sm);
 }
 
-.hony-input {
+.hony-sliders-input {
     width: 48px;
     height: 32px;
     padding: 0 var(--spacing-sm);
@@ -163,13 +163,13 @@
     transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.hony-input:focus {
+.hony-sliders-input:focus {
     outline: none;
     border-color: var(--primary-main-1);
     box-shadow: 0 0 0 2px var(--primary-2-TPY);
 }
 
-.hony-input:hover:not(:disabled) {
+.hony-sliders-input:hover:not(:disabled) {
     border-color: var(--primary-main-1);
 }
 
@@ -179,13 +179,13 @@
 }
 
 /* 隐藏number输入框的箭头 */
-.hony-input::-webkit-outer-spin-button,
-.hony-input::-webkit-inner-spin-button {
+.hony-sliders-input::-webkit-outer-spin-button,
+.hony-sliders-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-.hony-input[type=number] {
+.hony-sliders-input[type=number] {
     -moz-appearance: textfield;
 }
 

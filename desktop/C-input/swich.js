@@ -9,12 +9,22 @@ function initSwitchComponent() {
                 return;
             }
             
+            const textEl = this.querySelector('.hony-switch-text');
+            
             if (this.classList.contains('hony-switch-on')) {
                 this.classList.remove('hony-switch-on');
                 this.classList.add('hony-switch-off');
+                // 更新文字为关闭状态
+                if (textEl) {
+                    textEl.textContent = '关闭 ';
+                }
             } else {
                 this.classList.remove('hony-switch-off');
                 this.classList.add('hony-switch-on');
+                // 更新文字为开启状态
+                if (textEl) {
+                    textEl.textContent = ' 开启';
+                }
             }
         });
     });

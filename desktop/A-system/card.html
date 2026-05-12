@@ -4,322 +4,324 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>卡片 - 桌面端组件</title>
+    <link rel="icon" href="../../overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../../overall/main.css">
     <link rel="stylesheet" href="../../overall/icons/iconfont.css">
     <link rel="stylesheet" href="card.css">
     <script src="../../overall/js/common.js"></script>
+<link rel="stylesheet" href="../B-navigation/tabs.css">
 </head>
 <body>
-    <div class="background-decoration"></div>
+
     <div class="page-container">
         <!-- 左侧导航 -->
-        <div id="sidebar-container"></div>
-    
-        
+        <div id="sidebar-container"></div>      
         <!-- 主内容区域 -->
         <div class="main-content">
             <!-- 顶部导航栏 -->
             <div id="navbar-container"></div>
             <!-- 主内容区域 -->
-            <div class="main-content-area">
-                <!-- 内容 -->
-                <div class="content-area">
-                    <div class="content-main">
-                        <!-- 页面标题 -->
-                        <div class="page-header">
-                            <div class="design-code">design code 桌面端组件</div>
-                            <div class="page-title">卡片</div>
-                            <div class="page-description">当一个模块的同类信息不能自然形成区块感，可借助 Card 组件将信息整合，帮助界面信息模块感更强。</div>
-                        </div>
+            <div class="hony-content-area">
+                <!-- 页面标题 -->
+                <div class="page-header">
+                    <div class="design-code">design code 桌面端组件</div>
+                    <div class="page-title">卡片</div>
+                    <div class="page-description">当一个模块的同类信息不能自然形成区块感，可借助 Card 组件将信息整合，帮助界面信息模块感更强。</div>
+                </div>              
+                <div class="main-content-area">
+                    <!-- 内容 -->
+                    <div class="content-area">
+                        <div class="content-main">
 
-                        <!-- 基础卡片 -->
-                        <div class="section">
-                            <div class="section-title">基础<span style="color: var(--primary-main-1);">卡片</span></div>
-                            
-                            <div class="subsection" id="card-basic">
-                                <div class="subsection-title">默认卡片</div>
-                                <div class="subsection-description">最基础的卡片样式，包含标题和内容区域。</div>
-                                <div class="component-container">
-                                    <div class="hony-card-demo-row">
-                                        <!-- 基础卡片 1 -->
-                                        <div class="hony-card">
-                                            <div class="hony-card-title">卡片标题</div>
-                                            <div class="hony-card-content">
-                                                卡片内容区域，可以放置文字、图片或其他组件。卡片是一个灵活的内容容器。
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- 带操作按钮的卡片 -->
-                                        <div class="hony-card">
-                                            <div class="hony-card-title">带操作的卡片</div>
-                                            <div class="hony-card-content">
-                                                这是一个带有操作按钮的卡片示例，底部可以放置操作按钮。
-                                            </div>
-                                            <div class="hony-card-actions">
-                                                <button class="hony-btn hony-btn-outline-secondary hony-btn-sm">取消</button>
-                                                <button class="hony-btn hony-btn-primary hony-btn-sm">确定</button>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- 带副标题的卡片 -->
-                                        <div class="hony-card">
-                                            <div class="hony-card-title">卡片标题</div>
-                                            <div class="hony-card-subtitle">副标题描述信息</div>
-                                            <div class="hony-card-content">
-                                                卡片可以包含标题、副标题和内容，形成清晰的信息层级结构。
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="subsection" id="card-bordered">
-                                <div class="subsection-title">带边框卡片</div>
-                                <div class="subsection-description">带有左侧边框的卡片，用于强调或分类。</div>
-                                <div class="component-container">
-                                    <div class="hony-card-demo-row">
-                                        <!-- 主色边框卡片 -->
-                                        <div class="hony-card hony-card-primary">
-                                            <div class="hony-card-title">主色边框</div>
-                                            <div class="hony-card-content">
-                                                带有主色边框的卡片，用于强调重要信息。
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- 成功边框卡片 -->
-                                        <div class="hony-card hony-card-success">
-                                            <div class="hony-card-title">成功边框</div>
-                                            <div class="hony-card-content">
-                                                带有成功色边框的卡片，用于展示成功状态的信息。
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- 警告边框卡片 -->
-                                        <div class="hony-card hony-card-warning">
-                                            <div class="hony-card-title">警告边框</div>
-                                            <div class="hony-card-content">
-                                                带有警告色边框的卡片，用于展示需要注意的信息。
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- 危险边框卡片 -->
-                                        <div class="hony-card hony-card-danger">
-                                            <div class="hony-card-title">危险边框</div>
-                                            <div class="hony-card-content">
-                                                带有危险色边框的卡片，用于展示错误或危险信息。
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 分割线卡片 -->
-                        <div class="section">
-                            <div class="section-title">分割线<span style="color: var(--primary-main-1);">卡片</span></div>
-                            
-                            <div class="subsection" id="card-divider">
-                                <div class="subsection-title">内嵌分割线</div>
-                                <div class="subsection-description">使用内嵌分割线来分隔相关的内容区域。</div>
-                                <div class="component-container">
-                                    <div class="hony-card-demo-row">
-                                        <!-- 头部内容分割线卡片 -->
-                                        <div class="hony-card hony-card-divider">
-                                            <div class="hony-card-header">
-                                                <div class="hony-card-header-content">
-                                                    <div class="hony-card-title">卡片标题</div>
-                                                    <div class="hony-card-subtitle">副标题信息</div>
-                                                </div>
-                                                <div class="hony-card-header-extra">
-                                                    <span class="hony-tag hony-tag-primary">标签</span>
-                                                </div>
-                                            </div>
-                                            <div class="hony-card-divider-line"></div>
-                                            <div class="hony-card-body">
+                            <!-- 基础卡片 -->
+                            <div class="section">
+                                <div class="section-title">基础<span style="color: var(--primary-main-1);">卡片</span></div>
+                                
+                                <div class="subsection" id="card-basic">
+                                    <div class="subsection-title">默认卡片</div>
+                                    <div class="subsection-description">最基础的卡片样式，包含标题和内容区域。</div>
+                                    <div class="component-container">
+                                        <div class="hony-card-demo-row">
+                                            <!-- 基础卡片 1 -->
+                                            <div class="hony-card">
+                                                <div class="hony-card-title">卡片标题</div>
                                                 <div class="hony-card-content">
-                                                    这是卡片的主体内容区域，通过分割线将头部和内容区域分隔开来，使信息层次更加清晰。
+                                                    卡片内容区域，可以放置文字、图片或其他组件。卡片是一个灵活的内容容器。
                                                 </div>
                                             </div>
-                                            <div class="hony-card-divider-line"></div>
-                                            <div class="hony-card-footer">
-                                                <span class="hony-card-footer-text">更新时间：2024-01-15</span>
-                                                <div class="hony-card-actions">
-                                                    <button class="hony-btn hony-btn-link">查看更多</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- 列表分割线卡片 -->
-                                        <div class="hony-card hony-card-divider">
-                                            <div class="hony-card-title">列表卡片</div>
-                                            <div class="hony-card-list-content">
-                                                <div class="hony-card-list-item">
-                                                    <i class="iconfont hony-icon-file"></i>
-                                                    <span class="hony-card-list-text">文档文件.pdf</span>
-                                                    <span class="hony-card-list-meta">2.5 MB</span>
-                                                </div>
-                                                <div class="hony-card-divider-line inset"></div>
-                                                <div class="hony-card-list-item">
-                                                    <i class="iconfont hony-icon-image"></i>
-                                                    <span class="hony-card-list-text">图片资源.png</span>
-                                                    <span class="hony-card-list-meta">1.8 MB</span>
-                                                </div>
-                                                <div class="hony-card-divider-line inset"></div>
-                                                <div class="hony-card-list-item">
-                                                    <i class="iconfont hony-icon-video"></i>
-                                                    <span class="hony-card-list-text">视频文件.mp4</span>
-                                                    <span class="hony-card-list-meta">15.2 MB</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="subsection" id="card-divider-full">
-                                <div class="subsection-title">通栏分割线</div>
-                                <div class="subsection-description">通栏分割线贯穿整个卡片宽度，用于分割独立的内容。</div>
-                                <div class="component-container">
-                                    <div class="hony-card-demo-row">
-                                        <!-- 通栏分割线卡片 -->
-                                        <div class="hony-card hony-card-divider-full" style="width: 100%;">
-                                            <div class="hony-card-section">
-                                                <h4 class="hony-card-section-title">第一部分</h4>
-                                                <p class="hony-card-section-content">这是卡片的第一部分内容，与其他部分相对独立。</p>
-                                            </div>
-                                            <div class="hony-card-divider-line full"></div>
-                                            <div class="hony-card-section">
-                                                <h4 class="hony-card-section-title">第二部分</h4>
-                                                <p class="hony-card-section-content">这是卡片的第二部分内容，通过通栏分割线与第一部分分隔。</p>
-                                            </div>
-                                            <div class="hony-card-divider-line full"></div>
-                                            <div class="hony-card-section">
-                                                <h4 class="hony-card-section-title">第三部分</h4>
-                                                <p class="hony-card-section-content">这是卡片的第三部分内容，每个部分都是独立的信息区块。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 多媒体内容卡片 -->
-                        <div class="section">
-                            <div class="section-title">多媒体<span style="color: var(--primary-main-1);">内容</span></div>
-                            
-                            <div class="subsection" id="card-media">
-                                <div class="subsection-title">图片卡片</div>
-                                <div class="subsection-description">包含图片的多媒体卡片，用于展示图文内容。</div>
-                                <div class="component-container">
-                                    <div class="hony-card-demo-row">
-                                        <!-- 顶部图片卡片 -->
-                                        <div class="hony-card hony-card-media">
-                                            <div class="hony-card-media-image">
-                                                <img src="https://picsum.photos/400/200?random=1" alt="示例图片">
-                                            </div>
-                                            <div class="hony-card-media-content">
-                                                <div class="hony-card-title">图片标题</div>
+                                            
+                                            <!-- 带操作按钮的卡片 -->
+                                            <div class="hony-card">
+                                                <div class="hony-card-title">带操作的卡片</div>
                                                 <div class="hony-card-content">
-                                                    这是一张示例图片的卡片，图片位于卡片顶部，下方是标题和内容描述。
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- 底部图片卡片 -->
-                                        <div class="hony-card hony-card-media hony-card-media-bottom">
-                                            <div class="hony-card-media-content">
-                                                <div class="hony-card-title">底部图片</div>
-                                                <div class="hony-card-content">
-                                                    图片位于卡片底部，上方是标题和内容描述。
-                                                </div>
-                                            </div>
-                                            <div class="hony-card-media-image">
-                                                <img src="https://picsum.photos/400/200?random=2" alt="示例图片">
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- 左侧图片卡片 -->
-                                        <div class="hony-card hony-card-media hony-card-media-horizontal">
-                                            <div class="hony-card-media-image">
-                                                <img src="https://picsum.photos/150/150?random=3" alt="示例图片">
-                                            </div>
-                                            <div class="hony-card-media-content">
-                                                <div class="hony-card-title">横向布局</div>
-                                                <div class="hony-card-content">
-                                                    图片在左侧，内容在右侧的横向布局卡片。
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="subsection" id="card-media-cover">
-                                <div class="subsection-title">封面卡片</div>
-                                <div class="subsection-description">图片作为背景封面的卡片样式。</div>
-                                <div class="component-container">
-                                    <div class="hony-card-demo-row">
-                                        <!-- 封面卡片 -->
-                                        <div class="hony-card hony-card-cover">
-                                            <div class="hony-card-cover-image">
-                                                <img src="https://picsum.photos/400/250?random=4" alt="封面图片">
-                                                <div class="hony-card-cover-overlay"></div>
-                                            </div>
-                                            <div class="hony-card-cover-content">
-                                                <div class="hony-card-title">封面标题</div>
-                                                <div class="hony-card-content">
-                                                    图片作为卡片封面，内容叠加在图片上方。
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- 带操作的封面卡片 -->
-                                        <div class="hony-card hony-card-cover">
-                                            <div class="hony-card-cover-image">
-                                                <img src="https://picsum.photos/400/250?random=5" alt="封面图片">
-                                                <div class="hony-card-cover-overlay"></div>
-                                            </div>
-                                            <div class="hony-card-cover-content">
-                                                <div class="hony-card-title">带操作的封面</div>
-                                                <div class="hony-card-content">
-                                                    封面卡片也可以包含操作按钮。
+                                                    这是一个带有操作按钮的卡片示例，底部可以放置操作按钮。
                                                 </div>
                                                 <div class="hony-card-actions">
-                                                    <button class="hony-btn hony-btn-primary hony-btn-sm">查看详情</button>
+                                                    <button class="hony-btn hony-btn-outline-secondary hony-btn-sm">取消</button>
+                                                    <button class="hony-btn hony-btn-primary hony-btn-sm">确定</button>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 带副标题的卡片 -->
+                                            <div class="hony-card">
+                                                <div class="hony-card-title">卡片标题</div>
+                                                <div class="hony-card-subtitle">副标题描述信息</div>
+                                                <div class="hony-card-content">
+                                                    卡片可以包含标题、副标题和内容，形成清晰的信息层级结构。
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="subsection" id="card-bordered">
+                                    <div class="subsection-title">带边框卡片</div>
+                                    <div class="subsection-description">带有左侧边框的卡片，用于强调或分类。</div>
+                                    <div class="component-container">
+                                        <div class="hony-card-demo-row">
+                                            <!-- 主色边框卡片 -->
+                                            <div class="hony-card hony-card-primary">
+                                                <div class="hony-card-title">主色边框</div>
+                                                <div class="hony-card-content">
+                                                    带有主色边框的卡片，用于强调重要信息。
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 成功边框卡片 -->
+                                            <div class="hony-card hony-card-success">
+                                                <div class="hony-card-title">成功边框</div>
+                                                <div class="hony-card-content">
+                                                    带有成功色边框的卡片，用于展示成功状态的信息。
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 警告边框卡片 -->
+                                            <div class="hony-card hony-card-warning">
+                                                <div class="hony-card-title">警告边框</div>
+                                                <div class="hony-card-content">
+                                                    带有警告色边框的卡片，用于展示需要注意的信息。
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 危险边框卡片 -->
+                                            <div class="hony-card hony-card-danger">
+                                                <div class="hony-card-title">危险边框</div>
+                                                <div class="hony-card-content">
+                                                    带有危险色边框的卡片，用于展示错误或危险信息。
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="subsection" id="card-media-avatar">
-                                <div class="subsection-title">头像卡片</div>
-                                <div class="subsection-description">包含头像信息的卡片，常用于用户资料展示。</div>
-                                <div class="component-container">
-                                    <div class="hony-card-demo-row">
-                                        <!-- 带头像的卡片 -->
-                                        <div class="hony-card hony-card-avatar">
-                                            <div class="hony-card-avatar-header">
-                                                <img class="hony-card-avatar-img" src="https://picsum.photos/64/64?random=6" alt="头像">
+
+                            <!-- 分割线卡片 -->
+                            <div class="section">
+                                <div class="section-title">分割线<span style="color: var(--primary-main-1);">卡片</span></div>
+                                
+                                <div class="subsection" id="card-divider">
+                                    <div class="subsection-title">内嵌分割线</div>
+                                    <div class="subsection-description">使用内嵌分割线来分隔相关的内容区域。</div>
+                                    <div class="component-container">
+                                        <div class="hony-card-demo-row">
+                                            <!-- 头部内容分割线卡片 -->
+                                            <div class="hony-card hony-card-divider">
+                                                <div class="hony-card-header">
+                                                    <div class="hony-card-header-content">
+                                                        <div class="hony-card-title">卡片标题</div>
+                                                        <div class="hony-card-subtitle">副标题信息</div>
+                                                    </div>
+                                                    <div class="hony-card-header-extra">
+                                                        <span class="hony-tag hony-tag-primary">标签</span>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-card-divider-line"></div>
+                                                <div class="hony-card-body">
+                                                    <div class="hony-card-content">
+                                                        这是卡片的主体内容区域，通过分割线将头部和内容区域分隔开来，使信息层次更加清晰。
+                                                    </div>
+                                                </div>
+                                                <div class="hony-card-divider-line"></div>
+                                                <div class="hony-card-footer">
+                                                    <span class="hony-card-footer-text">更新时间：2024-01-15</span>
+                                                    <div class="hony-card-actions">
+                                                        <button class="hony-btn hony-btn-link">查看更多</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 列表分割线卡片 -->
+                                            <div class="hony-card hony-card-divider">
+                                                <div class="hony-card-title">列表卡片</div>
+                                                <div class="hony-card-list-content">
+                                                    <div class="hony-card-list-item">
+                                                        <i class="iconfont hony-icon-file"></i>
+                                                        <span class="hony-card-list-text">文档文件.pdf</span>
+                                                        <span class="hony-card-list-meta">2.5 MB</span>
+                                                    </div>
+                                                    <div class="hony-card-divider-line inset"></div>
+                                                    <div class="hony-card-list-item">
+                                                        <i class="iconfont hony-icon-image"></i>
+                                                        <span class="hony-card-list-text">图片资源.png</span>
+                                                        <span class="hony-card-list-meta">1.8 MB</span>
+                                                    </div>
+                                                    <div class="hony-card-divider-line inset"></div>
+                                                    <div class="hony-card-list-item">
+                                                        <i class="iconfont hony-icon-video"></i>
+                                                        <span class="hony-card-list-text">视频文件.mp4</span>
+                                                        <span class="hony-card-list-meta">15.2 MB</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="subsection" id="card-divider-full">
+                                    <div class="subsection-title">通栏分割线</div>
+                                    <div class="subsection-description">通栏分割线贯穿整个卡片宽度，用于分割独立的内容。</div>
+                                    <div class="component-container">
+                                        <div class="hony-card-demo-row">
+                                            <!-- 通栏分割线卡片 -->
+                                            <div class="hony-card hony-card-divider-full" style="width: 100%;">
+                                                <div class="hony-card-section">
+                                                    <h4 class="hony-card-section-title">第一部分</h4>
+                                                    <p class="hony-card-section-content">这是卡片的第一部分内容，与其他部分相对独立。</p>
+                                                </div>
+                                                <div class="hony-card-divider-line full"></div>
+                                                <div class="hony-card-section">
+                                                    <h4 class="hony-card-section-title">第二部分</h4>
+                                                    <p class="hony-card-section-content">这是卡片的第二部分内容，通过通栏分割线与第一部分分隔。</p>
+                                                </div>
+                                                <div class="hony-card-divider-line full"></div>
+                                                <div class="hony-card-section">
+                                                    <h4 class="hony-card-section-title">第三部分</h4>
+                                                    <p class="hony-card-section-content">这是卡片的第三部分内容，每个部分都是独立的信息区块。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 多媒体内容卡片 -->
+                            <div class="section">
+                                <div class="section-title">多媒体<span style="color: var(--primary-main-1);">内容</span></div>
+                                
+                                <div class="subsection" id="card-media">
+                                    <div class="subsection-title">图片卡片</div>
+                                    <div class="subsection-description">包含图片的多媒体卡片，用于展示图文内容。</div>
+                                    <div class="component-container">
+                                        <div class="hony-card-demo-row">
+                                            <!-- 顶部图片卡片 -->
+                                            <div class="hony-card hony-card-media">
+                                                <div class="hony-card-media-image">
+                                                    <img src="https://picsum.photos/400/200?random=1" alt="示例图片">
+                                                </div>
+                                                <div class="hony-card-media-content">
+                                                    <div class="hony-card-title">图片标题</div>
+                                                    <div class="hony-card-content">
+                                                        这是一张示例图片的卡片，图片位于卡片顶部，下方是标题和内容描述。
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 底部图片卡片 -->
+                                            <div class="hony-card hony-card-media hony-card-media-bottom">
+                                                <div class="hony-card-media-content">
+                                                    <div class="hony-card-title">底部图片</div>
+                                                    <div class="hony-card-content">
+                                                        图片位于卡片底部，上方是标题和内容描述。
+                                                    </div>
+                                                </div>
+                                                <div class="hony-card-media-image">
+                                                    <img src="https://picsum.photos/400/200?random=2" alt="示例图片">
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 左侧图片卡片 -->
+                                            <div class="hony-card hony-card-media hony-card-media-horizontal">
+                                                <div class="hony-card-media-image">
+                                                    <img src="https://picsum.photos/150/150?random=3" alt="示例图片">
+                                                </div>
+                                                <div class="hony-card-media-content">
+                                                    <div class="hony-card-title">横向布局</div>
+                                                    <div class="hony-card-content">
+                                                        图片在左侧，内容在右侧的横向布局卡片。
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="subsection" id="card-media-cover">
+                                    <div class="subsection-title">封面卡片</div>
+                                    <div class="subsection-description">图片作为背景封面的卡片样式。</div>
+                                    <div class="component-container">
+                                        <div class="hony-card-demo-row">
+                                            <!-- 封面卡片 -->
+                                            <div class="hony-card hony-card-cover">
+                                                <div class="hony-card-cover-image">
+                                                    <img src="https://picsum.photos/400/250?random=4" alt="封面图片">
+                                                    <div class="hony-card-cover-overlay"></div>
+                                                </div>
+                                                <div class="hony-card-cover-content">
+                                                    <div class="hony-card-title">封面标题</div>
+                                                    <div class="hony-card-content">
+                                                        图片作为卡片封面，内容叠加在图片上方。
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 带操作的封面卡片 -->
+                                            <div class="hony-card hony-card-cover">
+                                                <div class="hony-card-cover-image">
+                                                    <img src="https://picsum.photos/400/250?random=5" alt="封面图片">
+                                                    <div class="hony-card-cover-overlay"></div>
+                                                </div>
+                                                <div class="hony-card-cover-content">
+                                                    <div class="hony-card-title">带操作的封面</div>
+                                                    <div class="hony-card-content">
+                                                        封面卡片也可以包含操作按钮。
+                                                    </div>
+                                                    <div class="hony-card-actions">
+                                                        <button class="hony-btn hony-btn-primary hony-btn-sm">查看详情</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="subsection" id="card-media-avatar">
+                                    <div class="subsection-title">头像卡片</div>
+                                    <div class="subsection-description">包含头像信息的卡片，常用于用户资料展示。</div>
+                                    <div class="component-container">
+                                        <div class="hony-card-demo-row">
+                                            <!-- 带头像的卡片 -->
+                                            <div class="hony-card hony-card-avatar">
+                                                <div class="hony-card-avatar-header">
+                                                    <img class="hony-card-avatar-img" src="https://picsum.photos/64/64?random=6" alt="头像">
+                                                    <div class="hony-card-avatar-info">
+                                                        <div class="hony-card-title">用户名</div>
+                                                        <div class="hony-card-subtitle">产品经理</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-card-content">
+                                                    这是一个带头像的卡片示例，常用于展示用户信息或团队成员资料。
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 横向头像卡片 -->
+                                            <div class="hony-card hony-card-avatar hony-card-avatar-horizontal">
+                                                <img class="hony-card-avatar-img" src="https://picsum.photos/80/80?random=7" alt="头像">
                                                 <div class="hony-card-avatar-info">
-                                                    <div class="hony-card-title">用户名</div>
-                                                    <div class="hony-card-subtitle">产品经理</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-card-content">
-                                                这是一个带头像的卡片示例，常用于展示用户信息或团队成员资料。
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- 横向头像卡片 -->
-                                        <div class="hony-card hony-card-avatar hony-card-avatar-horizontal">
-                                            <img class="hony-card-avatar-img" src="https://picsum.photos/80/80?random=7" alt="头像">
-                                            <div class="hony-card-avatar-info">
-                                                <div class="hony-card-title">横向布局</div>
-                                                <div class="hony-card-subtitle">设计师</div>
-                                                <div class="hony-card-content">
-                                                    头像在左侧，信息在右侧的横向布局。
+                                                    <div class="hony-card-title">横向布局</div>
+                                                    <div class="hony-card-subtitle">设计师</div>
+                                                    <div class="hony-card-content">
+                                                        头像在左侧，信息在右侧的横向布局。
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -327,32 +329,35 @@
                                 </div>
                             </div>
                         </div>
-
-                    </div>
+                    </div>                
+                    <!-- 右侧锚点导航 -->
+                    <div class="right-nav">
+                        <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'card-basic');">基础卡片</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'card-bordered');">带边框卡片</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'card-divider');">内嵌分割线</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'card-divider-full');">通栏分割线</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'card-media');">图片卡片</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'card-media-cover');">封面卡片</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'card-media-avatar');">头像卡片</div>
+                        </div>
+                    </div>    
                 </div>                
-                <!-- 右侧锚点导航 -->
-                <div class="right-nav">
-                    <div class="right-nav-items">
-                        <div class="right-nav-item active" onclick="handleRightNavClick(this, 'card-basic');">基础卡片</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'card-bordered');">带边框卡片</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'card-divider');">内嵌分割线</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'card-divider-full');">通栏分割线</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'card-media');">图片卡片</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'card-media-cover');">封面卡片</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'card-media-avatar');">头像卡片</div>
-                    </div>
-                </div>
-
             </div>
+
         </div>
     </div>
     <!-- 背景纹理 -->
     <div class="hony-background-texture"></div>
     <!-- 背景banner -->
     <div class="background-bgVideo">
-        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+        <!-- 浅色模式视频 -->
+        <video class="background-bgVideo-video background-bgVideo-light" autoplay muted loop playsinline>
             <source src="../../overall/images/背景banne.mp4" type="video/mp4">
         </video>
+        <!-- 深色模式图片 -->
+        <img class="background-bgVideo-image background-bgVideo-dark" src="../../overall/images/bg-dark-mode.png" alt="深色背景">
     </div>
+<script src="../B-navigation/tabs.js"></script>
 </body>
 </html>

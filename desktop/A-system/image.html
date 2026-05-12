@@ -4,220 +4,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>图像 - 桌面端组件</title>
+    <link rel="icon" href="../../overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../../overall/main.css">
     <link rel="stylesheet" href="../../overall/icons/iconfont.css">
     <link rel="stylesheet" href="image.css">
     <script src="../../overall/js/common.js"></script>
     <script src="image.js"></script>
+<link rel="stylesheet" href="../B-navigation/tabs.css">
 </head>
 <body>
-    <div class="background-decoration"></div>
     <div class="page-container">
         <!-- 左侧导航 -->
-        <div id="sidebar-container"></div>
-    
-        
+        <div id="sidebar-container"></div>      
         <!-- 主内容区域 -->
         <div class="main-content">
             <!-- 顶部导航栏 -->
             <div id="navbar-container"></div>
             <!-- 主内容区域 -->
-            <div class="main-content-area">
-                <!-- 内容 -->
-                <div class="content-area">
-                    <div class="content-main">
-                        <!-- 页面标题 -->
-                        <div class="page-header">
-                            <div class="design-code">design code 桌面端组件</div>
-                            <div class="page-title">图像</div>
-                            <div class="page-description">图像组件用于展示用户头像、产品图片等，支持不同尺寸、形状和状态。</div>
-                        </div>
-                        <!-- 图像样式 Section -->
-                        <div class="section">
-                            <div class="section-title">图像<span style="color: var(--primary-main-1);">样式</span></div>
-                            <!-- 基础样式 Section -->
-                            <div class="subsection" id="hony-image-basic">
-                                <div class="subsection-title">基础样式</div>
-                                <div class="subsection-description">图像组件支持多种展示类型：常规图片、视频（带播放按钮和时长）、多图（带数量标记）、错误状态、默认图和提示状态，满足不同场景的图片展示需求。</div>
-                                <!-- 组件 Section -->  
-                                <div class="component-container">
-                                    <div class="hony-image-container hony-image-types-container">
-                                        <!-- 基础样式 Section -->   
-                                        <div class="hony-image-type-item">
-                                            <div class="hony-image-type-label">常规</div>
-                                            <div class="hony-image-type-content">
-                                                <img src="../../overall/images/展示图.png" alt="常规图片">
-                                            </div>
-                                        </div>
-                                        <!-- 视频 Section -->   
-                                        <div class="hony-image-type-item">
-                                            <div class="hony-image-type-label">视频</div>
-                                            <div class="hony-image-type-content hony-image-type-video">
-                                                <video src="../../overall/images/默认视频.mp4" alt="视频" muted></video>
-                                                <div class="video-overlay">
-                                                    <div class="video-icon iconfont">&#xee7d;</div>
-                                                    <div class="video-duration">01:33</div>
+            <div class="hony-content-area">
+                <!-- 页面标题 -->
+                <div class="page-header">
+                    <div class="design-code">design code 桌面端组件</div>
+                    <div class="page-title">图像</div>
+                    <div class="page-description">图像组件用于展示用户头像、产品图片等，支持不同尺寸、形状和状态。</div>
+                </div>               
+                <div class="main-content-area">
+                    <!-- 内容 -->
+                    <div class="content-area">
+                        <div class="content-main">
+                            <!-- 图像样式 Section -->
+                            <div class="section">
+                                <div class="section-title">图像<span style="color: var(--primary-main-1);">样式</span></div>
+                                <!-- 基础样式 Section -->
+                                <div class="subsection" id="hony-image-basic">
+                                    <div class="subsection-title">基础样式</div>
+                                    <div class="subsection-description">图像组件支持多种展示类型：常规图片、视频（带播放按钮和时长）、多图（带数量标记）、错误状态、默认图和提示状态，满足不同场景的图片展示需求。</div>
+                                    <!-- 组件 Section -->  
+                                    <div class="component-container">
+                                        <div class="hony-image-container hony-image-types-container">
+                                            <!-- 基础样式 Section -->   
+                                            <div class="hony-image-type-item">
+                                                <div class="hony-image-type-label">常规</div>
+                                                <div class="hony-image-type-content">
+                                                    <img src="../../overall/images/展示图.png" alt="常规图片">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- 多图 Section -->   
-                                        <div class="hony-image-type-item">
-                                            <div class="hony-image-type-label">多图</div>
-                                            <div class="hony-image-type-content hony-image-type-multiple">
-                                                <img src="../../overall/images/展示图.png" alt="多图">
-                                                <div class="multiple-overlay">
-                                                    <div class="multiple-icon iconfont">&#xedab;</div>
-                                                    <div class="multiple-count">5</div>
+                                            <!-- 视频 Section -->   
+                                            <div class="hony-image-type-item">
+                                                <div class="hony-image-type-label">视频</div>
+                                                <div class="hony-image-type-content hony-image-type-video">
+                                                    <video src="../../overall/images/默认视频.mp4" alt="视频" muted></video>
+                                                    <div class="video-overlay">
+                                                        <div class="video-icon iconfont">&#xee7d;</div>
+                                                        <div class="video-duration">01:33</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- 错误 Section -->   
-                                        <div class="hony-image-type-item">
-                                            <div class="hony-image-type-label">错误</div>
-                                            <div class="hony-image-type-content hony-image-type-error">
-                                                <div class="error-text">无法显示</div>
-                                                <div class="hover-overlay">
-                                                    <div class="overlay-icon iconfont icon-zhongqifang"></div>
-                                                    <div class="overlay-icon iconfont icon-lajitong"></div>
+                                            <!-- 多图 Section -->   
+                                            <div class="hony-image-type-item">
+                                                <div class="hony-image-type-label">多图</div>
+                                                <div class="hony-image-type-content hony-image-type-multiple">
+                                                    <img src="../../overall/images/展示图.png" alt="多图">
+                                                    <div class="multiple-overlay">
+                                                        <div class="multiple-icon iconfont">&#xedab;</div>
+                                                        <div class="multiple-count">5</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- 默认 Section -->   
-                                        <div class="hony-image-type-item">
-                                            <div class="hony-image-type-label">默认</div>
-                                            <div class="hony-image-type-content hony-image-type-thumbnail">
-                                                <img src="../../overall/images/默认图.png" alt="默认图">
-                                            </div>
-                                        </div>
-                                        <!-- 提示 Section -->   
-                                        <div class="hony-image-type-item">
-                                            <div class="hony-image-type-label">提示</div>
-                                            <div class="hony-image-type-content hony-image-type-prompt">
-                                                <div class="prompt-icon iconfont">&#xf07d;</div>
-                                                <div class="prompt-text">无法显示</div>
-                                                <div class="hover-overlay">
-                                                    <div class="overlay-icon iconfont icon-zhongqifang"></div>
-                                                    <div class="overlay-icon iconfont icon-lajitong"></div>
+                                            <!-- 错误 Section -->   
+                                            <div class="hony-image-type-item">
+                                                <div class="hony-image-type-label">错误</div>
+                                                <div class="hony-image-type-content hony-image-type-error">
+                                                    <div class="error-text">无法显示</div>
+                                                    <div class="hover-overlay">
+                                                        <div class="overlay-icon iconfont icon-zhongqifang"></div>
+                                                        <div class="overlay-icon iconfont icon-lajitong"></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>                                    
-                                </div>
-
-                            </div>
-                            <!-- 图像交互 Section -->
-                            <div class="subsection" id="hony-image-interaction">
-                                <div class="subsection-title">图像交互</div>
-                                <div class="subsection-description">图像交互模式下，鼠标悬停显示操作菜单，支持预览大图、重新上传和删除功能，点击预览可打开全屏查看器进行多图浏览。</div>
-                                <!-- 组件 Section -->  
-                                <div class="component-container">
-                                    <div class="hony-image-container hony-image-types-container">
-                                     
-                                        <div class="hony-image-type-item">
-                                            <div class="hony-image-type-label">常规</div>
-                                            <div class="hony-image-type-content">
-                                                <img src="../../overall/images/展示图.png" alt="常规图片">
-                                                <div class="hover-overlay">
-                                                    <div class="overlay-icon iconfont icon-yincangxianshi" onclick="openImagePopup('../../overall/images/展示图.png')"></div>
-                                                    <div class="overlay-icon iconfont icon-zhongqifang"></div>
-                                                    <div class="overlay-icon iconfont icon-lajitong"></div>
+                                            <!-- 默认 Section -->   
+                                            <div class="hony-image-type-item">
+                                                <div class="hony-image-type-label">默认</div>
+                                                <div class="hony-image-type-content hony-image-type-thumbnail">
+                                                    <img src="../../overall/images/默认图.png" alt="默认图">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- 视频 Section -->   
-                                        <div class="hony-image-type-item">
-                                            <div class="hony-image-type-label">视频</div>
-                                            <div class="hony-image-type-content hony-image-type-video">
-                                                <video class="video-with-duration" alt="视频" muted>
-                                                    <source src="../../overall/images/默认视频.mp4" type="video/mp4">
-                                                </video>
-                                                <div class="video-overlay">
-                                                    <div class="video-icon iconfont">&#xee7d;</div>
-                                                    <div class="video-duration">--:--</div>
-                                                </div>
-                                                <div class="hover-overlay">
-                                                    <div class="overlay-icon iconfont icon-yincangxianshi" onclick="openImagePopup('../../overall/images/默认视频.mp4', 'video')"></div>
-                                                    <div class="overlay-icon iconfont icon-zhongqifang"></div>
-                                                    <div class="overlay-icon iconfont icon-lajitong"></div>
+                                            <!-- 提示 Section -->   
+                                            <div class="hony-image-type-item">
+                                                <div class="hony-image-type-label">提示</div>
+                                                <div class="hony-image-type-content hony-image-type-prompt">
+                                                    <div class="prompt-icon iconfont">&#xf07d;</div>
+                                                    <div class="prompt-text">无法显示</div>
+                                                    <div class="hover-overlay">
+                                                        <div class="overlay-icon iconfont icon-zhongqifang"></div>
+                                                        <div class="overlay-icon iconfont icon-lajitong"></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- 多图 Section -->   
-                                        <div class="hony-image-type-item">
-                                            <div class="hony-image-type-label">多图</div>
-                                            <div class="hony-image-type-content hony-image-type-multiple">
-                                                <img src="../../overall/images/展示图.png" alt="多图">
-                                                <div class="multiple-overlay">
-                                                    <div class="multiple-icon iconfont">&#xedab;</div>
-                                                    <div class="multiple-count">5</div>
-                                                </div>
-                                                <div class="hover-overlay">
-                                                    <div class="overlay-icon iconfont icon-yincangxianshi" onclick="openImagePopup(['../../overall/images/展示图.png', '../../overall/images/展示图2.png', '../../overall/images/展示图3.png', '../../overall/images/展示图4.png', '../../overall/images/展示图5.png'], '多图')"></div>
-                                                    <div class="overlay-icon iconfont icon-zhongqifang"></div>
-                                                    <div class="overlay-icon iconfont icon-lajitong"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 错误 Section -->   
-                                        <div class="hony-image-type-item">
-                                            <div class="hony-image-type-label">错误</div>
-                                            <div class="hony-image-type-content hony-image-type-error">
-                                                <div class="error-text">无法显示</div>
-                                                <div class="hover-overlay">
-                                                    <div class="overlay-icon iconfont icon-zhongqifang"></div>
-                                                    <div class="overlay-icon iconfont icon-lajitong"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 默认 Section -->   
-                                        <div class="hony-image-type-item">
-                                            <div class="hony-image-type-label">默认</div>
-                                            <div class="hony-image-type-content hony-image-type-thumbnail">
-                                                <img src="../../overall/images/默认图.png" alt="默认图">
-                                                <div class="hover-overlay">
-                                                    <div class="overlay-icon iconfont icon-yincangxianshi" onclick="openImagePopup('../../overall/images/展示图.png')"></div>
-                                                    <div class="overlay-icon iconfont icon-zhongqifang"></div>
-                                                    <div class="overlay-icon iconfont icon-lajitong"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 提示 Section -->   
-                                        <div class="hony-image-type-item">
-                                            <div class="hony-image-type-label">提示</div>
-                                            <div class="hony-image-type-content hony-image-type-prompt">
-                                                <div class="prompt-icon iconfont">&#xf07d;</div>
-                                                <div class="prompt-text">无法显示</div>
-                                                <div class="hover-overlay">
-                                                    <div class="overlay-icon iconfont icon-zhongqifang"></div>
-                                                    <div class="overlay-icon iconfont icon-lajitong"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </div>                                    
                                     </div>
 
                                 </div>
+                                <!-- 图像交互 Section -->
+                                <div class="subsection" id="hony-image-interaction">
+                                    <div class="subsection-title">图像交互</div>
+                                    <div class="subsection-description">图像交互模式下，鼠标悬停显示操作菜单，支持预览大图、重新上传和删除功能，点击预览可打开全屏查看器进行多图浏览。</div>
+                                    <!-- 组件 Section -->  
+                                    <div class="component-container">
+                                        <div class="hony-image-container hony-image-types-container">
+                                        
+                                            <div class="hony-image-type-item">
+                                                <div class="hony-image-type-label">常规</div>
+                                                <div class="hony-image-type-content">
+                                                    <img src="../../overall/images/展示图.png" alt="常规图片">
+                                                    <div class="hover-overlay">
+                                                        <div class="overlay-icon iconfont icon-yincangxianshi" onclick="openImagePopup('../../overall/images/展示图.png')"></div>
+                                                        <div class="overlay-icon iconfont icon-zhongqifang"></div>
+                                                        <div class="overlay-icon iconfont icon-lajitong"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 视频 Section -->   
+                                            <div class="hony-image-type-item">
+                                                <div class="hony-image-type-label">视频</div>
+                                                <div class="hony-image-type-content hony-image-type-video">
+                                                    <video class="video-with-duration" alt="视频" muted>
+                                                        <source src="../../overall/images/默认视频.mp4" type="video/mp4">
+                                                    </video>
+                                                    <div class="video-overlay">
+                                                        <div class="video-icon iconfont">&#xee7d;</div>
+                                                        <div class="video-duration">--:--</div>
+                                                    </div>
+                                                    <div class="hover-overlay">
+                                                        <div class="overlay-icon iconfont icon-yincangxianshi" onclick="openImagePopup('../../overall/images/默认视频.mp4', 'video')"></div>
+                                                        <div class="overlay-icon iconfont icon-zhongqifang"></div>
+                                                        <div class="overlay-icon iconfont icon-lajitong"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 多图 Section -->   
+                                            <div class="hony-image-type-item">
+                                                <div class="hony-image-type-label">多图</div>
+                                                <div class="hony-image-type-content hony-image-type-multiple">
+                                                    <img src="../../overall/images/展示图.png" alt="多图">
+                                                    <div class="multiple-overlay">
+                                                        <div class="multiple-icon iconfont">&#xedab;</div>
+                                                        <div class="multiple-count">5</div>
+                                                    </div>
+                                                    <div class="hover-overlay">
+                                                        <div class="overlay-icon iconfont icon-yincangxianshi" onclick="openImagePopup(['../../overall/images/展示图.png', '../../overall/images/展示图2.png', '../../overall/images/展示图3.png', '../../overall/images/展示图4.png', '../../overall/images/展示图5.png'], '多图')"></div>
+                                                        <div class="overlay-icon iconfont icon-zhongqifang"></div>
+                                                        <div class="overlay-icon iconfont icon-lajitong"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 错误 Section -->   
+                                            <div class="hony-image-type-item">
+                                                <div class="hony-image-type-label">错误</div>
+                                                <div class="hony-image-type-content hony-image-type-error">
+                                                    <div class="error-text">无法显示</div>
+                                                    <div class="hover-overlay">
+                                                        <div class="overlay-icon iconfont icon-zhongqifang"></div>
+                                                        <div class="overlay-icon iconfont icon-lajitong"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 默认 Section -->   
+                                            <div class="hony-image-type-item">
+                                                <div class="hony-image-type-label">默认</div>
+                                                <div class="hony-image-type-content hony-image-type-thumbnail">
+                                                    <img src="../../overall/images/默认图.png" alt="默认图">
+                                                    <div class="hover-overlay">
+                                                        <div class="overlay-icon iconfont icon-yincangxianshi" onclick="openImagePopup('../../overall/images/展示图.png')"></div>
+                                                        <div class="overlay-icon iconfont icon-zhongqifang"></div>
+                                                        <div class="overlay-icon iconfont icon-lajitong"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 提示 Section -->   
+                                            <div class="hony-image-type-item">
+                                                <div class="hony-image-type-label">提示</div>
+                                                <div class="hony-image-type-content hony-image-type-prompt">
+                                                    <div class="prompt-icon iconfont">&#xf07d;</div>
+                                                    <div class="prompt-text">无法显示</div>
+                                                    <div class="hover-overlay">
+                                                        <div class="overlay-icon iconfont icon-zhongqifang"></div>
+                                                        <div class="overlay-icon iconfont icon-lajitong"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
+                                    </div>
+
+                                </div>
                             </div>
+                        </div>
+                    </div>                
+                    <!-- 右侧锚点导航 -->
+
+
+                    <div class="right-nav">
+                        <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'image-basic');">基础样式</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'image-interaction');">图像交互</div>
                         </div>
                     </div>
                 </div>                
-                <!-- 右侧锚点导航 -->
-                <div class="right-nav">
-                    <div class="right-nav-items">
-                        <div class="right-nav-item active" onclick="handleRightNavClick(this, 'image-basic');">基础样式</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'image-interaction');">图像交互</div>
-                    </div>
-                </div>
             </div>
+
         </div>
     </div>
     <!-- 背景纹理 -->
     <div class="hony-background-texture"></div>
     <!-- 背景banner -->
     <div class="background-bgVideo">
-        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+        <!-- 浅色模式视频 -->
+        <video class="background-bgVideo-video background-bgVideo-light" autoplay muted loop playsinline>
             <source src="../../overall/images/背景banne.mp4" type="video/mp4">
         </video>
+        <!-- 深色模式图片 -->
+        <img class="background-bgVideo-image background-bgVideo-dark" src="../../overall/images/bg-dark-mode.png" alt="深色背景">
     </div>
     <!-- 图片弹出层 -->
     <div id="hony-image-popup" class="hony-image-popup">
@@ -249,7 +256,6 @@
         </div>
         <div class="hony-image-popup-thumbnails"></div>
     </div>
-
-
+<script src="../B-navigation/tabs.js"></script>
 </body>
 </html>

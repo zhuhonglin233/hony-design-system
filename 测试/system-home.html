@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台首页 - Hony Design</title>
+    <link rel="stylesheet" href="../../overall/design-tokens.css">
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+    <!-- ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <!-- 组件库 CSS 文件 -->
+    <link rel="stylesheet" href="../A-system/button.css">
+    <link rel="stylesheet" href="../A-system/card.css">
+    <link rel="stylesheet" href="../A-system/image.css">
+    <link rel="stylesheet" href="../A-system/tab.css">
+    <link rel="stylesheet" href="../B-navigation/Multi.css">
+    <link rel="stylesheet" href="../B-navigation/Pagination.css">
+    <link rel="stylesheet" href="../B-navigation/breadcrumb.css">
+    <link rel="stylesheet" href="../B-navigation/navigation.css">
+    <link rel="stylesheet" href="../B-navigation/steps.css">
+    <link rel="stylesheet" href="../B-navigation/tabs.css">
+    <link rel="stylesheet" href="../B-navigation/title.css">
+    <link rel="stylesheet" href="../C-input/checkbox.css">
+    <link rel="stylesheet" href="../C-input/form.css">
+    <link rel="stylesheet" href="../C-input/input.css">
+    <link rel="stylesheet" href="../C-input/score.css">
+    <link rel="stylesheet" href="../C-input/select.css">
+    <link rel="stylesheet" href="../C-input/slider.css">
+    <link rel="stylesheet" href="../C-input/swich.css">
+    <link rel="stylesheet" href="../C-input/transfer.css">
+    <link rel="stylesheet" href="../C-input/tree.css">
+    <link rel="stylesheet" href="../C-input/upload.css">
+    <link rel="stylesheet" href="../D-display/avatar.css">
+    <link rel="stylesheet" href="../D-display/badge.css">
+    <link rel="stylesheet" href="../D-display/calendar.css">
+    <link rel="stylesheet" href="../D-display/comment.css">
+    <link rel="stylesheet" href="../D-display/descriptions.css">
+    <link rel="stylesheet" href="../D-display/list.css">
+    <link rel="stylesheet" href="../D-display/table-tree.css">
+    <link rel="stylesheet" href="../D-display/table.css">
+    <link rel="stylesheet" href="../D-display/timeline.css">
+    <link rel="stylesheet" href="../E-popup/alert.css">
+    <link rel="stylesheet" href="../E-popup/modal.css">
+    <link rel="stylesheet" href="../E-popup/popconfirm.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div id="hony-top-nav" class="system-header-navigation">
+        <!-- 左侧Logo -->
+        <div class="hony-top-nav-logo">
+            <div class="hony-top-nav-logo-icon">
+                <!-- LOGO图片 -->
+                <img src="../../overall/images/LOGO.png" alt="智付校园" width="36" height="36">
+            </div>
+            <div class="hony-top-nav-logo-text">智付校园</div>
+        </div>
+                            
+        <!-- 中间菜单项 -->
+        <div class="hony-top-nav-menu">
+            <!-- 菜单项 1 - 无二级导航 -->
+            <div class="hony-top-nav-item no-submenu">
+                <div class="hony-top-nav-item-content">
+                    <span class="hony-nav-icon iconfont"></span>
+                        <span class="hony-top-nav-item-text">首页</span>
+                </div>
+            </div>
+                              
+            <!-- 菜单项 2 - 有二级导航 -->
+            <div class="hony-top-nav-item active">
+                <div class="hony-top-nav-item-content">
+                    <span class="hony-nav-icon iconfont"></span>
+                    <span class="hony-top-nav-item-text">标题昵称</span>
+                    <span class="hony-top-nav-item-arrow">
+                        <span class="hony-nav-icon iconfont"></span>
+                    </span>
+                </div>
+                                
+                <!-- 二级导航 -->
+                <div class="hony-top-nav-submenu">
+                    <div class="hony-top-nav-submenu-content">
+                        <div class="hony-top-nav-submenu-item active">副标题昵称</div>
+                        <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                        <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                        <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                        <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                    </div>
+                </div>
+            </div>
+                              
+                              <!-- 菜单项 3 - 有二级导航 -->
+                              <div class="hony-top-nav-item">
+                                <div class="hony-top-nav-item-content">
+                                  <span class="hony-nav-icon iconfont"></span>
+                                  <span class="hony-top-nav-item-text">标题昵称</span>
+                                  <span class="hony-top-nav-item-arrow">
+                                    <span class="hony-nav-icon iconfont"></span>
+                                  </span>
+                                </div>
+                                
+                                <!-- 二级导航 -->
+                                <div class="hony-top-nav-submenu">
+                                  <div class="hony-top-nav-submenu-content">
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                    <div class="hony-top-nav-submenu-item">副标题昵称</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <!-- 右侧功能区 -->
+                            <div class="hony-top-nav-actions">
+                              <div class="hony-top-nav-action-item">
+                                <span class="hony-nav-icon iconfont"></span>
+                              </div>
+                              <div class="hony-top-nav-action-item">
+                                <span class="hony-nav-icon iconfont"></span>
+                              </div>
+                              <div class="hony-top-nav-action-item user">
+                                <div class="user-avatar">
+                                  <!-- 用户头像 -->
+                                  <img src="../../overall/images/默认头像.png" alt="用户头像" width="36" height="36">
+                                </div>
+                              </div>
+                            </div>
+    </div>
+
+    <!-- 主内容区域 -->
+    <main class="home-main">
+        <!-- 左侧内容 -->
+        <div class="main-content">
+            <!-- 欢迎横幅 -->
+            <div class="welcome-banner">
+                <div class="welcome-left">
+                    <div class="welcome-info">
+                        <img src="../../overall/images/默认头像.png" alt="头像" class="welcome-avatar">
+                        <div class="welcome-text">
+                            <p class="welcome-title">欢迎登录，朱晓柒老师</p>
+                            <p class="welcome-title-annotation">ID：NO.nanshen070408</p>
+                        </div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <p class="stat-label">学校</p>
+                            <div class="stat-value">15<p class="stat-unit">所</p></div>                
+                        </div>
+                        <div class="stat-item">
+                            <p class="stat-label">班级</p>
+                            <div class="stat-value">15<p class="stat-unit">个</p></div>                
+                        </div>
+                        <div class="stat-item">
+                            <p class="stat-label">教师</p>
+                            <div class="stat-value">15<p class="stat-unit">人</p></div>                
+                        </div>
+                        <div class="stat-item">
+                            <p class="stat-label">学生</p>
+                            <div class="stat-value">15<p class="stat-unit">人</p></div>                
+                        </div>
+
+                    </div>
+                </div>
+                <div class="welcome-right">
+                    <img src="img/首页图片.png" alt="首页图片" class="banner-img">
+                </div>
+            </div>
+
+            <!-- 快捷入口 -->
+            <div class="home-section-cards">
+                <div class="hony-title-content hony-title-content-level-3" style="display: flex; flex-direction: column; gap: 8px; margin-top: 0px; margin-bottom: 24px; position: relative; z-index: 1;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <!-- <div style="width: 4px; height: 16px; background: var(--primary-main-1); border-radius: 4px;"></div>-->
+                            <div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;">
+                                <img src="img/标题装饰.png" alt="标题装饰" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="hony-title hony-title-normal-3">快捷入口</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <button class="hony-btn hony-btn-link hony-btn-secondary hony-btn-sm hony-btn-home-title">
+                                <span>设置</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry-grid">
+                    <button class="entry-item">
+                        <img src="img/首页导航图标/导航图标-1.png" alt="图标" class="entry-icon-img">
+                        <span class="entry-text">食材采购商城</span>
+                    </button>
+                    <button class="entry-item">
+                        <img src="img/首页导航图标/导航图标-2.png" alt="图标" class="entry-icon-img">
+                        <span class="entry-text">原材料入库</span>
+                    </button>
+                    <button class="entry-item">
+                        <img src="img/首页导航图标/导航图标-3.png" alt="图标" class="entry-icon-img">
+                        <span class="entry-text">原材料出库</span>
+                    </button>
+                    <button class="entry-item">
+                        <img src="img/首页导航图标/导航图标-4.png" alt="图标" class="entry-icon-img">
+                        <span class="entry-text">补录入库</span>
+                    </button>
+                    <button class="entry-item">
+                        <img src="img/首页导航图标/导航图标-5.png" alt="图标" class="entry-icon-img">
+                        <span class="entry-text">补录入库</span>
+                    </button>
+                    <button class="entry-item">
+                        <img src="img/首页导航图标/导航图标-6.png" alt="图标" class="entry-icon-img">
+                        <span class="entry-text">食材采购商城</span>
+                    </button>
+                    <button class="entry-item">
+                        <img src="img/首页导航图标/导航图标-7.png" alt="图标" class="entry-icon-img">
+                        <span class="entry-text">补录入库</span>
+                    </button>
+                    <button class="entry-item">
+                        <img src="img/首页导航图标/导航图标-8.png" alt="图标" class="entry-icon-img">
+                        <span class="entry-text">原材料出库</span>
+                    </button>
+                    <button class="entry-item">
+                        <img src="img/首页导航图标/导航图标-9.png" alt="图标" class="entry-icon-img">
+                        <span class="entry-text">食材采购商城</span>
+                    </button>
+                    <button class="entry-item">
+                        <img src="img/首页导航图标/导航图标.png" alt="图标" class="entry-icon-img">
+                        <span class="entry-text">补录入库</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 缴费数据卡片 -->
+            <div class="home-section-cards">
+                <div class="hony-title-content hony-title-content-level-3" style="display: flex; flex-direction: column; gap: 8px; margin-top: 0px; margin-bottom: 24px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <!-- <div style="width: 4px; height: 16px; background: var(--primary-main-1); border-radius: 4px;"></div>-->
+                            <div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;">
+                                <img src="img/标题装饰.png" alt="标题装饰" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="hony-title hony-title-normal-3">缴费数据</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px; height: 24px;">
+                            <div class="hony-tab-nav-segment hony-tab-nav-segment-small">
+                                <div class="hony-tab-item active" data-tab="tab18-1" onclick="switchTab(this)">今日</div>
+                                <div class="hony-tab-item" data-tab="tab18-2" onclick="switchTab(this)">本周</div>
+                                <div class="hony-tab-item" data-tab="tab18-3" onclick="switchTab(this)">本月</div>
+                                <div class="hony-tab-item" data-tab="tab18-3" onclick="switchTab(this)">本年</div>
+                            </div>
+                            <button class="hony-btn hony-btn-link hony-btn-secondary hony-btn-sm hony-btn-home-title">
+                                <span>更多</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-row">
+                    <div class="payment-card primary">
+                        <p class="card-label">实收金额</p>
+                        <div class="card-trend up">
+                            <p class="card-value">15.01</p>
+                            <p class="card-unit">万元</p>
+                        </div>
+                        <img src="img/首页统计卡片/统计卡片1.png" alt="背景装饰" class="card-bg-image">
+                    </div>
+                    <div class="payment-card secondary">
+                        <p class="card-label">应收金额</p>
+                        <div class="card-trend up">
+                            <p class="card-value">15.01</p>
+                            <p class="card-unit">万元</p>
+                        </div>
+                        <img src="img/首页统计卡片/统计卡片2.png" alt="背景装饰" class="card-bg-image">
+                    </div>
+                    <div class="payment-card tertiary">
+                        <p class="card-label">未收金额</p>
+                        <div class="card-trend up">
+                            <p class="card-value">15.01</p>
+                            <p class="card-unit">万元</p>
+                        </div>
+                        <img src="img/首页统计卡片/统计卡片3.png" alt="背景装饰" class="card-bg-image">
+                    </div>
+                    <div class="payment-card accent">
+                        <p class="card-label">退款金额</p>
+                        <div class="card-trend up">
+                            <p class="card-value">15.01</p>
+                            <p class="card-unit">万元</p>
+                        </div>
+                        <img src="img/首页统计卡片/统计卡片4.png" alt="背景装饰" class="card-bg-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 缴费数据详情 -->
+            <div class="home-section-cards">
+                <div class="hony-title-content hony-title-content-level-3" style="display: flex; flex-direction: column; gap: 8px; margin-top: 0px; margin-bottom: 24px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <!-- <div style="width: 4px; height: 16px; background: var(--primary-main-1); border-radius: 4px;"></div>-->
+                            <div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;">
+                                <img src="img/标题装饰.png" alt="标题装饰" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="hony-title hony-title-normal-3">缴费数据</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px; height: 24px;">
+                            <div class="hony-tab-nav-segment hony-tab-nav-segment-small">
+                                <div class="hony-tab-item active" data-tab="tab18-1" onclick="switchTab(this)">今日</div>
+                                <div class="hony-tab-item" data-tab="tab18-2" onclick="switchTab(this)">本周</div>
+                                <div class="hony-tab-item" data-tab="tab18-3" onclick="switchTab(this)">本月</div>
+                                <div class="hony-tab-item" data-tab="tab18-3" onclick="switchTab(this)">本年</div>
+                            </div>
+                            <button class="hony-btn hony-btn-link hony-btn-secondary hony-btn-sm hony-btn-home-title">
+                                <span>更多</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hony-tabs-group2 tabs-group-line">
+                    <div class="hony-tab-nav-underline">
+                        <div class="hony-tab-item home-tabs-cards home-tabs-cards-line active" data-tab="tab5-1" onclick="switchTab(this)">标签一
+                            <span class="home-tabs-cards-num">520.00</span>
+                            <div class="home-tabs-cards-statistics">较昨日<span class="home-tabs-cards-statistics1">5%</span><span class="iconfont home-tabs-cards-statistics2">&#xefb4;</span></div>
+                        </div>
+                        <div class="hony-tab-item home-tabs-cards home-tabs-cards-line" data-tab="tab5-2" onclick="switchTab(this)">标签二
+                            <span class="home-tabs-cards-num">520.00</span>
+                            <div class="home-tabs-cards-statistics">较昨日<span class="home-tabs-cards-statistics1">5%</span><span class="iconfont home-tabs-cards-statistics2">&#xefb4;</span></div>
+                        </div>
+                        <div class="hony-tab-item home-tabs-cards home-tabs-cards-line1" data-tab="tab5-3" onclick="switchTab(this)">标签三
+                            <span class="home-tabs-cards-num">520.00</span>
+                            <div class="home-tabs-cards-statistics">较昨日<span class="home-tabs-cards-statistics1">5%</span><span class="iconfont home-tabs-cards-statistics2">&#xefb4;</span></div>
+                        </div>
+                        <div class="hony-tab-item home-tabs-cards home-tabs-cards-line1" data-tab="tab5-4" onclick="switchTab(this)">标签四
+                            <span class="home-tabs-cards-num">520.00</span>
+                            <div class="home-tabs-cards-statistics">较昨日<span class="home-tabs-cards-statistics1">5%</span><span class="iconfont home-tabs-cards-statistics2">&#xefb4;</span></div>
+                        </div>
+                    </div>
+                    <div class="payment-statistics-report">
+                        <div id="hony-tab5-1" class="hony-tab-content-item active"> 
+                            <div class="payment-methods-con">                    
+                                <div class="payment-methods">
+                                    <div class="method-item">
+                                        <span class="method-name">现金缴费</span>
+                                        <span class="method-count">150笔</span>
+                                        <span class="method-percent">24%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">支付宝支付</span>
+                                        <span class="method-count">1200笔</span>
+                                        <span class="method-percent">15%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">微信支付</span>
+                                        <span class="method-count">1200笔</span>
+                                        <span class="method-percent">15%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">银联支付</span>
+                                        <span class="method-count">51笔</span>
+                                        <span class="method-percent">22%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">POS支付</span>
+                                        <span class="method-count">24笔</span>
+                                        <span class="method-percent">32%</span>
+                                    </div>
+                                </div>
+                                <div class="payment-methods-chart">
+                                    <div id="main-chart" class="main-chart"></div>
+                                </div>
+                            </div>       
+                        </div>
+                        <div id="hony-tab5-2" class="hony-tab-content-item">
+                            <div class="payment-methods-con">                    
+                                <div class="payment-methods">
+                                    <div class="method-item">
+                                        <span class="method-name">现金缴费</span>
+                                        <span class="method-count">200笔</span>
+                                        <span class="method-percent">30%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">支付宝支付</span>
+                                        <span class="method-count">800笔</span>
+                                        <span class="method-percent">20%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">微信支付</span>
+                                        <span class="method-count">1500笔</span>
+                                        <span class="method-percent">25%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">银联支付</span>
+                                        <span class="method-count">80笔</span>
+                                        <span class="method-percent">15%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">POS支付</span>
+                                        <span class="method-count">40笔</span>
+                                        <span class="method-percent">10%</span>
+                                    </div>
+                                </div>
+                                <div class="payment-methods-chart">
+                                    <div id="chart-week" class="main-chart"></div>
+                                </div>
+                            </div>                            
+                        </div>
+                        
+                        <div id="hony-tab5-3" class="hony-tab-content-item">
+                            <div class="payment-methods-con">                    
+                                <div class="payment-methods">
+                                    <div class="method-item">
+                                        <span class="method-name">现金缴费</span>
+                                        <span class="method-count">500笔</span>
+                                        <span class="method-percent">15%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">支付宝支付</span>
+                                        <span class="method-count">2000笔</span>
+                                        <span class="method-percent">25%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">微信支付</span>
+                                        <span class="method-count">3500笔</span>
+                                        <span class="method-percent">40%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">银联支付</span>
+                                        <span class="method-count">300笔</span>
+                                        <span class="method-percent">12%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">POS支付</span>
+                                        <span class="method-count">100笔</span>
+                                        <span class="method-percent">8%</span>
+                                    </div>
+                                </div>
+                                <div class="payment-methods-chart">
+                                    <div id="chart-month" class="main-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="hony-tab5-4" class="hony-tab-content-item">
+                            <div class="payment-methods-con">                    
+                                <div class="payment-methods">
+                                    <div class="method-item">
+                                        <span class="method-name">现金缴费</span>
+                                        <span class="method-count">2500笔</span>
+                                        <span class="method-percent">18%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">支付宝支付</span>
+                                        <span class="method-count">8000笔</span>
+                                        <span class="method-percent">28%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">微信支付</span>
+                                        <span class="method-count">12000笔</span>
+                                        <span class="method-percent">35%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">银联支付</span>
+                                        <span class="method-count">1500笔</span>
+                                        <span class="method-percent">12%</span>
+                                    </div>
+                                    <div class="method-item">
+                                        <span class="method-name">POS支付</span>
+                                        <span class="method-count">800笔</span>
+                                        <span class="method-percent">7%</span>
+                                    </div>
+                                </div>
+                                <div class="payment-methods-chart">
+                                    <div id="chart-year" class="main-chart"></div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+
+            <!-- 明厨亮灶 -->
+            <div class="home-section-cards">
+                <div class="hony-title-content hony-title-content-level-3" style="display: flex; flex-direction: column; gap: 8px; margin-top: 0px; margin-bottom: 24px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <!-- <div style="width: 4px; height: 16px; background: var(--primary-main-1); border-radius: 4px;"></div>-->
+                            <div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;">
+                                <img src="img/标题装饰.png" alt="标题装饰" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="hony-title hony-title-normal-3">可视化数据</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kitchen-grid">
+                    <button class="kitchen-item">
+                        <img class="kitchen-icon" src="./img/可视化图表/可视化图表1.png" alt="明厨亮灶">
+                        <span class="kitchen-text">明厨亮灶</span>
+                    </button>
+                    <button class="kitchen-item">
+                        <img class="kitchen-icon" src="./img/可视化图表/可视化图表2.png" alt="检查信息">
+                        <span class="kitchen-text">检查信息</span>
+                    </button>
+                    <button class="kitchen-item">
+                        <img class="kitchen-icon" src="./img/可视化图表/可视化图表3.png" alt="抓拍信息预警">
+                        <span class="kitchen-text">抓拍信息预警</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右侧边栏 -->
+        <aside class="main-sidebar">
+            <!-- 待处理项 -->
+            <div class="home-section-cards">
+                <div class="hony-title-content hony-title-content-level-3 handling-matters-background-title" style="display: flex; flex-direction: column; gap: 8px; margin-top: 0px; margin-bottom: 24px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <!-- <div style="width: 4px; height: 16px; background: var(--primary-main-1); border-radius: 4px;"></div>-->
+                            <div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;">
+                                <img src="img/标题装饰.png" alt="标题装饰" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="hony-title hony-title-normal-3">处理事项</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pending-list">
+                    <div class="pending-item">
+                        <span class="pending-label">待处理预警</span>
+                        <span class="pending-value normal">0</span>
+                    </div>
+                    <div class="pending-item">
+                        <span class="pending-label">待审核预警</span>
+                        <span class="pending-value warning">5</span>
+                    </div>
+                    <div class="pending-item">
+                        <span class="pending-label">健康上报待提交</span>
+                        <span class="pending-value normal">0</span>
+                    </div>
+                    <div class="pending-item">
+                        <span class="pending-label">未缴费总数</span>
+                        <span class="pending-value warning">5</span>
+                    </div>
+                    <div class="pending-item">
+                        <span class="pending-label">银行信息待审核</span>
+                        <span class="pending-value normal">0</span>
+                    </div>
+                    <div class="pending-item">
+                        <span class="pending-label">未缴费总数</span>
+                        <span class="pending-value warning">5</span>
+                    </div>
+                </div>
+                <img src="./img/处理事项底图.png" alt="处理事项底图"class="handling-matters-background-image">
+            </div>
+
+            <!-- 工具栏 -->
+            <div class="home-section-cards">
+                <div class="hony-title-content hony-title-content-level-3" style="display: flex; flex-direction: column; gap: 8px; margin-top: 0px; margin-bottom: 24px; position: relative; z-index: 1;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <!-- <div style="width: 4px; height: 16px; background: var(--primary-main-1); border-radius: 4px;"></div>-->
+                            <div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;">
+                                <img src="img/标题装饰.png" alt="标题装饰" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="hony-title hony-title-normal-3">工具栏</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="toolbar-grid">
+                    <button class="toolbar-item">
+                        <span class="toolbar-icon">&#xe600;</span>
+                        <span class="toolbar-text">数据看板</span>
+                    </button>
+                    <button class="toolbar-item">
+                        <span class="toolbar-icon">&#xe601;</span>
+                        <span class="toolbar-text">帮助中心</span>
+                    </button>
+                    <button class="toolbar-item">
+                        <span class="toolbar-icon">&#xe602;</span>
+                        <span class="toolbar-text">移动端入口</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 消息中心 -->
+            <div class="home-section-cards">
+                <div class="hony-title-content hony-title-content-level-3" style="display: flex; flex-direction: column; gap: 8px; margin-top: 0px; margin-bottom: 24px; position: relative; z-index: 1;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <!-- <div style="width: 4px; height: 16px; background: var(--primary-main-1); border-radius: 4px;"></div>-->
+                            <div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;">
+                                <img src="img/标题装饰.png" alt="标题装饰" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="hony-title hony-title-normal-3">消息中心</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-list">
+                    <div class="message-item">
+                        <div class="hony-tab hony-tab-primary-light">消息</div>
+                        <span class="message-content">您办理的退款于2025年11月11日成功退...</span>
+                    </div>
+                    <div class="message-item">
+                        <div class="hony-tab hony-tab-danger-light">退款</div>
+                        <span class="message-content">您办理的退款于2025年11月11日成功退...</span>
+                    </div>
+                    <div class="message-item">
+                        <div class="hony-tab hony-tab-success-light">充值</div>
+                        <span class="message-content">您办理的退款于2025年11月11日成功退...</span>
+                    </div>
+                    <div class="message-item">
+                        <div class="hony-tab hony-tab-success-light">充值</div>
+                        <span class="message-content">您办理的退款于2025年11月11日成功退...</span>
+                    </div>
+                    <div class="message-item">
+                        <div class="hony-tab hony-tab-success-light">充值</div>
+                        <span class="message-content">您办理的退款于2025年11月11日成功退...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 登录信息 -->
+            <div class="home-section-cards">
+                <div class="hony-title-content hony-title-content-level-3" style="display: flex; flex-direction: column; gap: 8px; margin-top: 0px; margin-bottom: 24px; position: relative; z-index: 1;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <!-- <div style="width: 4px; height: 16px; background: var(--primary-main-1); border-radius: 4px;"></div>-->
+                            <div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;">
+                                <img src="img/标题装饰.png" alt="标题装饰" style="width: 20px; height: 20px;">
+                            </div>
+                            <div class="hony-title hony-title-normal-3">登录信息</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-info">
+                    <div class="login-section">
+                        <div class="login-status success">
+                            <span class="status-icon">&#xf00c;</span>
+                            <span class="status-text">本次登录成功</span>
+                        </div>
+                        <p class="login-detail">2022-02-01 12:00</p>
+                        <p class="login-detail">登录IP: 中国重庆重庆市电信</p>
+                        <p class="login-detail">(14.107.72.153)</p>
+                    </div>
+                    <div class="login-divider"></div>
+                    <div class="login-section">
+                        <div class="login-status warning">
+                            <span class="status-icon">&#xf071;</span>
+                            <span class="status-text">上次登录异常</span>
+                        </div>
+                        <p class="login-detail">2023-02-02 12:00</p>
+                        <p class="login-detail">登录时间: 2023-02-02 12:00</p>
+                        <p class="login-detail">登录IP: 中国重庆重庆市电信</p>
+                        <p class="login-detail">(14.107.72.153)</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <div class="background-texture">
+        <div class="background-texture-bg">
+
+        </div>
+    </div>
+    <!-- 组件库 JS 文件 -->
+    <script src="../A-system/image.js"></script>
+    <script src="../B-navigation/Pagination.js"></script>
+    <script src="../B-navigation/navigation.js"></script>
+    <script src="../B-navigation/steps.js"></script>
+    <script src="../B-navigation/tabs.js"></script>
+    <script src="../C-input/checkbox.js"></script>
+    <script src="../C-input/input.js"></script>
+    <script src="../C-input/select.js"></script>
+    <script src="../C-input/slider.js"></script>
+    <script src="../C-input/swich.js"></script>
+    <script src="../C-input/transfer.js"></script>
+    <script src="../C-input/tree.js"></script>
+    <script src="../C-input/upload.js"></script>
+    <script src="../D-display/calendar.js"></script>
+    <script src="../D-display/comment.js"></script>
+    <script src="../D-display/table.js"></script>
+    <script src="../E-popup/modal.js"></script>
+    <script src="../E-popup/popconfirm.js"></script>
+    <script src="../overall/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 等待DOM完全渲染后再初始化图表
+            setTimeout(function() {
+                // 今日图表 - 数据变化更大，范围0-1200
+                initChart('main-chart', [200, 600, 1000, 1200, 500, 300]);
+                
+                // 本周图表 - 数据变化更大，范围0-1200
+                initChart('chart-week', [100, 450, 800, 1150, 700, 250]);
+                
+                // 本月图表 - 数据变化更大，范围0-1200
+                initChart('chart-month', [150, 500, 900, 1200, 600, 350]);
+                
+                // 本年图表
+                initChart('chart-year', [3000, 4200, 5500, 6200, 5800, 4800], 7000);
+            }, 100);
+        });
+        
+        function initChart(chartId, data, maxValue = 1200) {
+            var chartDom = document.getElementById(chartId);
+            if (!chartDom) return;
+            
+            var myChart = echarts.init(chartDom);
+            
+            // 强制刷新尺寸
+            setTimeout(function() {
+                myChart.resize();
+            }, 200);
+            
+            var option = {
+                tooltip: {
+                    trigger: 'axis',
+                    backgroundColor: '#ffffff',
+                    borderColor: '#e7eaf0',
+                    borderWidth: 1,
+                    textStyle: {
+                        color: '#333'
+                    },
+                    formatter: function(params) {
+                        var data = params[0];
+                        return '<div style="padding: 8px;"><div style="font-size: 16px; font-weight: 600; color: #165dff; margin-bottom: 4px;">¥' + data.value + '</div><div style="font-size: 12px; color: #6c7da3;">' + data.name + '</div></div>';
+                    }
+                },
+                grid: {
+                    left: '5%',
+                    right: '5%',
+                    bottom: '12%',
+                    top: '10%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['星光学校', '西施附属中学', '星光学校', '星光学校', '星光学校', '星光学校'],
+                    axisLine: {
+                        lineStyle: {
+                            color: '#e7eaf0'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#6c7da3',
+                        fontSize: 12,
+                        interval: 0
+                    },
+                    axisTick: {
+                        show: false,
+                        alignWithLabel: true
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    max: maxValue,
+                    min: 0,
+                    interval: maxValue / 4,
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLabel: {
+                        color: '#6c7da3',
+                        fontSize: 12
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#e7eaf0',
+                            type: 'dashed'
+                        }
+                    }
+                },
+                series: [
+                    {
+                        name: '金额',
+                        type: 'line',
+                        smooth: true,
+                        symbol: 'circle',
+                        symbolSize: 8,
+                        lineStyle: {
+                            width: 3,
+                            color: '#165dff'
+                        },
+                        itemStyle: {
+                            color: '#ffffff',
+                            borderColor: '#165dff',
+                            borderWidth: 2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: 'rgba(22, 93, 255, 0.3)' },
+                                { offset: 1, color: 'rgba(22, 93, 255, 0.05)' }
+                            ])
+                        },
+                        emphasis: {
+                            itemStyle: {
+                                color: '#165dff',
+                                borderColor: '#165dff',
+                                borderWidth: 0
+                            }
+                        },
+                        data: data
+                    }
+                ]
+            };
+            
+            myChart.setOption(option);
+            
+            // 响应式调整
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        }
+    </script>
+</body>
+</html>

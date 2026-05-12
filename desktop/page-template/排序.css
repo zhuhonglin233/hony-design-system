@@ -1,0 +1,36 @@
+<style>
+  .flex-box { /* 父容器 */
+    display: flex; /* 开启弹性布局 */
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  .flex-item { /* 子元素（弹性项目） */
+    width: 80px;
+    height: 80px;
+    background: #4285f4;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+  }
+</style>
+
+<div class="flex-box">
+  <div class="flex-item">1</div>
+  <div class="flex-item">2</div>
+  <div class="flex-item">3</div>
+</div>
+
+1. 正常左右排列（左→右，默认）
+.flex-box {
+  display: flex;
+  /* flex-direction: row;  默认值，可省略不写 */
+}
+
+2. 反向左右排列（右→左）
+.flex-box {
+  display: flex;
+  flex-direction: row-reverse;
+}

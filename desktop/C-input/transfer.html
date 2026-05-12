@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>穿梭框 - 桌面端组件</title>
+    <link rel="icon" href="../../overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../../overall/main.css">
     <link rel="stylesheet" href="../../overall/icons/iconfont.css">
     <link rel="stylesheet" href="checkbox.css">
@@ -13,15 +14,28 @@
     <script src="../../overall/js/common.js"></script>
     <script src="tree.js"></script>
     <script src="transfer.js"></script>
+<link rel="stylesheet" href="../B-navigation/tabs.css">
 </head>
 <body>
     <div class="page-container">
         <!-- 左侧导航 -->
-        <div id="sidebar-container"></div>
-    
-        
+        <div id="sidebar-container"></div>      
         <!-- 主内容区域 -->
         <div class="main-content">
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="hony-content-area">
+                <!-- 页面标题 -->
+                <div class="page-header">
+                    <div class="design-code">design code 桌面端组件</div>
+                    <div class="page-title">穿梭框</div>
+                    <div class="page-description">用于在两个列表之间进行数据项的转移，支持列表模式和树状模式。</div>
+                </div>            
+                <div class="main-content-area">
+                    <!-- 内容 -->
+                    <div class="content-area">
+                        <div class="content-main">
             <!-- 顶部导航栏 -->
             <div id="navbar-container"></div>
             <!-- 主内容区域 -->
@@ -29,13 +43,6 @@
                 <!-- 内容 -->
                 <div class="content-area">
                     <div class="content-main">
-                        <!-- 页面标题 -->
-                        <div class="page-header">
-                            <div class="design-code">design code 桌面端组件</div>
-                            <div class="page-title">穿梭框</div>
-                            <div class="page-description">用于在两个列表之间进行数据项的转移，支持列表模式和树状模式。</div>
-                        </div>
-
                         <!-- 列表样式穿梭框 -->
                         <div class="section">
                             <div class="section-title">列表样式<span style="color: var(--primary-main-1);">穿梭框</span></div>
@@ -1007,15 +1014,32 @@
                 </div>
 
             </div>
+                        </div>
+                    </div>                
+                    <!-- 右侧锚点导航 -->
+                    <div class="right-nav">
+                        <div class="right-nav-items">
+                                <div class="right-nav-item active" onclick="handleRightNavClick(this, 'transfer-list');">列表穿梭框</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'transfer-list');">复杂穿梭框</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'transfer-tree');">树状穿梭框</div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
         </div>
     </div>
     <!-- 背景纹理 -->
     <div class="hony-background-texture"></div>
     <!-- 背景banner -->
     <div class="background-bgVideo">
-        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+        <!-- 浅色模式视频 -->
+        <video class="background-bgVideo-video background-bgVideo-light" autoplay muted loop playsinline>
             <source src="../../overall/images/背景banne.mp4" type="video/mp4">
         </video>
+        <!-- 深色模式图片 -->
+        <img class="background-bgVideo-image background-bgVideo-dark" src="../../overall/images/bg-dark-mode.png" alt="深色背景">
     </div>
+<script src="../B-navigation/tabs.js"></script>
 </body>
 </html>

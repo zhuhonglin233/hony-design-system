@@ -17,11 +17,23 @@ function initInputComponent() {
     // 密码可见性切换
     const passwordToggles = document.querySelectorAll('.hony-password-toggle');
     passwordToggles.forEach(toggle => {
-        toggle.addEventListener('click', function() {
-            const input = this.parentElement.querySelector('input');
+        toggle.addEventListener('click', function(e) {
+            e.stopPropagation(); // 阻止事件冒泡到上层
+            const wrapper = this.closest('.hony-input-wrapper');
+            const input = wrapper.querySelector('input');
+            if (!input) return;
+            
             const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
             input.setAttribute('type', type);
-            this.textContent = type === 'password' ? '\uf082' : '\uf083';
+            
+            // 切换图标类名
+            if (type === 'password') {
+                this.classList.remove('icon-mimayincang');
+                this.classList.add('icon-mimayincangxianshi');
+            } else {
+                this.classList.remove('icon-mimayincangxianshi');
+                this.classList.add('icon-mimayincang');
+            }
         });
     });
 

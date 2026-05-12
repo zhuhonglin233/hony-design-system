@@ -283,6 +283,7 @@
     align-items: center;
     background: var(--grey-face-2);
     padding: 8px 8px;
+    
 }
 
 .hony-upload-batch-table-header .hony-upload-batch-col {
@@ -297,6 +298,13 @@
 .hony-upload-batch-col-name {
     flex-grow: 1;
     position: relative;
+      overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+  /* 确保容器有明确宽度/ flex 收缩能力 */
+  flex: 1; /* 占满剩余空间，又不挤压其他列 */
+  min-width: 0; /* 修复 flex 子项不收缩的 BUG */
 }
 
 .hony-upload-batch-col-size,
@@ -731,4 +739,144 @@
 
 .hony-upload-dragger:hover .hony-upload-dragger-img2 {
   transform: translate(-0%, 0px); /* 向右上移动10px，可自行修改数值 */
+}
+
+/* 单个图片上传 */
+.hony-upload-single-image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: relative;
+}
+
+.hony-upload-single-image-item {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    border: 1px dashed var(--grey-border-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    background: var(--grey-face-1);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+}
+
+.hony-upload-single-image-item:hover {
+    border-color: var(--primary-main-1);
+    background: var(--primary-face-1);
+}
+
+/* 上传成功后隐藏上传按钮 */
+.hony-upload-single-image.has-image .hony-upload-single-image-item {
+    display: none;
+}
+
+.hony-upload-single-image-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hony-upload-single-image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hony-upload-single-image-preview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.hony-upload-single-image-preview:hover .hony-upload-single-image-preview-overlay {
+    opacity: 1;
+}
+
+.hony-upload-single-image-preview-action {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-main-5);
+    cursor: pointer;
+    font-size: 16px;
+}
+.hony-upload-single-image-container{
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: relative;
+    border: 1px solid var(--grey-border-1);
+    min-width: 200px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color var(--transition-base);
+}
+.hony-upload-single-image-container:hover{
+    border-color: var(--primary-main-1);
+}
+.hony-upload-single-image-right{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+.hony-upload-single-image-tile{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--grey-text-1);
+}
+.hony-upload-single-image-annotation{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--grey-text-3);
+    flex: 1;
+}
+
+/* 状态图标容器 */
+.hony-upload-single-image-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* 状态图标基础样式 */
+.hony-upload-status-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+/* 加载状态 */
+.hony-upload-status-loading {
+    color: var(--primary-main-1);
+    animation: spin 1s linear infinite;
+}
+
+/* 成功状态 */
+.hony-upload-status-success {
+    color: var(--success-main-1);
+}
+
+/* 失败状态 */
+.hony-upload-status-error {
+    color: var(--danger-main-1);
 }

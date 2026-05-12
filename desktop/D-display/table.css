@@ -1,7 +1,6 @@
 
 .hony-table-component{
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -9,7 +8,7 @@
 }
 .hony-table-container {
     width: 100%;
-    height: 600px;
+    min-height: 320px;
     overflow: auto;
     background: var(--grey-bg-0);
     scrollbar-width: thin;
@@ -22,7 +21,7 @@
 }
 
 .hony-table-striped tbody tr:nth-child(even) {
-    background-color: var(--grey-face-1);
+    background-color: var(--grey-bg-1);
 }
 
 .hony-table-striped tbody tr:nth-child(even):hover td {

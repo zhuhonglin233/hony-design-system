@@ -24,7 +24,7 @@
 .hony-modal {
   position: relative;
   background: var(--grey-bg-0);
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: var(--shadow-grey-medium);
   width: 480px;
   overflow: hidden;
@@ -361,8 +361,8 @@
 
 /* 抽屉内容区域 */
 .hony-drawer-body {
-  padding: 24px;
-  background: var(--grey-face-1);
+  padding: 0px 24px;
+  background: var(--grey-bg-0);
   overflow-y: auto;
   height: calc(100% - 128px);
   scrollbar-width: thin;

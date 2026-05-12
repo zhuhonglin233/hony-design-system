@@ -33,7 +33,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: -10;
   animation: pulse 2s infinite;
 }
@@ -48,7 +48,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: -10;
   animation: pulse 2s infinite;
 }
@@ -63,7 +63,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: -10;
   animation: pulse 2s infinite;
 }
@@ -78,7 +78,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: -10;
   animation: pulse 2s infinite;
 }
@@ -93,7 +93,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: -10;
   animation: pulse 2s infinite;
 }
@@ -108,7 +108,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: -10;
   animation: pulse 2s infinite;
 }
@@ -123,7 +123,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: -10;
   animation: pulse 2s infinite;
 }
@@ -138,7 +138,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: -10;
   animation: pulse 2s infinite;
 }
@@ -153,14 +153,14 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: -10;
   animation: pulse 2s infinite;
 }
 
 /* 分段步骤条 - 容器样式 */
 .hony-steps-section {
-  background-color: var(--grey-2);
+  background-color: var(--grey-border-1);
   padding: 4px;
   margin: 0;
   border-radius: 9999px;
@@ -195,7 +195,7 @@
 
 /* 分段步骤条 - 进行中状态 */
 .hony-steps-section .hony-step-item-process {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: 3;
 }
 
@@ -213,7 +213,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--grey-4);
+  background-color: var(--grey-border-1);
   position: relative;
   z-index: 1;
   margin-right: 8px;
@@ -221,7 +221,7 @@
 
 /* 分段步骤条 - 已完成状态图标 */
 .hony-steps-section .hony-step-item-finish .hony-step-item-icon-wrapper {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
 }
 
 /* 分段步骤条 - 进行中状态图标 */
@@ -243,7 +243,7 @@
   transform: translate(-50%, -50%);
   width: 24px;
   height: 24px;
-  background-color: var(--primary-1);
+  background-color: var(--primary-face-1);
   border-radius: 50%;
   z-index: -1;
 }
@@ -279,7 +279,7 @@
   padding: 0;
   font-size: 12px;
   line-height: 20px;
-  color: var(--grey-7);
+  color: var(--grey-main-2);
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
@@ -290,17 +290,17 @@
 
 /* 分段步骤条 - 已完成状态标题样式 */
 .hony-steps-section .hony-step-item-finish .hony-step-item-title {
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 /* 分段步骤条 - 进行中状态标题样式 */
 .hony-steps-section .hony-step-item.hony-step-item-process .hony-step-item-content .hony-step-item-title {
-  color: #ffffff !important;
+  color: var(--grey-face-1) !important;
 }
 
 /* 分段步骤条 - 未开始状态标题样式 */
 .hony-steps-section .hony-step-item-default .hony-step-item-title {
-  color: var(--grey-12);
+  color: var(--grey-text-1);
 }
 
 /* 分段步骤条 - 移除原来的连接线样式 */
@@ -310,7 +310,7 @@
 
 /* 带图标分段步骤条 - 容器样式 */
 .hony-steps-icon-section {
-  background-color: var(--grey-2);
+  background-color: var(--grey-face-1);
   padding: 2px;
   margin: 0;
   border-radius: 9999px;
@@ -344,7 +344,7 @@
 
 /* 带图标分段步骤条 - 进行中状态 */
 .hony-steps-icon-section .hony-step-item-process {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: 3;
 }
 
@@ -385,17 +385,17 @@
 
 /* 带图标分段步骤条 - 已完成状态标题样式 */
 .hony-steps-icon-section .hony-step-item-finish .hony-step-item-title {
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 /* 带图标分段步骤条 - 进行中状态标题样式 */
 .hony-steps-icon-section .hony-step-item.hony-step-item-process .hony-step-item-icon-content .hony-step-item-title {
-  color: #ffffff !important;
+  color: var(--primary-main-5)!important;
 }
 
 /* 带图标分段步骤条 - 未开始状态标题样式 */
 .hony-steps-icon-section .hony-step-item-default .hony-step-item-title {
-  color: var(--grey-12);
+  color: var(--grey-text-1);
 }
 
 /* 带图标分段步骤条 - 图标容器 */
@@ -420,24 +420,24 @@
 }
 
 .hony-steps-icon-section .hony-step-item-finish .hony-step-item-icon .iconfont {
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 
 
 .hony-steps-icon-section .hony-step-item-process .hony-step-item-icon .iconfont {
-  color: white;
+  color:var(--primary-main-5);;
 }
 
 
 
 .hony-steps-icon-section .hony-step-item-default .hony-step-item-icon .iconfont {
-  color: var(--grey-4);
+  color: var(--grey-text-4);
 }
 
 /* 带数字分段步骤条 - 容器样式 */
 .hony-steps-number-section {
-  background-color: var(--grey-2);
+  background-color: var(--grey-face-1);
   padding: 2px;
   margin: 0;
   border-radius: 9999px;
@@ -466,19 +466,19 @@
 
 /* 带数字分段步骤条 - 已完成状态 */
 .hony-steps-number-section .hony-step-item-finish {
-  background-color: var(--grey-1);
+  background-color: var(--grey-bg-1);
   z-index: 4;
 }
 
 /* 带数字分段步骤条 - 进行中状态 */
 .hony-steps-number-section .hony-step-item-process {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: 3;
 }
 
 /* 带数字分段步骤条 - 未开始状态 */
 .hony-steps-number-section .hony-step-item-default {
-  background-color: var(--grey-1);
+  background-color: var(--grey-bg-1);
   z-index: 2;
 }
 
@@ -515,7 +515,7 @@
 
 /* 带数字分段步骤条 - 已完成状态标题样式 */
 .hony-steps-number-section .hony-step-item-finish .hony-step-item-title {
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 /* 带数字分段步骤条 - 进行中状态标题样式 */
@@ -525,7 +525,7 @@
 
 /* 带数字分段步骤条 - 未开始状态标题样式 */
 .hony-steps-number-section .hony-step-item-default .hony-step-item-title {
-  color: var(--grey-12);
+  color: var(--grey-text-1);
 }
 
 /* 带数字分段步骤条 - 已完成状态数字 */
@@ -537,9 +537,9 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: var(--primary-1);
-  border: 1px solid var(--primary-6);
-  color: var(--primary-6);
+  background-color: var(--primary-face-1);
+  border: 1px solid var(--primary-main-1);
+  color: var(--primary-main-1);
   font-size: 14px;
   font-weight: bold;
   flex-shrink: 0;
@@ -555,7 +555,7 @@
   height: 24px;
   border-radius: 50%;
   background-color: #ffffff;
-  color: var(--primary-6);
+  color: var(--primary-main-1);
   font-size: 14px;
   font-weight: bold;
   flex-shrink: 0;
@@ -571,7 +571,7 @@
   width: 33px;
   height: 33px;
   border-radius: 50%;
-  background-color: var(--primary-1);
+  background-color: var(--primary-face-1);
   z-index: -1;
 }
 
@@ -584,9 +584,9 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: var(--grey-1);
-  border: 1px solid var(--grey-4);
-  color: var(--grey-7);
+  background-color: var(--grey-bg-1);
+  border: 1px solid var(--grey-face-3);
+  color: var(--grey-main-2);
   font-size: 14px;
   font-weight: bold;
   flex-shrink: 0;
@@ -601,9 +601,9 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: var(--grey-1);
-  border: 1px solid var(--grey-4);
-  color: var(--grey-7);
+  background-color: var(--grey-bg-1);
+  border: 1px solid var(--grey-face-3);
+  color: var(--grey-main-2);
   font-size: 14px;
   font-weight: bold;
   flex-shrink: 0;
@@ -621,23 +621,23 @@
 
 /* 箭头步骤条 - 未开始状态标题文字颜色 */
 .hony-steps-arrow .hony-step-item-default .hony-step-item-title {
-  color: var(--grey-12);
+  color: var(--grey-text-1);
 }
 
 /* 箭头步骤条 - 已完成状态背景 */
 .hony-steps-arrow .hony-step-item-finish .hony-step-item-content {
-  background-color: var(--grey-1);
+  background-color: var(--grey-bg-1);
 }
 
 /* 箭头步骤条 - 进行中状态背景 */
 .hony-steps-arrow .hony-step-item-process .hony-step-item-content {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   color: #ffffff;
 }
 
 /* 箭头步骤条 - 未开始状态背景 */
 .hony-steps-arrow .hony-step-item-default .hony-step-item-content {
-  background-color: var(--grey-1);
+  background-color: var(--grey-bg-1);
 }
 
 /* 箭头步骤条 - 步骤项样式 */
@@ -669,13 +669,13 @@
   height: 0;
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
-  border-left: 12px solid var(--grey-1);
+  border-left: 12px solid var(--grey-bg-1);
   z-index: 1;
 }
 
 /* 箭头步骤条 - 进行中状态箭头样式 */
 .hony-steps-arrow .hony-step-item-process::after {
-  border-left-color: var(--primary-6);
+  border-left-color: var(--primary-main-1);
 }
 
 /* 箭头步骤条 - 最后一个步骤项不显示箭头 */
@@ -685,12 +685,12 @@
 
 /* 箭头步骤条 - 已完成状态箭头样式 */
 .hony-steps-arrow .hony-step-item-finish::after {
-  border-left-color: var(--grey-1);
+  border-left-color: var(--grey-bg-1);
 }
 
 /* 箭头步骤条 - 未开始状态箭头样式 */
 .hony-steps-arrow .hony-step-item-default::after {
-  border-left-color: var(--grey-1);
+  border-left-color: var(--grey-bg-1);
 }
 
 /* 箭头步骤条 - 步骤内容调整 */
@@ -735,14 +735,14 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: -10;
   animation: pulse 2s infinite;
 }
 
 /* 选项步骤条 - 容器样式 */
 .hony-steps-option {
-  background-color: var(--grey-2);
+  background-color: var(--grey-face-1);
   padding: 2px;
   margin: 0;
   border-radius: 9999px;
@@ -764,19 +764,19 @@
 
 /* 选项步骤条 - 已完成状态 */
 .hony-steps-option .hony-step-item-finish {
-  background-color: var(--grey-1);
+  background-color: var(--grey-bg-1);
   z-index: 4;
 }
 
 /* 选项步骤条 - 进行中状态 */
 .hony-steps-option .hony-step-item-process {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: 3;
 }
 
 /* 选项步骤条 - 未开始状态 */
 .hony-steps-option .hony-step-item-default {
-  background-color: var(--grey-1);
+  background-color: var(--grey-bg-1);
   z-index: 2;
 }
 
@@ -789,7 +789,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--grey-4);
+  background-color: var(--grey-face-3);
   position: relative;
   z-index: 1;
   margin-right: 8px;
@@ -797,7 +797,7 @@
 
 /* 选项步骤条 - 已完成状态图标 */
 .hony-steps-option .hony-step-item-finish .hony-step-item-icon-wrapper {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
 }
 
 /* 选项步骤条 - 进行中状态图标 */
@@ -819,7 +819,7 @@
   transform: translate(-50%, -50%);
   width: 24px;
   height: 24px;
-  background-color: var(--primary-1);
+  background-color: var(--primary-face-1);
   border-radius: 50%;
   z-index: -1;
 }
@@ -855,7 +855,7 @@
   padding: 0;
   font-size: 12px;
   line-height: 20px;
-  color: var(--grey-7);
+  color: var(--grey-main-2);
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
@@ -866,7 +866,7 @@
 
 /* 选项步骤条 - 已完成状态标题样式 */
 .hony-steps-option .hony-step-item-finish .hony-step-item-title {
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 /* 选项步骤条 - 进行中状态标题样式 */
@@ -889,7 +889,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: -10;
   animation: pulse 2s infinite;
 }
@@ -906,7 +906,7 @@
 
 /* 进行中状态标题文字颜色 */
 .hony-steps .hony-step-item-process .hony-step-item-title {
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 .hony-steps-horizontal {
@@ -982,17 +982,17 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--grey-4);
+  background-color: var(--grey-face-3);
   position: relative;
   z-index: 1;
 }
 
 .hony-steps-left .hony-step-item-finish .hony-step-item-icon {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
 }
 
 .hony-steps-left .hony-step-item-process .hony-step-item-icon {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
 }
 
 /* 步骤内容样式 - 左对齐 */
@@ -1019,7 +1019,7 @@
   content: '';
   display: block;
   height: 2px;
-  background-color: var(--grey-3);
+  background-color: var(--grey-face-2);
   margin-top: 11px;
   margin-left: 12px;
   flex: 1;
@@ -1027,15 +1027,15 @@
 }
 
 .hony-steps-left .hony-step-item-default .hony-step-item-content-wrapper::after {
-  background-color: var(--grey-3);
+  background-color: var(--grey-face-2);
 }
 
 .hony-steps-left .hony-step-item-finish .hony-step-item-content-wrapper::after {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
 }
 
 .hony-steps-left .hony-step-item-process .hony-step-item-content-wrapper::after {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
 }
 
 /* 移除原来的连接线样式 */
@@ -1049,7 +1049,7 @@
   font-weight: 500;
   line-height: 22px;
   margin: 4px 0 0px 0;
-  color: var(--grey-12);
+  color: var(--grey-text-1);
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
@@ -1073,17 +1073,17 @@
 
 /* 左对齐步骤条已完成标题颜色 */
 .hony-steps-left .hony-step-item-finish .hony-step-item-title {
-  color: var(--grey-12);
+  color: var(--grey-text-1);
 }
 
 /* 左对齐步骤条进行中标题颜色 */
 .hony-steps-left .hony-step-item-process .hony-step-item-title {
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 /* 左对齐步骤条未开始标题颜色 */
 .hony-steps-left .hony-step-item-default .hony-step-item-title {
-  color: var(--grey-9);
+  color: var(--grey-main-1);
 }
 
 /* 步骤描述样式 - 左对齐 */
@@ -1094,7 +1094,7 @@
   flex: 0 0 auto;
   font-size: 12px;
   line-height: 20px;
-  color: var(--grey-7);
+  color: var(--grey-main-2);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1110,7 +1110,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--grey-4);
+  background-color: var(--grey-face-3);
   display: block;
   position: relative;
   z-index: 1;
@@ -1150,12 +1150,12 @@
 }
 
 .hony-steps-basic .hony-step-item-finish .hony-step-item-icon {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   display: block;
 }
 
 .hony-steps-basic .hony-step-item-process .hony-step-item-icon {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   display: block;
   position: relative;
   z-index: 2;
@@ -1175,12 +1175,12 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: -1;
 }
 
 .hony-steps-basic .hony-step-item-default .hony-step-item-icon {
-  background-color: var(--grey-4);
+  background-color: var(--grey-face-3);
   display: block;
 }
 
@@ -1200,20 +1200,20 @@
 }
 
 .hony-steps-number .hony-step-item-finish .hony-step-item-icon {
-  background-color: var(--primary-1);
-  color: var(--primary-6);
-  border: 1px solid var(--primary-6);
+  background-color: var(--primary-face-1);
+  color: var(--primary-main-1);
+  border: 1px solid var(--primary-main-1);
 }
 
 .hony-steps-number .hony-step-item-process .hony-step-item-icon {
-  background-color: var(--primary-6);
-  color: #ffffff;
+  background-color: var(--primary-main-1);
+  color: var(--primary-main-5);
 }
 
 .hony-steps-number .hony-step-item-default .hony-step-item-icon {
-  background-color: var(--grey-1);
-  color: var(--grey-9);
-  border: 1px solid var(--grey-3);
+  background-color: var(--grey-bg-1);
+  color: var(--grey-main-1);
+  border: 1px solid var(--grey-face-2);
 }
 
 /* 左对齐步骤条 - 序号样式 */
@@ -1224,7 +1224,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: var(--primary-1);
+  background-color: var(--primary-face-1);
   margin-right: 12px;
   flex-shrink: 0;
   box-sizing: border-box;
@@ -1242,27 +1242,27 @@
   flex-shrink: 0;
   box-sizing: border-box;
   margin: 0;
-  border: 1px solid var(--primary-6);
+  border: 1px solid var(--primary-main-1);
 }
 
 .hony-steps-left.hony-steps-number .hony-step-item-process .hony-step-item-icon-wrapper {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
 }
 
 .hony-steps-left.hony-steps-number.hony-steps-icon .hony-step-item-process .hony-step-item-icon {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   color: #ffffff;
   border: none;
 }
 
 .hony-steps-left.hony-steps-number .hony-step-item-default .hony-step-item-icon-wrapper {
-  background-color: var(--grey-1);
+  background-color: var(--grey-bg-1);
 }
 
 .hony-steps-left.hony-steps-number .hony-step-item-default .hony-step-item-icon {
-  background-color: var(--grey-1);
-  color: var(--grey-9);
-  border: 1px solid var(--grey-3);
+  background-color: var(--grey-bg-1);
+  color: var(--grey-main-1);
+  border: 1px solid var(--grey-face-2);
 }
 
 /* 左对齐步骤条 - 图标样式 */
@@ -1283,7 +1283,7 @@
   height: 24px;
   border-radius: 50%;
   background-color: transparent;
-  color: var(--primary-6);
+  color: var(--primary-main-1);
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -1295,7 +1295,7 @@
 
 .hony-steps-left.hony-steps-icon .hony-step-item-icon .iconfont {
   font-size: 24px;
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 .hony-steps-left.hony-steps-icon .hony-step-item-process .hony-step-item-icon-wrapper {
@@ -1304,12 +1304,12 @@
 
 .hony-steps-left.hony-steps-icon .hony-step-item-process .hony-step-item-icon {
   background-color: transparent;
-  color: var(--primary-6);
+  color: var(--primary-main-1);
   border: none;
 }
 
 .hony-steps-left.hony-steps-icon .hony-step-item-process .hony-step-item-icon .iconfont {
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 .hony-steps-left.hony-steps-icon .hony-step-item-default .hony-step-item-icon-wrapper {
@@ -1318,12 +1318,12 @@
 
 .hony-steps-left.hony-steps-icon .hony-step-item-default .hony-step-item-icon {
   background-color: transparent;
-  color: var(--grey-4);
+  color: var(--grey-face-3);
   border: none;
 }
 
 .hony-steps-left.hony-steps-icon .hony-step-item-default .hony-step-item-icon .iconfont {
-  color: var(--grey-4);
+  color: var(--grey-face-3);
 }
 
 /* 左对齐步骤条 - 百分比样式 */
@@ -1343,7 +1343,7 @@
   height: 24px;
   font-size: 12px;
   font-weight: 500;
-  color: var(--primary-6);
+  color: var(--primary-main-1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1353,7 +1353,7 @@
 }
 
 .hony-steps-left.hony-steps-percent .hony-step-item-default .hony-step-item-icon {
-  color: var(--grey-9);
+  color: var(--grey-main-1);
 }
 
 /* 图标样式步骤条 */
@@ -1369,15 +1369,15 @@
 }
 
 .hony-steps-icon .hony-step-item-finish .hony-step-item-icon {
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 .hony-steps-icon .hony-step-item-process .hony-step-item-icon {
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 .hony-steps-icon .hony-step-item-default .hony-step-item-icon {
-  color: var(--grey-4);
+  color: var(--grey-face-3);
 }
 
 /* 百分比样式步骤条 */
@@ -1397,20 +1397,20 @@
 }
 
 .hony-steps-percent .hony-step-item-finish .hony-step-item-icon {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   color: #ffffff;
 }
 
 .hony-steps-percent .hony-step-item-process .hony-step-item-icon {
   background-color: #ffffff;
-  color: var(--primary-6);
-  border: 2px solid var(--primary-6);
+  color: var(--primary-main-1);
+  border: 2px solid var(--primary-main-1);
 }
 
 .hony-steps-percent .hony-step-item-default .hony-step-item-icon {
   background-color: #ffffff;
-  color: var(--grey-4);
-  border: 2px solid var(--grey-3);
+  color: var(--grey-face-3);
+  border: 2px solid var(--grey-face-2);
 }
 
 
@@ -1422,7 +1422,7 @@
   left: 0;
   width: calc(50% - 24px);
   height: 2px;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: 0;
   transform: translateX(0);
 }
@@ -1434,17 +1434,17 @@
   right: 0;
   width: calc(50% - 24px);
   height: 2px;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: 0;
   transform: translateX(0);
 }
 
 .hony-steps-centered.hony-steps-horizontal .hony-step-item-default::before {
-  background-color: var(--grey-3);
+  background-color: var(--grey-face-2);
 }
 
 .hony-steps-centered.hony-steps-horizontal .hony-step-item-default::after {
-  background-color: var(--grey-3);
+  background-color: var(--grey-face-2);
 }
 
 .hony-steps-centered.hony-steps-horizontal .hony-step-item:first-child::before {
@@ -1470,7 +1470,7 @@
 }
 
 .hony-steps-centered.hony-steps-horizontal .hony-step-item-default::after {
-  background-color: var(--grey-3);
+  background-color: var(--grey-face-2);
 }
 
 .hony-steps-centered.hony-steps-horizontal .hony-step-item:first-child::before {
@@ -1501,7 +1501,7 @@
   left: 24px;
   right: -50%;
   height: 1px;
-  background-color: var(--grey-3);
+  background-color: var(--grey-face-2);
   z-index: 0;
 }
 
@@ -1510,11 +1510,11 @@
 }
 
 .hony-steps-left.hony-steps-horizontal .hony-step-item-finish::after {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
 }
 
 .hony-steps-left.hony-steps-horizontal .hony-step-item-process::after {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
 }
 
 /* 移除箭头样式 */
@@ -1546,7 +1546,7 @@
   text-align: center;
   font-size: 12px;
   line-height: 20px;
-  color: var(--grey-7);
+  color: var(--grey-main-2);
 }
 
 /* 竖直步骤条样式 */
@@ -1607,7 +1607,7 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-  color: var(--grey-12);
+  color: var(--grey-text-1);
 }
 
 .hony-steps-vertical .hony-step-item-description {
@@ -1616,7 +1616,7 @@
   text-align: left;
   font-size: 12px;
   line-height: 20px;
-  color: var(--grey-7);
+  color: var(--grey-main-2);
 }
 
 /* 竖直步骤条连接线 */
@@ -1631,7 +1631,7 @@
   left: 12px;
   width: 1px;
   height: calc(100% - 16px);
-  background-color: var(--grey-3);
+  background-color: var(--grey-face-2);
   z-index: 0;
 }
 
@@ -1640,11 +1640,11 @@
 }
 
 .hony-steps-vertical .hony-step-item-finish::before {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
 }
 
 .hony-steps-vertical .hony-step-item-process::before {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
 }
 
 /* 竖直步骤条 - 基础样式 */
@@ -1652,15 +1652,15 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--grey-4);
+  background-color: var(--grey-face-3);
 }
 
 .hony-steps-vertical.hony-steps-basic .hony-step-item-finish .hony-step-item-icon {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
 }
 
 .hony-steps-vertical.hony-steps-basic .hony-step-item-process .hony-step-item-icon {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   position: relative;
   z-index: 2;
 }
@@ -1674,7 +1674,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: 0;
 }
 
@@ -1687,7 +1687,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   z-index: -1;
   animation: pulse 2s infinite;
 }
@@ -1719,33 +1719,33 @@
 }
 
 .hony-steps-vertical.hony-steps-number .hony-step-item-finish .hony-step-item-icon-wrapper {
-  background-color: var(--primary-1);
+  background-color: var(--primary-face-1);
 }
 
 .hony-steps-vertical.hony-steps-number .hony-step-item-finish .hony-step-item-icon {
-  background-color: var(--primary-1);
-  color: var(--primary-6);
-  border: 1px solid var(--primary-6);
+  background-color: var(--primary-face-1);
+  color: var(--primary-main-1);
+  border: 1px solid var(--primary-main-1);
 }
 
 .hony-steps-vertical.hony-steps-number .hony-step-item-process .hony-step-item-icon-wrapper {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
 }
 
 .hony-steps-vertical.hony-steps-number .hony-step-item-process .hony-step-item-icon {
-  background-color: var(--primary-6);
+  background-color: var(--primary-main-1);
   color: #ffffff;
   border: none;
 }
 
 .hony-steps-vertical.hony-steps-number .hony-step-item-default .hony-step-item-icon-wrapper {
-  background-color: var(--grey-1);
+  background-color: var(--grey-bg-1);
 }
 
 .hony-steps-vertical.hony-steps-number .hony-step-item-default .hony-step-item-icon {
-  background-color: var(--grey-1);
-  color: var(--grey-9);
-  border: 1px solid var(--grey-3);
+  background-color: var(--grey-bg-1);
+  color: var(--grey-main-1);
+  border: 1px solid var(--grey-face-2);
 }
 
 /* 竖直步骤条 - 图标样式 */
@@ -1765,7 +1765,7 @@
   height: 24px;
   border-radius: 50%;
   background-color: transparent;
-  color: var(--primary-6);
+  color: var(--primary-main-1);
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -1777,19 +1777,19 @@
 
 .hony-steps-vertical.hony-steps-icon .hony-step-item-icon .iconfont {
   font-size: 24px;
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 .hony-steps-vertical.hony-steps-icon .hony-step-item-finish .hony-step-item-icon .iconfont {
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 .hony-steps-vertical.hony-steps-icon .hony-step-item-process .hony-step-item-icon .iconfont {
-  color: var(--primary-6);
+  color: var(--primary-main-1);
 }
 
 .hony-steps-vertical.hony-steps-icon .hony-step-item-default .hony-step-item-icon .iconfont {
-  color: var(--grey-4);
+  color: var(--grey-face-3);
 }
 
 /* 响应式调整 */
@@ -1817,7 +1817,7 @@
 .hony-steps-example {
   display: inline-block;
   padding: 24px;
-  background-color: #ffffff;
+  background-color: var(--grey-face-1);
   border-radius: 12px;
   margin-bottom: 24px;
   width: 100%;

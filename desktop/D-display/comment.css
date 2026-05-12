@@ -17,7 +17,6 @@
   align-items: flex-start;
   gap: 12px;
   padding: px;
-  border-radius: var(--radius-md);
   transition: all var(--transition-base);
 }
 
@@ -45,30 +44,54 @@
   align-items: center;
   gap: 8px;
 }
-
+.hony-article-header-article {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
 .hony-article-nickname {
-  font-size: var(--font-size-sm);
+  font-size: 14px;
   font-weight: var(--font-weight-medium);
   color: var(--grey-text-1);
   line-height: 20px;
 }
-
+.hony-article-nickname-sm {
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  color: var(--grey-text-3);
+  line-height: 20px;
+}
+.hony-article-title-1 {
+  font-size: 16px;
+  color: var(--grey-text-1);
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+.hony-article-time{
+  font-size: 12px;
+  color: var(--grey-text-4);
+  line-height: 20px;
+  flex: 1;
+   text-align: right;
+}
 .hony-article-tag {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   padding: 2px 8px;
 }
 
 .hony-article-title {
-  font-size: var(--font-size-sm);
+  font-size: 12px;
   color: var(--grey-text-4);
   font-size: 12px;
 }
 
 /* 文章正文 */
 .hony-article-body {
-  font-size: var(--font-size-sm);
+  font-size: 14px;
   color: var(--grey-text-2);
-  line-height: var(--line-height-base);
+  line-height: 22px;
   margin-bottom: 8px;
   word-break: break-word;
 }
@@ -81,12 +104,12 @@
 }
 
 .hony-article-time {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-text-4);
 }
 
 .hony-article-status {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-text-4);
   margin-left: 8px;
 }
@@ -102,7 +125,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-text-4);
   cursor: pointer;
   transition: color var(--transition-base);
@@ -117,7 +140,7 @@
 }
 
 .hony-article-action-text {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
 }
 
 /* ============================================================
@@ -160,30 +183,30 @@
 }
 
 .hony-comment-nickname {
-  font-size: var(--font-size-sm);
+  font-size: 12px;
   font-weight: var(--font-weight-medium);
   color: var(--grey-text-1);
 }
 
 .hony-comment-tag {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   padding: 2px 6px;
 }
 
 .hony-comment-title {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-text-3);
 }
 
 .hony-comment-divider {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-border-2);
   margin: 0 4px;
 }
 
 /* 评论正文 */
 .hony-comment-body {
-  font-size: var(--font-size-sm);
+  font-size:12px;
   color: var(--grey-text-1);
   line-height: var(--line-height-base);
   margin-bottom: 12px;
@@ -198,12 +221,12 @@
 }
 
 .hony-comment-time {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-text-4);
 }
 
 .hony-comment-publish {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-text-4);
   margin-left: 8px;
 }
@@ -219,7 +242,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-text-4);
   cursor: pointer;
   transition: color var(--transition-base);
@@ -277,21 +300,21 @@
 }
 
 .hony-reply-nickname {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   font-weight: var(--font-weight-medium);
   color: var(--primary-main-1);
   line-height: 24px;
 }
 
 .hony-reply-title {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-text-3);
   line-height: 24px;
 }
 
 /* 回复正文 */
 .hony-reply-body {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-text-1);
   line-height: var(--line-height-base);
   margin-bottom: 8px;
@@ -307,12 +330,12 @@
 }
 
 .hony-reply-time {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-text-4);
 }
 
 .hony-reply-publish {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-text-4);
   margin-left: 8px;
 }
@@ -328,7 +351,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-text-4);
   cursor: pointer;
   transition: color var(--transition-base);
@@ -355,10 +378,10 @@
     border-radius: var(--radius-md);
 }
 .hony-comment-replies.hony-back {
-  margin-top: 8px;
-  padding: 12px;
+  margin-top: 12px;
+  padding: 16px;
   background: var(--grey-face-1);
-  border-radius: var(--radius-md);
+  border-radius: 8px;
 }
 /* 输入框头像 */
 .hony-comment-input-avatar-wrapper {
@@ -383,14 +406,15 @@
   width: 100%;
   min-height: 80px;
   padding: 8px;
-  font-size: var(--font-size-sm);
+  font-size: 12px;
   color: var(--grey-text-1);
   background: transparent;
   border: 1px solid var(--grey-border-2);
   outline: none;
   resize: none;
   font-family: inherit;
-  border-radius: var(--radius-md);
+  border-radius: 4px;
+
 }
 .hony-comment-textarea:focus{
   background: var(--grey-bg-0);
@@ -412,7 +436,7 @@
 
 /* 字数统计 */
 .hony-comment-word-count {
-  font-size: var(--font-size-xs);
+  font-size: 12px;
   color: var(--grey-text-4);
 }
 

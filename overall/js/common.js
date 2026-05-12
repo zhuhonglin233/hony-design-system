@@ -47,6 +47,7 @@ function checkNavbarScroll() {
 
 // 侧边导航点击效果
 function initSideNav() {
+    // 旧版侧边栏
     const sideNavItems = document.querySelectorAll('.nav-menu-section .nav-item');
     sideNavItems.forEach(item => {
         if (item.getAttribute('onclick')) {
@@ -57,6 +58,65 @@ function initSideNav() {
                 this.classList.add('active');
             });
         }
+    });
+    
+    // 新版侧边栏（system-table-separation.html）
+    const newSideNavItems = document.querySelectorAll('.hony-nav-menu-item');
+    newSideNavItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            // 如果点击的是有子菜单的父菜单，不进行页面跳转
+            if (this.classList.contains('has-submenu')) {
+                return;
+            }
+            
+            // 移除所有active状态
+            newSideNavItems.forEach(navItem => {
+                navItem.classList.remove('active');
+            });
+            // 添加当前项的active状态
+            this.classList.add('active');
+            
+            // 获取页面的onclick属性
+            const onclick = this.getAttribute('onclick');
+            if (onclick && onclick.includes('navigateToPage')) {
+                // 已经是navigateToPage调用，不需要处理
+                return;
+            }
+            
+            // 检查是否有data-page属性指定要跳转的页面
+            const pageFile = this.getAttribute('data-page');
+            if (pageFile) {
+                e.preventDefault();
+                e.stopPropagation();
+                navigateToPage(pageFile);
+            }
+        });
+        
+        // 二级菜单项点击事件
+        const submenuItems = item.querySelectorAll('.hony-nav-menu-subitem');
+        submenuItems.forEach(subitem => {
+            subitem.addEventListener('click', function(e) {
+                e.stopPropagation();
+                console.log('=== 二级菜单点击 ===');
+                console.log('点击的菜单项:', this.textContent);
+                
+                // 移除所有二级菜单的active状态
+                submenuItems.forEach(sub => sub.classList.remove('active'));
+                // 添加当前项的active状态
+                this.classList.add('active');
+                
+                // 获取页面文件
+                const pageFile = this.getAttribute('data-page');
+                console.log('data-page属性值:', pageFile);
+                
+                if (pageFile) {
+                    console.log('调用 navigateToPage:', pageFile);
+                    navigateToPage(pageFile);
+                } else {
+                    console.log('data-page 属性为空');
+                }
+            });
+        });
     });
 }
 
@@ -358,6 +418,109 @@ async function loadComponent(containerId, componentFile) {
 }
 
 /**
+ * 加载页面内容到主内容容器
+ * @param {string} pageFile - 页面文件名（如：system-home.html）
+ * @returns {Promise<string>} - 返回页面的HTML内容
+ */
+async function loadPageContent(pageFile) {
+    console.log('=== Loading page content ===');
+    console.log('Page file:', pageFile);
+    
+    try {
+        // 计算正确的路径（页面文件在同一目录下）
+        const fullPath = pageFile;
+        
+        console.log('Full path:', fullPath);
+        
+        // 使用 XMLHttpRequest 获取页面内容
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', fullPath, true);
+        
+        return new Promise((resolve, reject) => {
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    console.log('Page content loaded successfully');
+                    
+                    // 创建临时容器解析HTML
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = xhr.responseText;
+                    
+                    // 查找 main 元素或 system-page-main 元素
+                    let mainContent = tempDiv.querySelector('.system-page-main');
+                    if (mainContent) {
+                        resolve(mainContent.innerHTML);
+                    } else {
+                        // 如果没有找到，尝试获取 body 的内容
+                        const bodyContent = tempDiv.querySelector('body');
+                        if (bodyContent) {
+                            resolve(bodyContent.innerHTML);
+                        } else {
+                            reject(new Error('No main content found in page'));
+                        }
+                    }
+                } else {
+                    console.error('Failed to load page content, status:', xhr.status);
+                    reject(new Error('Failed to load page content, status: ' + xhr.status));
+                }
+            };
+            
+            xhr.onerror = function() {
+                console.error('Network error while loading page content');
+                reject(new Error('Network error'));
+            };
+            
+            xhr.send();
+        });
+    } catch (error) {
+        console.error('Error loading page content:', error);
+        throw error;
+    }
+}
+
+/**
+ * 导航到新页面（更新主内容区域）
+ * @param {string} pageFile - 页面文件名
+ * @param {string} containerId - 主内容容器ID，默认 'system-page-main'
+ */
+window.navigateToPage = async function(pageFile, containerId = 'system-page-main') {
+    console.log('=== Navigating to page ===');
+    console.log('Page:', pageFile);
+    console.log('Container:', containerId);
+    
+    const container = document.getElementById(containerId);
+    if (!container) {
+        console.error(`Container #${containerId} not found`);
+        alert('错误：主内容容器未找到！');
+        return;
+    }
+    console.log('容器找到:', container);
+    
+    try {
+        // 显示加载状态
+        console.log('显示加载状态...');
+        container.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100%; color: #999;">加载中...</div>';
+        
+        // 加载新内容
+        console.log('开始加载页面内容...');
+        const content = await loadPageContent(pageFile);
+        console.log('页面内容加载完成，内容长度:', content.length);
+        
+        // 更新容器内容
+        console.log('更新容器内容...');
+        container.innerHTML = content;
+        console.log('容器内容更新完成');
+        
+        // 更新浏览器URL（不刷新页面）
+        window.history.pushState({}, '', pageFile);
+        
+        console.log('Navigation completed');
+    } catch (error) {
+        console.error('Navigation failed:', error);
+        container.innerHTML = '<div style="padding: 20px; color: #f56c6c;">加载失败，请稍后重试</div>';
+    }
+}
+
+/**
  * 根据当前 URL 自动设置导航的 active 状态
  */
 function setActiveNavItem() {
@@ -408,7 +571,7 @@ function setActiveNavItem() {
             if (currentPath.includes('/Specification/') && onclick.includes('Specification')) {
                 topNavItems.forEach(i => i.classList.remove('active'));
                 item.classList.add('active');
-            } else if (currentPath.includes('/desktop/') && onclick.includes('desktop')) {
+            } else if (currentPath.includes('/desktop/A-system') && onclick.includes('desktop/A-system')) {
                 topNavItems.forEach(i => i.classList.remove('active'));
                 item.classList.add('active');
             }
@@ -436,10 +599,146 @@ async function loadSpecificationComponents() {
     await loadComponent('sidebar-container', 'sidebar-specification.html');
 }
 
+// ============================================================
+// 主题切换功能
+// ============================================================
+
+/**
+ * 切换主题
+ * @param {string} theme - 'light' 或 'dark'
+ */
+window.switchTheme = function(theme) {
+    var root = document.documentElement;
+    var tabs = document.querySelectorAll('.hony-tab-item');
+    
+    if (theme === 'dark') {
+        root.classList.add('Dark');
+    } else {
+        root.classList.remove('Dark');
+    }
+    
+    // 更新标签状态
+    tabs.forEach(function(tab) {
+        tab.classList.remove('active');
+        if ((theme === 'dark' && tab.dataset.tab === 'tab-segment-2') ||
+            (theme === 'light' && tab.dataset.tab === 'tab-segment-1')) {
+            tab.classList.add('active');
+        }
+    });
+    
+    // 保存主题到本地存储
+    localStorage.setItem('theme', theme);
+}
+
+/**
+ * 初始化主题（默认浅色模式）
+ */
+function initTheme() {
+    // 默认使用浅色模式
+    document.documentElement.classList.remove('Dark');
+    
+    // 更新标签状态，确保浅色模式标签为激活状态
+    var tabs = document.querySelectorAll('.hony-tab-item');
+    tabs.forEach(function(tab) {
+        tab.classList.remove('active');
+        if (tab.dataset.tab === 'tab-segment-1') {
+            tab.classList.add('active');
+        }
+    });
+    
+    // 清除之前保存的主题设置，确保每次进入都是浅色模式
+    localStorage.removeItem('theme');
+}
+
+// ============================================================
+// 打字效果功能（打字-删除-循环）
+// ============================================================
+
+const typingLines = [
+    '您好！很高兴与你相遇在这里',
+    '这是我精心搭建的个人 UI 组件库',
+    '记录设计与开发的沉淀',
+    '遵循统一设计规范'
+];
+
+let currentTypingIndex = 0;
+let currentCharIndex = 0;
+let isTyping = true;
+let isDeleting = false;
+let typingInterval = null;
+
+function initTypingEffect() {
+    const typingLine = document.getElementById('typing-line');
+    if (!typingLine) {
+        return;
+    }
+    
+    typingLine.textContent = '';
+    currentTypingIndex = 0;
+    currentCharIndex = 0;
+    isTyping = true;
+    isDeleting = false;
+    
+    startTypingCycle();
+}
+
+function startTypingCycle() {
+    const typingLine = document.getElementById('typing-line');
+    if (!typingLine) return;
+    
+    const currentLine = typingLines[currentTypingIndex];
+    
+    clearInterval(typingInterval);
+    
+    if (isDeleting) {
+        // 删除模式：一个字一个字删除
+        typingInterval = setInterval(() => {
+            if (currentCharIndex > 0) {
+                currentCharIndex--;
+                typingLine.textContent = currentLine.substring(0, currentCharIndex);
+            } else {
+                clearInterval(typingInterval);
+                isDeleting = false;
+                // 切换到下一行
+                currentTypingIndex = (currentTypingIndex + 1) % typingLines.length;
+                // 短暂停顿后开始打字
+                setTimeout(startTypingCycle, 300);
+            }
+        }, 50);
+    } else {
+        // 打字模式：一个字一个字输入
+        typingInterval = setInterval(() => {
+            if (currentCharIndex < currentLine.length) {
+                typingLine.textContent = currentLine.substring(0, currentCharIndex + 1);
+                currentCharIndex++;
+            } else {
+                clearInterval(typingInterval);
+                // 打字完成，等待一段时间后开始删除
+                setTimeout(() => {
+                    isDeleting = true;
+                    startTypingCycle();
+                }, 2000);
+            }
+        }, 80);
+    }
+}
+
+// ============================================================
 // 页面加载完成后初始化
+// ============================================================
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('=== Page Loaded ===');
     console.log('Current Path:', window.location.pathname);
+    
+    // 初始化主题
+    initTheme();
+    
+    // 初始化打字效果（仅在首页）
+    const typingLine = document.getElementById('typing-line');
+    if (typingLine) {
+        initTypingEffect();
+    }
     
     // 检查容器是否存在
     const hasNavbarContainer = document.getElementById('navbar-container');
@@ -459,6 +758,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentPath.includes('/desktop/')) {
             console.log('Loading Desktop Components...');
             loadDesktopComponents();
+            // 初始化单个图片上传组件
+            initSingleImageUpload();
         } else if (currentPath.includes('/Specification/')) {
             console.log('Loading Specification Components...');
             loadSpecificationComponents();
@@ -598,4 +899,159 @@ function initSearchBox() {
             }, 200);
         });
     });
+}
+
+// 单个图片上传组件初始化
+function initSingleImageUpload() {
+    // 使用更精确的选择器，确保获取正确的元素
+    const innerContainer = document.getElementById('hony-upload-single-image-container');
+    if (!innerContainer) {
+        console.log('单个图片上传容器未找到');
+        return;
+    }
+    
+    const outerContainer = innerContainer.closest('.hony-upload-single-image-container');
+    if (!outerContainer) {
+        console.log('外部容器未找到');
+        return;
+    }
+    
+    const input = innerContainer.querySelector('.hony-upload-input');
+    const uploadItem = innerContainer.querySelector('.hony-upload-single-image-item');
+    const preview = innerContainer.querySelector('.hony-upload-single-image-preview');
+    const previewImg = preview ? preview.querySelector('img') : null;
+    const filenameSpan = outerContainer.querySelector('.hony-upload-single-image-filename');
+    const statusIcon = outerContainer.querySelector('.hony-upload-status-icon');
+    const iconElement = statusIcon ? statusIcon.querySelector('.iconfont') : null;
+    const uploadBtn = outerContainer.querySelector('.hony-upload-single-image-operation .hony-btn');
+    
+    console.log('单个图片上传组件初始化成功', {
+        outerContainer,
+        innerContainer,
+        input,
+        uploadItem,
+        preview,
+        filenameSpan,
+        statusIcon,
+        uploadBtn
+    });
+    
+    // 点击整个容器触发文件选择
+    outerContainer.addEventListener('click', function(e) {
+        // 如果点击的是删除按钮或预览覆盖层，不触发上传
+        if (e.target.classList.contains('icon-lajitong') || 
+            e.target.closest('.icon-lajitong') ||
+            e.target.closest('.hony-upload-single-image-preview-overlay')) {
+            return;
+        }
+        // 如果已经有图片，不触发上传
+        if (innerContainer.classList.contains('has-image')) {
+            return;
+        }
+        input.click();
+    });
+    
+    // 点击上传按钮触发文件选择
+    if (uploadItem) {
+        uploadItem.addEventListener('click', function(e) {
+            e.stopPropagation();
+            input.click();
+        });
+    }
+    
+    // 点击文字按钮触发文件选择
+    if (uploadBtn) {
+        uploadBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            input.click();
+        });
+    }
+    
+    // 文件选择变化处理
+    input.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            // 显示加载状态
+            showUploadStatus('loading', file.name);
+            
+            // 模拟上传过程
+            setTimeout(() => {
+                // 创建预览URL
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    previewImg.src = event.target.result;
+                    preview.style.display = 'block';
+                    // 添加has-image类，隐藏上传按钮
+                    innerContainer.classList.add('has-image');
+                    
+                    // 模拟上传成功（90%概率成功，10%概率失败）
+                    const isSuccess = Math.random() > 0.1;
+                    if (isSuccess) {
+                        showUploadStatus('success', file.name);
+                    } else {
+                        showUploadStatus('error', file.name);
+                    }
+                };
+                reader.readAsDataURL(file);
+            }, 1500); // 模拟1.5秒上传时间
+        }
+    });
+    
+    // 删除图片 - 添加事件委托到预览容器
+    if (preview) {
+        preview.addEventListener('click', function(e) {
+            const deleteBtn = e.target.closest('.icon-lajitong');
+            if (deleteBtn) {
+                e.stopPropagation();
+                preview.style.display = 'none';
+                if (previewImg) {
+                    previewImg.src = '';
+                }
+                input.value = '';
+                innerContainer.classList.remove('has-image');
+                // 恢复初始状态
+                showUploadStatus('idle', '上传图片');
+            }
+        });
+    }
+    
+    // 显示上传状态
+    function showUploadStatus(status, filename) {
+        if (filenameSpan) {
+            filenameSpan.textContent = filename;
+        }
+        // 修改按钮文字
+        if (uploadBtn) {
+            if (status === 'idle') {
+                uploadBtn.textContent = '点击上传';
+            } else {
+                uploadBtn.textContent = '重新上传';
+            }
+        }
+        if (statusIcon) {
+            if (status === 'idle') {
+                statusIcon.style.display = 'none';
+                statusIcon.classList.remove('hony-upload-status-loading', 'hony-upload-status-success', 'hony-upload-status-error');
+            } else {
+                statusIcon.style.display = 'flex';
+                statusIcon.classList.remove('hony-upload-status-loading', 'hony-upload-status-success', 'hony-upload-status-error');
+                
+                if (iconElement) {
+                    if (status === 'loading') {
+                        // 加载图标
+                        iconElement.innerHTML = '&#xe63d;';
+                        statusIcon.classList.add('hony-upload-status-loading');
+                    } else if (status === 'success') {
+                        // 成功图标
+                        iconElement.innerHTML = '&#xf07e;';
+                        statusIcon.classList.add('hony-upload-status-success');
+                    } else if (status === 'error') {
+                        // 失败图标
+                        iconElement.innerHTML = '&#xf07b;';
+                        statusIcon.classList.add('hony-upload-status-error');
+                    }
+                }
+            }
+        }
+    }
 }

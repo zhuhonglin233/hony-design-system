@@ -40,6 +40,7 @@
     display: flex;
     align-items: center;     /* 垂直居中 */
     justify-content: flex-end; /* 水平右对齐 */
+    background: var(--grey-face-1);
 }
 .hony-calendar-dates-item.hony-dates-item-left {
     border-bottom: 1px solid var(--grey-border-1);
@@ -284,6 +285,10 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-.hony-date-dates-item .hony-date-disabled{
+.hony-date-dates-item.hony-date-disabled {
+    color: var(--grey-text-4);
+    cursor: not-allowed;
+}
+.hony-date-dates-item.hony-date-disabled .hony-date-dates-num {
     color: var(--grey-text-4);
 }

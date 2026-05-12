@@ -4,287 +4,290 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>选框 - 桌面端组件</title>
+    <link rel="icon" href="../../overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../../overall/main.css">
     <link rel="stylesheet" href="../../overall/icons/iconfont.css">
     <link rel="stylesheet" href="checkbox.css">
     <script src="../../overall/js/common.js"></script>
     <script src="checkbox.js"></script>
+<link rel="stylesheet" href="../B-navigation/tabs.css">
 </head>
 <body>
     <div class="page-container">
         <!-- 左侧导航 -->
-        <div id="sidebar-container"></div>
-    
-        
+        <div id="sidebar-container"></div>      
         <!-- 主内容区域 -->
         <div class="main-content">
             <!-- 顶部导航栏 -->
             <div id="navbar-container"></div>
             <!-- 主内容区域 -->
-            <div class="main-content-area">
-                <!-- 内容 -->
-                <div class="content-area">
-                    <div class="content-main">
-                        <!-- 页面标题 -->
-                        <div class="page-header">
-                            <div class="design-code">design code 桌面端组件</div>
-                            <div class="page-title">选框</div>
-                            <div class="page-description">允许用户通过单击在选中和未选中之间切换。</div>
+            <div class="hony-content-area">
+                <!-- 页面标题 -->
+                <div class="page-header">
+                    <div class="design-code">design code 桌面端组件</div>
+                    <div class="page-title">选框</div>
+                    <div class="page-description">允许用户通过单击在选中和未选中之间切换。</div>
+                </div>               
+                <div class="main-content-area">
+                    <!-- 内容 -->
+                    <div class="content-area">
+                        <div class="content-main">
+                            <!-- 选框样式 Section -->
+                            <div class="section">
+                                <div class="section-title">基础<span style="color: var(--primary-main-1);">样式</span></div>
+                                <!-- 基础单选框 -->
+                                <div class="subsection" id="hony-radio-styles">
+                                    <div class="subsection-title">基础单选框</div>
+                                    <div class="subsection-description">基础单选框：用于从多个互斥选项中选择唯一答案，包含常规、选中、禁用等状态，支持表单验证。</div>
+                                    <div class="component-container">
+                                        <div class="hony-checkbox-group">
+                                            <div class="hony-checkbox-item" onclick="toggleRadio(this)">
+                                                <div class="hony-radio-box"></div>
+                                            </div>
+                                            <div class="hony-checkbox-item" onclick="toggleRadio(this)">
+                                                <div class="hony-radio-box checked"></div>
+                                            </div>
+                                            <div class="hony-checkbox-item disabled">
+                                                <div class="hony-radio-box disabled"></div>
+                                            </div>
+                                            <div class="hony-checkbox-item disabled">
+                                                <div class="hony-radio-box checked disabled"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 基础复选框 -->
+                                <div class="subsection" id="hony-checkbox-styles">
+                                    <div class="subsection-title">基础复选框</div>
+                                    <div class="subsection-description">用于从多个选项中选择一个或多个，包含常规、选中、常规禁用、选中禁用四种状态，以及半选择状态。</div>
+
+                                    <div class="component-container">
+                                        <div class="hony-checkbox-group">
+                                            <div class="hony-checkbox-item" onclick="toggleCheckbox(this)">
+                                                <div class="hony-checkbox-box"></div>
+
+                                            </div>
+                                            <div class="hony-checkbox-item" onclick="toggleCheckbox(this)">
+                                                <div class="hony-checkbox-box checked"></div>
+
+                                            </div>
+                                            <div class="hony-checkbox-item" onclick="toggleCheckbox(this)">
+                                                <div class="hony-checkbox-box indeterminate"></div>
+
+                                            </div>
+                                            <div class="hony-checkbox-item disabled">
+                                                <div class="hony-checkbox-box disabled"></div>
+
+                                            </div>
+                                            <div class="hony-checkbox-item disabled">
+                                                <div class="hony-checkbox-box checked disabled"></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 单选框文字 -->
+                                <div class="subsection" id="hony-radio-text">
+                                    <div class="subsection-title">单选框文字</div>
+                                    <div class="subsection-description">单选框配合文字：单选框与文字标签组合使用，点击文字也可选择选项，提升用户操作体验。</div>
+                                    <div class="component-container">
+                                        <div class="hony-checkbox-group">
+                                            <div class="hony-checkbox-item" onclick="toggleRadio(this)">
+                                                <div class="hony-radio-box"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item" onclick="toggleRadio(this)">
+                                                <div class="hony-radio-box checked"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item disabled">
+                                                <div class="hony-radio-box disabled"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item disabled">
+                                                <div class="hony-radio-box checked disabled"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 复选框文字 -->
+                                <div class="subsection" id="hony-checkbox-text">
+                                    <div class="subsection-title">复选框文字</div>
+                                    <div class="subsection-description">复选框配合文字：复选框与文字标签组合使用，支持单选、多选、半选、禁用等多种状态。</div>
+                                    <div class="component-container">
+                                        <div class="hony-checkbox-group">
+                                            <div class="hony-checkbox-item" onclick="toggleCheckbox(this)">
+                                                <div class="hony-checkbox-box"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item" onclick="toggleCheckbox(this)">
+                                                <div class="hony-checkbox-box checked"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item" onclick="toggleCheckbox(this)">
+                                                <div class="hony-checkbox-box indeterminate"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item disabled">
+                                                <div class="hony-checkbox-box disabled"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item disabled">
+                                                <div class="hony-checkbox-box checked disabled"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 勾选样式 -->
+                                <div class="subsection" id="hony-checkmark-styles">
+                                    <div class="subsection-title">勾选样式</div>
+                                    <div class="subsection-description">单选框的另一种样式，包含常规、选中、常规禁用、选中禁用四种状态。</div>
+                                    <div class="component-container">
+                                        <div class="hony-checkbox-group">
+                                            <div class="hony-checkbox-item" onclick="toggleCheckmark(this)">
+                                                <div class="hony-checkmark-box"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item" onclick="toggleCheckmark(this)">
+                                                <div class="hony-checkmark-box checked"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item disabled">
+                                                <div class="hony-checkmark-box disabled"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item disabled">
+                                                <div class="hony-checkmark-box checked disabled"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <!-- 选框拓展样式 Section -->
+                            <div class="section">
+                                <div class="section-title">拓展<span style="color: var(--primary-main-1);">样式</span></div>
+                                
+                                <!-- 1. 带边框的单选框组 -->
+                                <div class="subsection" id="hony-radio-bordered-styles">
+                                    <div class="subsection-title">带边框的单选框组</div>
+                                    <div class="subsection-description">带边框的单选框组，包含常规、选中、常规禁用、选中禁用四种状态。</div>
+                                    <div class="component-container">
+                                        <div class="hony-checkbox-group-bordered">
+                                            <div class="hony-checkbox-item-bordered" onclick="toggleRadio(this)">
+                                                <div class="hony-radio-box"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item-bordered hony-checkboxed" onclick="toggleRadio(this)">
+                                                <div class="hony-radio-box checked"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item-bordered disabled">
+                                                <div class="hony-radio-box disabled"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item-bordered disabled hony-checkboxed">
+                                                <div class="hony-radio-box checked disabled"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 2. 带边框的复选框组 -->
+                                <div class="subsection" id="hony-checkbox-bordered-styles">
+                                    <div class="subsection-title">带边框的复选框组</div>
+                                    <div class="subsection-description">带边框的复选框组，包含常规、选中、半选择、常规禁用、选中禁用五种状态。</div>
+                                    <div class="component-container">
+                                        <div class="hony-checkbox-group-bordered">
+                                            <div class="hony-checkbox-item-bordered" onclick="toggleCheckbox(this)">
+                                                <div class="hony-checkbox-box"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item-bordered hony-checkboxed" onclick="toggleCheckbox(this)">
+                                                <div class="hony-checkbox-box checked"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item-bordered hony-checkboxed" onclick="toggleCheckbox(this)">
+                                                <div class="hony-checkbox-box indeterminate"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item-bordered disabled">
+                                                <div class="hony-checkbox-box disabled"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                            <div class="hony-checkbox-item-bordered disabled hony-checkboxed">
+                                                <div class="hony-checkbox-box checked disabled"></div>
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 3. 带边框的拓展选框组 -->
+                                <div class="subsection" id="hony-checkbox-expand-styles">
+                                    <div class="subsection-title">带边框的拓展选框组</div>
+                                    <div class="subsection-description">带边框的拓展选框组：在带边框单选框基础上增加了徽章标记，可显示额外信息或数量提示。</div>
+                                    <div class="component-container">
+                                        <div class="hony-checkbox-group-bordered">
+                                            <div class="hony-checkbox-item-bordered hony-checkbox-item-badge" onclick="toggleRadio(this)">
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                                <div class="hony-checkbox-badge">&#xf081;</div>
+                                            </div>
+                                            <div class="hony-checkbox-item-bordered hony-checkbox-item-badge hony-checkboxed" onclick="toggleRadio(this)">
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                                <div class="hony-checkbox-badge">&#xf081;</div>
+                                            </div>
+                                            <div class="hony-checkbox-item-bordered hony-checkbox-item-badge disabled">
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                                <div class="hony-checkbox-badge">&#xf081;</div>
+                                            </div>
+                                            <div class="hony-checkbox-item-bordered hony-checkbox-item-badge disabled hony-checkboxed">
+                                                <span class="hony-checkbox-text">菜单昵称</span>
+                                                <div class="hony-checkbox-badge">&#xf081;</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                        
+                            </div>
                         </div>
-
-                        <!-- 选框样式 Section -->
-                        <div class="section">
-                            <div class="section-title">基础<span style="color: var(--primary-main-1);">样式</span></div>
-                            <!-- 基础单选框 -->
-                            <div class="subsection" id="hony-radio-styles">
-                                <div class="subsection-title">基础单选框</div>
-                                <div class="subsection-description">基础单选框：用于从多个互斥选项中选择唯一答案，包含常规、选中、禁用等状态，支持表单验证。</div>
-                                <div class="component-container">
-                                    <div class="hony-checkbox-group">
-                                        <div class="hony-checkbox-item" onclick="toggleRadio(this)">
-                                            <div class="hony-radio-box"></div>
-                                        </div>
-                                        <div class="hony-checkbox-item" onclick="toggleRadio(this)">
-                                            <div class="hony-radio-box checked"></div>
-                                        </div>
-                                        <div class="hony-checkbox-item disabled">
-                                            <div class="hony-radio-box disabled"></div>
-                                        </div>
-                                        <div class="hony-checkbox-item disabled">
-                                            <div class="hony-radio-box checked disabled"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 基础复选框 -->
-                            <div class="subsection" id="hony-checkbox-styles">
-                                <div class="subsection-title">基础复选框</div>
-                                <div class="subsection-description">用于从多个选项中选择一个或多个，包含常规、选中、常规禁用、选中禁用四种状态，以及半选择状态。</div>
-
-                                <div class="component-container">
-                                    <div class="hony-checkbox-group">
-                                        <div class="hony-checkbox-item" onclick="toggleCheckbox(this)">
-                                            <div class="hony-checkbox-box"></div>
-
-                                        </div>
-                                        <div class="hony-checkbox-item" onclick="toggleCheckbox(this)">
-                                            <div class="hony-checkbox-box checked"></div>
-
-                                        </div>
-                                        <div class="hony-checkbox-item" onclick="toggleCheckbox(this)">
-                                            <div class="hony-checkbox-box indeterminate"></div>
-
-                                        </div>
-                                        <div class="hony-checkbox-item disabled">
-                                            <div class="hony-checkbox-box disabled"></div>
-
-                                        </div>
-                                        <div class="hony-checkbox-item disabled">
-                                            <div class="hony-checkbox-box checked disabled"></div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 单选框文字 -->
-                            <div class="subsection" id="hony-radio-styles">
-                                <div class="subsection-title">单选框文字</div>
-                                <div class="subsection-description">单选框配合文字：单选框与文字标签组合使用，点击文字也可选择选项，提升用户操作体验。</div>
-                                <div class="component-container">
-                                    <div class="hony-checkbox-group">
-                                        <div class="hony-checkbox-item" onclick="toggleRadio(this)">
-                                            <div class="hony-radio-box"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item" onclick="toggleRadio(this)">
-                                            <div class="hony-radio-box checked"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item disabled">
-                                            <div class="hony-radio-box disabled"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item disabled">
-                                            <div class="hony-radio-box checked disabled"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 复选框文字 -->
-                            <div class="subsection" id="hony-checkbox-styles">
-                                <div class="subsection-title">复选框文字</div>
-                                <div class="subsection-description">复选框配合文字：复选框与文字标签组合使用，支持单选、多选、半选、禁用等多种状态。</div>
-                                <div class="component-container">
-                                    <div class="hony-checkbox-group">
-                                        <div class="hony-checkbox-item" onclick="toggleCheckbox(this)">
-                                            <div class="hony-checkbox-box"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item" onclick="toggleCheckbox(this)">
-                                            <div class="hony-checkbox-box checked"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item" onclick="toggleCheckbox(this)">
-                                            <div class="hony-checkbox-box indeterminate"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item disabled">
-                                            <div class="hony-checkbox-box disabled"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item disabled">
-                                            <div class="hony-checkbox-box checked disabled"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 勾选样式 -->
-                            <div class="subsection" id="hony-checkmark-styles">
-                                <div class="subsection-title">勾选样式</div>
-                                <div class="subsection-description">单选框的另一种样式，包含常规、选中、常规禁用、选中禁用四种状态。</div>
-                                <div class="component-container">
-                                    <div class="hony-checkbox-group">
-                                        <div class="hony-checkbox-item" onclick="toggleCheckmark(this)">
-                                            <div class="hony-checkmark-box"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item" onclick="toggleCheckmark(this)">
-                                            <div class="hony-checkmark-box checked"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item disabled">
-                                            <div class="hony-checkmark-box disabled"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item disabled">
-                                            <div class="hony-checkmark-box checked disabled"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                    </div>                
+                    <!-- 右侧锚点导航 -->
+                    <div class="right-nav">
+                        <div class="right-nav-items">
+                                <div class="right-nav-item active" onclick="handleRightNavClick(this, 'radio-styles');">基础单选框</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'checkbox-styles');">基础复选框</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'radio-text');">单选框文字</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'checkbox-text');">复选框文字</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'checkmark-styles');">勾选样式</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'radio-bordered-styles');">带边框的单选框组</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'checkbox-bordered-styles');">带边框的复选框组</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'checkbox-expand-styles');">带边框的拓展选框组</div>
                         </div>
-                        
-                        <!-- 选框拓展样式 Section -->
-                        <div class="section">
-                            <div class="section-title">拓展<span style="color: var(--primary-main-1);">样式</span></div>
-                            
-                            <!-- 1. 带边框的单选框组 -->
-                            <div class="subsection" id="hony-radio-bordered-styles">
-                                <div class="subsection-title">带边框的单选框组</div>
-                                <div class="subsection-description">带边框的单选框组，包含常规、选中、常规禁用、选中禁用四种状态。</div>
-                                <div class="component-container">
-                                    <div class="hony-checkbox-group-bordered">
-                                        <div class="hony-checkbox-item-bordered" onclick="toggleRadio(this)">
-                                            <div class="hony-radio-box"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item-bordered hony-checkboxed" onclick="toggleRadio(this)">
-                                            <div class="hony-radio-box checked"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item-bordered disabled">
-                                            <div class="hony-radio-box disabled"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item-bordered disabled hony-checkboxed">
-                                            <div class="hony-radio-box checked disabled"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 2. 带边框的复选框组 -->
-                            <div class="subsection" id="hony-checkbox-bordered-styles">
-                                <div class="subsection-title">带边框的复选框组</div>
-                                <div class="subsection-description">带边框的复选框组，包含常规、选中、半选择、常规禁用、选中禁用五种状态。</div>
-                                <div class="component-container">
-                                    <div class="hony-checkbox-group-bordered">
-                                        <div class="hony-checkbox-item-bordered" onclick="toggleCheckbox(this)">
-                                            <div class="hony-checkbox-box"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item-bordered hony-checkboxed" onclick="toggleCheckbox(this)">
-                                            <div class="hony-checkbox-box checked"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item-bordered hony-checkboxed" onclick="toggleCheckbox(this)">
-                                            <div class="hony-checkbox-box indeterminate"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item-bordered disabled">
-                                            <div class="hony-checkbox-box disabled"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                        <div class="hony-checkbox-item-bordered disabled hony-checkboxed">
-                                            <div class="hony-checkbox-box checked disabled"></div>
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 3. 带边框的拓展选框组 -->
-                            <div class="subsection" id="hony-radio-bordered-styles">
-                                <div class="subsection-title">带边框的拓展选框组</div>
-                                <div class="subsection-description">带边框的拓展选框组：在带边框单选框基础上增加了徽章标记，可显示额外信息或数量提示。</div>
-                                <div class="component-container">
-                                    <div class="hony-checkbox-group-bordered">
-                                        <div class="hony-checkbox-item-bordered hony-checkbox-item-badge" onclick="toggleRadio(this)">
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                            <div class="hony-checkbox-badge">&#xf081;</div>
-                                        </div>
-                                        <div class="hony-checkbox-item-bordered hony-checkbox-item-badge hony-checkboxed" onclick="toggleRadio(this)">
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                            <div class="hony-checkbox-badge">&#xf081;</div>
-                                        </div>
-                                        <div class="hony-checkbox-item-bordered hony-checkbox-item-badge disabled">
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                            <div class="hony-checkbox-badge">&#xf081;</div>
-                                        </div>
-                                        <div class="hony-checkbox-item-bordered hony-checkbox-item-badge disabled hony-checkboxed">
-                                            <span class="hony-checkbox-text">菜单昵称</span>
-                                            <div class="hony-checkbox-badge">&#xf081;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>                        
-
-                        </div>
-                        
                     </div>
                 </div>                
-                <!-- 右侧锚点导航 -->
-                <div class="right-nav">
-                    <div class="right-nav-items">
-                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'radio-styles');">基础单选框</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'checkbox-styles');">基础复选框</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'radio-styles');">单选框文字</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'checkbox-styles');">复选框文字</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'checkmark-styles');">勾选样式</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'radio-bordered-styles');">带边框的单选框组</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'checkbox-bordered-styles');">带边框的复选框组</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'radio-bordered-styles');">带边框的拓展选框组</div>
-                    </div>
-                </div>
-
             </div>
+
         </div>
     </div>
     <!-- 背景纹理 -->
     <div class="hony-background-texture"></div>
     <!-- 背景banner -->
     <div class="background-bgVideo">
-        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+        <!-- 浅色模式视频 -->
+        <video class="background-bgVideo-video background-bgVideo-light" autoplay muted loop playsinline>
             <source src="../../overall/images/背景banne.mp4" type="video/mp4">
         </video>
+        <!-- 深色模式图片 -->
+        <img class="background-bgVideo-image background-bgVideo-dark" src="../../overall/images/bg-dark-mode.png" alt="深色背景">
     </div>
+<script src="../B-navigation/tabs.js"></script>
 </body>
 </html>

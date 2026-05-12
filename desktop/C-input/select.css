@@ -44,11 +44,13 @@ height: 20px;
   width: 100%;
   height: 32px;
   z-index: 1001;
+  flex: 1;
 }
 .hony-selector-group {
   display: flex;
   gap: 24px;
   width: 100%;
+  flex-wrap: wrap;
 }
 .hony-selector-input {
   display: flex;
@@ -202,7 +204,7 @@ height: 20px;
     0px 2px 4px 0px var(--Color-Grey-Black-Black---1, #1518210d),
     0px 0px 12px 0px var(--Color-Grey-Black-Black---1, #1518210d)
   );
-  background: var(--Colour-Grey-Background-BG---Container, #ffffff);
+  background: var(--grey-bg-0);
   width: 100%;
   z-index: 1000;
 }
@@ -1011,7 +1013,7 @@ height: 20px;
   border: 1px solid var(--grey-border-2);
   border-radius: 4px;
   box-shadow: var(--shadow-grey-small);
-  background-color: #fff;
+  background: var(--grey-bg-0);
   display: none;
 }
 
@@ -1339,7 +1341,6 @@ height: 20px;
   padding: 0 12px;
   border: 1px solid var(--grey-border-2);
   border-radius: 4px;
-  background-color: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -1379,7 +1380,6 @@ height: 20px;
   border: 1px solid var(--grey-border-2);
   border-radius: 8px;
   box-shadow: var(--shadow-grey-medium);
-  background-color: #fff;
 }
 
 .hony-cp-color-tabs {

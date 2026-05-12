@@ -308,9 +308,60 @@
 .TB-Form-label {
   font-size: 14px;
   line-height: 24px;
-  color: var(--grey-text-1);
+  color: var(--grey-text-2);
   display: flex;
   align-items: center;
   padding-right: 12px;
   margin-bottom: 8px;
+}
+.hony-filter-header{
+  display: flex;
+  flex-direction: row;
+  /* 可选：子元素之间的间距 */
+  gap: 16px;
+  width: 100%;
+}
+.hony-filter-header-form{
+  display: flex;
+  /* 关键：设置主轴为垂直方向，元素从上到下排列 */
+  flex-direction: column;
+  /* 可选：子元素之间的间距 */
+  gap: 8px;
+  flex: 1;
+  padding-right: 16px;
+  border-right: 1px solid var(--grey-border-1);
+}
+.hony-filter-header-form1{
+  display: flex;
+  /* 关键：设置主轴为垂直方向，元素从上到下排列 */
+  flex-direction: column;
+  /* 可选：子元素之间的间距 */
+  gap: 8px;
+  flex: 1;
+  width: 100%;
+}
+.hony-filter-header-form-line{
+  display: flex;
+  flex-direction: row;
+  /* 可选：子元素之间的间距 */
+  gap: 8px;
+  width: 100%;  
+}
+.hony-filter-header-operation{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+.hony-filter-header-operation-line{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex: 1;
+}
+.hony-filter-header-operation-line1{
+    display: flex;
+    height: 32px;
+    padding: 4px 0px;
+   justify-content: flex-end;  /* 水平靠右 */
+   align-items: flex-end;      /* 垂直靠下 */
 }

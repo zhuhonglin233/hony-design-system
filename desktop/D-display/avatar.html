@@ -4,203 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>头像 - 桌面端组件</title>
+    <link rel="icon" href="../../overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../../overall/main.css">
     <link rel="stylesheet" href="../../overall/icons/iconfont.css">
     <link rel="stylesheet" href="avatar.css">
     <script src="../../overall/js/common.js"></script>
+<link rel="stylesheet" href="../B-navigation/tabs.css">
 </head>
 <body>
     <div class="page-container">
         <!-- 左侧导航 -->
-        <div id="sidebar-container"></div>
-    
-        
+        <div id="sidebar-container"></div>      
         <!-- 主内容区域 -->
         <div class="main-content">
             <!-- 顶部导航栏 -->
             <div id="navbar-container"></div>
             <!-- 主内容区域 -->
-            <div class="main-content-area">
-                <!-- 内容 -->
-                <div class="content-area">
-                    <div class="content-main">
-                        <!-- 页面标题 -->
-                        <div class="page-header">
-                            <div class="design-code">design code 桌面端组件</div>
-                            <div class="page-title">头像</div>
-                            <div class="page-description">头像组件用于展示用户头像或标识，支持图片、文字、状态指示器和头像组等多种展示形式。</div>
-                        </div>
-
-                        <!-- 基础头像 Section -->
-                        <div class="section">
-                            <div class="section-title">基础<span style="color: var(--primary-main-1);">头像</span></div>
-                            
-                            <!-- 图片头像 -->
-                            <div class="subsection" id="hony-avatar-image">
-                                <div class="subsection-title">图片头像</div>
-                                <div class="subsection-description">图片头像：使用用户头像图片展示，支持超小、小、中、大、超大五种尺寸。</div>
-                                <div class="component-container">
-                                    <div class="hony-avatar hony-avatar-xs">
-                                        <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
-                                    </div>
-                                    <div class="hony-avatar hony-avatar-sm">
-                                        <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
-                                    </div>
-                                    <div class="hony-avatar hony-avatar-md">
-                                        <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
-                                    </div>
-                                    <div class="hony-avatar hony-avatar-lg">
-                                        <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
-                                    </div>
-                                    <div class="hony-avatar hony-avatar-xl">
-                                        <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 文字头像 -->
-                            <div class="subsection" id="hony-avatar-text">
-                                <div class="subsection-title">文字头像</div>
-                                <div class="subsection-description">文字头像：使用文字展示，常用于没有头像图片的场景。</div>
-                                <div class="component-container">
-                                    <div class="hony-avatar hony-avatar-xs">
-                                        <span class="hony-avatar-text">A</span>
-                                    </div>
-                                    <div class="hony-avatar hony-avatar-sm">
-                                        <span class="hony-avatar-text">柒</span>
-                                    </div>
-                                    <div class="hony-avatar hony-avatar-md">
-                                        <span class="hony-avatar-text">柒</span>
-                                    </div>
-                                    <div class="hony-avatar hony-avatar-lg">
-                                        <span class="hony-avatar-text">柒</span>
-                                    </div>
-                                    <div class="hony-avatar hony-avatar-xl">
-                                        <span class="hony-avatar-text">柒</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 头像拓展 Section -->
-                        <div class="section">
-                            <div class="section-title">头像<span style="color: var(--primary-main-1);">拓展</span></div>
-                            
-                            <!-- 带状态指示器的头像 -->
-                            <div class="subsection" id="hony-avatar-status">
-                                <div class="subsection-title">带状态指示器</div>
-                                <div class="subsection-description">带状态指示器的头像：显示用户的在线状态，包括在线、忙碌、离线等。</div>
-                                <div class="component-container">
-                                    <div class="hony-avatar hony-avatar-sm">
-                                        <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
-                                        <span class="hony-avatar-status hony-avatar-status-online hony-avatar-status-bottom-right"></span>
-                                    </div>
-                                    <div class="hony-avatar hony-avatar-md">
-                                        <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
-                                        <span class="hony-avatar-status hony-avatar-status-busy hony-avatar-status-bottom-right"></span>
-                                    </div>
-                                    <div class="hony-avatar hony-avatar-lg">
-                                        <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
-                                        <span class="hony-avatar-status hony-avatar-status-offline hony-avatar-status-bottom-right"></span>
-                                    </div>
-                                    <div class="hony-avatar hony-avatar-xl">
-                                        <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
-                                        <span class="hony-avatar-status hony-avatar-status-away hony-avatar-status-bottom-right"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 头像组 Section -->
-                        <div class="section">
-                            <div class="section-title">头像<span style="color: var(--primary-main-1);">组</span></div>
-                            
-                            <!-- 小尺寸头像组 -->
-                            <div class="subsection" id="hony-avatar-group-sm">
-                                <div class="subsection-title">小尺寸头像组</div>
-                                <div class="subsection-description">小尺寸头像组：适用于空间有限的场景，头像尺寸为16px。</div>
-                                <div class="component-container">
-                                    <div class="hony-avatar-group hony-avatar-group-collapse hony-avatar-group-collapse-sm">
-                                        <div class="hony-avatar">
+            <div class="hony-content-area">
+                <!-- 页面标题 -->
+                <div class="page-header">
+                    <div class="design-code">design code 桌面端组件</div>
+                    <div class="page-title">头像</div>
+                    <div class="page-description">头像组件用于展示用户头像或标识，支持图片、文字、状态指示器和头像组等多种展示形式。</div>
+                </div>              
+                <div class="main-content-area">
+                    <!-- 内容 -->
+                    <div class="content-area">
+                        <div class="content-main">
+                            <!-- 基础头像 Section -->
+                            <div class="section">
+                                <div class="section-title">基础<span style="color: var(--primary-main-1);">头像</span></div>
+                                
+                                <!-- 图片头像 -->
+                                <div class="subsection" id="hony-avatar-image">
+                                    <div class="subsection-title">图片头像</div>
+                                    <div class="subsection-description">图片头像：使用用户头像图片展示，支持超小、小、中、大、超大五种尺寸。</div>
+                                    <div class="component-container">
+                                        <div class="hony-avatar hony-avatar-xs">
                                             <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
                                         </div>
-                                        <div class="hony-avatar">
-                                            <img src="../../overall/images/默认头像01.png" class="hony-avatar-img" alt="头像">
-                                        </div>
-                                        <div class="hony-avatar">
-                                            <img src="../../overall/images/默认头像02.png" class="hony-avatar-img" alt="头像">
-                                        </div>
-                                        <div class="hony-avatar hony-avatar-more">
-                                            <span>+3</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 中尺寸头像组 -->
-                            <div class="subsection" id="hony-avatar-group-md">
-                                <div class="subsection-title">中尺寸头像组</div>
-                                <div class="subsection-description">中尺寸头像组：适用于一般场景，头像尺寸为24px。</div>
-                                <div class="component-container">
-                                    <div class="hony-avatar-group hony-avatar-group-collapse hony-avatar-group-collapse-md">
-                                        <div class="hony-avatar">
+                                        <div class="hony-avatar hony-avatar-sm">
                                             <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
                                         </div>
-                                        <div class="hony-avatar">
-                                            <img src="../../overall/images/默认头像01.png" class="hony-avatar-img" alt="头像">
-                                        </div>
-                                        <div class="hony-avatar">
-                                            <img src="../../overall/images/默认头像02.png" class="hony-avatar-img" alt="头像">
-                                        </div>
-                                        <div class="hony-avatar">
-                                            <img src="../../overall/images/默认头像03.png" class="hony-avatar-img" alt="头像">
-                                        </div>
-                                        <div class="hony-avatar hony-avatar-more">
-                                            <span>+2</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 大尺寸头像组 -->
-                            <div class="subsection" id="hony-avatar-group-lg">
-                                <div class="subsection-title">大尺寸头像组</div>
-                                <div class="subsection-description">大尺寸头像组：适用于需要突出展示的场景，头像尺寸为28px。</div>
-                                <div class="component-container">
-                                    <div class="hony-avatar-group hony-avatar-group-collapse hony-avatar-group-collapse-lg">
-                                        <div class="hony-avatar">
+                                        <div class="hony-avatar hony-avatar-md">
                                             <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
                                         </div>
-                                        <div class="hony-avatar">
-                                            <img src="../../overall/images/默认头像01.png" class="hony-avatar-img" alt="头像">
+                                        <div class="hony-avatar hony-avatar-lg">
+                                            <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
                                         </div>
-                                        <div class="hony-avatar">
-                                            <img src="../../overall/images/默认头像02.png" class="hony-avatar-img" alt="头像">
+                                        <div class="hony-avatar hony-avatar-xl">
+                                            <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
                                         </div>
-                                        <div class="hony-avatar">
-                                            <img src="../../overall/images/默认头像03.png" class="hony-avatar-img" alt="头像">
+                                    </div>
+                                </div>
+                                
+                                <!-- 文字头像 -->
+                                <div class="subsection" id="hony-avatar-text">
+                                    <div class="subsection-title">文字头像</div>
+                                    <div class="subsection-description">文字头像：使用文字展示，常用于没有头像图片的场景。</div>
+                                    <div class="component-container">
+                                        <div class="hony-avatar hony-avatar-xs">
+                                            <span class="hony-avatar-text">A</span>
                                         </div>
-                                        <div class="hony-avatar">
-                                            <img src="../../overall/images/默认头像04.png" class="hony-avatar-img" alt="头像">
+                                        <div class="hony-avatar hony-avatar-sm">
+                                            <span class="hony-avatar-text">柒</span>
+                                        </div>
+                                        <div class="hony-avatar hony-avatar-md">
+                                            <span class="hony-avatar-text">柒</span>
+                                        </div>
+                                        <div class="hony-avatar hony-avatar-lg">
+                                            <span class="hony-avatar-text">柒</span>
+                                        </div>
+                                        <div class="hony-avatar hony-avatar-xl">
+                                            <span class="hony-avatar-text">柒</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- 头像拓展 Section -->
+                            <div class="section">
+                                <div class="section-title">头像<span style="color: var(--primary-main-1);">拓展</span></div>
+                                
+                                <!-- 带状态指示器的头像 -->
+                                <div class="subsection" id="hony-avatar-status">
+                                    <div class="subsection-title">带状态指示器</div>
+                                    <div class="subsection-description">带状态指示器的头像：显示用户的在线状态，包括在线、忙碌、离线等。</div>
+                                    <div class="component-container">
+                                        <div class="hony-avatar hony-avatar-sm">
+                                            <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                            <span class="hony-avatar-status hony-avatar-status-online hony-avatar-status-bottom-right"></span>
+                                        </div>
+                                        <div class="hony-avatar hony-avatar-md">
+                                            <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                            <span class="hony-avatar-status hony-avatar-status-busy hony-avatar-status-bottom-right"></span>
+                                        </div>
+                                        <div class="hony-avatar hony-avatar-lg">
+                                            <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                            <span class="hony-avatar-status hony-avatar-status-offline hony-avatar-status-bottom-right"></span>
+                                        </div>
+                                        <div class="hony-avatar hony-avatar-xl">
+                                            <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                            <span class="hony-avatar-status hony-avatar-status-away hony-avatar-status-bottom-right"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 头像组 Section -->
+                            <div class="section">
+                                <div class="section-title">头像<span style="color: var(--primary-main-1);">组</span></div>
+                                
+                                <!-- 小尺寸头像组 -->
+                                <div class="subsection" id="hony-avatar-group-sm">
+                                    <div class="subsection-title">小尺寸头像组</div>
+                                    <div class="subsection-description">小尺寸头像组：适用于空间有限的场景，头像尺寸为16px。</div>
+                                    <div class="component-container">
+                                        <div class="hony-avatar-group hony-avatar-group-collapse hony-avatar-group-collapse-sm">
+                                            <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                            </div>
+                                            <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像01.png" class="hony-avatar-img" alt="头像">
+                                            </div>
+                                            <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像02.png" class="hony-avatar-img" alt="头像">
+                                            </div>
+                                            <div class="hony-avatar hony-avatar-more">
+                                                <span>+3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 中尺寸头像组 -->
+                                <div class="subsection" id="hony-avatar-group-md">
+                                    <div class="subsection-title">中尺寸头像组</div>
+                                    <div class="subsection-description">中尺寸头像组：适用于一般场景，头像尺寸为24px。</div>
+                                    <div class="component-container">
+                                        <div class="hony-avatar-group hony-avatar-group-collapse hony-avatar-group-collapse-md">
+                                            <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                            </div>
+                                            <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像01.png" class="hony-avatar-img" alt="头像">
+                                            </div>
+                                            <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像02.png" class="hony-avatar-img" alt="头像">
+                                            </div>
+                                            <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像03.png" class="hony-avatar-img" alt="头像">
+                                            </div>
+                                            <div class="hony-avatar hony-avatar-more">
+                                                <span>+2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 大尺寸头像组 -->
+                                <div class="subsection" id="hony-avatar-group-lg">
+                                    <div class="subsection-title">大尺寸头像组</div>
+                                    <div class="subsection-description">大尺寸头像组：适用于需要突出展示的场景，头像尺寸为28px。</div>
+                                    <div class="component-container">
+                                        <div class="hony-avatar-group hony-avatar-group-collapse hony-avatar-group-collapse-lg">
+                                            <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像.png" class="hony-avatar-img" alt="头像">
+                                            </div>
+                                            <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像01.png" class="hony-avatar-img" alt="头像">
+                                            </div>
+                                            <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像02.png" class="hony-avatar-img" alt="头像">
+                                            </div>
+                                            <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像03.png" class="hony-avatar-img" alt="头像">
+                                            </div>
+                                            <div class="hony-avatar">
+                                                <img src="../../overall/images/默认头像04.png" class="hony-avatar-img" alt="头像">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>                
+                    <!-- 右侧锚点导航 -->
+                    <div class="right-nav">
+                        <div class="right-nav-items">
+                                <div class="right-nav-item active" onclick="handleRightNavClick(this, 'avatar-image');">图片头像</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-text');">文字头像</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-status');">带状态指示器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-group-sm');">小尺寸头像组</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-group-md');">中尺寸头像组</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-group-lg');">大尺寸头像组</div>
                         </div>
                     </div>
                 </div>                
-                <!-- 右侧锚点导航 -->
-                <div class="right-nav">
-                    <div class="right-nav-items">
-                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'avatar-image');">图片头像</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-text');">文字头像</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-status');">带状态指示器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-group-sm');">小尺寸头像组</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-group-md');">中尺寸头像组</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'avatar-group-lg');">大尺寸头像组</div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
@@ -208,9 +209,13 @@
     <div class="hony-background-texture"></div>
     <!-- 背景banner -->
     <div class="background-bgVideo">
-        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+        <!-- 浅色模式视频 -->
+        <video class="background-bgVideo-video background-bgVideo-light" autoplay muted loop playsinline>
             <source src="../../overall/images/背景banne.mp4" type="video/mp4">
         </video>
+        <!-- 深色模式图片 -->
+        <img class="background-bgVideo-image background-bgVideo-dark" src="../../overall/images/bg-dark-mode.png" alt="深色背景">
     </div>
+<script src="../B-navigation/tabs.js"></script>
 </body>
 </html>

@@ -36,7 +36,7 @@
   padding: 4px;
   font-size: 12px;
   line-height: 12px;
-  color: var(--white, #ffffff);
+  color: var(--primary-main-5);
   background: var(--danger-6, #f53f3f);
   box-shadow: 0 0 0 2px white;
 }
@@ -55,7 +55,7 @@
   height: 24px;
   font-size: 14px;
   line-height: 22px;
-  color: var(--grey-9, #101319);
+  color: var(--grey-text-2);
 }
 
 /* 头像徽标组合 */

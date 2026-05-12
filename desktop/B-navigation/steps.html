@@ -4,858 +4,854 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>步骤条 - 桌面端组件</title>
+    <link rel="icon" href="../../overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../../overall/main.css">
     <link rel="stylesheet" href="../../overall/icons/iconfont.css">
     <link rel="stylesheet" href="steps.css">
     <script src="../../overall/js/common.js"></script>
     <script src="steps.js"></script>
+<link rel="stylesheet" href="../B-navigation/tabs.css">
 </head>
 <body>
     <div class="page-container">
         <!-- 左侧导航 -->
-        <div id="sidebar-container"></div>
-    
-        
+        <div id="sidebar-container"></div>      
         <!-- 主内容区域 -->
         <div class="main-content">
             <!-- 顶部导航栏 -->
             <div id="navbar-container"></div>
             <!-- 主内容区域 -->
-            <div class="main-content-area">
-                <!-- 内容 -->
-                <div class="content-area">
-                    <div class="content-main">
-                        <!-- 页面标题 -->
-                        <div class="page-header">
-                            <div class="design-code">design code 桌面端组件</div>
-                            <div class="page-title">步骤条</div>
-                            <div class="page-description">步骤条用于展示任务的进度和流程，引导用户完成多步骤的操作。提供了多种样式和状态的步骤条，以满足不同场景的需求。</div>
+            <div class="hony-content-area">
+                <!-- 页面标题 -->
+                <div class="page-header">
+                    <div class="design-code">design code 桌面端组件</div>
+                    <div class="page-title">步骤条</div>
+                    <div class="page-description">步骤条用于展示任务的进度和流程，引导用户完成多步骤的操作。提供了多种样式和状态的步骤条，以满足不同场景的需求。</div>
+                </div>               
+                <div class="main-content-area">
+                    <!-- 内容 -->
+                    <div class="content-area">
+                        <div class="content-main">
+                            <!-- 居中样式 Section -->
+                            <div class="section">
+                                <div class="section-title">居中<span style="color: var(--primary-6);">样式</span></div>
+                                
+                                <!-- 基础样式居中步骤条 -->
+                                <div class="subsection" id="hony-steps-centered-basic">
+                                    <div class="subsection-title">居中基础步骤</div>
+                                    <div class="subsection-description">居中基础步骤条：步骤图标和文字居中对齐，展示任务的基本流程和当前进度状态。</div>
+                                    <div class="component-container">
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-centered hony-steps-basic">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon-container">
+                                                            <div class="hony-step-item-icon"></div>
+                                                        </div>
+                                                        <div class="hony-step-item-title">已完成</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon-container">
+                                                            <div class="hony-step-item-icon"></div>
+                                                        </div>
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon-container">
+                                                            <div class="hony-step-item-icon"></div>
+                                                        </div>
+                                                        <div class="hony-step-item-title">未进行的</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-centered hony-steps-basic">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon-container">
+                                                            <div class="hony-step-item-icon"></div>
+                                                        </div>
+                                                        <div class="hony-step-item-title">已完成</div>
+                                                        <div class="hony-step-item-description">注释文案</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon-container">
+                                                            <div class="hony-step-item-icon"></div>
+                                                        </div>
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                        <div class="hony-step-item-description">注释文案</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon-container">
+                                                            <div class="hony-step-item-icon"></div>
+                                                        </div>
+                                                        <div class="hony-step-item-title">未进行的</div>
+                                                        <div class="hony-step-item-description">注释文案</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                            
+                                    </div>                          
+                                </div>
+                                <!-- 序号样式居中步骤条 -->
+                                <div class="subsection" id="hony-steps-centered-number">
+                                    <div class="subsection-title">居中序号样式</div>
+                                    <div class="subsection-description">序号样式居中步骤条：使用数字标识步骤。</div>
+                                    <div class="component-container">
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-centered hony-steps-number">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon">1</div>
+                                                        <div class="hony-step-item-title">已完成</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon">2</div>
+                                                        <div class="hony-step-item-title">进行中</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon">3</div>
+                                                        <div class="hony-step-item-title">未进行的</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-centered hony-steps-number">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon">1</div>
+                                                        <div class="hony-step-item-title">已完成</div>
+                                                        <div class="hony-step-item-description">注释文案</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon">2</div>
+                                                        <div class="hony-step-item-title">进行中</div>
+                                                        <div class="hony-step-item-description">注释文案</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon">3</div>
+                                                        <div class="hony-step-item-title">未进行的</div>
+                                                        <div class="hony-step-item-description">注释文案</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                </div>
+                                <!-- 图标样式居中步骤条 -->
+                                <div class="subsection" id="hony-steps-centered-icon">
+                                    <div class="subsection-title">居中图标样式</div>
+                                    <div class="subsection-description">图标样式居中步骤条：使用图标标识步骤状态。</div>
+                                    <div class="component-container">
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-centered hony-steps-icon">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-zhengque-filled"></span>
+                                                        </div>
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-dengdai-filled"></span>
+                                                        </div>
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-jinggao-filled"></span>
+                                                        </div>
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-centered hony-steps-icon">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-zhengque-filled"></span>
+                                                        </div>
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                        <div class="hony-step-item-description">注释文案</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-dengdai-filled"></span>
+                                                        </div>
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                        <div class="hony-step-item-description">注释文案</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-jinggao-filled"></span>
+                                                        </div>
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                        <div class="hony-step-item-description">注释文案</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 左对齐样式 Section -->
+                            <div class="section">
+                                <div class="section-title">左对齐<span style="color: var(--primary-6);">样式</span></div>
+                                
+                                <!-- 基础样式左对齐步骤条 -->
+                                <div class="subsection" id="hony-steps-left-basic">
+                                    <div class="subsection-title">居左基础样式</div>
+                                    <div class="subsection-description">基础样式左对齐步骤条：展示任务的基本流程和进度。</div>
+                                    <div class="component-container">
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-left hony-steps-basic">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon"></div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">已完成</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon"></div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">进行中</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon"></div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">未进行的</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-left hony-steps-basic">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon"></div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">已完成</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon"></div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">进行中</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon"></div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">未进行的</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                </div>
+
+                                <!-- 序号样式左对齐步骤条 -->
+                                <div class="subsection" id="hony-steps-left-number">
+                                    <div class="subsection-title">居左序号样式</div>
+                                    <div class="subsection-description">序号样式左对齐步骤条：使用数字标识步骤。</div>
+                                    <div class="component-container">
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-left hony-steps-number">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">1</div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">已完成</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">2</div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">进行中</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">3</div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">未进行的</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-left hony-steps-number">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">1</div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">已完成</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">2</div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">进行中</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">3</div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">未进行的</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 图标样式左对齐步骤条 -->
+                                <div class="subsection" id="hony-steps-left-icon">
+                                    <div class="subsection-title">居左图标样式</div>
+                                    <div class="subsection-description">图标样式左对齐步骤条：使用图标标识步骤状态。</div>
+                                    <div class="component-container">
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-left hony-steps-icon">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-zhengque-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">已完成</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-dengdai-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">进行中</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-jinggao-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">未进行的</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-left hony-steps-icon">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-zhengque-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">已完成</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-dengdai-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">进行中</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-jinggao-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">未进行的</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 竖直样式 Section -->
+                            <div class="section">
+                                <div class="section-title">竖直<span style="color: var(--primary-6);">样式</span></div>
+                                
+                                <!-- 基础样式竖直步骤条 -->
+                                <div class="subsection" id="hony-steps-vertical-basic">
+                                    <div class="subsection-title">垂直基础样式</div>
+                                    <div class="subsection-description">基础样式竖直步骤条：展示任务的基本流程和进度。</div>
+                                    <div class="component-container">
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-vertical hony-steps-basic">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon"></div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">已完成</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon"></div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">进行中</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon"></div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">未进行的</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-vertical hony-steps-basic">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon"></div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">已完成</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon"></div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">进行中</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon"></div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">未进行的</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                </div>
+
+                                <!-- 序号样式竖直步骤条 -->
+                                <div class="subsection" id="hony-steps-vertical-number">
+                                    <div class="subsection-title">垂直序号样式</div>
+                                    <div class="subsection-description">序号样式竖直步骤条：使用数字标识步骤。</div>
+                                    <div class="component-container">
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-vertical hony-steps-number">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">1</div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">已完成</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">2</div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">进行中</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">3</div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">未进行的</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-vertical hony-steps-number">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">1</div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">已完成</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">2</div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">进行中</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">3</div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">未进行的</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 图标样式竖直步骤条 -->
+                                <div class="subsection" id="hony-steps-vertical-icon">
+                                    <div class="subsection-title">垂直图标样式</div>
+                                    <div class="subsection-description">图标样式竖直步骤条：使用图标标识步骤状态。</div>
+                                    <div class="component-container">
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-vertical hony-steps-icon">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-zhengque-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">已完成</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-dengdai-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">进行中</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-jinggao-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">未进行的</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-vertical hony-steps-icon">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-zhengque-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">已完成</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-dengdai-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">进行中</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-wrapper">
+                                                        <div class="hony-step-item-icon">
+                                                            <span class="iconfont icon-jinggao-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hony-step-item-content-wrapper">
+                                                        <div class="hony-step-item-content">
+                                                            <div class="hony-step-item-title">未进行的</div>
+                                                            <div class="hony-step-item-description">注释文案</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 拓展样式 Section -->
+                            <div class="section">
+                                <div class="section-title">拓展<span style="color: var(--primary-6);">样式</span></div>
+                                
+                                <!-- 选项步骤条 -->
+                                <div class="subsection" id="hony-steps-option">
+                                    <div class="subsection-title">选项步骤条</div>
+                                    <div class="subsection-description">选项步骤条：展示任务的基本流程和进度，带有选项卡样式。</div>
+                                    <div class="component-container">
+                                        <div class="hony-steps-example">
+                                            <!-- 带图标分段步骤条 -->
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-section hony-steps-icon-section">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-icon-content">
+                                                        <div class="hony-step-item-icon"><i class="iconfont icon-zhengque-filled"></i></div>
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-icon-content">
+                                                        <div class="hony-step-item-icon"><i class="iconfont icon-dengdai-filled"></i></div>
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-content">
+                                                        <div class="hony-step-item-icon"><i class="iconfont icon-dengdai-filled"></i></div>
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-icon-content">
+                                                        <div class="hony-step-item-icon"><i class="iconfont icon-dengdai-filled"></i></div>
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-steps-example">
+                                            <!-- 带数字分段步骤条 -->
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-section hony-steps-number-section">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-number-content">
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-number-content">
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-number-content">
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-number-content">
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- 箭头步骤条 -->
+                                <div class="subsection" id="hony-steps-arrow">
+                                    <div class="subsection-title">箭头步骤条</div>
+                                    <div class="subsection-description">箭头步骤条：展示任务的基本流程和进度，带有箭头样式。</div>
+                                    <div class="component-container">
+                                        <div class="hony-steps-example">
+                                            <div class="hony-steps hony-steps-horizontal hony-steps-arrow">
+                                                <div class="hony-step-item hony-step-item-finish">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-process">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-step-item hony-step-item-default">
+                                                    <div class="hony-step-item-content">
+                                                        <div class="hony-step-item-title">标题昵称</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-                        <!-- 居中样式 Section -->
-                        <div class="section">
-                            <div class="section-title">居中<span style="color: var(--primary-6);">样式</span></div>
-                            
-                            <!-- 基础样式居中步骤条 -->
-                            <div class="subsection" id="hony-steps-centered-basic">
-                                <div class="subsection-title">居中基础步骤</div>
-                                <div class="subsection-description">居中基础步骤条：步骤图标和文字居中对齐，展示任务的基本流程和当前进度状态。</div>
-                                <div class="component-container">
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-centered hony-steps-basic">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon-container">
-                                                        <div class="hony-step-item-icon"></div>
-                                                    </div>
-                                                    <div class="hony-step-item-title">已完成</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon-container">
-                                                        <div class="hony-step-item-icon"></div>
-                                                    </div>
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon-container">
-                                                        <div class="hony-step-item-icon"></div>
-                                                    </div>
-                                                    <div class="hony-step-item-title">未进行的</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-centered hony-steps-basic">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon-container">
-                                                        <div class="hony-step-item-icon"></div>
-                                                    </div>
-                                                    <div class="hony-step-item-title">已完成</div>
-                                                    <div class="hony-step-item-description">注释文案</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon-container">
-                                                        <div class="hony-step-item-icon"></div>
-                                                    </div>
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                    <div class="hony-step-item-description">注释文案</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon-container">
-                                                        <div class="hony-step-item-icon"></div>
-                                                    </div>
-                                                    <div class="hony-step-item-title">未进行的</div>
-                                                    <div class="hony-step-item-description">注释文案</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>                            
-                                </div>                          
-                            </div>
-
-                            <!-- 序号样式居中步骤条 -->
-                            <div class="subsection" id="hony-steps-centered-number">
-                                <div class="subsection-title">居中序号样式</div>
-                                <div class="subsection-description">序号样式居中步骤条：使用数字标识步骤。</div>
-                                <div class="component-container">
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-centered hony-steps-number">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon">1</div>
-                                                    <div class="hony-step-item-title">已完成</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon">2</div>
-                                                    <div class="hony-step-item-title">进行中</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon">3</div>
-                                                    <div class="hony-step-item-title">未进行的</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-centered hony-steps-number">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon">1</div>
-                                                    <div class="hony-step-item-title">已完成</div>
-                                                    <div class="hony-step-item-description">注释文案</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon">2</div>
-                                                    <div class="hony-step-item-title">进行中</div>
-                                                    <div class="hony-step-item-description">注释文案</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon">3</div>
-                                                    <div class="hony-step-item-title">未进行的</div>
-                                                    <div class="hony-step-item-description">注释文案</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>                                
-                                </div>
-                            </div>
-
-                            <!-- 图标样式居中步骤条 -->
-                            <div class="subsection" id="hony-steps-centered-icon">
-                                <div class="subsection-title">居中图标样式</div>
-                                <div class="subsection-description">图标样式居中步骤条：使用图标标识步骤状态。</div>
-                                <div class="component-container">
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-centered hony-steps-icon">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-zhengque-filled"></span>
-                                                    </div>
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-dengdai-filled"></span>
-                                                    </div>
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-jinggao-filled"></span>
-                                                    </div>
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-centered hony-steps-icon">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-zhengque-filled"></span>
-                                                    </div>
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                    <div class="hony-step-item-description">注释文案</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-dengdai-filled"></span>
-                                                    </div>
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                    <div class="hony-step-item-description">注释文案</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-jinggao-filled"></span>
-                                                    </div>
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                    <div class="hony-step-item-description">注释文案</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>                                
-                                </div>
-                            </div>
+                    </div>                
+                    <!-- 右侧锚点导航 -->
+                    <div class="right-nav">
+                        <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'steps-centered-basic');">居中基础步骤</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'steps-centered-number');">居中序号样式</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'steps-centered-icon');">居中图标样式</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'steps-left-basic');">居左基础样式</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'steps-left-number');">居左序号样式</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'steps-left-icon');">居左图标样式</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'steps-vertical-basic');">垂直基础样式</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'steps-vertical-number');">垂直序号样式</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'steps-vertical-icon');">垂直图标样式</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'steps-option');">选项步骤条</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'steps-arrow');">箭头步骤条</div>
                         </div>
-
-                        <!-- 左对齐样式 Section -->
-                        <div class="section">
-                            <div class="section-title">左对齐<span style="color: var(--primary-6);">样式</span></div>
-                            
-                            <!-- 基础样式左对齐步骤条 -->
-                            <div class="subsection" id="hony-steps-left-basic">
-                                <div class="subsection-title">居左基础样式</div>
-                                <div class="subsection-description">基础样式左对齐步骤条：展示任务的基本流程和进度。</div>
-                                <div class="component-container">
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-left hony-steps-basic">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon"></div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">已完成</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon"></div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">进行中</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon"></div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">未进行的</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-left hony-steps-basic">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon"></div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">已完成</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon"></div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">进行中</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon"></div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">未进行的</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>                                
-                                </div>
-                            </div>
-
-                            <!-- 序号样式左对齐步骤条 -->
-                            <div class="subsection" id="hony-steps-left-number">
-                                <div class="subsection-title">居左序号样式</div>
-                                <div class="subsection-description">序号样式左对齐步骤条：使用数字标识步骤。</div>
-                                <div class="component-container">
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-left hony-steps-number">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">1</div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">已完成</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">2</div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">进行中</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">3</div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">未进行的</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-left hony-steps-number">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">1</div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">已完成</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">2</div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">进行中</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">3</div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">未进行的</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 图标样式左对齐步骤条 -->
-                            <div class="subsection" id="hony-steps-left-icon">
-                                <div class="subsection-title">居左图标样式</div>
-                                <div class="subsection-description">图标样式左对齐步骤条：使用图标标识步骤状态。</div>
-                                <div class="component-container">
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-left hony-steps-icon">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-zhengque-filled"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">已完成</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-dengdai-filled"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">进行中</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-jinggao-filled"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">未进行的</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-left hony-steps-icon">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-zhengque-filled"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">已完成</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-dengdai-filled"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">进行中</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-jinggao-filled"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">未进行的</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 竖直样式 Section -->
-                        <div class="section">
-                            <div class="section-title">竖直<span style="color: var(--primary-6);">样式</span></div>
-                            
-                            <!-- 基础样式竖直步骤条 -->
-                            <div class="subsection" id="hony-steps-vertical-basic">
-                                <div class="subsection-title">垂直基础样式</div>
-                                <div class="subsection-description">基础样式竖直步骤条：展示任务的基本流程和进度。</div>
-                                <div class="component-container">
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-vertical hony-steps-basic">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon"></div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">已完成</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon"></div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">进行中</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon"></div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">未进行的</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-vertical hony-steps-basic">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon"></div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">已完成</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon"></div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">进行中</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon"></div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">未进行的</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>                                
-                                </div>
-                            </div>
-
-                            <!-- 序号样式竖直步骤条 -->
-                            <div class="subsection" id="hony-steps-vertical-number">
-                                <div class="subsection-title">垂直序号样式</div>
-                                <div class="subsection-description">序号样式竖直步骤条：使用数字标识步骤。</div>
-                                <div class="component-container">
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-vertical hony-steps-number">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">1</div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">已完成</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">2</div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">进行中</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">3</div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">未进行的</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-vertical hony-steps-number">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">1</div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">已完成</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">2</div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">进行中</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">3</div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">未进行的</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 图标样式竖直步骤条 -->
-                            <div class="subsection" id="hony-steps-vertical-icon">
-                                <div class="subsection-title">垂直图标样式</div>
-                                <div class="subsection-description">图标样式竖直步骤条：使用图标标识步骤状态。</div>
-                                <div class="component-container">
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-vertical hony-steps-icon">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-zhengque-filled"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">已完成</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-dengdai-filled"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">进行中</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-jinggao-filled"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">未进行的</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-vertical hony-steps-icon">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-zhengque-filled"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">已完成</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-dengdai-filled"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">进行中</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-wrapper">
-                                                    <div class="hony-step-item-icon">
-                                                        <span class="iconfont icon-jinggao-filled"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="hony-step-item-content-wrapper">
-                                                    <div class="hony-step-item-content">
-                                                        <div class="hony-step-item-title">未进行的</div>
-                                                        <div class="hony-step-item-description">注释文案</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 拓展样式 Section -->
-                        <div class="section">
-                            <div class="section-title">拓展<span style="color: var(--primary-6);">样式</span></div>
-                            
-                            <!-- 选项步骤条 -->
-                            <div class="subsection" id="hony-steps-option">
-                                <div class="subsection-title">选项步骤条</div>
-                                <div class="subsection-description">选项步骤条：展示任务的基本流程和进度，带有选项卡样式。</div>
-                                <div class="component-container">
-                                    <div class="hony-steps-example">
-                                        <!-- 带图标分段步骤条 -->
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-section hony-steps-icon-section">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-icon-content">
-                                                    <div class="hony-step-item-icon"><i class="iconfont icon-zhengque-filled"></i></div>
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-icon-content">
-                                                    <div class="hony-step-item-icon"><i class="iconfont icon-dengdai-filled"></i></div>
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-content">
-                                                    <div class="hony-step-item-icon"><i class="iconfont icon-dengdai-filled"></i></div>
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-icon-content">
-                                                    <div class="hony-step-item-icon"><i class="iconfont icon-dengdai-filled"></i></div>
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-steps-example">
-                                        <!-- 带数字分段步骤条 -->
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-section hony-steps-number-section">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-number-content">
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-number-content">
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-number-content">
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-number-content">
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- 箭头步骤条 -->
-                            <div class="subsection" id="hony-steps-arrow">
-                                <div class="subsection-title">箭头步骤条</div>
-                                <div class="subsection-description">箭头步骤条：展示任务的基本流程和进度，带有箭头样式。</div>
-                                <div class="component-container">
-                                    <div class="hony-steps-example">
-                                        <div class="hony-steps hony-steps-horizontal hony-steps-arrow">
-                                            <div class="hony-step-item hony-step-item-finish">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-process">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-step-item hony-step-item-default">
-                                                <div class="hony-step-item-content">
-                                                    <div class="hony-step-item-title">标题昵称</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
                     </div>
                 </div>                
-                <!-- 右侧锚点导航 -->
-                <div class="right-nav">
-                    <div class="right-nav-items">
-                        <div class="right-nav-item" onclick="document.getElementById('hony-steps-centered-basic').scrollIntoView({behavior: 'smooth'});">居中样式-基础样式</div>
-                        <div class="right-nav-item" onclick="document.getElementById('hony-steps-centered-number').scrollIntoView({behavior: 'smooth'});">居中样式-序号样式</div>
-                        <div class="right-nav-item" onclick="document.getElementById('hony-steps-centered-icon').scrollIntoView({behavior: 'smooth'});">居中样式-图标样式</div>
-                        <div class="right-nav-item" onclick="document.getElementById('hony-steps-left-basic').scrollIntoView({behavior: 'smooth'});">左对齐样式-基础样式</div>
-                        <div class="right-nav-item" onclick="document.getElementById('hony-steps-left-number').scrollIntoView({behavior: 'smooth'});">左对齐样式-序号样式</div>
-                        <div class="right-nav-item" onclick="document.getElementById('hony-steps-left-icon').scrollIntoView({behavior: 'smooth'});">左对齐样式-图标样式</div>
-                        <div class="right-nav-item" onclick="document.getElementById('hony-steps-vertical-basic').scrollIntoView({behavior: 'smooth'});">竖直样式-基础样式</div>
-                        <div class="right-nav-item" onclick="document.getElementById('hony-steps-vertical-number').scrollIntoView({behavior: 'smooth'});">竖直样式-序号样式</div>
-                        <div class="right-nav-item" onclick="document.getElementById('hony-steps-vertical-icon').scrollIntoView({behavior: 'smooth'});">竖直样式-图标样式</div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -863,10 +859,13 @@
     <div class="hony-background-texture"></div>
     <!-- 背景banner -->
     <div class="background-bgVideo">
-        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+        <!-- 浅色模式视频 -->
+        <video class="background-bgVideo-video background-bgVideo-light" autoplay muted loop playsinline>
             <source src="../../overall/images/背景banne.mp4" type="video/mp4">
         </video>
+        <!-- 深色模式图片 -->
+        <img class="background-bgVideo-image background-bgVideo-dark" src="../../overall/images/bg-dark-mode.png" alt="深色背景">
     </div>
-
+<script src="../B-navigation/tabs.js"></script>
 </body>
 </html>

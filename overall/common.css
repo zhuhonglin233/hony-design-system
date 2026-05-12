@@ -24,11 +24,6 @@
 }
 
 /* 确保其他元素在背景之上 */
-.page-container {
-    position: relative;
-    z-index: 2;
-    background: transparent;
-}
 
 /* 首页保持原有背景 */
 .home-page {
@@ -54,20 +49,20 @@ body {
 
 /* 导航栏 */
 .navbar {
-    width: 100%;
+    width: calc(100% - 240px);
     height: 64px;
-    left: 0;
+    left: 240px;
     top: 0;
     background: transparent;
-    z-index: 100;
+    z-index: 98;
     transition: all 0.3s ease;
-    position: sticky;
+    position: fixed;
     top: 0px;
     border-bottom: 0px solid var(--grey-border-1);
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--component-page-2);;
     backdrop-filter: blur(24px);
     box-shadow: 0 4px 16px rgba(21, 24, 33, 0.08);
     border-bottom: 1px solid var(--grey-border-1);
@@ -265,7 +260,7 @@ body {
 }
 
 .nav-item:hover .nav-item-inner {
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--grey-bg-0);
 }
 
 .nav-item:hover .nav-text {
@@ -273,7 +268,7 @@ body {
 }
 
 .nav-item.active .nav-item-inner {
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--grey-bg-0);
 }
 
 .nav-item.active .nav-text {
@@ -302,18 +297,34 @@ body {
     flex-direction: row;
     width: 100%;
     min-height: 100vh;
+    z-index: 2;
+    background: var(--component-page-1);
+    backdrop-filter: blur(20px) !important;
+}
+
+/* 侧边栏容器 */
+#sidebar-container {
+    width: 240px !important;
+    min-width: 240px !important;
+    max-width: 240px !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 9999 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
 }
 
 /* 侧边导航 */
 .side-nav {
-    width: 240px;
-    min-width: 200px;
-    max-width: 320px;
+    width: 100%;
     min-height: 100vh;
-    position: sticky;
+    position: relative;
     height: calc(100vh);
-    top: 0px;
-    background: rgba(255, 255, 255, 0.4);
+    background: var(--component-page-1);
     border-right: 1px solid var(--grey-border-1);
 }
 
@@ -332,7 +343,7 @@ body {
     padding-bottom: 100px;
 }
 .nav-section {
-    padding: 0;
+
 }
 
 .nav-section-title {
@@ -363,7 +374,7 @@ body {
 }
 
 .side-nav .nav-item.active .nav-item-inner {
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--primary-face-1);
     width: 100%;
 }
 
@@ -383,18 +394,6 @@ body {
     min-width: 0;
 }
 
-/* 右侧锚点导航 */
-.right-nav {
-    width: 200px;
-    min-width: 200px;
-    max-width: 200px;
-    border-radius: 8px;
-    padding: 24px;
-    position: sticky;
-    top: 72px;
-    height: fit-content;
-}
-
 .right-nav-title {
     font-size: 12px;
     font-weight: 500;
@@ -412,7 +411,8 @@ body {
 
 /* 页面头部 */
 .page-header {
-    margin-bottom: 48px;
+    padding: 48px;
+    height: 256px;
 }
 
 .design-code {
@@ -464,26 +464,24 @@ td {
 
 .subsection {
     margin-bottom: 32px;
-    padding: 24px 24px 24px 24px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color:var(--grey-bg-0);
     border-radius: 12px;
-    border: 1px solid #fff;
-    backdrop-filter: blur(20px) !important;
     width: 100%;
-    box-shadow: -2px -2px 4px 0 #ffffff40, -4px -4px 8px 0 #ffffff40, -8px -8px 16px 0 #ffffff40, 2px 2px 4px 0 rgba(108, 125, 163, 0.2), 4px 4px 8px 0 rgba(108, 125, 163, 0.2), 8px 8px 16px 0 rgba(108, 125, 163, 0.20);
 }
 .subsection-title {
     font-size: 18px;
     font-weight: 500;
-    color: var(--grey-main-3);
-    margin-bottom: 16px;
+    color: var(--grey-main-1);
+    padding: 24px 24px 24px 24px;
 }
 
 .subsection-description {
-    font-size: 14px;
+    font-size: 12px;
     color: var(--grey-text-3);
     line-height: 1.6;
     max-width: 100%;
+    padding: 0px 24px 24px 24px;
+    border-bottom: 1px solid var(--grey-border-1);
 }
 
 /* 按钮等级标题样式 */
@@ -582,17 +580,15 @@ td {
 .component-container {
     display: flex;
     gap: 24px;
-    margin-top: 24px;
     flex-wrap: wrap;
-    padding: 48px;
+    padding: 24px;
     background: var(--grey-bg-0);
     border-radius: 12px;
 }
 .component-container1 {
     gap: 24px;
-    margin-top: 24px;
     flex-wrap: wrap;
-    padding: 48px;
+    padding: 24px;
     background: var(--grey-bg-0);
     border-radius: 12px;
     display: flex;
@@ -666,16 +662,15 @@ td {
     min-width: 200px;
     max-width: 200px;
     border-radius: 8px;
-    padding: 24px;
+    padding: 80px 24px 24px 0px;
     position: sticky;
-    top: 72px;
+    top: 0px;
     height: fit-content;
-    height: calc(100vh - 72px);
     display: flex;
-    flex-direction: column-reverse;
-        overflow-y: auto;
+    overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    height: calc(100vh);
 }
 
 .right-nav-title {
@@ -727,18 +722,18 @@ td {
     background-image: radial-gradient(circle, var(--primary-1-TPY) 1.5px, #e8efff00 1.5px);
     background-size: 16px 16px;
     background-position: 12px 12px;
-    z-index: 0;
+    z-index: 1;
 }
 
 .background-bgVideo {
     position: fixed;
     width: 100%;
-    height: 400px;
+    height: 320px;
     left: 0;
     top: 0;
-    z-index: 1;
+    z-index: -1;
     overflow: hidden;
-    background: transparent !important;
+    background: var(--component-page-BG);
     border: none;
     outline: none;
       justify-content: flex-end; /* 子元素整体靠右边 */
@@ -747,8 +742,28 @@ td {
 }
 .background-bgVideo video, .background-bgVideo-video{
     position: absolute;
-    width: 800px;
-    height: 400px;
+    width: 640px;
+    height: 320px;
+    right: 0;
+    top: 0;
+    object-fit: contain;
+}
+/* 浅色模式显示视频，隐藏图片 */
+.background-bgVideo-light {
+    display: block;
+}
+.background-bgVideo-dark {
+    display: none;
+}
+/* 深色模式隐藏视频，显示图片 */
+:root.Dark .background-bgVideo-light {
+    display: none;
+}
+:root.Dark .background-bgVideo-dark {
+    display: block;
+    position: absolute;
+    width: 745px;
+    height: 320px;
     right: 0;
     top: 0;
     object-fit: contain;
@@ -763,4 +778,25 @@ td {
     transition: all 0.3s ease;
     position: sticky;
     top: 0px;
+}
+.background-texture{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(circle, var(--grey-bg-0) 1.5px, #e8efff00 1.5px);
+    background-size: 16px 16px;
+    background-position: 12px 12px;
+    z-index: -1;
+}
+.background-texture-bg{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(22, 93, 255, 0.10) 0%, rgba(22, 93, 255, 0.01) 50%);
+}
+.hony-content-area{
+    display: flex;
+    flex-direction: column;
+    padding-left: 240px;
 }

@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI设计师组件库 - Hony Design</title>
+    <link rel="icon" href="overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="overall/design-tokens.css">
     <link rel="stylesheet" href="overall/home.css">
     <script src="overall/js/common.js"></script>
+<link rel="stylesheet" href="desktop/B-navigation/tabs.css">
 </head>
 <body>
     <div class="home-page">
@@ -17,15 +19,61 @@
             </video>
         </div>
 
-        <!-- 顶部导航栏 -->
-        <div id="navbar-container"></div>
+        <nav class="navbar">
+            <div class="navbar-content">
+                <!-- LOGO -->
+                <div class="logo" onclick="navigateTo('index.html')">
+                    <img class="logo-icon" src="../../overall/images/LOGO.png" alt="Hony Design Logo">
+                    <div class="logo-text">Hony Design</div>
+                </div>
+                <!-- 导航菜单 -->
+                <div class="nav-menu">
+                <!-- 搜索框 -->
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="搜索组件...">
+                    <span class="search-icon iconfont">&#xe963;</span>
+                    <span class="search-clear iconfont" style="display: none;" onclick="clearSearch(this)">&#xf062;</span>
+                    <div class="search-dropdown" style="display: none;">
+                        <div class="search-dropdown-header">搜索结果</div>
+                        <div class="search-dropdown-list" id="search-results"></div>
+                    </div>
+                </div>
+                    <div class="nav-item" onclick="navigateTo('Specification/color.html')">
+                        <div class="nav-item-inner">
+                            <div class="nav-text">设计规范</div>
+                        </div>
+                    </div>
+                    <div class="nav-item" onclick="navigateTo('desktop/A-system/button.html')">
+                        <div class="nav-item-inner">
+                            <div class="nav-text">桌面端组件</div>
+                        </div>
+                    </div>
+                    <div class="nav-item" onclick="window.open('../../desktop/page-template/system-login.html', '_blank')">
+                        <div class="nav-item-inner">
+                            <div class="nav-text">页面模版</div>
+                        </div>
+                    </div>
+                    <div class="nav-item" onclick="window.open('https://www.figma.com/proto/NGoV0wp2ulYjFmzTPVsRzR/Untitled?node-id=9-6&viewport=77%2C-239%2C0.18&t=IJpHPYV8X3xdXgwE-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=9%3A6&page-id=0%3A1', '_blank')">
+                        <div class="nav-item-inner">
+                            <div class="nav-text">关于我</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
         <!-- 主内容区域 -->
         <div class="main-content">
             <div class="hero-section">
                 <div class="hero-content">
-                    <h1 class="hero-title">UI设计师组件库</h1>
-                    <h2 class="hero-subtitle">Hony Design</h2>
+
+                    <div class="hero-subtitle">
+                        UI设计师组件库
+                    </div>
+                    <div class="hero-title">
+                        <span class="typing-text" id="typing-line"></span>
+                    </div>
+                    
                     <div class="hero-buttons">
                         <button class="btn-primary">
                             <span class="btn-text">开始使用</span>
@@ -79,5 +127,6 @@
         // 导航栏背景动态变化
 
     </script>
+<script src="desktop/B-navigation/tabs.js"></script>
 </body>
 </html>

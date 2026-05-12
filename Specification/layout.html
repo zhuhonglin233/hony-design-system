@@ -4,252 +4,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>布局 - 设计规范</title>
+    <link rel="icon" href="../overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../overall/main.css">
     <link rel="stylesheet" href="layout.css">
     <script src="../overall/js/common.js"></script>
+<link rel="stylesheet" href="desktop/B-navigation/tabs.css">
 </head>
 <body>
-    <div class="background-decoration"></div>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>颜色 - 设计规范</title>
+    <link rel="icon" href="../overall/images/LOGO.png" type="image/png">
+    <link rel="stylesheet" href="../overall/main.css">
+    <link rel="stylesheet" href="color.css">
+    <script src="../overall/js/common.js"></script>
+<link rel="stylesheet" href="desktop/B-navigation/tabs.css">
+</head>
+<body>
     <div class="page-container">
-        <!-- 顶部导航导航栏 -->
-        <div id="navbar-container"></div>
-
+        <!-- 左侧导航 -->
+        <div id="sidebar-container"></div>      
         <!-- 主内容区域 -->
         <div class="main-content">
-            <!-- 侧边导航 -->
-            <div id="sidebar-container"></div>
-
-            <!-- 右侧内容 -->
-            <div class="content-area">
-                <div class="content-main">
-                    <!-- 页面标题 -->
-                    <div class="page-header">
-                        <div class="design-code">design code 设计规范</div>
-                        <div class="page-title">布局</div>
-                        <div class="page-description">布局是指在界面设计中对元素进行排列和组织的方式，它决定了用户如何与界面交互，以及信息如何被呈现。良好的布局能够提高用户体验，使界面更加直观和易于使用。</div>
-                    </div>
-
-                <!-- 布局规范 Section -->
-                <div class="section">
-                    <div class="section-title">布局<span style="color: var(--primary-main-1);">规范</span></div>
-                    
-                    <!-- 布局模式 Subsection -->
-                    <div class="subsection" id="layout-mode">
-                        <div class="subsection-title">布局模式</div>
-                        <div class="subsection-description">布局模式是指界面设计中常用的布局结构，包括固定布局、流式布局、响应式布局等。不同的布局模式适用于不同的场景和设备。</div>
-                        <div class="component-container">
-                        <img src="../overall/icons/布局示意图.png" alt="布局模式示意图" style="width: 100%; border-radius: 8px;">
-                    </div>
-                    </div>
-                    
-                    <!-- 栅格系统 Subsection -->
-                    <div class="subsection" id="grid-system">
-                        <div class="subsection-title">栅格系统</div>
-                        <div class="subsection-description">栅格系统是一种用于组织和排列界面元素的工具，它将页面划分为均匀的网格，使元素的排列更加有序和一致。</div>
-                        <div class="component-container">
-                            <table class="grid-table">
-                                <thead>
-                                    <tr>
-                                        <th>断点</th>
-                                        <th>范围</th>
-                                        <th>容器宽度</th>
-                                        <th>列数</th>
-                                        <th>间距</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Small</td>
-                                        <td>&lt; 768px</td>
-                                        <td>100%</td>
-                                        <td>4</td>
-                                        <td>16px</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Medium</td>
-                                        <td>768px - 1024px</td>
-                                        <td>720px</td>
-                                        <td>8</td>
-                                        <td>16px</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Large</td>
-                                        <td>1024px - 1440px</td>
-                                        <td>960px</td>
-                                        <td>12</td>
-                                        <td>24px</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Extra Large</td>
-                                        <td>≥ 1440px</td>
-                                        <td>1200px</td>
-                                        <td>12</td>
-                                        <td>24px</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+            <!-- 顶部导航栏 -->
+            <div id="navbar-container"></div>
+            <!-- 主内容区域 -->
+            <div class="hony-content-area">
+                <!-- 页面标题 -->
+                <div class="page-header">
+                    <div class="design-code">design code 设计规范</div>
+                    <div class="page-title">布局</div>
+                    <div class="page-description">布局是指在界面设计中对元素进行排列和组织的方式，它决定了用户如何与界面交互，以及信息如何被呈现。良好的布局能够提高用户体验，使界面更加直观和易于使用。</div>
+                </div>           
+                <div class="main-content-area">
+                    <!-- 内容 -->
+                    <div class="content-area">
+                        <div class="content-main">
+                            <!-- 布局规范 Section -->
+                            <div class="section">
+                                <div class="section-title">布局<span style="color: var(--primary-6);">规范</span></div>
+                                
+                                <!-- 布局模式 Subsection -->
+                                <div class="subsection" id="layout-mode">
+                                    <div class="subsection-title">布局模式</div>
+                                    <div class="subsection-description">布局模式是指界面设计中常用的布局结构，包括固定布局、流式布局、响应式布局等。不同的布局模式适用于不同的场景和设备。</div>
+                                    <div class="component-container">
+                                    <img src="../overall/icons/布局示意图.png" alt="布局模式示意图" style="width: 100%; border-radius: 8px;">
+                                </div>
+                                </div>
+                                
+                                <!-- 栅格系统 Subsection -->
+                                <div class="subsection" id="grid-system">
+                                    <div class="subsection-title">栅格系统</div>
+                                    <div class="subsection-description">栅格系统是一种用于组织和排列界面元素的工具，它将页面划分为均匀的网格，使元素的排列更加有序和一致。</div>
+                                    <div class="component-container">
+                                        <table class="grid-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>断点</th>
+                                                    <th>范围</th>
+                                                    <th>容器宽度</th>
+                                                    <th>列数</th>
+                                                    <th>间距</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Small</td>
+                                                    <td>&lt; 768px</td>
+                                                    <td>100%</td>
+                                                    <td>4</td>
+                                                    <td>16px</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Medium</td>
+                                                    <td>768px - 1024px</td>
+                                                    <td>720px</td>
+                                                    <td>8</td>
+                                                    <td>16px</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Large</td>
+                                                    <td>1024px - 1440px</td>
+                                                    <td>960px</td>
+                                                    <td>12</td>
+                                                    <td>24px</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Extra Large</td>
+                                                    <td>≥ 1440px</td>
+                                                    <td>1200px</td>
+                                                    <td>12</td>
+                                                    <td>24px</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- 间距系统 Subsection -->
+                                <div class="subsection" id="spacing-system">
+                                    <div class="subsection-title">间距系统</div>
+                                    <div class="subsection-description">间距（Spacing）是UI设计中至关重要的元素，它用于控制组件之间的距离，优化界面体系，提升差异性和用户体验。合理的间距管理可以使界面更加整洁、统一，并有助于建立一致的设计语言。为了页面布局的一致性，在不同区域中放置内容元素时，应当保持间距的规律性。我们推荐一组具有韵律的间距值，在遵循8倍数原则的基础上，增加了4、12两档小间距，以灵活满足不同的应用场景。</div>
+                                    <div class="component-container">
+                                        <table class="spacing-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>命名</th>
+                                                    <th>场景</th>
+                                                    <th>圆角半径</th>
+                                                    <th>标注代表颜色</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Mini</td>
+                                                    <td>小尺寸的组件图标与文字间距</td>
+                                                    <td>4px</td>
+                                                    <td><div class="color-box" style="background: #FFB6C1;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Small</td>
+                                                    <td>常规尺寸的组件与文字的内间距</td>
+                                                    <td>8px</td>
+                                                    <td><div class="color-box" style="background: #FFDAB9;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Regular</td>
+                                                    <td>常规组件的内间距</td>
+                                                    <td>12px</td>
+                                                    <td><div class="color-box" style="background: #98FB98;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Base</td>
+                                                    <td>板块的间距</td>
+                                                    <td>16px</td>
+                                                    <td><div class="color-box" style="background: #87CEFA;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Comfort</td>
+                                                    <td>模块分割或板块内的内间距</td>
+                                                    <td>24px</td>
+                                                    <td><div class="color-box" style="background: #DDA0DD;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Section</td>
+                                                    <td>特殊场景</td>
+                                                    <td>32px</td>
+                                                    <td><div class="color-box" style="background: #E6E6FA;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Layout</td>
+                                                    <td>特殊场景</td>
+                                                    <td>40px</td>
+                                                    <td><div class="color-box" style="background: #F0F8FF;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hero</td>
+                                                    <td>特殊场景</td>
+                                                    <td>48px</td>
+                                                    <td><div class="color-box" style="background: #F5F5F5;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ultra</td>
+                                                    <td>特殊场景</td>
+                                                    <td>64px</td>
+                                                    <td><div class="color-box" style="background: #F8F8FF;"></div></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- 圆角分级 Subsection -->
+                                <div class="subsection" id="border-radius">
+                                    <div class="subsection-title">圆角分级</div>
+                                    <div class="subsection-description">根据不同的组件类型和标准，统一设定圆角值，以保证设计的一致性。</div>
+                                    <div class="component-container">
+                                        <table class="spacing-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>命名</th>
+                                                    <th>场景</th>
+                                                    <th>圆角半径</th>
+                                                    <th>预览</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>0</td>
+                                                    <td>表格核心、严格场景</td>
+                                                    <td>0px</td>
+                                                    <td><div class="radius-preview" style="border-radius: 0px;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mini</td>
+                                                    <td>按钮、小型输入框、标签</td>
+                                                    <td>4px</td>
+                                                    <td><div class="radius-preview" style="border-radius: 4px;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Small</td>
+                                                    <td>弹窗、弹出层</td>
+                                                    <td>8px</td>
+                                                    <td><div class="radius-preview" style="border-radius: 8px;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Medium</td>
+                                                    <td>特殊组件、品牌设计元素</td>
+                                                    <td>16px</td>
+                                                    <td><div class="radius-preview" style="border-radius: 16px;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Large</td>
+                                                    <td>特殊组件、品牌设计元素</td>
+                                                    <td>24px</td>
+                                                    <td><div class="radius-preview" style="border-radius: 24px;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Extra Large</td>
+                                                    <td>特殊组件、品牌设计元素</td>
+                                                    <td>32px</td>
+                                                    <td><div class="radius-preview" style="border-radius: 32px;"></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>圆角-变量</td>
+                                                    <td>胶囊类直角类切换</td>
+                                                    <td>999px</td>
+                                                    <td><div class="radius-preview" style="border-radius: 999px;"></div></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- 布局组成 Subsection -->
+                                <div class="subsection" id="layout-components">
+                                    <div class="subsection-title">布局组成</div>
+                                    <div class="subsection-description">为了减少布局设定时的沟通与拆分计算成本，基于主流屏幕尺寸，我们将设计团队的标准画板宽度定为1440px或1920px。内部区域（Content）：通常用于放置主体内容。顶部区域（Header）：位于页面顶部，通常用于放置顶部导航。侧边区域（Sider）：位于主体内容两侧，通常用于放置侧边导航。底部区域（Footer）：位于页面底部，通常用于放置辅助信息。</div>
+                                    <div class="component-container">
+                                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=UI%20layout%20diagram%20showing%20header%2C%20sider%2C%20content%20and%20footer%20areas%20with%20annotations%2C%20professional%20design%20system%20style&image_size=landscape_16_9" alt="布局组成示意图" style="width: 100%; border-radius: 8px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                    <!-- 右侧锚点导航 -->
+                    <div class="right-nav">
+                        <div class="right-nav-items">
+                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'layout-mode');">布局模式</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'grid-system');">栅格系统</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'spacing-system');">间距系统</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'border-radius');">圆角分级</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'layout-components');">布局组成</div>
                         </div>
                     </div>
-                    
-                    <!-- 间距系统 Subsection -->
-                    <div class="subsection" id="spacing-system">
-                        <div class="subsection-title">间距系统</div>
-                        <div class="subsection-description">间距（Spacing）是UI设计中至关重要的元素，它用于控制组件之间的距离，优化界面体系，提升差异性和用户体验。合理的间距管理可以使界面更加整洁、统一，并有助于建立一致的设计语言。为了页面布局的一致性，在不同区域中放置内容元素时，应当保持间距的规律性。我们推荐一组具有韵律的间距值，在遵循8倍数原则的基础上，增加了4、12两档小间距，以灵活满足不同的应用场景。</div>
-                        <div class="component-container">
-                            <table class="spacing-table">
-                                <thead>
-                                    <tr>
-                                        <th>命名</th>
-                                        <th>场景</th>
-                                        <th>圆角半径</th>
-                                        <th>标注代表颜色</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Mini</td>
-                                        <td>小尺寸的组件图标与文字间距</td>
-                                        <td>4px</td>
-                                        <td><div class="color-box" style="background: #FFB6C1;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Small</td>
-                                        <td>常规尺寸的组件与文字的内间距</td>
-                                        <td>8px</td>
-                                        <td><div class="color-box" style="background: #FFDAB9;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Regular</td>
-                                        <td>常规组件的内间距</td>
-                                        <td>12px</td>
-                                        <td><div class="color-box" style="background: #98FB98;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Base</td>
-                                        <td>板块的间距</td>
-                                        <td>16px</td>
-                                        <td><div class="color-box" style="background: #87CEFA;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Comfort</td>
-                                        <td>模块分割或板块内的内间距</td>
-                                        <td>24px</td>
-                                        <td><div class="color-box" style="background: #DDA0DD;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Section</td>
-                                        <td>特殊场景</td>
-                                        <td>32px</td>
-                                        <td><div class="color-box" style="background: #E6E6FA;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Layout</td>
-                                        <td>特殊场景</td>
-                                        <td>40px</td>
-                                        <td><div class="color-box" style="background: #F0F8FF;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Hero</td>
-                                        <td>特殊场景</td>
-                                        <td>48px</td>
-                                        <td><div class="color-box" style="background: #F5F5F5;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ultra</td>
-                                        <td>特殊场景</td>
-                                        <td>64px</td>
-                                        <td><div class="color-box" style="background: #F8F8FF;"></div></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    
-                    <!-- 圆角分级 Subsection -->
-                    <div class="subsection" id="border-radius">
-                        <div class="subsection-title">圆角分级</div>
-                        <div class="subsection-description">根据不同的组件类型和标准，统一设定圆角值，以保证设计的一致性。</div>
-                        <div class="component-container">
-                            <table class="spacing-table">
-                                <thead>
-                                    <tr>
-                                        <th>命名</th>
-                                        <th>场景</th>
-                                        <th>圆角半径</th>
-                                        <th>预览</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>0</td>
-                                        <td>表格核心、严格场景</td>
-                                        <td>0px</td>
-                                        <td><div class="radius-preview" style="border-radius: 0px;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mini</td>
-                                        <td>按钮、小型输入框、标签</td>
-                                        <td>4px</td>
-                                        <td><div class="radius-preview" style="border-radius: 4px;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Small</td>
-                                        <td>弹窗、弹出层</td>
-                                        <td>8px</td>
-                                        <td><div class="radius-preview" style="border-radius: 8px;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Medium</td>
-                                        <td>特殊组件、品牌设计元素</td>
-                                        <td>16px</td>
-                                        <td><div class="radius-preview" style="border-radius: 16px;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Large</td>
-                                        <td>特殊组件、品牌设计元素</td>
-                                        <td>24px</td>
-                                        <td><div class="radius-preview" style="border-radius: 24px;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Extra Large</td>
-                                        <td>特殊组件、品牌设计元素</td>
-                                        <td>32px</td>
-                                        <td><div class="radius-preview" style="border-radius: 32px;"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>圆角-变量</td>
-                                        <td>胶囊类直角类切换</td>
-                                        <td>999px</td>
-                                        <td><div class="radius-preview" style="border-radius: 999px;"></div></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    
-                    <!-- 布局组成 Subsection -->
-                    <div class="subsection" id="layout-components">
-                        <div class="subsection-title">布局组成</div>
-                        <div class="subsection-description">为了减少布局设定时的沟通与拆分计算成本，基于主流屏幕尺寸，我们将设计团队的标准画板宽度定为1440px或1920px。内部区域（Content）：通常用于放置主体内容。顶部区域（Header）：位于页面顶部，通常用于放置顶部导航。侧边区域（Sider）：位于主体内容两侧，通常用于放置侧边导航。底部区域（Footer）：位于页面底部，通常用于放置辅助信息。</div>
-                        <div class="component-container">
-                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=UI%20layout%20diagram%20showing%20header%2C%20sider%2C%20content%20and%20footer%20areas%20with%20annotations%2C%20professional%20design%20system%20style&image_size=landscape_16_9" alt="布局组成示意图" style="width: 100%; border-radius: 8px;">
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            
-                        <!-- 右侧锚点导航 -->
-            <div class="right-nav">
-                <div class="right-nav-items">
-                        <div class="right-nav-item active" onclick="handleRightNavClick(this, 'layout-mode');">布局模式</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'grid-system');">栅格系统</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'spacing-system');">间距系统</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'border-radius');">圆角分级</div>
-                        <div class="right-nav-item" onclick="handleRightNavClick(this, 'layout-components');">布局组成</div>
-                </div>
+                </div>                
             </div>
         </div>
     </div>
+    <!-- 背景纹理 -->
+    <div class="hony-background-texture"></div>
+    <!-- 背景banner -->
+    <div class="background-bgVideo">
+        <!-- 浅色模式视频 -->
+        <video class="background-bgVideo-video background-bgVideo-light" autoplay muted loop playsinline>
+            <source src="../../overall/images/背景banne.mp4" type="video/mp4">
+        </video>
+        <!-- 深色模式图片 -->
+        <img class="background-bgVideo-image background-bgVideo-dark" src="../../overall/images/bg-dark-mode.png" alt="深色背景">
+    </div>
+<script src="desktop/B-navigation/tabs.js"></script>
 </body>
 </html>

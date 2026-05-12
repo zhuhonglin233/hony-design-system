@@ -30,7 +30,8 @@
   align-items: flex-start;
   align-self: stretch;
   background: var(--grey-bg-0);
-  width: 180px;
+  height: 100%;
+  width: 100%;
 }
 
 /* 菜单项基础样式 */
@@ -112,6 +113,7 @@
   font-size: 14px;
   cursor: pointer;
   transition: all 0.2s ease;
+  width: 100%;
 }
 
 .hony-sidebar-nav .hony-nav-menu-subitem:hover {
@@ -206,6 +208,7 @@
   overflow: visible; /* 允许右侧抽屉超出容器 */
   position: relative; /* 确保右侧抽屉的定位正确 */
   gap: 120px;
+  width: 180px;
 }
 
 
@@ -217,7 +220,6 @@
   background: var(--grey-bg-0);
   border-radius: 8px;
   padding: 8px;
-  width: 180px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -807,7 +809,6 @@
   background: var(--primary-main-1);
   border-radius: 8px;
   padding: 8px;
-  width: 180px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1125,7 +1126,6 @@
   background: var(--primary-face-1);
   border-radius: 8px;
   padding: 8px;
-  width: 180px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1420,7 +1420,6 @@
   background: var(--grey-bg-0);
   border-radius: 8px;
   padding: 8px;
-  width: 180px;
   max-height: 400px;
   display: flex;
   flex-direction: column;
@@ -1755,8 +1754,6 @@
   align-items: flex-start;
   align-self: stretch;
   background: var(--grey-bg-0);
-  width: 180px;
-
   border-radius: 8px;
   padding: 8px;
   overflow: hidden;
@@ -2078,7 +2075,6 @@
 
 /* 样式6 - 抽屉导航 */
 #hony-sidebar-nav-6.hony-drawer-nav {
-  width: 180px;
   border-radius: 8px;
   overflow: visible; /* 允许右侧抽屉超出导航容器 */
   background-color: var(--grey-bg-0);
@@ -2093,8 +2089,8 @@
 
 /* 左侧导航 */
 .hony-drawer-nav-left {
-  width: 180px;
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -2483,10 +2479,12 @@
 }
 
 .hony-top-nav-logo-text {
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--grey-text-1);
-  font-family: 'PangMenZhengDao', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimHei, Arial, Helvetica, sans-serif;
+    font-family: 'YouSheBiaoTiHei', 'PingFang SC', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: var(--grey-text-1);
 }
 
 /* 顶部导航菜单项样式 */
@@ -2614,7 +2612,6 @@
   background: var(--grey-bg-0);
   box-shadow: var(--shadow-grey-small);
   border-radius: 8px;
-  width: 180px;
   z-index: 1000;
   display: none;
 }

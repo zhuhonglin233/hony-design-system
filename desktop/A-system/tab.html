@@ -4,35 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>标签 - 桌面端组件</title>
+    <link rel="icon" href="../../overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../../overall/main.css">
     <link rel="stylesheet" href="../../overall/icons/iconfont.css">
     <link rel="stylesheet" href="tab.css">
     <script src="../../overall/js/common.js"></script>
+<link rel="stylesheet" href="../B-navigation/tabs.css">
 </head>
 <body>
-    <div class="background-decoration"></div>
     <div class="page-container">
         <!-- 左侧导航 -->
-        <div id="sidebar-container"></div>
-    
-        
+        <div id="sidebar-container"></div>      
         <!-- 主内容区域 -->
         <div class="main-content">
             <!-- 顶部导航栏 -->
             <div id="navbar-container"></div>
             <!-- 主内容区域 -->
-            <div class="main-content-area">
-                <!-- 内容 -->
-                <div class="content-area">
-                    <div class="content-main">
-                        <!-- 页面标题 -->
-                        <div class="page-header">
-                            <div class="design-code">design code 桌面端组件</div>
-                            <div class="page-title">标签</div>
-                            <div class="page-description">标签是对事物进行分类的标记，用于标记已完成的操作或标记需要处理的内容。</div>
-                        </div>
-                        <!-- 标签样式 -->
-                        <div class="hony-tab-content">
+            <div class="hony-content-area">
+                <!-- 页面标题 -->
+                <div class="page-header">
+                    <div class="design-code">design code 桌面端组件</div>
+                    <div class="page-title">标签</div>
+                    <div class="page-description">标签是对事物进行分类的标记，用于标记已完成的操作或标记需要处理的内容。</div>
+                </div>             
+                <div class="main-content-area">
+                    <!-- 内容 -->
+                    <div class="content-area">
+                        <div class="content-main">
+                            <!-- 标签样式 -->
                             <div class="section">
                                 <div class="section-title">标签<span style="color: var(--primary-main-1);">样式</span></div>
                                 <!-- 基础样式 -->
@@ -194,7 +193,7 @@
                             <div class="section">
                                 <div class="section-title">标签<span style="color: var(--primary-main-1);">尺寸</span></div>
                                 <!-- 小标签 Section -->
-                                <div class="subsection" id="hony-tab-size-small">
+                                <div class="subsection" id="hony-tab-size-sm">
                                     <div class="subsection-title">小标签</div>
                                     <div class="subsection-description">小标签：图标12px，文字12px，高度20px，适合在紧凑空间或列表中使用。</div>
                                     <!-- 小标签 Section -->
@@ -337,7 +336,7 @@
                                     </div>
                                 </div>
                                 <!-- 常规标签 Section -->
-                                <div class="subsection" id="hony-tab-size-small">
+                                <div class="subsection" id="hony-tab-size-md">
                                     <div class="subsection-title">常规标签</div>
                                     <div class="subsection-description">常规标签：图标14px，文字14px，高度24px，是最常用的标签尺寸，适用于大多数场景。</div>
                                     <!-- 常规标签 Section -->
@@ -480,7 +479,7 @@
                                     </div>
                                 </div>
                                 <!-- 大标签 Section -->
-                                <div class="subsection" id="hony-tab-size-small">
+                                <div class="subsection" id="hony-tab-size-lg">
                                     <div class="subsection-title">大标签</div>
                                     <div class="subsection-description">大标签：图标16px，文字16px，高度32px，适合需要突出显示或包含较长文本的场景。</div>
                                     <!-- 大标签 Section -->
@@ -661,19 +660,19 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>                
-                <!-- 右侧锚点导航 -->
-                <div class="right-nav">
-                    <div class="right-nav-items">
+                    </div>                
+                    <!-- 右侧锚点导航 -->
+                    <div class="right-nav">
+                        <div class="right-nav-items">
                             <div class="right-nav-item active" onclick="handleRightNavClick(this, 'tab-basic');">基础样式</div>
                             <div class="right-nav-item" onclick="handleRightNavClick(this, 'tab-icon-closable');">标签+图标+可删除</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'tab-size-small');">小标签</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'tab-size-small');">常规标签</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'tab-size-small');">大标签</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'tab-size-sm');">小标签</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'tab-size-md');">常规标签</div>
+                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'tab-size-lg');">大标签</div>
                             <div class="right-nav-item" onclick="handleRightNavClick(this, 'tab-shapes');">标签形状</div>
+                        </div>
                     </div>
-                </div>
+                </div>                
             </div>
         </div>
     </div>
@@ -681,9 +680,18 @@
     <div class="hony-background-texture"></div>
     <!-- 背景banner -->
     <div class="background-bgVideo">
-        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+        <!-- 浅色模式视频 -->
+        <video class="background-bgVideo-video background-bgVideo-light" autoplay muted loop playsinline>
             <source src="../../overall/images/背景banne.mp4" type="video/mp4">
         </video>
+        <!-- 深色模式图片 -->
+        <img class="background-bgVideo-image background-bgVideo-dark" src="../../overall/images/bg-dark-mode.png" alt="深色背景">
     </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        initRightNavScroll();
+    });
+</script>
+<script src="../B-navigation/tabs.js"></script>
 </body>
 </html>

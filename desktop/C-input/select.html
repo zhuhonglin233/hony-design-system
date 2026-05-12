@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>选择器 - 桌面端组件</title>
+    <link rel="icon" href="../../overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../../overall/main.css">
     <link rel="stylesheet" href="../../overall/icons/iconfont.css">
     <link rel="stylesheet" href="select.css">
@@ -15,28 +16,28 @@
     <script src="../../overall/js/dp-date-picker.js"></script>
     <script src="../../overall/js/cp-color-picker.js"></script>
     <script src="select.js"></script>
+<link rel="stylesheet" href="../B-navigation/tabs.css">
 </head>
 <body>
     <div class="page-container">
         <!-- 左侧导航 -->
-        <div id="sidebar-container"></div>
-    
-        
+        <div id="sidebar-container"></div>      
         <!-- 主内容区域 -->
         <div class="main-content">
             <!-- 顶部导航栏 -->
             <div id="navbar-container"></div>
             <!-- 主内容区域 -->
-            <div class="main-content-area">
-                <!-- 内容 -->
-                <div class="content-area">
-                    <div class="content-main">
-                        <!-- 页面标题 -->
-                        <div class="page-header">
-                            <div class="design-code">design code 桌面端组件</div>
-                            <div class="page-title">选择器</div>
-                            <div class="page-description">提供多种类型的选择器组件，包括基础选择器、多选选择器、日期选择器、时间段选择器、颜色选择器等。</div>
-                        </div>
+            <div class="hony-content-area">
+                <!-- 页面标题 -->
+                <div class="page-header">
+                    <div class="design-code">design code 桌面端组件</div>
+                    <div class="page-title">选择器</div>
+                    <div class="page-description">提供多种类型的选择器组件，包括基础选择器、多选选择器、日期选择器、时间段选择器、颜色选择器等。</div>
+                </div>             
+                <div class="main-content-area">
+                    <!-- 内容 -->
+                    <div class="content-area">
+                        <div class="content-main">
 
                         <!-- 选择器基础 Section -->
                         <div class="section">
@@ -543,7 +544,7 @@
                                 </div>
                             </div>
                             <!-- 周次选择器 -->
-                            <div class="subsection" id="date-picker-section">
+                            <div class="subsection" id="hony-week-picker">
                                 <div class="subsection-title">周次选择器</div>
                                 <div class="subsection-description">用于选择周次，支持周视图展示和快速选择当前周。</div>
                                 <div class="component-container">
@@ -664,7 +665,7 @@
                                 </div>
                             </div>
                             <!-- 日期时间选择器 -->
-                            <div class="subsection" id="date-picker-section">
+                            <div class="subsection" id="hony-datetime-picker">
                                 <div class="subsection-title">日期时间选择器</div>
                                 <div class="subsection-description">用于选择日期和时间，支持时分秒的精确选择。</div>
                                 <div class="component-container">
@@ -827,7 +828,7 @@
                                 </div>
                             </div>
                             <!-- 时间段选择器 -->
-                            <div class="subsection" id="date-picker-section">
+                            <div class="subsection" id="hony-range-picker">
                                 <div class="subsection-title">时间段选择器</div>
                                 <div class="subsection-description">用于选择起始日期和结束日期，支持快捷选择常用时间范围。</div>
                                 <div class="component-container">
@@ -1338,14 +1339,12 @@
                             </div>
 
                         </div>
-
-
                         <!-- 选择器样式 Section -->
                         <div class="section">
                             <div class="section-title">拓展<span style="color: var(--primary-main-1);">样式</span></div>
                             
                             <!-- 拓展基础选择器 -->
-                            <div class="subsection" id="basic-selector">
+                            <div class="subsection" id="hony-ext-basic-selector">
                                 <div class="subsection-title">拓展基础选择器</div>
                                 <div class="subsection-description">拓展基础选择器：带有标题标签和前缀图标的选择器，提供更丰富的视觉提示和标签说明。</div>
                                 <div class="component-container">
@@ -1405,7 +1404,7 @@
 
 
                             <!-- 拓展复选选择器 -->
-                            <div class="subsection" id="hony-checkbox-selector">
+                            <div class="subsection" id="hony-ext-checkbox-selector">
                                 <div class="subsection-title">拓展复选选择器</div>
                                 <div class="subsection-description">复选选择器用于从下拉列表中选择多个选项。</div>
                                 <div class="component-container">
@@ -1563,7 +1562,7 @@
                             </div>
 
                             <!-- 拓展时间选择器 -->
-                            <div class="subsection" id="hony-time-picker">
+                            <div class="subsection" id="hony-ext-time-picker">
                                 <div class="subsection-title">拓展时间选择器</div>
                                 <div class="subsection-description">拓展时间选择器：带有标题标签和前缀图标的时间选择器，提供更明确的时间和标签说明。</div>
                                 <div class="component-container">
@@ -1741,7 +1740,7 @@
                             </div>
 
                             <!-- 拓展日期选择器 -->
-                            <div class="subsection" id="date-picker-section">
+                            <div class="subsection" id="hony-ext-date-picker">
                                 <div class="subsection-title">拓展日期选择器</div>
                                 <div class="subsection-description">拓展日期选择器：带有标题标签和前缀图标的日期选择器，支持选择年、月、日，显示日历面板。</div>
                                 <div class="component-container">
@@ -1870,7 +1869,7 @@
                                 </div>
                             </div>
                             <!-- 拓展周次选择器 -->
-                            <div class="subsection" id="date-picker-section">
+                            <div class="subsection" id="hony-ext-week-picker">
                                 <div class="subsection-title">拓展周次选择器</div>
                                 <div class="subsection-description">拓展周次选择器：带有标题标签和前缀图标的周次选择器，支持按周视图选择，可快速定位到目标周。</div>
                                 <div class="component-container">
@@ -1997,7 +1996,7 @@
                                 </div>
                             </div>
                             <!-- 拓展日期时间选择器 -->
-                            <div class="subsection" id="date-picker-section">
+                            <div class="subsection" id="hony-ext-datetime-picker">
                                 <div class="subsection-title">拓展日期时间选择器</div>
                                 <div class="subsection-description">拓展日期时间选择器：带有标题标签和前缀图标的日期时间选择器，支持日期和时间组合选择，可精确到时分秒。</div>
                                 <div class="component-container">
@@ -2166,7 +2165,7 @@
                                 </div>
                             </div>
                             <!-- 拓展时间段选择器 -->
-                            <div class="subsection" id="date-picker-section">
+                            <div class="subsection" id="hony-ext-range-picker">
                                 <div class="subsection-title">拓展时间段选择器</div>
                                 <div class="subsection-description">拓展时间段选择器：带有标题标签和前缀图标的时间段选择器，支持选择开始和结束日期，适用于日期区间查询场景。</div>
                                 <div class="component-container">
@@ -2450,7 +2449,7 @@
                             </div>
 
                             <!-- 拓展颜色选择器 -->
-                            <div class="subsection" id="color-selector">
+                            <div class="subsection" id="hony-ext-color-selector">
                                 <div class="subsection-title">拓展颜色选择器</div>
                                 <div class="subsection-description">颜色选择器用于选择颜色，支持单色和渐变模式。</div>
                                 <div class="component-container">
@@ -2679,46 +2678,60 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
+                        </div>
+
+
+
+
+
+
 
                         </div>
+                    </div>                
+                    <!-- 右侧锚点导航 -->
+                    <div class="right-nav">
+                        <div class="right-nav-items">
+                                <div class="right-nav-item active" onclick="handleRightNavClick(this, 'basic-selector');">基础选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'checkbox-selector');">复选选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'time-picker');">时间选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'date-picker-section');">日期选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'week-picker');">周次选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'datetime-picker');">日期时间选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'range-picker');">时间段选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-selector');">颜色选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'ext-basic-selector');">拓展基础选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'ext-checkbox-selector');">拓展复选选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'ext-time-picker');">拓展时间选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'ext-date-picker');">拓展日期选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'ext-week-picker');">拓展周次选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'ext-datetime-picker');">拓展日期时间选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'ext-range-picker');">拓展时间段选择器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'ext-color-selector');">拓展颜色选择器</div>
+                        </div>
                     </div>
-                </div>                
-                <!-- 右侧锚点导航 -->
-                <div class="right-nav">
-                    <div class="right-nav-items">
-                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'basic-selector');">基础选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'checkbox-selector');">复选选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'time-picker');">时间选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'date-picker-section');">日期选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'date-picker-section');">周次选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'date-picker-section');">日期时间选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'date-picker-section');">时间段选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-selector');">颜色选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'basic-selector');">拓展基础选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'checkbox-selector');">拓展复选选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'time-picker');">拓展时间选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'date-picker-section');">拓展日期选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'date-picker-section');">拓展周次选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'date-picker-section');">拓展日期时间选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'date-picker-section');">拓展时间段选择器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'color-selector');">拓展颜色选择器</div>
-                    </div>
-                </div>
 
+
+                    
+
+                </div>                
             </div>
+
         </div>
     </div>
     <!-- 背景纹理 -->
     <div class="hony-background-texture"></div>
     <!-- 背景banner -->
     <div class="background-bgVideo">
-        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+        <!-- 浅色模式视频 -->
+        <video class="background-bgVideo-video background-bgVideo-light" autoplay muted loop playsinline>
             <source src="../../overall/images/背景banne.mp4" type="video/mp4">
         </video>
+        <!-- 深色模式图片 -->
+        <img class="background-bgVideo-image background-bgVideo-dark" src="../../overall/images/bg-dark-mode.png" alt="深色背景">
     </div>
+
+<script src="../B-navigation/tabs.js"></script>
 </body>
 </html>

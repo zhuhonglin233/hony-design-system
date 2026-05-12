@@ -19,7 +19,7 @@
 .hony-switch-handle {
   flex-shrink: 0;
   border-radius: 9999px;
-  background: var(--white);
+  background:   color: var(--primary-main-5);
   transition: all 0.2s ease;
   position: relative;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -29,14 +29,14 @@
   flex-shrink: 0;
   line-height: 12px;
   letter-spacing: 0;
-  color: var(--white);
+  color: var(--primary-main-5);
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
   font-size: 12px;
 }
 
 /* 开关状态 */
 .hony-switch-off {
-  background: var(--grey-border-2);
+  background: var(--grey-text-4);
   flex-direction: row;
 }
 
@@ -50,7 +50,7 @@
   cursor: not-allowed;
 }
 .hony-switch-handle {
-  background: var(--grey-bg-0);
+  background: var(--primary-main-5);
 }
 /* 加载状态 */
 .hony-switch-loading .hony-switch-handle {
@@ -102,7 +102,7 @@
 .hony-switch-md .hony-switch-handle {
   width: 16px;
   height: 16px;
-  background: var(--grey-bg-0);
+  background:var(--primary-main-5);
 }
 
 .hony-switch-md .hony-switch-text {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>分页器 - 桌面端组件</title>
+    <link rel="icon" href="../../overall/images/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../../overall/main.css">
     <link rel="stylesheet" href="../../overall/icons/iconfont.css">
     <link rel="stylesheet" href="Pagination.css">
@@ -11,222 +12,227 @@
     <script src="../../overall/js/common.js"></script>
     <script src="../C-input/select.js"></script>
     <script src="Pagination.js"></script>
+<link rel="stylesheet" href="../B-navigation/tabs.css">
 </head>
 <body>
     <div class="page-container">
         <!-- 左侧导航 -->
-        <div id="sidebar-container"></div>
-    
-        
+        <div id="sidebar-container"></div>      
         <!-- 主内容区域 -->
         <div class="main-content">
             <!-- 顶部导航栏 -->
             <div id="navbar-container"></div>
             <!-- 主内容区域 -->
-            <div class="main-content-area">
-                <!-- 内容 -->
-                <div class="content-area">
-                    <div class="content-main">
-                        <!-- 页面标题 -->
-                        <div class="page-header">
-                            <div class="design-code">design code 桌面端组件</div>
-                            <div class="page-title">分页器</div>
-                            <div class="page-description">显示当前页面在系统层级结构的位置，并能返回之前任意层级的页面。</div>
+            <div class="hony-content-area">
+                <!-- 页面标题 -->
+                <div class="page-header">
+                    <div class="design-code">design code 桌面端组件</div>
+                    <div class="page-title">分页器</div>
+                    <div class="page-description">显示当前页面在系统层级结构的位置，并能返回之前任意层级的页面。</div>
+                </div>              
+                <div class="main-content-area">
+                    <!-- 内容 -->
+                    <div class="content-area">
+                        <div class="content-main">
+                            <!-- 分页器样式 Section -->
+                            <div class="section">
+                                <div class="section-title">基础<span style="color: var(--primary-main-1);">样式</span></div>
+                                
+                                <!-- 基础分页器组件 -->
+                                <div class="subsection" id="pagination-basic">
+                                    <div class="subsection-title">分页器</div>
+                                    <div class="subsection-description">分页器组件：显示数据分页信息，支持切换页码、选择每页条数，提供小、中、大三种尺寸适配不同场景。</div>
+                                    <div class="component-container">
+                                        <div class="hony-pagination-section">
+                                            <div class="hony-pagination hony-pagination-lg hony-pagination-right">
+                                                <div class="hony-pagination-info">共100条数据</div>
+                                                <div class="hony-pagination-controls">
+                                                    <button class="hony-pagination-btn hony-pagination-prev">
+                                                        <span class="iconfont">&#xf06b;</span>
+                                                    </button>
+                                                    <button class="hony-pagination-btn hony-pagination-page active">1</button>
+                                                    <button class="hony-pagination-btn hony-pagination-page">2</button>
+                                                    <button class="hony-pagination-btn hony-pagination-page">3</button>
+                                                    <button class="hony-pagination-btn hony-pagination-next">
+                                                        <span class="iconfont">&#xf064;</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-pagination-section">
+                                            <div class="hony-pagination hony-pagination-md hony-pagination-right">
+                                                <div class="hony-pagination-info">共100条数据</div>
+                                                <div class="hony-pagination-controls">
+                                                    <button class="hony-pagination-btn hony-pagination-prev">
+                                                        <span class="iconfont">&#xf06b;</span>
+                                                    </button>
+                                                    <button class="hony-pagination-btn hony-pagination-page active">1</button>
+                                                    <button class="hony-pagination-btn hony-pagination-page">2</button>
+                                                    <button class="hony-pagination-btn hony-pagination-page">3</button>
+                                                    <button class="hony-pagination-btn hony-pagination-next">
+                                                        <span class="iconfont">&#xf064;</span>
+                                                    </button>
+                                                </div>
+        
+                                            </div>
+                                        </div>
+                                        <div class="hony-pagination-section">
+                                            <div class="hony-pagination hony-pagination-sm hony-pagination-right">
+                                                <div class="hony-pagination-info">共100条数据</div>
+                                                <div class="hony-pagination-controls">
+                                                    <button class="hony-pagination-btn hony-pagination-prev">
+                                                        <span class="iconfont">&#xf06b;</span>
+                                                    </button>
+                                                    <button class="hony-pagination-btn hony-pagination-page active">1</button>
+                                                    <button class="hony-pagination-btn hony-pagination-page">2</button>
+                                                    <button class="hony-pagination-btn hony-pagination-page">3</button>
+                                                    <button class="hony-pagination-btn hony-pagination-next">
+                                                        <span class="iconfont">&#xf064;</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 拓展分页器组件 -->
+                                <div class="subsection" id="pagination-basic">
+                                    <div class="subsection-title">拓展分页器</div>
+                                    <div class="subsection-description">分页器组件：显示数据分页信息，支持切换页码、选择每页条数，提供小、中、大三种尺寸适配不同场景。</div>
+                                    <div class="component-container">
+                                        <div class="hony-pagination-section">
+                                            <div class="hony-pagination hony-pagination-lg hony-pagination-right">
+                                                <div class="hony-pagination-info">共100条数据</div>
+                                                <div class="hony-pagination-controls">
+                                                    <button class="hony-pagination-btn hony-pagination-prev">
+                                                        <span class="iconfont">&#xf06b;</span>
+                                                    </button>
+                                                    <button class="hony-pagination-btn hony-pagination-page active">1</button>
+                                                    <button class="hony-pagination-btn hony-pagination-page">2</button>
+                                                    <button class="hony-pagination-btn hony-pagination-page">3</button>
+                                                    <button class="hony-pagination-btn hony-pagination-next">
+                                                        <span class="iconfont">&#xf064;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="hony-pagination-size">
+                                                    <div class="hony-selector hony-pagination-selector">
+                                                        <div class="hony-selector-input" onclick="toggleSelector(this)">
+                                                            <input type="text" class="hony-input-inner" placeholder="请选择" value="10条/页">
+                                                            <div class="hony-selector-icon iconfont">&#xf061;</div>
+                                                        </div>
+                                                        <div class="hony-selector-dropdown" style="display: none;">
+                                                            <div class="hony-selector-option hony-selected" onclick="selectOption(this)">10条/页</div>
+                                                            <div class="hony-selector-option" onclick="selectOption(this)">20条/页</div>
+                                                            <div class="hony-selector-option" onclick="selectOption(this)">50条/页</div>
+                                                            <div class="hony-selector-option" onclick="selectOption(this)">100条/页</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-pagination-jump">
+                                                    <span>前往</span>
+                                                    <input type="text" class="hony-pagination-jump-input" placeholder="请输入">
+                                                    <span>页</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-pagination-section">
+                                            <div class="hony-pagination hony-pagination-md hony-pagination-right">
+                                                <div class="hony-pagination-info">共100条数据</div>
+                                                <div class="hony-pagination-controls">
+                                                    <button class="hony-pagination-btn hony-pagination-prev">
+                                                        <span class="iconfont">‹</span>
+                                                    </button>
+                                                    <button class="hony-pagination-btn hony-pagination-page active">1</button>
+                                                    <button class="hony-pagination-btn hony-pagination-page">2</button>
+                                                    <button class="hony-pagination-btn hony-pagination-page">3</button>
+                                                    <button class="hony-pagination-btn hony-pagination-next">
+                                                        <span class="iconfont">›</span>
+                                                    </button>
+                                                </div>
+                                                <div class="hony-pagination-size">
+                                                    <div class="hony-selector hony-pagination-selector">
+                                                        <div class="hony-selector-input" onclick="toggleSelector(this)">
+                                                            <input type="text" class="hony-input-inner" placeholder="请选择" value="10条/页">
+                                                            <div class="hony-selector-icon iconfont">&#xf061;</div>
+                                                        </div>
+                                                        <div class="hony-selector-dropdown" style="display: none;">
+                                                            <div class="hony-selector-option hony-selected" onclick="selectOption(this)">10条/页</div>
+                                                            <div class="hony-selector-option" onclick="selectOption(this)">20条/页</div>
+                                                            <div class="hony-selector-option" onclick="selectOption(this)">50条/页</div>
+                                                            <div class="hony-selector-option" onclick="selectOption(this)">100条/页</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-pagination-jump">
+                                                    <span>前往</span>
+                                                    <input type="text" class="hony-pagination-jump-input" placeholder="请输入">
+                                                    <span>页</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hony-pagination-section">
+                                            <div class="hony-pagination hony-pagination-sm hony-pagination-right">
+                                                <div class="hony-pagination-info">共100条数据</div>
+                                                <div class="hony-pagination-controls">
+                                                    <button class="hony-pagination-btn hony-pagination-prev">
+                                                        <span class="iconfont">‹</span>
+                                                    </button>
+                                                    <button class="hony-pagination-btn hony-pagination-page active">1</button>
+                                                    <button class="hony-pagination-btn hony-pagination-page">2</button>
+                                                    <button class="hony-pagination-btn hony-pagination-page">3</button>
+                                                    <button class="hony-pagination-btn hony-pagination-next">
+                                                        <span class="iconfont">›</span>
+                                                    </button>
+                                                </div>
+                                                <div class="hony-pagination-size">
+                                                    <div class="hony-selector hony-pagination-selector">
+                                                        <div class="hony-selector-input" onclick="toggleSelector(this)">
+                                                            <input type="text" class="hony-input-inner" placeholder="请选择" value="10条/页">
+                                                            <div class="hony-selector-icon iconfont">&#xf061;</div>
+                                                        </div>
+                                                        <div class="hony-selector-dropdown" style="display: none;">
+                                                            <div class="hony-selector-option hony-selected" onclick="selectOption(this)">10条/页</div>
+                                                            <div class="hony-selector-option" onclick="selectOption(this)">20条/页</div>
+                                                            <div class="hony-selector-option" onclick="selectOption(this)">50条/页</div>
+                                                            <div class="hony-selector-option" onclick="selectOption(this)">100条/页</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hony-pagination-jump">
+                                                    <span>前往</span>
+                                                    <input type="text" class="hony-pagination-jump-input" placeholder="请输入">
+                                                    <span>页</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-                        <!-- 分页器样式 Section -->
-                        <div class="section">
-                            <div class="section-title">基础<span style="color: var(--primary-main-1);">样式</span></div>
-                            
-                            <!-- 基础分页器组件 -->
-                            <div class="subsection" id="pagination-basic">
-                                <div class="subsection-title">分页器</div>
-                                <div class="subsection-description">分页器组件：显示数据分页信息，支持切换页码、选择每页条数，提供小、中、大三种尺寸适配不同场景。</div>
-                                <div class="component-container">
-                                    <div class="hony-pagination-section">
-                                        <div class="hony-pagination hony-pagination-lg hony-pagination-right">
-                                            <div class="hony-pagination-info">共100条数据</div>
-                                            <div class="hony-pagination-controls">
-                                                <button class="hony-pagination-btn hony-pagination-prev">
-                                                    <span class="iconfont">&#xf06b;</span>
-                                                </button>
-                                                <button class="hony-pagination-btn hony-pagination-page active">1</button>
-                                                <button class="hony-pagination-btn hony-pagination-page">2</button>
-                                                <button class="hony-pagination-btn hony-pagination-page">3</button>
-                                                <button class="hony-pagination-btn hony-pagination-next">
-                                                    <span class="iconfont">&#xf064;</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-pagination-section">
-                                        <div class="hony-pagination hony-pagination-md hony-pagination-right">
-                                            <div class="hony-pagination-info">共100条数据</div>
-                                            <div class="hony-pagination-controls">
-                                                <button class="hony-pagination-btn hony-pagination-prev">
-                                                    <span class="iconfont">&#xf06b;</span>
-                                                </button>
-                                                <button class="hony-pagination-btn hony-pagination-page active">1</button>
-                                                <button class="hony-pagination-btn hony-pagination-page">2</button>
-                                                <button class="hony-pagination-btn hony-pagination-page">3</button>
-                                                <button class="hony-pagination-btn hony-pagination-next">
-                                                    <span class="iconfont">&#xf064;</span>
-                                                </button>
-                                            </div>
-    
-                                        </div>
-                                    </div>
-                                    <div class="hony-pagination-section">
-                                        <div class="hony-pagination hony-pagination-sm hony-pagination-right">
-                                            <div class="hony-pagination-info">共100条数据</div>
-                                            <div class="hony-pagination-controls">
-                                                <button class="hony-pagination-btn hony-pagination-prev">
-                                                    <span class="iconfont">&#xf06b;</span>
-                                                </button>
-                                                <button class="hony-pagination-btn hony-pagination-page active">1</button>
-                                                <button class="hony-pagination-btn hony-pagination-page">2</button>
-                                                <button class="hony-pagination-btn hony-pagination-page">3</button>
-                                                <button class="hony-pagination-btn hony-pagination-next">
-                                                    <span class="iconfont">&#xf064;</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 拓展分页器组件 -->
-                            <div class="subsection" id="pagination-basic">
-                                <div class="subsection-title">拓展分页器</div>
-                                <div class="subsection-description">分页器组件：显示数据分页信息，支持切换页码、选择每页条数，提供小、中、大三种尺寸适配不同场景。</div>
-                                <div class="component-container">
-                                    <div class="hony-pagination-section">
-                                        <div class="hony-pagination hony-pagination-lg hony-pagination-right">
-                                            <div class="hony-pagination-info">共100条数据</div>
-                                            <div class="hony-pagination-controls">
-                                                <button class="hony-pagination-btn hony-pagination-prev">
-                                                    <span class="iconfont">&#xf06b;</span>
-                                                </button>
-                                                <button class="hony-pagination-btn hony-pagination-page active">1</button>
-                                                <button class="hony-pagination-btn hony-pagination-page">2</button>
-                                                <button class="hony-pagination-btn hony-pagination-page">3</button>
-                                                <button class="hony-pagination-btn hony-pagination-next">
-                                                    <span class="iconfont">&#xf064;</span>
-                                                </button>
-                                            </div>
-                                            <div class="hony-pagination-size">
-                                                <div class="hony-selector hony-pagination-selector">
-                                                    <div class="hony-selector-input" onclick="toggleSelector(this)">
-                                                        <input type="text" class="hony-input-inner" placeholder="请选择" value="10条/页">
-                                                        <div class="hony-selector-icon iconfont">&#xf061;</div>
-                                                    </div>
-                                                    <div class="hony-selector-dropdown" style="display: none;">
-                                                        <div class="hony-selector-option hony-selected" onclick="selectOption(this)">10条/页</div>
-                                                        <div class="hony-selector-option" onclick="selectOption(this)">20条/页</div>
-                                                        <div class="hony-selector-option" onclick="selectOption(this)">50条/页</div>
-                                                        <div class="hony-selector-option" onclick="selectOption(this)">100条/页</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-pagination-jump">
-                                                <span>前往</span>
-                                                <input type="text" class="hony-pagination-jump-input" placeholder="请输入">
-                                                <span>页</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-pagination-section">
-                                        <div class="hony-pagination hony-pagination-md hony-pagination-right">
-                                            <div class="hony-pagination-info">共100条数据</div>
-                                            <div class="hony-pagination-controls">
-                                                <button class="hony-pagination-btn hony-pagination-prev">
-                                                    <span class="iconfont">‹</span>
-                                                </button>
-                                                <button class="hony-pagination-btn hony-pagination-page active">1</button>
-                                                <button class="hony-pagination-btn hony-pagination-page">2</button>
-                                                <button class="hony-pagination-btn hony-pagination-page">3</button>
-                                                <button class="hony-pagination-btn hony-pagination-next">
-                                                    <span class="iconfont">›</span>
-                                                </button>
-                                            </div>
-                                            <div class="hony-pagination-size">
-                                                <div class="hony-selector hony-pagination-selector">
-                                                    <div class="hony-selector-input" onclick="toggleSelector(this)">
-                                                        <input type="text" class="hony-input-inner" placeholder="请选择" value="10条/页">
-                                                        <div class="hony-selector-icon iconfont">&#xf061;</div>
-                                                    </div>
-                                                    <div class="hony-selector-dropdown" style="display: none;">
-                                                        <div class="hony-selector-option hony-selected" onclick="selectOption(this)">10条/页</div>
-                                                        <div class="hony-selector-option" onclick="selectOption(this)">20条/页</div>
-                                                        <div class="hony-selector-option" onclick="selectOption(this)">50条/页</div>
-                                                        <div class="hony-selector-option" onclick="selectOption(this)">100条/页</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-pagination-jump">
-                                                <span>前往</span>
-                                                <input type="text" class="hony-pagination-jump-input" placeholder="请输入">
-                                                <span>页</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hony-pagination-section">
-                                        <div class="hony-pagination hony-pagination-sm hony-pagination-right">
-                                            <div class="hony-pagination-info">共100条数据</div>
-                                            <div class="hony-pagination-controls">
-                                                <button class="hony-pagination-btn hony-pagination-prev">
-                                                    <span class="iconfont">‹</span>
-                                                </button>
-                                                <button class="hony-pagination-btn hony-pagination-page active">1</button>
-                                                <button class="hony-pagination-btn hony-pagination-page">2</button>
-                                                <button class="hony-pagination-btn hony-pagination-page">3</button>
-                                                <button class="hony-pagination-btn hony-pagination-next">
-                                                    <span class="iconfont">›</span>
-                                                </button>
-                                            </div>
-                                            <div class="hony-pagination-size">
-                                                <div class="hony-selector hony-pagination-selector">
-                                                    <div class="hony-selector-input" onclick="toggleSelector(this)">
-                                                        <input type="text" class="hony-input-inner" placeholder="请选择" value="10条/页">
-                                                        <div class="hony-selector-icon iconfont">&#xf061;</div>
-                                                    </div>
-                                                    <div class="hony-selector-dropdown" style="display: none;">
-                                                        <div class="hony-selector-option hony-selected" onclick="selectOption(this)">10条/页</div>
-                                                        <div class="hony-selector-option" onclick="selectOption(this)">20条/页</div>
-                                                        <div class="hony-selector-option" onclick="selectOption(this)">50条/页</div>
-                                                        <div class="hony-selector-option" onclick="selectOption(this)">100条/页</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="hony-pagination-jump">
-                                                <span>前往</span>
-                                                <input type="text" class="hony-pagination-jump-input" placeholder="请输入">
-                                                <span>页</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>                
+                    <!-- 右侧锚点导航 -->
+                    <div class="right-nav">
+                        <div class="right-nav-items">
+                                <div class="right-nav-item active" onclick="handleRightNavClick(this, 'pagination-basic');">分页器</div>
+                                <div class="right-nav-item" onclick="handleRightNavClick(this, 'pagination-basic');">拓展分页器</div>
                         </div>
                     </div>
                 </div>                
-                <!-- 右侧锚点导航 -->
-                <div class="right-nav">
-                    <div class="right-nav-items">
-                            <div class="right-nav-item active" onclick="handleRightNavClick(this, 'pagination-basic');">分页器</div>
-                            <div class="right-nav-item" onclick="handleRightNavClick(this, 'pagination-basic');">拓展分页器</div>
-                    </div>
-                </div>
             </div>
+
         </div>
     </div>
     <!-- 背景纹理 -->
     <div class="hony-background-texture"></div>
     <!-- 背景banner -->
     <div class="background-bgVideo">
-        <video class="background-bgVideo-video" autoplay muted loop playsinline>
+        <!-- 浅色模式视频 -->
+        <video class="background-bgVideo-video background-bgVideo-light" autoplay muted loop playsinline>
             <source src="../../overall/images/背景banne.mp4" type="video/mp4">
         </video>
+        <!-- 深色模式图片 -->
+        <img class="background-bgVideo-image background-bgVideo-dark" src="../../overall/images/bg-dark-mode.png" alt="深色背景">
     </div>
+<script src="../B-navigation/tabs.js"></script>
 </body>
 </html>

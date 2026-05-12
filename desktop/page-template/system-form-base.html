@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hony Design</title>
+    <link rel="icon" href="../../overall/images/LOGO.png" type="image/png">
+    <link rel="stylesheet" href="../../overall/design-tokens.css">
+    <link rel="stylesheet" href="../../overall/main.css">
+    <link rel="stylesheet" href="../../overall/icons/iconfont.css">
+    <!-- ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <!-- 组件库 CSS 文件 -->
+    <link rel="stylesheet" href="../A-system/button.css">
+    <link rel="stylesheet" href="../A-system/card.css">
+    <link rel="stylesheet" href="../A-system/image.css">
+    <link rel="stylesheet" href="../A-system/tab.css">
+    <link rel="stylesheet" href="../B-navigation/Multi.css">
+    <link rel="stylesheet" href="../B-navigation/Pagination.css">
+    <link rel="stylesheet" href="../B-navigation/breadcrumb.css">
+    <link rel="stylesheet" href="../B-navigation/navigation.css">
+    <link rel="stylesheet" href="../B-navigation/steps.css">
+    <link rel="stylesheet" href="../B-navigation/tabs.css">
+    <link rel="stylesheet" href="../B-navigation/title.css">
+    <link rel="stylesheet" href="../C-input/checkbox.css">
+    <link rel="stylesheet" href="../C-input/form.css">
+    <link rel="stylesheet" href="../C-input/input.css">
+    <link rel="stylesheet" href="../C-input/score.css">
+    <link rel="stylesheet" href="../C-input/select.css">
+    <link rel="stylesheet" href="../C-input/slider.css">
+    <link rel="stylesheet" href="../C-input/swich.css">
+    <link rel="stylesheet" href="../C-input/transfer.css">
+    <link rel="stylesheet" href="../C-input/tree.css">
+    <link rel="stylesheet" href="../C-input/upload.css">
+    <link rel="stylesheet" href="../C-input/form.css">
+    <link rel="stylesheet" href="../D-display/avatar.css">
+    <link rel="stylesheet" href="../D-display/badge.css">
+    <link rel="stylesheet" href="../D-display/calendar.css">
+    <link rel="stylesheet" href="../D-display/comment.css">
+    <link rel="stylesheet" href="../D-display/descriptions.css">
+    <link rel="stylesheet" href="../D-display/list.css">
+    <link rel="stylesheet" href="../D-display/table-tree.css">
+    <link rel="stylesheet" href="../D-display/table.css">
+    <link rel="stylesheet" href="../D-display/timeline.css">
+    <link rel="stylesheet" href="../E-popup/alert.css">
+    <link rel="stylesheet" href="../E-popup/modal.css">
+    <link rel="stylesheet" href="../E-popup/popconfirm.css">
+    <link rel="stylesheet" href="system-home.css">
+    <link rel="stylesheet" href="system-table.css">
+    <link rel="stylesheet" href="system-main.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="system-top-nav">
+        <div id="hony-top-nav-1" class="hony-top-nav hony-top-nav-card system-top-nav-card">
+            <!-- 左侧Logo -->
+        <div class="hony-top-nav-logo" onclick="window.location.href='../../index.html'">
+            <div class="hony-top-nav-logo-icon">
+            <!-- LOGO图片 -->
+            <img src="../../overall/images/LOGO.png" alt="Hony Design" width="36" height="36">
+            </div>
+            <div class="hony-top-nav-logo-text">Hony Design</div>
+        </div>
+        
+        <!-- 中间菜单项 -->
+        <div class="hony-top-nav-menu">
+            <!-- 菜单项 1 - 无二级导航 -->
+            <div class="hony-top-nav-item no-submenu" onclick="window.location.href='../../Specification/color.html'">
+                <div class="hony-top-nav-item-content">
+                    <span class="hony-top-nav-item-text">设计规范</span>
+                </div>
+            </div>
+            
+            <!-- 菜单项 1 - 无二级导航 -->
+            <div class="hony-top-nav-item no-submenu" onclick="window.location.href='../A-system/button.html'">
+                <div class="hony-top-nav-item-content">
+                    <span class="hony-top-nav-item-text">桌面端组件</span>
+                </div>
+            </div>
+            <!-- 菜单项 1 - 无二级导航 -->
+            <div class="hony-top-nav-item no-submenu active">
+                <div class="hony-top-nav-item-content">
+                    <span class="hony-top-nav-item-text">页面模版</span>
+                </div>
+            </div>
+            <!-- 菜单项 1 - 无二级导航 -->
+            <div class="hony-top-nav-item no-submenu" onclick="window.open('https://www.figma.com/proto/NGoV0wp2ulYjFmzTPVsRzR/Untitled?node-id=9-6&viewport=77%2C-239%2C0.18&t=IJpHPYV8X3xdXgwE-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=9%3A6&page-id=0%3A1', '_blank')">
+            <div class="hony-top-nav-item-content">
+                <span class="hony-top-nav-item-text">关于我</span>
+            </div>
+            </div>
+        </div>
+        
+        <!-- 右侧功能区 -->
+        <div class="hony-top-nav-actions">
+            <div class="hony-tab-nav-segment hony-tab-nav-segment-icons">
+                <div class="hony-tab-item active" data-tab="tab-segment-1" onclick="switchTheme('light')">
+                    <span class="hony-tab-icon iconfont"></span>
+                </div>
+                <div class="hony-tab-item" data-tab="tab-segment-2" onclick="switchTheme('dark')">
+                    <span class="hony-tab-icon iconfont"></span>
+                </div>
+            </div>
+            <div class="hony-top-nav-action-item">
+            <span class="hony-nav-icon iconfont"></span>
+            </div>
+            <div class="hony-top-nav-action-item">
+            <span class="hony-nav-icon iconfont"></span>
+            </div>
+            <div class="hony-top-nav-action-item user">
+            <div class="user-avatar">
+                <!-- 用户头像 -->
+                <img src="../../overall/images/默认头像.png" alt="用户头像" width="36" height="36">
+            </div>
+            </div>
+        </div>
+        </div>        
+    </div>
+    <!-- 侧边导航 -->
+    <div class="system-sidebar-navigation">
+        <div id="hony-sidebar-nav-3" class="hony-sidebar-nav system-sidebar-navigation">
+            <div class="hony-nav-menu-list">
+                <!-- 菜单项 1 -->
+                <div class="hony-nav-menu-item no-submenu">
+                    <div class="hony-nav-menu-item-header" onclick="window.location.href='system-home.html'">
+                        <span class="hony-nav-icon iconfont"></span>
+                        <span class="hony-menu-title">首页</span>
+                    </div>
+                </div>              
+                <!-- 菜单项 2 -->
+                <div class="hony-nav-menu-item has-submenu">
+                    <div class="hony-nav-menu-item-header">
+                        <span class="hony-nav-icon iconfont"></span>
+                        <span class="hony-menu-title">表格页面</span>
+                        <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                    </div>
+                    <div class="hony-nav-menu-item-content">
+                        <div class="hony-nav-menu-title">表格页面</div>
+                        <div class="hony-nav-menu-subitem" data-page="system-table-base.html">基础表格</div>
+                        <div class="hony-nav-menu-subitem" data-page="system-table-search.html">查询表头</div>
+                        <div class="hony-nav-menu-subitem" data-page="system-table-tree.html">树状表格</div>
+                        <div class="hony-nav-menu-subitem" data-page="system-table-data.html">日历表格</div>
+                        <div class="hony-nav-menu-subitem" data-page="system-table-complex.html">复杂表格</div>
+                    </div>
+                </div>                           
+                <!-- 菜单项 3 -->
+                <div class="hony-nav-menu-item has-submenu">
+                    <div class="hony-nav-menu-item-header">
+                        <span class="hony-nav-icon iconfont">&#xea2d;</span>
+                        <span class="hony-menu-title">列表页面</span>
+                        <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                    </div>
+                    <div class="hony-nav-menu-item-content">
+                        <div class="hony-nav-menu-title">列表页面</div>
+                        <div class="hony-nav-menu-subitem" data-page="system-tlist-img.html">图片列表</div>
+                        <div class="hony-nav-menu-subitem" data-page="system-tlist-article.html">文章列表</div>
+                        <div class="hony-nav-menu-subitem" data-page="system-tlist-card.html">卡片列表</div>
+                    </div>
+                </div>
+                <!-- 菜单项 4 -->
+                <div class="hony-nav-menu-item has-submenu">
+                    <div class="hony-nav-menu-item-header">
+                        <span class="hony-nav-icon iconfont">&#xf044;</span>
+                        <span class="hony-menu-title">表单列表</span>
+                        <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                    </div>
+                    <div class="hony-nav-menu-item-content">
+                        <div class="hony-nav-menu-title">表单列表</div>
+                        <div class="hony-nav-menu-subitem active" data-page="system-form-base.html">基础表单</div>
+                        <div class="hony-nav-menu-subitem" data-page="system-form-steps.html">步骤表单</div>
+                    </div>
+                </div>
+                <!-- 菜单项 5 -->
+                <div class="hony-nav-menu-item has-submenu">
+                    <div class="hony-nav-menu-item-header">
+                        <span class="hony-nav-icon iconfont">&#xea59;</span>
+                        <span class="hony-menu-title">详情页面</span>
+                        <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                    </div>
+                    <div class="hony-nav-menu-item-content">
+                        <div class="hony-nav-menu-title">详情页面</div>
+                        <div class="hony-nav-menu-subitem" data-page="system-descriptions-base.html">基础详情</div>
+                    </div>
+                </div>
+                <!-- 菜单项 6 -->
+                <div class="hony-nav-menu-item has-submenu">
+                    <div class="hony-nav-menu-item-header">
+                        <span class="hony-nav-icon iconfont">&#xef7f;</span>
+                        <span class="hony-menu-title">个人页面</span>
+                        <span class="hony-nav-icon arrow iconfont icon-jiantou-xia"></span>
+                    </div>
+                    <div class="hony-nav-menu-item-content">
+                        <div class="hony-nav-menu-title">个人页面</div>
+                        <div class="hony-nav-menu-subitem" data-page="system-personal-information.html">个人信息</div>
+                        <div class="hony-nav-menu-subitem" data-page="system-personal-modify.html">个人设置</div>
+                    </div>
+                </div>
+            </div>                        
+            <!-- 收起菜单 -->
+            <div class="hony-collapse-menu">
+                <span class="hony-nav-icon"></span>
+                <span></span>
+            </div>
+        </div>    
+    </div>
+    <!-- 主内容区域默认排列 -->
+    <main id="system-page-main" class="system-page-main">
+        <!-- 页头 -->
+        <div class="system-main-head">
+            <dic class="system-main-head-top">
+                <div class="system-head-top-tile">
+                    基础表单页
+                </div>
+                <div class="system-head-top-nav">
+                    2026-05-15
+                    <div class="hony-tab-nav-segment">
+                        <div class="hony-tab-item active" data-tab="tab17-1" onclick="switchTab(this)">标签一</div>
+                        <div class="hony-tab-item" data-tab="tab17-2" onclick="switchTab(this)">标签二</div>
+                        <div class="hony-tab-item" data-tab="tab17-3" onclick="switchTab(this)">标签三</div>
+                    </div>
+                </div>
+            </dic>
+        </div>
+        <!-- 板块区域 -->
+        <div class="system-main-content">
+            <!-- 板块面积可以横着复制板块 -->
+            <div class="system-area">
+                <!-- 板块布局 -->
+                <div class="system-plate">
+                    <dic class="system-main-tabs">
+                        <div class="hony-tab-nav-underline hony-tab-nav-underline-large">
+                            <div class="hony-tab-item active" data-tab="tab4-1" onclick="switchTab(this)">标签一</div>
+                            <div class="hony-tab-item" data-tab="tab4-2" onclick="switchTab(this)">标签二</div>
+                            <div class="hony-tab-item" data-tab="tab4-3" onclick="switchTab(this)">标签三</div>
+                        </div>                    
+                    </dic>                
+                    <!-- 板块 -->
+                    <div class="system-plate-content">
+                        <div class="system-table-com">
+                            <div class="system-table-component">
+                                <div class="hony-title-content hony-title-content-level-3" style="display: flex; flex-direction: column; gap: 8px; margin-top: 24px; margin-bottom: 16px;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <div style="display: flex; align-items: center; gap: 8px;">
+                                            <div style="width: 4px; height: 16px; background: var(--primary-main-1); border-radius: 4px;"></div>
+                                            <div class="hony-title hony-title-normal-3">三级标题16px</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="hony-title-description">
+                                        如果您在填写表格时遇到任何问题或有疑问，请参阅帮助部分或联系我们的支持团队。
+                                    </div>
+                                </div>
+                                <!-- 表单行 Section -->
+                                <div class="system-form-group">
+                                    <!--垂直结构表单 Section -->
+                                    <div class="TB-Form">
+                                        <label class="TB-Form-label">
+                                        <span class="Form-label-required">*</span>
+                                        用户名
+                                        </label>
+                                        <div class="Form-wrap">
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input" placeholder="请输入用户名">
+                                        </div>
+                                        <!--<div class="Form-Remark">这个是注释文案</div>-->
+                                        <!-- 提示信息 Section -->
+                                        <div class="Form-Tip"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 垂直结构表单 Section -->
+                                    <div class="TB-Form">
+                                        <label class="TB-Form-label">
+                                        <span class="Form-label-required">*</span>
+                                        用户名
+                                        </label>
+                                        <div class="Form-wrap">
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input" placeholder="请输入用户名">
+                                        </div>
+                                        <!--<div class="Form-Remark">这个是注释文案</div>-->
+                                        <div class="Form-Tip"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 垂直结构表单 Section -->
+                                    <div class="TB-Form">
+                                        <label class="TB-Form-label">
+                                        <span class="Form-label-required">*</span>
+                                        用户名
+                                        </label>
+                                        <div class="Form-wrap">
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input" placeholder="请输入用户名">
+                                        </div>
+                                        <!--<div class="Form-Remark">这个是注释文案</div>-->
+                                        <div class="Form-Tip"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 垂直结构表单 Section -->
+                                    <div class="TB-Form">
+                                        <label class="TB-Form-label">
+                                        <span class="Form-label-required">*</span>
+                                        用户名
+                                        </label>
+                                        <div class="Form-wrap">
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input" placeholder="请输入用户名">
+                                        </div>
+                                        <!--<div class="Form-Remark">这个是注释文案</div>-->
+                                        <div class="Form-Tip"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 垂直结构表单 Section -->
+                                    <div class="TB-Form">
+                                        <label class="TB-Form-label">
+                                        <span class="Form-label-required">*</span>
+                                        用户名
+                                        </label>
+                                        <div class="Form-wrap">
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input" placeholder="请输入用户名">
+                                        </div>
+                                        <!--<div class="Form-Remark">这个是注释文案</div>-->
+                                        <div class="Form-Tip"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 垂直结构表单 Section -->
+                                    <div class="TB-Form">
+                                        <label class="TB-Form-label">
+                                        <span class="Form-label-required">*</span>
+                                        用户名
+                                        </label>
+                                        <div class="Form-wrap">
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input" placeholder="请输入用户名">
+                                        </div>
+                                        <!--<div class="Form-Remark">这个是注释文案</div>-->
+                                        <div class="Form-Tip"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 垂直结构表单 Section -->
+                                    <div class="TB-Form">
+                                        <label class="TB-Form-label">
+                                        <span class="Form-label-required">*</span>
+                                        用户名
+                                        </label>
+                                        <div class="Form-wrap">
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input" placeholder="请输入用户名">
+                                        </div>
+                                        <!--<div class="Form-Remark">这个是注释文案</div>-->
+                                        <div class="Form-Tip"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 垂直结构表单 Section -->
+                                    <div class="TB-Form">
+                                        <label class="TB-Form-label">
+                                        <span class="Form-label-required">*</span>
+                                        用户名
+                                        </label>
+                                        <div class="Form-wrap">
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input" placeholder="请输入用户名">
+                                        </div>
+                                        <!--<div class="Form-Remark">这个是注释文案</div>-->
+                                        <div class="Form-Tip"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 垂直结构表单 Section -->
+                                    <div class="TB-Form">
+                                        <label class="TB-Form-label">
+                                        <span class="Form-label-required">*</span>
+                                        用户名
+                                        </label>
+                                        <div class="Form-wrap">
+                                        <div class="hony-input-wrapper">
+                                            <input type="text" class="hony-input" placeholder="请输入用户名">
+                                        </div>
+                                        <!--<div class="Form-Remark">这个是注释文案</div>-->
+                                        <div class="Form-Tip"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--垂直结构表单 Section -->
+                                <div class="TB-Form">
+                                    <label class="TB-Form-label">
+                                    <span class="Form-label-required">*</span>
+                                    用户名
+                                    </label>
+                                    <div class="Form-wrap">
+                                        <div class="hony-input-group">
+                                            <div class="hony-input-wrapper">
+                                                <textarea class="hony-input hony-input-textarea" placeholder="请输入" rows="4"></textarea>
+                                            </div>
+                                        </div>
+                                    <!--<div class="Form-Remark">这个是注释文案</div>-->
+                                    <!-- 提示信息 Section -->
+                                    <div class="Form-Tip"></div>
+                                    </div>
+                                </div>
+        
+                                
+                            </div>
+                            <div class="system-table-component">
+                                <div class="hony-title-content hony-title-content-level-3" style="display: flex; flex-direction: column; gap: 8px; margin-top: 24px; margin-bottom: 16px;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <div style="display: flex; align-items: center; gap: 8px;">
+                                            <div style="width: 4px; height: 16px; background: var(--primary-main-1); border-radius: 4px;"></div>
+                                            <div class="hony-title hony-title-normal-3">三级标题16px</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="hony-title-description">
+                                        如果您在填写表格时遇到任何问题或有疑问，请参阅帮助部分或联系我们的支持团队。
+                                    </div>
+                                </div>
+                                <div class="system-table-component-action">
+                                <div class="ystem-table-search-line">
+                                        <div class="hony-input-wrapper hony-input-expand system-search-input">
+                                            <span class="hony-input-prefix iconfont">&#xe963;</span>
+                                            <!--<span class="hony-input-prefix">标题</span>-->
+                                            <input type="text" class="hony-input-inner" placeholder="请输入">
+                                            <!--<span class="hony-input-suffix">单位</span>-->
+                                            <!--<span class="hony-input-suffix iconfont hony-password-toggle icon-mimayincangxianshi"></span>-->
+                                        </div>
+                                        <div class="hony-selector system-search-input2">
+                                            <div class="hony-selector-input" onclick="toggleSelector(this)">
+                                                <!--<span class="hony-selector-prefix iconfont"></span>-->
+                                                <span class="hony-selector-prefix">标题</span>
+                                                <input type="text" class="hony-input-inner" placeholder="请选择">
+                                                <div class="hony-selector-icon iconfont"></div>
+                                            </div>
+                                            <div class="hony-selector-dropdown" style="display: none;">
+                                                <div class="hony-selector-option" onclick="selectOption(this)">产品</div>
+                                                <div class="hony-selector-option" onclick="selectOption(this)">开发</div>
+                                                <div class="hony-selector-option" onclick="selectOption(this)">运维</div>
+                                                <div class="hony-selector-option" onclick="selectOption(this)">设计</div>
+                                                <div class="hony-selector-option" onclick="selectOption(this)">开发</div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="system-table-component-btn">
+                                        <button class="hony-btn hony-btn-primary" onclick="openAddModal()">
+                                            <span class="hony-btn-icon iconfont">&#xf072;</span>
+                                            <span>新增</span>
+                                        </button>
+                                        <button class="hony-btn hony-btn-outline-primary">同步信息</button>
+                                        <button class="hony-btn hony-btn-outline-secondary" onclick="openImportExportModal()">导入/导出</button>
+                                    </div>
+                                </div>                           
+                                <div class="hony-table-component system-table-component">
+                                    <div class="hony-table-container system-table-component">
+                                        <div class="hony-table-wrapper system-table-component">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="hony-sticky-left">姓名</th>
+                                                        <th>年龄</th>
+                                                        <th>地址</th>
+                                                        <th>余额(元)</th>
+                                                        <th>标签</th>
+                                                        <th class="hony-sticky-right">操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="hony-sticky-left">朱晓柒</td>
+                                                        <td>27</td>
+                                                        <td>武汉市江汉区中山大道</td>
+                                                        <td>520.00</td>
+                                                        <td><div class="hony-tab hony-tab-warning-light">产品</div></td>
+                                                        <td class="hony-sticky-right">
+                                                            
+                                                            <div class="hony-sticky-right-line">
+                                                                <button class="hony-btn hony-btn-link">查看</button>
+                                                                <button class="hony-btn hony-btn-link hony-btn-danger">删除</button>
+                                                            </div>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="hony-sticky-left">朱晓婉</td>
+                                                        <td>26</td>
+                                                        <td>	重庆市渝中区解放碑</td>
+                                                        <td>520.00</td>
+                                                        <td><div class="hony-tab hony-tab-success-light">开发</div></td>
+                                                        <td class="hony-sticky-right">
+                                                            
+                                                            <div class="hony-sticky-right-line">
+                                                                <button class="hony-btn hony-btn-link">查看</button>
+                                                                <button class="hony-btn hony-btn-link hony-btn-danger">删除</button>
+                                                            </div>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="hony-sticky-left">刘雪林</td>
+                                                        <td>25</td>
+                                                        <td>武汉市江汉区中山大道</td>
+                                                        <td>520.00</td>
+                                                        <td><div class="hony-tab hony-tab-secondary-light">运维</div></td>
+                                                        <td class="hony-sticky-right">
+                                                            
+                                                            <div class="hony-sticky-right-line">
+                                                                <button class="hony-btn hony-btn-link">查看</button>
+                                                                <button class="hony-btn hony-btn-link hony-btn-danger">删除</button>
+                                                            </div>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="hony-sticky-left">白雪</td>
+                                                        <td>22</td>
+                                                        <td>广州市天河区珠江新城</td>
+                                                        <td>520.00</td>
+                                                        <td><div class="hony-tab hony-tab-primary-light">设计</div></td>
+                                                        <td class="hony-sticky-right">
+                                                            
+                                                            <div class="hony-sticky-right-line">
+                                                                <button class="hony-btn hony-btn-link">查看</button>
+                                                                <button class="hony-btn hony-btn-link hony-btn-danger">删除</button>
+                                                            </div>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="hony-sticky-left">高圆</td>
+                                                        <td>24</td>
+                                                        <td>杭州市西湖区文三路</td>
+                                                        <td>520.00</td>
+                                                        <td><div class="hony-tab hony-tab-danger-light">运营</div></td>
+                                                        <td class="hony-sticky-right">
+                                                            
+                                                            <div class="hony-sticky-right-line">
+                                                                <button class="hony-btn hony-btn-link">查看</button>
+                                                                <button class="hony-btn hony-btn-link hony-btn-danger">删除</button>
+                                                            </div>
+                                                            
+                                                        </td>
+                                                    </tr>
+
+                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="hony-pagination-section">
+                                        <div class="hony-pagination hony-pagination-lg hony-pagination-right">
+                                            <div class="hony-pagination-info">共5条数据 第1-5条</div>
+                                            <div class="hony-pagination-controls">
+                                                <button class="hony-pagination-btn hony-pagination-prev disabled">
+                                                    <span class="iconfont"></span>
+                                                </button>
+                                                
+                                                
+                                                
+                                                <button class="hony-pagination-btn hony-pagination-page active">1</button><button class="hony-pagination-btn hony-pagination-next disabled">
+                                                    <span class="iconfont"></span>
+                                                </button>
+                                            </div>
+                                            <div class="hony-pagination-size">
+                                                <div class="hony-selector hony-pagination-selector">
+                                                    <div class="hony-selector-input" onclick="toggleSelector(this)">
+                                                        <input type="text" class="hony-input-inner" placeholder="请选择" value="10条/页">
+                                                        <div class="hony-selector-icon iconfont"></div>
+                                                    </div>
+                                                    <div class="hony-selector-dropdown" style="display: none;">
+                                                        <div class="hony-selector-option" onclick="selectOption(this)">5条/页</div>
+                                                        <div class="hony-selector-option hony-selected" onclick="selectOption(this)">10条/页</div>
+                                                        <div class="hony-selector-option" onclick="selectOption(this)">20条/页</div>
+                                                        <div class="hony-selector-option" onclick="selectOption(this)">50条/页</div>
+                                                        <div class="hony-selector-option" onclick="selectOption(this)">100条/页</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hony-pagination-jump">
+                                                <span>前往</span>
+                                                <input type="text" class="hony-pagination-jump-input" placeholder="请输入">
+                                                <span>页</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                    
+                            </div>
+                        </div>
+                    </div>   
+                    <dic class="system-main-btn">
+                        <button class="hony-btn hony-btn-outline-secondary">上一步</button>    
+                        <button class="hony-btn hony-btn-primary">下一步</button>          
+                    </dic>  
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="background-texture">
+        <div class="background-texture-bg">
+
+        </div>
+    </div>
+    <!-- 组件库 JS 文件 -->
+    <script src="../overall/js/common.js"></script>
+    <script src="../A-system/image.js"></script>
+    <script src="../B-navigation/Pagination.js"></script>
+    <script src="../B-navigation/navigation.js"></script>
+    <script src="../B-navigation/steps.js"></script>
+    <script src="../B-navigation/tabs.js"></script>
+    <script src="../C-input/checkbox.js"></script>
+    <script src="../C-input/input.js"></script>
+    <script src="../C-input/select.js"></script>
+    <script src="../C-input/slider.js"></script>
+    <script src="../C-input/swich.js"></script>
+    <script src="../C-input/transfer.js"></script>
+    <script src="../C-input/tree.js"></script>
+    <script src="../C-input/upload.js"></script>
+    <script src="../D-display/calendar.js"></script>
+    <script src="../D-display/comment.js"></script>
+    <script src="../D-display/table.js"></script>
+    <script src="../E-popup/modal.js"></script>
+    <script src="../E-popup/popconfirm.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 等待DOM完全渲染后再初始化图表
+            setTimeout(function() {
+                // 今日图表 - 数据变化更大，范围0-1200
+                initChart('main-chart', [200, 600, 1000, 1200, 500, 300]);
+                
+                // 本周图表 - 数据变化更大，范围0-1200
+                initChart('chart-week', [100, 450, 800, 1150, 700, 250]);
+                
+                // 本月图表 - 数据变化更大，范围0-1200
+                initChart('chart-month', [150, 500, 900, 1200, 600, 350]);
+                
+                // 本年图表
+                initChart('chart-year', [3000, 4200, 5500, 6200, 5800, 4800], 7000);
+            }, 100);
+        });
+        
+        function initChart(chartId, data, maxValue = 1200) {
+            var chartDom = document.getElementById(chartId);
+            if (!chartDom) return;
+            
+            var myChart = echarts.init(chartDom);
+            
+            // 强制刷新尺寸
+            setTimeout(function() {
+                myChart.resize();
+            }, 200);
+            
+            var option = {
+                tooltip: {
+                    trigger: 'axis',
+                    backgroundColor: '#ffffff',
+                    borderColor: '#e7eaf0',
+                    borderWidth: 1,
+                    textStyle: {
+                        color: '#333'
+                    },
+                    formatter: function(params) {
+                        var data = params[0];
+                        return '<div style="padding: 8px;"><div style="font-size: 16px; font-weight: 600; color: #165dff; margin-bottom: 4px;">¥' + data.value + '</div><div style="font-size: 12px; color: #6c7da3;">' + data.name + '</div></div>';
+                    }
+                },
+                grid: {
+                    left: '5%',
+                    right: '5%',
+                    bottom: '12%',
+                    top: '10%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['星光学校', '西施附属中学', '星光学校', '星光学校', '星光学校', '星光学校'],
+                    axisLine: {
+                        lineStyle: {
+                            color: '#e7eaf0'
+                        }
+                    },
+                    axisLabel: {
+                        color: '#6c7da3',
+                        fontSize: 12,
+                        interval: 0
+                    },
+                    axisTick: {
+                        show: false,
+                        alignWithLabel: true
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    max: maxValue,
+                    min: 0,
+                    interval: maxValue / 4,
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLabel: {
+                        color: '#6c7da3',
+                        fontSize: 12
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#e7eaf0',
+                            type: 'dashed'
+                        }
+                    }
+                },
+                series: [
+                    {
+                        name: '金额',
+                        type: 'line',
+                        smooth: true,
+                        symbol: 'circle',
+                        symbolSize: 8,
+                        lineStyle: {
+                            width: 3,
+                            color: '#165dff'
+                        },
+                        itemStyle: {
+                            color: '#ffffff',
+                            borderColor: '#165dff',
+                            borderWidth: 2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: 'rgba(22, 93, 255, 0.3)' },
+                                { offset: 1, color: 'rgba(22, 93, 255, 0.05)' }
+                            ])
+                        },
+                        emphasis: {
+                            itemStyle: {
+                                color: '#165dff',
+                                borderColor: '#165dff',
+                                borderWidth: 0
+                            }
+                        },
+                        data: data
+                    }
+                ]
+            };
+            
+            myChart.setOption(option);
+            
+            // 响应式调整
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        }
+
+        // 当前要删除的行
+        let currentDeleteRow = null;
+        // 当前查看/编辑的行
+        let currentViewRow = null;
+
+        // 查看详情
+        function viewDetail(rowElement) {
+            currentViewRow = rowElement;
+            const cells = rowElement.querySelectorAll('td');
+            document.getElementById('detail-name').textContent = cells[0].textContent;
+            document.getElementById('detail-age').textContent = cells[1].textContent;
+            document.getElementById('detail-address').textContent = cells[2].textContent;
+            document.getElementById('detail-balance').textContent = cells[3].textContent;
+            document.getElementById('detail-tag').textContent = cells[4].textContent;
+            
+            // 确保显示查看模式
+            document.getElementById('drawer-view-mode').style.display = 'block';
+            document.getElementById('drawer-edit-mode').style.display = 'none';
+            document.getElementById('drawer-footer').style.display = 'flex';
+            document.getElementById('drawer-footer-edit').style.display = 'none';
+            
+            openDrawer('detail-drawer');
+        }
+
+        // 进入编辑模式
+        function enterEditMode() {
+            // 将查看模式的数据填入表单
+            document.getElementById('edit-name').value = document.getElementById('detail-name').textContent;
+            document.getElementById('edit-age').value = document.getElementById('detail-age').textContent;
+            document.getElementById('edit-address').value = document.getElementById('detail-address').textContent;
+            document.getElementById('edit-balance').value = document.getElementById('detail-balance').textContent;
+            document.getElementById('edit-tag').value = document.getElementById('detail-tag').textContent;
+            
+            // 切换到编辑模式
+            document.getElementById('drawer-view-mode').style.display = 'none';
+            document.getElementById('drawer-edit-mode').style.display = 'block';
+            document.getElementById('drawer-footer').style.display = 'none';
+            document.getElementById('drawer-footer-edit').style.display = 'flex';
+        }
+
+        // 取消编辑
+        function cancelEdit() {
+            // 切换回查看模式
+            document.getElementById('drawer-view-mode').style.display = 'block';
+            document.getElementById('drawer-edit-mode').style.display = 'none';
+            document.getElementById('drawer-footer').style.display = 'flex';
+            document.getElementById('drawer-footer-edit').style.display = 'none';
+        }
+
+        // 保存编辑
+        function saveEdit() {
+            // 获取表单数据
+            const name = document.getElementById('edit-name').value;
+            const age = document.getElementById('edit-age').value;
+            const address = document.getElementById('edit-address').value;
+            const balance = document.getElementById('edit-balance').value;
+            const tag = document.getElementById('edit-tag').value;
+            
+            // 更新查看模式的数据
+            document.getElementById('detail-name').textContent = name;
+            document.getElementById('detail-age').textContent = age;
+            document.getElementById('detail-address').textContent = address;
+            document.getElementById('detail-balance').textContent = balance;
+            document.getElementById('detail-tag').textContent = tag;
+            
+            // 更新表格数据
+            if (currentViewRow) {
+                const cells = currentViewRow.querySelectorAll('td');
+                cells[0].textContent = name;
+                cells[1].textContent = age;
+                cells[2].textContent = address;
+                cells[3].textContent = balance;
+                cells[4].textContent = tag;
+            }
+            
+            // 切换回查看模式
+            cancelEdit();
+            alert('保存成功');
+        }
+
+        // 删除确认
+        function confirmDelete() {
+            console.log('confirmDelete called, currentDeleteRow:', currentDeleteRow);
+            if (currentDeleteRow) {
+                currentDeleteRow.remove();
+                currentDeleteRow = null;
+                closeModal('delete-modal');
+                alert('删除成功');
+            } else {
+                console.error('currentDeleteRow 为空，无法删除');
+                closeModal('delete-modal');
+                alert('删除失败，未找到要删除的行');
+            }
+        }
+
+        // 打开新增弹窗
+        function openAddModal() {
+            // 清空表单
+            document.getElementById('add-name').value = '';
+            document.getElementById('add-age').value = '';
+            document.getElementById('add-address').value = '';
+            document.getElementById('add-balance').value = '';
+            document.getElementById('add-tag').value = '';
+            openModal('add-modal');
+        }
+
+        // 保存新增
+        function saveAdd() {
+            // 获取表单数据
+            const name = document.getElementById('add-name').value;
+            const age = document.getElementById('add-age').value;
+            const address = document.getElementById('add-address').value;
+            const balance = document.getElementById('add-balance').value;
+            const tag = document.getElementById('add-tag').value;
+            
+            // 验证必填项
+            if (!name || !age) {
+                alert('请填写姓名和年龄');
+                return;
+            }
+            
+            // 创建新行
+            const table = document.querySelector('table');
+            const tbody = table.querySelector('tbody') || table;
+            
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td class="hony-sticky-left">${name}</td>
+                <td>${age}</td>
+                <td>${address}</td>
+                <td>${balance}</td>
+                <td><div class="hony-tab hony-tab-primary-light">${tag}</div></td>
+                <td class="hony-sticky-right">
+                    <div class="hony-sticky-right-line">
+                        <button class="hony-btn hony-btn-link">查看</button>
+                        <button class="hony-btn hony-btn-link hony-btn-danger">删除</button>
+                    </div>
+                </td>
+            `;
+            
+            // 添加到表格末尾
+            tbody.appendChild(newRow);
+            
+            // 为新添加的行绑定事件
+            initTableButtons();
+            
+            // 关闭弹窗
+            closeModal('add-modal');
+            alert('新增成功');
+        }
+
+        // 打开导入/导出弹窗
+        function openImportExportModal() {
+            openModal('import-export-modal');
+        }
+
+        // 初始化表格按钮事件
+        function initTableButtons() {
+            // 为所有"查看"按钮添加点击事件（只绑定一次）
+            document.querySelectorAll('.hony-btn-link:not(.hony-btn-danger)').forEach(function(btn) {
+                if (!btn.dataset.viewBound) {
+                    btn.dataset.viewBound = 'true';
+                    btn.onclick = function() {
+                        const row = this.closest('tr');
+                        if (row) {
+                            viewDetail(row);
+                        }
+                    };
+                }
+            });
+
+            // 为表格中的"删除"按钮添加点击事件（排除弹窗中的按钮，只绑定一次）
+            document.querySelectorAll('table button.hony-btn-danger').forEach(function(btn) {
+                if (!btn.dataset.deleteBound) {
+                    btn.dataset.deleteBound = 'true';
+                    btn.onclick = function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        currentDeleteRow = this.closest('tr');
+                        console.log('currentDeleteRow:', currentDeleteRow);
+                        if (currentDeleteRow) {
+                            openModal('delete-modal');
+                        } else {
+                            console.error('未找到要删除的行');
+                        }
+                    };
+                }
+            });
+        }
+
+        // 页面加载后初始化按钮事件
+        document.addEventListener('DOMContentLoaded', function() {
+            initTableButtons();
+        });
+
+        // 如果页面已经加载完成，手动初始化
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            setTimeout(initTableButtons, 100);
+        }
+    </script>
+</body>
+</html>
