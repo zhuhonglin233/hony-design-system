@@ -547,8 +547,8 @@ function initAnchorNav() {
     handleScroll();
 }
 
-// 页面加载完成后初始化
-document.addEventListener('DOMContentLoaded', function() {
+// 初始化导航组件
+function initNavigation() {
     for (let i = 1; i <= 7; i++) {
         initSidebarNav('hony-sidebar-nav-' + i);
     }
@@ -564,4 +564,12 @@ document.addEventListener('DOMContentLoaded', function() {
     initTopNav('hony-top-nav-5');
     
     initAnchorNav();
-});
+}
+
+// 如果是首次加载页面，执行初始化
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavigation);
+} else {
+    // DOM 已经加载完成，直接初始化
+    initNavigation();
+}

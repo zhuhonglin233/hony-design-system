@@ -179,10 +179,10 @@
 /* 标题内容 */
 .hony-title-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 8px;
-  margin-top: 8px;
   margin-bottom: 24px;
+  width: 100%;
 }
 .hony-tabs-btn {
   width: 100%;

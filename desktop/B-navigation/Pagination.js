@@ -22,26 +22,35 @@ function switchPage(pageBtn) {
 }
 
 function updateTableByPage(pagination, currentPage) {
+    console.log('=== updateTableByPage called, currentPage:', currentPage);
+    
     // 找到关联的表格容器
     const paginationSection = pagination.closest('.hony-pagination-section');
+    console.log('paginationSection:', paginationSection);
     if (!paginationSection) return;
     
     // 找到前面的表格容器
     const tableContainer = paginationSection.previousElementSibling;
+    console.log('tableContainer:', tableContainer);
     if (!tableContainer || !tableContainer.classList.contains('hony-table-container')) return;
     
     const table = tableContainer.querySelector('table');
+    console.log('table:', table);
     if (!table) return;
     
     const tbody = table.querySelector('tbody');
+    console.log('tbody:', tbody);
     if (!tbody) return;
     
     const rows = tbody.querySelectorAll('tr');
+    console.log('rows.length:', rows.length);
     if (rows.length === 0) return;
     
     const size = getPageSize(pagination);
+    console.log('pageSize:', size);
     const startIndex = (currentPage - 1) * size;
     const endIndex = startIndex + size;
+    console.log('Showing rows', startIndex, 'to', endIndex);
     
     rows.forEach((row, index) => {
         if (index >= startIndex && index < endIndex) {
@@ -229,6 +238,7 @@ function handlePageSizeChange(target) {
 
 function initPagination() {
     const paginations = document.querySelectorAll('.hony-pagination');
+    console.log('=== initPagination called, found paginations:', paginations.length);
 
     paginations.forEach(pagination => {
         pagination.addEventListener('click', handlePaginationClick);
@@ -240,6 +250,17 @@ function initPagination() {
                 handlePageSizeChange(this);
             });
         });
+
+        // 获取分页器关联的表格并初始化
+        const paginationSection = pagination.closest('.hony-pagination-section');
+        if (paginationSection) {
+            const tableContainer = paginationSection.previousElementSibling;
+            if (tableContainer && tableContainer.classList.contains('hony-table-container')) {
+                console.log('Found table container for pagination');
+                // 初始化时隐藏超出第一页的行
+                updateTableByPage(pagination, 1);
+            }
+        }
 
         generatePageButtons(pagination);
     });

@@ -49,13 +49,45 @@ function toggleCheckbox(event) {
         checkbox.classList.remove('indeterminate');
     }
 
-    if (checkbox && checkbox.classList.contains('checked')) {
+    const isChecked = checkbox && checkbox.classList.contains('checked');
+    
+    if (isChecked) {
         node.classList.add('hony-selected');
     } else {
         node.classList.remove('hony-selected');
     }
 
+    // 级联更新所有子节点
+    updateChildCheckboxes(node, isChecked);
+    
+    // 更新父节点
     updateParentCheckbox(node);
+}
+
+// 级联更新子节点复选框状态
+function updateChildCheckboxes(parentNode, isChecked) {
+    const childrenContainer = parentNode.nextElementSibling;
+    if (!childrenContainer || !childrenContainer.classList.contains('hony-tree-children')) {
+        return;
+    }
+
+    const childNodes = childrenContainer.querySelectorAll('.hony-tree-node');
+    childNodes.forEach(childNode => {
+        const checkbox = childNode.querySelector('.hony-checkbox-box');
+        if (checkbox) {
+            if (isChecked) {
+                checkbox.classList.add('checked');
+                checkbox.classList.remove('indeterminate');
+                childNode.classList.add('hony-selected');
+            } else {
+                checkbox.classList.remove('checked', 'indeterminate');
+                childNode.classList.remove('hony-selected');
+            }
+        }
+        
+        // 递归更新更深层的子节点
+        updateChildCheckboxes(childNode, isChecked);
+    });
 }
 
 // 更新父节点复选框状态

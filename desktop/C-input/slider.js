@@ -4,18 +4,23 @@
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', function() {
-    initAllSliders();
+    initSliderComponent();
 });
 
-function initAllSliders() {
-    const sliders = document.querySelectorAll('.hony-slider:not(.initialized)');
+// 全局初始化函数，供AJAX加载后调用
+function initSlider() {
+    initSliderComponent();
+}
+
+function initSliderComponent() {
+    const sliders = document.querySelectorAll('.hony-slider:not(.hony-initialized)');
     sliders.forEach(slider => {
         slider.classList.add('hony-initialized');
-        initSlider(slider);
+        initSliderElement(slider);
     });
 }
 
-function initSlider(slider) {
+function initSliderElement(slider) {
     if (slider.classList.contains('hony-disabled')) return;
 
     const track = slider.querySelector('.hony-slider-track');

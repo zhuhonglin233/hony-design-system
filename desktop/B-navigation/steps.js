@@ -99,7 +99,15 @@ function initAnchorNav() {
 }
 
 // 页面加载完成后初始化
-document.addEventListener('DOMContentLoaded', function() {
+function initSteps() {
     initStepsComponent();
     initAnchorNav();
-});
+}
+
+// 如果是首次加载页面，执行初始化
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSteps);
+} else {
+    // DOM 已经加载完成，直接初始化
+    initSteps();
+}

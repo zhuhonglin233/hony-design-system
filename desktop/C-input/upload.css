@@ -3,7 +3,7 @@
     display: inline-flex;
     flex-direction: column;
     gap: 8px;
-    width: 240px;
+    width: 100%;
 }
 
 /* 上传按钮 */

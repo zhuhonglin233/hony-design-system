@@ -1,6 +1,5 @@
-// 页面加载完成后执行所有代码
-document.addEventListener('DOMContentLoaded', function() {
-
+// 初始化上传组件
+function initUpload() {
     // 删除上传项
     window.deleteUploadItem = function(btn) {
         const item = btn.closest('.hony-upload-item');
@@ -482,4 +481,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-});
+}
+
+// 如果是首次加载页面，执行初始化
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initUpload);
+} else {
+    // DOM 已经加载完成，直接初始化
+    initUpload();
+}

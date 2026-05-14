@@ -3,6 +3,9 @@
 /* 引入设计规范 */
 @import './design-tokens.css';
 
+/* 引入公共样式 */
+@import './common.css';
+
 /* 系统类组件 */
 @import '../../desktop/system/button.css';
 @import '../../desktop/system/image.css';

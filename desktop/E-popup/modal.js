@@ -54,14 +54,6 @@ function closeModal(modalId) {
     }
 }
 
-// 点击遮罩层关闭弹窗
-document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('hony-modal-mask')) {
-        event.target.classList.remove('hony-visible');
-        document.body.style.overflow = '';
-    }
-});
-
 // ESC键关闭弹窗
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
@@ -71,6 +63,42 @@ document.addEventListener('keydown', function(event) {
         });
         document.body.style.overflow = '';
     }
+});
+
+// 初始化弹窗组件
+function initModal() {
+    // 点击遮罩层关闭弹窗
+    document.querySelectorAll('.hony-modal-mask').forEach(mask => {
+        // 防止重复绑定
+        if (mask.dataset.modalInitialized === 'true') return;
+        mask.dataset.modalInitialized = 'true';
+        
+        mask.addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.classList.remove('hony-visible');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+    
+    // 点击遮罩层关闭抽屉
+    document.querySelectorAll('.hony-drawer-mask').forEach(mask => {
+        // 防止重复绑定
+        if (mask.dataset.drawerInitialized === 'true') return;
+        mask.dataset.drawerInitialized = 'true';
+        
+        mask.addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.classList.remove('hony-visible');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+}
+
+// 页面加载时初始化
+document.addEventListener('DOMContentLoaded', function() {
+    initModal();
 });
 
 // 打开抽屉
@@ -86,16 +114,6 @@ function closeDrawer(id) {
     drawer.classList.remove('hony-visible');
     document.body.style.overflow = '';
 }
-
-// 点击遮罩层关闭（弹窗和抽屉）
-document.querySelectorAll('.hony-modal-mask, .hony-drawer-mask').forEach(mask => {
-    mask.addEventListener('click', function(e) {
-        if (e.target === this) {
-            this.classList.remove('hony-visible');
-            document.body.style.overflow = '';
-        }
-    });
-});
 
 // 滚动到指定章节
 function scrollToSection(title) {

@@ -207,28 +207,41 @@ document.addEventListener('click', function(event) {
 });
 
 // ============================================================
-// 导航跳转功能（动态计算路径）
+// 导航跳转功能（简化版本，使用 location.pathname 判断当前位置）
 // ============================================================
-
-/**
- * 获取项目根路径（处理 GitHub Pages 子目录部署）
- */
-function getRootPath() {
-    // 始终返回根路径（支持 GitHub Pages、Netlify 等各种托管平台）
-    return '/';
-}
 
 /**
  * 导航到指定页面
  * @param {string} targetPath - 目标路径（相对于网站根目录，如 'Specification/color.html'）
  */
 function navigateTo(targetPath) {
-    const rootPath = getRootPath();
-    // 如果路径已经以 / 开头，直接使用
-    if (targetPath.startsWith('/')) {
-        window.location.href = rootPath + targetPath.substring(1);
+    const pathname = window.location.pathname;
+    
+    // 如果是首页，直接返回根目录
+    if (targetPath === 'index.html') {
+        if (pathname === '/' || pathname === '/index.html') {
+            return; // 已经在首页
+        }
+        // 判断当前位置，使用正确的相对路径
+        if (pathname.includes('/desktop/')) {
+            window.location.href = '../../index.html';
+        } else if (pathname.includes('/Specification/')) {
+            window.location.href = '../index.html';
+        } else {
+            window.location.href = 'index.html';
+        }
+        return;
+    }
+    
+    // 其他页面导航
+    if (pathname.includes('/desktop/')) {
+        // 需要两个 ../ 才能从 /desktop/A-system/ 返回到根目录
+        window.location.href = '../../' + targetPath;
+    } else if (pathname.includes('/Specification/')) {
+        // 需要一个 ../ 从 /Specification/ 返回到根目录
+        window.location.href = '../' + targetPath;
     } else {
-        window.location.href = rootPath + targetPath;
+        window.location.href = targetPath;
     }
 }
 
@@ -237,14 +250,334 @@ function navigateTo(targetPath) {
  * @param {string} targetPath - 目标路径（如 'A-system/button.html'）
  */
 function navigateToDesktop(targetPath) {
-    const rootPath = getRootPath();
+    const pathname = window.location.pathname;
+    
     // 如果路径已经包含 desktop/，直接使用
     if (targetPath.startsWith('desktop/')) {
-        window.location.href = rootPath + targetPath;
+        targetPath = targetPath.substring(8);
+    }
+    
+    // 计算目标页面的完整路径
+    let fullPath = '';
+    if (pathname.includes('/desktop/')) {
+        // 在 desktop 目录下
+        if (pathname.includes('/A-system/') || 
+            pathname.includes('/B-navigation/') ||
+            pathname.includes('/C-input/') ||
+            pathname.includes('/D-display/') ||
+            pathname.includes('/E-popup/')) {
+            // 在 desktop 子目录下
+            if (targetPath.includes('/')) {
+                // 目标在其他子目录
+                fullPath = '../' + targetPath;
+            } else {
+                // 目标只有文件名，假设在同一子目录
+                fullPath = targetPath;
+            }
+        } else {
+            // 在 desktop 根目录
+            fullPath = targetPath;
+        }
+    } else if (pathname.includes('/Specification/')) {
+        // 在 Specification 目录下
+        fullPath = '../desktop/' + targetPath;
+    } else {
+        // 在根目录或首页
+        fullPath = 'desktop/' + targetPath;
+    }
+    
+    // 更新导航激活状态
+    updateActiveNav(targetPath);
+    
+    // 使用 AJAX 加载内容到 main-content
+    loadContentToMain(fullPath);
+}
+
+/**
+ * 更新导航激活状态
+ */
+function updateActiveNav(targetPath) {
+    // 移除所有 active 类
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => item.classList.remove('active'));
+    
+    // 添加当前项的 active 类
+    const activeItem = document.querySelector(`.nav-item[onclick*="${targetPath}"]`);
+    if (activeItem) {
+        activeItem.classList.add('active');
+    }
+}
+
+/**
+ * 动态加载脚本文件
+ */
+function loadScript(src, onSuccess, onError) {
+    const script = document.createElement('script');
+    script.src = src;
+    script.onload = function() {
+        if (onSuccess) onSuccess();
+    };
+    script.onerror = function() {
+        console.warn('Failed to load script:', src);
+        if (onError) onError();
+    };
+    document.head.appendChild(script);
+}
+
+/**
+ * 动态加载多个脚本文件（顺序加载）
+ */
+function loadScripts(scripts, callback) {
+    if (!scripts || scripts.length === 0) {
+        if (callback) callback();
         return;
     }
     
-    window.location.href = rootPath + 'desktop/' + targetPath;
+    let index = 0;
+    
+    function loadNext() {
+        if (index >= scripts.length) {
+            if (callback) callback();
+            return;
+        }
+        
+        const src = scripts[index];
+        index++;
+        
+        // 跳过已加载的脚本和空脚本
+        const isAlreadyLoaded = Array.from(document.querySelectorAll('script[src]')).some(s => s.src.endsWith(src));
+        if (!src || isAlreadyLoaded) {
+            loadNext();
+            return;
+        }
+        
+        loadScript(src, loadNext, loadNext);
+    }
+    
+    loadNext();
+}
+
+/**
+ * 从 HTML 字符串中提取 script 标签的 src
+ * @param {string} html - HTML字符串
+ * @param {string} pagePath - 页面路径，用于解析相对路径
+ */
+function extractScripts(html, pagePath) {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+    const scripts = [];
+    const scriptTags = tempDiv.querySelectorAll('script[src]');
+    
+    // 获取页面的目录路径
+    const pageDir = pagePath.substring(0, pagePath.lastIndexOf('/') + 1);
+    
+    scriptTags.forEach(script => {
+        let src = script.getAttribute('src');
+        // 只提取相对于当前项目的脚本（跳过外部脚本和已存在的 common.js）
+        if (src && !src.startsWith('http') && !src.includes('common.js')) {
+            // 如果是相对路径，根据页面路径解析为绝对路径
+            if (src.startsWith('.') || !src.startsWith('/')) {
+                src = pageDir + src;
+            }
+            scripts.push(src);
+        }
+    });
+    
+    return scripts;
+}
+
+/**
+ * 加载页面内容到 main-content
+ */
+function loadContentToMain(pagePath) {
+    const mainContent = document.querySelector('.main-content');
+    if (!mainContent) {
+        // 如果没有 .main-content，直接跳转页面
+        window.location.href = pagePath;
+        return;
+    }
+    
+    // 显示加载状态
+    mainContent.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 200px; color: #999;">加载中...</div>';
+    
+    // 使用 AJAX 加载页面
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', pagePath, true);
+    
+    xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            // 创建临时容器解析 HTML
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = xhr.responseText;
+            
+            // 查找 main-content 或 .main-content 元素
+            const newMainContent = tempDiv.querySelector('main.main-content') || 
+                                  tempDiv.querySelector('.main-content');
+            
+            if (newMainContent) {
+                // 提取页面需要的脚本
+                const scripts = extractScripts(xhr.responseText, pagePath);
+                
+                mainContent.innerHTML = newMainContent.innerHTML;
+                // 更新 URL（不刷新页面）
+                window.history.pushState({}, '', pagePath);
+                
+                // 延迟加载脚本并初始化
+                setTimeout(function() {
+                    loadScripts(scripts, function() {
+                        initTabsAfterLoad();
+                        // 调用页面特定的初始化函数
+                        if (typeof initUpload === 'function') initUpload();
+                        if (typeof initTree === 'function') initTree();
+                        if (typeof initCheckbox === 'function') initCheckbox();
+                        if (typeof initInput === 'function') initInput();
+                        if (typeof initSelect === 'function') initSelect();
+                        if (typeof initSlider === 'function') initSlider();
+                        if (typeof initSwitch === 'function') initSwitch();
+                        if (typeof initTransfer === 'function') initTransfer();
+                        if (typeof initCalendar === 'function') initCalendar();
+                        if (typeof initComment === 'function') initComment();
+                        if (typeof initTable === 'function') initTable();
+                        if (typeof initModal === 'function') initModal();
+                        if (typeof initPopconfirm === 'function') initPopconfirm();
+                        if (typeof initSteps === 'function') initSteps();
+                        if (typeof initNavigation === 'function') initNavigation();
+                        if (typeof initPagination === 'function') initPagination();
+                    });
+                }, 50);
+            } else {
+                // 如果找不到，直接跳转
+                window.location.href = pagePath;
+            }
+        } else {
+            // 加载失败，直接跳转
+            window.location.href = pagePath;
+        }
+    };
+    
+    xhr.onerror = function() {
+        // 网络错误，直接跳转
+        window.location.href = pagePath;
+    };
+    
+    xhr.send();
+}
+
+/**
+ * 更新标签页滑动线条位置
+ */
+function updateSlidingLine(tabNav) {
+    const activeTab = tabNav.querySelector('.hony-tab-item.active');
+    if (activeTab) {
+        const rect = activeTab.getBoundingClientRect();
+        const navRect = tabNav.getBoundingClientRect();
+
+        const left = rect.left - navRect.left;
+        const width = rect.width;
+
+        // 更新滑动线条样式
+        tabNav.style.setProperty('--line-left', left + 'px');
+        tabNav.style.setProperty('--line-width', width + 'px');
+    }
+}
+
+/**
+ * 在内容加载后初始化标签页（不依赖外部函数）
+ */
+function initTabsAfterLoad() {
+    // 初始化所有横向标签页
+    const horizontalTabNavs = document.querySelectorAll('.hony-tab-nav, .hony-tab-nav-underline, .hony-tab-nav-tab, .hony-tab-nav-card, .hony-tab-nav-bubble, .hony-tab-nav-segment');
+    
+    horizontalTabNavs.forEach(tabNav => {
+        // 查找带有 active 类的标签项，如果没有则选择第一个
+        let activeTab = tabNav.querySelector('.hony-tab-item.active');
+        if (!activeTab) {
+            activeTab = tabNav.querySelector('.hony-tab-item:not(.add-tab-icon)');
+        }
+        
+        if (activeTab) {
+            // 获取目标标签
+            const targetTab = activeTab.getAttribute('data-tab');
+            
+            // 获取标签页内容容器（支持多种结构）
+            let contentContainer = tabNav.nextElementSibling;
+            
+            // 如果 nextElementSibling 不是内容容器，尝试查找父容器下的内容
+            if (!contentContainer || !contentContainer.classList.contains('hony-tab-content') && 
+                !contentContainer.classList.contains('hony-tab-content2')) {
+                const parentGroup = tabNav.closest('.hony-tabs-group, .hony-tabs-group2');
+                if (parentGroup) {
+                    contentContainer = parentGroup.querySelector('.hony-tab-content, .hony-tab-content2, .tab-content, .hony-tab-content-side');
+                }
+            }
+            
+            // 移除所有标签项的激活状态
+            tabNav.querySelectorAll('.hony-tab-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // 添加当前标签项的激活状态
+            activeTab.classList.add('active');
+            
+            // 更新滑动线条位置（仅基础标签页）
+            if (tabNav.classList.contains('hony-tab-nav')) {
+                updateSlidingLine(tabNav);
+            }
+            
+            // 隐藏所有标签内容并显示激活的内容
+            if (contentContainer) {
+                contentContainer.querySelectorAll('.hony-tab-content-item, .tab-content-item').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // 显示目标标签内容
+                const targetContent = contentContainer.querySelector(`#hony-${targetTab}`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            }
+        }
+    });
+    
+    // 初始化所有侧边标签页
+    const sideTabNavs = document.querySelectorAll('.hony-tab-nav-side');
+    
+    sideTabNavs.forEach(tabNav => {
+        // 查找带有 active 类的标签项，如果没有则选择第一个
+        let activeTab = tabNav.querySelector('.hony-tab-item.active');
+        if (!activeTab) {
+            activeTab = tabNav.querySelector('.hony-tab-item:not(.add-tab-icon)');
+        }
+        
+        if (activeTab) {
+            // 获取目标标签
+            const targetTab = activeTab.getAttribute('data-tab');
+            
+            // 获取侧边标签页容器
+            const sideTabsContainer = tabNav.closest('.side-tabs');
+            
+            // 移除所有标签项的激活状态
+            tabNav.querySelectorAll('.hony-tab-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // 添加当前标签项的激活状态
+            activeTab.classList.add('active');
+            
+            // 隐藏所有标签内容并显示激活的内容
+            if (sideTabsContainer) {
+                sideTabsContainer.querySelectorAll('.hony-tab-content-item, .tab-content-item').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // 显示目标标签内容
+                const targetContent = sideTabsContainer.querySelector(`#hony-${targetTab}`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            }
+        }
+    });
 }
 
 /**
@@ -252,12 +585,23 @@ function navigateToDesktop(targetPath) {
  * @param {string} targetPath - 目标路径（如 'color.html'）
  */
 function navigateToSpecification(targetPath) {
-    const rootPath = getRootPath();
+    const pathname = window.location.pathname;
+    
     // 如果路径已经包含 Specification/，直接使用
     if (targetPath.startsWith('Specification/')) {
-        window.location.href = rootPath + targetPath;
+        targetPath = targetPath.substring(14);
+    }
+    
+    // 判断当前位置，使用正确的相对路径
+    if (pathname.includes('/desktop/')) {
+        // 在 desktop 目录下
+        window.location.href = '../../Specification/' + targetPath;
+    } else if (pathname.includes('/Specification/')) {
+        // 在 Specification 目录下
+        window.location.href = targetPath;
     } else {
-        window.location.href = rootPath + 'Specification/' + targetPath;
+        // 在根目录或首页
+        window.location.href = 'Specification/' + targetPath;
     }
 }
 
@@ -351,8 +695,16 @@ function adjustComponentPaths(container) {
         let src = img.getAttribute('src');
         if (src && !src.startsWith('http') && !src.startsWith('data:')) {
             // 如果路径已经以 backPath 开头，就不再处理
-            if (!src.startsWith(backPath) && !src.startsWith('../')) {
-                img.setAttribute('src', backPath + src);
+            if (!src.startsWith(backPath)) {
+                // 如果路径以 ../ 开头，需要特殊处理
+                if (src.startsWith('../')) {
+                    // 组件中的路径是相对于组件目录的，需要转换为相对于当前页面的路径
+                    // 组件位于 overall/components/，所以 ../ 会指向 overall/
+                    // 我们需要根据当前页面位置添加额外的路径
+                    img.setAttribute('src', backPath + 'overall/' + src.substring(3));
+                } else {
+                    img.setAttribute('src', backPath + src);
+                }
             }
         }
     });
@@ -619,22 +971,18 @@ function setActiveNavItem() {
 
 /**
  * 加载桌面端页面组件（顶部导航 + 侧边栏）
+ * 已废弃 - 导航组件已手动嵌入到每个页面中
  */
 async function loadDesktopComponents() {
-    // 加载顶部导航
-    await loadComponent('navbar-container', 'navbar.html');
-    // 加载桌面端侧边栏
-    await loadComponent('sidebar-container', 'sidebar-desktop.html');
+    console.warn('loadDesktopComponents() is deprecated - navigation is now embedded in each page');
 }
 
 /**
  * 加载设计规范页面组件
+ * 已废弃 - 导航组件已手动嵌入到每个页面中
  */
 async function loadSpecificationComponents() {
-    // 加载顶部导航
-    await loadComponent('navbar-container', 'navbar.html');
-    // 加载设计规范侧边栏
-    await loadComponent('sidebar-container', 'sidebar-specification.html');
+    console.warn('loadSpecificationComponents() is deprecated - navigation is now embedded in each page');
 }
 
 // ============================================================
@@ -789,6 +1137,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initTopNav();
     initRightNavScroll();
     initSearchBox();
+    
+    // 初始化标签页（直接加载页面时）
+    setTimeout(function() {
+        initTabsAfterLoad();
+    }, 100);
     
     // 检查页面是否需要加载组件
     if (hasNavbarContainer || hasSidebarContainer) {

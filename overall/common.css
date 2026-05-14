@@ -324,7 +324,7 @@ body {
     min-height: 100vh;
     position: relative;
     height: calc(100vh);
-    background: var(--component-page-1);
+    background: var(--grey-bg-0);
     border-right: 1px solid var(--grey-border-1);
 }
 
@@ -594,7 +594,15 @@ td {
     display: flex;
     flex-direction: column;
 }
-
+.component-container2 {
+    gap: 24px;
+    flex-wrap: column;
+    padding: 24px;
+    background: var(--grey-bg-0);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
 .component-container.table-height {
     height: 600px;
 }
@@ -799,4 +807,13 @@ td {
     display: flex;
     flex-direction: column;
     padding-left: 240px;
+    padding-top: 64px;
+}
+.logo-icon1 {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }

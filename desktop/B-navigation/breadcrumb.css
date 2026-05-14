@@ -6,6 +6,9 @@
   font-family: var(--font-family);
   height: 24px;
 }
+.hony-breadcrumb.hony-breadcrumb-default {
+  width: 100%;
+}
 .hony-breadcrumb-icon.iconfont.active {
   color: var(--grey-text-1);
 }

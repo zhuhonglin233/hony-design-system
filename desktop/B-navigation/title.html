@@ -1,17 +1,73 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+<head><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>标题 - Design System</title>
     <link rel="icon" href="../../overall/images/LOGO.png" type="image/png">
+    <link rel="stylesheet" href="../../overall/design-tokens.css">
+    <link rel="stylesheet" href="../../overall/common.css">
     <link rel="stylesheet" href="../../overall/main.css">
     <link rel="stylesheet" href="../../overall/icons/iconfont.css">
-    <link rel="stylesheet" href="title.css">
-    <link rel="stylesheet" href="breadcrumb.css">
-    <link rel="stylesheet" href="../A-system/button.css">
+    <link rel="stylesheet" href="./title.css">
+    <link rel="stylesheet" href="./tabs.css">
     <script src="../../overall/js/common.js"></script>
-<link rel="stylesheet" href="../B-navigation/tabs.css">
+    <script src="./tabs.js"></script>
+    <!-- A-system -->
+    <link rel="stylesheet" href="../A-system/button.css">
+    <link rel="stylesheet" href="../A-system/card.css">
+    <link rel="stylesheet" href="../A-system/image.css">
+    <script src="../A-system/image.js"></script>
+    <link rel="stylesheet" href="./tab.css">
+    <!-- B-navigation -->
+    <link rel="stylesheet" href="../B-navigation/breadcrumb.css">
+    <link rel="stylesheet" href="../B-navigation/Multi.css">
+    <link rel="stylesheet" href="../B-navigation/navigation.css">
+    <script src="../B-navigation/navigation.js"></script>
+    <link rel="stylesheet" href="../B-navigation/Pagination.css">
+    <script src="../B-navigation/Pagination.js"></script>
+    <link rel="stylesheet" href="../B-navigation/steps.css">
+    <script src="../B-navigation/steps.js"></script>
+    <link rel="stylesheet" href="../B-navigation/tabs.css">
+    <script src="../B-navigation/tabs.js"></script>
+    <link rel="stylesheet" href="../B-navigation/title.css">
+    <!-- C-input -->
+    <link rel="stylesheet" href="../C-input/checkbox.css">
+    <script src="../C-input/checkbox.js"></script>
+    <link rel="stylesheet" href="../C-input/form.css">
+    <link rel="stylesheet" href="../C-input/input.css">
+    <script src="../C-input/input.js"></script>
+    <link rel="stylesheet" href="../C-input/score.css">
+    <script src="../C-input/score.js"></script>
+    <link rel="stylesheet" href="../C-input/select.css">
+    <script src="../C-input/select.js"></script>
+    <link rel="stylesheet" href="../C-input/slider.css">
+    <script src="../C-input/slider.js"></script>
+    <link rel="stylesheet" href="../C-input/swich.css">
+    <script src="../C-input/swich.js"></script>
+    <link rel="stylesheet" href="../C-input/transfer.css">
+    <script src="../C-input/transfer.js"></script>
+    <link rel="stylesheet" href="../C-input/tree.css">
+    <script src="../C-input/tree.js"></script>
+    <link rel="stylesheet" href="../C-input/upload.css">
+    <script src="../C-input/upload.js"></script>
+    <!-- D-display -->
+    <link rel="stylesheet" href="../D-display/avatar.css">
+    <link rel="stylesheet" href="../D-display/badge.css">
+    <link rel="stylesheet" href="../D-display/calendar.css">
+    <script src="../D-display/calendar.js"></script>
+    <link rel="stylesheet" href="../D-display/comment.css">
+    <script src="../D-display/comment.js"></script>
+    <link rel="stylesheet" href="../D-display/descriptions.css">
+    <link rel="stylesheet" href="../D-display/list.css">
+    <link rel="stylesheet" href="../D-display/table.css">
+    <script src="../D-display/table.js"></script>
+    <link rel="stylesheet" href="../D-display/timeline.css">
+    <!-- E-popup -->
+    <link rel="stylesheet" href="../E-popup/alert.css">
+    <link rel="stylesheet" href="../E-popup/modal.css">
+    <script src="../E-popup/modal.js"></script>
+    <link rel="stylesheet" href="../E-popup/popconfirm.css">
+    <script src="../E-popup/popconfirm.js"></script>
 </head>
 <body>
 
@@ -22,9 +78,10 @@
             <div class="side-nav">
                 <!-- LOGO -->
                 <div class="logo" onclick="navigateTo('index.html')">
-                    <img class="logo-icon" src="overall/images/LOGO.png" alt="Hony Design Logo">
+                    <img class="logo-icon" src="../../overall/images/LOGO.png" alt="Hony Design Logo">
                     <div class="logo-text">Hony Design</div>
                 </div>
+
                 <div class="nav-menu-section">
                     <!-- 概述 -->
                     <div class="nav-section">
@@ -72,7 +129,7 @@
                     <!-- B类导航 -->
                     <div class="nav-section">
                         <div class="nav-section-title">B类导航&nbsp;Navigation</div>
-                        <div class="nav-item" onclick="navigateToDesktop('B-navigation/title.html')">
+                        <div class="nav-item active" onclick="navigateToDesktop('B-navigation/title.html')">
                             <div class="nav-item-inner">
                                 <div class="nav-text">标题  Title</div>
                             </div>
@@ -227,11 +284,56 @@
                     </div>
                 </div>
             </div>
-        </div>      
+        </div>
+       <!-- 顶部导航栏 -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <!-- 导航菜单 -->
+                <div class="nav-menu">
+                <!-- 搜索框 -->
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="搜索组件...">
+                    <span class="search-icon iconfont">&#xe963;</span>
+                    <span class="search-clear iconfont" style="display: none;" onclick="clearSearch(this)">&#xf062;</span>
+                    <div class="search-dropdown" style="display: none;">
+                        <div class="search-dropdown-header">搜索结果</div>
+                        <div class="search-dropdown-list" id="search-results"></div>
+                    </div>
+                </div>
+                    <div class="nav-item" onclick="navigateTo('Specification/color.html')">
+                        <div class="nav-item-inner">
+                            <div class="nav-text">设计规范</div>
+                        </div>
+                    </div>
+                    <div class="nav-item active" onclick="navigateTo('desktop/A-system/button.html')">
+                        <div class="nav-item-inner">
+                            <div class="nav-text">桌面端组件</div>
+                        </div>
+                    </div>
+                    <div class="nav-item" onclick="navigateTo('desktop/page-template/system-login.html')">
+                        <div class="nav-item-inner">
+                            <div class="nav-text">页面模版</div>
+                        </div>
+                    </div>
+                    <div class="nav-item" onclick="window.open('https://www.figma.com/proto/NGoV0wp2ulYjFmzTPVsRzR/Untitled?node-id=9-6&viewport=77%2C-239%2C0.18&t=IJpHPYV8X3xdXgwE-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=9%3A6&page-id=0%3A1', '_blank')">
+                        <div class="nav-item-inner">
+                            <div class="nav-text">关于我</div>
+                        </div>
+                    </div>
+                    <!-- 右侧功能区 -->
+                    <div class="hony-tab-nav-segment hony-tab-nav-segment-icons">
+                        <div class="hony-tab-item active" data-tab="tab-segment-1" onclick="switchTheme('light')">
+                            <span class="hony-tab-icon iconfont"></span>
+                        </div>
+                        <div class="hony-tab-item" data-tab="tab-segment-2" onclick="switchTheme('dark')">
+                            <span class="hony-tab-icon iconfont"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav> 
         <!-- 主内容区域 -->
-        <div class="main-content">
-            <!-- 顶部导航栏 -->
-            <div id="navbar-container"></div>
+        <main class="main-content">
             <!-- 主内容区域 -->
             <div class="hony-content-area">
                 <!-- 页面标题 -->
@@ -255,13 +357,13 @@
                                         <div class="hony-title-section" style="display: flex; flex-direction: column; gap: 48px;">
                                             <div class="hony-title-level" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px;">一级</div>
                                             <div class="hony-title-content">
-                                                <div style="font-size: 32px; font-weight: 700; color: var(--grey-text-1); line-height: 40px;">页面标题32px</div>
+                                                <div style="font-size: 32px; font-weight: 700; color: var(--grey-text-1); line-height: 40px; width: 100%;">页面标题32px</div>
                                             </div>
                                         </div>
                                         <div class="hony-title-section" style="display: flex; flex-direction: column; gap: 48px;">
                                             <div class="hony-title-level" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px;">二级</div>
                                             <div class="hony-title-content">
-                                                <div style="font-size: 24px; font-weight: 700; color: var(--grey-text-1); line-height: 32px;">页面标题24px</div>
+                                                <div style="font-size: 24px; font-weight: 700; color: var(--grey-text-1); line-height: 32px; flex: 1;">页面标题24px</div>
                                             </div>
                                         </div>
                                     </div>
@@ -483,22 +585,21 @@
                                             </div>
                                         
                                         <!-- 页面标题和操作按钮 -->
-                                        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 12px;">
-                                            <div class="hony-title hony-title-normal-1" style="font-size: 32px; font-weight: 700; line-height: 40px;">页面标题</div>
+                                        <div class="hony-title-content">
+                                            <div style="font-size: 24px; font-weight: 700; color: var(--grey-text-1); line-height: 32px; flex: 1;">页面标题24px</div>
                                             <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
                                                 <button class="hony-btn hony-btn-primary">标题昵称</button>
                                                 <button class="hony-btn hony-btn-outline-primary">标题昵称</button>
                                                 <button class="hony-btn hony-btn-outline-primary">标题昵称</button>
                                             </div>
                                         </div>
-                                        
                                         <!-- 描述文字 -->
-                                        <div class="hony-title-description" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px; margin-bottom: 20px;">
+                                        <div class="hony-title-description" style="font-size: 12px; color: var(--grey-text-3); line-height: 20px; margin-bottom: 20px; width: 100%;">
                                             如果您在填写表格时遇到任何问题或有疑问，请参阅帮助部分或联系我们的支持团队。
                                         </div>
                                         
                                         <!-- 信息行 -->
-                                        <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+                                        <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; width: 100%;">
                                             <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px;">
                                                 <div style="display: flex; align-items: center; gap: 12px;">
                                                     <span style="font-size: 14px; color: var(--grey-text-3); line-height: 24px; width: 110px;">创建人</span>
@@ -522,7 +623,7 @@
                                         </div>
                                         
                                         <!-- 标签页 -->
-                                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; border-bottom: 1px solid var(--grey-border-1); padding-bottom: 14px;">
+                                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; border-bottom: 1px solid var(--grey-border-1); padding-bottom: 14px; width: 100%;">
                                             <div style="padding-top: 16px; padding-bottom: 14px; border-bottom: 2px solid var(--primary-main-1);">
                                                 <span style="font-size: 16px; color: var(--primary-main-1); line-height: 24px; font-weight: 500;">标题昵称</span>
                                             </div>
@@ -559,7 +660,7 @@
                 </div>                
             </div>
 
-        </div>
+        </main>
     </div>
     <!-- 背景纹理 -->
     <div class="hony-background-texture"></div>

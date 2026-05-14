@@ -325,7 +325,7 @@
 .hony-checkbox-item-bordered .hony-checkbox-box.checked::after {
     content: '\f081';
     font-family: 'iconfont';
-    color: var(--primary-main-5);
+    color: #c6000000;
     font-size: 8px;
     font-weight: bold;
     line-height: 1;
