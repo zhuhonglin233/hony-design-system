@@ -18,6 +18,7 @@
 .hony-modal-mask.hony-visible {
   opacity: 1;
   visibility: visible;
+  z-index: 99999;
 }
 
 /* 弹窗容器 */
