@@ -257,33 +257,38 @@ function navigateToDesktop(targetPath) {
         targetPath = targetPath.substring(8);
     }
     
-    // 计算目标页面的完整路径
+    // 计算目标页面的完整绝对路径（基于项目根目录）
     let fullPath = '';
-    if (pathname.includes('/desktop/')) {
-        // 在 desktop 目录下
-        if (pathname.includes('/A-system/') || 
-            pathname.includes('/B-navigation/') ||
-            pathname.includes('/C-input/') ||
-            pathname.includes('/D-display/') ||
-            pathname.includes('/E-popup/')) {
-            // 在 desktop 子目录下
-            if (targetPath.includes('/')) {
-                // 目标在其他子目录
-                fullPath = '../' + targetPath;
-            } else {
-                // 目标只有文件名，假设在同一子目录
+    
+    // 判断目标是否包含子目录（如 'A-system/button.html'）
+    if (targetPath.includes('/')) {
+        // 目标路径包含子目录，直接使用 desktop/ + 目标路径
+        fullPath = 'desktop/' + targetPath;
+    } else {
+        // 目标只有文件名，需要判断当前页面位置
+        if (pathname.includes('/desktop/')) {
+            // 在 desktop 目录下，检查是否在子目录中
+            if (pathname.includes('/A-system/') || 
+                pathname.includes('/B-navigation/') ||
+                pathname.includes('/C-input/') ||
+                pathname.includes('/D-display/') ||
+                pathname.includes('/E-popup/')) {
+                // 在 desktop 子目录下，直接使用文件名（同一子目录）
                 fullPath = targetPath;
+            } else {
+                // 在 desktop 根目录，需要添加子目录前缀
+                // 从当前路径提取子目录名称
+                const match = pathname.match(/\/desktop\/([^\/]+)/);
+                if (match) {
+                    fullPath = match[1] + '/' + targetPath;
+                } else {
+                    fullPath = targetPath;
+                }
             }
         } else {
-            // 在 desktop 根目录
-            fullPath = targetPath;
+            // 不在 desktop 目录下
+            fullPath = 'desktop/A-system/' + targetPath;
         }
-    } else if (pathname.includes('/Specification/')) {
-        // 在 Specification 目录下
-        fullPath = '../desktop/' + targetPath;
-    } else {
-        // 在根目录或首页
-        fullPath = 'desktop/' + targetPath;
     }
     
     // 更新导航激活状态
@@ -397,12 +402,18 @@ function loadContentToMain(pagePath) {
         return;
     }
     
+    // 如果路径不以 / 开头，添加 / 使其成为绝对路径
+    let fullPagePath = pagePath;
+    if (!fullPagePath.startsWith('/')) {
+        fullPagePath = '/' + fullPagePath;
+    }
+    
     // 显示加载状态
     mainContent.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 200px; color: #999;">加载中...</div>';
     
-    // 使用 AJAX 加载页面
+    // 使用 AJAX 加载页面（使用绝对路径）
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', pagePath, true);
+    xhr.open('GET', fullPagePath, true);
     
     xhr.onload = function() {
         if (xhr.status >= 200 && xhr.status < 300) {
@@ -416,11 +427,11 @@ function loadContentToMain(pagePath) {
             
             if (newMainContent) {
                 // 提取页面需要的脚本
-                const scripts = extractScripts(xhr.responseText, pagePath);
+                const scripts = extractScripts(xhr.responseText, fullPagePath);
                 
                 mainContent.innerHTML = newMainContent.innerHTML;
                 // 更新 URL（不刷新页面）
-                window.history.pushState({}, '', pagePath);
+                window.history.pushState({}, '', fullPagePath);
                 
                 // 延迟加载脚本并初始化
                 setTimeout(function() {
