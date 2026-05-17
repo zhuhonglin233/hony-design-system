@@ -35,12 +35,23 @@ function initNavbarScroll() {
 }
 
 function checkNavbarScroll() {
+    // 处理旧的导航栏
     const navbar = document.querySelector('.navbar');
     if (navbar) {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
+        }
+    }
+    
+    // 处理新的顶部导航栏
+    const topNavbar = document.querySelector('.top-navbar');
+    if (topNavbar) {
+        if (window.scrollY > 50) {
+            topNavbar.classList.add('scrolled');
+        } else {
+            topNavbar.classList.remove('scrolled');
         }
     }
 }
@@ -601,8 +612,8 @@ function navigateToSpecification(targetPath) {
         fullPath = 'Specification/' + targetPath;
     }
     
-    // 使用 AJAX 加载内容到 main-content
-    loadContentToMain(fullPath);
+    // 页面跳转（而不是 AJAX 切换）
+    window.location.href = '/' + fullPath;
 }
 
 /**
@@ -954,7 +965,7 @@ function setActiveNavItem() {
     }
     
     // 设置顶部导航 active
-    const topNavItems = document.querySelectorAll('.navbar .nav-item');
+    const topNavItems = document.querySelectorAll('.navbar .navbar-item');
     topNavItems.forEach(item => {
         const onclick = item.getAttribute('onclick');
         if (onclick) {
@@ -1227,9 +1238,9 @@ const componentSearchData = [
 
 // 搜索框相关函数
 function clearSearch(clearBtn) {
-    const searchBox = clearBtn.closest('.search-box');
-    const searchInput = searchBox.querySelector('.search-input');
-    const dropdown = searchBox.querySelector('.search-dropdown');
+    const searchBox = clearBtn.closest('.search-box, .top-search-box');
+    const searchInput = searchBox.querySelector('.search-input, .top-search-input');
+    const dropdown = searchBox.querySelector('.search-dropdown, .top-search-dropdown');
     searchInput.value = '';
     clearBtn.style.display = 'none';
     dropdown.style.display = 'none';
@@ -1237,10 +1248,10 @@ function clearSearch(clearBtn) {
 }
 
 function performSearch(searchInput) {
-    const searchBox = searchInput.closest('.search-box');
-    const dropdown = searchBox.querySelector('.search-dropdown');
+    const searchBox = searchInput.closest('.search-box, .top-search-box');
+    const dropdown = searchBox.querySelector('.search-dropdown, .top-search-dropdown');
     const resultsList = searchBox.querySelector('#search-results');
-    const clearBtn = searchBox.querySelector('.search-clear');
+    const clearBtn = searchBox.querySelector('.search-clear, .top-search-clear');
     const query = searchInput.value.trim().toLowerCase();
     
     if (query.length === 0) {
@@ -1272,7 +1283,7 @@ function performSearch(searchInput) {
 }
 
 function initSearchBox() {
-    const searchInputs = document.querySelectorAll('.search-input');
+    const searchInputs = document.querySelectorAll('.search-input, .top-search-input');
     searchInputs.forEach(input => {
         input.addEventListener('input', function() {
             performSearch(this);
@@ -1283,8 +1294,8 @@ function initSearchBox() {
         });
         
         input.addEventListener('blur', function() {
-            const searchBox = this.closest('.search-box');
-            const dropdown = searchBox.querySelector('.search-dropdown');
+            const searchBox = this.closest('.search-box, .top-search-box');
+            const dropdown = searchBox.querySelector('.search-dropdown, .top-search-dropdown');
             setTimeout(() => {
                 dropdown.style.display = 'none';
             }, 200);
