@@ -222,27 +222,13 @@ function navigateTo(targetPath) {
         if (pathname === '/' || pathname === '/index.html') {
             return; // 已经在首页
         }
-        // 判断当前位置，使用正确的相对路径
-        if (pathname.includes('/desktop/')) {
-            window.location.href = '../../index.html';
-        } else if (pathname.includes('/Specification/')) {
-            window.location.href = '../index.html';
-        } else {
-            window.location.href = 'index.html';
-        }
+        // 使用绝对路径
+        window.location.href = '/index.html';
         return;
     }
     
-    // 其他页面导航
-    if (pathname.includes('/desktop/')) {
-        // 需要两个 ../ 才能从 /desktop/A-system/ 返回到根目录
-        window.location.href = '../../' + targetPath;
-    } else if (pathname.includes('/Specification/')) {
-        // 需要一个 ../ 从 /Specification/ 返回到根目录
-        window.location.href = '../' + targetPath;
-    } else {
-        window.location.href = targetPath;
-    }
+    // 其他页面导航，使用绝对路径
+    window.location.href = '/' + targetPath;
 }
 
 /**
