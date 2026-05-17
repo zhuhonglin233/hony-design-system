@@ -603,17 +603,20 @@ function navigateToSpecification(targetPath) {
         targetPath = targetPath.substring(14);
     }
     
-    // 判断当前位置，使用正确的相对路径
-    if (pathname.includes('/desktop/')) {
-        // 在 desktop 目录下
-        window.location.href = '../../Specification/' + targetPath;
-    } else if (pathname.includes('/Specification/')) {
-        // 在 Specification 目录下
-        window.location.href = targetPath;
+    // 计算目标页面的完整绝对路径（基于项目根目录）
+    let fullPath = '';
+    
+    // 判断目标是否包含子目录（如 'subdir/page.html'）
+    if (targetPath.includes('/')) {
+        // 目标路径包含子目录
+        fullPath = 'Specification/' + targetPath;
     } else {
-        // 在根目录或首页
-        window.location.href = 'Specification/' + targetPath;
+        // 目标只有文件名，直接使用 Specification/ + 文件名
+        fullPath = 'Specification/' + targetPath;
     }
+    
+    // 使用 AJAX 加载内容到 main-content
+    loadContentToMain(fullPath);
 }
 
 /**
