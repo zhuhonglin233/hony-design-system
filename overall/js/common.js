@@ -1018,6 +1018,7 @@ async function loadSpecificationComponents() {
 window.switchTheme = function(theme) {
     var root = document.documentElement;
     var tabs = document.querySelectorAll('.hony-tab-item');
+    var topThemeBtns = document.querySelectorAll('.top-theme-btn');
     
     if (theme === 'dark') {
         root.classList.add('Dark');
@@ -1034,28 +1035,62 @@ window.switchTheme = function(theme) {
         }
     });
     
+    // 更新顶部导航栏主题按钮状态
+    topThemeBtns.forEach(function(btn) {
+        btn.classList.remove('top-theme-active');
+    });
+    if (theme === 'dark') {
+        topThemeBtns.forEach(function(btn) {
+            if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes('dark')) {
+                btn.classList.add('top-theme-active');
+            }
+        });
+    } else {
+        topThemeBtns.forEach(function(btn) {
+            if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes('light')) {
+                btn.classList.add('top-theme-active');
+            }
+        });
+    }
+    
     // 保存主题到本地存储
     localStorage.setItem('theme', theme);
 }
 
 /**
- * 初始化主题（默认浅色模式）
+ * 初始化主题（从本地存储恢复或默认浅色模式）
  */
 function initTheme() {
-    // 默认使用浅色模式
-    document.documentElement.classList.remove('Dark');
+    // 从本地存储获取保存的主题
+    var savedTheme = localStorage.getItem('theme');
+    var theme = savedTheme || 'light';
     
-    // 更新标签状态，确保浅色模式标签为激活状态
+    // 应用主题
+    if (theme === 'dark') {
+        document.documentElement.classList.add('Dark');
+    } else {
+        document.documentElement.classList.remove('Dark');
+    }
+    
+    // 更新标签状态
     var tabs = document.querySelectorAll('.hony-tab-item');
     tabs.forEach(function(tab) {
         tab.classList.remove('active');
-        if (tab.dataset.tab === 'tab-segment-1') {
+        if ((theme === 'dark' && tab.dataset.tab === 'tab-segment-2') ||
+            (theme === 'light' && tab.dataset.tab === 'tab-segment-1')) {
             tab.classList.add('active');
         }
     });
     
-    // 清除之前保存的主题设置，确保每次进入都是浅色模式
-    localStorage.removeItem('theme');
+    // 更新顶部导航栏主题按钮状态
+    var topThemeBtns = document.querySelectorAll('.top-theme-btn');
+    topThemeBtns.forEach(function(btn) {
+        btn.classList.remove('top-theme-active');
+        if ((theme === 'dark' && btn.getAttribute('onclick') && btn.getAttribute('onclick').includes('dark')) ||
+            (theme === 'light' && btn.getAttribute('onclick') && btn.getAttribute('onclick').includes('light'))) {
+            btn.classList.add('top-theme-active');
+        }
+    });
 }
 
 // ============================================================
