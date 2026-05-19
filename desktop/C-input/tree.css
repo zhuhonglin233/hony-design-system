@@ -4,8 +4,8 @@
   border-radius: 4px;
   width: 100%;
   overflow-y: auto;
-  max-width: 320px;
   padding: 0px 24px;
+  flex: 1;
 }
 
 /* 树节点 */
@@ -148,7 +148,6 @@
 .hony-tree-unit {
   row-gap: 4px;
   height: 100%;
-  max-width: 320px;
   mim-width: 24px;
   scrollbar-width: thin;
   scrollbar-color: var(--grey-border-1) #00000000;
@@ -228,7 +227,7 @@
 background: var(--grey-bg-0);
     scrollbar-width: thin;
     scrollbar-color: var(--grey-border-1) #00000000;
-
+  padding: 8px;
   height: 100%;
 }
 
@@ -534,6 +533,13 @@ background: var(--grey-bg-0);
   justify-content: center;
   font-size: 8px;
   color: var(--grey-border-2);
+  transition: transform 0.2s ease;
+}
+
+.hony-tree-card .hony-tree-expand-icon img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease;
 }
 
 .hony-tree-card .hony-tree-expand-icon.empty {
@@ -542,6 +548,7 @@ background: var(--grey-bg-0);
 
 .hony-tree-card .hony-tree-expand-icon.expanded {
   color: var(--grey-text-4);
+  transform: rotate(90deg);
 }
 
 .hony-tree-card .hony-checkbox-box,

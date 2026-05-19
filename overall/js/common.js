@@ -145,6 +145,7 @@ function initTopNav() {
 }
 
 // 右侧锚点导航滚动监听效果
+let rightNavScrollHandler = null;
 function initRightNavScroll() {
     const rightNavItems = document.querySelectorAll('.right-nav-item');
     if (rightNavItems.length === 0) return;
@@ -172,7 +173,13 @@ function initRightNavScroll() {
         }
     });
 
-    window.addEventListener('scroll', function() {
+    // 移除旧的滚动监听器
+    if (rightNavScrollHandler) {
+        window.removeEventListener('scroll', rightNavScrollHandler);
+    }
+
+    // 创建新的滚动监听器
+    rightNavScrollHandler = function() {
         const scrollPosition = window.scrollY + 150;
 
         let currentTarget = null;
@@ -188,7 +195,9 @@ function initRightNavScroll() {
             rightNavItems.forEach(item => item.classList.remove('active'));
             currentTarget.item.classList.add('active');
         }
-    });
+    };
+
+    window.addEventListener('scroll', rightNavScrollHandler);
 }
 
 // 下拉菜单切换函数
@@ -434,6 +443,8 @@ function loadContentToMain(pagePath) {
                 setTimeout(function() {
                     loadScripts(scripts, function() {
                         initTabsAfterLoad();
+                        // 重新初始化右侧锚点导航滚动监听
+                        initRightNavScroll();
                         // 调用页面特定的初始化函数
                         if (typeof initUpload === 'function') initUpload();
                         if (typeof initTree === 'function') initTree();

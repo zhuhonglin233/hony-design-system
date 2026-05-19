@@ -272,7 +272,9 @@ function transferTreeLeft(el) {
     const rightTree = rightPanel.querySelector('.hony-tree');
     const leftTree = leftPanel.querySelector('.hony-tree');
     
-    const selectedNodes = rightTree.querySelectorAll('.hony-tree-node.hony-selected');
+    // 获取所有完全选中的节点（只转移checked的，不转移indeterminate的）
+    const checkboxes = rightTree.querySelectorAll('.hony-checkbox-box.checked');
+    const selectedNodes = Array.from(checkboxes).map(cb => cb.closest('.hony-tree-node')).filter(Boolean);
     
     selectedNodes.forEach(node => {
         node.classList.remove('hony-selected');
@@ -280,8 +282,19 @@ function transferTreeLeft(el) {
         if (checkbox) {
             checkbox.classList.remove('checked', 'indeterminate');
         }
+        
+        // 移动节点到左侧
         leftTree.appendChild(node);
+        
+        // 检查是否有子节点容器需要一起移动
+        const childrenContainer = node.nextElementSibling;
+        if (childrenContainer && childrenContainer.classList.contains('hony-tree-children')) {
+            leftTree.appendChild(childrenContainer);
+        }
     });
+    
+    // 更新右侧剩余节点的复选框状态
+    updateAllParentCheckboxes(rightTree);
 }
 
 function transferTreeRight(el) {
@@ -291,7 +304,9 @@ function transferTreeRight(el) {
     const leftTree = leftPanel.querySelector('.hony-tree');
     const rightTree = rightPanel.querySelector('.hony-tree');
     
-    const selectedNodes = leftTree.querySelectorAll('.hony-tree-node.hony-selected');
+    // 获取所有完全选中的节点（只转移checked的，不转移indeterminate的）
+    const checkboxes = leftTree.querySelectorAll('.hony-checkbox-box.checked');
+    const selectedNodes = Array.from(checkboxes).map(cb => cb.closest('.hony-tree-node')).filter(Boolean);
     
     selectedNodes.forEach(node => {
         node.classList.remove('hony-selected');
@@ -299,6 +314,127 @@ function transferTreeRight(el) {
         if (checkbox) {
             checkbox.classList.remove('checked', 'indeterminate');
         }
-        rightTree.appendChild(node);
+        
+        // 获取节点的层级路径（从根到当前节点）
+        const path = getNodePath(node);
+        
+        // 在右侧树中找到或创建对应的父容器
+        let parentContainer = rightTree;
+        for (let i = 0; i < path.length - 1; i++) {
+            const ancestorNode = path[i];
+            parentContainer = findOrCreateParentNode(parentContainer, ancestorNode);
+        }
+        
+        // 将节点移动到正确的位置
+        parentContainer.appendChild(node);
+        
+        // 检查是否有子节点容器需要一起移动
+        const childrenContainer = node.nextElementSibling;
+        if (childrenContainer && childrenContainer.classList.contains('hony-tree-children')) {
+            parentContainer.appendChild(childrenContainer);
+        }
+    });
+    
+    // 更新左侧剩余节点的复选框状态
+    updateAllParentCheckboxes(leftTree);
+}
+
+// 获取节点从根到自身的路径
+function getNodePath(node) {
+    const path = [];
+    let current = node;
+    
+    // 向上遍历直到树的根节点
+    while (current && current.classList.contains('hony-tree-node')) {
+        path.unshift(current);
+        // 找到父节点（通过查找父级的hony-tree-children）
+        let parent = current.parentElement;
+        while (parent && !parent.classList.contains('hony-tree') && !parent.classList.contains('hony-tree-children')) {
+            parent = parent.parentElement;
+        }
+        if (parent && parent.classList.contains('hony-tree-children')) {
+            current = parent.previousElementSibling;
+        } else {
+            current = null;
+        }
+    }
+    
+    return path;
+}
+
+// 在目标容器中查找或创建父节点
+function findOrCreateParentNode(container, templateNode) {
+    const nodeText = templateNode.querySelector('.hony-tree-title')?.textContent.trim() || '';
+    
+    // 检查容器中是否已有同名节点（手动遍历查找）
+    const allNodes = container.querySelectorAll('.hony-tree-node');
+    let existingNode = null;
+    for (let i = 0; i < allNodes.length; i++) {
+        const title = allNodes[i].querySelector('.hony-tree-title')?.textContent.trim() || '';
+        if (title === nodeText) {
+            existingNode = allNodes[i];
+            break;
+        }
+    }
+    
+    if (existingNode) {
+        // 检查是否已有子节点容器
+        let childrenContainer = existingNode.nextElementSibling;
+        if (!childrenContainer || !childrenContainer.classList.contains('hony-tree-children')) {
+            // 创建子节点容器
+            childrenContainer = document.createElement('div');
+            childrenContainer.className = 'hony-tree-children';
+            existingNode.parentElement.insertBefore(childrenContainer, existingNode.nextSibling);
+        }
+        return childrenContainer;
+    }
+    
+    // 创建新的父节点
+    const newNode = templateNode.cloneNode(true);
+    // 移除选中状态
+    newNode.classList.remove('hony-selected');
+    const newCheckbox = newNode.querySelector('.hony-checkbox-box');
+    if (newCheckbox) {
+        newCheckbox.classList.remove('checked', 'indeterminate');
+    }
+    
+    // 创建子节点容器
+    const childrenContainer = document.createElement('div');
+    childrenContainer.className = 'hony-tree-children';
+    
+    // 添加到容器
+    container.appendChild(newNode);
+    container.appendChild(childrenContainer);
+    
+    return childrenContainer;
+}
+
+// 递归更新所有父节点的复选框状态
+function updateAllParentCheckboxes(tree) {
+    const nodes = tree.querySelectorAll('.hony-tree-node');
+    nodes.forEach(node => {
+        const checkbox = node.querySelector('.hony-checkbox-box');
+        if (checkbox) {
+            const childrenContainer = node.nextElementSibling;
+            if (childrenContainer && childrenContainer.classList.contains('hony-tree-children')) {
+                const children = childrenContainer.querySelectorAll('.hony-tree-node');
+                const checkedCount = Array.from(children).filter(child => 
+                    child.querySelector('.hony-checkbox-box').classList.contains('checked')
+                ).length;
+                
+                if (checkedCount === 0) {
+                    checkbox.classList.remove('checked', 'indeterminate');
+                    node.classList.remove('hony-selected');
+                } else if (checkedCount === children.length) {
+                    checkbox.classList.add('checked');
+                    checkbox.classList.remove('indeterminate');
+                    node.classList.add('hony-selected');
+                } else {
+                    checkbox.classList.remove('checked');
+                    checkbox.classList.add('indeterminate');
+                    node.classList.add('hony-selected');
+                }
+            }
+        }
     });
 }

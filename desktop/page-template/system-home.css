@@ -209,6 +209,7 @@ body {
     font-weight: 600;
     color: var(--grey-text-1);
     margin: 0;
+    padding-bottom: 8px;
 }
 .welcome-title-annotation {
     font-size: 12px;

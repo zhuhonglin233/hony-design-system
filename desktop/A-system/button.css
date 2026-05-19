@@ -794,7 +794,6 @@
 
 /* 确保加载按钮与正常按钮有相同的内边距 */
 .hony-btn-loading {
-    padding: 8px 16px;
 }
 
 .hony-btn-lg.hony-btn-loading {
