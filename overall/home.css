@@ -649,3 +649,17 @@ html, body {
 .home-page .search-box {
     display: none;
 }
+
+/* 深色模式banner */
+.background-banner-light {
+    display: block;
+}
+.background-banner-dark {
+    display: none;
+}
+:root.Dark .background-banner-light {
+    display: none;
+}
+:root.Dark .background-banner-dark {
+    display: block;
+}

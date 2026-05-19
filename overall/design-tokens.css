@@ -255,7 +255,7 @@
 
 :root.Dark{
     /* 组件页面背景 */
-  --component-page-BG: rgba(21, 24, 33, 1);
+  --component-page-BG: rgba(11, 17, 26, 1);
   --component-page-1: rgba(21, 24, 33, 0.85);
   --component-page-2: rgba(21, 24, 33, 0.2);
   /* 颜色变量 */
